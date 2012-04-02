@@ -45,8 +45,8 @@
     <meta name="language" content="en">
     <meta name="DC.Rights" content="CC BY SA">
     <meta name="rights" content="CC BY SA">
-	<meta name="DC.Date" content="2012-03-24">
-	<meta name="revised" content="2012-03-24">
+	<meta name="DC.Date" content="2012-04-01">
+	<meta name="revised" content="2012-04-01">
     <meta name="DC.type" content="Interactive Resource">
     <meta name="DC.keywords" content="analytics, business intelligence, data services, social media, twitter, real time, data-warehouse, data integration, web, ETL, SAP, BO, SAP BOXI, Business Objects, Oracle, database, reporting, dimensional modelling, business analysis, star schema, BOXI, startup, innovation, projects, information systems, organization, change management, consultancy, consulting" /> 
     <meta name="keywords" content="analytics, business intelligence, data services, social media, twitter, real time, data-warehouse, data integration, web, ETL, SAP, BO, SAP BOXI, Business Objects, Oracle, database, reporting, dimensional modelling, business analysis, star schema, BOXI, startup, innovation, projects, information systems, organization, change management, consultancy, consulting" /> 
@@ -139,7 +139,7 @@
 			</div>
 			<div class="span4">
 			  <h1 id="company">About us</h1>
-			   <p>Our startup operates from Brussels, Belgium since 2010.</p>
+			   <p>Our startup operates from Brussels, Belgium since 2010. We provide organizations with knowledge, using data they own or that is publicly available.</p>
 			  <p><a class="btn" href="/company">Read more »</a></p>
 			</div>
 			<div id="social" class="span4">
@@ -221,7 +221,6 @@
 			// based on code found here: https://gist.github.com/1600924
 			var $navbarElements = $(".navbar .nav a");
 			$navbarElements.each(function() {
-// console.log($(this).attr('href'), window.location.pathname, $(this).attr('href')== window.location.pathname)
 				if ($(this).attr('href')== window.location.pathname) {
 					$(this).parent().toggleClass("active")
 				}
@@ -276,11 +275,11 @@
     </script>
     <script src="/js/bootstrap-transition.js"></script>
     <script src="/js/bootstrap-collapse.js"></script>
+    <script src="/js/bootstrap-tab.js"></script>
 <!--
     <script src="/js/bootstrap-dropdown.js"></script>
     <script src="/js/bootstrap-scrollspy.js"></script>
     <script src="/js/bootstrap-alert.js"></script>
-    <script src="/js/bootstrap-tab.js"></script>
     <script src="/js/bootstrap-tooltip.js"></script>
     <script src="/js/bootstrap-popover.js"></script>
     <script src="/js/bootstrap-carousel.js"></script>
