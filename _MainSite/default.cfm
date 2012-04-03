@@ -139,7 +139,7 @@
 			</div>
 			<div class="span4">
 			  <h1 id="company">About us</h1>
-			   <p>Our startup operates from Brussels, Belgium since 2010. We provide organizations with knowledge, using data they own or that is publicly available.</p>
+			   <p>Our startup operates from Brussels, Belgium since 2010. We help businesses run better, using data they own or that is publicly available to produce <strong>actionable information</strong>.</p>
 			  <p><a class="btn" href="/company">Read more »</a></p>
 			</div>
 			<div id="social" class="span4">
