@@ -25,16 +25,15 @@
 						<p>
 							Data should transparently be integrated, transformed to information, and provided to users, via a suitable presentation. One of the challenges in the world of today is to deal with information overload. A combination of techniques, coming from the world of web technologies (full text search, faceted navigation) and from the world of Business Intelligence (real time data integration, aggregate exploration, data discovery), empower users by let available data produce relevant information.
 						</p>
-						<p>Interesting articles and projects:
-							<ul>
-								<li><a href="http://timoelliott.com/blog/2011/03/why-the-last-decade-of-bi-best-practice-architecture-is-rapidly-becoming-obsolete.html" target = "_blank">Why The Last Decade of BI Best-Practice Architecture is Rapidly Becoming Obsolete</a>, by Timo Eliott.</li>
-								<li><a href="http://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen.html" target = "_blank">Hans Rosling shows the best stats you've ever seen</a>, by Hans Rosling (TED talk).</li>
-								<li><a href="http://www.mckinsey.com/mgi/publications/big_data/index.asp" target = "_blank">Big data: The next frontier for innovation, competition, and productivity</a>, Mc Kinsey Global Institute report.</li>
-								<li><a href="http://www.alistapart.com/articles/design-patterns-faceted-navigation/" target = "_blank">Design Patterns: Faceted Navigation</a>, by Peter Morville, Jeffery Callender.</li>
-								<li><a href="http://datasift.com" target = "_blank">Datasift</a>.</li>
-								<li><a href="http://codeforamerica.org/?cfa_project=data-couch" target = "_blank">dataCouch project</a>, by Max Ogden.</li>
-							</ul>
-						</p>
+						<p>Interesting articles and projects:</p>
+						<ul>
+							<li><a href="http://timoelliott.com/blog/2011/03/why-the-last-decade-of-bi-best-practice-architecture-is-rapidly-becoming-obsolete.html" target = "_blank">Why The Last Decade of BI Best-Practice Architecture is Rapidly Becoming Obsolete</a>, by Timo Eliott.</li>
+							<li><a href="http://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen.html" target = "_blank">Hans Rosling shows the best stats you've ever seen</a>, by Hans Rosling (TED talk).</li>
+							<li><a href="http://www.mckinsey.com/mgi/publications/big_data/index.asp" target = "_blank">Big data: The next frontier for innovation, competition, and productivity</a>, Mc Kinsey Global Institute report.</li>
+							<li><a href="http://www.alistapart.com/articles/design-patterns-faceted-navigation/" target = "_blank">Design Patterns: Faceted Navigation</a>, by Peter Morville, Jeffery Callender.</li>
+							<li><a href="http://datasift.com" target = "_blank">Datasift</a>.</li>
+							<li><a href="http://codeforamerica.org/?cfa_project=data-couch" target = "_blank">dataCouch project</a>, by Max Ogden.</li>
+						</ul>
 					</div>
 					<div class="tab-pane" id="mission">
 						<h2>Mission</h2>
@@ -73,7 +72,7 @@
 			<img src="/img/mango-information-systems-logo-medium.png" alt="logo of Mango Information Systems" class="logo"/>
 			<br/>
 			<p>
-				<a class="url fn org" href="http://www.mango-is.com/">Mango Information Systems</a> 
+				<a class="url fn org" href="http://mango-is.com/">Mango Information Systems</a> 
 				<span class="organization-type fn">SPRL</span>
 			</p>
 			<p class="adr">
