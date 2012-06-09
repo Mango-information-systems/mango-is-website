@@ -121,7 +121,7 @@
 			<div class="row">
 				<span class="span3">
 					<a href="http://labs.mango-is.com/brussels-tweets-map" target="_blank">
-						<img src="/img/brussels-tweets-map-375x260.png" alt="social media analytics">
+						<img id="brussels-tweets-map" src="/img/brussels-tweets-map-375x260.png" alt="brussels tweets map">
 					</a>
 				</span>
 				<span class="span7">
