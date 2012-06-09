@@ -45,8 +45,8 @@
     <meta name="language" content="en">
     <meta name="DC.Rights" content="CC BY SA">
     <meta name="rights" content="CC BY SA">
-	<meta name="DC.Date" content="2012-04-01">
-	<meta name="revised" content="2012-04-01">
+	<meta name="DC.Date" content="2012-06-09">
+	<meta name="revised" content="2012-06-09">
     <meta name="DC.type" content="Interactive Resource">
     <meta name="DC.keywords" content="analytics, business intelligence, data services, social media, twitter, real time, data-warehouse, data integration, web, ETL, SAP, BO, SAP BOXI, Business Objects, Oracle, database, reporting, dimensional modelling, business analysis, star schema, BOXI, startup, innovation, projects, information systems, organization, change management, consultancy, consulting" /> 
     <meta name="keywords" content="analytics, business intelligence, data services, social media, twitter, real time, data-warehouse, data integration, web, ETL, SAP, BO, SAP BOXI, Business Objects, Oracle, database, reporting, dimensional modelling, business analysis, star schema, BOXI, startup, innovation, projects, information systems, organization, change management, consultancy, consulting" /> 
@@ -104,6 +104,7 @@
               <li><a href="/web-analytics/">Web analytics</a></li>
               <li><a href="/business-intelligence/">Business Intelligence</a></li>
               <li><a href="/company/">Company</a></li>
+              <li><a href="http://labs.mango-is.com/" target="_blank">Labs</a></li>
               <li><a href="#contact" data-toggle="modal">Contact</a></li>
             </ul>
           </div><!--/.nav-collapse -->
@@ -119,18 +120,25 @@
 		<div class="hero-unit">
 			<div class="row">
 				<span class="span3">
-					<img src="/img/social-media-analytics-logo.png" alt="social media analytics">
+					<a href="http://labs.mango-is.com/brussels-tweets-map" target="_blank">
+						<img src="/img/brussels-tweets-map-375x260.png" alt="social media analytics">
+					</a>
 				</span>
 				<span class="span7">
-					<h1>Web analytics</h1>
-					<p>We provide services in <strong>web data integration</strong> and innovative analytics applications. Learn how <strong>social media</strong> data can provide value to your activity.</p>
-					<p><a class="btn btn-primary btn-large" href="/web-analytics">View details »</a></p>
+					<h1>Real time tweets monitoring</h1>
+					<p>Our most recent development is <strong>an interactive map</strong> displaying all <strong>geo-tagged tweets</strong>. It lets you track any tweet related to a specific location, @usernames or #hashtags.</p>
+					<p><a class="btn btn-primary btn-large" href="http://labs.mango-is.com/brussels-tweets-map" target="_blank">View live demo »</a></p>
 				</span>
 			</div>
 		</div>
 	
-		<!-- Example row of columns -->
+		<!-- row of links to main sections -->
 		<div class="row">
+			<div id="web-analytics" class="span4">
+				<h1>Web analytics</h1>
+				<p>We provide services in <strong>web data integration</strong> and innovative analytics applications. Learn how <strong>social media</strong> data can provide value to your activity.</p>
+				<p><a class="btn" href="/web-analytics">View details »</a></p>
+			</div>
 			<div class="span4">
 			  <h1 id="business-intelligence">Business Intelligence</h1>
 			   <p>We have expertise in corporate business intelligence projects, with strong focus on <strong>data-warehouse architecture</strong>, complex <strong>data integration</strong> (ETL) and performance tuning.
@@ -142,20 +150,18 @@
 			   <p>Our startup operates from Brussels, Belgium since 2010. We help businesses run better, using data they own or that is publicly available to produce <strong>actionable information</strong>.</p>
 			  <p><a class="btn" href="/company">Read more »</a></p>
 			</div>
-			<div id="social" class="span4">
-			  <h1>Get in touch</h1>
-			  <p>We are online</p>
-			  <p><a class="btn btn-info" href="http://twitter.com/mango_info" rel="me" target = "_blank"><i class="icon-twitter"></i> Follow us on twitter »</a></p>
-			  <p><a class="btn" href="https://github.com/mango-information-systems" rel="me" target = "_blank"><i class="icon-github"></i> Our github repo »</a></p>
-			  <p><a class="btn" href="#contact" data-toggle="modal"><i class="icon-pencil"></i> Contact »</a></p>
-			</div>
 		</div>
 	</cfif>
 	<footer>
-		<p>
+		<div class="span5">
 			<span>Mango Information systems 2012. </span>
 			<span><a href="/terms">Copyright - terms of use</a></span>
-		</p>
+		</div>
+		<div class="span5">
+			<a data-toggle="modal" href="#contact" class="btn btn-primary pull-right"><i class="icon-pencil icon-white"></i> Contact »</a><span class="pull-right"> &nbsp; </span>
+			<a target="_blank" rel="me" href="http://twitter.com/mango_info" class="btn btn-info pull-right "><i class="icon-twitter"></i> Follow us on twitter »</a><span class="pull-right"> &nbsp; </span>
+			<a target="_blank" rel="me" href="https://github.com/mango-information-systems" class="btn pull-right"><i class="icon-github"></i> Our github repo »</a>
+		</div>
 	</footer>
 		<div class="modal hide fade" id="contact">
 			<div class="modal-header">
