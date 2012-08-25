@@ -2,13 +2,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<link rel= "schema.DC" href="http://purl.org/DC/elements/1.0/">
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel= "schema.DC" href="http://purl.org/DC/elements/1.0/">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>
     <cfif isdefined("title")>
-		<cfoutput>#title#</cfoutput>
+	<cfoutput>#title#</cfoutput>
 	<cfelse>Web analytics - Business Intelligence
 	</cfif> - Mango Information Systems
 	</title>
@@ -45,8 +45,8 @@
     <meta name="language" content="en">
     <meta name="DC.Rights" content="CC BY SA">
     <meta name="rights" content="CC BY SA">
-	<meta name="DC.Date" content="2012-06-09">
-	<meta name="revised" content="2012-06-09">
+    <meta name="DC.Date" content="2012-08-25">
+    <meta name="revised" content="2012-08-25">
     <meta name="DC.type" content="Interactive Resource">
     <meta name="DC.keywords" content="analytics, business intelligence, data services, social media, twitter, real time, data-warehouse, data integration, web, ETL, SAP, BO, SAP BOXI, Business Objects, Oracle, database, reporting, dimensional modelling, business analysis, star schema, BOXI, startup, innovation, projects, information systems, organization, change management, consultancy, consulting" /> 
     <meta name="keywords" content="analytics, business intelligence, data services, social media, twitter, real time, data-warehouse, data integration, web, ETL, SAP, BO, SAP BOXI, Business Objects, Oracle, database, reporting, dimensional modelling, business analysis, star schema, BOXI, startup, innovation, projects, information systems, organization, change management, consultancy, consulting" /> 
@@ -113,6 +113,9 @@
     </div>
 
     <div class="container">
+	<div class="alert alert-error" id="js-warning">
+	<strong>Javascript required</strong>. Please activate javascript to get an optimal experience on our website.
+	</div>
     <cfif isdefined("content")>
 		<cfoutput>#content#</cfoutput>
 	<cfelse>
@@ -222,6 +225,9 @@
     <script src="/js/bootstrap-modal.js"></script>
     <script>
 		$(document).ready(function () {
+
+			// hide javascript error message
+			$('#js-warning').remove()
 
 			// toggle active class for navbar link 
 			// based on code found here: https://gist.github.com/1600924
