@@ -15,7 +15,7 @@
 						<h1>About us</h1>
 						<p>Mango Information Systems is a Belgian company providing products and services in web analytics and Business Intelligence.</p>
 						<p>It was founded in 2010 by <a title="linkedin profile" class="url" href="http://be.linkedin.com/in/elfadme" rel="me" target = "_blank">Mehdi El Fadil</a>.</p>
-						<p>Our approach is to deliver more than technology to our clients. To ensure success of the projects, our solutions also include optimizations of your processes, knowledge management and change management.</p>
+						<p>We deliver more than technology to our clients. Our solutions also take processes, knowledge management and change management into account.</p>
 					</div>
 					<div class="tab-pane" id="vision">
 						<h2>Vision</h2>
@@ -23,7 +23,7 @@
 							<em>World is multidimensional.</em>
 						</blockquote>
 						<p>
-							Data should transparently be integrated, transformed to information, and provided to users, via a suitable presentation. One of the challenges in the world of today is to deal with information overload. A combination of techniques, coming from the world of web technologies (full text search, faceted navigation) and from the world of Business Intelligence (real time data integration, aggregate exploration, data discovery), empower users by let available data produce relevant information.
+							Data should transparently be integrated, transformed into information, and provided to users, via a suitable presentation. One of the challenges in the world of today is to deal with information overload. A combination of techniques, coming from the world of web technologies (full text indexing, faceted navigation) and from the world of Business Intelligence (real time data integration, aggregate exploration, data discovery), lets managers get stronger insights to take better decisions.
 						</p>
 						<p>Interesting articles and projects:</p>
 						<ul>
