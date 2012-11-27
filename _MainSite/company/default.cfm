@@ -76,9 +76,9 @@
 				<span class="organization-type fn">SPRL</span>
 			</p>
 			<p class="adr">
-				<span class="street-address">Diamantlaan 116</span>
+				<span class="street-address">Avenue Ernestine 11 - bte 12</span>
 				<br/>
-				<span class="postal-code">1030 </span>
+				<span class="postal-code">1050 </span>
 				<span class="region">Brussels</span>
 				<br/>
 				<span class="country-name">Belgium</span>
