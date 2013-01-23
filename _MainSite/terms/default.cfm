@@ -8,7 +8,7 @@
 			<h2 id="content">Content</h2>
 			<p>Unless specified otherwise, the content in this website is released under a <a href="http://creativecommons.org/licenses/by-sa/2.0/be/" rel="license">Creative Commons Attribution-ShareAlike 2.0 Belgium License</a> <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/be/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/2.0/be/80x15.png" /></a>.</p>
 			<h2 id="website">Website</h2>
-			<p>This website is the property of Mango Information Systems SPRL. It is mostly based on open source components (cf. Credits below). Contact us for any enquiry about reusing all or part of our software.</p>
+			<p>This website is the property of Mango Information Systems SPRL. It is mostly based on open source components (cf. Credits below). Contact us for any inquiry about reusing all or part of our software.</p>
 			<h2 id="logo">Logo</h2>
 			<p>The logo of Mango Information Systems SPRL is copyrighted by Mango Information Systems SPRL. You may use it in websites or presentations, provided that you link to this website. You may not alter the logo in any way.</p>
 			<h2 id="credits">Credits</h2>
@@ -16,7 +16,7 @@
 			<ul>
 				<li><a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter bootstrap</a>, licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache license v2</a></li>
 				<li><a href="http://jquery.com" target="_blank">jQuery javascript library</a>, <a href="http://jquery.org/license" target="_blank">dual-licensed under MIT and GNU GPL v2</a></li>
-				<li><a href="http://paulrobertlloyd.com/2009/06/social_media_icons" rel="nofollow" target="_blank">Social media icons</a> by Paul Robert Lloyd, licensed under a <a href="http://creativecommons.org/licenses/by-sa/2.0/uk/" target="_blank">Creative Commons Attribution-Share Alike 2.0 UK: England & Wales Licence</a></li>
+				<li><a href="http://paulrobertlloyd.com/2009/06/social_media_icons" rel="nofollow" target="_blank">Social media icons</a> by Paul Robert Lloyd, licensed under a <a href="http://creativecommons.org/licenses/by-sa/2.0/uk/" target="_blank">Creative Commons Attribution-Share Alike 2.0 UK: England & Wales License</a></li>
 			</ul>
 			<h1 id="legal-terms">Legal terms</h1>
 			<h2 id="responsibility">Limitation of responsibility</h2>

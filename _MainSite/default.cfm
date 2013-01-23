@@ -30,12 +30,12 @@
     <meta name="DC.Description" content="
 	<cfif isdefined("description")>
 		<cfoutput>#description#</cfoutput>
-	<cfelse>We turns social media data into actionable knowledge. Checkout our apps tribalytics and news Pipe or get custom data extraction or realtime monitoring service
+	<cfelse>We turns social media data into actionable knowledge. Checkout our apps tribalytics and news Pipe or get custom data extraction or real time monitoring service
 	</cfif>">
     <meta name="description" content="
 	<cfif isdefined("description")>
 		<cfoutput>#description#</cfoutput>
-	<cfelse>We turns social media data into actionable knowledge. Checkout our apps tribalytics and news Pipe or get custom data extraction or realtime monitoring service
+	<cfelse>We turns social media data into actionable knowledge. Checkout our apps tribalytics and news Pipe or get custom data extraction or real time monitoring service
 	</cfif>">
     <meta name="DC.Creator" content="Mehdi El Fadil">
     <meta name="author" content="Mehdi El Fadil">
