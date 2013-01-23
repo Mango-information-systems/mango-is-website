@@ -4,36 +4,35 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-<url>
-  <loc>http://www.mango-is.com/</loc>
-  <lastmod>2012-08-25</lastmod>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://www.mango-is.com/web%2Danalytics/</loc>
-  <lastmod>2012-08-25</lastmod>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://www.mango-is.com/business%2Dintelligence/</loc>
-  <lastmod>2012-08-25</lastmod>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://www.mango-is.com/company/</loc>
-  <lastmod>2012-11-14</lastmod>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://www.mango-is.com/contact/</loc>
-  <lastmod>2012-08-25</lastmod>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://www.mango-is.com/terms/</loc>
-  <lastmod>2012-08-25</lastmod>
-  <changefreq>monthly</changefreq>
-</url>
+<!-- initially created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+	<url>
+	  <loc>http://www.mango-is.com/</loc>
+	  <lastmod>2013-01-08</lastmod>
+	  <changefreq>monthly</changefreq>
+	</url>
+	<url>
+	  <loc>http://www.mango-is.com/services/</loc>
+	  <lastmod>2013-01-08</lastmod>
+	  <changefreq>monthly</changefreq>
+	</url>
+	<url>
+	  <loc>http://www.mango-is.com/products/</loc>
+	  <lastmod>2013-01-08</lastmod>
+	  <changefreq>monthly</changefreq>
+	</url>
+	<url>
+	  <loc>http://www.mango-is.com/company/</loc>
+	  <lastmod>2012-11-14</lastmod>
+	  <changefreq>monthly</changefreq>
+	</url>
+	<url>
+	  <loc>http://www.mango-is.com/contact/</loc>
+	  <lastmod>2013-01-08</lastmod>
+	  <changefreq>monthly</changefreq>
+	</url>
+	<url>
+	  <loc>http://www.mango-is.com/terms/</loc>
+	  <lastmod>2013-01-08</lastmod>
+	  <changefreq>monthly</changefreq>
+	</url>
 </urlset>

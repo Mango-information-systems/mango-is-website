@@ -15,7 +15,7 @@
 		<!--- confirm sent message ok --->				
 		{"status": "success", "message": "Message has been sent, thank you."}
 	<cfcatch type="any">
-		{"status": "error", "message": "Error occured sending message - please try again later or email contact@mango-is.com"}
+		{"status": "error", "message": "Error occured while sending message - please try again later or email contact@mango-is.com"}
 	</cfcatch>
 	</cftry>
 <cfelse>

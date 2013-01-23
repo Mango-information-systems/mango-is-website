@@ -9,34 +9,34 @@
     <title>
     <cfif isdefined("title")>
 	<cfoutput>#title#</cfoutput>
-	<cfelse>Web analytics - Business Intelligence
+	<cfelse>Analytics and Business Intelligence
 	</cfif> - Mango Information Systems
 	</title>
     <meta name="DC.title" content="
 	<cfif isdefined("title")>
 		<cfoutput>#title#</cfoutput>
-	<cfelse>Web analytics - Business Intelligence
+	<cfelse>Analytics and Business Intelligence
 	</cfif> - Mango Information Systems">
     <meta name="DC.Subject" content="
 	<cfif isdefined("title")>
 		<cfoutput>#title#</cfoutput>
 	<cfelse>Homepage
-	</cfif> - Mango Information Systems, web analytics, social media and business intelligence">
+	</cfif> - Mango Information Systems, social media analytics and business intelligence">
     <meta name="subject" content="
 	<cfif isdefined("title")>
 		<cfoutput>#title#</cfoutput>
 	<cfelse>Homepage
-	</cfif> - Mango Information Systems, web analytics, social media and business intelligence">
+	</cfif> - Mango Information Systems, social media analytics and business intelligence">
     <meta name="DC.Description" content="
 	<cfif isdefined("description")>
 		<cfoutput>#description#</cfoutput>
-	<cfelse>We turn web data into knowledge for your company
-	</cfif> - Mango Information Systems, a startup operating from Brussels, Belgium.">
+	<cfelse>We turns social media data into actionable knowledge. Checkout our apps tribalytics and news Pipe or get custom data extraction or realtime monitoring service
+	</cfif>">
     <meta name="description" content="
 	<cfif isdefined("description")>
 		<cfoutput>#description#</cfoutput>
-	<cfelse>We turn web data into knowledge for your company
-	</cfif> - Mango Information Systems, a startup operating from Brussels, Belgium.">
+	<cfelse>We turns social media data into actionable knowledge. Checkout our apps tribalytics and news Pipe or get custom data extraction or realtime monitoring service
+	</cfif>">
     <meta name="DC.Creator" content="Mehdi El Fadil">
     <meta name="author" content="Mehdi El Fadil">
     <meta name="DC.Format" content="html">
@@ -45,8 +45,8 @@
     <meta name="language" content="en">
     <meta name="DC.Rights" content="CC BY SA">
     <meta name="rights" content="CC BY SA">
-    <meta name="DC.Date" content="2012-08-25">
-    <meta name="revised" content="2012-08-25">
+    <meta name="DC.Date" content="2013-01-08">
+    <meta name="revised" content="2013-01-08">
     <meta name="DC.type" content="Interactive Resource">
     <meta name="DC.keywords" content="analytics, business intelligence, data services, social media, twitter, real time, data-warehouse, data integration, web, ETL, SAP, BO, SAP BOXI, Business Objects, Oracle, database, reporting, dimensional modelling, business analysis, star schema, BOXI, startup, innovation, projects, information systems, organization, change management, consultancy, consulting" /> 
     <meta name="keywords" content="analytics, business intelligence, data services, social media, twitter, real time, data-warehouse, data integration, web, ETL, SAP, BO, SAP BOXI, Business Objects, Oracle, database, reporting, dimensional modelling, business analysis, star schema, BOXI, startup, innovation, projects, information systems, organization, change management, consultancy, consulting" /> 
@@ -82,6 +82,10 @@
 		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		})();
+		window.onerror = function(message, file, line) {
+			var sFormattedMessage = '[' + file + ' (' + line + ')] ' + message;
+			_gaq.push(['_trackEvent', 'Exceptions', 'Application', sFormattedMessage, null, true]);
+		}
 	</script>
   </head>
 
@@ -96,16 +100,15 @@
             <span class="icon-bar"></span>
           </a>
           <a class="brand" href="/" rel="home">
-			<img src="/img/mango-information-systems-logo-medium.png" alt="Mango Information Systems">
+          <img src="/img/mango-information-systems-logo.png" alt="Mango Information Systems">
           </a>
           <div class="nav-collapse">
             <ul class="nav">
               <li><a href="/">Home</a></li>
-              <li><a href="/web-analytics/">Web analytics</a></li>
-              <li><a href="/business-intelligence/">Business Intelligence</a></li>
+              <li><a href="/products/">Products</a></li>
+              <li><a href="/services/">Services</a></li>
               <li><a href="/company/">Company</a></li>
-              <li><a href="http://labs.mango-is.com/" target="_blank">Labs</a></li>
-              <li><a href="#contact" data-toggle="modal">Contact</a></li>
+              <li><a href="/contact/" class="contact-link" data-toggle="modal">Contact</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -113,44 +116,44 @@
     </div>
 
     <div class="container">
-	<div class="alert alert-error" id="js-warning">
-	<strong>Javascript required</strong>. Please activate javascript to get an optimal experience on our website.
-	</div>
     <cfif isdefined("content")>
 		<cfoutput>#content#</cfoutput>
 	<cfelse>
-		<!-- Main hero unit for a primary marketing message or call to action -->
+		<!-- Main hero unit -->
 		<div class="hero-unit">
 			<div class="row">
 				<span class="span3">
-					<a href="http://labs.mango-is.com/brussels-tweets-map" target="_blank">
-						<img id="brussels-tweets-map" src="/img/brussels-tweets-map-375x260.png" alt="brussels tweets map">
+					<a href="http://tribalytics.com" target="_blank">
+						<img id="tribalytics" src="img/tribalytics.jpg" alt="tribalytics">
 					</a>
 				</span>
 				<span class="span7">
-					<h1>Real time tweets monitoring</h1>
-					<p>Our most recent development is <strong>an interactive map</strong> displaying all <strong>geo-tagged tweets</strong>. It lets you track any tweet related to a specific location, @usernames or #hashtags.</p>
-					<p><a class="btn btn-primary btn-large" href="http://labs.mango-is.com/brussels-tweets-map" target="_blank">View live demo »</a></p>
+					<h1>Tribalytics - segment your Twitter followers</h1>
+					<p>Tribalytics analyzes social graphs to identify the <strong>breakdown of different communities in your followers</strong>, providing a detailed profile for each.</p>
+					<p><a class="btn btn-primary btn-large" href="http://tribalytics.com" target="_blank">Checkout tribalytics.com »</a></p>
 				</span>
 			</div>
 		</div>
 	
 		<!-- row of links to main sections -->
 		<div class="row">
-			<div id="web-analytics" class="span4">
-				<h1>Web analytics</h1>
-				<p>We provide services in <strong>web data integration</strong> and innovative analytics applications. Learn how <strong>social media</strong> data can provide value to your activity.</p>
-				<p><a class="btn" href="/web-analytics">View details »</a></p>
+			<div id="products" class="span4">
+				<h1>Products</h1>
+				<p>We develop powerful <strong>social media monitoring and analytics</strong> solutions. Our goal is to help organizations better manage their activity thanks to social media data.</p>
+				<p><a class="btn" href="/products">See our products »</a></p>
 			</div>
 			<div class="span4">
-			  <h1 id="business-intelligence">Business Intelligence</h1>
-			   <p>We have expertise in corporate business intelligence projects, with strong focus on <strong>data-warehouse architecture</strong>, complex <strong>data integration</strong> (ETL) and performance tuning.
+			  <h1 id="services">Services</h1>
+			   <p>Whether you need to extract online data, have complex data integration or reporting issues, we can help. We provide consulting services in <strong>web data analytics</strong>, as well as <strong>corporate business intelligence</strong> projects.
 				</p>
-			  <p><a class="btn" href="/business-intelligence">Read more »</a></p>
+			  <p>
+				  <a class="btn" href="/services">Read more »</a> or 
+				  <a class="btn btn-primary" href="/contact/" class="contact-link">Contact us »</a>
+			  </p>
 			</div>
 			<div class="span4">
 			  <h1 id="company">About us</h1>
-			   <p>Our startup operates from Brussels, Belgium since 2010. We help businesses run better, using data they own or that is publicly available to produce <strong>actionable information</strong>.</p>
+			   <p>Our startup operates from Brussels, Belgium since 2010. We help businesses run better, using data they own or that is publicly available to produce actionable information and <strong>enhance their decision-making</strong>.</p>
 			  <p><a class="btn" href="/company">Read more »</a></p>
 			</div>
 		</div>
@@ -161,9 +164,9 @@
 			<span><a href="/terms">Copyright - terms of use</a></span>
 		</div>
 		<div class="span5">
-			<a data-toggle="modal" href="#contact" class="btn btn-primary pull-right"><i class="icon-pencil icon-white"></i> Contact »</a><span class="pull-right"> &nbsp; </span>
-			<a target="_blank" rel="me" href="http://twitter.com/mango_info" class="btn btn-info pull-right "><i class="icon-twitter"></i> Follow us on twitter »</a><span class="pull-right"> &nbsp; </span>
-			<a target="_blank" rel="me" href="https://github.com/mango-information-systems" class="btn pull-right"><i class="icon-github"></i> Our github repo »</a>
+			<a data-toggle="modal" href="/contact" class="btn btn-primary pull-right"><i class="icon-pencil icon-white"></i> Contact »</a><span class="pull-right"> &nbsp; </span>
+			<a target="_blank" rel="me" href="http://twitter.com/mango_info" class="btn btn-info pull-right "><i class="icon-twitter"></i>  twitter »</a><span class="pull-right"> &nbsp; </span>
+			<a target="_blank" rel="me" href="https://github.com/mango-information-systems" class="btn pull-right"><i class="icon-github"></i> github »</a>
 		</div>
 	</footer>
 		<div class="modal hide fade" id="contact">
@@ -172,7 +175,7 @@
 				<h2>Contact</h2>
 			</div>
 			<div class="modal-body">
-				<form method="post" action="contact.cfm" id="contact-form" name="contact-form" class="form-horizontal">
+				<form method="post" action="contact.cfm" id="contact-form" name="contact-form" class="form-horizontal" method="POST" action="/contact.cfm">
 				<fieldset>
 					<legend>Thanks for leaving us a message</legend>
 					<div class="control-group">
@@ -225,10 +228,15 @@
     <script src="/js/bootstrap-modal.js"></script>
     <script>
 		$(document).ready(function () {
-
-			// hide javascript error message
-			$('#js-warning').remove()
-
+			
+			if (window.location.pathname != '/dev/contact/')
+			{
+				// progressive enhancement: modal contact form
+				$('.contact-link').attr('href', '#contact')
+				// setup contact modal
+				$('#contact').modal({show:false})
+			}
+			
 			// toggle active class for navbar link 
 			// based on code found here: https://gist.github.com/1600924
 			var $navbarElements = $(".navbar .nav a");
@@ -237,18 +245,10 @@
 					$(this).parent().toggleClass("active")
 				}
 			});
-			
-			// set contact modal visibility according to current location
-			if (window.location.pathname == '/contact/')
-				show_modal = true;
-			else
-				show_modal = false;
-				
-			// setup contact modal
-			$('#contact').modal({show:show_modal});
-			
+
 			//handle contact form submission
-			$('#contact-form-submit').click(function() {
+			$('#contact-form-submit').click(function(e) {
+				e.preventDefault()
 				$('#contact-form-submit').addClass('disabled');
 				$.ajax({
 					type: 'POST',
@@ -258,7 +258,7 @@
 						response = JSON.parse(data)
 						switch(response.status) {
 							case 'success':
-								$target = $('.modal-body', '#contact');
+								$target = $('#contact');
 								$target.fadeOut(function() {
 									$target.html('<div class="alert alert-success">'+ response.message +'</div>')
 									$target.fadeIn();
