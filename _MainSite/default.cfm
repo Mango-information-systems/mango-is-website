@@ -67,26 +67,27 @@
     <![endif]-->
 
     <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="/img/favicon.ico"/>
-    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png"/>
-    <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png"/>
-    <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png"/>
-    <link rel="image_src" href="/img/apple-touch-icon-114x114.png" />
-	<script type="text/javascript">
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-25766439-1']);
-		_gaq.push(['_trackPageview']);
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144x144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png">
+    <link rel=“icon” href="/favicon.ico" sizes="16x16 32x32 48x48 64x64"
+    type=”image/vnd.microsoft.icon”>
+    <script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-25766439-1']);
+	_gaq.push(['_trackPageview']);
 
-		(function() {
-		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		})();
-		window.onerror = function(message, file, line) {
-			var sFormattedMessage = '[' + file + ' (' + line + ')] ' + message;
-			_gaq.push(['_trackEvent', 'Exceptions', 'Application', sFormattedMessage, null, true]);
-		}
-	</script>
+	(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+	window.onerror = function(message, file, line) {
+		var sFormattedMessage = '[' + file + ' (' + line + ')] ' + message;
+		_gaq.push(['_trackEvent', 'Exceptions', 'Application', sFormattedMessage, null, true]);
+	}
+    </script>
   </head>
 
   <body>
@@ -100,7 +101,7 @@
             <span class="icon-bar"></span>
           </a>
           <a class="brand" href="/" rel="home">
-          <img src="/img/mango-information-systems-logo.png" alt="Mango Information Systems">
+          <img src="/img/mango-information-systems-logo.png" alt="Mango Information Systems" width = "145px" height = "35px">
           </a>
           <div class="nav-collapse">
             <ul class="nav">
@@ -229,7 +230,7 @@
     <script>
 		$(document).ready(function () {
 			
-			if (window.location.pathname != '/dev/contact/')
+			if (window.location.pathname != '/contact/')
 			{
 				// progressive enhancement: modal contact form
 				$('.contact-link').attr('href', '#contact')
