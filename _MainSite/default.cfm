@@ -10,8 +10,8 @@
     <cfif isdefined("title")>
 	<cfoutput>#title#</cfoutput>
 	<cfelse>Analytics and Business Intelligence
-	</cfif> - Mango Information Systems
-	</title>
+    </cfif> - Mango Information Systems
+    </title>
     <meta name="DC.title" content="
 	<cfif isdefined("title")>
 		<cfoutput>#title#</cfoutput>
@@ -70,8 +70,8 @@
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144x144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png">
-    <link rel=“icon” href="/favicon.ico" sizes="16x16 32x32 48x48 64x64"
+    <link rel="apple-touch-icon-precomposed" href="/touch-icon-iphone-precomposed.png">
+    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64"
     type=”image/vnd.microsoft.icon”>
     <script type="text/javascript">
 	var _gaq = _gaq || [];
@@ -141,31 +141,31 @@
 			<div id="products" class="span4">
 				<h1>Products</h1>
 				<p>We develop powerful <strong>social media monitoring and analytics</strong> solutions. Our goal is to help organizations better manage their activity thanks to social media data.</p>
-				<p><a class="btn" href="/products">See our products »</a></p>
+				<p><a class="btn" href="/products/">See our products »</a></p>
 			</div>
 			<div class="span4">
 			  <h1 id="services">Services</h1>
 			   <p>Whether you need to extract online data, have complex data integration or reporting issues, we can help. We provide consulting services in <strong>web data analytics</strong>, as well as <strong>corporate business intelligence</strong> projects.
 				</p>
 			  <p>
-				  <a class="btn" href="/services">Read more »</a> or 
+				  <a class="btn" href="/services/">Read more »</a> or 
 				  <a class="btn btn-primary" href="/contact/" class="contact-link">Contact us »</a>
 			  </p>
 			</div>
 			<div class="span4">
-			  <h1 id="company">About us</h1>
+			  <h1 id="about-us">About us</h1>
 			   <p>Our startup operates from Brussels, Belgium since 2010. We help businesses run better, using data they own or that is publicly available to produce actionable information and <strong>enhance their decision-making</strong>.</p>
-			  <p><a class="btn" href="/company">Read more »</a></p>
+			  <p><a class="btn" href="/company/">Read more »</a></p>
 			</div>
 		</div>
 	</cfif>
 	<footer>
 		<div class="span5">
 			<span>Mango Information systems 2012. </span>
-			<span><a href="/terms">Copyright - terms of use</a></span>
+			<span><a href="/terms/">Copyright - terms of use</a></span>
 		</div>
 		<div class="span5">
-			<a data-toggle="modal" href="/contact" class="btn btn-primary pull-right"><i class="icon-pencil icon-white"></i> Contact »</a><span class="pull-right"> &nbsp; </span>
+			<a data-toggle="modal" href="/contact/" class="btn btn-primary pull-right"><i class="icon-pencil icon-white"></i> Contact »</a><span class="pull-right"> &nbsp; </span>
 			<a target="_blank" rel="me" href="http://twitter.com/mango_info" class="btn btn-info pull-right "><i class="icon-twitter"></i>  twitter »</a><span class="pull-right"> &nbsp; </span>
 			<a target="_blank" rel="me" href="https://github.com/mango-information-systems" class="btn pull-right"><i class="icon-github"></i> github »</a>
 		</div>
@@ -245,7 +245,11 @@
 				if ($(this).attr('href')== window.location.pathname) {
 					$(this).parent().toggleClass("active")
 				}
-			});
+			})
+
+			<cfif isdefined("readyActions")>
+			    <cfoutput>#readyActions#</cfoutput>
+			</cfif>
 
 			//handle contact form submission
 			$('#contact-form-submit').click(function(e) {

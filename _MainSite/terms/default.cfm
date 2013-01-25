@@ -15,8 +15,8 @@
 			<p>Third party software is used to power this website. Amongst others:</p>
 			<ul>
 				<li><a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter bootstrap</a>, licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache license v2</a></li>
-				<li><a href="http://jquery.com" target="_blank">jQuery javascript library</a>, <a href="http://jquery.org/license" target="_blank">dual-licensed under MIT and GNU GPL v2</a></li>
-				<li><a href="http://paulrobertlloyd.com/2009/06/social_media_icons" rel="nofollow" target="_blank">Social media icons</a> by Paul Robert Lloyd, licensed under a <a href="http://creativecommons.org/licenses/by-sa/2.0/uk/" target="_blank">Creative Commons Attribution-Share Alike 2.0 UK: England & Wales License</a></li>
+				<li><a href="http://jquery.com" target="_blank">jQuery javascript library</a>, <a href="http://jquery.org/license/" target="_blank">dual-licensed under MIT and GNU GPL v2</a></li>
+				<li><a href="http://paulrobertlloyd.com/2009/06/social_media_icons/" rel="nofollow" target="_blank">Social media icons</a> by Paul Robert Lloyd, licensed under a <a href="http://creativecommons.org/licenses/by-sa/2.0/uk/" target="_blank">Creative Commons Attribution-Share Alike 2.0 UK: England & Wales License</a></li>
 			</ul>
 			<h1 id="legal-terms">Legal terms</h1>
 			<h2 id="responsibility">Limitation of responsibility</h2>

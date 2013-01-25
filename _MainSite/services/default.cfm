@@ -61,5 +61,27 @@
 			Do you need <strong>high skills BI consultants</strong>? Ask us! <a data-toggle="modal" href="#contact" class="btn btn-primary btn-large">Contact us »</a>
 		</div>
 	</div>
+	<div class="modal fade" id="labs-redirect">
+		<div class="modal-header">
+			<a data-dismiss="modal" class="close">×</a>
+			<h2>Redirected from our labs</h2>
+		</div>
+		<div class="modal-body">
+			<p>The real time tweets map has been shut down. We stopped this service in order to focus on our new products: <a href="http://tribalytics.com" target = "_blank">tribalytics</a> and <a href="http://news-pipe.com" target = "_blank">news-pipe</a>.</p>
+			<p>The tweets map experiment extracted <strong>1200 tweets geo-tagged around Brussels every day in average</strong>, and displayed in a map in real time.</p>
+			<p>we are always available to develop custom solutions, this page presents our offering.</p>
+			<p>Thanks for your interest.</p>
+			<p>Mehdi El Fadil, Mango Information Systems</p>
+			<p>January 22nd, 2013</p>
+		</div>
+		<div class="modal-footer">
+			<a data-dismiss="modal" class="btn btn-primary" href="#">Close</a>
+		</div>
+	</div>
+</cfsavecontent>
+<cfsavecontent variable="readyActions">
+	if (window.location.hash == '#labs-redirect')	{
+		$('#labs-redirect').modal({show:true})
+	}
 </cfsavecontent>
 <cfinclude template="../default.cfm" />
