@@ -108,7 +108,7 @@
 		</div>
 		<div class="span5 offset1">
 			<div id="hcard-Mango-Information-Systems" class="vcard well">
-				<img src="/img/mango-information-systems-logo.png" alt="logo of Mango Information Systems" class="logo"/>
+				<img src="/img/mango-information-systems-logo-medium.png" alt="logo of Mango Information Systems" class="logo"/>
 				<br/>
 				<p>
 					<a class="url fn org" href="http://mango-is.com/">Mango Information Systems</a> 

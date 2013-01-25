@@ -5,7 +5,7 @@
 	<div class="row" id="about-us">
 		<h1>About us</h1>
 		<div id="hcard-Mango-Information-Systems" class="span5 vcard well">
-			<img src="/img/mango-information-systems-logo.png" alt="logo of Mango Information Systems" class="logo" width = "145px" height = "35px"/>
+			<img src="/img/mango-information-systems-logo-medium.png" alt="logo of Mango Information Systems" class="logo" width = "145px" height = "35px"/>
 			<br/>
 			<p>
 				<a class="url fn org" href="http://mango-is.com/">Mango Information Systems</a> 

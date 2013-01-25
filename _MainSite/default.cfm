@@ -101,7 +101,7 @@
             <span class="icon-bar"></span>
           </a>
           <a class="brand" href="/" rel="home">
-          <img src="/img/mango-information-systems-logo.png" alt="Mango Information Systems" width = "145px" height = "35px">
+          <img src="/img/mango-information-systems-logo-medium.png" alt="Mango Information Systems" width = "145px" height = "35px">
           </a>
           <div class="nav-collapse">
             <ul class="nav">
