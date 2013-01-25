@@ -71,8 +71,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="/touch-icon-iphone-precomposed.png">
-    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64"
-    type=”image/vnd.microsoft.icon”>
+    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64" type="image/vnd.microsoft.icon">
     <script type="text/javascript">
 	var _gaq = _gaq || [];
 	_gaq.push(['_setAccount', 'UA-25766439-1']);
