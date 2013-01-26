@@ -71,7 +71,8 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="/touch-icon-iphone-precomposed.png">
-    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64"
+    type=”image/vnd.microsoft.icon”>
     <script type="text/javascript">
 	var _gaq = _gaq || [];
 	_gaq.push(['_setAccount', 'UA-25766439-1']);
@@ -108,7 +109,7 @@
               <li><a href="/products/">Products</a></li>
               <li><a href="/services/">Services</a></li>
               <li><a href="/company/">Company</a></li>
-              <li><a href="/contact/" class="contact-link" data-toggle="modal">Contact</a></li>
+              <li><a href="/contact/" class="contact-link">Contact</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -148,7 +149,7 @@
 				</p>
 			  <p>
 				  <a class="btn" href="/services/">Read more »</a> or 
-				  <a class="btn btn-primary" href="/contact/" class="contact-link">Contact us »</a>
+				  <a class="btn btn-primary contact-link" href="/contact/">Contact us »</a>
 			  </p>
 			</div>
 			<div class="span4">
@@ -164,60 +165,62 @@
 			<span><a href="/terms/">Copyright - terms of use</a></span>
 		</div>
 		<div class="span5">
-			<a data-toggle="modal" href="/contact/" class="btn btn-primary pull-right"><i class="icon-pencil icon-white"></i> Contact »</a><span class="pull-right"> &nbsp; </span>
+			<a href="/contact/" class="btn btn-primary pull-right contact-link"><i class="icon-pencil icon-white"></i> Contact »</a><span class="pull-right"> &nbsp; </span>
 			<a target="_blank" rel="me" href="http://twitter.com/mango_info" class="btn btn-info pull-right "><i class="icon-twitter"></i>  twitter »</a><span class="pull-right"> &nbsp; </span>
 			<a target="_blank" rel="me" href="https://github.com/mango-information-systems" class="btn pull-right"><i class="icon-github"></i> github »</a>
 		</div>
 	</footer>
-		<div class="modal hide fade" id="contact">
-			<div class="modal-header">
-				<a data-dismiss="modal" class="close">×</a>
-				<h2>Contact</h2>
-			</div>
-			<div class="modal-body">
-				<form method="post" action="contact.cfm" id="contact-form" name="contact-form" class="form-horizontal" method="POST" action="/contact.cfm">
-				<fieldset>
-					<legend>Thanks for leaving us a message</legend>
-					<div class="control-group">
-						<label for="firstName" class="control-label">First name</label>
-						<div class="controls">
-							<input type="text" id="firstName" name="firstName">
-						</div>
-					</div>
-					<div class="control-group">
-						<label for="lastName" class="control-label">Last name</label>
-						<div class="controls">
-							<input type="text" id="lastName" name="lastName">
-						</div>
-					</div>
-					<div class="control-group">
-						<label for="company" class="control-label">Company</label>
-						<div class="controls">
-							<input type="text" id="company" name="company">
-						</div>
-					</div>
-					<div class="control-group">
-						<label for="email" class="control-label">Email</label>
-						<div class="controls">
-							<input type="text" id="email" name="email">
-						</div>
-					</div>
-					<div class="control-group">
-						<label for="message" class="control-label">Message</label>
-						<div class="controls">
-							<textarea rows = "3" id="message" name="message"></textarea>
-						</div>
-					</div>
-				</fieldset>
-				</form>
-			</div>
-			<div class="modal-footer">
-				<div class="span4">
-					<a class="btn btn-primary" id="contact-form-submit"><i class="icon-envelope icon-white"></i> Send</a>
-					<a data-dismiss="modal" class="btn" href="#">Close</a>
-				</div>
-			</div>
+	<cfif cgi.PATH_INFO is not "/contact/Default.cfm">
+	    <div class="modal hide fade" id="contact">
+		<div class="modal-header">
+		    <a data-dismiss="modal" class="close">×</a>
+		    <h2>Contact</h2>
 		</div>
+		<div class="modal-body">
+		    <form method="post" action="contact.cfm" id="contact-form" name="contact-form" class="form-horizontal" method="POST" action="/contact.cfm">
+			<fieldset>
+			    <legend>Thanks for leaving us a message</legend>
+			    <div class="control-group">
+				<label for="firstName" class="control-label">First name</label>
+				<div class="controls">
+				    <input type="text" id="firstName" name="firstName">
+				</div>
+			    </div>
+			    <div class="control-group">
+				<label for="lastName" class="control-label">Last name</label>
+				<div class="controls">
+				    <input type="text" id="lastName" name="lastName">
+				</div>
+			    </div>
+			    <div class="control-group">
+				<label for="company" class="control-label">Company</label>
+				<div class="controls">
+				    <input type="text" id="company" name="company">
+				</div>
+			    </div>
+			    <div class="control-group">
+				<label for="email" class="control-label">Email</label>
+				<div class="controls">
+				    <input type="text" id="email" name="email">
+				</div>
+			    </div>
+			    <div class="control-group">
+				<label for="message" class="control-label">Message</label>
+				<div class="controls">
+				    <textarea rows = "3" id="message" name="message"></textarea>
+				</div>
+			    </div>
+			</fieldset>
+		    </form>
+		</div>
+		<div class="modal-footer">
+		    <div class="span4">
+			<a class="btn btn-primary" id="contact-form-submit"><i class="icon-envelope icon-white"></i> Send</a>
+			<a data-dismiss="modal" class="btn" href="#">Close</a>
+		    </div>
+		</div>
+	    </div>
+	</cfif>
     </div> <!-- /container -->
 
     <!-- Le javascript
@@ -227,67 +230,63 @@
     <script src="/js/bootstrap-button.js"></script>
     <script src="/js/bootstrap-modal.js"></script>
     <script>
-		$(document).ready(function () {
-			
-			if (window.location.pathname != '/contact/')
-			{
-				// progressive enhancement: modal contact form
-				$('.contact-link').attr('href', '#contact')
-				// setup contact modal
-				$('#contact').modal({show:false})
-			}
-			
-			// toggle active class for navbar link 
-			// based on code found here: https://gist.github.com/1600924
-			var $navbarElements = $(".navbar .nav a");
-			$navbarElements.each(function() {
-				if ($(this).attr('href')== window.location.pathname) {
-					$(this).parent().toggleClass("active")
-				}
-			})
+	$(document).ready(function () {
+	    <cfif cgi.PATH_INFO is not "/contact/Default.cfm">
+		// progressive enhancement: modal contact form for javascript enabled browsers
+		$('.contact-link').attr('href', '#contact')
+		$('.contact-link').attr('data-toggle', 'modal')
+		// setup contact modal
+		$('#contact').modal({show:false})
+	    </cfif>
+	    // toggle active class for navbar link 
+	    // based on code found here: https://gist.github.com/1600924
+	    var $navbarElements = $(".navbar .nav a");
+	    $navbarElements.each(function() {
+		if ($(this).attr('href')== window.location.pathname) {
+		    $(this).parent().toggleClass("active")
+		}
+	    })
 
-			<cfif isdefined("readyActions")>
-			    <cfoutput>#readyActions#</cfoutput>
-			</cfif>
+	    <cfif isdefined("readyActions")>
+		<cfoutput>#readyActions#</cfoutput>
+	    </cfif>
 
-			//handle contact form submission
-			$('#contact-form-submit').click(function(e) {
-				e.preventDefault()
-				$('#contact-form-submit').addClass('disabled');
-				$.ajax({
-					type: 'POST',
-					url: '/contact.cfm',
-					data: $('#contact-form').serialize(),
-					success: function(data) {
-						response = JSON.parse(data)
-						switch(response.status) {
-							case 'success':
-								$target = $('#contact');
-								$target.fadeOut(function() {
-									$target.html('<div class="alert alert-success">'+ response.message +'</div>')
-									$target.fadeIn();
-									setTimeout(function() {
-										$('#contact').modal('hide');
-									}
-									, 4000);
-								});
-								
-							break;
-							case 'error':
-								$('#contact-form-submit').removeClass('disabled');
-								$('<div class="alert alert-error">'+ response.message +'</div>').appendTo($('.modal-body'))
-							break;
-							case 'invalid-email':
-								$('#contact-form-submit').removeClass('disabled');
-								$('#email').parents('.control-group').addClass('error');
-								$('<span class="help-inline">'+ response.message + '</span>').insertAfter($('#email'))
-							break;
-						}
-					}
+	    //handle contact form submission
+	    $('#contact-form-submit').click(function(e) {
+		e.preventDefault()
+		$('#contact-form-submit').addClass('disabled');
+		$.ajax({
+		    type: 'POST',
+		    url: '/contact.cfm',
+		    data: $('#contact-form').serialize(),
+		    success: function(data) {
+			response = JSON.parse(data)
+			switch(response.status) {
+			    case 'success':
+				$target = $('#contact');
+				$target.fadeOut(function() {
+				    $target.html('<div class="alert alert-success">'+ response.message +'</div>')
+				    $target.fadeIn();
+				    setTimeout(function() {
+					$('#contact').modal('hide');
+				    }
+				    , 4000);
 				});
-			});
-			
+			    break;
+			    case 'error':
+				$('#contact-form-submit').removeClass('disabled');
+				$('<div class="alert alert-error">'+ response.message +'</div>').appendTo($('.modal-body'))
+			    break;
+			    case 'invalid-email':
+				$('#contact-form-submit').removeClass('disabled');
+				$('#email').parents('.control-group').addClass('error');
+				$('<span class="help-inline">'+ response.message + '</span>').insertAfter($('#email'))
+			    break;
+			}
+		    }
 		});
+	    });
+	});
     </script>
     <script src="/js/bootstrap-transition.js"></script>
     <script src="/js/bootstrap-collapse.js"></script>
@@ -301,5 +300,4 @@
     <script src="/js/bootstrap-carousel.js"></script>
     <script src="/js/bootstrap-typeahead.js"></script>
 -->
-
 </body></html>

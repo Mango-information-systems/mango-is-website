@@ -1,4 +1,5 @@
 <cfprocessingdirective pageencoding="utf-8" />
+<cfheader statuscode="404" statustext="Not found" />
 <cfsavecontent variable="description">Page not found - error 404</cfsavecontent>
 <cfsavecontent variable="title">Page not found</cfsavecontent>
 <cfsavecontent variable="content">
