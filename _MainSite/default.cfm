@@ -280,7 +280,6 @@
 						}
 					},
 					error: function(data) {
-						console.log(data)
 						response = JSON.parse(data.responseText)
 						$('#contact-form-submit').removeClass('disabled');
 						$('<div class="alert alert-error">'+ response.message +'</div>').appendTo($('.modal-body'))
