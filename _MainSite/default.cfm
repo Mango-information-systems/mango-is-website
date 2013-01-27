@@ -248,38 +248,44 @@
 
 			//handle contact form submission
 			$('#contact-form-submit').click(function(e) {
-			e.preventDefault()
-			$('#contact-form-submit').addClass('disabled');
-			$.ajax({
-				type: 'POST',
-				url: '/contact.cfm',
-				data: $('#contact-form').serialize(),
-				success: function(data) {
-				response = JSON.parse(data)
-				switch(response.status) {
-					case 'success':
-					$target = $('#contact');
-					$target.fadeOut(function() {
-						$target.html('<div class="alert alert-success">'+ response.message +'</div>')
-						$target.fadeIn();
-						setTimeout(function() {
-						$('#contact').modal('hide');
+				e.preventDefault()
+				$('#contact-form-submit').addClass('disabled');
+				$.ajax({
+					type: 'POST',
+					url: '/contact.cfm',
+					data: $('#contact-form').serialize(),
+					success: function(data) {
+						response = JSON.parse(data)
+						switch(response.status) {
+							case 'success':
+							$target = $('#contact');
+							$target.fadeOut(function() {
+								$target.html('<div class="alert alert-success">'+ response.message +'</div>')
+								$target.fadeIn();
+								setTimeout(function() {
+								$('#contact').modal('hide');
+								}
+								, 4000);
+							});
+							break;
+							case 'error':
+							$('#contact-form-submit').removeClass('disabled');
+							$('<div class="alert alert-error">'+ response.message +'</div>').appendTo($('.modal-body'))
+							break;
+							case 'invalid-email':
+							$('#contact-form-submit').removeClass('disabled');
+							$('#email').parents('.control-group').addClass('error');
+							$('<span class="help-inline">'+ response.message + '</span>').insertAfter($('#email'))
+							break;
 						}
-						, 4000);
-					});
-					break;
-					case 'error':
-					$('#contact-form-submit').removeClass('disabled');
-					$('<div class="alert alert-error">'+ response.message +'</div>').appendTo($('.modal-body'))
-					break;
-					case 'invalid-email':
-					$('#contact-form-submit').removeClass('disabled');
-					$('#email').parents('.control-group').addClass('error');
-					$('<span class="help-inline">'+ response.message + '</span>').insertAfter($('#email'))
-					break;
-				}
-				}
-			});
+					},
+					error: function(data) {
+						console.log(data)
+						response = JSON.parse(data.responseText)
+						$('#contact-form-submit').removeClass('disabled');
+						$('<div class="alert alert-error">'+ response.message +'</div>').appendTo($('.modal-body'))
+					}
+				});
 			});
 		});
 		</script>

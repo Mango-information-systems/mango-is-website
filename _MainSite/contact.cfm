@@ -1,5 +1,6 @@
 <cfif len(form.hPot)>
 	<cfheader statuscode="403" statustext="Not authorized" />
+	{"status": "error", "message": "Invalid form entry. Unlabeled text input should remain empty."}
 <cfelse>
 	<cfif isdefined("form.email") and isvalid("email",form.email)>
 		<cftry>
