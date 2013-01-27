@@ -175,35 +175,36 @@
 				<fieldset>
 					<legend>Thanks for leaving us a message</legend>
 					<div class="control-group">
-					<label for="firstName" class="control-label">First name</label>
-					<div class="controls">
-						<input type="text" id="firstName" name="firstName">
-					</div>
-					</div>
-					<div class="control-group">
-					<label for="lastName" class="control-label">Last name</label>
-					<div class="controls">
-						<input type="text" id="lastName" name="lastName">
-					</div>
+						<label for="firstName" class="control-label">First name</label>
+						<div class="controls">
+							<input type="text" id="firstName" name="firstName">
+						</div>
 					</div>
 					<div class="control-group">
-					<label for="company" class="control-label">Company</label>
-					<div class="controls">
-						<input type="text" id="company" name="company">
-					</div>
-					</div>
-					<div class="control-group">
-					<label for="email" class="control-label">Email</label>
-					<div class="controls">
-						<input type="text" id="email" name="email">
-					</div>
+						<label for="lastName" class="control-label">Last name</label>
+						<div class="controls">
+							<input type="text" id="lastName" name="lastName">
+						</div>
 					</div>
 					<div class="control-group">
-					<label for="message" class="control-label">Message</label>
-					<div class="controls">
-						<textarea rows = "3" id="message" name="message"></textarea>
+						<label for="company" class="control-label">Company</label>
+						<div class="controls">
+							<input type="text" id="company" name="company">
+						</div>
 					</div>
+					<div class="control-group">
+						<label for="email" class="control-label">Email</label>
+						<div class="controls">
+							<input type="text" id="email" name="email">
+						</div>
 					</div>
+					<div class="control-group">
+						<label for="message" class="control-label">Message</label>
+						<div class="controls">
+							<textarea rows = "3" id="message" name="message"></textarea>
+						</div>
+					</div>
+					<input type="text" id="hPot" name="hPot">
 				</fieldset>
 				</form>
 			</div>

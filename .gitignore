@@ -2,4 +2,6 @@ archive/
 bootstrap-custom.zip
 _MainSite/BingSiteAuth.xml
 _MainSite/att/
+_MainSite/application.cfm
+_www/
 .gitignore
