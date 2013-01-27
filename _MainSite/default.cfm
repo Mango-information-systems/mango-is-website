@@ -193,7 +193,7 @@
 						</div>
 					</div>
 					<div class="control-group">
-						<label for="email" class="control-label">Email</label>
+						<label for="email" class="control-label">Email*</label>
 						<div class="controls">
 							<input type="text" id="email" name="email">
 						</div>

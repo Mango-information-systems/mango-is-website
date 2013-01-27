@@ -31,7 +31,7 @@
 							</div>
 						</div>
 						<div class="control-group">
-							<label for="email" class="control-label">Email</label>
+							<label for="email" class="control-label">Email*</label>
 							<div class="controls">
 								<input type="text" id="email" name="email">
 							</div>
@@ -92,7 +92,7 @@
 								</div>
 							</div>
 							<div class="control-group">
-								<label for="email" class="control-label">Email</label>
+								<label for="email" class="control-label">Email*</label>
 								<div class="controls">
 									<input type="text" id="email" name="email">
 								</div>
@@ -110,7 +110,7 @@
 				</cfif>
 			</cfif>
 		<cfelse>
-			<form method="post" action="" id="contact-form" name="contact-form" class="form-horizontal">
+			<form method="POST" action="" id="contact-form" name="contact-form" class="form-horizontal">
 				<fieldset>
 					<legend>Leave us a message</legend>
 					<div class="control-group">
@@ -132,7 +132,7 @@
 						</div>
 					</div>
 					<div class="control-group">
-						<label for="email" class="control-label">Email</label>
+						<label for="email" class="control-label">Email*</label>
 						<div class="controls">
 							<input type="text" id="email" name="email">
 						</div>
