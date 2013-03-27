@@ -53,7 +53,6 @@
 
 		<!-- Le styles -->
 		<link href="/css/bootstrap.min.css" rel="stylesheet">
-		<link href="/css/default.css" rel="stylesheet">
 		<link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
 
 		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -199,8 +198,8 @@
 			</div>
 			<div class="modal-footer">
 				<div class="span4">
-				<a class="btn btn-primary" id="contact-form-submit"><i class="icon-envelope icon-white"></i> Send</a>
 				<a data-dismiss="modal" class="btn" href="#">Close</a>
+				<a class="btn btn-primary" id="contact-form-submit"><i class="icon-envelope icon-white"></i> Send</a>
 				</div>
 			</div>
 			</div>
