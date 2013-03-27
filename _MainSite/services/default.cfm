@@ -29,7 +29,7 @@
 			</li>
 		</ul>
 		<div class="well">
-			Do you have a <strong>requirement involving data</strong> for which you are not sure about the feasibility? Get in touch, we love to chat. <a data-toggle="modal" href="#contact" class="btn btn-primary btn-large">Contact us »</a>
+			Do you have a <strong>requirement involving data</strong> for which you are not sure about the feasibility? Get in touch, we love to chat. <a data-toggle="modal" href="#contact" class="btn btn-primary">Contact us »</a>
 		</div>
 		<h2 id="business-intelligence">Business Intelligence <small>State of the art data-warehousing</small></h2>
 		<ul class="thumbnails">
@@ -58,7 +58,7 @@
 			</li>
 		</ul>
 		<div class="well">
-			Do you need <strong>high skills BI consultants</strong>? Ask us! <a data-toggle="modal" href="#contact" class="btn btn-primary btn-large">Contact us »</a>
+			Do you need <strong>high skills BI consultants</strong>? Ask us! <a data-toggle="modal" href="#contact" class="btn btn-primary">Contact us »</a>
 		</div>
 	</div>
 	<div class="modal hide fade" id="labs-redirect">

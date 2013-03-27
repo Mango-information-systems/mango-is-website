@@ -52,9 +52,9 @@
 		<meta name="keywords" content="analytics, business intelligence, data services, social media, twitter, real time, data-warehouse, data integration, web, ETL, SAP, BO, SAP BOXI, Business Objects, Oracle, database, reporting, dimensional modelling, business analysis, star schema, BOXI, startup, innovation, projects, information systems, organization, change management, consultancy, consulting" /> 
 
 		<!-- Le styles -->
-		<link href="/css/bootstrap.css" rel="stylesheet">
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
 		<link href="/css/default.css" rel="stylesheet">
-		<link href="/css/bootstrap-responsive.css" rel="stylesheet">
+		<link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
 
 		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
@@ -153,17 +153,6 @@
 				</div>
 			</div>
 		</cfif>
-		<footer>
-			<div class="span5">
-				<span>Mango Information systems 2012. </span>
-				<span><a href="/terms/">Copyright - terms of use</a></span>
-			</div>
-			<div class="span5">
-				<a href="/contact/" class="btn btn-primary pull-right contact-link"><i class="icon-pencil icon-white"></i> Contact »</a><span class="pull-right"> &nbsp; </span>
-				<a target="_blank" rel="me" href="http://twitter.com/mango_info" class="btn btn-info pull-right "><i class="icon-twitter"></i>  twitter »</a><span class="pull-right"> &nbsp; </span>
-				<a target="_blank" rel="me" href="https://github.com/mango-information-systems" class="btn pull-right"><i class="icon-github"></i> github »</a>
-			</div>
-		</footer>
 		<cfif cgi.PATH_INFO is not "/contact/Default.cfm">
 			<div class="modal hide fade" id="contact">
 			<div class="modal-header">
@@ -201,7 +190,7 @@
 					<div class="control-group">
 						<label for="message" class="control-label">Message</label>
 						<div class="controls">
-							<textarea rows = "3" id="message" name="message"></textarea>
+							<textarea rows = "2" id="message" name="message"></textarea>
 						</div>
 					</div>
 					<input type="text" id="hPot" name="hPot">
@@ -217,6 +206,19 @@
 			</div>
 		</cfif>
 		</div> <!-- /container -->
+		<footer>
+			<div class="container">
+				<div class="span5">
+					<span>Mango Information systems 2010 - 2013. </span>
+					<span><a href="/terms/">Copyright - terms of use</a></span>
+				</div>
+				<div class="span5">
+					<a href="/contact/" class="btn btn-primary pull-right contact-link"><i class="icon-pencil icon-white"></i> Contact »</a><span class="pull-right"> &nbsp; </span>
+					<a target="_blank" rel="me" href="http://twitter.com/mango_info" class="btn btn-info pull-right "><i class="icon-twitter"></i>  twitter »</a><span class="pull-right"> &nbsp; </span>
+					<a target="_blank" rel="me" href="https://github.com/mango-information-systems" class="btn pull-right"><i class="icon-github"></i> github »</a>
+				</div>
+			</div>
+		</footer>
 
 		<!-- Le javascript
 		================================================== -->
