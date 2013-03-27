@@ -61,7 +61,7 @@
 			Do you need <strong>high skills BI consultants</strong>? Ask us! <a data-toggle="modal" href="#contact" class="btn btn-primary btn-large">Contact us »</a>
 		</div>
 	</div>
-	<div class="modal fade" id="labs-redirect">
+	<div class="modal hide fade" id="labs-redirect">
 		<div class="modal-header">
 			<a data-dismiss="modal" class="close">×</a>
 			<h2>Redirected from our labs</h2>
