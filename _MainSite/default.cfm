@@ -123,8 +123,8 @@
 						</a>
 					</span>
 					<span class="span7">
-						<h1>Tribalytics - segment your Twitter followers</h1>
-						<p>Tribalytics analyzes social graphs to identify the <strong>breakdown of different communities in your followers</strong>, providing a detailed profile for each.</p>
+						<h1>Tribalytics - know your tribes</h1>
+						<p>Do you really know who is following you? Tribalytics segments your twitter followers into like minded communities, identifies the most connected individuals and helps you monitor how the competition are doing.</p>
 						<p><a class="btn btn-primary btn-large" href="http://tribalytics.com" target="_blank">Checkout tribalytics.com »</a></p>
 					</span>
 				</div>
@@ -134,7 +134,7 @@
 			<div class="row">
 				<div id="products" class="span4">
 					<h2>Products</h2>
-					<p>We develop powerful <strong>social media monitoring and analytics</strong> solutions. Our goal is to help organizations better manage their activity thanks to social media data.</p>
+					<p>Mango develops simple yet powerful social media monitoring and analytics solutions. We help people working with social media data get better results for their companies or clients.</p>
 					<p><a class="btn" href="/products/">See our products »</a></p>
 				</div>
 				<div class="span4">
@@ -148,7 +148,7 @@
 				</div>
 				<div class="span4">
 				  <h2 id="about-us">About us</h2>
-				   <p>Our startup operates from Brussels, Belgium since 2010. We help businesses run better, using data they own or that is publicly available to produce actionable information and <strong>enhance their decision-making</strong>.</p>
+				   <p>Mango has operated from Brussels, Belgium since 2010. We help businesses improve their business processes by using data they own or that is publicly available to enhance their decision-making and produce actionable reports.</p>
 				  <p><a class="btn" href="/company/">Read more »</a></p>
 				</div>
 			</div>
