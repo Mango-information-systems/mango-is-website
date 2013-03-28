@@ -133,12 +133,12 @@
 			<!-- row of links to main sections -->
 			<div class="row">
 				<div id="products" class="span4">
-					<h1>Products</h1>
+					<h2>Products</h2>
 					<p>We develop powerful <strong>social media monitoring and analytics</strong> solutions. Our goal is to help organizations better manage their activity thanks to social media data.</p>
 					<p><a class="btn" href="/products/">See our products »</a></p>
 				</div>
 				<div class="span4">
-				  <h1 id="services">Services</h1>
+				  <h2 id="services">Services</h2>
 				   <p>Whether you need to extract online data, have complex data integration or reporting issues, we can help. We provide consulting services in <strong>web data analytics</strong>, as well as <strong>corporate business intelligence</strong> projects.
 					</p>
 				  <p>
@@ -147,7 +147,7 @@
 				  </p>
 				</div>
 				<div class="span4">
-				  <h1 id="about-us">About us</h1>
+				  <h2 id="about-us">About us</h2>
 				   <p>Our startup operates from Brussels, Belgium since 2010. We help businesses run better, using data they own or that is publicly available to produce actionable information and <strong>enhance their decision-making</strong>.</p>
 				  <p><a class="btn" href="/company/">Read more »</a></p>
 				</div>
