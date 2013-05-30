@@ -1,0 +1,69 @@
+---
+layout: default
+type: article
+---
+<div class="row">
+	<div class="span8">
+		<article>
+			<h1 id="{{ page.title | escape }}">{{ page.title }}{% if page.subtitle %} <small>{{page.subtitle}}</small>{% endif %}</h1>
+
+			<div id="post">
+			{{ content }}
+			</div>
+			
+			<div>
+				<script type="IN/Share" data-counter="right"></script>
+				<!-- Place this tag where you want the +1 button to render. -->
+				<div class="g-plusone" data-size="medium"></div>
+				<!-- Place this tag after the last +1 button tag. -->
+				<script type="text/javascript">
+				  (function() {
+					var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+					po.src = 'https://apis.google.com/js/plusone.js';
+					var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+				  })();
+				</script>
+				<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+			</div>
+		{% if site.baseurl == '/blog' %}
+		<!-- START: Livefyre Embed -->
+		<div id="livefyre-comments"></div>
+		<script type="text/javascript" src="http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js"></script>
+		<script type="text/javascript">
+		(function () {
+			var articleId = fyre.conv.load.makeArticleId(null);
+			fyre.conv.load({}, [{
+				el: 'livefyre-comments',
+				network: "livefyre.com",
+				siteId: "{{ site.liveFyreId }}",
+				articleId: articleId,
+				signed: false,
+				collectionMeta: {
+					articleId: articleId,
+					url: fyre.conv.load.makeCollectionUrl(),
+				}
+			}], function() {});
+		}());
+		</script>
+		<!-- END: Livefyre Embed -->
+		{% endif %}
+
+		</article>
+	</div>
+	<div class="span4">
+		<div class="well">
+			<h3>CTA title</h3>
+			<p>description text</p>
+			<p><a class="btn btn-primary" href="/contact" data-toggle="modal"><i class="icon-pencil icon-white"></i> Contact us »</a></p>
+		</div>
+		<div class="well">
+			<p>
+				<a href="https://twitter.com/mango_info" class="twitter-follow-button" data-show-count="false">Follow @mango_info</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			</p>
+			<p>
+				<script type="IN/FollowCompany" data-id="2341318" data-counter="none"></script>
+			</p>
+		</div>
+	</div>
+</div>

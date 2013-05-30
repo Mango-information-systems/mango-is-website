@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+{% if page.type == 'article' %}
+<html lang="{{ page.language }}" itemscope itemtype="http://schema.org/Article" xmlns:og="http://ogp.me/ns#">
+{% else %}
+<html lang="{{ page.language }}" itemscope itemtype="http://schema.org/Blog" xmlns:og="http://ogp.me/ns#">
+{% endif %}
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>{{ page.title }}{% if page.title %} - {% endif %}Mango Information Systems's blog</title>
+	<meta property="og:title" content="{{ page.title }}" />
+	<meta itemprop="name" content="{{ page.title }}">
+	<meta property="og:type" content="{% if page.type %}{{ page.type }}{% else %}blog{% endif %}" />
+    <meta property="og:description" content="{{ page.description }}" />
+    <meta itemprop="description" content="{{ page.description }}">
+    <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
+	<link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}"/>
+    {% if page.thumbnail %}<meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/img/thumbnails/{{ page.thumbnail }}" />
+    <meta itemprop="image" content="{{ site.url }}{{ site.baseurl }}/img/thumbnails/{{ page.thumbnail }}">
+	{% endif %}<meta name="subject" content="{{ page.title }}"/>
+	<meta name="description" content="{{ page.description }}" />
+	<meta name="author" content="{{ page.author }}" />
+	<meta name="format" content="html"/>
+	<meta name="language" content="{{ page.language }}"/>
+	{% if page.date %}<meta name="revised" content="{{ page.date }}"/>
+	{% endif %}
+	{% if page.keywords %}<meta name="keywords" content="{{ page.keywords | join: ',' }}" />
+	{% endif %}
+	{% if page.prevArticle %}<link rel="prev" href="{{ site.baseurl }}{{ page.prevArticle }}" />
+	{% endif %}
+	{% if page.nextArticle %}<link rel="next" href="{{ site.baseurl }}{{ page.nextArticle }}" />
+	{% endif %}
+	{% if page.categories[0] =='drafts' %}<meta name="robots" content="noindex, nofollow">{% endif %}
+	<!-- <link href="http://feeds.feedburner.com/mango-is" rel="alternate" title="Mango Information Systems blog" type="application/atom+xml" /> -->
+
+	<!-- Homepage CSS -->
+	<link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css"/>
+	<link rel="stylesheet" href="/css/bootstrap-responsive.min.css" type="text/css"/>
+	<link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css" type="text/css"/>
+
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Le fav and touch icons -->
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="/img/ico/apple-touch-icon-57-precomposed.png">
+</head>
+<body>
+
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<a rel="home" href="/" class="brand">
+					<img width="145px" height="35px" alt="Mango Information Systems" src="/img/mango-information-systems-logo-medium.png">
+				</a>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li><a href="http://mango-is.com/">Home</a></li>
+						<li><a href="http://mango-is.com/products/">Products</a></li>
+						<li><a href="http://mango-is.com/services/">Services</a></li>
+						<li><a href="http://mango-is.com/company/">Company</a></li>
+						<li class="active"><a href="http://mango-is.com{{ site.baseurl }}">Blog</a></li>
+						<li><a href="http://mango-is.com/contact">Contact</a></li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		{{ content }}
+	</div>
+	<footer>
+		<div class="container">
+			<div class="span5">
+				<span>Mango Information systems 2012. </span>
+				<span><a href="http://mango-is.com/terms/">Copyright - terms of use</a></span>
+			</div>
+			<div class="span6">
+				<a href="/contact/" class="btn btn-primary btn-small pull-right contact-link"><i class="icon-pencil icon-white"></i> Contact »</a><span class="pull-right"> &nbsp; </span>
+				<a href="https://twitter.com/mango_info" class="twitter-follow-button" data-show-count="false">Follow @mango_info</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+				<script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script><script type="IN/FollowCompany" data-id="Mango Information Systems" data-counter="right"></script>
+				<br/>
+				<iframe src="http://ghbtns.com/github-btn.html?user=mango-information-systems&type=follow"
+  allowtransparency="true" frameborder="0" scrolling="0" width="227" height="20"></iframe>
+			<!--
+				<a href="http://feeds.feedburner.com/mango-information-systems">
+					<img src="/img/rss.png" alt="Subscribe to RSS Feed" />
+				</a>
+			-->
+			</div>
+		</div>
+	</footer>
+
+	 <script src="{{ site.baseurl }}/js/jquery.js"></script>
+	 <script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
+	 {% if site.url == 'http://mango-is.com' %}
+	 <script>var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-25766439-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+window.onerror = function(message, file, line) {
+var sFormattedMessage = '[' + file + ' (' + line + ')] ' + message;
+_gaq.push(['_trackEvent', 'Exceptions', 'Application', sFormattedMessage, null, true]);
+}
+// optimized twitter events tracking script based on: http://null-uk.com/55090968
+(function() {
+    window.twttr = (function(d,s,id) {
+        var t, js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return; js=d.createElement(s); js.id=id;
+        js.src="//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
+        return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
+    }(document, "script", "twitter-wjs"));
+
+    twttr.ready(function(twttr) {
+        function trackSocialIntent(intent_event) {
+            if (!intent_event) { return; }
+            _gaq.push(['_trackSocial', 'twitter', intent_event.type]);
+        }
+        twttr.events.bind('click', trackSocialIntent);
+        twttr.events.bind('tweet', trackSocialIntent);
+        twttr.events.bind('retweet', trackSocialIntent);
+        twttr.events.bind('favorite', trackSocialIntent);
+        twttr.events.bind('follow', trackSocialIntent);
+    });        
+})();</script>
+	{% endif %}
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+	background: #fcfcfc;
+}
+
+.thumbnail {
+	background: #ffffff;
+	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.475);
+	padding: 12px;
+}
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+	color:#666666;
+}
+
+article {
+	border: 1px solid #DDDDDD;
+	border-radius: 4px 4px 4px 4px;
+	background: #ffffff;
+	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.475);
+	padding: 12px;
+}
+
+#hPot {
+	display:none;
+}
