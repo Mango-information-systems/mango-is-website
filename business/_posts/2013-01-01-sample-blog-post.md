@@ -33,10 +33,10 @@ whatever markdown goes wherever
 
 <div class="row">
 	<div class="span6">
-		HTML tags are supported within markdown
+		<p>HTML tags are supported within markdown</p>
 	</div>
 	<div class="span6">
-		so that we can do more complex stuff, including playing around with javascripts & client side data visualizations/interactions
+		<p>so that we can do more complex stuff, including playing around with javascripts & client side data visualizations/interactions</p>
 	</div>
 </div>
 
