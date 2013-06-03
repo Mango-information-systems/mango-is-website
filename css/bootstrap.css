@@ -6186,6 +6186,11 @@ body {
   background-position: 0 center;
 }
 
+article p,
+article .highlight {
+  margin-left: 30px;
+}
+
 .pull-right {
   float: right;
 }
