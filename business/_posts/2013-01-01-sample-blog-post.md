@@ -36,7 +36,11 @@ whatever markdown goes wherever
 		<p>HTML tags are supported within markdown</p>
 	</div>
 	<div class="span6">
-		<p>so that we can do more complex stuff, including playing around with javascripts & client side data visualizations/interactions</p>
+		<div class="row">
+			<div class="span6">
+				<p>this line: row in a row</p>
+			</div>
+		</div>
 	</div>
 </div>
 
