@@ -45,8 +45,8 @@
 		<meta name="language" content="en">
 		<meta name="DC.Rights" content="CC BY SA">
 		<meta name="rights" content="CC BY SA">
-		<meta name="DC.Date" content="2013-01-26">
-		<meta name="revised" content="2013-01-26">
+		<meta name="DC.Date" content="2013-06-19">
+		<meta name="revised" content="2013-06-19">
 		<meta name="DC.type" content="Interactive Resource">
 		<meta name="DC.keywords" content="analytics, business intelligence, data services, social media, twitter, real time, data-warehouse, data integration, web, ETL, SAP, BO, SAP BOXI, Business Objects, Oracle, database, reporting, dimensional modelling, business analysis, star schema, BOXI, startup, innovation, projects, information systems, organization, change management, consultancy, consulting" /> 
 		<meta name="keywords" content="analytics, business intelligence, data services, social media, twitter, real time, data-warehouse, data integration, web, ETL, SAP, BO, SAP BOXI, Business Objects, Oracle, database, reporting, dimensional modelling, business analysis, star schema, BOXI, startup, innovation, projects, information systems, organization, change management, consultancy, consulting" /> 
