@@ -196,7 +196,7 @@
 				</ul>
 			</div>
 			<a href="http://coworking.betagroup.be/" target = "_blank">
-				<img alt="betagroup-coworking-logo" src="/img/coworking-brussels-betagroup-logo.png">
+				<img alt="betacowork-coworking-logo" src="/img/betacowork-brussels-coworking-logo.png">
 			</a>
 			<p>
 				<strong>Meet us</strong> at the <a href="http://coworking.betagroup.be/" target = "_blank">Betagroup coworking space</a>, a great place for tech startups in Belgium.
