@@ -16,6 +16,14 @@
 			</li>
 			<li class="span4">
 				<div class="thumbnail">
+					<img src="../img/twitto-be-directory.png" alt="twitto.be">
+					<h3 id="twitto-be">Twitto.be<small> following the Belgian tweeps</small></h3>
+					<p>Twitto.be is a free directory of Belgian twitter users ranked by social influence score and organized by topic.</p>
+					<p><a class="btn btn-primary" href="http://twitto.be" target="_blank">Visit twitto.be »</a></p>
+				</div>
+			</li>
+			<li class="span4">
+				<div class="thumbnail">
 					<img src="../img/news-feed-widget-newspipe.png" alt="News Pipe">
 					<h3 id="news-pipe">News Pipe<small> smart news content for your website</small></h3>
 					<p>News Pipe monitors the social web to identify and rank news items related to your industry, and <strong>feeds it into your website's</strong> news page.</p>
@@ -23,7 +31,7 @@
 				</div>
 			</li>
 		</ul>
-		<h2 id="open-source">Open source <small>for the geeks of us</small></h2>
+		<h2 id="open-source">Open source <small>because freedom matters</small></h2>
 		<ul class="thumbnails">
 			<li class="span4">
 				<div class="thumbnail">
