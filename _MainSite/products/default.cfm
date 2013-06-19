@@ -49,6 +49,16 @@
 					<p><a href="https://github.com/Mango-information-systems/csv2couchdb" target="_blank" class="btn"><i class="icon-github"></i> <span>View on github</span></a> <a href="http://mango-reports.cloudant.com/mango-apps/_design/csv2couchdb/index.html" target="_blank" class="btn btn-primary">View demo</a></p>
 				</div>
 			</li>
+			<li class="span4">
+				<div class="thumbnail">
+					<img src="../img/mango-is-website-screenshot.png" alt="screenshot of Mango Information System's website"/>
+					<h3 id="our-website">Our website</h3>
+					<p>Our website itself is open source. Feel free to use it (as long as you rebrand it). Content is licensed under a Creative Commons license, cf. <a href="../terms/">our terms of use</a></p>
+					<p>
+						<a href="https://github.com/Mango-information-systems/mango-is-website" target="_blank" class="btn btn-primary"><i class="icon-github"></i> <span>View on github</span></a>
+					</p>
+				</div>
+			</li>
 		</ul>
 	</div>
 </cfsavecontent>
