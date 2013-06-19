@@ -94,7 +94,7 @@
 				<span class="icon-bar"></span>
 			  </a>
 			  <a class="brand" href="/" rel="home">
-			  <img src="/img/mango-information-systems-logo-medium.png" alt="Mango Information Systems" width = "145px" height = "35px">
+			  <img src="/img/mango-information-systems-logo-medium.png" alt="Mango Information Systems" width = "145" height = "35">
 			  </a>
 			  <div class="nav-collapse">
 				<ul class="nav">
@@ -213,7 +213,7 @@
 				</div>
 				<div class="span5">
 					<a href="/contact/" class="btn btn-primary pull-right contact-link"><i class="icon-pencil icon-white"></i> Contact »</a><span class="pull-right"> &nbsp; </span>
-					<a target="_blank" rel="me" href="http://twitter.com/mango_info" class="btn btn-info pull-right "><i class="icon-twitter"></i>  twitter »</a><span class="pull-right"> &nbsp; </span>
+					<a target="_blank" rel="me" href="https://twitter.com/mango_info" class="btn btn-info pull-right "><i class="icon-twitter"></i>  twitter »</a><span class="pull-right"> &nbsp; </span>
 					<a target="_blank" rel="me" href="https://github.com/mango-information-systems" class="btn pull-right"><i class="icon-github"></i> github »</a>
 				</div>
 			</div>
