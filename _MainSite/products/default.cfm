@@ -16,6 +16,14 @@
 			</li>
 			<li class="span4">
 				<div class="thumbnail">
+					<img src="../img/twitto-be-directory.png" alt="twitto.be">
+					<h3 id="twitto-be">Twitto.be<small> following the Belgian tweeps</small></h3>
+					<p>Twitto.be is a free directory of Belgian twitter users ranked by social influence score and organized by topic.</p>
+					<p><a class="btn btn-primary" href="http://twitto.be" target="_blank">Visit twitto.be »</a></p>
+				</div>
+			</li>
+			<li class="span4">
+				<div class="thumbnail">
 					<img src="../img/news-feed-widget-newspipe.png" alt="News Pipe">
 					<h3 id="news-pipe">News Pipe<small> smart news content for your website</small></h3>
 					<p>News Pipe monitors the social web to identify and rank news items related to your industry, and <strong>feeds it into your website's</strong> news page.</p>
@@ -23,7 +31,7 @@
 				</div>
 			</li>
 		</ul>
-		<h2 id="open-source">Open source <small>for the geeks of us</small></h2>
+		<h2 id="open-source">Open source <small>because freedom matters</small></h2>
 		<ul class="thumbnails">
 			<li class="span4">
 				<div class="thumbnail">
@@ -39,6 +47,16 @@
 					<h3 id="csv2couchdb">csv2couchdb</h3>
 					<p>csv2couchdb is a fully-featured web application letting users populate the couchdb nosql database using csv files.</p>
 					<p><a href="https://github.com/Mango-information-systems/csv2couchdb" target="_blank" class="btn"><i class="icon-github"></i> <span>View on github</span></a> <a href="http://mango-reports.cloudant.com/mango-apps/_design/csv2couchdb/index.html" target="_blank" class="btn btn-primary">View demo</a></p>
+				</div>
+			</li>
+			<li class="span4">
+				<div class="thumbnail">
+					<img src="../img/mango-is-website-screenshot.png" alt="screenshot of Mango Information System's website"/>
+					<h3 id="our-website">Our website</h3>
+					<p>Our website itself is open source. Feel free to use it (as long as you rebrand it). Content is licensed under a Creative Commons license, cf. <a href="../terms/">our terms of use</a></p>
+					<p>
+						<a href="https://github.com/Mango-information-systems/mango-is-website" target="_blank" class="btn btn-primary"><i class="icon-github"></i> <span>View on github</span></a>
+					</p>
 				</div>
 			</li>
 		</ul>

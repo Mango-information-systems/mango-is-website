@@ -6,7 +6,7 @@
 			<h1 id="intellectual-property">Intellectual property</h1>
 			<p>The following describes intellectual property rights and terms of use of the website of Mango Information Systems SPRL, available at the following url: http://mango-is.com.</p>
 			<h2 id="content">Content</h2>
-			<p>Unless specified otherwise, the content in this website is released under a <a href="http://creativecommons.org/licenses/by-sa/2.0/be/" rel="license">Creative Commons Attribution-ShareAlike 2.0 Belgium License</a> <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/be/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/2.0/be/80x15.png" /></a>.</p>
+			<p>Unless specified otherwise, the content in this website is released under a <a href="http://creativecommons.org/licenses/by-sa/2.0/be/" rel="license">Creative Commons Attribution-ShareAlike 2.0 Belgium License</a> <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/be/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/2.0/be/80x15.png" /></a>. Quotes from third party do remain the property of their owners and are not subject to the Creative Commons licensing.</p>
 			<h2 id="website">Website</h2>
 			<p>This website is the property of Mango Information Systems SPRL. It is mostly based on open source components (cf. Credits below). Contact us for any inquiry about reusing all or part of our software.</p>
 			<h2 id="logo">Logo</h2>

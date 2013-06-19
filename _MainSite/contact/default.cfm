@@ -4,7 +4,7 @@
 <cfsavecontent variable="content">
 	<div class="row" id="contact">
 		<h1>Contact</h1>
-		<div class="span5 modal-body">
+		<div class="span5">
 		<cfif isdefined("form.contactSubmit") and form.contactSubmit eq "Send"> 
 			<cfif len(form.hPot)>
 				<cfheader statuscode="403" statustext="Not authorized" />
