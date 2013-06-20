@@ -9,7 +9,7 @@
 			<li class="span4">
 				<div class="thumbnail">
 					<img src="../img/tribalytics.jpg" alt="tribalytics">
-					<h3 id="tribalytics">Tribalytics *<small> know your social tribes</small></h3>
+					<h3 id="tribalytics">Tribalytics<small> know your social tribes</small></h3>
 					<p>Tribalytics analyzes social graphs to identify the <strong>breakdown of different communities in your followers</strong>, providing a detailed profile for each.</p>
 					<p><a class="btn btn-primary" href="http://tribalytics.com" target="_blank">Checkout tribalytics.com »</a></p>
 				</div>
@@ -17,7 +17,7 @@
 			<li class="span4">
 				<div class="thumbnail">
 					<img src="../img/twitto-be-directory.png" alt="twitto.be">
-					<h3 id="twitto-be">Twitto.be<small> following the Belgian tweeps</small></h3>
+					<h3 id="twitto-be">Twitto.be <small>following the Belgian tweeps</small></h3>
 					<p>Twitto.be is a free directory of Belgian twitter users ranked by social influence score and organized by topic.</p>
 					<p><a class="btn btn-primary" href="http://twitto.be" target="_blank">Visit twitto.be »</a></p>
 				</div>
@@ -25,13 +25,13 @@
 			<li class="span4">
 				<div class="thumbnail">
 					<img src="../img/news-feed-widget-newspipe.png" alt="News Pipe">
-					<h3 id="news-pipe">News Pipe<small> smart news content for your website</small></h3>
+					<h3 id="news-pipe">News Pipe <small>smart news content for your website</small></h3>
 					<p>News Pipe monitors the social web to identify and rank news items related to your industry, and <strong>feeds it into your website's</strong> news page.</p>
 					<p><a class="btn btn-primary" href="http://news-pipe.com" target="_blank">Visit news-pipe.com »</a></p>
 				</div>
 			</li>
 		</ul>
-		<h2 id="open-source">Open source <small>because freedom matters</small></h2>
+		<h2 id="open-source">Open source <small>it makes things better <a href="#footnote-1">*</a></small></h2>
 		<ul class="thumbnails">
 			<li class="span4">
 				<div class="thumbnail">
@@ -60,6 +60,7 @@
 				</div>
 			</li>
 		</ul>
+		<small id="footnote-1">* source: <a href="https://www.gov.uk/designprinciples#tenth" target="_blank">Design Principles of UK's Government Digital Service.</a></small>
 	</div>
 </cfsavecontent>
 <cfinclude template="../default.cfm" />
