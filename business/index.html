@@ -1,15 +1,15 @@
 ---
 layout: default
 language: en
-title: Rockin' data - analytics and data vizualization
+title: Analytics and business intelligence functional blog by Mango Information Systems
 author: Mango Information Systems
-description: We blog about web and social media analytics, business intelligence, and data visualization techniques.
+description: Blog posts under category "business", about analytics, big data, data visualizations and business intelligence topics.
 keywords: dataviz, bi, business intelligence, visualization, d3, graph, olap, reporting, web analytics, social media analytics, api, competitive analytics, profiling, influence, trends, monitoring
 thumbnail: mango-is-blog.png
 ---
 
 <div id="home">
-	<h1>Rockin' data <small>a blog about analytics and data vizualization</small></h1>
+	<h1>Jazzin' data <small>a blog about analytics and data vizualization</small></h1>
 	<h2>Business <small>The functional side of the moon</small></h2>
 	<ul class="thumbnails">
 		{% for post in site.categories.business %}
@@ -18,7 +18,7 @@ thumbnail: mango-is-blog.png
 					<h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> <small class="pull-right">{{ post.date | date_to_string }}</small></h3>
 					{% if post.subtitle %}<p><strong>{{ post.subtitle }}</strong></p>{% endif %}
 					{% if post.thumbnail %}
-						<img src="/img/{{post.thumbnail}}" alt=""/>
+						<img src="{{ site.baseurl }}/img/thumbnails/{{ post.thumbnail }}" alt=""/>
 					{% endif %}
 					<p>{{ post.content | strip_html | truncatewords: 30 }}</p>
 				</div>

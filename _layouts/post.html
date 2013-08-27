@@ -2,28 +2,32 @@
 layout: default
 type: article
 ---
-<div class="row">
+<div class="row-fluid">
 	<div class="span8">
 		<article>
 			<h1 id="{{ page.title | uri_escape }}">{{ page.title }}{% if page.subtitle %} <small>{{page.subtitle}}</small>{% endif %}</h1>
 
 			<div id="post">
 			{{ content }}
+			<br/>
+			<a href="{{ site.url }}{{ site.baseurl }}/authors#{{ page.tags[0] }}">{{ page.tags[0] | capitalize }}</a>
 			</div>
-			
+			<hr/>
 			<div>
-				<script type="IN/Share" data-counter="right"></script>
-				<!-- Place this tag where you want the +1 button to render. -->
-				<div class="g-plusone" data-size="medium"></div>
-				<!-- Place this tag after the last +1 button tag. -->
-				<script type="text/javascript">
-				  (function() {
-					var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-					po.src = 'https://apis.google.com/js/plusone.js';
-					var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-				  })();
-				</script>
-				<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+				{% if site.baseurl == '/blog' %}
+					<script type="IN/Share" data-counter="right"></script>
+					<!-- Place this tag where you want the +1 button to render. -->
+					<div class="g-plusone" data-size="medium"></div>
+					<!-- Place this tag after the last +1 button tag. -->
+					<script type="text/javascript">
+					  (function() {
+						var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+						po.src = 'https://apis.google.com/js/plusone.js';
+						var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+					  })();
+					</script>
+					<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+				{% endif %}
 			</div>
 		{% if site.baseurl == '/blog' %}
 		<!-- START: Livefyre Embed -->
@@ -52,8 +56,8 @@ type: article
 	</div>
 	<div class="span4">
 		<div class="well">
-			<h3>CTA title</h3>
-			<p>description text</p>
+			<h3>Want to enhance your social media strategy?</h3>
+			<p>We provide tailor-made social media analytics solutions.</p>
 			<p><a class="btn btn-primary" href="/contact" data-toggle="modal"><i class="icon-pencil icon-white"></i> Contact us »</a></p>
 		</div>
 		<div class="well">

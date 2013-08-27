@@ -23,21 +23,23 @@
 	<meta name="author" content="{{ page.author }}" />
 	<meta name="format" content="html"/>
 	<meta name="language" content="{{ page.language }}"/>
-	{% if page.date %}<meta name="revised" content="{{ page.date }}"/>
+	{% if page.date %}<meta name="revised" content="{{ page.date  | date: "%Y-%m-%d" }}"/>
 	{% endif %}
 	{% if page.keywords %}<meta name="keywords" content="{{ page.keywords | join: ',' }}" />
 	{% endif %}
-	{% if page.prevArticle %}<link rel="prev" href="{{ site.baseurl }}{{ page.prevArticle }}" />
+	{% if page.prevArticle %}<link rel="prev" href="{{ site.url }}{{ site.baseurl }}{{ page.prevArticle }}" />
 	{% endif %}
-	{% if page.nextArticle %}<link rel="next" href="{{ site.baseurl }}{{ page.nextArticle }}" />
+	{% if page.nextArticle %}<link rel="next" href="{{ site.url }}{{ site.baseurl }}{{ page.nextArticle }}" />
 	{% endif %}
 	{% if page.categories[0] =='drafts' %}<meta name="robots" content="noindex, nofollow">{% endif %}
-	<!-- <link href="http://feeds.feedburner.com/mango-is" rel="alternate" title="Mango Information Systems blog" type="application/atom+xml" /> -->
 
-	<!-- Homepage CSS -->
-	<link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css"/>
-	<link rel="stylesheet" href="/css/bootstrap-responsive.min.css" type="text/css"/>
-	<link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css" type="text/css"/>
+	<!-- CSS -->
+	<link rel="stylesheet" href="{{ site.url }}/css/bootstrap.min.css" type="text/css"/>
+	<link rel="stylesheet" href="{{ site.url }}/css/bootstrap-responsive.min.css" type="text/css"/>
+	<link rel="stylesheet" href="{{ site.url }}/css/syntax.css" type="text/css"/>
+	<link rel="stylesheet" href="{{ site.url }}/css/syntax.css" type="text/css"/>
+	{% if page.css %}<link rel="stylesheet" href="{{ site.url }}/{{ page.css }}" type="text/css"/>
+	{% endif %}
 
 	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]>
@@ -77,7 +79,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="container">
+	<div class="container-fluid">
 		{{ content }}
 	</div>
 	<footer>
@@ -103,10 +105,15 @@
 		</div>
 	</footer>
 
-	 <script src="{{ site.baseurl }}/js/jquery.js"></script>
-	 <script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
-	 {% if site.url == 'http://mango-is.com' %}
-	 <script>var _gaq = _gaq || [];
+	<script src="{{ site.url }}/js/jquery.js"></script>
+	<script src="{{ site.url }}/js/bootstrap.min.js"></script>
+	{% if page.scripts %}
+		{% for script in page.scripts %}
+			<script src="{{ site.url }}/{{ script }}"></script>
+		{% endfor %}
+	{% endif %}
+	{% if site.url == 'http://mango-is.com' %}
+	<script>var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-25766439-1']);
 _gaq.push(['_trackPageview']);
 (function() {
