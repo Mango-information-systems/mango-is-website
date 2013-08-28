@@ -566,6 +566,7 @@ d3.json("{{ site.url }}/blog/data/belgian-journalists-twitter-influence.json", f
 			if (step == animationFunctions.length)
 				$('#next').remove()
 		}
+		return false
 	})
 
 	function resizeContent() {
@@ -574,7 +575,6 @@ d3.json("{{ site.url }}/blog/data/belgian-journalists-twitter-influence.json", f
 
 		$svg.attr('width', newWidth)
 		$svg.attr('height', $svg.attr('height') * newWidth / oldWidth)
-		console.log('texts resize')
 		$texts.css('maxWidth', newWidth)
 	}
 
