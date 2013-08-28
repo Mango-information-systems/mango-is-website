@@ -10,7 +10,7 @@ type: article
 			<div id="post">
 			{{ content }}
 			<br/>
-			<a href="{{ site.url }}{{ site.baseurl }}/authors#{{ page.tags[0] }}">{{ page.tags[0] | capitalize }}</a>
+			{% if page.tags[0] %}<a href="{{ site.url }}{{ site.baseurl }}/authors#{{ page.tags[0] }}">{{ page.tags[0] | capitalize }}</a>, {{ page.date | date: "%d %b %Y" }}{% endif %}
 			</div>
 			<hr/>
 			<div>
