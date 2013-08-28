@@ -10,22 +10,24 @@ thumbnail: mango-is-blog.png
 
 <div id="home">
 	<h1>Jazzin' data <small>a blog about analytics and data vizualization</small></h1>
-	<h2>Business <small>The functional side of the moon</small></h2>
+	<h2>Business <small>Functional articles</small></h2>
 	<ul class="thumbnails">
 		{% for post in site.categories.business %}
 			<li class="span4">
 				<div class="thumbnail">
-					<h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> <small class="pull-right">{{ post.date | date_to_string }}</small></h3>
-					{% if post.subtitle %}<p><strong>{{ post.subtitle }}</strong></p>{% endif %}
+					<span class="pull-right">{{ post.date | date_to_string }}</span>
+					<h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}
+						{% if post.subtitle %} <small>{{ post.subtitle }}</small>{% endif %}
+					</a></h3>
 					{% if post.thumbnail %}
-						<img src="{{ site.baseurl }}/img/thumbnails/{{ post.thumbnail }}" alt=""/>
+						<img src="{{ site.url }}/{{ post.thumbnail }}" alt=""/>
 					{% endif %}
-					<p>{{ post.content | strip_html | truncatewords: 30 }}</p>
+					<p>{{ post.content | strip_html | truncatewords: 20 }}</p>
 				</div>
 			</li>
 		{% endfor %}
 	</ul>
-	<h2>Engineering <small>The technical side of the moon</small></h2>
+	<h2>Engineering <small>Technical articles</small></h2>
 	<ul class="thumbnails">
 		{% for post in site.categories.engineering %}
 			<li class="span4">
@@ -35,7 +37,7 @@ thumbnail: mango-is-blog.png
 					{% if post.thumbnail %}
 						<img src="/img/{{post.thumbnail}}" alt=""/>
 					{% endif %}
-					<p>{{ post.content | strip_html | truncatewords: 30 }}</p>
+					<p>{{ post.content | strip_html | truncatewords: 20 }}</p>
 				</div>
 			</li>
 		{% endfor %}
