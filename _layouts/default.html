@@ -16,8 +16,8 @@
     <meta itemprop="description" content="{{ page.description }}">
     <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
 	<link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}"/>
-    {% if page.thumbnail %}<meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/img/thumbnails/{{ page.thumbnail }}" />
-    <meta itemprop="image" content="{{ site.url }}{{ site.baseurl }}/img/thumbnails/{{ page.thumbnail }}">
+    {% if page.thumbnail %}<meta property="og:image" content="{{ site.url }}/{{ page.thumbnail }}" />
+    <meta itemprop="image" content="{{ site.url }}/{{ page.thumbnail }}">
 	{% endif %}<meta name="subject" content="{{ page.title }}"/>
 	<meta name="description" content="{{ page.description }}" />
 	<meta name="author" content="{{ page.author }}" />
