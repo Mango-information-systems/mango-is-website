@@ -14,16 +14,17 @@ thumbnail: mango-is-blog.png
 	<ul class="thumbnails">
 		{% for post in site.categories.business %}
 			<li class="span4">
-				<div class="thumbnail">
-					<span class="pull-right">{{ post.date | date_to_string }}</span>
-					<h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}
-						{% if post.subtitle %} <small>{{ post.subtitle }}</small>{% endif %}
-					</a></h3>
+				<a href="{{ site.baseurl }}{{ post.url }}" class="thumbnail">
+					<h3>{{ post.title }}
+						{% if post.subtitle %}
+						<br/><small>{{ post.subtitle }}</small>{% endif %}
+					</h3>
 					{% if post.thumbnail %}
-						<img src="{{ site.url }}/{{ post.thumbnail }}" alt=""/>
+						<img src="{{ site.url }}/{{ post.thumbnail }}" alt="" class="post-thumbnail"/>
 					{% endif %}
 					<p>{{ post.content | strip_html | truncatewords: 20 }}</p>
-				</div>
+					<p><small><em>{{ post.date | date_to_string }}</em></small></p>
+				</a>
 			</li>
 		{% endfor %}
 	</ul>
@@ -32,12 +33,15 @@ thumbnail: mango-is-blog.png
 		{% for post in site.categories.engineering %}
 			<li class="span4">
 				<div class="thumbnail">
-					<h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> <small class="pull-right">{{ post.date | date_to_string }}</small></h3>
-					{% if post.subtitle %}<p><strong>{{ post.subtitle }}</strong></p>{% endif %}
+					<h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}
+						{% if post.subtitle %}
+						<br/><small>{{ post.subtitle }}</small>{% endif %}
+					</a></h3>
 					{% if post.thumbnail %}
-						<img src="/img/{{post.thumbnail}}" alt=""/>
+						<img src="{{ site.url }}/{{ post.thumbnail }}" alt="" class="post-thumbnail"/>
 					{% endif %}
 					<p>{{ post.content | strip_html | truncatewords: 20 }}</p>
+					<span class="pull-right">{{ post.date | date_to_string }}</span>
 				</div>
 			</li>
 		{% endfor %}
