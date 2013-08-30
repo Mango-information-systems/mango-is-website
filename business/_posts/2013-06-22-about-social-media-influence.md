@@ -12,10 +12,9 @@ tags: mehdi
 
 <div class="section">
 {% capture m %}
-We have recently helped Finn Public Relations Agency update its yearly ranking of most influent Belgian journalists on twitter. 
-(...)
+A recurring topic 
 {% endcapture %}{{ m | markdownify }}</div>
-
+This is the first of a 2 articles series about social media and influence. We review the concepts and stakes in this article, and the second one will dive into a comparison of social media influence systems.
 <div class="section">
 {% capture m %}
 [](id:social-media-influence-101)Social media influence 101 <small> </small>
@@ -24,80 +23,48 @@ We have recently helped Finn Public Relations Agency update its yearly ranking o
 <div class="section">
 {% capture m %}
 ### meet the controversial measure
-Ranking people's activity on social media is a recurring topic around the digital marketing world. Klout is leading the market of measuring social influence of individuals, there has been a lot of buzz and hype around it, also controversy around its management of personal data. In general, the concept of measuring "influence" is not well understood by the public, and the opacity of Klout around its methodology has not helped in clarifying what it is about. Competitors like Kred differentiate themselves by being more transparent on the formula they use. We will compare some actors in the next section of this article.
+Ranking people's activity on social media is a recurring topic around the digital marketing world. Klout leads the market of measuring the social influence of individuals. There has been a lot of buzz and hype around it, also controversy around its management of personal data. In general, the concept of measuring "influence" is not well understood by the public, and the opacity of Klout around its methodology has not helped in clarifying how the score is deduced. Competitors like Kred differentiate themselves by being more transparent on the formula they use. We will compare some players in the second article of the series.
 
-The term "influence" itself is not a very accurate choice. Klout score, or scores provided by Klout's competitors like peerIndex or Kred, actually rather measure the "potential for influence", i.e. how likely it is that the person's messages are interesting and listened to. This does not necessarily mean that they have an effect on the state of mind reader, notion conveyed by the term "influence".
+The terms influence isn't the best choice. Klout score, or scores provided by Klout's competitors like peerIndex or Kred, actually measure the "potential for influence", i.e. how likely it is that the person's messages are interesting and listened to. This does not necessarily mean that they have an effect on the state of mind reader, which is the notion conveyed by the term "influence".
 
-Actually, **an influence score tells much more than a number of followers**. The scores put emphasis on the reactions (shares, comments, favorites) by followers/fans to the author's posts. This results in a crowdsourcing the measure of the content's interest. User with many followers and publishing a lot of uninteresting content will end up with a lower score than a specialist with lower audience, but publishing high-quality content.
+Actually, **an influence score tells us much more than the number of followers**. The scores put emphasis on the reactions (shares, comments, favorites) by followers/fans to the author's posts. This results in a crowdsourcing of the measure of the content's interest. A user with many followers and publishing a lot of uninteresting content will end up with a lower score than a specialist with lower audience, but publishing high-quality content.
 
 For more details in how influence measurement works, read this article: <a href="http://marketingland.com/can-social-influence-be-distilled-into-a-score-19306" target = "_blank">Can Social Influence Be Distilled Into A Score? Part I, The Potential</a>. 
 {% endcapture %}{{ m | markdownify }}</div>
 
 <div class="section">
 {% capture m %}
-### why you should care about it
-**As a consumer of information** from twitter, a Klout score may help you make your selection of accounts to follow. Of course, you should not follow anyone influential, but if you have a set of accounts tweeting about a topic of interest, this can help you know who posts valuable content.
+### why you should care about social media influence
+**As a consumer of information** from twitter, a Klout score may help select accounts to follow. Of course, you should not follow someone just because they are influential, but if you have a set of accounts tweeting about a topic of interest, this can help you know who posts valuable content.
 
-**As a marketer**, social media influencers connected to your clients are key persons. You need to identify who has an important reach to your target markets, and engage in a relationship with these persons. You will have to evaluate profiles on a case-by-case basis and act to make the right influencers become your brand ambassadors.
+**As a marketer**, social media influencers connected to your clients are key people. You need to identify who has an important reach to your target markets, and engage in a relationship with these persons. You will have to evaluate profiles on a case-by-case basis and act to make the right influencers become your brand ambassadors.
 
-At Mango Information Systems we think that the influence measuring systems are too generic, even when they are broken-down by topic. **A marketer rather needs to identify influencers amongst each of his customer segments, and  to measure the influence inside his target market**, which is a narrower analysis than what Klout & al do. This is what we are trying to achieve with [tribalytics](http://tribalytics.com), a tool helping marketers strategically plan their campaigns with twitter.
+At Mango Information Systems we think that influence measuring systems are too generic, even when they are broken-down by topic. **A marketer needs to identify influencers amongst each of his customer segments, and measure influence inside his target market**, which is a narrower analysis than Klout & al can do. This is what we are trying to achieve with [tribalytics](http://tribalytics.com), a tool designed to help marketers strategically plan their campaigns with twitter.
 
-**As a social media influencer**, you can get free perks when using these tools.
+**As a social media influencer**, you can get free perks when using Klout, Kred or PeerIndex.
 
-Obviously, common sense is to be used in the interpretation of Klout scores. These do not represent how important or how valuable people are, neither on social media, nor in real life. A great example is at Mobile Viking, the Belgian leading Mobile Internet provider. I recently had the chance to interview Dorien Aerts, Mobile Viking's Chief Marketing Officer. She told me: 
+Obviously, common sense is to be used in the interpretation of Klout scores. These do not represent how important or how valuable people are, neither on social media, nor in real life. A great example is at Mobile Vikings, the leading Belgian leading Mobile Internet provider. I recently had the chance to interview Dorien Aerts, Mobile Viking's Chief Marketing Officer. She told me: 
 
-<blockquote>"All our Vikings (clients, Ed.) are equal, and treated equally. This is why we do not take the influence score into account in our support software"</blockquote>
+<blockquote>"All our Vikings (customers, Ed.) are equal, and treated equally. This is why we do not take the influence score into account in our customer support software"</blockquote>
 
-They refused to use the feature pushing influencer's support requests at the top of the stack, available the solution they use.
-
-{% endcapture %}{{ m | markdownify }}</div>
-
-<div class="section">
-{% capture m %}
-### how to use it
-Klout and peerIndex have browser addons, letting you see the influence scores directly on twitter. Twitter clients like Hootsuite also integrate influence scores by default in their interfaces.
-
-Klout, peerIndex and Kred provide access to their data via an API for developers, letting you integrate their analytics inside your applications and your systems. Influence scores are free, and you have to pay to access to extra details like score by topic/category, list of persons influent to a given user, or influenced by a user.
-
-Rather than using a global influence score, it is interesting to find influent people around one specific topic and/or a certain geographic area.
-
-
-Finn is monitoring the active Belgian journalists on twitter, and publishes a ranking of the top influencers amongst them every year.
-{% endcapture %}{{ m | markdownify }}</div>
+They refused to use the feature pushing influencer's support requests at the top of the stack, available in the solution they use.
 
 {% endcapture %}{{ m | markdownify }}</div>
 
 <div class="section">
 {% capture m %}
-[](id:ranking-3000-journalists)Ranking 3000 journalists <small> comparing Klout, Kred and peerIndex scores</small>
------------------------------------------------------
+### how to use social media influence scores
+Klout and peerIndex have **browser addons**, letting you see the influence scores directly on twitter. Twitter clients like Hootsuite also integrate influence scores by default in their interfaces.
 
-<div class="section">
-{% capture m %}
-### Characteristics
+Klout, peerIndex and Kred provide **access to their data via an API** for developers, letting you integrate their analytics inside your applications and your systems. Influence scores are free, and you have to pay to access to extra details like score by topic/category, lists of people influential to a given user, or influenced by a particular user.
 
-{% endcapture %}{{ m | markdownify }}</div>
+Rather than using a global influence score, it is more interesting to find influential people about one specific topic and/or a certain geographic area.
 
-<div class="section">
-{% capture m %}
-### Data completeness
 
-{% endcapture %}{{ m | markdownify }}</div>
-
-<div class="section">
-{% capture m %}
-### Correlation
-
+Finn monitors the active Belgian journalists on twitter, and publishes a ranking of the top influencers amongst them every year.
 {% endcapture %}{{ m | markdownify }}</div>
 
 {% endcapture %}{{ m | markdownify }}</div>
-
-
-<div class="section">
-{% capture m %}
-(conclusion)
-{% endcapture %}{{ m | markdownify }}</div>
-
 
 <hr/>
 <hr/>
