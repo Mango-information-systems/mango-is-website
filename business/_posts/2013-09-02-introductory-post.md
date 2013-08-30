@@ -13,35 +13,19 @@ thumbnail: blog/img/thumbnails/2013-09-02-introductory-post.png
 {% capture m %}
 Hello, and welcome to our blog.
 
-I am opening this space to share views on the worlds of analytics, business intelligence, and data vizualizations. My goal here is to build a knowledge base of the topics around analytics, and comment on trends, solutions, and practices. Guests will be writing here with me, they are experts with whom I am working on several projects.
-
 {% endcapture %}{{ m | markdownify }}</div>
 
 <div class="section">
 {% capture m %}
 [](id:us)Us <small>who we are </small>
 -----------------------------------------------------
-<div class="section">
-{% capture m %}
-###Company
 
-Mango Information Systems is a Belgian company helping businesses take better decisions thanks to data analysis. To do this, we combine the power of business intelligence concepts - good ol' data-warehousing - to the beauty of web technologies - social media, data visualizations and big data, beyond the buzzwords.
+My name is Mehdi El Fadil, I am combining the power of business intelligence concepts - data-warehousing - and the beauty of web technologies - social media, data visualizations and big data - to provide my clients with insights letting them enhance their strategy. I will be writing here together with guests who will share their expertise.
 
-We are building a software <strong>helping marketers better target their social media campaigns</strong> by segmenting followers populations on twitter and identifying local and niche influencers. It is called <strong>[tribalytics](http://tribalytics.com)</strong>, you should [check it out !](http://tribalytics.com). You can view the other products and services we provide 
+My company, [Mango Information Systems](http://mango-is.com) helps businesses make better decisions thanks to data analysis.
 
-{% endcapture %}{{ m | markdownify }}</div>
-<div class="section">
-{% capture m %}
-###Authors
+We are currently busy building a software <strong>helping marketers better target their social media campaigns</strong> by segmenting followers populations on twitter and identifying local and niche influencers. It is called <strong>[tribalytics](http://tribalytics.com)</strong>, you should [check it out](http://tribalytics.com)!
 
-(add pics and shot bio, + link to authors page)
-
-####Mehdi El Fadil
-
-####Gilbert West
-
-####Panagiotis Synetos
-{% endcapture %}{{ m | markdownify }}</div>
 {% endcapture %}{{ m | markdownify }}</div>
 
 <div class="section">
@@ -49,7 +33,7 @@ We are building a software <strong>helping marketers better target their social 
 [](id:focus)Focus <small>what, why, and how we write </small>
 -----------------------------------------------------
 
-The main <em>raison-d'être</em> of this blog is to show businesses the ways how they can make use of their data, and the value it is possible to get from it.
+The main <em>raison-d'être</em> of this blog is to showcase our activities and let businesses know ways how they can make use of their data, and the value it is possible to get from it.
 
 We also want to fill the gap between practices of corporate business intelligence on one hand, and web/social media analytics on the other hand. Both worlds coexist independently without interacting with each other, and good practices applied on one side do not often reach the other one, even it they would benefit from them.
 
@@ -88,7 +72,6 @@ The blog contains two sections, aimed at two distinct audiences:
 
 We will try our best to remain concise, visual, and interactive. This is to let you get quickly to the point and save some of your time :).
 {% endcapture %}{{ m | markdownify }}</div>
-
 
 <div class="section">
 {% capture m %}
