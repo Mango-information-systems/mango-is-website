@@ -2,11 +2,11 @@
 layout: post
 language: en
 author: mehdi
-title: Hello World
-subtitle: intro to Mango Information Systems' blog
-description: Introductory post of Mango Information System's blog. We introduce our topics and authors, and our view of how corporate blogging should be done
+title: Introductory post
+subtitle: blogging at Mango Information Systems
+description: Introductory post to Mango Information System's blog. Who we are, what we do, and how we do things.
 tags: mehdi
-# thumbnail: 
+thumbnail: blog/img/thumbnails/2013-09-02-introductory-post.png
 # keywords: 
 ---
 <div class="section">
@@ -14,6 +14,7 @@ tags: mehdi
 Hello, and welcome to our blog.
 
 I am opening this space to share views on the worlds of analytics, business intelligence, and data vizualizations. My goal here is to build a knowledge base of the topics around analytics, and comment on trends, solutions, and practices. Guests will be writing here with me, they are experts with whom I am working on several projects.
+
 {% endcapture %}{{ m | markdownify }}</div>
 
 <div class="section">
@@ -24,11 +25,9 @@ I am opening this space to share views on the worlds of analytics, business inte
 {% capture m %}
 ###Company
 
-Mango Information Systems' core business is to provide businesses active the web with deep insights helping them take better decisions. To do this, we combine the power of business intelligence concepts - good ol' data-warehousing - and the beauty of web technologies - social media, cloud computing and big data, beyond the buzzwords.
+Mango Information Systems is a Belgian company helping businesses take better decisions thanks to data analysis. To do this, we combine the power of business intelligence concepts - good ol' data-warehousing - to the beauty of web technologies - social media, data visualizations and big data, beyond the buzzwords.
 
-(put image here, - metaphoric? - about BI, the web, and us as combining both)
-
-We are building a twitter analytics tool called [tribalytics](http://tribalytics.com), it segments your market and helps you better plan your campaigns, you should [check it out !](http://tribalytics.com)
+We are building a software <strong>helping marketers better target their social media campaigns</strong> by segmenting followers populations on twitter and identifying local and niche influencers. It is called <strong>[tribalytics](http://tribalytics.com)</strong>, you should [check it out !](http://tribalytics.com). You can view the other products and services we provide 
 
 {% endcapture %}{{ m | markdownify }}</div>
 <div class="section">
