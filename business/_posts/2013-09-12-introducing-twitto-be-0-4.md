@@ -16,7 +16,7 @@ We have just released a major upgrade of [twitto.be](http://twitto.be). The foll
 * Changed influence measure system: We now use the measures provided by Klout instead of those from Kred.
 * Updated categorization system.
 
-These changes are presented more in detail below:
+Our main goal with this new version was to improve the user experience and let visitors browse the twittos using powerful filters, while providing statistics on the population.
 
 <div class="section" markdown="1">
 ## New features
@@ -27,6 +27,8 @@ These changes are presented more in detail below:
 ![screenshot of twitto.be]({{ site.baseurl }}/img/twitto.be-0.4-screenshot.png "new version of twitto.be")
 
 Three charts are shown at the top of the page, they serve both purposes of **displaying statistics** about the users set and **act as filters**. Indeed, the bars from the bar charts, and the provinces in the map are clickable and trigger filters that update both the list of users and the statistics.
+
+We get interesting insights from them, notably the prevalence of dutch-speaking twittos stands out.
 
 </div>
 
@@ -58,8 +60,6 @@ We have replaced the 5 previous categories by 5 topics, some of them quite gener
 ## Participate
 
 <div class="section" markdown="1">
-
-<div class="section" markdown="1">
 ### Add yourself to the directory
 
 If you are missing from the directory and would like to appear, just use the feedback form on [twitto.be](http://twitto.be), or ping us on [twitter](http://twitter.com/twitto_be) and we will add you. It is free, of course.
@@ -76,6 +76,13 @@ We really do value feedback. You can use the comments section below this post, t
 
 Twitto.be is open source. **You are free to use our code to create your own directory of twittos**, maybe about a specific topic or around another location. Our [Github repository](https://github.com/Mango-information-systems/twitto_be) contains all the website's code.
 </div>
+
+</div>
+
+<div class="section" markdown="1">
+## Next steps
+
+While we want to keep maintaining and enhancing twitto.be, we are now focusing on **[tribalytics](http://tribalytics.com)**, a supercharged version of twitto aimed at **helping marketers know their audience better and strategically plan their campaigns for maximum impact**.
 
 </div>
 
