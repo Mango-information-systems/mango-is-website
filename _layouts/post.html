@@ -10,7 +10,7 @@ type: article
 			<div id="post">
 			{{ content }}
 			<br/>
-			{% if page.tags[0] %}<a href="{{ site.url }}{{ site.baseurl }}/authors#{{ page.tags[0] }}">{{ page.tags[0] | capitalize }}</a>, {{ page.date | date: "%d %b %Y" }}{% endif %}
+			{% if page.tags[0] %}published by <a href="{{ site.url }}{{ site.baseurl }}/authors#{{ page.tags[0] }}">{{ page.tags[0] | capitalize }}</a> on {{ page.date | date: "%d %b %Y" }}{% if page.last-update %}, last updated {{ page.last-update | date: "%d %b %Y" }}{% endif %}{% endif %}
 			</div>
 			<hr/>
 			<div>

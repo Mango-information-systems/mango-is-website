@@ -9,8 +9,7 @@ thumbnail: mango-is-blog.png
 ---
 <div class="section">
 {% capture m %}
-[](id:mehdi)Mehdi El Fadil <small></small>
------------------------------------------------------
+## Mehdi El Fadil {#mehdi}
 
 author description
 

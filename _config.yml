@@ -2,7 +2,7 @@ destination: ./_site
 auto:        true
 lsi:         false
 server_port: 4000
-markdown:    rdiscount
+markdown:    kramdown
 permalink:   none
 pygments:    true
 pagination:  true

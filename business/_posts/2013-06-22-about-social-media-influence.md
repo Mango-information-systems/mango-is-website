@@ -10,18 +10,17 @@ tags: mehdi
 # keywords: 
 ---
 
-<div class="section">
-{% capture m %}
+<div class="section" markdown="1">
 A recurring topic 
-{% endcapture %}{{ m | markdownify }}</div>
+</div>
 This is the first of a 2 articles series about social media and influence. We review the concepts and stakes in this article, and the second one will dive into a comparison of social media influence systems.
-<div class="section">
-{% capture m %}
-[](id:social-media-influence-101)Social media influence 101 <small> </small>
------------------------------------------------------
 
-<div class="section">
-{% capture m %}
+<div class="section" markdown="1">
+
+## Social media influence 101 <small> </small> {#social-media-influence-101}
+
+<div class="section" markdown="1">
+
 ### meet the controversial measure
 Ranking people's activity on social media is a recurring topic around the digital marketing world. Klout leads the market of measuring the social influence of individuals. There has been a lot of buzz and hype around it, also controversy around its management of personal data. In general, the concept of measuring "influence" is not well understood by the public, and the opacity of Klout around its methodology has not helped in clarifying how the score is deduced. Competitors like Kred differentiate themselves by being more transparent on the formula they use. We will compare some players in the second article of the series.
 
@@ -30,10 +29,10 @@ The terms influence isn't the best choice. Klout score, or scores provided by Kl
 Actually, **an influence score tells us much more than the number of followers**. The scores put emphasis on the reactions (shares, comments, favorites) by followers/fans to the author's posts. This results in a crowdsourcing of the measure of the content's interest. A user with many followers and publishing a lot of uninteresting content will end up with a lower score than a specialist with lower audience, but publishing high-quality content.
 
 For more details in how influence measurement works, read this article: <a href="http://marketingland.com/can-social-influence-be-distilled-into-a-score-19306" target = "_blank">Can Social Influence Be Distilled Into A Score? Part I, The Potential</a>. 
-{% endcapture %}{{ m | markdownify }}</div>
+</div>
 
-<div class="section">
-{% capture m %}
+<div class="section" markdown="1">
+
 ### why you should care about social media influence
 **As a consumer of information** from twitter, a Klout score may help select accounts to follow. Of course, you should not follow someone just because they are influential, but if you have a set of accounts tweeting about a topic of interest, this can help you know who posts valuable content.
 
@@ -49,10 +48,10 @@ Obviously, common sense is to be used in the interpretation of Klout scores. The
 
 They refused to use the feature pushing influencer's support requests at the top of the stack, available in the solution they use.
 
-{% endcapture %}{{ m | markdownify }}</div>
+</div>
 
-<div class="section">
-{% capture m %}
+<div class="section" markdown="1">
+
 ### how to use social media influence scores
 Klout and peerIndex have **browser addons**, letting you see the influence scores directly on twitter. Twitter clients like Hootsuite also integrate influence scores by default in their interfaces.
 
@@ -62,9 +61,9 @@ Rather than using a global influence score, it is more interesting to find influ
 
 
 Finn monitors the active Belgian journalists on twitter, and publishes a ranking of the top influencers amongst them every year.
-{% endcapture %}{{ m | markdownify }}</div>
+</div>
 
-{% endcapture %}{{ m | markdownify }}</div>
+</div>
 
 <hr/>
 <hr/>
@@ -78,28 +77,26 @@ At Mango Information Systems, we believe that using the term "influence" is bad 
 
 
 
-<div class="section">
-{% capture m %}
+<div class="section" markdown="1">
+
 We have recently helped Finn Public Relations Agency update its yearly ranking of most influent Belgian journalists on twitter. 
 (...)
-{% endcapture %}{{ m | markdownify }}</div>
+</div>
 
-<div class="section">
-{% capture m %}
-[](id:420-to-1500-journalists)From 420 to 1500 journalists <small>how we increased the number of journalists ranked</small>
------------------------------------------------------
+<div class="section" markdown="1">
+
+## From 420 to 1500 journalists <small>how we increased the number of journalists ranked</small> {#420-to-1500-journalists}
 
 First step of the work was to get data. Finn staff identified a set of twitter lists referencing Belgian journalists. We used [twiLiMe](https://github.com/Mango-information-systems/twiLiMe), a free and open source tool of our creation, to extract all the twitter users referenced in these lists. We obtained approximatly 3000 twitter accounts from this, and let Finn make the editorial choice of filtering it, i.e. decide who corresponds to the definition of "Belgian journalist", and who does not.
 
 As a result, Finn retained 1343 journalists, and 137 media accounts (twitter accounts belonging to a newspaper, radio, TV...).
 
 Next step was to measure the influence of people.
-{% endcapture %}{{ m | markdownify }}</div>
+</div>
 
-<div class="section">
-{% capture m %}
-[](id:influence-on-twitter)Measuring influence on twitter <small>comparing Klout, Kred and peerIndex</small>
------------------------------------------------------
+<div class="section" markdown="1">
+
+## Measuring influence on twitter <small>comparing Klout, Kred and peerIndex</small> {#influence-on-twitter}
 
 The ranking published in 2012 by Finn received some criticism on its methodology, as it used the Klout scores (which combines twitter and facebook influence), and attempted to extract the twitter-part of this score.
 
@@ -114,6 +111,7 @@ Kred and peerIndex also measure multiple social media, but they make the break-d
 Because we were curious on how the algorithms compare, we extracted the three influence scores for all the 2297 journalists we had, and studied about they correlate. Here is what we found out:
 
 Data completeness
+
 	Kred	99.7%
 	Klout	97.2%
 	peerIndex	74.0%
@@ -136,4 +134,4 @@ Maartje Luif, on the other hand, is an active twitter user since 2007, has more 
 In Klout, we can see that only her twitter account is linked. This means that the fact that she has high Kred score and average Klout score is caused by the difference in both system's algorithms.
 http://klout.com/#/Zezunja
 
-{% endcapture %}{{ m | markdownify }}</div>
+</div>

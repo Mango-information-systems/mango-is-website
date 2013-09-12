@@ -11,9 +11,7 @@ scripts: [js/d3.v3.min.js, blog/js/2013-08-22-top-belgian-journalists-on-twitter
 thumbnail: blog/img/thumbnails/2013-08-22-top-belgian-journalists-on-twitter-behind-the-scenes.png
 # keywords: 
 ---
-
 <div class="section">
-{% capture m %}
 
 <div id="chartArea" class="span10"></div>
 <div class="row-fluid">
@@ -57,13 +55,7 @@ thumbnail: blog/img/thumbnails/2013-08-22-top-belgian-journalists-on-twitter-beh
 	</div>
 	<!--[if gt IE 9]><!-->
 		<div class="span1" id="next-container"></div>
-	<![endif]-->
+	<!-- <![endif]-->
 </div>
-<script>
- 
 
-</script>
-
-{% endcapture %}{{ m | markdownify }}</div>
-
-
+</div>

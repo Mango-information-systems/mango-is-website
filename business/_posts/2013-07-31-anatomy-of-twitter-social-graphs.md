@@ -28,7 +28,6 @@ the social media guru --> davanac
 
 ...
 
-<div class="section">
-{% capture m %}
+<div class="section" markdown="1">
 
-{% endcapture %}{{ m | markdownify }}</div>
+</div>
