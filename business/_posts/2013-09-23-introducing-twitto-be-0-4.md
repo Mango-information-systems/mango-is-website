@@ -2,7 +2,7 @@
 layout: post
 language: en
 author: mehdi
-title: Twitto.be now has multi-dimensional Filters
+title: Twitto.be now has multi-dimensional filters
 subtitle: Introducing twitto.be 0.4
 description: The new version of twitto.be allows powerful filtering on topic, location and language, and uses Klout instead of Kred social media influence score.
 tags: mehdi
