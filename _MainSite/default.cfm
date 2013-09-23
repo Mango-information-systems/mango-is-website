@@ -102,6 +102,7 @@
 				  <li><a href="/products/">Products</a></li>
 				  <li><a href="/services/">Services</a></li>
 				  <li><a href="/company/">Company</a></li>
+				  <li><a href="/blog/">Blog</a></li>
 				  <li><a href="/contact/" class="contact-link">Contact</a></li>
 				</ul>
 			  </div><!--/.nav-collapse -->
