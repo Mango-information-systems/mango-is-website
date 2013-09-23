@@ -10,5 +10,8 @@ paginate:    20
 name: Jazzin' data - analytics and data vizualization
 description: We blog about web and social media analytics, business intelligence, and data visualization techniques.
 url: http://localhost:4000
-liveFyreId: 327730
-# to run production, user following jekyll command arguments: --url http://dev.mango-is.com --base-url /blog --liveFyreId 327726
+#dev.mango-is.com: liveFyreId: 327730
+# mango-is.com: liveFyreId: 327730
+liveFyreId: 327726
+# to run dev subdomain, user following jekyll command arguments: --url http://dev.mango-is.com --base-url /blog
+# to run production, user following jekyll command arguments: --url http://mango-is.com --base-url /blog
