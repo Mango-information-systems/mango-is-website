@@ -2,13 +2,13 @@
 layout: post
 language: en
 author: mehdi
-title: Top Belgian journalists on twitter
-subtitle: behind the scenes of FINN's 2013 ranking
-description: Walkthrough the collection and analysis of data to let Finn PR agency publish its yearly ranking of Belgian journalists on twitter
+title: Finding twitter influencers
+subtitle: Comparing Klout, Kred and peerIndex
+description: Study of three major twitter influence ranking scoring systems. is the quality of a Klout, Kred or peerIndex score comparable?
 tags: mehdi
-css: blog/css/2013-08-22-top-belgian-journalists-on-twitter-behind-the-scenes.css
-scripts: [js/d3.v3.min.js, blog/js/2013-10-08-finding-twitter-influencers-comparing-klout-kred-and-peerindex.js]
-thumbnail: blog/img/thumbnails/2013-08-22-top-belgian-journalists-on-twitter-behind-the-scenes.png
+css: blog/css/2013-10-07-finding-twitter-influencers-comparing-klout-kred-and-peerindex.css
+scripts: [js/d3.v3.min.js, blog/js/2013-10-07-finding-twitter-influencers-comparing-klout-kred-and-peerindex.js]
+thumbnail: blog/img/thumbnails/2013-10-07-finding-twitter-influencers-comparing-klout-kred-and-peerindex.png
 # keywords: 
 ---
 <div class="section">
@@ -17,7 +17,7 @@ thumbnail: blog/img/thumbnails/2013-08-22-top-belgian-journalists-on-twitter-beh
 <div class="row-fluid">
 	<div class="span10">
 		<div id="texts">
-			<p> In June 2013, we helped FINN Public Relations agency to establish its 2013 ranking of most influential Belgian journalists on twitter. Here’s how we did it.
+			<p> In June 2013, we helped FINN Public Relations agency to establish its 2013 ranking of most influential Belgian journalists on twitter. During this process, a challenge led us to evaluate how Kred and peerIndex compare to Klout.
 			</p>
 		</div>
 		<!--[if lte IE 9]>
