@@ -27,9 +27,9 @@
 	{% endif %}
 	{% if page.keywords %}<meta name="keywords" content="{{ page.keywords | join: ',' }}" />
 	{% endif %}
-	{% if page.prevArticle %}<link rel="prev" href="{{ site.url }}{{ site.baseurl }}{{ page.prevArticle }}" />
+	{% if page.prevArticle %}<link rel="prev" href="{{ site.url }}{{ site.baseurl }}/{{ page.categories[0] }}/{{ page.prevArticle }}" />
 	{% endif %}
-	{% if page.nextArticle %}<link rel="next" href="{{ site.url }}{{ site.baseurl }}{{ page.nextArticle }}" />
+	{% if page.nextArticle %}<link rel="next" href="{{ site.url }}{{ site.baseurl }}/{{ page.categories[0] }}/{{ page.nextArticle }}" />
 	{% endif %}
 	{% if page.categories[0] =='drafts' %}<meta name="robots" content="noindex, nofollow">{% endif %}
 
