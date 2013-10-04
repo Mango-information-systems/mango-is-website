@@ -9,6 +9,7 @@ tags: mehdi
 css: blog/css/2013-10-07-finding-twitter-influencers-comparing-klout-kred-and-peerindex.css
 scripts: [js/d3.v3.min.js, blog/js/2013-10-07-finding-twitter-influencers-comparing-klout-kred-and-peerindex.js]
 thumbnail: blog/img/thumbnails/2013-10-07-finding-twitter-influencers-comparing-klout-kred-and-peerindex.png
+prevArticle: finding-twitter-influencers-the-recurring-problem-of-defining-influence.html
 # keywords: 
 ---
 <div class="section">
