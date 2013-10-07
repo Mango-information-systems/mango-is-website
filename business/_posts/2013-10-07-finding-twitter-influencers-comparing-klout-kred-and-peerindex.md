@@ -12,7 +12,7 @@ thumbnail: blog/img/thumbnails/2013-10-07-finding-twitter-influencers-comparing-
 prevArticle: finding-twitter-influencers-the-recurring-problem-of-defining-influence.html
 # keywords: 
 ---
-<div class="section">
+<div class="section" markdown="1">
 
 <div id="chartArea" class="span10"></div>
 <div class="row-fluid">
@@ -57,6 +57,10 @@ prevArticle: finding-twitter-influencers-the-recurring-problem-of-defining-influ
 	<!--[if gt IE 9]><!-->
 		<div class="span1" id="next-container"></div>
 	<!-- <![endif]-->
+	
 </div>
+<hr/>
+
+This is the second of two articles in a series about social media and influence. First part reviews the [key concepts and issues around social media influence]({{ page.prevArticle }}).
 
 </div>
