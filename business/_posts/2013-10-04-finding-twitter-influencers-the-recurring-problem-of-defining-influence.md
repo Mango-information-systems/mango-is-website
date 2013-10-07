@@ -66,5 +66,5 @@ A person’s position in the social graph (set of connections between persons) i
 
 This type of meaningful, actionable  identification is exactly what we are doing at [Tribalytics](http://tribalytics.com), a tool designed to help marketers strategically plan their campaigns on Twitter.
 
-To see how we solved the problem of different influence rankings for a case we worked on with Finn.be, read Part 2.
+To see how we solved the problem of different influence rankings for a case we worked on with Finn.be, read [Part 2: Comparing Klout, Kred and peerIndex]({{ page.nextArticle }}).
 </div>
