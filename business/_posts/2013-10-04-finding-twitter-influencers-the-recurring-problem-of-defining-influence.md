@@ -14,7 +14,7 @@ last-update: 2013-10-07
 ---
 
 <div class="section" markdown="1">
-This is the first of 2 articles in a series about social media and influence. We review the key concepts and issues in this article, while the [second dives into a comparison of social media influence systems]({{ page.nextArticle }}).
+This is the first of 2 articles in a series about social media and influence. We review the key concepts and issues in this article, while the second dives into a [comparison of social media influence systems]({{ page.nextArticle }}).
 </div>
 
 <div class="section" markdown="1">
