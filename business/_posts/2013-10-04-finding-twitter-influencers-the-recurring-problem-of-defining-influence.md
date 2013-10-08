@@ -7,11 +7,14 @@ subtitle: the recurring problem of defining influence
 description: Review of key concepts and issues in social media influence scores like Klout. Why and how a marketer should use them.
 tags: mehdi
 thumbnail: blog/img/thumbnails/2013-10-04-finding-twitter-influencers-the-recurring-problem-of-defining-influence.png
+nextArticle: finding-twitter-influencers-comparing-klout-kred-and-peerindex.html
+date: 2013-10-04
+last-update: 2013-10-07
 # keywords: 
 ---
 
 <div class="section" markdown="1">
-This is the first of 2 articles in a series about social media and influence. We review the key concepts and issues in this article, while the second dives into a comparison of social media influence systems.
+This is the first of 2 articles in a series about social media and influence. We review the key concepts and issues in this article, while the second dives into a [comparison of social media influence systems]({{ page.nextArticle }}).
 </div>
 
 <div class="section" markdown="1">
@@ -63,5 +66,5 @@ A person’s position in the social graph (set of connections between persons) i
 
 This type of meaningful, actionable  identification is exactly what we are doing at [Tribalytics](http://tribalytics.com), a tool designed to help marketers strategically plan their campaigns on Twitter.
 
-To see how we solved the problem of different influence rankings for a case we worked on with Finn.be, read Part 2.
+To see how we solved the problem of different influence rankings for a case we worked on with Finn.be, read [Part 2: Comparing Klout, Kred and peerIndex]({{ page.nextArticle }}).
 </div>
