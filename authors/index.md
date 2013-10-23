@@ -25,10 +25,6 @@ Mehdi El Fadil is an entrepreneur and business intelligence professional. He is 
 {% for post in site.tags.mehdi limit:3 %}
 {% if post.categories[0] != 'drafts' %}
 #### <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }} <small>{% if post.subtitle %}{{ post.subtitle }}{% endif %} <span class="pull-right">{{ post.date | date_to_string }}</span></small></a>
-
-{% if post.thumbnail %}
-<img src="{{ post.thumbnail }}" alt=""/>
-{% endif %}
 {% endif %}
 {% endfor %}
 </div>
