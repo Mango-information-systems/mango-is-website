@@ -53,7 +53,7 @@ We will now show how to generate an svg circle at server side with d3, and have 
 
 <div class="section">
 <svg height="150" width="400">
-	<line x1 = "200" y1 = "10" x2 = "200" y2 = "140" style = "font-size:stroke: #565656; stroke-width: 2;"/>
+	<line x1 = "200" y1 = "10" x2 = "200" y2 = "140" style = "stroke: #565656; stroke-width: 2;"/>
 	<text x = "10" y = "30">On the server</text>
 	<text x = "10" y = "50">draw a green circle</text>
 	<text x = "210" y = "30">On the client</text>
