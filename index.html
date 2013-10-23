@@ -32,17 +32,17 @@ thumbnail: mango-is-blog.png
 	<ul class="thumbnails">
 		{% for post in site.categories.engineering %}
 			<li class="span4">
-				<div class="thumbnail">
-					<h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}
+				<a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" class="thumbnail">
+					<h3>{{ post.title }}
 						{% if post.subtitle %}
 						<br/><small>{{ post.subtitle }}</small>{% endif %}
-					</a></h3>
+					</h3>
 					{% if post.thumbnail %}
 						<img src="{{ site.url }}/{{ post.thumbnail }}" alt="" class="post-thumbnail"/>
 					{% endif %}
 					<p>{{ post.content | strip_html | truncate: 125 }}</p>
-					<span class="pull-right">{{ post.date | date_to_string }}</span>
-				</div>
+					<p><small><em>{{ post.date | date_to_string }}</em></small></p>
+				</a>
 			</li>
 		{% endfor %}
 	</ul>
