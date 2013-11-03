@@ -52,6 +52,7 @@
 		<meta name="keywords" content="analytics, business intelligence, data services, social media, twitter, real time, data-warehouse, data integration, web, ETL, SAP, BO, SAP BOXI, Business Objects, Oracle, database, reporting, dimensional modelling, business analysis, star schema, BOXI, startup, innovation, projects, information systems, organization, change management, consultancy, consulting" /> 
 
 		<!-- Le styles -->
+		<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 		<link href="/css/bootstrap.min.css" rel="stylesheet">
 		<link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
 
@@ -119,12 +120,15 @@
 				<div class="row">
 					<span class="span3">
 						<a href="http://tribalytics.com" target="_blank">
-							<img id="tribalytics" src="img/tribalytics.jpg" alt="tribalytics">
+							<img id="tribalytics" class="img-polaroid" src="img/tribalytics-social-graph-explorer.png" alt="Tribalytics social graph exploration">
 						</a>
 					</span>
 					<span class="span7">
-						<h1>Tribalytics - know your tribes</h1>
-						<p>Do you really know who is following you? Tribalytics segments your twitter followers into like minded communities, identifies the most connected individuals and helps you monitor how the competition are doing.</p>
+						<h1>
+							<img src="img/tribalytics-square-logo.png"/>
+							<span class="trb-font">Tribalytics</span> - Twitter audience analysis
+						</h1>
+						<p>Our reporting tool Tribalytics provides you with actionable insights about your industry's social presence to help you get the best ROI on your social marketing campaigns.</p>
 						<p><a class="btn btn-primary btn-large" href="http://tribalytics.com" target="_blank">Checkout tribalytics.com »</a></p>
 					</span>
 				</div>
