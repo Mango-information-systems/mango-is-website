@@ -163,7 +163,7 @@ For Jelle, the visualization is useful as it show him the positive result of his
 
 Gijsbregt Brouwer has asked a very important and very relevant question in a [repost of the analysis on sportnext.nl](http://www.sportnext.nl/berichten/de_meest_invloedrijke_twitteraccounts_in_sportbusiness_uit_nederland){: target="_blank" }, about how to increase your own rank, and whether there is a point in this. This can be the starting point of a very long debate, we will keep it brief in this article.
 
-We think that people should not attach too much importance about rankings and influence scores. However, it is crucial to be connected to the right people, within the right segments. you should be able to rely not only on your own social media influence, but the one of influencers advocating your brand inside their communities.
+We think that people should not attach too much importance about rankings and influence scores. However, it is crucial to be connected to the right people, within the right segments. You should be able to rely not only on your own social media influence, but the one of influencers advocating your brand inside their communities.
 
 Therefore our recommendation: don't focus on your own influence scores. Be genuine, **know your target audience, and engage with the right people there**.
 
