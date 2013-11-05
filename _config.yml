@@ -11,3 +11,4 @@ description: We blog about web and social media analytics, business intelligence
 url:         http://localhost:4000
 baseurl:     ''
 liveFyreId: 000
+# useful commands: jekyll build; jekyll serve --watch
