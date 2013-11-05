@@ -29,9 +29,7 @@ The main output of the work is a visualization of the top accounts related to th
 * blue: influencers in Belgian sports, 
 * green: professionals and influencers in the Dutch sports industry.
 
-<!--
 <script src="http://zoom.it/2Ogk.js?width=auto&height=400px"></script>
--->
 
 </div>
 <div class="section" markdown="1">
