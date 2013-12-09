@@ -8,7 +8,7 @@
 		<ul class="thumbnails">
 			<li class="span4">
 				<div class="thumbnail">
-					<img src="../img/tribalytics-social-graph-explorer-2.png" alt="tribalytics">
+					<img src="../img/tribalytics-preview.png" alt="tribalytics">
 					<h3 id="tribalytics"><span class="trb-font">Tribalytics</span><small> Twitter audience analysis</small></h3>
 					<p>Our reporting tool Tribalytics provides you with actionable insights about your industry's social presence to help you get the best ROI on your social marketing campaigns.</p>
 					<p><a class="btn btn-primary" href="http://tribalytics.com" target="_blank">Checkout tribalytics.com »</a></p>

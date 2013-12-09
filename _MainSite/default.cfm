@@ -120,7 +120,7 @@
 				<div class="row">
 					<span class="span3">
 						<a href="http://tribalytics.com" target="_blank">
-							<img id="tribalytics" class="img-polaroid" src="img/tribalytics-social-graph-explorer.png" alt="Tribalytics social graph exploration">
+							<img id="tribalytics" class="img-polaroid" src="img/tribalytics-preview.png" alt="Tribalytics social graph exploration">
 						</a>
 					</span>
 					<span class="span7">
