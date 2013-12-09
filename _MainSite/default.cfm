@@ -138,7 +138,7 @@
 			<div class="row">
 				<div id="products" class="span4">
 					<h2>Products</h2>
-					<p>Mango develops simple yet powerful social media monitoring and analytics solutions. We help people working with social media data get better results for their companies or clients.</p>
+					<p>Mango Information Systems develops <strong>simple yet powerful social media monitoring and analytics solutions</strong>. We help people working with social media data get better results for their companies or clients.</p>
 					<p><a class="btn" href="/products/">See our products »</a></p>
 				</div>
 				<div class="span4">
@@ -152,7 +152,7 @@
 				</div>
 				<div class="span4">
 				  <h2 id="about-us">About us</h2>
-				   <p>Mango has operated from Brussels, Belgium since 2010. We help businesses improve their business processes by using data they own or that is publicly available to enhance their decision-making and produce actionable reports.</p>
+				   <p>We operate from Brussels, Belgium since 2010. We help businesses improve their business processes by using data they own or that is publicly available to enhance their decision-making and produce actionable reports.</p>
 				  <p><a class="btn" href="/company/">Read more »</a></p>
 				</div>
 			</div>
