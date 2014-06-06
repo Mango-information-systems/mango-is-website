@@ -215,7 +215,7 @@ The technique shown is quite simple and effective, providing the following gains
 
 The second article of this series will measure how it affects the rendering of a force layout chart.
 
-An alternative way to improve performance of d3 at client side, without pre-rendering on the server is via the use of DOM DocumentFragments, read the following [thread](https://news.ycombinator.com/item?id=6423960.){: target="_blank" } to know how this can be done.
+An alternative way to improve performance of d3 at client side, without pre-rendering on the server is via the use of DOM DocumentFragments, read the following [thread](https://news.ycombinator.com/item?id=6423960){: target="_blank" } to know how this can be done.
 
 Further improvement would be to **pass the state of server-side d3 to the client-side**, I have to investigate about whether this is possible. **If you have an idea about this, please comment below**.
 
