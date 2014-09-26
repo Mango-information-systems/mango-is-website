@@ -13,7 +13,7 @@ scripts: [js/d3.v3.min.js, blog/js/2014-09-26-Belgians-twitter-and-klout.js]
 ---
 <div class="section" markdown="1">
 
-As [twitto.be](twitto.be), the directory of Belgian twitter users was launched one year ago, I thought it would be a good time to analyze how it has evolved. Here are some stats that I thought are worth sharing.
+As [twitto.be](http://twitto.be), the directory of Belgian twitter users was launched one year ago, I thought it would be a good time to analyze how it has evolved. Here are some stats that I thought are worth sharing.
 
 <!--[if lt IE 9]>
 <small><i class="icon-warning-sign">  </i> Recommendation: use a more recent web browser for an enhanced experience on this post.</small>
