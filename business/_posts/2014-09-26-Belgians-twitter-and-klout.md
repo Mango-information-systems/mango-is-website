@@ -7,9 +7,9 @@ description: Figures about the Belgian users of twitter, based on twitto.be data
 author: Mango Information Systems
 tags: mehdi
 # optional
-thumbnail: blog/img/thumbnails/2014-09-25-Belgians-twitter-and-klout.png
-css: blog/css/2014-09-25-Belgians-twitter-and-klout.css
-scripts: [js/d3.v3.min.js, blog/js/2014-09-25-Belgians-twitter-and-klout.js]
+thumbnail: blog/img/thumbnails/2014-09-26-Belgians-twitter-and-klout.png
+css: blog/css/2014-09-26-Belgians-twitter-and-klout.css
+scripts: [js/d3.v3.min.js, blog/js/2014-09-26-Belgians-twitter-and-klout.js]
 ---
 <div class="section" markdown="1">
 
@@ -72,7 +72,7 @@ As I've [already written in the past](http://mango-is.com/blog/business/finding-
 	<div class="span4">
 		<p id="barchart1" class="interactive"><i class="icon-search"> </i> <strong>12%</strong> of Belgian twittos are <strong>not on Klout</strong>. <small>We do not show them on twitto.be</small>.</p>
 		<p id="barchart2" class="interactive"><i class="icon-search"> </i> <strong>65%</strong> of the twittos <strong>use twitter casually</strong>. They do not engage much with other twittos, or they use twitter mostly for reading; some of them are inactive.</p>
-		<p id="barchart3" class="interactive"><i class="icon-search"> </i> While we have more twittos for most of the Klout scores, there are a bit <strong>less twittos with a high Klout</strong> score in 2014 than in 2013. More about this in the next section of this post.</p>
+		<p id="barchart3" class="interactive"><i class="icon-search"> </i> <strong>Less twittos have a high Klout score in 2014 than in 2013</strong>. More about this in the next section of this post.</p>
 	</div>
 </div>
 
