@@ -129,27 +129,7 @@ window.onerror = function(message, file, line) {
 var sFormattedMessage = '[' + file + ' (' + line + ')] ' + message;
 _gaq.push(['_trackEvent', 'Exceptions', 'Application', sFormattedMessage, null, true]);
 }
-// optimized twitter events tracking script based on: http://null-uk.com/55090968
-(function() {
-    window.twttr = (function(d,s,id) {
-        var t, js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return; js=d.createElement(s); js.id=id;
-        js.src="//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
-        return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
-    }(document, "script", "twitter-wjs"));
-
-    twttr.ready(function(twttr) {
-        function trackSocialIntent(intent_event) {
-            if (!intent_event) { return; }
-            _gaq.push(['_trackSocial', 'twitter', intent_event.type]);
-        }
-        twttr.events.bind('click', trackSocialIntent);
-        twttr.events.bind('tweet', trackSocialIntent);
-        twttr.events.bind('retweet', trackSocialIntent);
-        twttr.events.bind('favorite', trackSocialIntent);
-        twttr.events.bind('follow', trackSocialIntent);
-    });        
-})();</script>
+</script>
 	{% endif %}
 
 </body>
