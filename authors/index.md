@@ -6,6 +6,7 @@ author: Mango Information Systems
 description: We blog about web and social media analytics, business intelligence, and data visualization techniques.
 keywords: dataviz, bi, business intelligence, visualization, d3, graph, olap, reporting, web analytics, social media analytics, api, competitive analytics, profiling, influence, trends, monitoring
 thumbnail: mango-is-blog.png
+license:  ""
 ---
 <div class="section" markdown="1">
 ## Mehdi El Fadil {#mehdi}
@@ -22,7 +23,7 @@ Mehdi El Fadil is an entrepreneur and business intelligence professional. He is 
 <div class="section" markdown="1">
 ###Latest posts
 
-{% for post in site.tags.mehdi limit:3 %}
+{% for post in site.tags.mehdi limit:6 %}
 {% if post.categories[0] != 'drafts' %}
 #### <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }} <small>{% if post.subtitle %}{{ post.subtitle }}{% endif %} <span class="pull-right">{{ post.date | date_to_string }}</span></small></a>
 {% endif %}
