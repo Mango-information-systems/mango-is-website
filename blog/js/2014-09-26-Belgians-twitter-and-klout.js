@@ -76,19 +76,19 @@ $(document).ready(function() {
 		// resize bar chart
 		var x = barchartContainer.width()
 			//~ , y = barchartContainer.height()
-		barchart.attr("width",x ).attr("height", x * 500 / 960 )
+		barchart.transition().attr("width",x ).attr("height", x * 500 / 960 )
 
 		// resize sankey chart
 		var x = sankeyContainer.width()
-		sankey.attr("width", x).attr("height", x)
+		sankey.transition().attr("width", x).attr("height", x)
 
 		// resize donut chart
 		var x = donutContainer.width()
-		donut.attr("width", x).attr("height", x)
+		donut.transition().attr("width", x).attr("height", x)
 
-		// resize donut chart
+		// resize bars2 chart
 		var x = bars2Container.width()
-		bars2.attr("width", x).attr("height", x * 250 / 500)
+		bars2.transition().attr("width", x).attr("height", x * 250 / 500)
 	}
 
 
