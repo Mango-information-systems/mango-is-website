@@ -1,8 +1,8 @@
 ---
 layout: post
 language: en
-title: How to choose the right web data Visualization library
-description: Review of the most relevant charting libraries based on common use cases for web data visualizations and reporting projects.
+title: How to choose the right web Data Visualization library
+description: Review of the most relevant charting libraries for common web data visualizations and reporting projects use cases. Should you choose Highcharts or d3?
 author: Mango Information Systems
 tags: mehdi
 # optional
