@@ -119,7 +119,7 @@
 			<div class="hero-unit">
 				<div class="row">
 					<span class="span3">
-						<a href="http://tribalytics.com" target="_blank">
+						<a href="http://tribalytics.com/?utm_source=mango-is&utm_medium=website&utm_campaign=home-page" target="_blank">
 							<img id="tribalytics" class="img-polaroid" src="img/tribalytics-audience-segmentation.png" alt="Tribalytics audience segmentation">
 						</a>
 					</span>
