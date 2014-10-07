@@ -120,16 +120,16 @@
 				<div class="row">
 					<span class="span3">
 						<a href="http://tribalytics.com" target="_blank">
-							<img id="tribalytics" class="img-polaroid" src="img/tribalytics-preview.png" alt="Tribalytics social graph exploration">
+							<img id="tribalytics" class="img-polaroid" src="img/tribalytics-audience-segmentation.png" alt="Tribalytics audience segmentation">
 						</a>
 					</span>
 					<span class="span7">
 						<h1>
 							<img src="img/tribalytics-square-logo.png"/>
-							<span class="trb-font">Tribalytics</span> - Twitter audience analysis
+							<span class="trb-font">Tribalytics</span> - Twitter analytics for conversions
 						</h1>
 						<p>Our reporting tool Tribalytics provides you with actionable insights about your industry's social presence to help you get the best ROI on your social marketing campaigns.</p>
-						<p><a class="btn btn-primary btn-large" href="http://tribalytics.com" target="_blank">Checkout tribalytics.com »</a></p>
+						<p><a class="btn btn-primary btn-large" href="http://tribalytics.com/?utm_source=mango-is&utm_medium=website&utm_campaign=home-page" target="_blank">Checkout tribalytics.com »</a></p>
 					</span>
 				</div>
 			</div>

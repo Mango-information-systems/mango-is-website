@@ -8,10 +8,10 @@
 		<ul class="thumbnails">
 			<li class="span4">
 				<div class="thumbnail">
-					<img src="../img/tribalytics-preview.png" alt="tribalytics">
-					<h3 id="tribalytics"><span class="trb-font">Tribalytics</span><small> Twitter audience analysis</small></h3>
+					<img src="../img/tribalytics-audience-segmentation.png" alt="tribalytics">
+					<h3 id="tribalytics"><span class="trb-font">Tribalytics</span><small> Twitter analytics for conversions</small></h3>
 					<p>Our reporting tool Tribalytics provides you with actionable insights about your industry's social presence to help you get the best ROI on your social marketing campaigns.</p>
-					<p><a class="btn btn-primary" href="http://tribalytics.com" target="_blank">Checkout tribalytics.com »</a></p>
+					<p><a class="btn btn-primary" href="http://tribalytics.com/?utm_source=mango-is&utm_medium=website&utm_campaign=product-page" target="_blank">Checkout tribalytics.com »</a></p>
 				</div>
 			</li>
 			<li class="span4">
