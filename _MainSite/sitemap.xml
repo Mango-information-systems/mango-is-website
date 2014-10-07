@@ -8,12 +8,12 @@
 
 <url>
   <loc>http://mango-is.com/</loc>
-  <lastmod>2013-11-03T08:25:45+00:00</lastmod>
+  <lastmod>2014-10-07T18:59:59+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
   <loc>http://mango-is.com/products/</loc>
-  <lastmod>2013-11-03T08:25:45+00:00</lastmod>
+  <lastmod>2014-10-07T18:59:59+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
@@ -28,7 +28,7 @@
 </url>
 <url>
   <loc>http://mango-is.com/blog/</loc>
-  <lastmod>2013-10-08T08:25:44+00:00</lastmod>
+  <lastmod>2014-10-04T18:59:59+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
@@ -57,8 +57,28 @@
   <changefreq>monthly</changefreq>
 </url>
 <url>
+  <loc>http://mango-is.com/blog/business/twitter-influencers-about-sports-business-ranking.html</loc>
+  <lastmod>2014-10-07T18:59:59+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://mango-is.com/blog/business/Belgians-twitter-and-klout.html</loc>
+  <lastmod>2014-10-07T18:59:59+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://mango-is.com/blog/engineering/pre-render-d3-js-charts-at-server-side.html</loc>
+  <lastmod>2014-10-07T18:59:59+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://mango-is.com/blog/engineering/how-to-choose-the-right-web-data-visualization-library.html</loc>
+  <lastmod>2014-10-07T18:59:59+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
   <loc>http://mango-is.com/blog/authors/</loc>
-  <lastmod>2013-09-23T14:52:48+00:00</lastmod>
+  <lastmod>2014-10-07T18:59:59+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 </urlset>
