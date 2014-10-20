@@ -23,7 +23,7 @@
 	<meta name="author" content="{{ page.author }}" />
 	<meta name="format" content="html"/>
 	<meta name="language" content="{{ page.language }}"/>
-	{% if page.date %}<meta name="revised" content="{{ page.date  | date: "%Y-%m-%d" }}"/>
+	{% if page.last-update %}<meta name="revised" content="{{ page.last-update  | date: "%Y-%m-%d" }}" scheme="YYYY-MM-DD"/>
 	{% endif %}
 	{% if page.keywords %}<meta name="keywords" content="{{ page.keywords | join: ',' }}" />
 	{% endif %}
