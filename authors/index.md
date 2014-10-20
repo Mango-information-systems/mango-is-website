@@ -3,7 +3,7 @@ layout: post
 language: en
 title: Authors
 author: Mango Information Systems
-description: We blog about web and social media analytics, business intelligence, and data visualization techniques.
+description: Mango Information Systems Blog writers
 keywords: dataviz, bi, business intelligence, visualization, d3, graph, olap, reporting, web analytics, social media analytics, api, competitive analytics, profiling, influence, trends, monitoring
 thumbnail: mango-is-blog.png
 license:  ""
