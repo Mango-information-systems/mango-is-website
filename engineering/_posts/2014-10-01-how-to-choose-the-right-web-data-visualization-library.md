@@ -5,7 +5,8 @@ title: How to choose the right web Data Visualization library
 description: Review of the most relevant charting libraries for common web data visualizations and reporting projects use cases. Should you choose Highcharts or d3?
 author: Mango Information Systems
 tags: mehdi
-# optional
+date: 2014-10-01
+last-update: 2014-10-20
 thumbnail: blog/img/thumbnails/2014-10-01-how-to-choose-the-right-web-data-visualization-library.png
 css: blog/css/2014-10-01-how-to-choose-the-right-web-data-visualization-library.css
 scripts: [js/d3.v3.min.js, js/jquery-scrollto.js, js/internal-links-scrollTo.js, js/internal-links-scrollTo.js, blog/js/2014-10-01-how-to-choose-the-right-web-data-visualization-library.js]
@@ -178,7 +179,9 @@ To my eyes, another advantage sigma has over d3 for graphs is the built-in Force
 
 ##More
 
-The personal selection presented above is far from exhaustive, my criteria to include tools was the maturity of the products. There are **many other libraries** that are **worth having a look at**. Here are some links from my personal bookmarks that I have tagged with "chart", in no particular order. Let me know in case some of them are broken.
+While this article focuses on tools, it's also important to know **how to create good visualizations**. [The Visual Display of Quantitative Information](http://www.edwardtufte.com/tufte/books_vdqi){: target="_blank" } by Edward Tufte is a reference writing. There's also this ebook available for free online: [Data Visualization with JavaScript](http://jsdatav.is/intro.html){: target="_blank" } which may be of some help.
+
+The personal selection of libraries presented above is far from exhaustive, my criteria to include tools was the maturity of the products. There are **many other libraries** that are **worth having a look at**. Here are some links from my personal bookmarks that I have tagged with "chart", in no particular order. Let me know in case some of them are broken.
 
 * [mindmup.com](https://www.mindmup.com/){: target="_blank" }
 * [github.com/andreaferretti/paths-js](https://github.com/andreaferretti/paths-js){: target="_blank" }
