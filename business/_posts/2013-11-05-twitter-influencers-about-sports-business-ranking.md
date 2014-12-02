@@ -3,7 +3,7 @@ layout: post
 language: en
 title: Twitter influencers about sports business in BE/NL
 subtitle: Making-of a ranking
-description: 
+description: What is the methodology to analyze a social media audience? This post dives into the question and shows our approach to find communities and influencers.
 author: Mango Information Systems
 tags: mehdi
 thumbnail: blog/img/thumbnails/2013-11-05-twitter-influencers-about-sports-business-ranking.png
