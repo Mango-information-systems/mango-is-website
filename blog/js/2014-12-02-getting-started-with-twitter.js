@@ -22,8 +22,8 @@ Reveal.initialize({
 
 	// Optional libraries used to extend on reveal.js
 	dependencies: [
-		{ src: '../js/utils/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-		{ src: '../js/utils/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+		{ src: '/js/utils/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+		{ src: '/js/utils/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 	]
 })
 
