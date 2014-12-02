@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="{{ page.language }}" itemscope itemtype="http://schema.org/Article" xmlns:og="http://ogp.me/ns#">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>{{ page.title }}{% if page.title %} - {% endif %}{% if page.subtitle %} {{ page.subtitle }} - {% endif %}Mango Information Systems's blog</title>
+	<meta property="og:title" content="{{ page.title }}{% if page.subtitle %} - {{ page.subtitle }} {% endif %}" />
+	<meta itemprop="name" content="{{ page.title }}{% if page.subtitle %} - {{ page.subtitle }} {% endif %}">
+	<meta property="og:type" content="{% if page.type %}{{ page.type }}{% else %}blog{% endif %}" />
+    <meta property="og:description" content="{{ page.description }}" />
+    <meta itemprop="description" content="{{ page.description }}">
+    <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
+	<link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}"/>
+    {% if page.thumbnail %}<meta property="og:image" content="{{ site.url }}/{{ page.thumbnail }}" />
+    <meta itemprop="image" content="{{ site.url }}/{{ page.thumbnail }}">
+	{% endif %}<meta name="subject" content="{{ page.title }}"/>
+	<meta name="description" content="{{ page.description }}" />
+	<meta name="author" content="{{ page.author }}" />
+	<meta name="format" content="html"/>
+	<meta name="language" content="{{ page.language }}"/>
+	{% if page.last-update %}<meta name="revised" content="{{ page.last-update  | date: "%Y-%m-%d" }}" scheme="YYYY-MM-DD"/>
+	{% endif %}
+	{% if page.keywords %}<meta name="keywords" content="{{ page.keywords | join: ',' }}" />
+	{% endif %}
+	{% if page.prevArticle %}<link rel="prev" href="{{ site.url }}{{ site.baseurl }}/{{ page.categories[0] }}/{{ page.prevArticle }}" />
+	{% endif %}
+	{% if page.nextArticle %}<link rel="next" href="{{ site.url }}{{ site.baseurl }}/{{ page.categories[0] }}/{{ page.nextArticle }}" />
+	{% endif %}
+	{% if page.categories[0] =='drafts' %}<meta name="robots" content="noindex, nofollow">{% endif %}
+
+	<!-- CSS -->
+	{% if page.css %}<link rel="stylesheet" href="{{ site.url }}/{{ page.css }}" type="text/css"/>
+	{% endif %}
+	{% if page.csss %}
+		{% for css in page.csss %}
+			<link rel="stylesheet" href="{{ site.url }}/{{ css }}" type="text/css"/>
+		{% endfor %}
+	{% endif %}
+
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Le fav and touch icons -->
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="/img/ico/apple-touch-icon-57-precomposed.png">
+</head>
+<body>
+
+	<div class="container-fluid" style="width:100%;height:100%;">
+		{{ content }}
+	</div>
+
+	<script src="{{ site.url }}/js/jquery.js"></script>
+	{% if page.scripts %}
+		{% for script in page.scripts %}
+			<script src="{{ site.url }}/{{ script }}"></script>
+		{% endfor %}
+	{% endif %}
+	{% if site.url == 'http://mango-is.com' %}
+	<script>var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-25766439-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+window.onerror = function(message, file, line) {
+var sFormattedMessage = '[' + file + ' (' + line + ')] ' + message;
+_gaq.push(['_trackEvent', 'Exceptions', 'Application', sFormattedMessage, null, true]);
+}
+</script>
+	{% endif %}
+
+</body>
+</html>
