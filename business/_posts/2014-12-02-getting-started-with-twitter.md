@@ -29,7 +29,7 @@ scripts: [js/utils/head.min.js, js/reveal.min.js, js/d3.v3.min.js, js/d3.customC
 			<p>
 				<small>Mehdi El Fadil - <a href="https://twitter.com/me_bx" target = "_blank">@me_bx</a></small>
 				<br>
-				<a href="http://tribalytics.com" target = "_blank"><img src="{{ site.url }}/blog/img/tribalytics-logo.png" style="border:none; background:none; box-shadow:none;height:35px;"></a>
+				<a href="http://tribalytics.com/?utm_source=mango-is&utm_medium=blog&utm_campaign=twitter-workshop-slides" target = "_blank"><img src="{{ site.url }}/blog/img/tribalytics-logo.png" style="border:none; background:none; box-shadow:none;height:35px;"></a>
 			</p>
 			<br><br>
 			<div class="row">
@@ -419,9 +419,11 @@ in Online purchase</title></rect><text x="-6" y="43.43220338983051" dy=".35em" t
 		<!-- next steps -->
 		<section data-background="{{ site.url }}/blog/img/tribalytics-logo-square-large.png" data-background-size="600px">
 			<div>
-				<img src="{{ site.url }}/blog/img/tribalytics-logo.png" style="border:none; box-shadow:none; background:none" width = "300px"/>
+				<a href="http://tribalytics.com/?utm_source=mango-is&utm_medium=blog&utm_campaign=twitter-workshop-slides" target = "_blank">
+					<img src="{{ site.url }}/blog/img/tribalytics-logo.png" style="border:none; box-shadow:none; background:none" width = "300px"/>
+				</a>
 				<p>
-					<small>Mehdi El Fadil - <a href="mailto:mehdi@tribalytics.com">mehdi@tribalytics.com</a></small>
+					<small>Mehdi El Fadil</small>
 				</p>
 				<br><br><br>
 				<p>Special thanks to guest Dusan Jakovljevic from <a href="https://twitter.com/vattel" target="_blank">@Vattel</a> for his expert advices.</p>
