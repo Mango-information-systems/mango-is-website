@@ -141,37 +141,39 @@ d3.json("{{ site.url }}/blog/data/belgian-journalists-twitter-influence.json", f
 		dots.enter().append("circle")
 			.attr("class", "dot")
 			.style("fill", "#cccccc")
-			.transition().delay(function(d, i) { return i / data.length * 600 }).duration(600)
-				.attr("r", 3)
-				.attr("cx", function(d) { return x(d.kloutScore) })
-				.attr("cy", function(d) {
-					kloutScoresMap[d.kloutScore] = kloutScoresMap[d.kloutScore]+1 || 1
-					return y(kloutScoresMap[d.kloutScore])
-				})
-				.attr("transform", function(d) {
-					var cx = x(Math.random()*90 + 10 - d.kloutScore)
-						, cy = y(Math.random()*120 + kloutScoresMap[d.kloutScore])
-					d.cy = cy
-					return 'translate(' + cx + ',' + cy + ')'
-				})
+			.style("opacity", 0)
+			.attr("r", 3)
+			.attr("cx", function(d) { return x(d.kloutScore) })
+			.attr("cy", function(d) {
+				kloutScoresMap[d.kloutScore] = kloutScoresMap[d.kloutScore]+1 || 1
+				return y(kloutScoresMap[d.kloutScore])
+			})
+			.attr("transform", function(d) {
+				var cx = x(Math.random()*90 + 10 - d.kloutScore)
+					, cy = y(Math.random()*120 + kloutScoresMap[d.kloutScore])
+				d.cy = cy
+				return 'translate(' + cx + ',' + cy + ')'
+			})
+			.transition().delay(function(d, i) { return 100 + i / data.length * 600 }).duration(600)
+				.style("opacity", 1)
 			
-		var discarded
-		
 		for (var i = 0; i<200; i++) {
-			discarded = kloutChart.append("circle")
+			var discarded = kloutChart.append("circle")
 				.attr("class", "discard dot")
 				.style("fill", "#cccccc")
-			discarded.transition().delay(function(d, i) { return i / 300 }).duration(600)
+				.style("opacity", 0)
 				.attr("r", 3)
 				.attr("cx", function() { return x(Math.random()*90+10) })
 				.attr("cy", function() { return y(Math.random()*90+10) })
+			discarded.transition().delay(function(d, i) { return i / 300 }).duration(200)
+				.style("opacity", 1)
 		}
 		
 		
-		kloutChart.selectAll('.discard').transition().delay(function(d, i) { return i / 300 + 2000 }).duration(600)
+		kloutChart.selectAll('.discard').transition().delay(function(d, i) { return i / 300 + 6000 }).duration(600)
 			.style("fill", "red")
 			.attr("r", 4)
-		kloutChart.selectAll('.discard').transition().delay(2600).duration(600)
+		kloutChart.selectAll('.discard').transition().delay(6600).duration(600)
 			.remove()
 
 	}
