@@ -142,22 +142,30 @@ d3.json("{{ site.url }}/blog/data/belgian-journalists-twitter-influence.json", f
 			.attr("class", "dot")
 			.style("fill", "#cccccc")
 			.transition().delay(function(d, i) { return i / data.length * 600 }).duration(600)
-			.attr("r", 3)
-			.attr("cx", function() { return x(Math.random()*90+10) })
-			.attr("cy", function() { return y(Math.random()*90+10) })
+				.attr("r", 3)
+				.attr("cx", function(d) { return x(d.kloutScore) })
+				.attr("cy", function(d) {
+					kloutScoresMap[d.kloutScore] = kloutScoresMap[d.kloutScore]+1 || 1
+					return y(kloutScoresMap[d.kloutScore])
+				})
+				.attr("transform", function(d) {
+					var cx = x(Math.random()*90 + 10 - d.kloutScore)
+						, cy = y(Math.random()*120 + kloutScoresMap[d.kloutScore])
+					d.cy = cy
+					return 'translate(' + cx + ',' + cy + ')'
+				})
 			
 		var discarded
 		
 		for (var i = 0; i<200; i++) {
 			discarded = kloutChart.append("circle")
-				.attr("class", "discard")
+				.attr("class", "discard dot")
 				.style("fill", "#cccccc")
 			discarded.transition().delay(function(d, i) { return i / 300 }).duration(600)
 				.attr("r", 3)
 				.attr("cx", function() { return x(Math.random()*90+10) })
 				.attr("cy", function() { return y(Math.random()*90+10) })
 		}
-		
 		
 		
 		kloutChart.selectAll('.discard').transition().delay(function(d, i) { return i / 300 + 2000 }).duration(600)
@@ -210,15 +218,19 @@ d3.json("{{ site.url }}/blog/data/belgian-journalists-twitter-influence.json", f
 				.attr("dy", ".71em")
 				.style("text-anchor", "end")
 				.text("Number of users")
+				
 			// update dots coordinates: number of users per Klout score
 			dots.transition()
-				.attr("cx", function(d) { return x(d.kloutScore) })
+				//~ .attr("transform", function(d) { console.log(d.cx, x(d.cx), d.kloutScore, x(d.kloutScore)); return 'translate(' + (x(d.cx) - x(d.kloutScore)) + ',0)' })
+				.attr("transform", function(d) { return 'translate(0,' + d.cy + ')' })
+				//~ .attr("cx", function(d) { return x(d.kloutScore) })
 				.style("fill", "#E44600")
 				.transition().delay(750).duration(750)
-					.attr("cy", function(d) {
-						kloutScoresMap[d.kloutScore] = kloutScoresMap[d.kloutScore]+1 || 1
-						return y(kloutScoresMap[d.kloutScore])
-					})
+					.attr("transform", function(d) { return 'translate(0,0)' })
+					//~ .attr("cy", function(d) {
+						//~ kloutScoresMap[d.kloutScore] = kloutScoresMap[d.kloutScore]+1 || 1
+						//~ return y(kloutScoresMap[d.kloutScore])
+					//~ })
 		})
 	}
 
