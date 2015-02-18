@@ -12,6 +12,7 @@ Reveal.initialize({
 	progress: true,
 	history: true,
 	center: true,
+	mouseWheel: true,
 
 	theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
 	transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
