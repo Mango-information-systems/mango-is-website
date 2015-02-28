@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 {% if page.type == 'article' %}
-<html lang="{{ page.language }}" itemscope itemtype="http://schema.org/Article" xmlns:og="http://ogp.me/ns#">
+<html lang="{{ page.language }}" itemscope itemtype="http://schema.org/Article" xmlns:og="http://ogp.me/ns#"{% if page.mode == 'offline' %} manifest="/offline.appcache"{% endif %}>
+{% else if page.type == 'page' %}
+<html lang="{{ page.language }}" itemscope itemtype="http://schema.org/WebPage" xmlns:og="http://ogp.me/ns#"{% if page.mode == 'offline' %} manifest="/offline.appcache"{% endif %}>
 {% else %}
-<html lang="{{ page.language }}" itemscope itemtype="http://schema.org/Blog" xmlns:og="http://ogp.me/ns#">
+<html lang="{{ page.language }}" itemscope itemtype="http://schema.org/Blog" xmlns:og="http://ogp.me/ns#"{% if page.mode == 'offline' %} manifest="/offline.appcache"{% endif %}>
 {% endif %}
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
@@ -62,7 +64,6 @@
 	<link rel="apple-touch-icon-precomposed" href="/img/ico/apple-touch-icon-57-precomposed.png">
 </head>
 <body>
-
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
@@ -87,9 +88,15 @@
 			</div>
 		</div>
 	</div>
-	<div class="container-fluid">
-		{{ content }}
-	</div>
+	{%  if page.type == 'page' %}
+		<div class="container">
+			{{ content }}
+		</div>
+	{% else %}
+		<div class="container-fluid">
+			{{ content }}
+		</div>
+	{% endif %}
 	<footer>
 		<div class="container">
 			<div class="span5">
@@ -98,21 +105,23 @@
 			</div>
 			<div class="span6">
 				<a href="/contact/" class="btn btn-primary btn-small pull-right contact-link"><i class="icon-pencil icon-white"></i> Contact »</a><span class="pull-right"> &nbsp; </span>
-				<a href="https://twitter.com/mango_info" class="twitter-follow-button" data-show-count="false">Follow @mango_info</a>
-				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-<!--
-				{% if site.url == 'http://mango-is.com' %}
-				<script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script><script type="IN/FollowCompany" data-id="2341318" data-counter="right"></script>
+				{% if site.baseurl == '/blog' %}
+					<a href="https://twitter.com/mango_info" class="twitter-follow-button" data-show-count="false">Follow @mango_info</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	<!--
+					{% if site.url == 'http://mango-is.com' %}
+					<script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script><script type="IN/FollowCompany" data-id="2341318" data-counter="right"></script>
+					{% endif %}
+	-->
+					<br/>
+					<iframe src="http://ghbtns.com/github-btn.html?user=mango-information-systems&type=follow"
+	  allowtransparency="true" frameborder="0" scrolling="0" width="227" height="20"></iframe>
+				<!--
+					<a href="http://feeds.feedburner.com/mango-information-systems">
+						<img src="/img/rss.png" alt="Subscribe to RSS Feed" />
+					</a>
+				-->
 				{% endif %}
--->
-				<br/>
-				<iframe src="http://ghbtns.com/github-btn.html?user=mango-information-systems&type=follow"
-  allowtransparency="true" frameborder="0" scrolling="0" width="227" height="20"></iframe>
-			<!--
-				<a href="http://feeds.feedburner.com/mango-information-systems">
-					<img src="/img/rss.png" alt="Subscribe to RSS Feed" />
-				</a>
-			-->
 			</div>
 		</div>
 	</footer>
