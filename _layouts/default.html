@@ -64,89 +64,149 @@
 	<link rel="apple-touch-icon-precomposed" href="/img/ico/apple-touch-icon-57-precomposed.png">
 </head>
 <body>
-	<div class="navbar navbar-fixed-top">
-		<div class="navbar-inner">
-			<div class="container">
-				<a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</a>
-				<a rel="home" href="/" class="brand">
-					<img width="145px" height="35px" alt="Mango Information Systems" src="/img/mango-information-systems-logo-medium.png">
-				</a>
-				<div class="nav-collapse">
-					<ul class="nav">
-						<li><a href="{{ site.url }}">Home</a></li>
-						<li><a href="{{ site.url }}/products/">Products</a></li>
-						<li><a href="{{ site.url }}/services/">Services</a></li>
-						<li><a href="{{ site.url }}/company/">Company</a></li>
-						<li class="active"><a href="{{ site.url }}{{ site.baseurl }}">Blog</a></li>
-						<li><a href="{{ site.url }}/contact">Contact</a></li>
-					</ul>
-				</div><!--/.nav-collapse -->
-			</div>
-		</div>
-	</div>
+
 	{%  if page.type == 'page' %}
 		<div class="container">
-			{{ content }}
-		</div>
 	{% else %}
 		<div class="container-fluid">
-			{{ content }}
+		<div class="navbar">
+			<div class="navbar-inner">
+				<div class="container">
+					<a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</a>
+					<a rel="home" href="/" class="brand">
+						<img width="145px" height="35px" alt="Mango Information Systems" src="/img/mango-information-systems-logo-medium.png">
+					</a>
+					<div class="nav-collapse">
+						<ul class="nav">
+							<li><a href="{{ site.url }}">Home</a></li>
+							<li><a href="{{ site.url }}/convert.html">Convert</a></li>
+							<li class="active"><a href="{{ site.url }}{{ site.baseurl }}">Blog</a></li>
+							<li><a href="{{ site.url }}/contact">Contact</a></li>
+						</ul>
+					</div><!--/.nav-collapse -->
+				</div>
+			</div>
 		</div>
 	{% endif %}
+		{{ content }}
+	</div>
 	<footer>
 		<div class="container">
 			<div class="span5">
-				<span>Mango Information systems 2012. </span>
-				<span><a href="http://mango-is.com/terms/">Copyright - terms of use</a></span>
+				<small>
+				<div itemscope itemtype="http://schema.org/Organization">
+					<div>
+						<a rel="home" href="/" class="brand">
+							<img itemprop="logo" alt="logo of Mango Information Systems" src="/img/mango-information-systems-logo-medium.png" />
+						</a>
+					</div>
+					<div>
+						<span itemprop="name">Mango Information Systems SPRL</span>
+					</div>
+					Located at 
+					<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+						<span itemprop="streetAddress">Rue des pères blancs, 4</span><br>
+						<span itemprop="postalCode">1040</span> 
+						<span itemprop="addressLocality">Etterbeek</span><br>
+						<span itemprop="addressRegion">Brussels</span>, 
+						<span itemprop="addressCountry">Belgium</span>.
+					</div>
+					VAT: <span itemprop="vatId">BE 0829.240.825</span><br>
+					<div>
+						<a href="http://mango-is.com/" itemprop="url">http://mango-is.com</a>
+					</div>
+					<div itemprop="location">
+						<span itemscope itemtype="http://schema.org/Place">
+							<div itemprop="geo">
+								<span itemscope itemtype="http://schema.org/GeoCoordinates">
+									<span property="latitude" content="50.826702"></span>
+									<span property="longitude" content="4.4002322"></span>
+								</span>
+							</div>
+						</span>
+					</div>
+				</div>
+				</small>
 			</div>
 			<div class="span6">
-				<a href="/contact/" class="btn btn-primary btn-small pull-right contact-link"><i class="icon-pencil icon-white"></i> Contact »</a><span class="pull-right"> &nbsp; </span>
-				{% if site.baseurl == '/blog' %}
-					<a href="https://twitter.com/mango_info" class="twitter-follow-button" data-show-count="false">Follow @mango_info</a>
-					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-	<!--
-					{% if site.url == 'http://mango-is.com' %}
-					<script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script><script type="IN/FollowCompany" data-id="2341318" data-counter="right"></script>
-					{% endif %}
-	-->
-					<br/>
-					<iframe src="http://ghbtns.com/github-btn.html?user=mango-information-systems&type=follow"
-	  allowtransparency="true" frameborder="0" scrolling="0" width="227" height="20"></iframe>
-				<!--
-					<a href="http://feeds.feedburner.com/mango-information-systems">
-						<img src="/img/rss.png" alt="Subscribe to RSS Feed" />
-					</a>
-				-->
-				{% endif %}
+				<p>
+					<a href="http://mango-is.com/terms/">Copyright - terms of use</a>
+				</p>
 			</div>
 		</div>
 	</footer>
 
 	<script src="{{ site.url }}/js/jquery.js"></script>
 	<script src="{{ site.url }}/js/bootstrap.min.js"></script>
+	<script>
+		{% if site.ga %}
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga')
+
+			ga('create', '{{ site.ga }}', 'auto')
+			toGa('pageview')
+
+			// error reporting
+			window.onerror = function(message, file, line) {
+				toGa('exception', {
+					description: file + ':' + line + '-' + message
+				})
+			}
+			
+			// page views, exceptions and events tracking
+			function toGa(type, opts)  {
+				var opts = opts || {}
+				switch(type) {
+					case 'exception':
+						var exceptionData = {
+							exDescription: opts.description
+						}
+						if (opts.fatal)
+							exceptionData.exFatal= opts.fatal
+						ga('send', 'exception', exceptionData)
+						// also record an event in order to benefit from Intelligence events
+						ga('send', 'event', 'site', 'Exception')
+
+					break;
+					case 'event':
+						var eventData = {
+							hitType: 'event'
+							, eventCategory: opts.category
+							, eventAction: opts.action
+						}
+						if (opts.label)
+							eventData.eventLabel = opts.label
+						if (opts.value)
+							eventData.eventValue = opts.value
+						ga('send', eventData)
+					break;
+					case 'pageview':
+						var pageViewData = {}
+						if (opts.title)
+							pageViewData.title = opts.title
+						ga('send', 'pageview', pageViewData)
+					break;
+				}
+			}
+		{% else %}
+			function toGa(type, opts) {
+				console.log('Google Analytics custom tracking:', type, opts)
+			}
+		{% endif %}
+
+	</script>
+	<script src="{{ site.url }}/js/site.js"></script>
+
 	{% if page.scripts %}
 		{% for script in page.scripts %}
 			<script src="{{ site.url }}/{{ script }}"></script>
 		{% endfor %}
-	{% endif %}
-	{% if site.url == 'http://mango-is.com' %}
-	<script>var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-25766439-1']);
-_gaq.push(['_trackPageview']);
-(function() {
-var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-window.onerror = function(message, file, line) {
-var sFormattedMessage = '[' + file + ' (' + line + ')] ' + message;
-_gaq.push(['_trackEvent', 'Exceptions', 'Application', sFormattedMessage, null, true]);
-}
-</script>
 	{% endif %}
 
 </body>

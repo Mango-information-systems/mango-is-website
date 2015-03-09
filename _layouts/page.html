@@ -1,0 +1,62 @@
+---
+layout: default
+type: page
+---
+<div class="modal hide fade" id="contactModal">
+	<div class="modal-header">
+		<a data-dismiss="modal" class="close">×</a>
+		<h3></h3>
+	</div>
+	<form method="POST" action="/contact.cfm" id="contact-form" name="contact-form" class="form-horizontal">
+		<div class="modal-body">
+			<p>We'll follow-up shortly to schedule a call or a meeting.</p>
+			<fieldset>
+				<div class="control-group">
+					<label for="firstName" class="control-label">First name</label>
+					<div class="controls">
+						<input type="text" id="firstName" name="firstName">
+					</div>
+				</div>
+				<div class="control-group">
+					<label for="lastName" class="control-label">Last name</label>
+					<div class="controls">
+						<input type="text" id="lastName" name="lastName">
+					</div>
+				</div>
+				<div class="control-group">
+					<label for="company" class="control-label">Company</label>
+					<div class="controls">
+						<input type="text" id="company" name="company">
+					</div>
+				</div>
+				<div class="control-group">
+					<label for="email" class="control-label">Email*</label>
+					<div class="controls">
+						<input type="email" id="email" name="email" required>
+					</div>
+				</div>
+				<div class="control-group">
+					<label for="message" class="control-label">Message</label>
+					<div class="controls">
+						<textarea rows = "2" id="message" name="message" placeholder="Please briefly describe your needs."></textarea>
+					</div>
+				</div>
+				<div class="control-group">
+					<label for="mpty" class="control-label" style="max-width:0px;max-height:0px;overflow:hidden;"></label>
+					<div class="controls">
+						<input type="text" id="mpty" name="mpty" placeholder="leave-empty" style="max-width:0px;max-height:0px;padding:none;border:none;box-shadow:none;cursor:default;">
+					</div>
+				</div>
+				<input id="contactType" type="hidden">
+				<input id="hPot" name="hPot" type="hidden">
+			</fieldset>
+		</div>
+		<div class="modal-footer">
+			<div class="span4">
+			<a data-dismiss="modal" class="btn" href="#">Close</a>
+			<button class="btn btn-primary" id="contact-form-submit"><i class="icon-envelope icon-white"></i> Send</button>
+			</div>
+		</div>
+	</form>
+</div>
+{{ content }}
