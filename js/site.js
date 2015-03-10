@@ -74,12 +74,14 @@ var $body
 					eventData.eventLabel = opts.label
 				if (opts.value)
 					eventData.eventValue = opts.value
+				if (opts.nonInteraction)
+					eventData.nonInteraction = 1
 				ga('send', eventData)
 			break;
 			case 'pageview':
 				var pageViewData = {}
-				if (opts.title)
-					pageViewData.title = opts.title
+				if (opts.page)
+					pageViewData.title = opts.page
 				ga('send', 'pageview', pageViewData)
 			break;
 		}
@@ -98,25 +100,30 @@ window.onerror = function(message, file, line) {
 	})
 }
 
-// scrollTo feature
-$('.int').click(function(evt) {
-	var trg = $(evt.target).attr('href') || $(evt.target).closest('a').attr('xlink:href')
-	
-	$(trg).ScrollTo()
-	
-	return false
-})
 
 $(document).ready(function() {
 
-	$.scrollDepth()
-
 	$body = $('body')
 	
-	$body.on('click', '#gotoPricing', function(e) {
-	// main CTA button clicked
-	// scroll to pricing section
+	//measure proportion of pages read as events in Google analytics
+	$.scrollDepth()
+
+	// scrollTo feature for internal links
+	$('.int').click(function(evt) {
+		var $trg = $(evt.target)
+			, destination = $trg.attr('href') || $trg.closest('a').attr('xlink:href')
+
+		$(destination).ScrollTo()
 		
+		if ($trg.data('cta')) {
+			toGa('event', {
+				category: 'CTA'
+				, action: 'click'
+				, nonInteraction: true
+			})
+		}
+		
+		return false
 	})
 	
 	$body.on('click', '.contact', function(e) {
@@ -128,13 +135,13 @@ $(document).ready(function() {
 		
 		$('#mpty').hide()
 		var $modal = $('#contactModal')
-console.log($modal.find('#contactType'))
+
 		$modal.find('h3').html(contactModalMetadata[trg].title) // modal title
 		$modal.find('#contactType').attr('value', contactModalMetadata[trg].type) // inquiry type, to be shown in contact message email
 		$modal.data('trg', contactModalMetadata[trg].trg) // ga funnel tracking
 		$modal.modal()
 		
-		toGa('pageview', {title: trg})
+		toGa('pageview', {page: trg})
 	})
 	
 	$('#contact-form').on('submit', function(e) {
@@ -183,7 +190,7 @@ console.log($modal.find('#contactType'))
 		
 		var trg = $('#contactModal').data('trg') || 'not-set'
 		
-		toGa('pageview', {title: trg})
+		toGa('pageview', {page: trg})
 	})
 })
 
