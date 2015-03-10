@@ -83,9 +83,9 @@
 					<div class="nav-collapse">
 						<ul class="nav">
 							<li><a href="{{ site.url }}">Home</a></li>
-							<li><a href="{{ site.url }}/convert.html">Convert</a></li>
+							<li><a href="{{ site.url }}/convert/">Convert</a></li>
 							<li class="active"><a href="{{ site.url }}{{ site.baseurl }}">Blog</a></li>
-							<li><a href="{{ site.url }}/contact">Contact</a></li>
+							<li><a class="contact" href="{{ site.url }}/contact/">Contact</a></li>
 						</ul>
 					</div><!--/.nav-collapse -->
 				</div>
@@ -134,7 +134,15 @@
 			</div>
 			<div class="span6">
 				<p>
-					<a href="http://mango-is.com/terms/">Copyright - terms of use</a>
+					<small>
+						<ul class="unstyled">
+							<li><a href="{{ site.url }}">Home</a></li>
+							<li><a href="{{ site.url }}/convert/">Convert</a></li>
+							<li class="active"><a href="{{ site.url }}{{ site.baseurl }}">Blog</a></li>
+							<li><a href="{{ site.url }}/terms/">Copyright - terms of use</a></li>
+							<li><a class="contact" href="{{ site.url }}/contact/">Contact</a></li>
+						</ul>
+					</small>
 				</p>
 			</div>
 		</div>
@@ -142,6 +150,7 @@
 
 	<script src="{{ site.url }}/js/jquery.js"></script>
 	<script src="{{ site.url }}/js/bootstrap.min.js"></script>
+	<script src="{{ site.url }}/js/jquery-scrollto.js"></script>
 	{% if site.ga %}
 		<script src="{{ site.url }}/js/jquery.scrolldepth.min.js"></script>
 	{% endif %}
