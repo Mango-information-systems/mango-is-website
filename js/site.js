@@ -39,6 +39,7 @@ var $body
 		}
 	}
 
+// Google Analytics
 {% if site.ga %}
 	;(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -97,6 +98,15 @@ window.onerror = function(message, file, line) {
 	})
 }
 
+// scrollTo feature
+$('.int').click(function(evt) {
+	var trg = $(evt.target).attr('href') || $(evt.target).closest('a').attr('xlink:href')
+	
+	$(trg).ScrollTo()
+	
+	return false
+})
+
 $(document).ready(function() {
 
 	$.scrollDepth()
@@ -112,13 +122,15 @@ $(document).ready(function() {
 	$body.on('click', '.contact', function(e) {
 	// package order button has been clicked
 	// display conversion (contact) form
+		e.preventDefault()
 	
-		var trg = $(e.target).data('trg') || 'not-set'
+		var trg = $(e.target).data('trg') || $(e.target).closest('a').data('trg') || 'not-set'
 		
 		$('#mpty').hide()
 		var $modal = $('#contactModal')
+console.log($modal.find('#contactType'))
 		$modal.find('h3').html(contactModalMetadata[trg].title) // modal title
-		$modal.find('#contactType').value(contactModalMetadata[trg].type) // inquiry type, to be shown in contact message email
+		$modal.find('#contactType').attr('value', contactModalMetadata[trg].type) // inquiry type, to be shown in contact message email
 		$modal.data('trg', contactModalMetadata[trg].trg) // ga funnel tracking
 		$modal.modal()
 		
