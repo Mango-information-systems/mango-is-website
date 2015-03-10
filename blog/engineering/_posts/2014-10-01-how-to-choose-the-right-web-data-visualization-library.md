@@ -9,7 +9,7 @@ date: 2014-10-01
 last-update: 2014-10-20
 thumbnail: blog/img/thumbnails/2014-10-01-how-to-choose-the-right-web-data-visualization-library.png
 css: blog/css/2014-10-01-how-to-choose-the-right-web-data-visualization-library.css
-scripts: [js/d3.v3.min.js, js/jquery-scrollto.js, js/internal-links-scrollTo.js, js/internal-links-scrollTo.js, blog/js/2014-10-01-how-to-choose-the-right-web-data-visualization-library.js]
+scripts: [js/d3.v3.min.js, js/jquery-scrollto.js, js/internal-links-scrollTo.js, blog/js/2014-10-01-how-to-choose-the-right-web-data-visualization-library.js]
 ---
 <div class="section" markdown="1">
 Web developers often ask me which charting or data visualization library they should choose for their projects. There are plenty of solutions available, several approaches and various levels of maturity. Based on what you are trying to achieve, different tools may be relevant.
