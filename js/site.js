@@ -30,12 +30,12 @@ var $body
 		, '/package-bi': {
 			title: 'Business Intelligence'
 			, trg: 'contact-bi'
-			, type: 'Business intelligence offer inquiry'
+			, type: 'Business Intelligence offer inquiry'
 		}
 		, '/package-dataviz': {
 			title: 'Data visualization'
 			, trg: '/contact-dataviz'
-			, type: 'Business intelligence offer inquiry'
+			, type: 'Data visualization offer inquiry'
 		}
 	}
 
@@ -150,38 +150,24 @@ $(document).ready(function() {
 		$('#contact-form-submit').addClass('disabled')
 		
 		$.ajax({
-			type: 'POST',
-			url: '/contact.cfm',
-			data: $('#contact-form').serialize(),
-			success: function(data) {
-				response = JSON.parse(data)
-				switch(response.status) {
-					case 'success':
-						$target = $('#contactModal')
-						$target.fadeOut(function() {
-							$target.html('<div class="alert alert-success">'+ response.message +'</div>')
-								.fadeIn()
-							setTimeout(function() {
-								$target.modal('hide')
-							}
-							, 4000)
-						})
-					break
-					case 'error':
-						contactFatalError(response.message)
-					break
-					case 'invalid-email':
-						$('#contact-form-submit').removeClass('disabled')
-						$('#email').parents('.control-group').addClass('error')
-						$('<span class="help-inline">'+ response.message + '</span>').insertAfter($('#email'))
-					break
+			type: 'POST'
+			, url: '/contact.cfm'
+			, data: $('#contact-form').serialize()
+			, success: function(data) {
+				$('#contact-form-submit').removeClass('disabled')
+				$('#contactFeedback').empty().html('<div class="alert alert-success">Thanks for your inquiry. We\'ll be back to you very soon.</div>')
+				
+				setTimeout(function() {
+					$('#contactModal').modal('hide')
 				}
-			},
-			error: function(data) {
+				, 4000)
+			}
+			, error: function(data) {
 				try {
 					var msg = JSON.parse(data.responseText).message
 				}
 				catch(e) {
+					// server returned a full HTML error page as a response
 					var msg = $(data.responseText).text().replace(/(\r\n|\n|\r)/gm, ' ')
 				}
 				contactFatalError(msg, data.status)
@@ -194,14 +180,27 @@ $(document).ready(function() {
 	})
 })
 
-function contactFatalError(message, status) {
+function contactFatalError(serverMessage, status) {
 // show error message to user and track error in ga
+
+	switch(status) {
+		case 403:
+			var msg = '<p>Sorry, but your message was rejected by our anti-spam system.</p><p>Please email us directly at contact@mango-is.com</p>'
+		break
+		case 400:
+			var msg = '<p>Sorry, it seems that you have used an invalid email address.</p><p>Please double-check your entry and try again.</p>'
+		break
+		default:
+			var msg = '<p>Sorry, an error has occured and your message was not sent.</p><p>Please email us directly at contact@mango-is.com, or try again later.</p><p><small>We\'ve been alerted about this problem and will look into it.</small></p>'
+			
+			var exceptionDescription = 'contact form not sent: '
+			exceptionDescription += status ? status + ' - ' : ''
+			exceptionDescription += serverMessage
+							
+			toGa('exception', {description: exceptionDescription, fatal: true})
+		break
+	}
 	$('#contact-form-submit').removeClass('disabled')
-	$('.modal-body').append('<div class="alert alert-error"><p>Sorry, an error has occured and your message was not sent.</p><p>Please email us at contact@mango-is.com, or try again later.</p><p><small>We\'ve been alerted about this problem and will look into it.</small></p></div>')
+	$('#contactFeedback').empty().html('<div class="alert alert-error">' + msg + '</div>')
 	
-	var exceptionDescription = 'contact form not sent: '
-	exceptionDescription += status ? status + ' - ' : ''
-	exceptionDescription += message
-					
-	toGa('exception', {description: exceptionDescription, fatal: true})
 }
