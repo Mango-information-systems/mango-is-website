@@ -1,3 +1,5 @@
+---
+---
 var $body
 	, contactModalMetadata = {
 		'not-set': {
@@ -36,8 +38,68 @@ var $body
 			, type: 'Business intelligence offer inquiry'
 		}
 	}
+
+{% if site.ga %}
+	;(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga')
+
+	ga('create', '{{ site.ga }}', 'auto')
+	toGa('pageview')
 	
+	// page views, exceptions and events tracking
+	function toGa(type, opts)  {
+		var opts = opts || {}
+		switch(type) {
+			case 'exception':
+				var exceptionData = {
+					exDescription: opts.description
+				}
+				if (opts.fatal)
+					exceptionData.exFatal= opts.fatal
+				ga('send', 'exception', exceptionData)
+				// also record an event in order to benefit from Intelligence events
+				ga('send', 'event', 'site', 'Exception')
+
+			break;
+			case 'event':
+				var eventData = {
+					hitType: 'event'
+					, eventCategory: opts.category
+					, eventAction: opts.action
+				}
+				if (opts.label)
+					eventData.eventLabel = opts.label
+				if (opts.value)
+					eventData.eventValue = opts.value
+				ga('send', eventData)
+			break;
+			case 'pageview':
+				var pageViewData = {}
+				if (opts.title)
+					pageViewData.title = opts.title
+				ga('send', 'pageview', pageViewData)
+			break;
+		}
+	}
+{% else %}
+	function toGa(type, opts) {
+		console.log('Google Analytics custom tracking:', type, opts)
+	}
+	$.scrollDepth = function() {}
+{% endif %}
+
+// error reporting
+window.onerror = function(message, file, line) {
+	toGa('exception', {
+		description: file + ':' + line + '-' + message
+	})
+}
+
 $(document).ready(function() {
+
+	$.scrollDepth()
 
 	$body = $('body')
 	
