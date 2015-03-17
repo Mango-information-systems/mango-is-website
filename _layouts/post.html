@@ -10,7 +10,7 @@ type: article
 			<div id="post">
 			{{ content }}
 			<br/>
-			{% if page.tags[0] %}published by <a href="{{ site.url }}{{ site.baseurl }}/authors#{{ page.tags[0] }}">{{ page.tags[0] | capitalize }}</a> on {{ page.date | date: "%d %b %Y" }}{% if page.last-update %}, last updated {{ page.last-update | date: "%d %b %Y" }}{% endif %}{% endif %}
+			{% if page.tags[0] %}published by <a href="{{ site.url }}/blog/authors#{{ page.tags[0] }}">{{ page.tags[0] | capitalize }}</a> on {{ page.date | date: "%d %b %Y" }}{% if page.last-update %}, last updated {{ page.last-update | date: "%d %b %Y" }}{% endif %}{% endif %}
 			<br/>
 			{% if page.license %}
 				{{ page.license }}
@@ -20,7 +20,7 @@ type: article
 			</div>
 			<hr/>
 			<div>
-				{% if site.baseurl == '/blog' %}
+				{% if site.ga %}
 					<script type="IN/Share" data-counter="right"></script>
 					<!-- Place this tag where you want the +1 button to render. -->
 					<div class="g-plusone" data-size="medium"></div>
@@ -35,7 +35,7 @@ type: article
 					<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
 				{% endif %}
 			</div>
-		{% if site.baseurl == '/blog' %}
+		{% if site.liveFyreId %}
 		<!-- START: Livefyre Embed -->
 		<div id="livefyre-comments"></div>
 		<script type="text/javascript" src="http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js"></script>
