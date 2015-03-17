@@ -103,7 +103,6 @@ window.onerror = function(message, file, line) {
 	})
 }
 
-
 $(document).ready(function() {
 
 	$body = $('body')
@@ -133,20 +132,22 @@ $(document).ready(function() {
 	$body.on('click', '.contact', function(e) {
 	// package order button has been clicked
 	// display conversion (contact) form
-		e.preventDefault()
-	
-		var trg = $(e.target).data('trg') || $(e.target).closest('a').data('trg') || 'not-set'
+		if($('#contactModal').length) {
+			e.preventDefault()
 		
-		$('#mpty').hide()
-		var $modal = $('#contactModal')
+			var trg = $(e.target).data('trg') || $(e.target).closest('a').data('trg') || 'not-set'
+			
+			$('#mpty').hide()
+			var $modal = $('#contactModal')
 
-		$modal.find('h3').html(contactModalMetadata[trg].title) // modal title
-		$modal.find('#contactType').attr('value', contactModalMetadata[trg].type) // inquiry type, to be shown in contact message email
-		$modal.data('trg', contactModalMetadata[trg].trg) // ga funnel tracking
-		$('#contactFeedback').empty()
-		$modal.modal()
-		
-		toGa('pageview', {page: trg})
+			$modal.find('h3').html(contactModalMetadata[trg].title) // modal title
+			$modal.find('#contactType').attr('value', contactModalMetadata[trg].type) // inquiry type, to be shown in contact message email
+			$modal.data('trg', contactModalMetadata[trg].trg) // ga funnel tracking
+			$('#contactFeedback').empty()
+			$modal.modal()
+			
+			toGa('pageview', {page: trg})
+		}
 	})
 	
 	$('#contact-form').on('submit', function(e) {
