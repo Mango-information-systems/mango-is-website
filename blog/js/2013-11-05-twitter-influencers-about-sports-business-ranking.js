@@ -1,6 +1,3 @@
----
----
-
 var colors = ['#1f54b4', '#ffa70e', '#47a02c']
 
 var svg = d3.select("#chartsContainer").append("svg")
