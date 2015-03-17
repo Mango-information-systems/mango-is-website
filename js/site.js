@@ -1,4 +1,6 @@
 ---
+sitemap:
+  exclude: 'yes'
 ---
 var $body
 	, contactModalMetadata = {
@@ -114,16 +116,14 @@ $(document).ready(function() {
 	// scrollTo feature for internal links
 	$('.int').click(function(evt) {
 		var $trg = $(evt.target)
-			, destination = $trg.attr('href') || $trg.closest('a').attr('xlink:href')
+			, destination = $trg.attr('href') || $trg.closest('a').attr('xlink:href') // where links points to
+			, trg = $trg.data('trg') // virtual page for ga
 
 		$(destination).ScrollTo()
 		
-		if ($trg.data('cta')) {
-			toGa('event', {
-				category: 'CTA'
-				, action: 'click'
-				, nonInteraction: true
-			})
+		if (trg) {
+		// record virtual pageview in case the internal link is a CTA
+			toGa('pageview', {page: trg})
 		}
 		
 		return false
