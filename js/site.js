@@ -6,7 +6,7 @@ var $body
 	, contactModalMetadata = {
 		'not-set': {
 			title: 'Contact Us'
-			, trg: 'contact'
+			, trg: '/contact-us'
 			, type: 'contact'
 		}
 		, '/package-web-analytics': {
@@ -31,7 +31,7 @@ var $body
 		}
 		, '/package-bi': {
 			title: 'Business Intelligence'
-			, trg: 'contact-bi'
+			, trg: '/contact-bi'
 			, type: 'Business Intelligence offer inquiry'
 		}
 		, '/package-dataviz': {
