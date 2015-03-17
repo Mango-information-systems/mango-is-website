@@ -22,6 +22,6 @@
 		</cfcatch>
 		</cftry>
 	<cfelse>
-			<cfheader statuscode="400" statustext="Bad Request" />
+		<cfheader statuscode="400" statustext="Bad Request" />
 	</cfif>
 </cfif>
