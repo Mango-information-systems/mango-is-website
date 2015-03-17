@@ -84,7 +84,7 @@
 						<ul class="nav">
 							<li><a href="{{ site.url }}">Home</a></li>
 							<li><a href="{{ site.url }}/convert/">Convert</a></li>
-							<li class="active"><a href="{{ site.url }}{{ site.baseurl }}">Blog</a></li>
+							<li class="active"><a href="{{ site.url }}/blog/">Blog</a></li>
 							<li><a class="contact" href="{{ site.url }}/contact/">Contact</a></li>
 						</ul>
 					</div><!--/.nav-collapse -->
@@ -92,53 +92,21 @@
 			</div>
 		</div>
 	{% endif %}
-		{{ content }}
+	{{ content }}
 	</div>
 	<footer>
 		<div class="container">
 			<div class="span5">
 				<small>
-				<div itemscope itemtype="http://schema.org/Organization">
-					<div>
-						<a rel="home" href="/" class="brand">
-							<img itemprop="logo" alt="logo of Mango Information Systems" src="/img/mango-information-systems-logo-medium.png" />
-						</a>
-					</div>
-					<div>
-						<span itemprop="name">Mango Information Systems SPRL</span>
-					</div>
-					Located at 
-					<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-						<span itemprop="streetAddress">Rue des pères blancs, 4</span><br>
-						<span itemprop="postalCode">1040</span> 
-						<span itemprop="addressLocality">Etterbeek</span><br>
-						<span itemprop="addressRegion">Brussels</span>, 
-						<span itemprop="addressCountry">Belgium</span>.
-					</div>
-					VAT: <span itemprop="vatId">BE 0829.240.825</span><br>
-					<div>
-						<a href="http://mango-is.com/" itemprop="url">http://mango-is.com</a>
-					</div>
-					<div itemprop="location">
-						<span itemscope itemtype="http://schema.org/Place">
-							<div itemprop="geo">
-								<span itemscope itemtype="http://schema.org/GeoCoordinates">
-									<span property="latitude" content="50.826702"></span>
-									<span property="longitude" content="4.4002322"></span>
-								</span>
-							</div>
-						</span>
-					</div>
-				</div>
+					{% include company-microdata.html %}
 				</small>
 			</div>
 			<div class="span6">
 				<p>
 					<small>
 						<ul class="unstyled">
-							<li><a href="{{ site.url }}">Home</a></li>
-							<li><a href="{{ site.url }}/convert/">Convert</a></li>
-							<li class="active"><a href="{{ site.url }}{{ site.baseurl }}">Blog</a></li>
+							<li><a href="{{ site.url }}/convert/">Conversion optimization</a></li>
+							<li class="active"><a href="{{ site.url }}/blog/">Blog</a></li>
 							<li><a href="{{ site.url }}/terms/">Copyright - terms of use</a></li>
 							<li><a class="contact" href="{{ site.url }}/contact/">Contact</a></li>
 						</ul>
