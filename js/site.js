@@ -18,7 +18,7 @@ var $body
 			, type: 'Conversions consulting package inquiry'
 		}
 		, '/package-web-full-service': {
-			title: 'Supercharge my site'
+			title: 'Fix my website'
 			, trg: '/contact-web-full-service'
 			, type: 'Conversions full service package inquiry'
 		}
@@ -81,7 +81,7 @@ var $body
 			case 'pageview':
 				var pageViewData = {}
 				if (opts.page)
-					pageViewData.title = opts.page
+					pageViewData.page = opts.page
 				ga('send', 'pageview', pageViewData)
 			break;
 		}
@@ -106,7 +106,10 @@ $(document).ready(function() {
 	$body = $('body')
 	
 	//measure proportion of pages read as events in Google analytics
-	$.scrollDepth()
+	$.scrollDepth({
+		userTiming: false
+		, pixelDepth: false
+	})
 
 	// scrollTo feature for internal links
 	$('.int').click(function(evt) {
@@ -139,6 +142,7 @@ $(document).ready(function() {
 		$modal.find('h3').html(contactModalMetadata[trg].title) // modal title
 		$modal.find('#contactType').attr('value', contactModalMetadata[trg].type) // inquiry type, to be shown in contact message email
 		$modal.data('trg', contactModalMetadata[trg].trg) // ga funnel tracking
+		$('#contactFeedback').empty()
 		$modal.modal()
 		
 		toGa('pageview', {page: trg})
