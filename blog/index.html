@@ -13,28 +13,8 @@ thumbnail: mango-is-blog.png
 	<h2>Business <small>Functional articles</small></h2>
 	<ul class="thumbnails blog">
 		{% for post in site.categories.business %}
-		<li class="span10 well">
-			<div class="media">
-				{% if post.thumbnail %}
-					<a class="pull-left" href="{{ site.baseurl }}{{ post.url }}">
-						<img class="media-object" style="max-width:300px;" src="{{ site.url }}/{{ post.thumbnail }}">
-					</a>
-				{% endif %}
-				<div class="media-body">
-					<a href="{{ site.baseurl }}{{ post.url }}">
-						<h3 class="media-heading">{{ post.title }}
-							{% if post.subtitle %}
-								<br/><small>{{ post.subtitle }}</small>
-							{% endif %}
-						</h3>
-						<p>{{ post.description | truncate: 125 }}</p>
-						<p><small><em>{{ post.date | date_to_string }}</em></small></p>
-					</a>
-				</div>
-			</div>
-		</li>
-<!--
-				<a href="{{ site.baseurl }}{{ post.url }}" class="thumbnail">
+			<li class="span4">
+				<a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" class="thumbnail">
 					<h3>{{ post.title }}
 						{% if post.subtitle %}
 						<br/><small>{{ post.subtitle }}</small>{% endif %}
@@ -42,14 +22,14 @@ thumbnail: mango-is-blog.png
 					{% if post.thumbnail %}
 						<img src="{{ site.url }}/{{ post.thumbnail }}" alt="" class="post-thumbnail"/>
 					{% endif %}
-					<p>{{ post.description | truncate: 125 }}</p>
+					<p>{{ post.content | strip_html | truncate: 125 }}</p>
 					<p><small><em>{{ post.date | date_to_string }}</em></small></p>
 				</a>
--->
+			</li>
 		{% endfor %}
 	</ul>
 	<h2>Engineering <small>Technical articles</small></h2>
-	<ul class="thumbnails">
+	<ul class="thumbnails blog">
 		{% for post in site.categories.engineering %}
 			<li class="span4">
 				<a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" class="thumbnail">
