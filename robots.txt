@@ -1,0 +1,19 @@
+---
+layout: null
+sitemap:
+  exclude: 'yes'
+---
+{% if site.url == 'http://mango-is.com' %}
+User-agent: semalt.com
+Disallow: /
+
+User-agent: *
+Disallow: /dev/
+Disallow: /myFiles/
+Disallow: /aspnet_client/
+
+Sitemap: {{ site.url }}/sitemap.xml 
+{% else %}
+User-agent: *
+Disallow: /
+{% endif %}
