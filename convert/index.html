@@ -12,9 +12,9 @@ css: css/landing.css
 <section class="row">
 	<div id="benefits" class="span6">
 		<br><br>
-		<ul>
+		<ul class="unstyled">
 			<li>
-				<h2>Get more customers</h2>
+				<h1>Get more customers</h1>
 			</li>
 	<!--
 			<li>
@@ -22,25 +22,29 @@ css: css/landing.css
 			</li>
 	-->
 			<li>
-				<h2>Increase the ROI of your web strategy</h2>
+				<h1>Increase the ROI of your web strategy</h1>
 			</li>
 		</ul>
 		<br>
-		<p class="text-center"><small><em>Let the web serve your strategy</em></small></p>
-		<p class="text-center"><button href="#packages" class="int btn btn-primary btn-large" data-cta="true">Let's talk about this!</button></p>
+		<div class="row-fluid">
+			<div class="span6 offset3">
+				<p class="text-center"><small><em>Let the web serve your business</em></small></p>
+				<p class="text-center"><button href="#packages" class="int btn btn-primary btn-large btn-block" data-cta="true">Let's talk!</button></p>
+			</div>
+		</div>
 	</div>
 	<div class="span6">
 <!--
 		<img src="//placehold.it/480x296" alt="">
 -->
-		<img src="{{ site.url }}/img/temp.jpg" alt="">
+		<img src="{{ site.url }}/img/conversion-optimization.jpg" alt="Online purchase">
 	</div>
 </section>
 
 <section class="row">
 	<div class="span12 text-center">
-		<h3>Are your websites conversions too low?</h3>
-		<h3>A proper optimization can probably make your efforts more worthwhile</h3>
+		<h3>Are your website conversions too low?</h3>
+		<h3>Optimizing the content of your site for conversions can fix this.</h3>
 		<br>
 		<p class="text-center">Sending the right message through your website will not only <strong>increase your conversions</strong>,<br> but also improve your image and <strong>generate word-of-mouth</strong>.</p>
 		<p class="text-center">Let us help you <strong>close significantly more deals</strong>.</p>
@@ -69,41 +73,42 @@ css: css/landing.css
 <section class="row">
 	<div class="span12">
 		<p class="lead text-center">We have your back</p>
+		<p class="text-center">We'll help you take the right strategic decisions, and translate them into actual actions.</p>
 		<div class="row">
 			<div class="span4">
-				<h3 class="text-center">Conversions measurement</h3>
+				<h3 class="text-center">Conversion measurement</h3>
 				<p class="text-center">
-					<span>We'll arm you with the <strong>knowledge</strong> needed to outsmart your competitors</span>
+					<span>We'll arm you with the <strong>knowledge</strong> you need to outsmart your competitors</span>
 				</p>
 				<ul>
-					<li>setup of goals and conversions funnel in Google Analytics</li>
-					<li>design of summarized conversions dashboard</li>
-					<li>alerting and scheduled reports delivery by email</li>
-				</ul>
+					<li>setup goals and a conversion funnel in Google Analytics</li>
+					<li>your own conversion dashboard</li>
+					<li>alerts and scheduled reports by email</li>
+				</ul><br>
 			</div>
 			<div class="span4">
-				<h3 class="text-center">Business Analysis</h3>
+				<h3 class="text-center">Business Analysis<br><br></h3>
 				<p class="text-center">
 					<span>Rethinking the web strategy for sales</span>
 				</p>
 				<ul>
-					<li>analysis of content and usability</li>
-					<li>rewriting content with a sales orientation</li>
+					<li>content and usability audit</li>
+					<li>rewriting your content with a sales orientation</li>
 					<li>recommendations for improvements</li>
-				</ul>
+				</ul><br>
 			</div>
 
 			<div class="span4">
-				<h3 class="text-center">Implementation</h3>
+				<h3 class="text-center">Implementation<br><br></h3>
 				<p class="text-center">
-					<span>Turning your websites to the right side</span>
+					<span>Turning your website into a lead machine</span>
 				</p>
 				<ul>
 					<li>copywriting</li>
-					<li>User experience improvements</li>
+					<li>user experience improvements</li>
 					<li>SEO</li>
 					<li>performance tuning</li>
-				</ul>
+				</ul><br>
 			</div>
 		</div>
 	</div>
@@ -111,8 +116,8 @@ css: css/landing.css
 
 <section class="row text-center">
 	<div class="span12">
-		<p id="packages" class="lead text-center">Packages</p>
-		<p class="text-center">We let you measure, learn, and build for success</p>
+		<p id="packages" class="lead text-center">Our Packages</p>
+		<p class="text-center">We help you measure, learn, and build for success</p>
 		<div class="row">
 			<div id="package-analytics" class="span4">
 				<table class="table">
@@ -123,7 +128,7 @@ css: css/landing.css
 					</thead>
 					<tbody>
 						<tr>
-							<td>Conversions measurement</td>
+							<td>Conversion measurement</td>
 						</tr>
 						<tr>
 							<td><br></td>
@@ -134,11 +139,9 @@ css: css/landing.css
 						<tr>
 							<td><small>Starts at</small> 800 €</td>
 						</tr>
-						<tr>
-							<td><button class="contact btn btn-default btn-block" data-trg="/package-web-analytics">I need this!</button></td>
-						</tr>
 					</tbody>
 				</table>
+				<button class="contact btn btn-default btn-block" data-trg="/package-web-analytics">Request a quote</button>
 			</div>
 			<div class="span4">
 				<table class="table">
@@ -149,7 +152,7 @@ css: css/landing.css
 					</thead>
 					<tbody>
 						<tr>
-							<td class="lighter">Conversions measurement</td>
+							<td class="lighter">Conversion measurement</td>
 						</tr>
 						<tr>
 							<td>Business Analysis</td>
@@ -160,11 +163,9 @@ css: css/landing.css
 						<tr>
 							<td><small>Starts at</small> 1 600 €</td>
 						</tr>
-						<tr>
-							<td><button class="contact btn btn-primary btn-block" data-trg="/package-web-consulting">I need this!</button></td>
-						</tr>
 					</tbody>
 				</table>
+				<button class="contact btn btn-primary btn-block" data-trg="/package-web-consulting">Request a quote</button>
 			</div>
 			<div class="span4">
 				<table class="table text-center">
@@ -175,7 +176,7 @@ css: css/landing.css
 					</thead>
 					<tbody>
 						<tr>
-							<td class="lighter">Conversions measurement</td>
+							<td class="lighter">Conversion measurement</td>
 						</tr>
 						<tr>
 							<td class="lighter">Business Analysis</td>
@@ -186,11 +187,9 @@ css: css/landing.css
 						<tr>
 							<td><small>Starts at</small> 2 400 €</td>
 						</tr>
-						<tr>
-							<td><button class="contact btn btn-default btn-block" data-trg="/package-web-full-service">I need this!</button></td>
-						</tr>
 					</tbody>
 				</table>
+				<button class="contact btn btn-default btn-block" data-trg="/package-web-full-service">Request a quote</button>
 			</div>
 		</div>
 	</div>
@@ -241,10 +240,10 @@ css: css/landing.css
 							Mehdi is a Business Intelligence specialist by trade and digital strategist by evolution based in Brussels, Belgium.
 						</p>
 						<p>
-							He manages several web projects, both commercial and non-commercial since 2012: tribalytics.com, twitto.be, elfa-solaire.com, and fixates on digital strategies and online conversions.
+							He has managed several web projects, both commercial and non-commercial since 2012: tribalytics.com, twitto.be, elfa-solaire.com, and fixates on digital strategies and online conversions.
 						</p>
 						<p>
-							Mehdi's secret is to transpose the <strong>solution selling</strong> principles into digital strategies. He followed the COSSIM professional sales training by Philippe Szombat, and he is also <strong><a href="https://www.google.com/partners/#i_profile;idtf=108940988841507489031;" target="_blank">Google Analytics certified</a></strong>.
+							Mehdi's secret is to translate <strong>solution selling</strong> principles into digital strategies. He followed the COSSIM professional sales training by Philippe Szombat, and he is also <strong><a href="https://www.google.com/partners/#i_profile;idtf=108940988841507489031;" target="_blank">Google Analytics certified</a></strong>. 
 						</p>
 					</div>
 				</div>
@@ -260,7 +259,7 @@ css: css/landing.css
 							Panagiotis is an experienced web developer, specialized in content management systems.
 						</p>
 						<p>
-							He is the founder of 11 Digit Labs, a Greek web development agency, and has experience working for organizations of all sizes.
+							He is the founder of a 11 Digit Labs, a Greek web development agency, and has experience working for organizations of all sizes.
 						</p>
 						<p>
 							He's the person you need when you want to transform an old website into a modern web experience.
@@ -309,8 +308,8 @@ css: css/landing.css
 					</div>
 				</div>
 			</div>
--->
 		</div>
+-->
 	</div>
 </section>
 
