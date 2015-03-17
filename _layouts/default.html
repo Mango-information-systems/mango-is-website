@@ -20,7 +20,7 @@
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:site" content="@mango_info">
 	<meta name="twitter:creator" content="@mango_info ">
-	<link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}"/>
+	<link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url | remove: 'index.html' | remove: 'default.cfm' }}"/>
     {% if page.thumbnail %}<meta property="og:image" content="{{ site.url }}/{{ page.thumbnail }}" />
     <meta itemprop="image" content="{{ site.url }}/{{ page.thumbnail }}">
 	{% endif %}<meta name="subject" content="{{ page.title }}"/>
@@ -41,7 +41,6 @@
 	<!-- CSS -->
 	<link rel="stylesheet" href="{{ site.url }}/css/bootstrap.min.css" type="text/css"/>
 	<link rel="stylesheet" href="{{ site.url }}/css/bootstrap-responsive.min.css" type="text/css"/>
-	<link rel="stylesheet" href="{{ site.url }}/css/syntax.css" type="text/css"/>
 	<link rel="stylesheet" href="{{ site.url }}/css/syntax.css" type="text/css"/>
 	{% if page.css %}<link rel="stylesheet" href="{{ site.url }}/{{ page.css }}" type="text/css"/>
 	{% endif %}
