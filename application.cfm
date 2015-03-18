@@ -1,0 +1,1 @@
+<cfapplication name="MangoIS" applicationtimeout="#createTimespan(0,0,30,0)#" sessionmanagement="yes" sessiontimeout="#createTimespan(0,0,20,0)#" />
