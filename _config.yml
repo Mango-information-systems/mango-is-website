@@ -1,0 +1,13 @@
+destination: ./_site
+lsi:         false
+port:        4000
+markdown:    kramdown
+permalink:   none
+pygments:    true
+pagination:  false
+name:        Slicing the mango - a blog about analytics and data vizualization
+description: We blog about web and social media analytics, business intelligence, and data visualization techniques.
+url:         http://localhost:4000
+baseurl:     ''
+liveFyreId: 000
+# useful commands: jekyll build; jekyll serve --watch

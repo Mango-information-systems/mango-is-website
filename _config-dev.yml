@@ -1,0 +1,12 @@
+destination: ./_site
+lsi:         false
+markdown:    kramdown
+permalink:   none
+pygments:    true
+pagination:  true
+paginate:    20
+name:        Slicing the mango - a blog about analytics and data vizualization
+description: We blog about web and social media analytics, business intelligence, and data visualization techniques.
+url:         http://dev.mango-is.com
+baseurl:     /blog
+liveFyreId:  327730

@@ -1,0 +1,94 @@
+---
+layout: default
+type: article
+---
+<div class="row-fluid">
+	<div class="span7 offset1">
+		<article>
+			<h1 id="{{ page.title | uri_escape }}">{{ page.title }}{% if page.subtitle %} <small>{{page.subtitle}}</small>{% endif %}</h1>
+
+			<div id="post">
+			{{ content }}
+			<br/>
+			{% if page.tags[0] %}published by <a href="{{ site.url }}/blog/authors#{{ page.tags[0] }}">{{ page.tags[0] | capitalize }}</a> on {{ page.date | date: "%d %b %Y" }}{% if page.last-update %}, last updated {{ page.last-update | date: "%d %b %Y" }}{% endif %}{% endif %}
+			<br/>
+			{% if page.license %}
+				{{ page.license }}
+			{% else %}
+			<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><small>This article by <a xmlns:cc="http://creativecommons.org/ns#" href="http://mango-is.com" property="cc:attributionName" rel="cc:attributionURL">Mango Information Systems SPRL</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.<br />Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="http://mango-is.com/contact/" rel="cc:morePermissions">http://mango-is.com/contact/</a>.</small>
+			{% endif %}
+			</div>
+			<hr/>
+			<div>
+				{% if site.ga %}
+					<script type="IN/Share" data-counter="right"></script>
+					<!-- Place this tag where you want the +1 button to render. -->
+					<div class="g-plusone" data-size="medium"></div>
+					<!-- Place this tag after the last +1 button tag. -->
+					<script type="text/javascript">
+					  (function() {
+						var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+						po.src = 'https://apis.google.com/js/plusone.js';
+						var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+					  })();
+					</script>
+					<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+				{% endif %}
+			</div>
+		{% if site.liveFyreId %}
+		<!-- START: Livefyre Embed -->
+		<div id="livefyre-comments"></div>
+		<script type="text/javascript" src="http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js"></script>
+		<script type="text/javascript">
+		(function () {
+			var articleId = fyre.conv.load.makeArticleId(null);
+			fyre.conv.load({}, [{
+				el: 'livefyre-comments',
+				network: "livefyre.com",
+				siteId: "{{ site.liveFyreId }}",
+				articleId: articleId,
+				signed: false,
+				collectionMeta: {
+					articleId: articleId,
+					url: fyre.conv.load.makeCollectionUrl(),
+				}
+			}], function() {});
+		}());
+		</script>
+		<!-- END: Livefyre Embed -->
+		{% endif %}
+
+		</article>
+	</div>
+	<div class="span4">
+		<div class="affix">
+			<div class="row">
+				<div class="span11">
+					<div class="well">
+						<h3><img src="/img/tribalytics.com-logo-164x40.png"> - Analytics for conversions</h3>
+						<p>Do you <strong>use social to drive more sales</strong>? Get insights on your target audience on social media, identify the individuals that can <strong>amplify your message</strong> and see how the competition are doing.</p>
+						<p><a class="btn btn-primary" href="http://tribalytics.com?utm_source=mango-is&utm_medium=blog&utm_campaign=sidebar"> visit tribalytics.com »</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span11">
+					<div class="well">
+						<h3>Slicing the Mango<small> - about this blog</small></h3>
+						<p>Slicing the Mango is a blog for digital marketers, social media managers and data professionals where we talk about best practices in business intelligence and web/social media analytics. It's written by Mehdi El Fadil of Mango Information Systems and guests.
+						</p>
+						<p>
+							<a href="https://twitter.com/mango_info" class="twitter-follow-button" data-show-count="false">Follow @mango_info</a>
+							<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+						</p>
+<!--
+						<p>
+							<script type="IN/FollowCompany" data-id="2341318" data-counter="none"></script>
+						</p>
+-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

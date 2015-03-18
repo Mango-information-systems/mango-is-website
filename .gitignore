@@ -1,8 +1,7 @@
-archive/
-bootstrap-custom.zip
-_MainSite/BingSiteAuth.xml
-_MainSite/blog/
-_MainSite/att/
-_MainSite/application.cfm
-_www/
+BingSiteAuth.xml
+att/
+application.cfm
 .gitignore
+drafts
+_site/
+_config*.yml

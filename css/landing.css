@@ -1,0 +1,79 @@
+body {
+	font-size: 18px;
+	line-height: 23px;
+}
+
+h1, h2, h3, h4 {
+	font-weight: bold;
+	color: black;
+}
+
+h2 {
+	font-size: 32px;
+}
+
+h3 {
+	font-size: 26px;
+	line-height: 32px;
+}
+
+section {
+	margin-top: 25px;
+	margin-bottom: 25px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	border-bottom: 1px solid #565656;
+}
+
+p {
+	text-align: left;
+}
+
+.lighter {
+	color: #565656;
+}
+
+.text-center th, .text-center td {
+   text-align: center;   
+}
+
+#benefits-improvement, #benefits-measure-result, #benefits-no-measure-result {
+	display: none;
+}
+
+.thumbnail {
+	cursor: pointer;
+}
+a.thumbnail:hover, a.thumbnail:focus {
+	color: #26963C;
+	border-color: #565656;
+	box-shadow: none;
+}
+
+.thumbnail h2 {
+	font-size:20px;
+}
+
+.thumbnail a {
+	color: black;
+	cursor: pointer;
+}
+
+.thumbnail.featured {
+	border-width: 3px;
+}
+
+.table th {
+	font-size: 28px;
+	line-height: 45px;
+}
+
+section.row p.lead {
+	font-size: 64px;
+	line-height: 82px;
+	margin-bottom: .75em;
+}
+
+.modal form {
+	margin-bottom: 0px;
+}
