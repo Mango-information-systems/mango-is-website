@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 {% if page.type == 'article' %}
-<html lang="{{ page.language }}" itemscope itemtype="http://schema.org/Article" xmlns:og="http://ogp.me/ns#"{% if page.mode == 'offline' %} manifest="/offline.appcache"{% endif %}>
+<html lang="{{ page.language }}" itemscope itemtype="http://schema.org/Article" xmlns:og="http://ogp.me/ns#"{% if page.mode == 'offline' %} manifest="/cache_manifest.cfm"{% endif %}>
 {% else if page.type == 'page' %}
-<html lang="{{ page.language }}" itemscope itemtype="http://schema.org/WebPage" xmlns:og="http://ogp.me/ns#"{% if page.mode == 'offline' %} manifest="/offline.appcache"{% endif %}>
+<html lang="{{ page.language }}" itemscope itemtype="http://schema.org/WebPage" xmlns:og="http://ogp.me/ns#"{% if page.mode == 'offline' %} manifest="/cache_manifest.cfm"{% endif %}>
 {% else %}
-<html lang="{{ page.language }}" itemscope itemtype="http://schema.org/Blog" xmlns:og="http://ogp.me/ns#"{% if page.mode == 'offline' %} manifest="/offline.appcache"{% endif %}>
+<html lang="{{ page.language }}" itemscope itemtype="http://schema.org/Blog" xmlns:og="http://ogp.me/ns#"{% if page.mode == 'offline' %} manifest="/cache_manifest.cfm"{% endif %}>
 {% endif %}
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
