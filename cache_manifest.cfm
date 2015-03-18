@@ -1,4 +1,6 @@
 ---
+sitemap:
+  exclude: 'yes'
 ---
 <!---
   Coldfusion trick to serve the cach manifest.
