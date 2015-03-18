@@ -1,6 +1,8 @@
-mango-is-blog
+mango-is-website
 =============
 
-Blog of Mango Information Systems SPRL, powered by Jekyll.
+Website of Mango Information Systems SPRL, powered by Jekyll.
 
-Unless specified otherwise, content is published under a Creative Commons Attribution license.
+Blog: unless specified otherwise, blog content is published under a Creative Commons Attribution license.
+
+Branding: All rights reserved to the copyright holder: Mango Information Systems SPRL
