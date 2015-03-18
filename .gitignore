@@ -5,3 +5,4 @@ application.cfm
 drafts
 _site/
 _config*.yml
+Rakefile
