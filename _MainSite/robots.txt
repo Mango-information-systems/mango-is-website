@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /dev/
-Disallow: /myFiles/
-Disallow: /aspnet_client/
-
-Sitemap: http://mango-is.com/sitemap.xml 
