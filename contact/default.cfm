@@ -11,7 +11,7 @@ scripts: js/contactsPage.js
 ---
 <cfprocessingdirective pageencoding="utf-8" />
 <section class="row" id="contact">
-	<h1>{{ page.title }}</h1>
+	<h1>{{ page.title }}</h1>
 	<div class="span6">
 		<form method="POST" action="/contact.cfm" id="contact-form" name="contact-form" class="form-horizontal">
 			<p>We'll follow-up shortly</p>

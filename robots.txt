@@ -13,7 +13,7 @@ Disallow: /myFiles/
 Disallow: /aspnet_client/
 Disallow: /offline.html
 
-Sitemap: {{ site.url }}/sitemap.xml 
+Sitemap: {{ site.url }}/sitemap.xml 
 {% else %}
 User-agent: *
 Disallow: /
