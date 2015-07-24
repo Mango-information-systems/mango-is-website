@@ -18,8 +18,8 @@ scripts: [js/underscore-min.js, js/localforage.nopromises.min.js, js/papaparse.m
 
 <div id="appWrapper">
 	<div id="csvSelectorPane">
-		<div class="row-fluid">
-			<div id="dropZone" class="span4 offset1">
+		<div class="row">
+			<div id="dropZone" class="small-4 columns offset1">
 				<h2>New conversion</h2>
 				<p>
 					<span>Drop or <strong>select a file</strong></span><br>
@@ -29,20 +29,20 @@ scripts: [js/underscore-min.js, js/localforage.nopromises.min.js, js/papaparse.m
 					Or <strong>paste CSV</strong> text <small><a id="sampleCSV">sample</a></small>
 				</p>
 				<div class="form-control">
-					<textarea id="csvText" class="span12" placeholder="Paste from spreadsheet" rows="7"></textarea>
+					<textarea id="csvText" class="small-12 columns" placeholder="Paste from spreadsheet" rows="7"></textarea>
 				</div>
 				<p>
 					Or <strong>enter a URL</strong>
 				</p>
 				<div class="form-control">
-					<input type="url" name="csvUrl" id="csvUrl" class="span12" placeholder="Type CSV Url then press Enter"/>
+					<input type="url" name="csvUrl" id="csvUrl" class="small-12 columns" placeholder="Type CSV Url then press Enter"/>
 				</div>
 				<div id="dropPlaceHolder">
 					<br>
 					<p class="text-center muted">Drop file here</p>
 				</div>
 			</div>
-			<div class="span4">
+			<div class="small-4 columns">
 				<h2>Your files</h2>
 				<div id="filesList">
 				</div>
@@ -59,8 +59,8 @@ scripts: [js/underscore-min.js, js/localforage.nopromises.min.js, js/papaparse.m
 
 <br>
 
-<div class="row-fluid">
-	<div class="span4 offset1">
+<div class="row">
+	<div class="small-4 columns offset1">
 		<h2>About</h2>
 		<p>This tools lets you convert CSV data to JSON format in a few clicks.</p>
 		<h3>Offline first</h3>
@@ -75,7 +75,7 @@ scripts: [js/underscore-min.js, js/localforage.nopromises.min.js, js/papaparse.m
 		<p>You can find the source code of this app <a href="https://github.com/Mango-information-systems/mango-is-website/tree/master/tools/csv-to-json">on Github</a>.</p>
 		<p>We use the open source library <a href="http://papaparse.com/" target="_blank">papaParse</a> to perform the conversions.</p>
 	</div>
-	<div class="span4">
+	<div class="small-4 columns">
 		<h2>How it works</h2>
 		<ol>
 			<li>Load file or paste your CSV data</li>

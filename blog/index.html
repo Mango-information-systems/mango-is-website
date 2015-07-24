@@ -13,7 +13,7 @@ thumbnail: mango-is-blog.png
 	<h2>Business <small>Functional articles</small></h2>
 	<ul class="thumbnails blog">
 		{% for post in site.categories.business %}
-			<li class="span4">
+			<li class="small-4 columns">
 				<a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" class="thumbnail">
 					<h3>{{ post.title }}
 						{% if post.subtitle %}
@@ -31,7 +31,7 @@ thumbnail: mango-is-blog.png
 	<h2>Engineering <small>Technical articles</small></h2>
 	<ul class="thumbnails blog">
 		{% for post in site.categories.engineering %}
-			<li class="span4">
+			<li class="small-4 columns">
 				<a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" class="thumbnail">
 					<h3>{{ post.title }}
 						{% if post.subtitle %}
