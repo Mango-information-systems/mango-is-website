@@ -1,0 +1,10 @@
+BingSiteAuth.xml
+att/
+application.cfm
+.jekyll-metadata
+drafts
+_site/
+_config*.yml
+Rakefile
+*.bak
+*.db

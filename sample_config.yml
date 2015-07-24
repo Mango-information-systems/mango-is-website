@@ -6,10 +6,9 @@ permalink:   none
 pygments:    true
 pagination:  false
 exclude:     [foundation]
-name:        Slicing the mango - a blog about analytics and data vizualization
-description: We blog about web and social media analytics, business intelligence, and data visualization techniques.
-url:         http://localhost:4000
+name:        site name
+description: site description
+url:         http://example.com
 baseurl:     ''
-liveFyreId: 000
-exclude:     foundation/doc
-# useful commands: jekyll build; jekyll serve --watch
+liveFyreId:  ''
+ga:          ''
