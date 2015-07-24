@@ -3,24 +3,22 @@ layout: default
 type: page
 ---
 {% if page.url != '/contact/default.cfm' %}
-	<div class="modal hide fade" id="contactModal">
-		<div class="modal-header">
-			<a data-dismiss="modal" class="close">×</a>
-			<h3>Fix my website</h3>
-		</div>
-		<form method="POST" action="/contact.cfm" id="contact-form" name="contact-form" class="form-horizontal">
-			<div class="modal-body">
-				<p>We'll follow-up shortly to schedule a call or a meeting.</p>
-				{% include contact-form-body.html %}
-				<div id="contactFeedback"></div>
-			</div>
-			<div class="modal-footer">
-				<div class="small-4 columns">
-				<a data-dismiss="modal" class="btn" href="#">Close</a>
-				<button class="button success" id="contact-form-submit"><i class="icon-envelope icon-white"></i> Send</button>
-				</div>
-			</div>
-		</form>
+<div id="contactModal" class="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+	<div class="modal-header">
+		<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+		<h3 id="modalTitle">Fix my website</h3>
 	</div>
+	<form method="POST" action="/contact.cfm" id="contact-form" name="contact-form" class="form-horizontal">
+		<div class="modal-body">
+			<p>We'll follow-up shortly to schedule a call or a meeting.</p>
+			{% include contact-form-body.html %}
+			<div id="contactFeedback"></div>
+		</div>
+		<div class="modal-footer medium-4 columns">
+			<button class="button secondary">Cancel</button>
+			<button class="button success" id="contact-form-submit">Send</button>
+		</div>
+	</form>
+</div>
 {% endif %}
 {{ content }}

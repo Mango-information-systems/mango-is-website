@@ -141,6 +141,7 @@ $(document).ready(function() {
 			var $modal = $('#contactModal')
 
 			$modal.find('h3').html(contactModalMetadata[trg].title) // modal title
+			$modal.foundation('reveal', 'open');
 			$modal.find('#contactType').attr('value', contactModalMetadata[trg].type) // inquiry type, to be shown in contact message email
 			$modal.data('trg', contactModalMetadata[trg].trg) // ga funnel tracking
 			$('#contactFeedback').empty()
@@ -209,4 +210,15 @@ function contactFatalError(serverMessage, status) {
 	$('#contact-form-submit').removeClass('disabled')
 	$('#contactFeedback').empty().html('<div class="alert alert-error">' + msg + '</div>')
 	
+}
+
+function localJSFallback(scripts) {
+	var path = '{{ site.url }}/js/lib/', obj;
+	for (var script in scripts) {
+		if (script.indexOf('.') > -1) {
+			obj = script.split('.');
+			window[obj[0]][obj[1]] ||  $('[href$="' + scripts[script] + '"]').attr('src', path + scripts[script]);
+		} else 
+			window[script] || $('[href$="' + scripts[script] + '"]').attr('src', path + scripts[script]);
+	}
 }

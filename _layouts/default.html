@@ -112,13 +112,23 @@
 		</div>
 	</footer>
 
-	<script src="{{ site.url }}/js/jquery.js"></script>
-	<script src="{{ site.url }}/js/jquery-scrollto.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.reveal.min.js"></script>
 	{% if site.ga %}
-		<script src="{{ site.url }}/js/jquery.scrolldepth.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrolldepth/0.6/jquery.scrolldepth.min.js"></script>
 	{% endif %}
 
 	<script src="{{ site.url }}/js/site.js"></script>
+	<script>
+		localJSFallback({
+			'jQuery': 'jquery.min.js',
+			'jQuery.scrollTo': 'jquery.scrollTo.min.js',
+			'Foundation': 'foundation.min.js',
+			'Foundation.reveal': 'foundation.reveal.min.js'
+		});
+	</script>
 
 	{% if page.scripts %}
 		{% for script in page.scripts %}

@@ -1,33 +1,41 @@
-<fieldset>
-	<div class="control-group">
-		<label for="firstName" class="control-label">First name</label>
-		<div class="controls">
-			<input type="text" id="firstName" name="firstName">
-		</div>
+<div class="row">
+	<div class="small-12 medium-6 large-3 columns">
+		<label for="firstName" class="right inline">First name</label>
 	</div>
-	<div class="control-group">
-		<label for="lastName" class="control-label">Last name</label>
-		<div class="controls">
-			<input type="text" id="lastName" name="lastName">
-		</div>
+	<div class="medium-6 columns end">
+		<input type="text" id="firstName" name="firstName">
 	</div>
-	<div class="control-group">
-		<label for="company" class="control-label">Company</label>
-		<div class="controls">
-			<input type="text" id="company" name="company">
-		</div>
+</div>
+<div class="row">
+	<div class="small-12 medium-6 large-3 columns">
+		<label for="lastName" class="right inline">Last name</label>
 	</div>
-	<div class="control-group">
-		<label for="email" class="control-label">Email<sup>*</sup></label>
-		<div class="controls">
-			<input type="email" id="email" name="email" required>
-		</div>
+	<div class="medium-6 columns end">
+		<input type="text" id="lastName" name="lastName">
 	</div>
-	<div class="control-group">
-		<label for="message" class="control-label">Message<sup>*</sup></label>
-		<div class="controls">
-			<textarea rows="3" id="message" name="message" class="input-block-level" placeholder="Please briefly describe your needs." required></textarea>
-		</div>
+</div>
+<div class="row">
+	<div class="small-12 medium-6 large-3 columns">
+		<label for="company" class="right inline">Company</label>
 	</div>
-	<input id="contactType" name="contactType" type="hidden">
-</fieldset>
+	<div class="medium-6 columns end">
+		<input type="text" id="company" name="company">
+	</div>
+</div>
+<div class="row">
+	<div class="small-12 medium-6 large-3 columns">
+		<label for="email" class="right inline">Email<sup>*</sup></label>
+	</div>
+	<div class="medium-6 columns end">
+		<input type="email" id="email" name="email" required>
+	</div>
+</div>
+<div class="row">
+	<div class="small-12 medium-6 large-3 columns">
+		<label for="message" class="right inline">Message<sup>*</sup></label>
+	</div>
+	<div class="medium-6 columns end">
+		<textarea rows="5" id="message" name="message" placeholder="Please briefly describe your needs." required></textarea>
+	</div>
+</div>
+<input id="contactType" name="contactType" type="hidden">
