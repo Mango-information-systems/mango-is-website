@@ -24,33 +24,41 @@ css: css/landing.css
 		</div>
 	</div>
 	<div class="row medium-10 columns" style="margin: 0px auto;">
-		<ul class="medium-block-grid-2">
-			<li class="small-5 columns offset1">
-				<a href="{{ site.url }}/convert/" class="th featured" aria-label="Thumbnail">
-					<p class="lead">Get more customers from the web</p>
-					<h2>Conversion optimization >></h2>
-				</a>
+		<ul class="small-block-grid-1 medium-block-grid-2">
+			<li>
+				<div class="panel">
+					<a href="{{ site.url }}/convert/">
+						<p class="lead">Get more customers from the web</p>
+						<h2>Conversion optimization >></h2>
+					</a>
+				</div>
 			</li>
-			<li class="small-5 columns">
-				<a href="{{ site.url }}/contact/" class="contact th" aria-label="Thumbnail" data-trg="/package-social">
-					<p class="lead">Reach a specific niche on social media</p>
-					<h2>Social selling <small>Contact us</small> >></h2>
-					<!-- <h2><a>Social selling >></a></h2> -->
-				</a>
+			<li>
+				<div class="panel">
+					<a href="{{ site.url }}/contact/" data-trg="/package-social">
+						<p class="lead">Reach a specific niche on social media</p>
+						<h2>Social selling <small>Contact us</small> >></h2>
+						<!-- <h2><a>Social selling >></a></h2> -->
+					</a>
+				</div>
 			</li>
-			<li class="small-5 columns offset1">
-				<a href="{{ site.url }}/contact/" class="contact th" aria-label="Thumbnail" data-trg="/package-bi">
+			<li>
+				<div class="panel">
+				<a href="{{ site.url }}/contact/" data-trg="/package-bi">
 					<p class="lead">Take better business decisions</p>
 					<h2>Business Intelligence <small>Contact us</small> >></h2>
 					<!-- <h2 class="pull-right"><a>Business Intelligence >></a></h2> -->
 				</a>
+				</div>
 			</li>
-			<li class="small-5 columns">
-				<a href="{{ site.url }}/contact/" class="contact th" aria-label="Thumbnail" data-trg="/package-dataviz">
+			<li>
+				<div class="panel">
+				<a href="{{ site.url }}/contact/" data-trg="/package-dataviz">
 					<p class="lead">Design insightful dashboards</p>
 					<h2>Data visualization <small>Contact us</small> >></h2>
 					<!-- <h2><a>Data visualization >></a></h2> -->
 				</a>
+				</div>
 			</li>
 		</ul>
 	</div>
@@ -77,20 +85,13 @@ css: css/landing.css
 					<li>Technical experts in complex data-intensive projects</li>
 				</ul>
 			</p>
-			<br><br>
 			<div class="row text-center lead">
-				<div class="small-3 columns">
-					<strong><a href="{{ site.url }}/convert/">Conversion optimization</a></strong>
-				</div>
-				<div class="small-3 columns">
-					<a href="{{ site.url }}/contact/" class="contact" data-trg="/package-social">Social selling</a>
-				</div>
-				<div class="small-3 columns">
-					<a href="{{ site.url }}/contact/" class="contact" data-trg="/package-bi">Business Intelligence</a>
-				</div>
-				<div class="small-3 columns">
-					<a href="{{ site.url }}/contact/" class="contact" data-trg="/package-dataviz">Data visualization</a>
-				</div>
+				<ul class="small-block-grid-2 medium-block-grid-4">
+					<li><strong><a href="{{ site.url }}/convert/">Conversion optimization</a></strong></li>
+					<li><a href="{{ site.url }}/contact/" class="contact" data-trg="/package-social">Social selling</a></li>
+					<li><a href="{{ site.url }}/contact/" class="contact" data-trg="/package-bi">Business Intelligence</a></li>
+					<li><a href="{{ site.url }}/contact/" class="contact" data-trg="/package-dataviz">Data visualization</a></li>
+				</ul>
 			</div>
 		</div>
 	</div>
