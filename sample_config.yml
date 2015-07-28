@@ -3,7 +3,7 @@ lsi:         false
 port:        4000
 markdown:    kramdown
 permalink:   none
-pygments:    true
+highlighter: pygments
 pagination:  false
 exclude:     [foundation]
 name:        site name
