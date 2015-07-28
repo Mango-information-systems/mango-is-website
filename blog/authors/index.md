@@ -20,12 +20,18 @@ Mehdi El Fadil is an entrepreneur and business intelligence professional. He is 
 </div>
 
 
-<div class="section" markdown="1">
-###Latest posts
+<div class="section">
+<h3>Latest posts</h3>
 
 {% for post in site.tags.mehdi limit: 8 %}
 {% if post.categories[1] and post.categories[1] != 'drafts' %}
-#### <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }} <small>{% if post.subtitle %}{{ post.subtitle }}{% endif %} <span class="pull-right">{{ post.date | date_to_string }}</span></small></a>
+	<h4>
+		<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }} 
+			<small>{% if post.subtitle %}{{ post.subtitle }}{% endif %} 
+				<span class="right">{{ post.date | date_to_string }}</span>
+			</small>
+		</a>
+	</h4>
 {% endif %}
 {% endfor %}
 </div>
