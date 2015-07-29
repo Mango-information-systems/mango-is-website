@@ -33,7 +33,7 @@ scripts: [js/utils/head.min.js, js/reveal.min.js, js/d3.v3.min.js, js/d3.customC
 			</p>
 			<br><br>
 			<div class="row">
-				<div class="small-8 small-offset-4 columns">
+				<div class="medium-8 medium-offset-by-4 columns">
 					<small>Press the space bar or click on the blue arrow to see the next slide</small>
 				</div>
 			</div>

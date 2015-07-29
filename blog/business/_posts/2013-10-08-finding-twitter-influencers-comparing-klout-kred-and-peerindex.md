@@ -14,9 +14,9 @@ prevArticle: finding-twitter-influencers-the-recurring-problem-of-defining-influ
 ---
 <div class="section" markdown="1">
 
-<div id="chartArea" class="span10"></div>
-<div class="row-fluid">
-	<div class="span10">
+<div id="chartArea" class="medium-10 columns"></div>
+<div class="row">
+	<div class="medium-10 columns">
 		<div id="texts">
 			<p> In June 2013, we helped FINN Public Relations agency to establish its 2013 ranking of most influential Belgian journalists on twitter. During this process, a challenge led us to evaluate how Kred and peerIndex compare to Klout.
 			</p>
@@ -55,7 +55,7 @@ prevArticle: finding-twitter-influencers-the-recurring-problem-of-defining-influ
 			<![endif]-->
 	</div>
 	<!--[if gt IE 9]><!-->
-		<div class="span1" id="next-container"></div>
+		<div class="medium-1 column" id="next-container"></div>
 	<!-- <![endif]-->
 	
 </div>

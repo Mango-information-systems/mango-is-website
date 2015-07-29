@@ -20,7 +20,7 @@ As [twitto.be](http://twitto.be), the directory of Belgian twitter users was lau
 <![endif]-->
 
 <!--[if gte IE 9]><!-->
-<small>Hint: mouse over or tap next to the <i class="icon-search">  </i> icons to interact</small>
+<small>Hint: mouse over or tap next to the <i class="fi-magnifying-glass">  </i> icons to interact</small>
 <!-- <![endif]-->
 
 
@@ -30,20 +30,20 @@ As [twitto.be](http://twitto.be), the directory of Belgian twitter users was lau
 
 ##Key figures
 
-<div class="row-fluid">
+<div class="row">
 
-	<div class="span4 metric tlt" title="Number of Belgian twitter users referenced in twitto.be. 23% of them have been added during the past year. This is only a subset of the Belgian twitter users.">
-		<div class="metric-title"><img src="/blog/img/twitter-logo-gray-30x24.png"/> twittos<span class="pull-right"><i class="icon-search">  </i></span></div>
+	<div class="medium-4 columns metric tlt" title="Number of Belgian twitter users referenced in twitto.be. 23% of them have been added during the past year. This is only a subset of the Belgian twitter users.">
+		<div class="metric-title"><img src="/blog/img/twitter-logo-gray-30x24.png"/> twittos<span class="right"><i class="fi-magnifying-glass">  </i></span></div>
 		<div><span class="metric-val">113658</span> <span class="metric-detail green">+23%</span></div>
 	</div>
 
-	<div class="span4 metric tlt" title="This is the number of times twitto.be was visited last year, mostly without any promotion from our part. About 1000 persons visit twitto.be regularly.">
-		<div class="metric-title"><img src="/blog/img/user-gray-21x24.png"/> visitors<span class="pull-right"><i class="icon-search">  </i></span></div>
+	<div class="medium-4 columns metric tlt" title="This is the number of times twitto.be was visited last year, mostly without any promotion from our part. About 1000 persons visit twitto.be regularly.">
+		<div class="metric-title"><img src="/blog/img/user-gray-21x24.png"/> visitors<span class="right"><i class="fi-magnifying-glass">  </i></span></div>
 		<div><span class="metric-val">7729</span> <span class="metric-detail"><small> 27% returning</small></span></div>
 	</div>
 
-	<div class="span4 metric tlt" title="Klout remains controversial, and some people ask to be removed from it.">
-		<div class="metric-title"><img src="/blog/img/quit-gray-24x24.png"/> left Klout<span class="pull-right"><i class="icon-search">  </i></span></div>
+	<div class="medium-4 columns metric tlt" title="Klout remains controversial, and some people ask to be removed from it.">
+		<div class="metric-title"><img src="/blog/img/quit-gray-24x24.png"/> left Klout<span class="right"><i class="fi-magnifying-glass">  </i></span></div>
 		<div><span class="metric-val">178</span> <span class="metric-detail"><small>including 38 influencers</small></span></div>
 	</div>
 	
@@ -56,9 +56,9 @@ As [twitto.be](http://twitto.be), the directory of Belgian twitter users was lau
 
 As I've [already written in the past](http://mango-is.com/blog/business/finding-twitter-influencers-the-recurring-problem-of-defining-influence.html), Klout scores or similar ranking systems should be considered with care. I personally don't see them as important at all. However, it's compelling to see the number of people that are in a given range of Klout score.
 
-<div class="row-fluid">
+<div class="row">
 
-	<div id="barchart" class="span8">
+	<div id="barchart" class="medium-8 columns">
 	<!--[if lt IE 9]>
 		<img src="{{ site.url }}/blog/img/fallback/twittos-per-klout-score.png">
 	<![endif]-->
@@ -69,10 +69,10 @@ As I've [already written in the past](http://mango-is.com/blog/business/finding-
 	<!-- <![endif]-->
 	</div>
 
-	<div class="span4">
-		<p id="barchart1" class="interactive"><i class="icon-search"> </i> <strong>12%</strong> of Belgian twittos are <strong>not on Klout</strong>. <small>We do not show them on twitto.be</small>.</p>
-		<p id="barchart2" class="interactive"><i class="icon-search"> </i> <strong>65%</strong> of the twittos <strong>use twitter casually</strong>. They do not engage much with other twittos, or they use twitter mostly for reading; some of them are inactive.</p>
-		<p id="barchart3" class="interactive"><i class="icon-search"> </i> <strong>Less twittos have a high Klout score in 2014 than in 2013</strong>. More about this in the next section of this post.</p>
+	<div class="medium-4 columns">
+		<p id="barchart1" class="interactive"><i class="fi-magnifying-glass"> </i> <strong>12%</strong> of Belgian twittos are <strong>not on Klout</strong>. <small>We do not show them on twitto.be</small>.</p>
+		<p id="barchart2" class="interactive"><i class="fi-magnifying-glass"> </i> <strong>65%</strong> of the twittos <strong>use twitter casually</strong>. They do not engage much with other twittos, or they use twitter mostly for reading; some of them are inactive.</p>
+		<p id="barchart3" class="interactive"><i class="fi-magnifying-glass"> </i> <strong>Less twittos have a high Klout score in 2014 than in 2013</strong>. More about this in the next section of this post.</p>
 	</div>
 </div>
 
@@ -85,8 +85,8 @@ As I've [already written in the past](http://mango-is.com/blog/business/finding-
 
 The flow chat below shows how the Klout scores have been evolving between 2013 and 2014 (twittos have been grouped in 4 ranges based on their score).
 
-<div class="row-fluid">
-<div class="span6">
+<div class="row">
+<div class="medium-6 columns">
 <!--[if lt IE 9]>
 	<img src="{{ site.url }}/blog/img/fallback/klout-scores-evolution.png">
 <![endif]-->
@@ -106,11 +106,11 @@ with score in range 10-24</title></rect><text x="-6" y="153.24092204734168" dy="
 <!-- <![endif]-->
 
 </div>
-<div class="span6">
+<div class="medium-6 columns">
 
-<p id="sankey1" class="interactive"><i class="icon-search"> </i> Most of the twittos haven't had an important change of their Klout scores.</p>
-<p id="sankey2" class="interactive"><i class="icon-search"></i> <strong>More than a third of the influencers</strong> (Klout 50+) had a <strong>decrease of their score</strong> to less than 49 in 2014. Precisely, 1359 twittos are in this situation. This can probably be explained by changes in Klout's algorithm, and the incorporation of more data sources (Instagram, Bing, Wikipedia...) as factor for the score calculation.</p>
-<p id="sankey3" class="interactive"><i class="icon-search"></i> <strong>40</strong> twittos went <strong>from a low score in 2013 to a 50+ Klout score in 2014</strong>.</p>
+<p id="sankey1" class="interactive"><i class="fi-magnifying-glass"> </i> Most of the twittos haven't had an important change of their Klout scores.</p>
+<p id="sankey2" class="interactive"><i class="fi-magnifying-glass"></i> <strong>More than a third of the influencers</strong> (Klout 50+) had a <strong>decrease of their score</strong> to less than 49 in 2014. Precisely, 1359 twittos are in this situation. This can probably be explained by changes in Klout's algorithm, and the incorporation of more data sources (Instagram, Bing, Wikipedia...) as factor for the score calculation.</p>
+<p id="sankey3" class="interactive"><i class="fi-magnifying-glass"></i> <strong>40</strong> twittos went <strong>from a low score in 2013 to a 50+ Klout score in 2014</strong>.</p>
 
 </div>
 
@@ -121,8 +121,8 @@ with score in range 10-24</title></rect><text x="-6" y="153.24092204734168" dy="
 
 ##Visitors interests
     
-<div class="row-fluid">
-<div class="span6">
+<div class="row">
+<div class="medium-6 columns">
 
 <!--[if lt IE 9]>
 	<img src="{{ site.url }}/blog/img/fallback/visitors-interests.png">
@@ -136,11 +136,11 @@ with score in range 10-24</title></rect><text x="-6" y="153.24092204734168" dy="
 
 </div>
 
-<div class="span6" markdown="1">
+<div class="medium-6 columns" markdown="1">
 
 These are the most popular search terms on twitto.be.
 
-<p id="bars21" class="interactive" markdown="1"><i class="icon-search"> </i> "Journalism" is by far the most popular search. [1611 journalists are referenced](http://twitto.be/?search=journalist%20journalisme%20journaliste){: target="_blank" } on twitto.be</p>
+<p id="bars21" class="interactive" markdown="1"><i class="fi-magnifying-glass"> </i> "Journalism" is by far the most popular search. [1611 journalists are referenced](http://twitto.be/?search=journalist%20journalisme%20journaliste){: target="_blank" } on twitto.be</p>
 
 There is a long tail of search terms, in total **534 combinations of keywords, topics, locations and languages** have been visited.
 
@@ -155,8 +155,8 @@ There is a long tail of search terms, in total **534 combinations of keywords, t
 ##Where the visitors came from
 
 
-<div class="row-fluid">
-<div class="span6">
+<div class="row">
+<div class="medium-6 columns">
 
 <!--[if lt IE 9]>
 	<img src="{{ site.url }}/blog/img/fallback/visitors-origins.png">
@@ -170,15 +170,15 @@ There is a long tail of search terms, in total **534 combinations of keywords, t
 
 </div>
 
-<div class="span6" markdown="1">
+<div class="medium-6 columns" markdown="1">
 
 The referral traffic figures shown by Google analytics are very interesting. Referrals (visits coming through links from third-party websites) compose 61% of twitto.be's traffic.
 
-<p id="donut1" class="interactive"><i class="icon-search"> </i> Although twitto.be is about twitter users, <strong>60% of the referral visitors came from facebook</strong>.</p>
+<p id="donut1" class="interactive"><i class="fi-magnifying-glass"> </i> Although twitto.be is about twitter users, <strong>60% of the referral visitors came from facebook</strong>.</p>
 
-<p id="donut2" class="interactive"><i class="icon-search"> </i> Bruno Peeters monitors and blogs the evolution of the Belgian social media landscape, you should check it at <a href="https://bvlg.blogspot.com" target = "_blank">bvlg.blogspot.com</a>.</p>
+<p id="donut2" class="interactive"><i class="fi-magnifying-glass"> </i> Bruno Peeters monitors and blogs the evolution of the Belgian social media landscape, you should check it at <a href="https://bvlg.blogspot.com" target = "_blank">bvlg.blogspot.com</a>.</p>
 
-<p id="donut3" class="interactive"><i class="icon-search"> </i> 12% of the visits came from the former ranking of Belgians on Klout done by Vincent Battaglia at <a href="http://v1n.ch/klout.be/" target = "_blank">Klout.be on v1n.ch</a>.</p>
+<p id="donut3" class="interactive"><i class="fi-magnifying-glass"> </i> 12% of the visits came from the former ranking of Belgians on Klout done by Vincent Battaglia at <a href="http://v1n.ch/klout.be/" target = "_blank">Klout.be on v1n.ch</a>.</p>
 
 
 </div>

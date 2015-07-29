@@ -98,6 +98,7 @@ var $body
 
 // error reporting
 window.onerror = function(message, file, line) {
+	console.log(message);
 	toGa('exception', {
 		description: file + ':' + line + '-' + message
 	})
@@ -119,7 +120,7 @@ $(document).ready(function() {
 			, destination = $trg.attr('href') || $trg.closest('a').attr('xlink:href') // where links points to
 			, trg = $trg.data('trg') // virtual page for ga
 
-		$(destination).ScrollTo()
+		$.scrollTo(destination, 500);
 		
 		if (trg) {
 		// record virtual pageview in case the internal link is a CTA
@@ -214,5 +215,9 @@ function contactFatalError(serverMessage, status) {
 	}
 	$('#contact-form-submit').removeClass('disabled')
 	$('#contactFeedback').empty().html('<div class="alert alert-error">' + msg + '</div>')
+	
+}
+
+function cdnFallback(e) {
 	
 }
