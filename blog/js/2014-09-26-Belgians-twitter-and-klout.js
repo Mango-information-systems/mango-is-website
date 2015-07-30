@@ -26,9 +26,12 @@ $(document).ready(function() {
 	d3.select('#donut3').on('mouseout', function() {d3.selectAll('.arc').transition().style('opacity', 1)})
 
 	//tooltips
-	$('#barchart rect, #bars2 rect, .arc').tooltip({'container': 'body','placement': 'top'})
-	$('.tlt').tooltip({'placement': 'top'})
-
+	$(document).foundation({
+	  tooltip: {
+	    selector: '.tlt, .arc, #bars2 rect, #barchart rect',
+	    disable_for_touch: false,
+	  }
+	});
 	// zoomable bar chart
 	var barchart = d3.select('#barchart svg')
 		, bars2 = d3.select('#bars2 svg')

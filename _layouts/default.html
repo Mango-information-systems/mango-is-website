@@ -14,9 +14,9 @@
 	<meta property="og:title" content="{{ page.title }}{% if page.subtitle %} - {{ page.subtitle }} {% endif %}" />
 	<meta itemprop="name" content="{{ page.title }}{% if page.subtitle %} - {{ page.subtitle }} {% endif %}">
 	<meta property="og:type" content="{% if page.type %}{{ page.type }}{% else %}blog{% endif %}" />
-    <meta property="og:description" content="{{ page.description }}" />
-    <meta itemprop="description" content="{{ page.description }}">
-    <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
+  <meta property="og:description" content="{{ page.description }}" />
+  <meta itemprop="description" content="{{ page.description }}">
+  <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:site" content="@mango_info">
 	<meta name="twitter:creator" content="@mango_info ">
@@ -59,7 +59,8 @@
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/ico/apple-touch-icon-144-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/ico/apple-touch-icon-114-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/ico/apple-touch-icon-72-precomposed.png">
-	<link rel="apple-touch-icon-precomposed" href="/img/ico/apple-touch-icon-57-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="/img/ico/apple-touch-icon-57-precomposed.png">>
+	<script src="{{ site.url }}/js/modernizr.js"></script>
 </head>
 <body>
 
@@ -112,6 +113,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.reveal.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.topbar.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.tooltip.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
 
 	{% if site.ga %}
