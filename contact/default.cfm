@@ -12,17 +12,17 @@ scripts: js/contactsPage.js
 <cfprocessingdirective pageencoding="utf-8" />
 <section class="row" id="contact">
 	<h1>{{ page.title }}</h1>
-	<div class="span6">
-		<form method="POST" action="/contact.cfm" id="contact-form" name="contact-form" class="form-horizontal">
+	<div class="medium-6 columns">
+		<form method="POST" action="/contact.cfm" id="contact-form" name="contact-form">
 			<p>We'll follow-up shortly</p>
 			{% include contact-form-body.html %}
 			<div id="contactFeedback"></div>
-			<div class="span4">
-				<button class="btn btn-primary" id="contact-form-submit"><i class="icon-envelope icon-white"></i> Send</button>
+			<div class="medium-4 columns">
+			<button class="button small success"><i class="fi-mail"></i> Send</button>
 			</div>
 		</form>
 	</div>
-	<div class="span5">
+	<div class="medium-5 columns">
 		<div class="well">
 			{% include company-microdata.html %}
 		</div>
