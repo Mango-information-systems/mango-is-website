@@ -98,7 +98,6 @@ var $body
 
 // error reporting
 window.onerror = function(message, file, line) {
-	console.log(message);
 	toGa('exception', {
 		description: file + ':' + line + '-' + message
 	})
@@ -168,7 +167,7 @@ $(document).ready(function() {
 			, data: $('#contact-form').serialize()
 			, success: function(data) {
 				$('#contact-form-submit').removeClass('disabled')
-				$('#contactFeedback').empty().html('<div class="alert alert-success">Thanks for your inquiry. We\'ll be back to you very soon.</div>')
+				$('#contactFeedback').empty().html('<div class="alert-box success">Thanks for your inquiry. We\'ll be back to you very soon.</div>')
 				
 				setTimeout(function() {
 					$('#contactModal').modal('hide')
@@ -214,10 +213,6 @@ function contactFatalError(serverMessage, status) {
 		break
 	}
 	$('#contact-form-submit').removeClass('disabled')
-	$('#contactFeedback').empty().html('<div class="alert alert-error">' + msg + '</div>')
-	
-}
-
-function cdnFallback(e) {
+	$('#contactFeedback').empty().html('<div class="alert-box alert">' + msg + '</div>')
 	
 }

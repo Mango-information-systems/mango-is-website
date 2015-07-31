@@ -60,9 +60,9 @@
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/ico/apple-touch-icon-114-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/ico/apple-touch-icon-72-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" href="/img/ico/apple-touch-icon-57-precomposed.png">
-	<script src="{{ site.url }}/js/modernizr.js"></script>
 </head>
 <body>
+	<script src="{{ site.url }}/js/modernizr.js"></script>
 
 	{%  if page.type == 'page' %}
 		<div class="row">
@@ -110,18 +110,23 @@
 		</div>
 	</footer>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="{{ site.url }}/js/jquery.js">\x3C/script>')</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.min.js"></script>
+	<script>window.Foundation || document.write('<script src="{{ site.url }}/js/foundation.js">\x3C/script>')</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.reveal.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.topbar.min.js"></script>
+	<script>window.Foundation.libs.reveal || document.write('<script src="{{ site.url }}/js/foundation.reveal.js">\x3C/script>')</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.tooltip.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
-
+	<script>window.Foundation.libs.topbar || document.write('<script src="{{ site.url }}/js/foundation.topbar.js">\x3C/script>')</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.topbar.min.js"></script>
+	<script>window.Foundation.libs.tooltip || document.write('<script src="{{ site.url }}/js/foundation.tooltip.js">\x3C/script>')</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.1/jquery.scrollTo.min.js"></script>
+	<script>window.jQuery.scrollTo || document.write('<script src="{{ site.url }}/js/jquery.scrollto.js">\x3C/script>')</script>
+			<script src="{{ site.url }}/{{ script }}"></script>
 	{% if site.ga %}
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrolldepth/0.6/jquery.scrolldepth.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrolldepth/0.6/jquery.scrolldepth.min.js"></script>
+	<script>window.jQuery.scrollDepth || document.write('<script src="{{ site.url }}/js/jquery.scrolldepth.min.js">\x3C/script>')</script>
 	{% endif %}
-
-	<script src="{{ site.url }}/js/site.js"></script>
-
+		
 	{% if page.scripts %}
 		{% for script in page.scripts %}
 			<script src="{{ site.url }}/{{ script }}"></script>
