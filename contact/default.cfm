@@ -23,7 +23,7 @@ scripts: js/contactsPage.js
 		</form>
 	</div>
 	<div class="medium-5 columns">
-		<div class="well">
+		<div>
 			{% include company-microdata.html %}
 		</div>
 	</div>

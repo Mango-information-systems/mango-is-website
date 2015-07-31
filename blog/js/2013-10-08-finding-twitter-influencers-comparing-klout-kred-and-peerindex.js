@@ -1,3 +1,5 @@
+---
+---
 var step = 0 // step in the animation
 
 var margin = {top: 20, right: 20, bottom: 30, left: 40},
@@ -98,6 +100,7 @@ var svg = d3.select('#chartArea').append('svg')
 		.attr("y", 20)
 
 d3.json("{{ site.url }}/blog/data/belgian-journalists-twitter-influence.json", function(error, jsonData) {
+	if (error) return console.warn(error);
 	var data = jsonData.journalists
 		, xAxisLine
 		, yAxisLine
@@ -347,11 +350,11 @@ d3.json("{{ site.url }}/blog/data/belgian-journalists-twitter-influence.json", f
 				, delay: 0
 				, color: '#E44600'
 				, top: [
-					{id : 14117639, screen_name : "AlainGerlache", profile_image_url : "/blog/img/2e4c2f951ff53ac2b82639e9e7988ecd_normal.jpeg", score : 77},
-					{id : 1026561, screen_name : "davanac", profile_image_url : "/blog/img/37c84a0869345c39c5860721e82ef70e_normal.png", score : 75},
-					{id : 85792506, screen_name : "AnneLowenthal", profile_image_url : "/blog/img/ik_normal.jpg", score : 75},
-					{id : 621713, screen_name : "robinwauters", profile_image_url : "/blog/img/5f3b55299fa3260b7b22e8eadc0cc091_normal.jpeg", score : 72},
-					{id : 369522634, screen_name : "AdrienDevyver", profile_image_url : "/blog/img/a6ec21a107b7179a6e6f511c6c059cc4_normal.jpeg", score : 71}
+					{id : 14117639, screen_name : "AlainGerlache", profile_image_url : "{{ site.url }}/blog/img/2e4c2f951ff53ac2b82639e9e7988ecd_normal.jpeg", score : 77},
+					{id : 1026561, screen_name : "davanac", profile_image_url : "{{ site.url }}/blog/img/37c84a0869345c39c5860721e82ef70e_normal.png", score : 75},
+					{id : 85792506, screen_name : "AnneLowenthal", profile_image_url : "{{ site.url }}/blog/img/ik_normal.jpg", score : 75},
+					{id : 621713, screen_name : "robinwauters", profile_image_url : "{{ site.url }}/blog/img/5f3b55299fa3260b7b22e8eadc0cc091_normal.jpeg", score : 72},
+					{id : 369522634, screen_name : "AdrienDevyver", profile_image_url : "{{ site.url }}/blog/img/a6ec21a107b7179a6e6f511c6c059cc4_normal.jpeg", score : 71}
 				]
 			},
 			kred : {
@@ -363,11 +366,11 @@ d3.json("{{ site.url }}/blog/data/belgian-journalists-twitter-influence.json", f
 				, delay: 600
 				, color: '#71be39'
 				, top: [
-					{id: 621713, screen_name : "robinwauters", profile_image_url : "/blog/img/5f3b55299fa3260b7b22e8eadc0cc091_normal.jpeg", score : 958},
-					{id: 44849274, screen_name : "Vannieuwkerke", profile_image_url : "/blog/img/Karl_voor_twitter__close__normal.jpg", score : 900},
-					{id: 210456091, screen_name : "pvdmeersch", profile_image_url : "/blog/img/d44c2362ad144759fdae250d1e23af78_normal.jpeg", score : 852},
-					{id: 14117639, screen_name : "AlainGerlache", profile_image_url : "/blog/img/2e4c2f951ff53ac2b82639e9e7988ecd_normal.jpeg", score : 832},
-					{id: 292945752, screen_name : "jdceulaer", profile_image_url : "/blog/img/nieuwe_foto_normal.JPG", score : 822}
+					{id: 621713, screen_name : "robinwauters", profile_image_url : "{{ site.url }}/blog/img/5f3b55299fa3260b7b22e8eadc0cc091_normal.jpeg", score : 958},
+					{id: 44849274, screen_name : "Vannieuwkerke", profile_image_url : "{{ site.url }}/blog/img/Karl_voor_twitter__close__normal.jpg", score : 900},
+					{id: 210456091, screen_name : "pvdmeersch", profile_image_url : "{{ site.url }}/blog/img/d44c2362ad144759fdae250d1e23af78_normal.jpeg", score : 852},
+					{id: 14117639, screen_name : "AlainGerlache", profile_image_url : "{{ site.url }}/blog/img/2e4c2f951ff53ac2b82639e9e7988ecd_normal.jpeg", score : 832},
+					{id: 292945752, screen_name : "jdceulaer", profile_image_url : "{{ site.url }}/blog/img/nieuwe_foto_normal.JPG", score : 822}
 				]
 			},
 			pi : {
@@ -379,11 +382,11 @@ d3.json("{{ site.url }}/blog/data/belgian-journalists-twitter-influence.json", f
 				, color: '#22CAE2'
 				, delay: 1200
 				, top: [
-					{id : 44849274, screen_name : "Vannieuwkerke", profile_image_url : "/blog/img/Karl_voor_twitter__close__normal.jpg", score : 79},
-					{id : 161287978, screen_name : "wielerman", profile_image_url : "/blog/img/Resize_P08-09-10_08-53_normal.jpg", score : 74},
-					{id : 210456091, screen_name : "pvdmeersch", profile_image_url : "/blog/img/d44c2362ad144759fdae250d1e23af78_normal.jpeg", score : 74},
-					{id : 137639769, screen_name : "barteeckhout", profile_image_url : "/blog/img/f89be7af3aa61735e27386a2b0cd0c7a_normal.jpeg", score : 72},
-					{id : 34901183, screen_name : "vadderiVRT", profile_image_url : "/blog/img/757b74b5368d95bdad30171ff987d4db_normal.jpeg", score : 71}
+					{id : 44849274, screen_name : "Vannieuwkerke", profile_image_url : "{{ site.url }}/blog/img/Karl_voor_twitter__close__normal.jpg", score : 79},
+					{id : 161287978, screen_name : "wielerman", profile_image_url : "{{ site.url }}/blog/img/Resize_P08-09-10_08-53_normal.jpg", score : 74},
+					{id : 210456091, screen_name : "pvdmeersch", profile_image_url : "{{ site.url }}/blog/img/d44c2362ad144759fdae250d1e23af78_normal.jpeg", score : 74},
+					{id : 137639769, screen_name : "barteeckhout", profile_image_url : "{{ site.url }}/blog/img/f89be7af3aa61735e27386a2b0cd0c7a_normal.jpeg", score : 72},
+					{id : 34901183, screen_name : "vadderiVRT", profile_image_url : "{{ site.url }}/blog/img/757b74b5368d95bdad30171ff987d4db_normal.jpeg", score : 71}
 				]
 			}
 		}
@@ -570,7 +573,7 @@ d3.json("{{ site.url }}/blog/data/belgian-journalists-twitter-influence.json", f
 	var $texts = $('div#texts')
 		, $svg = $('svg')
 
-	$('svg, #next').live('click', function() {
+	$(document).on('click', '#next, svg', function() {
 		if (step < animationFunctions.length) {
 			animationFunctions[step]()
 			$texts.html('<h2>' + texts[step].title + '</h2><p>' + texts[step].text + '</p>')
@@ -612,7 +615,7 @@ d3.json("{{ site.url }}/blog/data/belgian-journalists-twitter-influence.json", f
 
 	$(function() {
 		resizeContent()
-		$('#next-container').html('<a class="btn btn-primary" href="#" id="next" title="next slide">next</a>')
+		$('#next-container').html('<button class="button" id="next" title="next slide">next</button>')
 	})
 
 })
