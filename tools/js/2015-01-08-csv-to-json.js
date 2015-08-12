@@ -14,10 +14,10 @@ var views = {
 			// markup to display CSV parsing settings form and JSON file preview
 			
 			var tmpl = ' \
-				<div class="row-fluid"> \
-					<div class="span4 offset1"> \
+				<div class="row"> \
+					<div class="medium-4 medium-offset-1 columns"> \
 						<h3>Adjust settings</h3> \
-						<form class="form-horizontal" action="javascript:void(0)"> \
+						<form action="javascript:void(0)"> \
 							<fieldset> \
 								<legend>Header row</legend> \
 								<div class="form-group"> \
@@ -34,24 +34,24 @@ var views = {
 							<fieldset> \
 								<legend>Column delimiter(s)</legend> \
 								<div class="form-group"> \
-									<div class="span4"> \
-										<div class="radio"> \
+									<div class="small-6 medium-4 columns"> \
+										<div> \
 											<label for="tab"> \
 												<input type="radio" name="delimiter" value="\t" id="tab" <%= tabChecked %>/> \
 												tab\
 											</label> \
 										</div> \
 									</div> \
-									<div class="span4"> \
-										<div class="radio"> \
+									<div class="small-6 medium-4 columns"> \
+										<div> \
 											<label for="comma"> \
 												<input type="radio" name="delimiter" value="," id="comma" <%= commaChecked %>/> \
 												comma (,) \
 											</label> \
 										</div> \
 									</div> \
-									<div class="span4"> \
-										<div class="radio"> \
+									<div class="small-6 medium-4 columns"> \
+										<div> \
 											<label for="semicolon"> \
 												<input type="radio" name="delimiter" value=";" id="semicolon" <%= semicolonChecked %>/> \
 												semicolon (;) \
@@ -60,32 +60,28 @@ var views = {
 									</div> \
 								</div> \
 								<div class="form-group"> \
-									<div class="span4"> \
-										<div class="radio"> \
+									<div class="small-6 medium-4 columns"> \
+										<div> \
 											<label for="colon"> \
 												<input type="radio" name="delimiter" value=":" id="colon" <%= colonChecked %>/> \
 												colon (:)\
 											</label> \
 										</div> \
 									</div> \
-									<div class="span4"> \
-										<div class="radio"> \
+									<div class="small-6 medium-4 columns"> \
+										<div> \
 											<label for="space"> \
 												<input type="radio" name="delimiter" value=" " id="space" <%= spaceChecked %>/> \
 												space \
 											</label> \
 										</div> \
 									</div> \
-									<div class="span4"> \
-										<div class="row-fluid"> \
-											<div class="radio span2"> \
-												<label for="custom"> \
-														<input type="radio" name="delimiter" value="custom" id="custom" <%= customChecked %>/> \
-												</label> \
-											</div> \
-											<div class="span8"> \
-												<input type="text" class=" customdelimiters input-small"id="customdelimiterTxt" maxlength="1" value = "<%= customDelimiter %>" placeholder="custom"/> \
-											</div> \
+									<div class="small-6 medium-4 columns"> \
+										<div> \
+											<label for="custom"> \
+												<input type="radio" name="delimiter" value="custom" id="custom" <%= customChecked %>/> \
+												<input type="text" class="customdelimiters" id="customdelimiterTxt" maxlength="1" value = "<%= customDelimiter %>" placeholder="custom"/> \
+											</label> \
 										</div> \
 									</div> \
 								</div> \
@@ -93,17 +89,17 @@ var views = {
 						</form> \
 						<%= errors %> \
 					</div> \
-					<div class="span6"> \
+					<div class="medium-6 columns end"> \
 						<h3>Preview results</h3> \
 						<pre class="resultsPreview"> \
 <code><%- JSON.stringify(json, null, "\t") %></code> \
 						</pre> \
 					</div> \
 				</div> \
-				<div class="row-fluid"> \
-					<div class="span4 offset1"> \
-						<a title="Undo and convert another file" class="back btn btn-default"><i class="icon-chevron-left"></i> Back</a> \
-						<a title="Process the whole file" class="convert btn btn-primary pull-right">Convert <i class="icon-chevron-right icon-white"></i></a> \
+				<div class="row"> \
+					<div class="medium-4 medium-offset-1 columns"> \
+						<a title="Undo and convert another file" class="back button secondary"><i class="fi-arrow-left"></i> Back</a> \
+						<a title="Process the whole file" class="convert button right">Convert <i class="fi-arrow-right"></i></a> \
 					</div> \
 				</div>'
 			
@@ -142,8 +138,8 @@ var views = {
 		// markup to display the JSON file result
 			
 			var tmpl = ' \
-				<div class="row-fluid"> \
-					<div class="span4 offset1"> \
+				<div class="row"> \
+					<div class="small-6 medium-4 medium-offset-1"> \
 						<h3><%= fileName %></h3> \
 						<% if (json.results.length < 1000) { %> \
 							<textarea class="results span12" rows="11"><%- JSON.stringify(json, null, "\t") %></textarea> \
@@ -153,21 +149,21 @@ var views = {
 					</div> \
 					<div class="span7"> \
 						<% if (json.results.length > 1000) { %> \
-							<div class="alert alert-info" role="alert"> \
+							<div class="alert-box info" role="alert"> \
 								<p>Because the file is large file, it won\'t be saved in the browser\'s memory for later use.</p> \
-								<p><i class="icon-arrow-left"></i> Please use the download button.</p> \
+								<p><i class="fi-arrow-left"></i> Please use the download button.</p> \
 							</div> \
 						<% } %> \
 						<%= errors %> \
 					</div> \
 				</div> \
-				<div class="row-fluid"> \
-					<div class="span4 offset1"> \
-						<a title="convert another file" class="back btn btn-default"><i class="icon-chevron-left"></i> Convert another file</a> \
+				<div class="row"> \
+					<div class="small-6 medium-4 medium-offset-1"> \
+						<a title="convert another file" class="back button secondary"><i class="fi-arrow-left"></i> Convert another file</a> \
 						<% if (json.results.length < 1000) { %> \
-							<span class="pull-right" data-filename="<%= fileName %>"> \
+							<span class="right" data-filename="<%= fileName %>"> \
 								<span class="muted"><em>Saved</em></span> \
-								<a title="delete file" class="btn btn-default delete"><i class="icon-remove"></i> Delete</a> \
+								<a title="delete file" class="button secondary delete"><i class="fi-x"></i> Delete</a> \
 								<%= button %> \
 							</span> \
 						<% } %> \
@@ -176,10 +172,10 @@ var views = {
 				'
 
 			if (data.results.length < 1000) {
-				var button = views.fileDownloadButton(data, fileName, '<i class="icon-download-alt icon-white"></i> Download', '', 'btn-primary')
+				var button = views.fileDownloadButton(data, fileName, '<i class="fi-download"></i> Download', '', '')
 			}
 			else {
-				var button = views.fileDownloadButton(data, fileName, 'Download results file', 'btn-block', 'btn-primary')
+				var button = views.fileDownloadButton(data, fileName, 'Download results file', '', '')
 				
 			}
 			
@@ -191,14 +187,14 @@ var views = {
 		}
 		, parseErrors: function(errors, fallback) {
 			var tmpl = ' \
-				<div class="alert alert-warning" role="alert"> \
+				<div class="alert-box warning" role="alert"> \
 					<p>Conversion warning(s):</p> \
 					<ul> \
 						<% _.each(errors, function(err) { %> \
 							<li> \
 								<%= err.message %> \
 								<% if (err.row) { %> \
-									<span class="pull-right"><em>line <%= err.row+1 %></em></span> \
+									<span class="right"><em>line <%= err.row+1 %></em></span> \
 								<% } %> \
 							</li>\
 						<% }) %> \
@@ -214,12 +210,12 @@ var views = {
 				return _.template(tmpl, {errors: errors.slice(0, 9), sliced: sliced})
 			}
 			else
-				return fallback? '<div class="alert alert-success" role="alert">Conversion successful!</div>' : ''
+				return fallback? '<div class="alert-box success" role="alert">Conversion successful!</div>' : ''
 		}
 		, fileDownloadButton: function(data, fileName, label, size, style) {
-			// vased on http://stackoverflow.com/a/15353235/1006854
+			// based on http://stackoverflow.com/a/15353235/1006854
 			
-			var tmpl = '<a class="download btn <%= style %> <%= size %>" href="<%- window.URL.createObjectURL(json) %>" \
+			var tmpl = '<a class="download button <%= style %> <%= size %>" href="<%- window.URL.createObjectURL(json) %>" \
 				download="<%= fileName %>"><%= label %></a>'
 				
 			var JSONBlob = new Blob([JSON.stringify(data)], { type: 'application/json' })
@@ -231,7 +227,7 @@ var views = {
 		}
 		, conversionsList: function(fileNames) {
 			if (!fileNames.length) {
-				return '<div class="alert alert-info" role="alert">You haven\'t done any conversion yet.<br>Once you convert some CSVs to JSON, the results will show up here.</div>'
+				return '<div class="alert-box info" role="alert">You haven\'t done any conversion yet.<br>Once you convert some CSVs to JSON, the results will show up here.</div>'
 			}
 			else {
 				var tmpl = '<ul> \

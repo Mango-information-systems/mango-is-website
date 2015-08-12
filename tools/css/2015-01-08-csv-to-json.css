@@ -19,6 +19,7 @@
 .resultsPreview {
 	max-height: 275px;
 	overflow: auto;
+  margin-bottom: 10px;
 }
 
 legend {

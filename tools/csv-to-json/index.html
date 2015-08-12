@@ -13,13 +13,13 @@ scripts: [js/underscore-min.js, js/localforage.nopromises.min.js, js/papaparse.m
 ---
 
 <noscript>
-	<span class="alert alert-error">Please activate javascript in order to use the application.</span>
+	<span class="alert-box alert">Please activate javascript in order to use the application.</span>
 </noscript>
 
 <div id="appWrapper">
 	<div id="csvSelectorPane">
 		<div class="row">
-			<div id="dropZone" class="small-4 columns medium-offset-by-1">
+			<div id="dropZone" class="medium-4 columns medium-offset-1">
 				<h2>New conversion</h2>
 				<p>
 					<span>Drop or <strong>select a file</strong></span><br>
@@ -28,13 +28,13 @@ scripts: [js/underscore-min.js, js/localforage.nopromises.min.js, js/papaparse.m
 				<p>
 					Or <strong>paste CSV</strong> text <small><a id="sampleCSV">sample</a></small>
 				</p>
-				<div class="form-control">
+				<div class="row">
 					<textarea id="csvText" class="small-12 columns" placeholder="Paste from spreadsheet" rows="7"></textarea>
 				</div>
 				<p>
 					Or <strong>enter a URL</strong>
 				</p>
-				<div class="form-control">
+				<div class="row">
 					<input type="url" name="csvUrl" id="csvUrl" class="small-12 columns" placeholder="Type CSV Url then press Enter"/>
 				</div>
 				<div id="dropPlaceHolder">
@@ -42,7 +42,7 @@ scripts: [js/underscore-min.js, js/localforage.nopromises.min.js, js/papaparse.m
 					<p class="text-center muted">Drop file here</p>
 				</div>
 			</div>
-			<div class="small-4 columns">
+			<div class="medium-4 columns">
 				<h2>Your files</h2>
 				<div id="filesList">
 				</div>
@@ -60,9 +60,9 @@ scripts: [js/underscore-min.js, js/localforage.nopromises.min.js, js/papaparse.m
 <br>
 
 <div class="row">
-	<div class="small-4 columns medium-offset-by-1">
+	<div class="medium-4 columns medium-offset-1">
 		<h2>About</h2>
-		<p>This tools lets you convert CSV data to JSON format in a few clicks.</p>
+		<p>This tool lets you convert CSV data to JSON format in a few clicks.</p>
 		<h3>Offline first</h3>
 		<p>You can use the converter even when you're not connected to the Internet, it just works.</p>
 		<h3>Privacy friendly</h3>
@@ -75,7 +75,7 @@ scripts: [js/underscore-min.js, js/localforage.nopromises.min.js, js/papaparse.m
 		<p>You can find the source code of this app <a href="https://github.com/Mango-information-systems/mango-is-website/tree/master/tools/csv-to-json">on Github</a>.</p>
 		<p>We use the open source library <a href="http://papaparse.com/" target="_blank">papaParse</a> to perform the conversions.</p>
 	</div>
-	<div class="small-4 columns">
+	<div class="medium-4 columns">
 		<h2>How it works</h2>
 		<ol>
 			<li>Load file or paste your CSV data</li>
