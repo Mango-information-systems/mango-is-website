@@ -14,7 +14,7 @@ CACHE:
 /css/bootstrap.min.css
 /css/bootstrap-responsive.min.css
 /css/syntax.css
-/tool/css/2015-01-08-csv-to-json.css
+/tools/css/2015-01-08-csv-to-json.css
 /img/mango-information-systems-logo-medium.png
 /img/glyphicons-halflings-white.png
 /img/glyphicons-halflings.png
@@ -23,7 +23,7 @@ CACHE:
 /js/underscore-min.js
 /js/localforage.nopromises.min.js
 /js/papaparse.min.js
-/tool/js/2015-01-08-csv-to-json.js
+/tools/js/2015-01-08-csv-to-json.js
 
 FALLBACK:
 / /offline.html
