@@ -119,11 +119,11 @@
 	<script>window.Foundation.libs.topbar || document.write('<script src="{{ site.url }}/js/foundation.topbar.js">\x3C/script>')</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.1/jquery.scrollTo.min.js"></script>
 	<script>window.jQuery.scrollTo || document.write('<script src="{{ site.url }}/js/jquery.scrollto.js">\x3C/script>')</script>
-			<script src="{{ site.url }}/{{ script }}"></script>
 	{% if site.ga %}
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrolldepth/0.6/jquery.scrolldepth.min.js"></script>
 	<script>window.jQuery.scrollDepth || document.write('<script src="{{ site.url }}/js/jquery.scrolldepth.min.js">\x3C/script>')</script>
 	{% endif %}
+	<script src="{{ site.url }}/js/site.js"></script>
 		
 	{% if page.scripts %}
 		{% for script in page.scripts %}
