@@ -30,6 +30,7 @@ $(document).ready(function() {
 	  tooltip: {
 	    selector: '.tlt, .arc, #bars2 rect, #barchart rect',
 	    disable_for_touch: false,
+	    touch_close_text: ''
 	  }
 	});
 	// zoomable bar chart

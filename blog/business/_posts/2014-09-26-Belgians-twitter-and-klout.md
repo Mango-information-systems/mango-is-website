@@ -9,7 +9,7 @@ tags: mehdi
 # optional
 thumbnail: blog/img/thumbnails/2014-09-26-Belgians-twitter-and-klout.png
 css: blog/css/2014-09-26-Belgians-twitter-and-klout.css
-scripts: [js/d3.v3.min.js, blog/js/2014-09-26-Belgians-twitter-and-klout.js]
+scripts: [js/foundation.tooltip.js, js/d3.v3.min.js, blog/js/2014-09-26-Belgians-twitter-and-klout.js]
 ---
 <div class="section" markdown="1">
 
@@ -83,7 +83,7 @@ As I've [already written in the past](http://mango-is.com/blog/business/finding-
 
 ##How did the Klout scores evolve between 2013 and 2014?
 
-The flow chat below shows how the Klout scores have been evolving between 2013 and 2014 (twittos have been grouped in 4 ranges based on their score).
+The flow chart below shows how the Klout scores have been evolving between 2013 and 2014 (twittos have been grouped in 4 ranges based on their score).
 
 <div class="row">
 <div class="medium-6 columns">
@@ -164,7 +164,7 @@ There is a long tail of search terms, in total **534 combinations of keywords, t
 
 <!--[if gte IE 9]><!-->
 
-	<div id="donut"><svg width="500" height="500" preserveAspectRatio="xMinYMin" viewbox="0 0 500 500"><g transform="translate(250,250)"><g class="arc donut1" title="3849 visits"><path d="M1.2858366715134961e-14,-210A210,210 0 1,1 -118.42967310692228,173.41975818166605L-76.13336128302146,111.48413025964247A135,135 0 1,0 8.266092888301046e-15,-135Z" style="fill: #3B5998;"></path><text transform="translate(164.81688381058365,50.90819984018853)" dy=".35em" style="fill:white; text-anchor: middle;">facebook</text></g><g class="arc" title="1377 visits"><path d="M-118.42967310692228,173.41975818166605A210,210 0 0,1 -196.0427455158345,-75.28108614129948L-126.02747926017932,-48.39498394797824A135,135 0 0,0 -76.13336128302146,111.48413025964247Z" style="fill: #4099FF;"></path><text transform="translate(-164.66775393753005,51.388528030768235)" dy=".35em" style="text-anchor: middle;">twitter</text></g><g class="arc" title="831 visits"><path d="M-196.0427455158345,-75.28108614129948A210,210 0 0,1 -81.10537942122127,-193.705749602173L-52.139172485070816,-124.52512474425406A135,135 0 0,0 -126.02747926017932,-48.39498394797824Z" style="fill: red;"></path><text transform="translate(-123.78487329960697,-120.13973173850627)" dy=".35em" style="fill:white; text-anchor: middle;">v1n.ch</text></g><g class="arc" title="289 visits"><path d="M-81.10537942122127,-193.705749602173A210,210 0 0,1 -24.23310129114112,-208.5971159959152L-15.57842225859072,-134.09814599737405A135,135 0 0,0 -52.139172485070816,-124.52512474425406Z" style="fill: #cccccc;"></path><text transform="translate(-43.69418690968585,-166.87440795490912)" dy=".35em" style="text-anchor: middle;">Other</text></g><g class="arc" title="119 visits"><path d="M-24.23310129114112,-208.5971159959152A210,210 0 0,1 -3.8575100145404884e-14,-210L-2.479827866490314e-14,-135A135,135 0 0,0 -15.57842225859072,-134.09814599737405Z" style="fill: #BBBBAA;"></path><text transform="translate(-9.969544951470988,-182.21166677510732)" dy=".35em" style="text-anchor: middle;">bvlg</text></g></g></svg></div>
+	<div id="donut"><svg width="500" height="500" preserveAspectRatio="xMinYMin" viewbox="0 0 500 500"><g transform="translate(250,250)"><g class="arc donut1" class="tip-bottom" data-tooltip title="3849 visits"><path d="M1.2858366715134961e-14,-210A210,210 0 1,1 -118.42967310692228,173.41975818166605L-76.13336128302146,111.48413025964247A135,135 0 1,0 8.266092888301046e-15,-135Z" style="fill: #3B5998;"></path><text transform="translate(164.81688381058365,50.90819984018853)" dy=".35em" style="fill:white; text-anchor: middle;">facebook</text></g><g class="arc" class="tip-top" data-tooltip title="1377 visits"><path d="M-118.42967310692228,173.41975818166605A210,210 0 0,1 -196.0427455158345,-75.28108614129948L-126.02747926017932,-48.39498394797824A135,135 0 0,0 -76.13336128302146,111.48413025964247Z" style="fill: #4099FF;"></path><text transform="translate(-164.66775393753005,51.388528030768235)" dy=".35em" style="text-anchor: middle;">twitter</text></g><g class="arc" class="tip-top" data-tooltip title="831 visits"><path d="M-196.0427455158345,-75.28108614129948A210,210 0 0,1 -81.10537942122127,-193.705749602173L-52.139172485070816,-124.52512474425406A135,135 0 0,0 -126.02747926017932,-48.39498394797824Z" style="fill: red;"></path><text transform="translate(-123.78487329960697,-120.13973173850627)" dy=".35em" style="fill:white; text-anchor: middle;">v1n.ch</text></g><g class="arc" class="tip-top" data-tooltip title="289 visits"><path d="M-81.10537942122127,-193.705749602173A210,210 0 0,1 -24.23310129114112,-208.5971159959152L-15.57842225859072,-134.09814599737405A135,135 0 0,0 -52.139172485070816,-124.52512474425406Z" style="fill: #cccccc;"></path><text transform="translate(-43.69418690968585,-166.87440795490912)" dy=".35em" style="text-anchor: middle;">Other</text></g><g class="arc" class="tip-top" data-tooltip title="119 visits"><path d="M-24.23310129114112,-208.5971159959152A210,210 0 0,1 -3.8575100145404884e-14,-210L-2.479827866490314e-14,-135A135,135 0 0,0 -15.57842225859072,-134.09814599737405Z" style="fill: #BBBBAA;"></path><text transform="translate(-9.969544951470988,-182.21166677510732)" dy=".35em" style="text-anchor: middle;">bvlg</text></g></g></svg></div>
     
 <!-- <![endif]-->
 
