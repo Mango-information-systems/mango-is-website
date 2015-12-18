@@ -77,3 +77,14 @@ section.row p.lead {
 .modal form {
 	margin-bottom: 0px;
 }
+
+
+#home-header {
+	background: url("http://placehold.it/1920x1280") no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    width: 100% !important;
+    z-index: 0;
+}
