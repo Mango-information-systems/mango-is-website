@@ -13,7 +13,7 @@
 	<title>{{ page.title }}{% if page.title %} - {% endif %}{% if page.subtitle %} {{ page.subtitle }} - {% endif %}Mango IS</title>
 	<meta property="og:title" content="{{ page.title }}{% if page.subtitle %} - {{ page.subtitle }} {% endif %}" />
 	<meta itemprop="name" content="{{ page.title }}{% if page.subtitle %} - {{ page.subtitle }} {% endif %}">
-	<meta property="og:type" content="{% if page.type %}{{ page.type }}{% else %}blog{% endif %}" />
+	<meta property="og:type" content="{% if page.type %}{{ page.type }}{% else %}blog{% endif %}" />
     <meta property="og:description" content="{{ page.description }}" />
     <meta itemprop="description" content="{{ page.description }}">
     <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
@@ -28,7 +28,7 @@
 	<meta name="author" content="{{ page.author }}" />
 	<meta name="format" content="html"/>
 	<meta name="language" content="{{ page.language }}"/>
-	{% if page.last-update %}<meta name="revised" content="{{ page.last-update  | date: "%Y-%m-%d" }}" scheme="YYYY-MM-DD"/>
+	{% if page.last-update %}<meta name="revised" content="{{ page.last-update  | date: "%Y-%m-%d" }}" scheme="YYYY-MM-DD"/>
 	{% endif %}
 	{% if page.keywords %}<meta name="keywords" content="{{ page.keywords | join: ',' }}" />
 	{% endif %}

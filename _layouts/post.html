@@ -5,12 +5,12 @@ type: article
 <div class="row-fluid">
 	<div class="span7 offset1">
 		<article>
-			<h1 id="{{ page.title | uri_escape }}">{{ page.title }}{% if page.subtitle %} <small>{{page.subtitle}}</small>{% endif %}</h1>
+			<h1 id="{{ page.title | uri_escape }}">{{ page.title }}{% if page.subtitle %} <small>{{page.subtitle}}</small>{% endif %}</h1>
 
 			<div id="post">
 			{{ content }}
 			<br/>
-			{% if page.tags[0] %}published by <a href="{{ site.url }}/blog/authors#{{ page.tags[0] }}">{{ page.tags[0] | capitalize }}</a> on {{ page.date | date: "%d %b %Y" }}{% if page.last-update %}, last updated {{ page.last-update | date: "%d %b %Y" }}{% endif %}{% endif %}
+			{% if page.tags[0] %}published by <a href="{{ site.url }}/blog/authors#{{ page.tags[0] }}">{{ page.tags[0] | capitalize }}</a> on {{ page.date | date: "%d %b %Y" }}{% if page.last-update %}, last updated {{ page.last-update | date: "%d %b %Y" }}{% endif %}{% endif %}
 			<br/>
 			{% if page.license %}
 				{{ page.license }}
@@ -73,7 +73,7 @@ type: article
 							<li>Business Intelligence</li>
 							<li>Web data visualizations</li>
 						</ul>
-						<p><a class="btn btn-block contact" href="{{ site.url}}/contact/"> Contact us »</a></p>
+						<p><a class="btn btn-block contact" href="{{ site.url }}/contact/"> Contact us »</a></p>
 					</div>
 				</div>
 			</div>

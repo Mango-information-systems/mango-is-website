@@ -49,7 +49,7 @@ var $body
 	})(window,document,'script','//www.google-analytics.com/analytics.js','ga')
 
 	ga('create', '{{ site.ga }}', 'auto')
-	ga('set', 'dimension1', '{{ site.version }}')
+	ga('set', 'dimension1', '{{ site.version }}')
 	toGa('pageview')
 	
 	// page views, exceptions and events tracking
