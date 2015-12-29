@@ -37,6 +37,10 @@ p {
    text-align: center;   
 }
 
+.text-left td {
+   text-align: left;
+}
+
 #benefits-improvement, #benefits-measure-result, #benefits-no-measure-result {
 	display: none;
 }
