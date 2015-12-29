@@ -9,7 +9,8 @@ h1, h2, h3, h4 {
 }
 
 h2 {
-	font-size: 32px;
+	font-size: 28px;
+	line-height: 35px;
 }
 
 h3 {
@@ -34,7 +35,7 @@ p {
 }
 
 .text-center th, .text-center td {
-   text-align: center;   
+   text-align: center;
 }
 
 #benefits-improvement, #benefits-measure-result, #benefits-no-measure-result {
@@ -43,11 +44,20 @@ p {
 
 .thumbnail {
 	cursor: pointer;
+	border-color: #565656;
+	box-shadow: none;
+	text-align: center;
 }
 a.thumbnail:hover, a.thumbnail:focus {
 	color: #26963C;
-	border-color: #565656;
-	box-shadow: none;
+	border-color: black;
+}
+a.thumbnail:hover h2, a.thumbnail:focus h2 {
+	color: #26963C;
+}
+
+a.thumbnail.featured{
+	color: white;
 }
 
 .thumbnail h2 {
@@ -61,6 +71,21 @@ a.thumbnail:hover, a.thumbnail:focus {
 
 .thumbnail.featured {
 	border-width: 3px;
+	background-color: #26963C;
+}
+
+.thumbnail.featured h2 {
+	color:white;
+}
+
+/*
+a.thumbnail.featured:hover, a.thumbnail.featured:focus {
+	color: #eeeeee;
+}
+*/
+
+a.thumbnail.featured:hover h2{
+	color:white;
 }
 
 .table th {
