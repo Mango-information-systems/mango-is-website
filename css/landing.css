@@ -105,6 +105,8 @@ section.row p.lead {
 
 }
 
+.with-shadow thead th { background-color: #222; color:#FFF; text-align: center;}
+
 #main-contractor { margin-top: 3em; margin-bottom: 3em; }
 
 
