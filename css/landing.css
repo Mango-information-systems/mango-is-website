@@ -98,6 +98,8 @@ section.row p.lead {
 
 /* for the fixer well */
 
+.fixer-header { background-color: #222; color:#fff; text-align: center; margin:0 0 1em 0; width: 100%; padding: 1em 0; }
+
 .with-shadow {
 
 	background-color: #FFF;
