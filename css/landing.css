@@ -81,3 +81,7 @@ section.row p.lead {
 .modal form {
 	margin-bottom: 0px;
 }
+
+/* Business intelligence page */
+
+#benefits h2 { line-height: 1.4}
