@@ -84,8 +84,11 @@ section.row p.lead {
 
 /* Business intelligence page */
 
+
+
 #benefits h2 { line-height: 1.4; }
 
+.feature-header { font-variant: small-caps;}
 .explainer { margin-top: 1.5em; margin-bottom: 2.5em; }
 
 #we-offer ul li { line-height: 1.8}
