@@ -6,3 +6,5 @@ drafts
 _site/
 _config*.yml
 Rakefile
+mango.sublime-project
+mango.sublime-workspace
