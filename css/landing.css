@@ -91,7 +91,19 @@ section.row p.lead {
 .feature-header { font-variant: small-caps;}
 .explainer { margin-top: 1.5em; margin-bottom: 2.5em; }
 
-#we-offer ul li { line-height: 1.8}
+#we-offer ul li { line-height: 1.8; }
 
+/* for the fixer well */
+
+.with-shadow {
+
+	margin-top:2em;
+	margin-bottom:4em;
+	background-color: #FFF;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+
+}
 
 #main-contractor { margin-top: 3em; margin-bottom: 3em; }
+
+
