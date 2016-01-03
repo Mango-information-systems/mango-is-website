@@ -84,4 +84,6 @@ section.row p.lead {
 
 /* Business intelligence page */
 
-#benefits h2 { line-height: 1.4}
+#benefits h2 { line-height: 1.4; }
+
+#biogs { margin-top: 2em;}
