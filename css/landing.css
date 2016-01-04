@@ -2,6 +2,13 @@ body
 {
     font-size: 18px;
     line-height: 23px;
+    background-color: #feeece;
+    /*
+    
+    For a lighter alternative try
+
+    background-color: #fef5e1;
+    */
 }
 
 h1,
@@ -149,8 +156,15 @@ section.row p.lead
 
     text-align: center;
 
+    /*
+    
     color: #fff;
     background-color: #222;
+
+    */
+   
+   	color:#222;
+    background-color: #fbc75b;
 }
 
 .with-shadow
@@ -163,8 +177,15 @@ section.row p.lead
 {
     text-align: center;
 
+    /*
+    
     color: #fff;
     background-color: #222;
+
+    */
+   
+   	color:#222;
+    background-color: #fbc75b;
 }
 
 #main-contractor
