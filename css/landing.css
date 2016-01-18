@@ -2,7 +2,6 @@ body
 {
     font-size: 18px;
     line-height: 23px;
-
     background-color: #feeece;
     /*
     
@@ -10,14 +9,6 @@ body
 
     background-color: #fef5e1;
     */
-}
-
-footer
-{
-    height: auto;
-
-    color: #ddd; 
-    background-color: #222;
 }
 
 h1,
@@ -161,17 +152,18 @@ section.row p.lead
 {
     width: 100%;
     margin: 0 0 1em 0;
-    padding: 1em 0;
+    padding: 1em 0; 
 
     text-align: center;
+
     /*
     
     color: #fff;
     background-color: #222;
 
     */
-
-    color: #222;
+   
+   	color:#222;
     background-color: #fbc75b;
 }
 
@@ -184,14 +176,15 @@ section.row p.lead
 .with-shadow thead th
 {
     text-align: center;
+
     /*
     
     color: #fff;
     background-color: #222;
 
     */
-
-    color: #222;
+   
+   	color:#222;
     background-color: #fbc75b;
 }
 
