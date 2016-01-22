@@ -2,6 +2,7 @@ BingSiteAuth.xml
 att/
 application.cfm
 .gitignore
+.jekyll-metadata
 drafts
 _site/
 _config*.yml
