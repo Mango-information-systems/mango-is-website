@@ -2,7 +2,7 @@ body
 {
     font-size: 18px;
     line-height: 23px;
-    background-image: url('/img/eagle.jpeg');
+    background: url(/img/eagle.jpg) no-repeat center center fixed;
     background-size: cover;
 }
 
