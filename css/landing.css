@@ -2,6 +2,8 @@ body
 {
     font-size: 18px;
     line-height: 23px;
+    background-image: url('/img/eagle.jpeg');
+    background-size: cover;
 }
 
 h1,
