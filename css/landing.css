@@ -1,11 +1,59 @@
-body {
-	font-size: 18px;
-	line-height: 23px;
+body
+{
+    font-size: 18px;
+    line-height: 23px;
+    background: url(/img/eagle.jpg) no-repeat center center fixed;
+    background-size: cover;
 }
 
-h1, h2, h3, h4 {
-	font-weight: bold;
-	color: black;
+h1,
+h2,
+h3,
+h4
+{
+    font-weight: bold;
+
+    color: black;
+}
+
+h2
+{
+    font-size: 32px;
+}
+
+h3
+{
+    font-size: 26px;
+    line-height: 32px;
+}
+
+section
+{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding-top: 25px;
+    padding-bottom: 50px;
+}
+
+p
+{
+    text-align: left;
+}
+
+.lighter
+{
+    color: #565656;
+}
+
+.text-center th,
+.text-center td
+{
+    text-align: center;
+}
+
+.text-left td
+{
+    text-align: left;
 }
 
 h2 {
@@ -13,37 +61,62 @@ h2 {
 	line-height: 35px;
 }
 
-h3 {
-	font-size: 26px;
-	line-height: 32px;
+#benefits-improvement,
+#benefits-measure-result,
+#benefits-no-measure-result
+{
+    display: none;
 }
 
-section {
-	margin-top: 25px;
-	margin-bottom: 25px;
-	padding-top: 25px;
-	padding-bottom: 25px;
-	border-bottom: 1px solid #565656;
+.thumbnail
+{
+    cursor: pointer;
+}
+a.thumbnail:hover,
+a.thumbnail:focus
+{
+    color: #26963c;
+    border-color: #565656;
+    box-shadow: none;
 }
 
-p {
-	text-align: left;
+.thumbnail h2
+{
+    font-size: 20px;
 }
 
-.lighter {
-	color: #565656;
+.thumbnail a
+{
+    cursor: pointer;
+
+    color: black;
+}
+
+.thumbnail.featured
+{
+    border-width: 3px;
 }
 
 .text-center th, .text-center td {
-   text-align: center;
+	text-align: center;
 }
 
 .text-left td {
-   text-align: left;
+	text-align: left;
 }
 
-#benefits-improvement, #benefits-measure-result, #benefits-no-measure-result {
-	display: none;
+.table th
+{
+    font-size: 28px;
+    line-height: 45px;
+}
+
+section.row p.lead
+{
+    font-size: 64px;
+    line-height: 82px;
+
+    margin-bottom: .75em;
 }
 
 .thumbnail {
@@ -64,13 +137,27 @@ a.thumbnail.featured{
 	color: white;
 }
 
-.thumbnail h2 {
-	font-size:20px;
+.modal form
+{
+    margin-bottom: 0;
 }
 
-.thumbnail a {
-	color: black;
-	cursor: pointer;
+/* Business intelligence page */
+
+#benefits h2
+{
+    line-height: 1.4;
+}
+
+.explainer
+{
+    margin-top: 1.5em;
+    margin-bottom: 2.5em;
+}
+
+#we-offer ul li
+{
+    line-height: 1.8;
 }
 
 .thumbnail.featured {
@@ -92,17 +179,36 @@ a.thumbnail.featured:hover h2{
 	color:white;
 }
 
-.table th {
-	font-size: 28px;
-	line-height: 45px;
+#package-bi-fixer
+{
+    margin-top: 2em;
+    margin-bottom: 4em;
 }
 
-section.row p.lead {
-	font-size: 64px;
-	line-height: 82px;
-	margin-bottom: .75em;
+/* for the fixer well */
+
+.fixer-header
+{
+    width: 100%;
+    margin: 0 0 1em 0;
+    padding: 1em 0; 
+
+    text-align: center;
+
+    color: #fff;
+    background-color: #222;
 }
 
-.modal form {
-	margin-bottom: 0px;
+.with-shadow
+{
+    background-color: #fff;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+
+.with-shadow thead th
+{
+    text-align: center;
+
+    color: #fff;
+    background-color: #222;
 }
