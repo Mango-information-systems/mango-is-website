@@ -54,6 +54,11 @@ var $body
 			, trg: '/contact-dataviz'
 			, type: 'Data visualization offer inquiry'
 		}
+		, '/package-web-apps': {
+			title: 'Web apps'
+			, trg: '/contact-web-apps'
+			, type: 'Data-driven web apps offer inquiry'
+		}
 	}
 
 // Google Analytics
