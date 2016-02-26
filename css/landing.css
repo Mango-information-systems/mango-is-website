@@ -71,13 +71,22 @@ h2 {
 .thumbnail
 {
     cursor: pointer;
+    background-color: rgba(255,255,255,0.3);
+}
+
+.thumbnail {
+	cursor: pointer;
+	border-color: #565656;
+	box-shadow: none;
+	text-align: center;
 }
 a.thumbnail:hover,
 a.thumbnail:focus
 {
-    color: #26963c;
-    border-color: #565656;
+    color: black;
+    border-color: #26963C;
     box-shadow: none;
+    background-color: rgba(255,255,255,0.7);
 }
 
 .thumbnail h2
@@ -85,16 +94,13 @@ a.thumbnail:focus
     font-size: 20px;
 }
 
-.thumbnail a
-{
-    cursor: pointer;
-
-    color: black;
-}
-
 .thumbnail.featured
 {
     border-width: 3px;
+	border-color: #26963C;
+}
+.thumbnail.featured:hover, .thumbnail.featured:focus {
+	border-color: black;
 }
 
 .text-center th, .text-center td {
@@ -119,24 +125,6 @@ section.row p.lead
     margin-bottom: .75em;
 }
 
-.thumbnail {
-	cursor: pointer;
-	border-color: #565656;
-	box-shadow: none;
-	text-align: center;
-}
-a.thumbnail:hover, a.thumbnail:focus {
-	color: #26963C;
-	border-color: black;
-}
-a.thumbnail:hover h2, a.thumbnail:focus h2 {
-	color: #26963C;
-}
-
-a.thumbnail.featured{
-	color: white;
-}
-
 .modal form
 {
     margin-bottom: 0;
@@ -158,25 +146,6 @@ a.thumbnail.featured{
 #we-offer ul li
 {
     line-height: 1.8;
-}
-
-.thumbnail.featured {
-	border-width: 3px;
-	background-color: #26963C;
-}
-
-.thumbnail.featured h2 {
-	color:white;
-}
-
-/*
-a.thumbnail.featured:hover, a.thumbnail.featured:focus {
-	color: #eeeeee;
-}
-*/
-
-a.thumbnail.featured:hover h2{
-	color:white;
 }
 
 #package-bi-fixer
