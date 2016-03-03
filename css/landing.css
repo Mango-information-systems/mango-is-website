@@ -19,12 +19,14 @@ h4
 h2
 {
     font-size: 32px;
+    text-shadow: 0px 1px 1px white;
 }
 
 h3
 {
     font-size: 26px;
     line-height: 32px;
+    text-shadow: 0px 1px 1px white;
 }
 
 section
@@ -38,6 +40,18 @@ section
 p
 {
     text-align: left;
+    text-shadow: 0px 1px 1px white;
+}
+
+li
+{
+    text-shadow: 0px 1px 1px white;
+}
+
+footer
+{
+	min-height: 300px;
+	background-color: rgba(255,255,255,0.8);
 }
 
 .lighter
@@ -71,7 +85,7 @@ h2 {
 .thumbnail
 {
     cursor: pointer;
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(255,255,255,0.6);
 }
 
 .thumbnail {
@@ -86,7 +100,7 @@ a.thumbnail:focus
     color: black;
     border-color: #26963C;
     box-shadow: none;
-    background-color: rgba(255,255,255,0.7);
+    background-color: rgba(255,255,255,0.9);
 }
 
 .thumbnail h2
@@ -166,6 +180,7 @@ section.row p.lead
 
     color: #fff;
     background-color: #222;
+    text-shadow: none;
 }
 
 .with-shadow
