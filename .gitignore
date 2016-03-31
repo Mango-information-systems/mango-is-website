@@ -1,6 +1,7 @@
 BingSiteAuth.xml
 att/
 application.cfm
+.gitignore
 .jekyll-metadata
 drafts
 _site/
@@ -8,3 +9,5 @@ _config*.yml
 Rakefile
 *.bak
 *.db
+mango.sublime-project
+mango.sublime-workspace

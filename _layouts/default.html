@@ -14,9 +14,9 @@
 	<meta property="og:title" content="{{ page.title }}{% if page.subtitle %} - {{ page.subtitle }} {% endif %}" />
 	<meta itemprop="name" content="{{ page.title }}{% if page.subtitle %} - {{ page.subtitle }} {% endif %}">
 	<meta property="og:type" content="{% if page.type %}{{ page.type }}{% else %}blog{% endif %}" />
-  <meta property="og:description" content="{{ page.description }}" />
-  <meta itemprop="description" content="{{ page.description }}">
-  <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
+    <meta property="og:description" content="{{ page.description }}" />
+    <meta itemprop="description" content="{{ page.description }}">
+    <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:site" content="@mango_info">
 	<meta name="twitter:creator" content="@mango_info ">
@@ -99,9 +99,10 @@
 			</div>
 			<div class="small-6 columns">
 				<small>
-					<ul>
+					<ul class="unstyled">
+						<li><a href="{{ site.url }}/blog/">Blog</a></li>
+						<li><a href="{{ site.url }}/corporate-business-intelligence/">Business Intelligence</a></li>
 						<li><a href="{{ site.url }}/convert/">Conversion optimization</a></li>
-						<li class="active"><a href="{{ site.url }}/blog/">Blog</a></li>
 						<li><a href="{{ site.url }}/terms/">Copyright - terms of use</a></li>
 						<li><a class="contact" href="{{ site.url }}/contact/">Contact</a></li>
 					</ul>

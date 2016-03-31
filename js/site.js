@@ -29,15 +29,35 @@ var $body
 			, trg: '/contact-social'
 			, type: 'Social media offer inquiry'
 		}
-		, '/package-bi': {
-			title: 'Business Intelligence'
-			, trg: '/contact-bi'
-			, type: 'Business Intelligence offer inquiry'
+		, '/package-bi-fixer': {
+			title: 'Business Intelligence fixer'
+			, trg: '/contact-bi-fixer'
+			, type: 'Business Intelligence fixer offer inquiry'
+		}
+		, '/package-bi-analysis': {
+			title: 'Business Intelligence analysis'
+			, trg: '/contact-bi-analysis'
+			, type: 'Business Intelligence analysis offer inquiry'
+		}
+		, '/package-bi-development': {
+			title: 'Business Intelligence development'
+			, trg: '/contact-bi-development'
+			, type: 'Business Intelligence development offer inquiry'
+		}
+		, '/package-bi-full': {
+			title: 'Business Intelligence full service'
+			, trg: '/contact-bi-full'
+			, type: 'Business Intelligence full service offer inquiry'
 		}
 		, '/package-dataviz': {
 			title: 'Data visualization'
 			, trg: '/contact-dataviz'
 			, type: 'Data visualization offer inquiry'
+		}
+		, '/package-web-apps': {
+			title: 'Web apps'
+			, trg: '/contact-web-apps'
+			, type: 'Data-driven web apps offer inquiry'
 		}
 	}
 
@@ -91,7 +111,7 @@ var $body
 	}
 {% else %}
 	function toGa(type, opts) {
-		console.log('Google Analytics custom tracking:', type, opts)
+		console.log('Dry run - Google Analytics custom tracking:', type, opts)
 	}
 	$.scrollDepth = function() {}
 {% endif %}
