@@ -1,11 +1,8 @@
-BingSiteAuth.xml
 att/
-application.cfm
 .gitignore
-.jekyll-metadata
-drafts
-_site/
+db.json
+public/
 _config*.yml
-Rakefile
+node_modules
 mango.sublime-project
 mango.sublime-workspace
