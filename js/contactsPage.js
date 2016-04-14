@@ -1,1 +1,0 @@
-$('#contactType').attr('value', 'contact')
