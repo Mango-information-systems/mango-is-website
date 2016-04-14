@@ -1,0 +1,18 @@
+<div class="row reference">
+	<div class="u-pull-left">
+		<%- image_tag(data.image.href, {
+			class: 'u-img-responsive'
+			, alt: data.image.alt
+			, width: data.image.width
+			, height: data.image.height
+		}) %>
+	</div>
+	<div>
+		<blockquote>
+			<%- data.quote %>
+		</blockquote>
+		<small>
+			<%- data.author %>
+		</small>
+	</div>
+</div>

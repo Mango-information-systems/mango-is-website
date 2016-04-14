@@ -1,0 +1,80 @@
+<%
+var sectionStyle = isFirst ? 'min-height:80%;' : ''
+
+sectionStyle += data['background-image'] ? 'background: url(' + data['background-image'] + ') no-repeat center center fixed; background-size: cover;' : ''
+
+%>
+
+<section style="<%- sectionStyle %>">
+	<%
+		if (isFirst) {
+	%>
+		<a class="brand" rel="home" href="/">
+			<%- image_tag('/img/mango-information-systems-logo.png', {
+				class: 'u-img-responsive'
+				, alt: 'Mango Information Systems'
+				, width: '400px'
+				, height: '74px'
+			}) %>
+		</a>
+	<%
+	}
+	%>
+
+
+	<% data.content.forEach(function(content) {
+		
+		switch(content.type) {
+			case 'person':%>
+				<%-
+					partial('_partial/person', {data: content})
+				%><%
+			break;
+			case 'reference':%>
+				<%-
+					partial('_partial/reference', {data: content.content})
+				%><%
+			break;
+			case 'cta':
+			
+				var to= content.href? ' href="' + content.href + '"' : ''
+				, trg = content.trg? ' data-trg="' + content.trg + '"' : ''
+				, btnClass = content.primary? ' button-primary' : ''
+				
+				%>
+				<a <%- to %> class="button <%- btnClass %>" <%- trg %>><%- content.value %></a> 
+				<%
+			break;
+			case 'image':%>
+				<%- image_tag(content.href, {
+					class: content.class
+					, alt: content.alt
+					, width: content.width || ''
+					, height: content.height || ''
+				}) %>
+			<%
+			break;
+			case 'columns':
+				void 0
+			
+			break;
+			default:
+				var id = content.id? ' id="' + content.id + '"' : ''
+					, tag = 'p'
+					, tagClass = content.class? ' class="' + content.class + '"' : ''
+				
+				if (['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].indexOf(content.type) !== -1)
+					tag = content.type
+					
+				%>
+				
+				<<%- tag %> <%- id %> <%- tagClass %>><%- content.value %></<%- tag %>>
+				
+				<%	
+				
+			break;
+		}
+			
+	}) %>
+	
+</section>
