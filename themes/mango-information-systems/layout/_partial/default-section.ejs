@@ -8,7 +8,12 @@ function setContent(content) {
 		switch(content.type) {
 			case 'person':%>
 				<%-
-					partial('_partial/person', {data: content})
+					partial('_partial/person', {data: content.content})
+				%><%
+			break
+			case 'pricing':%>
+				<%-
+					partial('_partial/pricing', {data: content.offers})
 				%><%
 			break
 			case 'reference':%>
@@ -41,6 +46,7 @@ function setContent(content) {
 			<%
 			break
 			case 'columns':
+				// two columns layout
 				content.columns.forEach(function(column, index) {
 					if (index % 2 === 0) {
 						%>

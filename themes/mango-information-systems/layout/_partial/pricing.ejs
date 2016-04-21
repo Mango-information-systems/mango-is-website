@@ -1,22 +1,70 @@
+<% 
 
+var rows = {
+	titles: []
+	, offersContent: []
+	, CTAs: []
+	, maxContentLength : 0
+}
 
-<div class="row reference">
-	<div class="u-pull-left">
-		<%- image_tag(data.image.href, {
-			class: 'u-img-responsive'
-			, alt: data.image.alt
-			, width: data.image.width
-			, height: data.image.height
-		}) %>
-	</div>
-	<div>
-		<blockquote>
-			<%- data.quote %>
-		</blockquote>
-		<small>
-			<%- data.author %>
-		</small>
-	</div>
-</div>
+data.forEach(function(offer, index) {
+	
+	rows.titles.push(offer.title)
+	rows.offersContent.push(offer.content)
+	rows.CTAs.push(offer.CTA)
+	rows.maxContentLength = Math.max(rows.maxContentLength, offer.content.length)
+	
+	if (offer.primary)
+		rows.primaryIndex = index
+})
 
-<%- JSON.stringify(data) %>
+%>
+
+<table class="u-full-width">
+		<thead>
+			<tr>
+			<%
+			rows.titles.forEach(function(title) {
+			%>
+				<th><%- title %></th>
+			<%
+				})
+			%>
+			</tr>
+		</thead>
+		<tbody>
+			<%
+			for (var i = 0; i < rows.maxContentLength; i++) {
+			
+			%>
+				<tr>
+					<%
+					for (var j = 0; j < rows.titles.length; j++) {
+					%>
+						<td><%- rows.offersContent[j] ? rows.offersContent[j][i] : '<br>' %></td>
+					<%
+						}
+					%>
+				</tr>
+			<%
+			}
+			%>
+			
+			<tr>
+			<%
+			rows.CTAs.forEach(function(content, index) {
+
+				var trg = content.trg? ' data-trg="' + content.trg + '"' : ''
+					, btnClass = index == rows.primaryIndex? ' button-primary' : ''
+				
+				%>
+				<td><a href="/contact/" class="contact button <%- btnClass %> u-full-width" <%- trg %>><%- content.label %></a></td>
+			<%
+			})
+			%>
+			</tr>
+			
+
+		</tbody>
+
+</table>
