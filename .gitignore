@@ -4,5 +4,6 @@ db.json
 public/
 _config*.yml
 node_modules
+npm-debug.log
 mango.sublime-project
 mango.sublime-workspace
