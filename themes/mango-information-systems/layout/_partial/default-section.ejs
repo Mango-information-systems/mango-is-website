@@ -47,8 +47,13 @@ function setContent(content) {
 						<div class="row">
 					<% } %>
 					<div class="one-half column">
-						<% // for some reason layout get broken whenever this is removed :( %>
-						<%- setContent(column) %>
+						<%
+							column.content.forEach(function(content) {
+						%>
+							<%- setContent(content) %>
+						<%
+							}) 
+						%>
 					</div>
 					
 					<%
