@@ -9,7 +9,9 @@ Branding: All rights reserved to the copyright holder: Mango Information Systems
 
 ## setup
 
-Install with `npm install`.
+Depends on hexo: `npm install hexo-cli -g`
+
+Install by cloning the repo, then running `npm install`.
 
 Develop with `npm start`. (serves a development version, while watching changes in the site content or CSS framework...)
 
