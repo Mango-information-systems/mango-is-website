@@ -1,6 +1,6 @@
 {
   "name": "mango-is-website",
-  "version": "0.0.1",
+  "version": "3.0.0-wip",
   "private": true,
   "scripts": {
     "start": "npm run watch:skeleton & hexo server"
