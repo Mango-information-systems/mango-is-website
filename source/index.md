@@ -5,7 +5,7 @@ date: 2016-04-01 14:36:46
 sections:
  - 
   # top section: value proposition
-  background-image: index/img/building.jpg
+  background-image: img/bg/building.jpg
   content:
    -
     type: h1
