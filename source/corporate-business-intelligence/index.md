@@ -7,7 +7,7 @@ date: 2016-04-01 14:36:46
 sections:
  - 
   # top section: value proposition
-  background-image: index/img/eagle.jpg
+  background-image: /img/bg/eagle.jpg
   content:
    - type: h1
      class: small
@@ -40,7 +40,7 @@ sections:
      value: Working with skilled consultants will not only <strong>improve the quality of the reporting</strong> projects you deliver, but also <strong>reduce your costs</strong> by decreasing the need for maintenance, and the overhead of BI projects.
  - 
   # third section: references
-  background-image: index/img/building.jpg
+  background-image: /img/bg/building.jpg
   content:
    - type: h2
      value: What our customers say
