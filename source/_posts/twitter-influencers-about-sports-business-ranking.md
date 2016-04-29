@@ -8,8 +8,8 @@ description: What is the methodology to analyze a social media audience? This po
 author: Mango Information Systems
 tags: mehdi
 thumbnail: blog/img/thumbnails/2013-11-05-twitter-influencers-about-sports-business-ranking.png
-css: blog/css/2013-11-05-twitter-influencers-about-sports-business-ranking.css
-scripts: [js/d3.v3.min.js, blog/js/2013-11-05-twitter-influencers-about-sports-business-ranking.js]
+css: [2013-11-05-twitter-influencers-about-sports-business-ranking.css]
+scripts: [d3.v3.min.js, 2013-11-05-twitter-influencers-about-sports-business-ranking.js]
 ---
 
 Yesterday, Jelle Verdoodt from [sportcareers.be](http://sportcareers.be) published an [article analyzing the twitter influencers about sports business in Belgium and in the Netherlands](http://www.sportcareers.be/nl/carriereadvies/detail/behoor-jij-tot-de-belangrijkste-influencers-uit-de-sportbusiness-in-belgie-en-nederland-op-twitter), featuring a data analysis and visualization made by us with our tool [Tribalytics](http://tribalytics.com).

@@ -22,6 +22,14 @@
 	<% } %>
 	<%- css('css/normalize') %>
 	<%- css('css/skeleton.min') %>
+	
+	<%  if (page.css) {
+			page.css.forEach(function(cssFile) {%>
+			<%- css('css/' + cssFile) %>
+		<%  })
+		}
+	%>
+
 	<% if (page.layout == 'landing'){ %>
 		<%- css('css/landing') %>
 	<% } %>

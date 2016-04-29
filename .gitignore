@@ -7,3 +7,5 @@ node_modules
 npm-debug.log
 mango.sublime-project
 mango.sublime-workspace
+source/js/d3.min.js
+source/js/reveal.js
