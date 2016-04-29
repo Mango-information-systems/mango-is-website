@@ -1,3 +1,21 @@
-<footer id="footer">
-      &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br>
+<footer>
+  <div class="container">
+    <div class="span5">
+      <small>
+        <%- partial('company-microdata') %>
+        &copy; <%= date(new Date(), 'YYYY') %>
+      </small>
+    </div>
+    <div class="span6">
+      <small>
+        <ul class="unstyled">
+          <li><a href="{{ site.url }}/blog/">Blog</a></li>
+          <li><a href="{{ site.url }}/corporate-business-intelligence/">Business Intelligence</a></li>
+          <li><a href="{{ site.url }}/convert/">Conversion optimization</a></li>
+          <li><a href="{{ site.url }}/terms/">Copyright - terms of use</a></li>
+          <li><a class="contact" href="{{ site.url }}/contact/">Contact</a></li>
+        </ul>
+      </small>
+    </div>
+  </div>
 </footer>
