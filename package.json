@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "npm run build:assets && npm run watch:skeleton & hexo server",
-    "build:assets": "cp node_modules/reveal.js/js/reveal.js source/js/ && cp node_modules/d3/d3.min.js source/js/",
+    "build:assets": "cp node_modules/reveal.js/js/reveal.js source/js/ && cp node_modules/d3/d3.min.js source/js/ && cp -r node_modules/font-awesome/ source/css/",
     "watch:skeleton": "cd skeleton-framework && npm run watch"
   },
   "hexo": {
@@ -20,6 +20,7 @@
     "reveal.js": "^3.3.0"
   },
   "devDependencies": {
+    "font-awesome": "^4.6.1",
     "watchify": "^3.7.0"
   }
 }
