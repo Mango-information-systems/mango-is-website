@@ -6,7 +6,7 @@
 			
 		<%  if (page.scripts) {
 				page.scripts.forEach(function(scriptFile) {%>
-				<%- js('js/' + scriptFile) %>
+				<%- js(scriptFile) %>
 			<%  })
 			}
 		%>
