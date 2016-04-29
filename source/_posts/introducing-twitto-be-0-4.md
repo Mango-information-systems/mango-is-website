@@ -23,7 +23,7 @@ The aim of this new version is to improve the user experience and let visitors b
 ### Powerful filters
 
 
-![screenshot of twitto.be](/img/twitto.be-0.4-screenshot.png "new version of twitto.be")
+![screenshot of twitto.be](/blog/img/twitto.be-0.4-screenshot.png "new version of twitto.be")
 
 
 We've introduced three charts shown at the side of the page. They **display statistics** about the data you are looking at and **act as filters**. Each bar on the bar charts, and the provinces in the map are clickable and trigger filters that update the current page.
