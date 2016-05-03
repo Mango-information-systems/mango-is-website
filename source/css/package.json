@@ -1,0 +1,104 @@
+{
+  "_args": [
+    [
+      "font-awesome@^4.6.1",
+      "/Users/gilbertwest/Code/mango-is-website"
+    ]
+  ],
+  "_from": "font-awesome@>=4.6.1 <5.0.0",
+  "_id": "font-awesome@4.6.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/font-awesome",
+  "_nodeVersion": "1.6.1",
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/font-awesome-4.6.1.tgz_1460628652612_0.881440429482609"
+  },
+  "_npmUser": {
+    "email": "julian@goodafternoon.co",
+    "name": "juliankrispel"
+  },
+  "_npmVersion": "2.11.3",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "font-awesome",
+    "raw": "font-awesome@^4.6.1",
+    "rawSpec": "^4.6.1",
+    "scope": null,
+    "spec": ">=4.6.1 <5.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://registry.npmjs.org/font-awesome/-/font-awesome-4.6.1.tgz",
+  "_shasum": "547265fb4c45bbed90ab8bc4f77a97b37b852a12",
+  "_shrinkwrap": null,
+  "_spec": "font-awesome@^4.6.1",
+  "_where": "/Users/gilbertwest/Code/mango-is-website",
+  "author": {
+    "email": "dave@fontawesome.io",
+    "name": "Dave Gandy",
+    "url": "http://twitter.com/davegandy"
+  },
+  "bugs": {
+    "url": "http://github.com/FortAwesome/Font-Awesome/issues"
+  },
+  "contributors": [
+    {
+      "name": "Brian Talbot",
+      "url": "http://twitter.com/talbs"
+    },
+    {
+      "name": "Travis Chase",
+      "url": "http://twitter.com/supercodepoet"
+    },
+    {
+      "name": "Rob Madole",
+      "url": "http://twitter.com/robmadole"
+    },
+    {
+      "name": "Geremia Taglialatela",
+      "url": "http://twitter.com/gtagliala"
+    }
+  ],
+  "dependencies": {},
+  "description": "The iconic font and CSS framework",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "547265fb4c45bbed90ab8bc4f77a97b37b852a12",
+    "tarball": "https://registry.npmjs.org/font-awesome/-/font-awesome-4.6.1.tgz"
+  },
+  "engines": {
+    "node": ">=0.10.3"
+  },
+  "gitHead": "213cc1f4f5714b50e18a4469565e675b40f41459",
+  "homepage": "http://fontawesome.io/",
+  "keywords": [
+    "font",
+    "awesome",
+    "fontawesome",
+    "icon",
+    "font",
+    "bootstrap"
+  ],
+  "license": "(OFL-1.1 AND MIT)",
+  "maintainers": [
+    {
+      "email": "julian@goodafternoon.co",
+      "name": "juliankrispel"
+    }
+  ],
+  "name": "font-awesome",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FortAwesome/Font-Awesome.git"
+  },
+  "scripts": {},
+  "style": "css/font-awesome.css",
+  "version": "4.6.1"
+}
