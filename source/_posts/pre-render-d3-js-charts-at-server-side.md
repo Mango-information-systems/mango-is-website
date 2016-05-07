@@ -8,11 +8,11 @@ language: en
 author: mehdi
 tags: mehdi
 thumbnail: blog/img/thumbnails/2013-10-23-pre-render-d3-js-charts-at-server-side.png
-scripts: [js/d3.v3.min.js, blog/js/2013-10-23-pre-render-d3-js-charts-at-server-side.js]
+scripts: [js/d3.v3.min.js, js/2013-10-23-pre-render-d3-js-charts-at-server-side.js]
 ---
 
 <div class="section" markdown="1">
-This guide explains how to use [d3.js](http://d3js.org/){: target="_blank" } on the server to pre-render data-visualization, which will be used client-side.
+This guide explains how to use [d3.js](http://d3js.org/) on the server to pre-render data-visualization, which will be used client-side.
 
 The main goal here is to do the heavy-lifting on the server in order to reduce page load time and other burden for the website visitors, while keeping all the power offered by d3.js, in terms of interactions on the browser.
 
@@ -31,7 +31,7 @@ d3.js is great to manipulate data on web pages, but performance quickly becomes 
 
 Here is an overview of a dashboard we generate at [tribalytics](http://tribalytics.com), it combines several visualizations, force layout being the most expensive (we even prevent nodes overlapping):
 
-![screenshot of tribalytics dashboard](/blog/img/tribalytics-dashboard-screenshot.png "data visualizations inside tribalytics.com's dashboard"){: .img-polaroid}
+![screenshot of tribalytics dashboard](/blog/img/tribalytics-dashboard-screenshot.png "data visualizations inside tribalytics.com's dashboard")
 
 </div>
 
@@ -69,7 +69,7 @@ A follow-up article will apply this technique to a large data visualization and 
 <div class="section" markdown="1">
 ###Dependencies
 
-We assume that node.js is already installed. d3.js and [jsdom](https://github.com/tmpvar/jsdom){: target="_blank" } modules are necessary:
+We assume that node.js is already installed. d3.js and [jsdom](https://github.com/tmpvar/jsdom) modules are necessary:
 
 // TODO code highlight to setup here ( lang:bash)
 npm install d3 jsdom
@@ -208,7 +208,7 @@ The technique shown is quite simple and effective, providing the following gains
 
 The second article of this series will measure how it affects the rendering of a force layout chart.
 
-An alternative way to improve performance of d3 at client side, without pre-rendering on the server is via the use of DOM DocumentFragments, read the following [thread](https://news.ycombinator.com/item?id=6423960){: target="_blank" } to know how this can be done.
+An alternative way to improve performance of d3 at client side, without pre-rendering on the server is via the use of DOM DocumentFragments, read the following [thread](https://news.ycombinator.com/item?id=6423960) to know how this can be done.
 
 Further improvement would be to **pass the state of server-side d3 to the client-side**, I have to investigate about whether this is possible. **If you have an idea about this, please comment below**.
 
@@ -217,7 +217,7 @@ Further improvement would be to **pass the state of server-side d3 to the client
 
 The following pages were used as a base to this development:
 
-* Matt Baker's gist [generating a pie chart on the server](https://gist.github.com/mattbaker/1511770){: target="_blank" }
-* d3.js tests: [load.js](https://github.com/mbostock/d3/blob/master/test/load.js){: target="_blank" }.
+* Matt Baker's gist [generating a pie chart on the server](https://gist.github.com/mattbaker/1511770)
+* d3.js tests: [load.js](https://github.com/mbostock/d3/blob/master/test/load.js).
 
 </div>
