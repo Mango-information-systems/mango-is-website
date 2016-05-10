@@ -52,7 +52,7 @@ scripts: [https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js, js/2013-10
 
 	<p>We assume that node.js is already installed. d3.js and <a href="https://github.com/tmpvar/jsdom" target="_blank">jsdom</a> modules are necessary:</p>
 
-	<p>Liquid error: Failed to get header.</p>
+	<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npm install d3 jsdom</code></pre></figure>
 
 	<h3 id="generate-an-html-page-with-jsdom">Generate an html page with jsdom</h3>
 
@@ -60,7 +60,17 @@ scripts: [https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js, js/2013-10
 
 	<p>This is the how the skull of our script looks like, we’ll complete it step by step:</p>
 
-	<p>Liquid error: Failed to get header.</p>
+	<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">d3</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'d3'</span><span class="p">)</span>
+	<span class="p">,</span> <span class="nx">jsdom</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'jsdom'</span><span class="p">)</span>
+	<span class="p">,</span> <span class="nx">htmlStub</span> <span class="o">=</span> <span class="s1">'&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;div id="dataviz-container"&gt;&lt;/div&gt;&lt;script src="js/d3.v3.min.js"&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;'</span> <span class="c1">// html file skull with a container div for the d3 dataviz</span>
+
+<span class="c1">// pass the html stub to jsDom</span>
+<span class="nx">jsdom</span><span class="p">.</span><span class="nx">env</span><span class="p">({</span> <span class="na">features</span> <span class="p">:</span> <span class="p">{</span> <span class="na">QuerySelector</span> <span class="p">:</span> <span class="kc">true</span> <span class="p">},</span> <span class="na">html</span> <span class="p">:</span> <span class="nx">htmlStub</span>
+	<span class="p">,</span> <span class="na">done</span> <span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">errors</span><span class="p">,</span> <span class="nb">window</span><span class="p">)</span> <span class="p">{</span>
+	<span class="c1">// process the html document, like if we were at client side</span>
+		<span class="c1">// code to generate the dataviz and process the resulting html file to be added here</span>
+	<span class="p">}</span>
+<span class="p">})</span></code></pre></figure>
 
 	<p>The code above creates an html document on the server, kept in memory. We have included base html tags, a container div for the svg, as well as a script loading d3.js on the client.</p>
 
@@ -68,7 +78,8 @@ scripts: [https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js, js/2013-10
 
 	<p>We will select the dataviz container and the page’s body. Container selection will be used to append the svg, body selection will be used to append the client-side d3.js script.</p>
 
-	<p>Liquid error: Failed to get header.</p>
+	<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">el</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'#dataviz-container'</span><span class="p">)</span>
+	<span class="p">,</span> <span class="nx">body</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'body'</span><span class="p">)</span></code></pre></figure>
 
 	<h3 id="render-the-dataviz-with-d3-nodejs-module">Render the dataviz with d3 node.js module</h3>
 
@@ -78,7 +89,12 @@ scripts: [https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js, js/2013-10
 
 	<p>We create an svg containing a green circle, and append it to the container:</p>
 
-	<p>Liquid error: Failed to get header.</p>
+	<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// append the svg to the container selector</span>
+<span class="nx">d3</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="nx">el</span><span class="p">)</span>
+	<span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s1">'svg:svg'</span><span class="p">)</span>
+		<span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'width'</span><span class="p">,</span> <span class="mi">600</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'height'</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+		<span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s1">'circle'</span><span class="p">)</span>
+			<span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'cx'</span><span class="p">,</span> <span class="mi">300</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'cy'</span><span class="p">,</span> <span class="mi">150</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'r'</span><span class="p">,</span> <span class="mi">30</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'fill'</span><span class="p">,</span> <span class="s1">'#26963c'</span><span class="p">)</span></code></pre></figure>
 
 	<p>Remember, the d3 code above is executed on the server. The html document we have generated contains the svg circle, and not the lines above.</p>
 
@@ -92,7 +108,23 @@ scripts: [https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js, js/2013-10
 		<li>write a script manipulating the d3 dataviz for the client, and append it to the html body.</li>
 	</ul>
 
-	<p>Liquid error: Failed to get header.</p>
+	<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">circleId</span> <span class="o">=</span> <span class="s1">'a2324'</span>  <span class="c1">// say, this value was dynamically retrieved from a database</span>
+
+<span class="c1">// append the svg to the selector</span>
+<span class="nx">d3</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="nx">el</span><span class="p">)</span>
+	<span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s1">'svg:svg'</span><span class="p">)</span>
+		<span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'width'</span><span class="p">,</span> <span class="mi">600</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'height'</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+		<span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s1">'circle'</span><span class="p">)</span>
+			<span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'cx'</span><span class="p">,</span> <span class="mi">300</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'cy'</span><span class="p">,</span> <span class="mi">150</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'r'</span><span class="p">,</span> <span class="mi">30</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'fill'</span><span class="p">,</span> <span class="s1">'#26963c'</span><span class="p">)</span>
+			<span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'id'</span><span class="p">,</span> <span class="nx">circleId</span><span class="p">)</span> <span class="c1">// we assign the circle to an Id here</span>
+
+<span class="c1">// write the client-side script manipulating the circle</span>
+<span class="kd">var</span> <span class="nx">clientScript</span> <span class="o">=</span> <span class="s2">"d3.select('#"</span> <span class="o">+</span> <span class="nx">circleId</span> <span class="o">+</span> <span class="s2">"').transition().delay(1000).attr('fill', '#f9af26')"</span>
+
+<span class="c1">// append the script to page's body</span>
+<span class="nx">d3</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="nx">body</span><span class="p">)</span>
+	<span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s1">'script'</span><span class="p">)</span>
+		<span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="nx">clientScript</span><span class="p">)</span></code></pre></figure>
 
 	<p>Note that the <code>clientScript</code> is passed with the value of <code>circleId</code> which is dynamically retrieved on the server.</p>
 
@@ -104,7 +136,17 @@ scripts: [https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js, js/2013-10
 
 	<p>Here is how to save the html file we produced:</p>
 
-	<p>Liquid error: Failed to get header.</p>
+	<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// save result in an html file</span>
+<span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'fs'</span><span class="p">)</span>
+	<span class="p">,</span> <span class="nx">svgsrc</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nb">document</span><span class="p">.</span><span class="nx">innerHTML</span>
+	
+<span class="nx">fs</span><span class="p">.</span><span class="nx">writeFile</span><span class="p">(</span><span class="s1">'index.html'</span><span class="p">,</span> <span class="nx">svgsrc</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'error saving document'</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
+	<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'The file was saved, open index.html to see the result'</span><span class="p">)</span>
+	<span class="p">}</span>
+<span class="p">})</span></code></pre></figure>
 
 <h2 id="wrapping-it-up">Wrapping it up</h2>
 
