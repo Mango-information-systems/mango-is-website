@@ -1,0 +1,4 @@
+<hr>
+published by <a href="<%- url_for(post.author) %>"><%- post.author %></a> on <time datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= date(post.date, date_format) %></time><% if(post['last-update']) { %>, last modified: <time datetime="<%= date_xml(post['last-update']) %>" itemprop="dateModified"><%= date(post['last-update'], date_format) %></time>
+<% } %>
+<hr>

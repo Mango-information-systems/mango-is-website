@@ -7,6 +7,7 @@
       </header>
     <% } %>
     <div class="article-entry" itemprop="articleBody">
+		here
       <% if (post.excerpt && index){ %>
         <%- post.excerpt %>
         <% if (theme.excerpt_link){ %>
@@ -18,7 +19,7 @@
         <%- post.content %>
       <% } %>
     </div>
-    <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+    <%- partial('post/postFooter', {date_format: null}) %>
   </div>
 </article>
 
