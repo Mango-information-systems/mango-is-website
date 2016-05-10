@@ -1,31 +1,27 @@
-<article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    <%- partial('post/gallery') %>
-    <% if (post.link || post.title){ %>
-      <header class="article-header">
-        <%- partial('post/title', {class_name: 'article-title'}) %>
-      </header>
-    <% } %>
-    <div class="article-entry" itemprop="articleBody">
-      <% if (post.excerpt && index){ %>
-        <%- post.excerpt %>
-        <% if (theme.excerpt_link){ %>
-          <p class="article-more-link">
-            <a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
-          </p>
-        <% } %>
-      <% } else { %>
-        <%- post.content %>
-      <% } %>
-    </div>
-    <%- partial('post/postFooter', {date_format: null}) %>
-  </div>
+<article id="<%= post.layout %>-<%= post.slug %>" itemscope itemprop="blogPost">
+	<%- partial('post/gallery') %>
+	<% if (post.link || post.title){ %>
+		<%- partial('post/title', {class_name: 'article-title'}) %>
+	<% } %>
+	<div itemprop="articleBody">
+		<% if (post.excerpt && index){ %>
+			<%- post.excerpt %>
+			<% if (theme.excerpt_link){ %>
+				<p>
+					<a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
+				</p>
+			<% } %>
+		<% } else { %>
+			<%- post.content %>
+		<% } %>
+	</div>
+	<%- partial('post/postFooter', {date_format: null}) %>
 </article>
 
 <% if (!index && post.comments && config.disqus_shortname){ %>
 <section id="comments">
-  <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </div>
+	<div id="disqus_thread">
+		<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	</div>
 </section>
 <% } %>
