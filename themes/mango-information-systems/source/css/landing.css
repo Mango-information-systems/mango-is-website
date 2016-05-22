@@ -20,6 +20,7 @@ section
 
 section:nth-child(odd) {
 	background-color: #eee;
+	background: url("/img/bg-pattern.jpg") repeat fixed;
 }
 section:nth-child(even) {
 	background-color: #FCFCFC;
