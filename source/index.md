@@ -49,3 +49,27 @@ sections:
 # todo use home page layout for this, instead of landing page
 ---
 
+
+
+
+draft - content ideas
+
+
+5 years old
+
+x customers				xx % customer satisfaction
+
+xxxxx turnover
+
+
+à-la booking.com satisfaction metrics (horiz bar chart ratings):
+
+	Quality of delivered service
+
+	Value of advice provided
+
+	Respect of deadlines
+
+	Software expertise
+
+	Overall satisfaction (total))
