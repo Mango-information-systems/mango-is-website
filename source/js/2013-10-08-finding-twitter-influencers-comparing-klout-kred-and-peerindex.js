@@ -1,5 +1,3 @@
----
----
 var step = 0 // step in the animation
 
 var margin = {top: 20, right: 20, bottom: 30, left: 40},
@@ -79,7 +77,7 @@ var svg = d3.select('#chartArea').append('svg')
 		.text('click anywhere on the chart area to see next slide')
 
 	helperElements.append('image')
-		.attr("xlink:href", "{{ site.url }}/blog/img/mango-is-play-button.png")
+		.attr("xlink:href", "/img/blog/mango-is-play-button.png")
 		.attr('x', 2000)
 		.attr('y', 500)
 		.attr("width", 70)
@@ -89,7 +87,7 @@ var svg = d3.select('#chartArea').append('svg')
 		.attr("y", 500)
 
 	svg.append('image')
-		.attr("xlink:href", "{{ site.url }}/blog/img/20130822-finn-ranking-intro-slide.png")
+		.attr("xlink:href", "/img/blog/20130822-finn-ranking-intro-slide.png")
 		.attr('id', 'coverImage')
 		.attr("x", -1800)
 		.attr("y", -2000)
@@ -99,7 +97,7 @@ var svg = d3.select('#chartArea').append('svg')
 		.attr("x", 55)
 		.attr("y", 20)
 
-d3.json("{{ site.url }}/blog/data/belgian-journalists-twitter-influence.json", function(error, jsonData) {
+d3.json("/data/belgian-journalists-twitter-influence.json", function(error, jsonData) {
 	var data = jsonData.journalists
 		, xAxisLine
 		, yAxisLine
@@ -157,7 +155,10 @@ d3.json("{{ site.url }}/blog/data/belgian-journalists-twitter-influence.json", f
 			.transition().delay(function(d, i) { return 100 + i / data.length * 600 }).duration(600)
 				.style("opacity", 1)
 			
-		for (var i = 0; i<200; i++) {
+		var i = 200
+		
+		while(i) {
+			
 			var discarded = kloutChart.append("circle")
 				.attr("class", "discard dot")
 				.style("fill", "#cccccc")
@@ -165,8 +166,11 @@ d3.json("{{ site.url }}/blog/data/belgian-journalists-twitter-influence.json", f
 				.attr("r", 3)
 				.attr("cx", function() { return x(Math.random()*90+10) })
 				.attr("cy", function() { return y(Math.random()*90+10) })
-			discarded.transition().delay(function(d, i) { return i / 300 }).duration(200)
+				
+			discarded.transition().delay(function(d, j) { return j / 300 }).duration(200)
 				.style("opacity", 1)
+				
+			i--
 		}
 		
 		
@@ -197,7 +201,7 @@ d3.json("{{ site.url }}/blog/data/belgian-journalists-twitter-influence.json", f
 				.style("text-anchor", "end")
 				.text("(0-100)")
 			kloutLogo = kloutChart.append("image")
-				.attr("xlink:href", "{{ site.url }}/blog/img/klout-logo.png")
+				.attr("xlink:href", "/img/blog/klout-logo.png")
 				.attr('id', 'kloutLogo')
 				.attr("x", 400)
 				.attr("y", 250)
@@ -238,7 +242,7 @@ d3.json("{{ site.url }}/blog/data/belgian-journalists-twitter-influence.json", f
 
 	function kloutFunction() {
 		kloutChart.append("image")
-			.attr("xlink:href", "{{ site.url }}/blog/img/klout-function.png")
+			.attr("xlink:href", "/img/blog/klout-function.png")
 			.attr('id', 'kloutFunction')
 			.attr("x", 180)
 			.attr("y", 140)
@@ -262,7 +266,7 @@ d3.json("{{ site.url }}/blog/data/belgian-journalists-twitter-influence.json", f
 		t1.selectAll("#kredChart")
 		.attr('transform', 'translate(340, 0)scale(.45)')
 		kredChart.append("image")
-				.attr("xlink:href", "{{ site.url }}/blog/img/kred-logo.png")
+				.attr("xlink:href", "/img/blog/kred-logo.png")
 				.attr('id', 'kredLogo')
 				.attr("x", 180)
 				.attr("y", 565)
@@ -288,7 +292,7 @@ d3.json("{{ site.url }}/blog/data/belgian-journalists-twitter-influence.json", f
 			.attr('transform', 'translate(150, 220)scale(.45)')
 			
 		peerIndexChart.append("image")
-				.attr("xlink:href", "{{ site.url }}/blog/img/peerindex-logo.png")
+				.attr("xlink:href", "/img/blog/peerindex-logo.png")
 				.attr('id', 'kredLogo')
 				.attr("x", 180)
 				.attr("y", 565)
@@ -569,52 +573,19 @@ d3.json("{{ site.url }}/blog/data/belgian-journalists-twitter-influence.json", f
 	// replace second doNothing by display of Kred and peerIndex charts
 	var animationFunctions = [showJournalists, addKloutScores, kloutFunction, addCompetitors, highlightPeaks, showTopFive, dismissPi, correlateKloutKred, validateKred]
 
-	var $texts = $('div#texts')
-		, $svg = $('svg')
+	var $texts = d3.selectAll('#texts')
+		, $next = d3.selectAll('svg, #next')
+		, $svg = d3.selectAll('svg')
 
-	$('svg, #next').live('click', function() {
+	$next.on('click', function() {
 		if (step < animationFunctions.length) {
 			animationFunctions[step]()
 			$texts.html('<h2>' + texts[step].title + '</h2><p>' + texts[step].text + '</p>')
 			step++
 			if (step == animationFunctions.length)
-				$('#next').remove()
+				$next.remove()
 		}
-		return false
-	})
-
-	function resizeContent() {
-		var oldWidth = $svg.attr('width')
-			, newWidth = $('#chartArea').width() < 720 ? $('#chartArea').width() : 720
-
-		$svg.attr('width', newWidth)
-		$svg.attr('height', $svg.attr('height') * newWidth / oldWidth)
-		$texts.css('maxWidth', newWidth)
-	}
-
-	// debouncing resize event based on http://stackoverflow.com/questions/5489946/jquery-how-to-wait-for-the-end-or-resize-event-and-only-then-perform-an-ac
-	var rtime = new Date(1, 1, 1970, 12,00,00)
-	, timeout = false
-	, delta = 200
-	$(window).on("resize", function() {
-		rtime = new Date()
-		if (timeout === false) {
-			timeout = true
-			setTimeout(resizeend, delta)
-		}
-	})
-	function resizeend() {
-		if (new Date() - rtime < delta) {
-			setTimeout(resizeend, delta)
-		} else {
-			timeout = false
-			resizeContent()
-		}               
-	}
-
-	$(function() {
-		resizeContent()
-		$('#next-container').html('<a class="btn btn-primary" href="#" id="next" title="next slide">next</a>')
+		d3.event.preventDefault()
 	})
 
 })
