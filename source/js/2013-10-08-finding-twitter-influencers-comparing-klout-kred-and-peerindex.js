@@ -1,8 +1,8 @@
 var step = 0 // step in the animation
 
 var margin = {top: 20, right: 20, bottom: 30, left: 40},
-	width = 900 - margin.left - margin.right,
-	height = 600 - margin.top - margin.bottom
+	width = 720 - margin.left - margin.right,
+	height = 480 - margin.top - margin.bottom
 
 var x = d3.scale.linear()
 		.range([0, width])
@@ -21,8 +21,8 @@ var yAxis = d3.svg.axis()
 	.orient('left')
 
 var svg = d3.select('#chartArea').append('svg')
-	.attr('width', 720)
-	.attr('height', 480)
+	.attr('width', '100%')
+	.attr('height', '100%')
 	.attr('viewBox', '0 0 ' +  (width + margin.left + margin.right) + ' ' + (height + margin.top + margin.bottom))
 	.attr('preserveAspectRatio', 'xMidYMid')
 	.append('g')
