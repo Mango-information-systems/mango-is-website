@@ -8,16 +8,12 @@ subtitle: the recurring problem of defining influence
 description: Review of key concepts and issues in social media influence scores like Klout. Why and how a marketer should use them.
 tags: mehdi
 thumbnail: blog/img/thumbnails/2013-10-04-finding-twitter-influencers-the-recurring-problem-of-defining-influence.png
-nextArticle: finding-twitter-influencers-comparing-klout-kred-and-peerindex.html
+nextArticle: finding-twitter-influencers-comparing-klout-kred-and-peerindex
 date: 2013-10-04
 last-update: 2013-10-07
 ---
 
-
-This is the first of 2 articles in a series about social media and influence. We review the key concepts and issues in this article, while the second dives into a [comparison of social media influence systems]({{ page.nextArticle }}).
-</div>
-
-
+This is the first of 2 articles in a series about social media and influence. We review the key concepts and issues in this article, while the second dives into a [comparison of social media influence systems](/blog/business/finding-twitter-influencers-comparing-klout-kred-and-peerindex/).
 
 ## Meet the controversial measure
 
@@ -30,10 +26,7 @@ An influence score tells us much more than the number of followers. The scores p
 For more details in how influence measurement works, read this article: <a href="http://marketingland.com/can-social-influence-be-distilled-into-a-score-19306" target = "_blank">Can Social Influence Be Distilled Into A Score? Part I, The Potential</a>.
 
 
-![side illustration: logos of major social media influence measuring systems](/blog/img/social-media-influence-scores-cards.png)
-
-</div>
-
+![side illustration: logos of major social media influence measuring systems](/img/blog/social-media-influence-scores-cards.png)
 
 
 ## How not to use influence scores
@@ -49,9 +42,6 @@ Mobile Vikings refused to use the feature pushing influencer’s support request
 
 On the other hand, knowing who is influential in a community is a precious piece of intelligence for any marketer willing to expand the reach of their brand.
 
-</div>
-
-
 
 ## Why you should care about social media influence
 
@@ -65,5 +55,4 @@ A person’s position in the social graph (set of connections between persons) i
 
 This type of meaningful, actionable  identification is exactly what we are doing at [Tribalytics](http://tribalytics.com), a tool designed to help marketers strategically plan their campaigns on Twitter.
 
-To see how we solved the problem of different influence rankings for a case we worked on with Finn.be, read [Part 2: Comparing Klout, Kred and peerIndex]({{ page.nextArticle }}).
-</div>
+To see how we solved the problem of different influence rankings for a case we worked on with Finn.be, read [Part 2: Comparing Klout, Kred and peerIndex](/blog/business/finding-twitter-influencers-comparing-klout-kred-and-peerindex/).
