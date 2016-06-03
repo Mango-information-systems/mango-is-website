@@ -27,3 +27,7 @@ img.u-pull-left {
   margin-bottom:0;
   max-width: 40rem;
 }
+
+.person { margin-top: 2em; margin-bottom:2em; }
+
+.person .column { margin-left:12%; }
