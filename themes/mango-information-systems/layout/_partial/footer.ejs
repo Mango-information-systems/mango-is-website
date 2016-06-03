@@ -1,5 +1,13 @@
 <footer>
   <div class="row">
+    <div class="columns twelve">
+
+        <a rel="home" class="brand" href="<%- url_for() %>" id="logo"><%- image_tag('/img/mango-information-systems-logo.png', {
+          alt: config.title
+        }) %>
+        </a>
+    
+    </div>
     <div class="columns six">
       <small>
         <%- partial('company-microdata') %>
