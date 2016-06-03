@@ -1,7 +1,9 @@
-<div class="container">
+<div class="page-wrapper">
+	<div class="container">
+		<%- partial('_partial/header') %>
 
-	<h1><%- page.title || config.title %></h1>
-	page type is: <%- page.type %>
-	page content is: <%- page.content %>
-
+		<%- partial('_partial/archive', {pagination: config.category, index: true}) %>
+			
+		<%- partial('_partial/footer') %>
+	</div>
 </div>
