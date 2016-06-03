@@ -1,1 +1,6 @@
 /* Blog post specific styles */
+
+.published-meta {
+  background-color: #eee;
+  padding:2rem;
+ }
