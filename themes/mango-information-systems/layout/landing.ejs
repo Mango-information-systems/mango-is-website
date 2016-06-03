@@ -1,15 +1,16 @@
 <div class="page-wrapper">
-<div class="container">
+	<div class="container">
 
-<%
-page.sections.forEach(function(section, index) { %>
-	<%-
-		partial('_partial/default-section', {data: section, isFirst: index == 0})
-	%>
+	<%
+	page.sections.forEach(function(section, index) { %>
+		<%-
+			partial('_partial/default-section', {data: section, isFirst: index == 0})
+		%>
 
-<%
- }) %>
-	
-<%- partial('_partial/footer') %>
-</div>
+	<%
+	 }) %>
+
+	<%- partial('_partial/footer') %>
+
+	</div>
 </div>

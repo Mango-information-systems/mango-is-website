@@ -1,24 +1,22 @@
 
 <% _.each(data, function(logo, index) {
-	
+
 	if (index % 2 === 0) {
 		%>
-		<div class="row"><p>
+		<div class="row">
 	<% } %>
-	
+
 	<div class="one-half column">
 		<%- image_tag(logo.href, {
-			class: 'u-img-responsive u-center-block'
+			class: 'u-img-responsive u-center-block client-logo'
 			, alt: logo.alt
 		}) %>
 	</div>
-	
+
 	<%
 	if (index % 2 !== 0) {
 		%>
-		</p></div>
-	<% } 
-	
+		</div>
+	<% }
+
 }) %>
-
-

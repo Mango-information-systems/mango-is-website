@@ -1,13 +1,22 @@
 <footer>
+  <div class="container">
   <div class="row">
-    <div class="columns five">
+    <div class="columns twelve">
+
+        <a rel="home" class="brand" href="<%- url_for() %>" id="logo"><%- image_tag('/img/mango-information-systems-logo.png', {
+          alt: config.title
+        }) %>
+        </a>
+
+    </div>
+    <div class="columns six">
       <small>
         <%- partial('company-microdata') %>
       </small>
     </div>
     <div class="columns six">
       <small>
-        <ul class="unstyled">
+        <ul class="footer-navigation">
           <li><a href="/blog/">Blog</a></li>
           <li><a href="/corporate-business-intelligence/">Business Intelligence</a></li>
           <li><a href="/convert/">Conversion optimization</a></li>
@@ -17,4 +26,5 @@
       </small>
     </div>
   </div>
+</div>
 </footer>

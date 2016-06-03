@@ -16,17 +16,18 @@
 	<% if (theme.favicon){ %>
 		<%- favicon_tag(theme.favicon) %>
 	<% } %>
-	
+
 	<% if (config.highlight.enable){ %>
 		<link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
 	<% } %>
-	
+
 	<link href='https://fonts.googleapis.com/css?family=Roboto|Raleway' rel='stylesheet' type='text/css'>
-	
+
 	<%- css('css/font-awesome/css/font-awesome.min.css') %>
 	<%- css('css/normalize') %>
 	<%- css('css/skeleton.min') %>
-	
+	<%- css('css/common') %>
+
 	<%  if (page.css) {
 			page.css.forEach(function(cssFile) {%>
 			<%- css('css/' + cssFile) %>
