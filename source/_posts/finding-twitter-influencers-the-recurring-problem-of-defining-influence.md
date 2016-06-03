@@ -23,7 +23,7 @@ The widespread use of the term "influence" when talking about social media has l
 
 An influence score tells us much more than the number of followers. The scores put emphasis on the reactions (shares, comments, favorites) by followers/fans to the author’s posts. The result is a crowdsourcing of the measure of the content’s interest. A user with many followers that posts a lot of uninteresting content will end up with a lower score than a specialist with lower audience, but posting high-quality content.
 
-For more details in how influence measurement works, read this article: <a href="http://marketingland.com/can-social-influence-be-distilled-into-a-score-19306" target = "_blank">Can Social Influence Be Distilled Into A Score? Part I, The Potential</a>.
+For more details in how influence measurement works, read this article: [Can Social Influence Be Distilled Into A Score? Part I, The Potential](http://marketingland.com/can-social-influence-be-distilled-into-a-score-19306).
 
 
 ![side illustration: logos of major social media influence measuring systems](/img/blog/social-media-influence-scores-cards.png)
@@ -36,7 +36,7 @@ Some businesses use Klout scores to decide what special offers they give to cust
 
 On the other hand, a great example of a responsible decision regarding Klout scores is at Mobile Vikings, the leading Belgian leading Mobile Internet provider. I recently had the chance to interview Dorien Aerts, Mobile Viking’s Chief Marketing Officer. She told me:
 
-<blockquote>"All our Vikings (customers, Ed.) are equal, and treated equally. This is why we do not take the influence score into account in our customer support software"</blockquote>
+> "All our Vikings (customers, Ed.) are equal, and treated equally. This is why we do not take the influence score into account in our customer support software"
 
 Mobile Vikings refused to use the feature pushing influencer’s support requests to the top of the stack, available in the solution they use. We find this policy very wise and well thought through. **A company should ensure the best level of customer satisfaction whomever the customer. We cannot predict the impact of any customer's satisfaction or dis-satisfaction on the business**.
 
