@@ -34,7 +34,6 @@ sections:
      value: Sending the right message through your website will not only <strong>increase your conversions</strong>, but also improve your image and <strong>generate word-of-mouth referrals</strong>.
    - type: p
      value: Let us help you <strong>close significantly more deals</strong>.
-
  -
   # third section: benefits
   background-image: /img/bg/building.jpg
@@ -43,10 +42,8 @@ sections:
      value: We have your back
    - type: p
      value : We&apos;re here to assist you to take the right strategic decisions, and translate them into actual actions.
-
-    - type: h2
-      value: THIS IS WORK IN PROGRESS - DUPLICATE CONTENT BELOW
-
+   - type: h2
+     value: THIS IS WORK IN PROGRESS. DUPLICATE CONTENT BELOW
  -
   # fourth section: client logos
   content:
