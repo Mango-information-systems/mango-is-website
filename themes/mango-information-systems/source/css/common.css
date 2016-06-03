@@ -1,2 +1,9 @@
+p { margin-bottom: 1rem; } /* over ride of 2.5rem in skeleton. */
+
 footer { padding: 1.5em 0; }
-.footer-navigation { list-style: none; line-height: 1}
+
+.footer-navigation {
+  list-style: none;
+  margin-top:0.5em;
+  line-height: 0.8;
+}
