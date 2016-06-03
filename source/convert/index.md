@@ -42,82 +42,36 @@ sections:
      value: We have your back
    - type: p
      value : We&apos;re here to assist you to take the right strategic decisions, and translate them into actual actions.
-   - type: h2
-     value: THIS IS WORK IN PROGRESS. DUPLICATE CONTENT BELOW
- -
-  # fourth section: client logos
-  content:
-   - type: client-logos
-     logos:
-      - href: /img/clients/eeip.png
-        alt: EEIP logo
-      - href: /img/clients/deloitte.png
-        alt: Deloitte logo
-      - href: /img/clients/bpost.png
-        alt: bpost logo
-      - href: /img/clients/european-commission-logo.png
-        alt: European Commission logo
- -
-  # fifth section: Features content
-  content:
-   - type: h2
-     value: We have your back
-   - type: p
-     value: Mango Information Systems provides a full service around Business Intelligence projects.
-   - type: p
-     value: We offer the following
    - type: columns
      columns:
       - content:
-        - type: h3
+        - type: h4
+          value: Conversion measurement
+        - type: p
+          value: We'll arm you with the <strong>knowledge</strong> you need to outsmart your competitors
+        - type: ul
+          value: "<li>setup goals and a conversion funnel in Google Analytics</li>
+				<li>your own conversion dashboard</li>
+				<li>alerts and scheduled reports by email</li>"
+      - content:
+        - type: h4
           value: Business Analysis
         - type: p
-          value: Design of <strong>customer&dash;oriented</strong> solutions with a <strong>solid architecture</strong>.
+          value: Rethinking the web strategy for sales.
         - type: ul
-          value: "<li>Gathering and analysis of reporting requirements</li>
-				<li>Definition of <strong>acceptance criteria</strong> and tests</li>
-				<li>Writing business requirements and technical specifications</li>
-				<li>Data modeling</li>
-				<li>Design of suitable historization logic and retroactive corrections according to your business needs</li>
-				<li>Analysis of data quality</li>
-				<li>Expertise in SAP PowerDesigner and Toad Data Modeler</li>"
+          value: "<li>content and usability audit</li>
+				<li>rewriting your content with a sales orientation</li>
+				<li>recommendations for improvements</li>"
       - content:
-        - type: h3
-          value: ETL Development
+        - type: h4
+          value: Implementation
         - type: p
-          value: ETL is a core part of any data&dash;warehouse, and often the most complex. We focus on its quality and <strong>performance</strong>.
+          value: Turning your website into a <strong>lead machine</strong>.
         - type: ul
-          value: "<li>Clean, maintainable and performant ETL design</li>
-				<li>Transparent resumption of failed loads</li>
-				<li>Automation of ETL schedules</li>
-				<li>Metadata management</li>
-				<li>Real&dash;time ETL</li>
-				<li>Helping you master <strong>SAP Business Objects Data Services</strong>, Oracle 11g, SQL Server</li>"
-      - content:
-        - type: h3
-          value: Reporting
-        - type: p
-          value: Creation of <strong>user&dash;friendly reports</strong> that provide <strong>useful and accurate indicators</strong>.
-        - type: ul
-          value: "<li>Report and dashboard design</li>
-				<li>User&dash;friendly and accessible data exploration</li>
-				<li>Summaries and visualizations of key management indicators</li>
-				<li>Automated documentation</li>
-				<li>Transparent reconciliation between data sources</li>
-				<li>User&dash;friendly metadata layers</li>
-				<li><strong>SAP Business Objects</strong></li>"
-      - content:
-        - type: h3
-          value: Knowledge Management
-        - type: p
-          value: To ensure <strong>easy maintenance, clear project evolution and smooth recovery</strong>, we make <strong>all information accessible</strong> to those that need it.
-        - type: p
-          value: "We help you get to grips with:"
-        - type: ul
-          value: "<li>Release management and versioning</li>
-				<li>Automation of deployment</li>
-				<li>Alignment of requirements, specifications and deliverables via documentation</li>
-				<li>git, svn, jira, confluence, stash, unix, linux</li>"
+          value: "<li>copywriting</li>
+				<li>user experience improvements</li>
+				<li>SEO</li>
+				<li>performance tuning</li>"
  -
   # sixth section: Pricing
   content:
@@ -125,139 +79,82 @@ sections:
      value: Our Packages
      id: packages
    - type: p
-     value: Any of the 4 packages below can be adapted for short&dash;term or lang&dash;term missions.<br>We can fill numerous roles in your company including business analyst, architect or developer.
+     value: We help you measure, learn, and build for success..
    - type: pricing
      offers:
       -
-       title: BI Fixer
+       title: Analytics
        primary: true
        content:
-        - datamart structure
-        - ETL
-        - performance
+        - Conversion measurement
+        -
+        -
+        - Starts at 800 &euro;
+
        CTA:
         label: Get a quote
-        trg: /package-bi-fixer
+        trg: /package-conversion-analytics
    - type: pricing
      offers:
       -
-       title: Analysis
+       title: Consulting
        content:
-        - Requirements analysis
-        - Data modeling
-        - Acceptance and testing
-        - Design of reports/dashboards
+        - Conversion measurement
+        - Business Analysis
+        -
+        - Starts at 1 600 &euro;
        CTA:
         label: Get a quote
-        trg: /package-bi-analysis
+        trg: /package-conversion-consulting
       -
-       title: Development
+       title: Full service
        content:
-        -
-        -
-        -
-        -
-        - Development of ETL and reports
-        - Code and knowledge management
+        - Conversion measurement
+        - Business Analysis
+        - Implementation
+        - Starts at 2 400 &euro;
        CTA:
         label: Get a quote
-        target: /package-bi-development
-      -
-       title: Full Service
-       content:
-        - Requirements analysis
-        - Data modeling
-        - Acceptance and testing
-        - Design of reports/dashboards
-        - Development of ETL and reports
-        - Code and knowledge management
-       CTA:
-        label: Get a quote
-        trg: /package-bi-full
+        target: /package-conversion-full
  -
   # seventh section: team
   content:
    - type: h2
-     value: Who you will work with
+     value: About us
    - type: p
-     value: Mango Information Systems was founded by Mehdi El Fadil to offer flexible BI support to teams with challenging requirements. Mango provides the right balance of technical, analytical and management expertise for your project from their network of partners.
-   - type: p
-     value: Mango Information Systems is based in Brussels, Belgium and <strong>provides services globally</strong>.
+     value: We're a team of specialized freelancers joining forces according to your projects needs
    - type: person
      content:
       name: Mehdi El Fadil
-      title: BI specialist
+      title: persuasive digital strategy
       image:
        href: /img/mehdi-el-fadil.jpg
        width: 140px
        height: 140px
       bio: "<p>
-	 	   	Mehdi is a BI consultant who cares deeply about finding a cleanly designed solution for BI challenges.
-	 	   </p>
-	 	   <p>
-	 	   	While very comfortable with the technical complexity of data, his experience as a business founder makes him very aware of business objectives, and makes him result-oriented.
-	 	   </p>
-	 	   <p>
-	 	   	He will enhance the efficiency of your BI team, promoting knowledge, code and project management best practices and help you introduce some structure to the chaos.
-	 	   </p>"
+							Mehdi is a Business Intelligence specialist by trade and digital strategist by evolution based in Brussels, Belgium.
+						</p>
+            <p>
+							He has managed several web projects, both commercial and non-commercial since 2012: tribalytics.com, twitto.be, elfa-solaire.com, and fixates on digital strategies and online conversions.
+						</p>
+            <p>
+							Mehdi's secret is to translate <strong>solution selling</strong> principles into digital strategies. He followed the COSSIM professional sales training by Philippe Szombat, and he is also <strong><a target='_blank' href='https://www.google.com/partners/#i_profile;idtf=108940988841507489031'>Google Analytics certified</a></strong>.
+						</p>"
    - type: person
      content:
-      name: Merih Koyuncu
-      title: BI project manager
+      name: Panagiotis Synetos
+      title: web development
       image:
-       href: /corporate-business-intelligence/img/merih-koyuncu.jpg
+       href: /img/panagiotis-synetos.jpg
        width: 140px
        height: 140px
       bio: "<p>
-		   	Multi-lingual, PMI, PRINCE2 and Datavault certified project manager.
+		   	Panagiotis is an experienced web developer, specialized in content management systems.
 		   </p>
+       <p>He is the founder of <a target='_blank' href='http://11dig.it/'>11 Digit Labs</a>, a Greek web development agency, and has experience working for organizations of all sizes.</p>
 		   <p>
-		   	Pragmatic, proactive and solution-minded project management for more than 15 years.
-		   </p>
-		   <p>
-		   	More than 17 years of experience in the Business Intelligence and data warehousing domain, in CRM and ERP implementations.
+        He's the person you need when you want to transform an old website into a modern web experience
 		   </p>"
-   - type: person
-     content:
-      name: Francesco Romeo
-      title: BI architect
-      image:
-       href: /corporate-business-intelligence/img/francesco-romeo.jpg
-       alt:
-       width: 140px
-       height: 140px
-      bio: "<p>
-			Francesco Romeo is a freelance information technology consultant. He started his career as an IT professional in January 1996.
-		   </p>
-		   <p>
-		   	 Currently, his main activity is to analyse business data and create customized solutions for the decision support system.
-		   </p>
-		   <ul>
-		   	<li>He models the data warehouses used to fill the customer reports.</li>
-		   	<li>He formats and consolidates data from operational systems to better define the business.</li>
-		   	<li>He implements the architecture needed for development tools for these solutions.</li>
-		   	<li>He analyses and develops these solutions for the decision support system.</li>
-		   </ul>"
-   - type: person
-     content:
-      name: Fabrizio Fanelli
-      title: BI Analyst and Project Manager
-      image:
-       href: /corporate-business-intelligence/img/fabrizio-fanelli.jpg
-       width: 140px
-       height: 140px
-      bio: "<p>
-				I’m a Business Intelligence expert with more than 12 years’ experience and an excellent view of end-to-end BI projects.
-			</p>
-			<p>
-				As a reliable and solution oriented partner, I’m committed to cover roles like BI architect, functional and technical analyst, team leader and Project Manager.
-			</p>
-			<p>
-				Specialties: My core abilities are related to BI projects pillars like business requirements gathering, data modelling, ETL and reporting design and development, coordinating and coaching.
-			</p>
-			<p>
-				I’m PRINCE2 certified and proficient with the following technologies: Business Objects, BODS, BODI, SQL, Oracle, OWB, Microsoft Analysis Services and Datastage.
-			</p>"
  -
   # eight section: CTA repeat
   content:
