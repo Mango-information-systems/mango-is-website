@@ -35,8 +35,11 @@
 		}
 	%>
 
-	<% if (page.layout == 'landing'){ %>
+	<% if (page.layout == 'landing') { %>
 		<%- css('css/landing') %>
+	<% } else if (page.layout == 'post') { %>
+	<%- css('css/blog') %>
 	<% } %>
+
 	<%- partial('google-analytics') %>
 </head>

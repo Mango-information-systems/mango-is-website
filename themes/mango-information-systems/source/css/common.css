@@ -1,5 +1,15 @@
 p { margin-bottom: 1rem; } /* over ride of 2.5rem in skeleton. */
 
+#header {
+  margin-top: 1.5em;
+  margin-bottom:1.5em;
+}
+
+blockquote {
+  border-left: 6px solid #ddd;
+  padding-left: 2em;
+}
+
 footer {
   padding: 1.5em 0;
   border-top: 1px solid #ccc;
@@ -26,6 +36,7 @@ img.u-pull-left {
   margin-top:0.5em;
   margin-bottom:0;
   max-width: 40rem;
+  border:none;
 }
 
 .person { margin-top: 2em; margin-bottom:2em; }
