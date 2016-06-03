@@ -10,7 +10,7 @@ author: Mango Information Systems
 tags: mehdi
 # optional
 subtitle: Using social media for sales conversions
-thumbnail: blog/img/thumbnails/2014-12-02-getting-started-with-twitter.png
+thumbnail: img/blog/thumbnails/2014-12-02-getting-started-with-twitter.png
 csss: [css/reveal.min.css, css/reveal.tribalytics.css, css/foundation.min.css, blog/css/2014-12-02-getting-started-with-twitter.css]
 scripts: [js/utils/head.min.js, js/reveal.min.js, js/d3.v3.min.js, js/d3.customCategories.js, blog/js/2014-12-02-getting-started-withTwitter.js]
 ---
