@@ -17,11 +17,13 @@
     <div class="columns six">
       <small>
         <ul class="footer-navigation">
-          <li><a href="/blog/">Blog</a></li>
-          <li><a href="/corporate-business-intelligence/">Business Intelligence</a></li>
-          <li><a href="/convert/">Conversion optimization</a></li>
-          <li><a href="/terms/">Copyright - terms of use</a></li>
-          <li><a class="contact" href="/contact/">Contact</a></li>
+
+          <% for (var link in site.data.menu){ %>
+              <li>
+                <a href="<%- url_for(site.data.menu[link]) %>"><%= link %></a>
+              </li>
+          <% } %>
+
         </ul>
       </small>
     </div>
