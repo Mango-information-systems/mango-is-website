@@ -5,9 +5,7 @@ layout: slides
 language: en
 title: Getting started with Twitter
 description: Slide deck of the Getting started with Twitter workshop - December 2nd 2014, @Betacowork
-author: Mango Information Systems
-## tags is used to mention the author, do not use for actual tagging
-tags: mehdi
+author: mehdi
 # optional
 subtitle: Using social media for sales conversions
 thumbnail: img/blog/thumbnails/2014-12-02-getting-started-with-twitter.png
