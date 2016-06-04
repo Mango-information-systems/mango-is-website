@@ -21,7 +21,7 @@
 		<link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
 	<% } %>
 
-	<link href='https://fonts.googleapis.com/css?family=Roboto|Raleway' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto|Raleway:400' rel='stylesheet' type='text/css'>
 
 	<%- css('css/font-awesome/css/font-awesome.min.css') %>
 	<%- css('css/normalize') %>
@@ -35,10 +35,11 @@
 		}
 	%>
 
-	<% if (page.layout == 'landing') { %>
+	<% if (page.layout === 'post') { %>
+		<%- css('css/blog') %>
+	<% }
+		else { %>
 		<%- css('css/landing') %>
-	<% } else if (page.layout == 'post') { %>
-	<%- css('css/blog') %>
 	<% } %>
 
 	<%- partial('google-analytics') %>
