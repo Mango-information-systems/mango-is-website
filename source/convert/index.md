@@ -7,7 +7,6 @@ date: 2016-06-03 16:21:12
 sections:
  -
   # top section: value proposition
-  background-image: /img/bg/building.jpg
   content:
    - type: h1
      class: small
@@ -36,7 +35,6 @@ sections:
      value: Let us help you <strong>close significantly more deals</strong>.
  -
   # third section: benefits
-  background-image: /img/bg/building.jpg
   content:
    - type: h2
      value: We have your back
