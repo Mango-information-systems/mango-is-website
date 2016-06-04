@@ -3,7 +3,6 @@ window.appDebug = require('debug')
 var debug = window.appDebug('gaCustom')
 	, scrollDepth = require('gascrolldepth')
 
-	
 /**
 * Custom Google Analytics tracking
 * 
@@ -18,13 +17,25 @@ var debug = window.appDebug('gaCustom')
 * @constructor
 * 
 */
-function GaCustom(ga) {
+function GaCustom() {
+	
+	var self = this
+	
+	if (typeof ga === 'undefined')
+		var ga = function() {void 0}
 	
 	// initialize scrollDepth measurement
 	gascrolldepth.init({
 		userTiming: false
 		, pixelDepth: false
 	})
+	
+	// client-side error reporting
+	window.onerror = function(message, file, line) {
+		self.toGa('exception', {
+			description: file + ':' + line + '-' + message
+		})
+	}
 	
 	/**
 	* Helper function to track custom page views, exceptions and events tracking
@@ -77,4 +88,4 @@ function GaCustom(ga) {
 	
 }
 
-module.exports = gaCustom
+module.exports = GaCustom

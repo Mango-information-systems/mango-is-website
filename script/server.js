@@ -10,12 +10,16 @@ io.on('connection', function(socket) {
 	*
 	* @private
 	*/
-	socket.on('contact', function(formData){
+	socket.on('contact', function(formData, callback) {
+		
+		debug('contact request received', socket.id, formData)
 		
 		// sanitize data then honeypot check then send to contact controller
 		
+		
+		callback({status:403})
 	})
 
 })
 
-io.listen(3000)
+io.listen(3030)

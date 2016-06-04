@@ -1,11 +1,11 @@
-var server = new require('../../server/index')
+var server = new require('../../script/server')
 	, io = require('socket.io-client')
 	
 describe('server', function () {
 	
 	it('should allow incoming connections', function (done) {
 
-		var socket = io('http://localhost:3000')
+		var socket = io('http://localhost:3030')
 		
 		socket.on('connect', function(){
 			done()
