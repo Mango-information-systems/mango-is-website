@@ -37,13 +37,13 @@ function Contact(app) {
 		
 		switch(err.status) {
 			case 403:
-				var msg = '<p>Sorry, but your message was rejected by our anti-spam system.</p><p>Please email us directly at <a class="alt" href="mailto:contact@mango-is.com">contact@mango-is.com</a></p>'
+				var msg = '<p>Sorry, but your message was rejected by our anti-spam system.</p><p>Please email us directly at <a href="mailto:contact@mango-is.com">contact@mango-is.com</a></p>'
 			break
 			case 400:
 				var msg = '<p>Sorry, it seems that you have used an invalid email address.</p><p>Please double-check your entry and try again.</p>'
 			break
 			default:
-				var msg = '<p>Sorry, an error has occured and your message was not sent.</p><p>Please email us directly at <a class="alt" href="mailto:contact@mango-is.com">contact@mango-is.com</a>, or try again later.</p><p><small>We\'ve been alerted about this problem and will look into it.</small></p>'
+				var msg = '<p>Sorry, an error has occured and your message was not sent.</p><p>Please email us directly at <a href="mailto:contact@mango-is.com">contact@mango-is.com</a>, or try again later.</p><p><small>We\'ve been alerted about this problem and will look into it.</small></p>'
 				
 				var exceptionDescription = 'contact form not sent: '
 				exceptionDescription += err.status ? err.status + ' - ' : ''
