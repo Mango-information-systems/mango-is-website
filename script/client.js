@@ -1,7 +1,7 @@
 var smoothscroll = require('smoothscroll')
 	, io = require('socket.io-client')
-	, Contact = require('./controller/contact')
-	, GaCustom = require('./controller/gaCustom')
+	, Contact = require('./controller/contact-client')
+	, GaCustom = require('./controller/ga-custom')
 
 var app = {}
 
