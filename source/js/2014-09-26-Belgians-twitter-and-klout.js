@@ -22,7 +22,3 @@ d3.select('#donut2').on('mouseover', function() {d3.selectAll('.arc').filter(fun
 d3.select('#donut2').on('mouseout', function() {d3.selectAll('.arc').transition().style('opacity', 1)})
 d3.select('#donut3').on('mouseover', function() {d3.selectAll('.arc').filter(function(d, i) {return i!=2}).transition().style('opacity', .2)})
 d3.select('#donut3').on('mouseout', function() {d3.selectAll('.arc').transition().style('opacity', 1)})
-
-//tooltips
-//~ $('#barchart rect, #bars2 rect, .arc').tooltip({'container': 'body','placement': 'top'})
-//~ $('.tlt').tooltip({'placement': 'top'})
