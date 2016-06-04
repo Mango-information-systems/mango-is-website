@@ -97,7 +97,7 @@ var svg = d3.select('#chartArea').append('svg')
 		.attr("x", 55)
 		.attr("y", 20)
 
-d3.json("/data/belgian-journalists-twitter-influence.json", function(error, jsonData) {
+d3.json("/blogData/belgian-journalists-twitter-influence.json", function(error, jsonData) {
 	var data = jsonData.journalists
 		, xAxisLine
 		, yAxisLine
