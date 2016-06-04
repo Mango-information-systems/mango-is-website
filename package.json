@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "npm run build:assets && npm run watch:skeleton & hexo server",
-    "build:assets": "cp node_modules/reveal.js/js/reveal.js source/js/ && cp node_modules/d3/d3.min.js source/js/ && cp -r node_modules/font-awesome/fonts/ source/css/font-awesome/ && cp -r node_modules/font-awesome/css/ source/css/font-awesome/ && cp -r node_modules/smoothscroll/smoothscroll.min.js source/js/smoothscroll.min.js",
+    "build:assets": "cp node_modules/reveal.js/js/reveal.js source/js/ && cp node_modules/d3/d3.min.js source/js/ && cp -r node_modules/font-awesome/fonts/ source/css/font-awesome/ && cp -r node_modules/font-awesome/css/ source/css/font-awesome/ && cp -r node_modules/smoothscroll/smoothscroll.min.js themes/mango-information-systems/source/js/smoothscroll.min.js",
     "watch:skeleton": "cd skeleton-framework && npm run watch",
     "test": "node_modules/.bin/mocha"
   },
@@ -12,7 +12,10 @@
     "version": "3.2.0"
   },
   "dependencies": {
+    "browserify": "^13.0.1",
     "d3": "^3.5.16",
+    "debug": "^2.2.0",
+    "gascrolldepth": "git+https://github.com/Mango-information-systems/jquery-scrolldepth.git",
     "hexo": "^3.2.0",
     "hexo-generator-archive": "^0.1.4",
     "hexo-generator-category": "^0.1.3",
