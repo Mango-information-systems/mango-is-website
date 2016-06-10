@@ -55,14 +55,16 @@ sections:
  - 
   # fourth section: client logos
   content:
+   - type: h2
+     value: They trust us
    - type: client-logos
      logos:
+      - href: /img/clients/bpost.png
+        alt: bpost logo
       - href: /img/clients/eeip.png
         alt: EEIP logo
       - href: /img/clients/deloitte.png
         alt: Deloitte logo
-      - href: /img/clients/bpost.png
-        alt: bpost logo
       - href: /img/clients/european-commission-logo.png
         alt: European Commission logo
  - 

@@ -45,7 +45,27 @@ sections:
    -
     type: p
     value: text
-# todo use home page layout for this, instead of landing page
+ - 
+  # fourth section: client logos
+  content:
+   - type: h2
+     value: They trust us
+   - type: client-logos
+     logos:
+      - href: /img/clients/unicef.png
+        alt: Unicef logo
+      - href: /img/clients/deloitte.png
+        alt: Deloitte logo
+      - href: /img/clients/bpost.png
+        alt: bpost logo
+      - href: /img/clients/vrt.png
+        alt: VRT logo
+      - href: /img/clients/european-commission-logo.png
+        alt: European Commission logo
+      - href: /img/clients/emolytics.png
+        alt: Emolytics logo
+      - href: /img/clients/eeip.png
+        alt: EEIP logo
 ---
 
 
