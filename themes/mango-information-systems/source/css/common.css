@@ -44,3 +44,24 @@ img.u-pull-left {
 .person { margin-top: 2em; margin-bottom:2em; }
 
 .client-logo { margin-bottom: 4rem;}
+
+/* blog archive */
+.divider-year {
+  font-weight: bolder;
+  font-size: 120%;
+  border-bottom: 1px solid #222;
+  width: 100%;
+  padding-bottom:0.5em;
+  margin-bottom:2em;
+}
+.index h2 a { text-decoration: none; }
+.index h2 { font-size: 2.4rem; line-height: 1.05; }
+.index h2 small { color: #565656; font-size:70% }
+.index time {
+  background-color: #ededed;
+  padding:0.25em;
+  text-align: center;
+  border-radius: 3px;
+  margin-top: 0.2em;
+  display:inline-block;
+}
