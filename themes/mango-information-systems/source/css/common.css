@@ -10,12 +10,18 @@ blockquote {
   padding-left: 2em;
 }
 
+footer a, footer fa {
+  color: #F9A70D;
+  text-decoration: none;
+ }
 
 .footer-navigation {
   list-style: none;
   margin-top:0.5em;
-  line-height: 0.8;
+  line-height: 0.5;
+  color: #F9A70D;
 }
+
 img.u-pull-left {
   margin:0 1em 0.5em 0;
   padding:0;
@@ -38,3 +44,28 @@ img.u-pull-left {
 .person { margin-top: 2em; margin-bottom:2em; }
 
 .client-logo { margin-bottom: 4rem;}
+
+/* blog archive */
+.divider-year {
+  font-weight: bolder;
+  font-size: 150%;
+  border-bottom: 1px solid #222;
+  width: 100%;
+  padding-bottom:0.5em;
+  margin-bottom:2em;
+}
+.index h2 a, .category h2 a { text-decoration: none; }
+.index h2, .category h2  { font-size: 2.4rem; line-height: 1.05; }
+.index h2 small, .category h2 small  { color: #565656; font-size:70% }
+.index time, .category time {
+  background-color: #ededed;
+  padding:0.25em;
+  text-align: center;
+  border-radius: 3px;
+  margin-top: 0.2em;
+  display:inline-block;
+}
+
+.archive-post { margin-bottom: 4em; }
+
+img  { max-width: 100%; }
