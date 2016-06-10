@@ -54,10 +54,10 @@ img.u-pull-left {
   padding-bottom:0.5em;
   margin-bottom:2em;
 }
-.index h2 a { text-decoration: none; }
-.index h2 { font-size: 2.4rem; line-height: 1.05; }
-.index h2 small { color: #565656; font-size:70% }
-.index time {
+.index h2 a, .category h2 a { text-decoration: none; }
+.index h2, .category h2  { font-size: 2.4rem; line-height: 1.05; }
+.index h2 small, .category h2 small  { color: #565656; font-size:70% }
+.index time, .category time {
   background-color: #ededed;
   padding:0.25em;
   text-align: center;
