@@ -6,13 +6,18 @@
 	</div>
 
 	<div class="ten column">
+
 		<%- partial('post/title', {class_name: 'archive-article-title'}) %>
 
+		<% if (post.thumbnail){ %>
+
 		<div class="three column">
-				<img src="<%- url_for(post.thumbnail) %>" itemprop="image">
+				<img class="u-max-full-width" src="<%- url_for(post.thumbnail) %>" itemprop="image">
 		</div>
 
-		<div class="nine column">
+		<% } %>
+
+		<div class="seven column offset-by-one">
 		<%- post.description %>
 		</div>
 

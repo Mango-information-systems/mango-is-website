@@ -68,4 +68,9 @@ img.u-pull-left {
 
 .archive-post { margin-bottom: 4em; }
 
-img  { max-width: 100%; }
+/* POST */
+
+.post h1 { font-size: 2.4rem; line-height: 1.05; }
+.post h1 small { color: #565656; font-size:70% }
+.post h2 { font-size: 2rem; line-height: 1.05; color: #000; margin-top:2em; }
+.post h3 { font-size: 1.6rem; line-height: 1.05; color: #000; margin-top:2em; }
