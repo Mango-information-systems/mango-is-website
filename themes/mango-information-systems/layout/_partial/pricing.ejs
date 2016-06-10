@@ -1,4 +1,5 @@
-<% 
+<!-- begin pricing -->
+<%
 
 var rows = {
 	titles: []
@@ -9,13 +10,13 @@ var rows = {
 }
 
 data.forEach(function(offer, index) {
-	
+
 	rows.titles.push(offer.title)
 	rows.offersContent.push(offer.content)
 	rows.CTAs.push(offer.CTA)
 	rows.prices.push(offer.price)
 	rows.maxContentLength = Math.max(rows.maxContentLength, offer.content.length)
-	
+
 	if (offer.primary)
 		rows.primaryIndex = index
 })
@@ -37,7 +38,7 @@ data.forEach(function(offer, index) {
 		<tbody>
 			<%
 			for (var i = 0; i < rows.maxContentLength; i++) {
-			
+
 			%>
 				<tr>
 					<%
@@ -51,7 +52,7 @@ data.forEach(function(offer, index) {
 			<%
 			}
 			%>
-			
+
 			<tr>
 			<%
 			rows.prices.forEach(function(content, index) {
@@ -62,22 +63,23 @@ data.forEach(function(offer, index) {
 			})
 			%>
 			</tr>
-			
+
 			<tr>
 			<%
 			rows.CTAs.forEach(function(content, index) {
 
 				var trg = content.trg? ' data-trg="' + content.trg + '"' : ''
 					, btnClass = index == rows.primaryIndex? ' button-primary' : ''
-				
+
 				%>
 				<td><a href="/contact/" class="contact button <%- btnClass %> u-full-width" <%- trg %>><%- content.label %></a></td>
 			<%
 			})
 			%>
 			</tr>
-			
+
 
 		</tbody>
 
 </table>
+<!-- / pricing -->

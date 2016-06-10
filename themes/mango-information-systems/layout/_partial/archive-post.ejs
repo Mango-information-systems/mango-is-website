@@ -1,3 +1,4 @@
+<!-- begin archive-post -->
 <div class="row">
 	<div class="one column">
 		<%- partial('post/date', {class_name: 'archive-article-date', date_format: 'MMM D'}) %>
@@ -5,6 +6,7 @@
 	<div class="eleven columns">
 		<%- partial('post/title', {class_name: 'archive-article-title'}) %>
 		<%- post.description %>
-		<img  class="u-pull-right" src="<%- url_for(post.thumbnail) %>" itemprop="image">
+		<img class="u-pull-right" src="<%- url_for(post.thumbnail) %>" itemprop="image">
 	</div>
 </div>
+<!-- / archive-post -->
