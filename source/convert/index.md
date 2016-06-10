@@ -87,7 +87,7 @@ sections:
         - Conversion measurement
         -
         -
-        - Starts at 800 &euro;
+        - Starts at 960 &euro;
 
        CTA:
         label: Get a quote
@@ -100,7 +100,7 @@ sections:
         - Conversion measurement
         - Business Analysis
         -
-        - Starts at 1 600 &euro;
+        - Starts at 1 920 &euro;
        CTA:
         label: Get a quote
         trg: /package-conversion-consulting
@@ -110,7 +110,7 @@ sections:
         - Conversion measurement
         - Business Analysis
         - Implementation
-        - Starts at 2 400 &euro;
+        - Starts at 2 880 &euro;
        CTA:
         label: Get a quote
         target: /package-conversion-full
