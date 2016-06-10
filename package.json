@@ -33,7 +33,8 @@
     "hexo-server": "^0.2.0",
     "node-persist": "0.0.11",
     "reveal.js": "^3.3.0",
-    "smoothscroll": "^0.2.2"
+    "smoothscroll": "^0.2.2",
+    "socket.io-client": "1.4.6"
   },
   "devDependencies": {
     "font-awesome": "^4.6.1",
