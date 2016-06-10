@@ -65,3 +65,5 @@ img.u-pull-left {
   margin-top: 0.2em;
   display:inline-block;
 }
+
+img  { max-width: 100%; } 
