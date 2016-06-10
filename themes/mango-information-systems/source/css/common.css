@@ -66,4 +66,6 @@ img.u-pull-left {
   display:inline-block;
 }
 
-img  { max-width: 100%; } 
+.archive-post { margin-bottom: 4em; }
+
+img  { max-width: 100%; }
