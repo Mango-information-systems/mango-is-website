@@ -5,14 +5,14 @@
 		<%- partial('post/date', {class_name: 'archive-article-date', date_format: 'MMM D'}) %>
 	</div>
 
-	<div class="ten columns">
+	<div class="ten column">
 		<%- partial('post/title', {class_name: 'archive-article-title'}) %>
 
-		<div class="three columns">
+		<div class="three column">
 				<img src="<%- url_for(post.thumbnail) %>" itemprop="image">
 		</div>
 
-		<div class="nine columns">
+		<div class="nine column">
 		<%- post.description %>
 		</div>
 
