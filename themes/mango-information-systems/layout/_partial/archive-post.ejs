@@ -9,17 +9,23 @@
 
 		<%- partial('post/title', {class_name: 'archive-article-title'}) %>
 
-		<% if (post.thumbnail){ %>
+		<% if (post.thumbnail) { %>
 
 		<div class="three column">
 				<img class="u-max-full-width" src="<%- url_for(post.thumbnail) %>" itemprop="image">
 		</div>
 
-		<% } %>
-
 		<div class="seven column offset-by-one">
 		<%- post.description %>
 		</div>
+
+		<% } else { %>
+
+			<div class="eleven column">
+			<%- post.description %>
+			</div>
+
+		<% } %>
 
 	</div>
 </div>
