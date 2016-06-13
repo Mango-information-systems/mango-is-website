@@ -7,15 +7,21 @@
 
 	<div class="eleven columns">
 
-		<% if (post.thumbnail) { %>
+		<%	if (post.thumbnail) { %>
 
 		<div class="three columns">
 				<img class="u-max-full-width" src="<%- url_for(post.thumbnail) %>" itemprop="image">
 		</div>
 
-		<% } %>
-
+		<!-- open an 8 col for the title -->
 		<div class="eight columns offset-by-one">
+
+		<% } else { %>
+
+		<!-- open a 12 col for the title -->
+		<div class="twelve columns">
+
+		<% } %>
 
 		<%- partial('post/title', {class_name: 'archive-article-title'}) %>
 		<%- post.description %>
