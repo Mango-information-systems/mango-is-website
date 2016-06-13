@@ -63,10 +63,24 @@ img.u-pull-left {
   text-align: center;
   border-radius: 3px;
   margin-top: 0.2em;
+  margin-bottom: 1em;
   display:inline-block;
 }
 
 .archive-post { margin-bottom: 4em; }
+
+@media (max-width: 560px) {
+
+  .archive-post {
+    padding-bottom: 1em;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 2em; }
+
+  .index h2, .category h2  { font-size: 1.6rem; line-height: 1.05; }
+  .post-thumb { margin-bottom: 2em; }
+}
+
+
 
 /* POST */
 
