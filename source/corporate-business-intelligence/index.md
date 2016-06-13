@@ -126,63 +126,63 @@ sections:
 				<li>Automation of deployment</li>
 				<li>Alignment of requirements, specifications and deliverables via documentation</li>
 				<li>git, svn, jira, confluence, stash, unix, linux</li>"
- - 
+ -
   # sixth section: Pricing
   content:
    - type: h2
      value: Our Packages
      id: packages
    - type: p
-     value: Any of the 4 packages below can be adapted for short&dash;term or lang&dash;term missions.<br>We can fill numerous roles in your company including business analyst, architect or developer.
+     value: Any of the 4 packages below can be adapted for short&dash;term or long&dash;term missions.<br>We can fill numerous roles in your company including business analyst, architect or developer.
    - type: pricing
      offers:
-      - 
+      -
        title: BI Fixer
        primary: true
-       content: 
+       content:
         - datamart structure
         - ETL
         - performance
-       CTA: 
+       CTA:
         label: Get a quote
         trg: /package-bi-fixer
    - type: pricing
      offers:
-      - 
+      -
        title: Analysis
-       content: 
+       content:
         - Requirements analysis
         - Data modeling
         - Acceptance and testing
         - Design of reports/dashboards
-       CTA: 
+       CTA:
         label: Get a quote
         trg: /package-bi-analysis
-      - 
+      -
        title: Development
-       content: 
-        - 
-        - 
-        - 
-        - 
+       content:
+        -
+        -
+        -
+        -
         - Development of ETL and reports
         - Code and knowledge management
-       CTA: 
+       CTA:
         label: Get a quote
         target: /package-bi-development
-      - 
+      -
        title: Full Service
-       content: 
+       content:
         - Requirements analysis
         - Data modeling
         - Acceptance and testing
         - Design of reports/dashboards
         - Development of ETL and reports
         - Code and knowledge management
-       CTA: 
+       CTA:
         label: Get a quote
         trg: /package-bi-full
- - 
+ -
   # seventh section: team
   content:
    - type: h2
@@ -195,7 +195,7 @@ sections:
      content:
       name: Mehdi El Fadil
       title: BI specialist
-      image: 
+      image:
        href: /img/mehdi-el-fadil.jpg
        width: 140px
        height: 140px
@@ -212,7 +212,7 @@ sections:
      content:
       name: Merih Koyuncu
       title: BI project manager
-      image: 
+      image:
        href: /corporate-business-intelligence/img/merih-koyuncu.jpg
        width: 140px
        height: 140px
@@ -229,9 +229,9 @@ sections:
      content:
       name: Francesco Romeo
       title: BI architect
-      image: 
+      image:
        href: /corporate-business-intelligence/img/francesco-romeo.jpg
-       alt: 
+       alt:
        width: 140px
        height: 140px
       bio: "<p>
@@ -250,7 +250,7 @@ sections:
      content:
       name: Fabrizio Fanelli
       title: BI Analyst and Project Manager
-      image: 
+      image:
        href: /corporate-business-intelligence/img/fabrizio-fanelli.jpg
        width: 140px
        height: 140px
@@ -266,7 +266,7 @@ sections:
 			<p>
 				I’m PRINCE2 certified and proficient with the following technologies: Business Objects, BODS, BODI, SQL, Oracle, OWB, Microsoft Analysis Services and Datastage.
 			</p>"
- - 
+ -
   # eight section: CTA repeat
   content:
    - type: h2
