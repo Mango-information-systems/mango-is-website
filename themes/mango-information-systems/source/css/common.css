@@ -88,3 +88,19 @@ img.u-pull-left {
 .post h1 small { color: #565656; font-size:70% }
 .post h2 { font-size: 2rem; line-height: 1.05; color: #000; margin-top:2em; }
 .post h3 { font-size: 1.6rem; line-height: 1.05; color: #000; margin-top:2em; }
+
+
+/* PRICING TABLES */
+
+.pricing-table thead th {
+  background-color: rgb(71,69,70); /* taken from the logo */
+  color: #fff;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.pricing-table tbody > tr:last-child > td {
+  border-bottom: 0;
+}
+
+.price { background-color: #dedede; color:#ff6600; }
