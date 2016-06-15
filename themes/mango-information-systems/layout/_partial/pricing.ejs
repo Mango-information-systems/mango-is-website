@@ -24,9 +24,11 @@ data.forEach(function(offer, index) {
 		rows.primaryIndex = index
 })
 
+var tableWidthClass = data.length === 1? 'u-narrow-width' : 'u-full-width'
+
 %>
 
-<table class="u-full-width pricing-table">
+<table class="<%- tableWidthClass %> pricing-table">
 		<thead>
 			<tr>
 			<%
