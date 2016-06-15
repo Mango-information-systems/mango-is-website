@@ -55,7 +55,7 @@ img.u-pull-left {
   margin-bottom:2em;
 }
 .index h2 a, .category h2 a { text-decoration: none; }
-.index h2, .category h2  { font-size: 2.4rem; line-height: 1.05; }
+.index h2, .category h2  { font-size: 2rem; line-height: 1.05; }
 .index h2 small, .category h2 small  { color: #565656; font-size:70% }
 .index time, .category time {
   background-color: #ededed;
@@ -63,10 +63,24 @@ img.u-pull-left {
   text-align: center;
   border-radius: 3px;
   margin-top: 0.2em;
+  margin-bottom: 1em;
   display:inline-block;
 }
 
 .archive-post { margin-bottom: 4em; }
+
+@media (max-width: 560px) {
+
+  .archive-post {
+    padding-bottom: 1em;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 2em; }
+
+  .index h2, .category h2  { font-size: 1.6rem; line-height: 1.05; }
+  .post-thumb { margin-bottom: 2em; }
+}
+
+
 
 /* POST */
 
@@ -74,3 +88,20 @@ img.u-pull-left {
 .post h1 small { color: #565656; font-size:70% }
 .post h2 { font-size: 2rem; line-height: 1.05; color: #000; margin-top:2em; }
 .post h3 { font-size: 1.6rem; line-height: 1.05; color: #000; margin-top:2em; }
+
+
+/* PRICING TABLES */
+
+.pricing-table thead th {
+  background-color: rgb(71,69,70); /* taken from the logo */
+  color: #fff;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 1.5em;
+}
+
+.pricing-table tbody > tr:last-child > td {
+  border-bottom: 0;
+}
+
+.price { background-color: #dedede; color:rgb(71,69,70); }
