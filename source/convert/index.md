@@ -87,20 +87,17 @@ sections:
         - Conversion measurement
         -
         -
-        - Starts at 960 &euro;
-
+       price: Starts at 960 &euro;
        CTA:
         label: Get a quote
         trg: /package-conversion-analytics
-   - type: pricing
-     offers:
       -
        title: Consulting
        content:
         - Conversion measurement
         - Business Analysis
         -
-        - Starts at 1 920 &euro;
+       price: Starts at 1 920 &euro;
        CTA:
         label: Get a quote
         trg: /package-conversion-consulting
@@ -110,7 +107,7 @@ sections:
         - Conversion measurement
         - Business Analysis
         - Implementation
-        - Starts at 2 880 &euro;
+       price: Starts at 2 880 &euro;
        CTA:
         label: Get a quote
         target: /package-conversion-full
