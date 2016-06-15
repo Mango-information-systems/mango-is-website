@@ -7,6 +7,7 @@ var rows = {
 	, prices: []
 	, CTAs: []
 	, maxContentLength : 0
+	, pricesCount : 0
 }
 
 data.forEach(function(offer, index) {
@@ -14,6 +15,8 @@ data.forEach(function(offer, index) {
 	rows.titles.push(offer.title)
 	rows.offersContent.push(offer.content)
 	rows.CTAs.push(offer.CTA)
+	if (offer.price)
+		rows.pricesCount++
 	rows.prices.push(offer.price)
 	rows.maxContentLength = Math.max(rows.maxContentLength, offer.content.length)
 
@@ -51,16 +54,21 @@ data.forEach(function(offer, index) {
 				</tr>
 			<%
 			}
-			%>
-
-			<tr>
-			<%
-			rows.prices.forEach(function(content, index) {
-
+			
+			if (rows.pricesCount) {
+				
 				%>
-				<td class="price"><%- rows.prices[j] ? rows.prices[j][i] : '<br>' %></td>
-			<%
-			})
+				<tr>
+				<%
+				
+				rows.prices.forEach(function(content, index) {
+
+					%>
+					<td class="price"><%- rows.prices[index] ? rows.prices[index] : '<br>' %></td>
+				<%
+				})
+				
+			}
 			%>
 			</tr>
 
