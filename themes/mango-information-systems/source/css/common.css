@@ -56,7 +56,8 @@ img.u-pull-left {
 }
 .index h2 a, .category h2 a { text-decoration: none; }
 .index h2, .category h2  { font-size: 2rem; line-height: 1.05; }
-.index h2 small, .category h2 small  { color: #565656; font-size:70% }
+.index h2 small, .category h2 small  { color: #565656; font-size:70%; }
+.article-category small, .article-category a  { color: #565656; font-size:.7rem; text-decoration:none; }
 .index time, .category time {
   background-color: #ededed;
   padding:0.25em;
