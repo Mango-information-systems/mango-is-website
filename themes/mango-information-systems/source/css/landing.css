@@ -50,4 +50,8 @@ div.landing section h1.small:before {
   border-bottom: 0;
 }
 
-.price { background-color: #dedede; color:rgb(71,69,70); }
+.price { c
+	olor:rgb(71,69,70);
+	font-weight:bold;
+	text-align:center;
+ }
