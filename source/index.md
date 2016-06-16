@@ -26,7 +26,7 @@ sections:
   content:
    -
     type: h2
-    value: What we do
+    value: [Explore] What we do
    - type: card
      content:
       href: /convert/
