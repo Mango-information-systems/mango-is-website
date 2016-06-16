@@ -6,30 +6,75 @@
 
 		<div class="row">
 			<div class="six columns">
-				<label for="name">Name</label>
-				<input type="text" id="name" name="name" class="u-full-width">
+				<div class="row">
+					<div class="four columns">
+						<span class="u-pull-right">
+							<label for="name">Name</label>
+						</span>
+					</div>
+					<div class="eight columns">
+						<input type="text" id="name" name="name" placeholder="John Smith" class="u-full-width">
+					</div>
+				</div>
 			</div>
 			<div class="six columns">
-				<label for="company">Company</label>
-				<input type="text" id="company" name="company" class="u-full-width">
+				<div class="row">
+					<div class="four columns">
+						<span class="u-pull-right">
+							<label for="company">Company</label>
+						</span>
+					</div>
+					<div class="eight columns">
+						<input type="text" id="company" name="company" placeholder="Company" class="u-full-width">
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="row">
-			<div class="twelve columns">
-				<label for="email">Email<sup>*</sup></label>
-				<input type="email" id="email" name="email" required class="u-full-width">
+			<div class="six columns">
+				<div class="row">
+					<div class="four columns">
+						<span class="u-pull-right">
+							<label for="email">Email<sup>*</sup></label>
+						</span>
+					</div>
+					<div class="eight columns">
+						<input type="email" id="email" name="email" placeholder="email@example.com" required class="u-full-width">
+					</div>
+				</div>
+			</div>
+			<div class="six columns">
+				<div class="row">
+					<div class="four columns">
+						<span class="u-pull-right">
+							<label for="phone">Phone</label>
+						</span>
+					</div>
+					<div class="eight columns">
+						<input type="text" id="phone" name="phone" placeholder="0123456789" required class="u-full-width">
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="row">
-			<div class="twelve columns">
-				<label for="message">Message<sup>*</sup></label>
-				<textarea id="message" name="message" placeholder="Please briefly describe your needs." required rows="3" class="u-full-width"></textarea>
+			<div class="two columns">
+				<span class="u-pull-right">
+					<label for="message">Message<sup>*</sup></label>
+				</span>
+			</div>
+			<div class="ten columns">
+				<textarea id="message" name="message" placeholder="Please briefly describe your needs." required rows="4" class="u-full-width"></textarea>
 			</div>
 		</div>
 		<input id="contactType" name="contactType" type="hidden">
 		<input id="trg" name="trg" type="hidden">
 		<div id="contactFeedback"></div>
-		<button class="button-primary" id="contact-form-submit"><i class="fa fa-envelope" aria-hidden="true"></i> Send</button>
+		<div class="row">
+			<div class="ten columns offset-by-two">
+				<button class="button-primary" id="contact-form-submit"><i class="fa fa-envelope" aria-hidden="true"></i> Send</button>
+			</div>
+		</div>
+		
 	</fieldset>
 </form>
 <!-- / contactForm -->
