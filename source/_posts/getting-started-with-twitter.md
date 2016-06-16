@@ -1,15 +1,14 @@
 ---
-# static properties
 layout: slides
-# mandatory variables
-language: en
 title: Getting started with Twitter
-description: Slide deck of the Getting started with Twitter workshop - December 2nd 2014, @Betacowork
-author: mehdi
-# optional
 subtitle: Using social media for sales conversions
+description: Slide deck of the Getting started with Twitter workshop - December 2nd 2014, @Betacowork
+category: business
+date: 2014-12-02
+language: en
+author: mehdi
 thumbnail: img/blog/thumbnails/2014-12-02-getting-started-with-twitter.png
-csss: [css/reveal.min.css, css/reveal.tribalytics.css, css/foundation.min.css, blog/css/2014-12-02-getting-started-with-twitter.css]
+css: [css/reveal.min.css, css/reveal.tribalytics.css, css/foundation.min.css, blog/css/2014-12-02-getting-started-with-twitter.css]
 scripts: [js/utils/head.min.js, js/reveal.min.js, js/d3.v3.min.js, js/d3.customCategories.js, blog/js/2014-12-02-getting-started-withTwitter.js]
 ---
 
