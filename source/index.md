@@ -3,7 +3,7 @@ title: Smarter business decisions
 layout: landing
 date: 2016-04-01 14:36:46
 sections:
- - 
+ -
   # top section
   content:
    -
@@ -14,14 +14,14 @@ sections:
     type: h2
     class: small
     value: Mango works the data to help you take smarter decisions.
- - 
+ -
   # section: problem / solution + benefits
   content:
    -
     type: h2
     class: small
     value: tbd
- - 
+ -
   # section: offer
   content:
    -
@@ -36,7 +36,7 @@ sections:
      content:
       href: /corporate-business-intelligence/
       title: <i class="fa fa-bar-chart" aria-hidden="true"></i> Corporate Business Intelligence
-      text: "[Ensuring] more successful data-warehousing projects"
+      text: "Ensure more successful data-warehousing projects"
    - type: card
      content:
       href: /contact/
@@ -49,7 +49,7 @@ sections:
       trg: /package-social
       title: <i class="fa fa-users" aria-hidden="true"></i> Social media audience Analytics
       text: Reach your target niche on social media
- - 
+ -
   # section: client logos
   content:
    - type: h2
