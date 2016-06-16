@@ -58,8 +58,8 @@ sections:
      logos:
       - href: /img/clients/unicef.png
         alt: Unicef logo
-      - href: /img/clients/deloitte.png
-        alt: Deloitte logo
+      - href: /img/clients/universal-music-group.png
+        alt: Universal Music Group
       - href: /img/clients/bpost.png
         alt: bpost logo
       - href: /img/clients/vrt.png
@@ -70,29 +70,18 @@ sections:
         alt: Emolytics logo
       - href: /img/clients/eeip.png
         alt: EEIP logo
+ - 
+  # section: About us
+  content:
+   -
+    type: h2
+    class: small
+    value: tbd
+ - 
+  # section: CTA repeat
+  content:
+   -
+    type: h2
+    class: small
+    value: CTA repeat (tbd)
 ---
-
-
-
-
-draft - content ideas
-
-
-5 years old
-
-x customers				xx % customer satisfaction
-
-xxxxx turnover
-
-
-à-la booking.com satisfaction metrics (horiz bar chart ratings):
-
-	Quality of delivered service
-
-	Value of advice provided
-
-	Respect of deadlines
-
-	Software expertise
-
-	Overall satisfaction (total))
