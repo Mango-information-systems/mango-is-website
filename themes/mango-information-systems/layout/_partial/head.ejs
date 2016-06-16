@@ -35,7 +35,7 @@
 		}
 	%>
 
-	<% if (page.layout === 'post') { %>
+	<% if (is_post() || is_archive() || is_category()) { %>
 		<%- css('css/blog') %>
 	<% }
 		else { %>

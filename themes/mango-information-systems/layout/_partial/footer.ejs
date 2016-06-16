@@ -19,9 +19,13 @@
       <small>
         <ul class="footer-navigation">
 
-          <% for (var link in site.data.menu){ %>
+          <% for (var link in site.data.menu){
+			  
+			  var linkClass = site.data.menu[link] + 'index.html' === '/' + page.path ? ' class="active"' : ''
+			  
+			  %>
               <li>
-                <a href="<%- url_for(site.data.menu[link]) %>"><%= link %></a>
+                <a <%- linkClass %> href="<%- url_for(site.data.menu[link]) %>"><%= link %></a>
               </li>
           <% } %>
 
