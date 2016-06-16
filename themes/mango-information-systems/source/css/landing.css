@@ -30,7 +30,7 @@ section a.brand img {
 div.landing section h1.small { line-height: 0.7; }
 div.landing section h1.small:before {
 	content: " ";
-	content:url('/img/cube.png');
+	content:url('/img/m.png');
 	margin-right:0.5em;
 	top: 5px;
 	position:relative;
