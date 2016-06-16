@@ -4,6 +4,11 @@
     <%- partial('article', {post: post, index: true}) %>
   <% }) %>
 <% } else { %>
+	<% if (is_category()){ %>
+		<h1>Articles in category <%- page.category %></h1>
+	<% } else { %>
+		<h1>Our blog articles</h1>
+	<% } %>
   <% var last; %>
   <% page.posts.each(function(post, i){ %>
     <% var year = post.date.year(); %>
@@ -13,7 +18,7 @@
       <% } %>
       <% last = year; %>
         <div class="divider-year"> <!-- articles year wrap -->
-          <%= year %>
+          <%- year %>
         </div>
         <div>
     <% } %>
