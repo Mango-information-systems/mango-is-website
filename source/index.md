@@ -4,7 +4,7 @@ layout: landing
 date: 2016-04-01 14:36:46
 sections:
  - 
-  # top section: value proposition
+  # top section
   content:
    -
     type: h1
@@ -14,39 +14,43 @@ sections:
     type: h2
     class: small
     value: Mango works the data to help you take smarter decisions.
-   -
-    type: cta
-    value: main
-    primary: true
-    href: "#packages"
  - 
-  # second section: problem / solution
-  content:
-   -
-    type: h3
-    value: problem line
-    id: sectionId
-   -
-    type: h2
-    value: solution line
-    id: sectionId2
-   -
-    type: p
-    value: some <strong>text</strong>
- - 
-  # third section: references
+  # section: problem / solution + benefits
   content:
    -
     type: h2
-    value: title
-   -
-    type: image
-    href: http://placehold.it/300
-   -
-    type: p
-    value: text
+    class: small
+    value: tbd
  - 
-  # fourth section: client logos
+  # section: offer
+  content:
+   -
+    type: h2
+    value: What we do
+   - type: card
+     content:
+      href: /convert/
+      title: <i class="fa fa-filter" aria-hidden="true"></i> Conversion optimization
+      text: Using analytics to help businesses sell more
+   - type: card
+     content:
+      href: /corporate-business-intelligence/
+      title: <i class="fa fa-bar-chart" aria-hidden="true"></i> Corporate Business Intelligence
+      text: "[Ensuring] more successful data-warehousing projects"
+   - type: card
+     content:
+      href: /contact/
+      trg: /package-web-apps
+      title: <i class="fa fa-pie-chart" aria-hidden="true"></i> Data-driven web applications
+      text: Text
+   - type: card
+     content:
+      href: /contact/
+      trg: /package-social
+      title: <i class="fa fa-users" aria-hidden="true"></i> Social media audience Analytics
+      text: Reach your target niche on social media
+ - 
+  # section: client logos
   content:
    - type: h2
      value: They trust us

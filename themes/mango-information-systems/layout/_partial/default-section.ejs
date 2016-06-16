@@ -12,6 +12,11 @@ function setContent(content) {
 					partial('_partial/person', {data: content.content})
 				%><%
 			break
+			case 'card':%>
+				<%-
+					partial('_partial/card', {data: content.content})
+				%><%
+			break
 			case 'pricing':%>
 				<%-
 					partial('_partial/pricing', {data: content.offers})
@@ -77,7 +82,7 @@ function setContent(content) {
 					, tag = 'p'
 					, tagClass = content.class? ' class="' + content.class + '"' : ''
 
-				if (['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul'].indexOf(content.type) !== -1)
+				if (['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'div'].indexOf(content.type) !== -1)
 					tag = content.type
 
 				%>
