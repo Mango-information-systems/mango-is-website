@@ -32,7 +32,7 @@ div.landing section h1.small:before {
 	content: " ";
 	content:url('/img/m.png');
 	margin-right:0.5rem;
-	top: 5px;
+	top: 0;
 	position:relative;
 }
 
