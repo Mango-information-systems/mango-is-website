@@ -24,7 +24,7 @@ data.forEach(function(offer, index) {
 		rows.primaryIndex = index
 })
 
-var tableWidthClass = data.length === 1? 'u-narrow-width' : 'u-full-width'
+var tableWidthClass = data.length === 1? 'u-narrow' : 'u-full-width'
 
 %>
 
@@ -56,20 +56,20 @@ var tableWidthClass = data.length === 1? 'u-narrow-width' : 'u-full-width'
 				</tr>
 			<%
 			}
-			
+
 			if (rows.pricesCount) {
-				
+
 				%>
 				<tr>
 				<%
-				
+
 				rows.prices.forEach(function(content, index) {
 
 					%>
 					<td class="price"><%- rows.prices[index] ? rows.prices[index] : '<br>' %></td>
 				<%
 				})
-				
+
 			}
 			%>
 			</tr>
