@@ -7,14 +7,14 @@
     "build": "npm run build:assets && hexo generate & npm run start:socketServer",
     "build:assets": "npm run build:static && npm run build:js && npm run build:skeleton",
     "build:static": "./bin/build-css.sh",
-    "build:js": "browserify script/client.js -o public/js/site.js -v --poll=2000",
+    "build:js": "browserify dynamic/client.js -o source/js/site.js -v --poll=2000",
     "build:skeleton": "cd skeleton-framework && npm run build",
-    "start:socketServer": "node ./script/server",
+    "start:socketServer": "node ./dynamic/server",
     "test": "node_modules/.bin/mocha",
     "watch": "npm run watch:js & npm run watch:skeleton",
-    "watch:js": "watchify script/client.js -o public/js/site.js -v --poll=2000",
+    "watch:js": "watchify dynamic/client.js -o source/js/site.js -v --poll=2000",
     "watch:skeleton": "cd skeleton-framework && npm run watch",
-    "watch:socketServer": "nodemon --watch script script/server.js"
+    "watch:socketServer": "nodemon --watch dynamic dynamic/server.js"
   },
   "hexo": {
     "version": "3.2.0"
@@ -24,7 +24,7 @@
     "debug": "^2.2.0",
     "font-awesome": "^4.6.1",
     "form-to-obj": "0.0.3",
-    "gascrolldepth": "git+https://github.com/leighmcculloch/gascrolldepth.js.git",
+    "gascrolldepth": "git+https://github.com/leighmcculloch/gascrolldepth.js.git#70834032",
     "hexo": "^3.2.0",
     "hexo-generator-archive": "^0.1.4",
     "hexo-generator-category": "^0.1.3",
