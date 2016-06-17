@@ -63,11 +63,8 @@ function Contact(app) {
 		
 		self.submitButton.classList.remove('disabled')
 		
-		self.contactFeedback.innerHTML = ('<div class="alert alert-success">Thanks for your inquiry. We\'ll be back to you very soon.</div>')
+		self.contactFeedback.innerHTML = ('<div class="alert alert-success">Thanks for your inquiry. We\'ll get back to you very soon.</div>')
 		
-		//~ $('#contact-form-submit').removeClass('disabled')
-		//~ $('#contactFeedback').empty().html('<div class="alert alert-success">Thanks for your inquiry. We\'ll be back to you very soon.</div>')
-		//~ 
 		//~ setTimeout(function() {
 			//~ $('#contactModal').modal('hide')
 		//~ }

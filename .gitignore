@@ -1,6 +1,7 @@
 .gitignore
 _config*.yml
 att/
+params.json
 db.json
 node_modules
 npm-debug.log*

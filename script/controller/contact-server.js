@@ -1,7 +1,9 @@
 var debug = require('debug')('contact')
+	, params = require('../params.json')
 	, storage = require('node-persist')
 	, xssFilters = require('xss-filters')
 	, validator = require('validator')
+	, nodemailer = require('nodemailer')
 
 /********************************************************
 * Contact form submission processing
@@ -14,6 +16,8 @@ function Contact() {
 	var self = this
 	
 	storage.init()
+	console.log('params', params)
+	var mailer = nodemailer.createTransport('smtps://' + params.mail.user + ':' + params.mail.pass + '@smtp.gmail.com')
 	
 	/****************************************************
 	* 
@@ -41,8 +45,54 @@ function Contact() {
 	* @param {object} contact form data
 	*
 	*/
-	function emailMessage(data) {
+	function emailMessage(userId, data, errCount) {
 		debug('emailing message')
+		
+		var message = ['New message from a visitor on mango-is.com']
+		
+		message.push('')
+		message.push('<strong>' + data.name + '</strong>')
+		
+		if (data.email) {
+			message.push('')
+			message.push(data.email)
+		}
+		
+		if (data.phone) {
+			message.push('')
+			message.push(data.phone)
+		}
+		
+		if (data.company) {
+			message.push('')
+			message.push('company: ' + data.company)
+		}
+		
+		message.push('')
+		message.push(data.message)
+		
+		var mailContent = {
+			from: '"mailing service" <mailing@mango-is.com.com>'
+			, to: 'contact@mango-is.com'
+			, 'reply-to': data.email
+			, subject: (data.name || data.email) + ' - ' + data.contactType + ' on mango-is.com'
+			, html: message.join('<br>')
+		}
+		
+		mailer.sendMail(mailContent, function(error, info){
+			if(error){
+				console.error('error sending email')
+				console.error(error)
+				if (errCount < 5) {
+					setTimeout(function() {
+						emailMessage(userId, data, errCount+1)
+					}, 90000 * (errCount+1))
+				}
+			}
+			else {
+				debug('email sent,' + info.response)
+			}
+		})
 		
 	}
 	/**
@@ -83,7 +133,6 @@ function Contact() {
 		
 		var messages = storage.getItem(userId) || []
 		
-		
 		messages.push(data)
 		
 		storage.setItem(userId, messages)
@@ -104,9 +153,8 @@ function Contact() {
 	*/
 	function validateInput(data) {
 		debug('validating user input')
-		console.log(data.email, data.phone, data.email === '', data.email === '' && data.phone === '')
+
 		if (data.email === '' && data.phone === ''){
-			console.log('here')
 			return {
 				status: 400
 				, message: '<p>At least an email address or a phone number is needed.</p><p>Please double-check your entry and try again.</p>'
@@ -174,7 +222,7 @@ function Contact() {
 		storeMessage(userId, data, callback)
 		
 		// email contact request
-		emailMessage(data)
+		emailMessage(userId, data, 0)
 	}
 	
 }
