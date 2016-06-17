@@ -15,6 +15,8 @@ function Contact(app) {
 	
 	var self = this
 	
+	this.middleware = []
+	
 	this.form = document.getElementById('contact-form')
 	
 	this.submitButton = document.getElementById('contact-form-submit')
@@ -22,7 +24,7 @@ function Contact(app) {
 	
 	if (this.form !== null)
 		listenToForm()
-		
+	
 	/**
 	* form error
 	* 
@@ -35,27 +37,19 @@ function Contact(app) {
 		
 		debug('form submission error', err)
 		
-		switch(err.status) {
-			case 403:
-				var msg = '<p>Sorry, but your message was rejected by our anti-spam system.</p><p>Please email us directly at <a href="mailto:contact@mango-is.com">contact@mango-is.com</a></p>'
-			break
-			case 400:
-				var msg = '<p>Sorry, it seems that you have used an invalid email address.</p><p>Please double-check your entry and try again.</p>'
-			break
-			default:
-				var msg = '<p>Sorry, an error has occured and your message was not sent.</p><p>Please email us directly at <a href="mailto:contact@mango-is.com">contact@mango-is.com</a>, or try again later.</p><p><small>We\'ve been alerted about this problem and will look into it.</small></p>'
-				
-				var exceptionDescription = 'contact form not sent: '
-				exceptionDescription += err.status ? err.status + ' - ' : ''
-				exceptionDescription += err.message
-								
-				app.gaCustom.toGa('exception', {description: exceptionDescription, fatal: true})
-			break
-		}
+		var exceptionDescription = 'contact form not sent: '
+		exceptionDescription += err.status ? err.status + ' - ' : ''
+		exceptionDescription += err.message
+						
+		app.gaCustom.toGa('exception', {description: exceptionDescription, fatal: true})
+
+		// TODO
+		//~ inputs[err.inputIndex].classList.add('has-error')
 		
-		self.contactFeedback.innerHTML = ('<div class="alert alert-danger">' + msg + '</div>')
+		self.contactFeedback.innerHTML = ('<div class="alert alert-danger">' + err.message + '</div>')
 		
 		self.submitButton.classList.remove('disabled')
+		
 		
 	}
 		
@@ -68,6 +62,8 @@ function Contact(app) {
 	function formSent() {
 		
 		self.submitButton.classList.remove('disabled')
+		
+		self.contactFeedback.innerHTML = ('<div class="alert alert-success">Thanks for your inquiry. We\'ll be back to you very soon.</div>')
 		
 		//~ $('#contact-form-submit').removeClass('disabled')
 		//~ $('#contactFeedback').empty().html('<div class="alert alert-success">Thanks for your inquiry. We\'ll be back to you very soon.</div>')

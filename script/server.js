@@ -1,16 +1,16 @@
 var io = require('socket.io')()
-	, storage = require('node-persist')
+	, Contact = require('./controller/contact-server')
 	, debug = require('debug')('server')
 
 
-storage.init()
+var contact = new Contact()
 
 io.on('connection', function(socket) {
 	
 	debug('connection event', socket.id)
 
 	/**
-	* listener: moderator session (re)start signal
+	* listener: contact request
 	*
 	* @private
 	*/
@@ -18,23 +18,8 @@ io.on('connection', function(socket) {
 		
 		debug('contact request received', socket.id, formData)
 		
-		// sanitize data then honeypot check then send to contact controller
+		contact.add(socket.id, formData, callback)
 
-		//~ honeyPot(formData, sanitizeInput)
-
-		// then run someth
-		//~ sanitizeInput(formData, 
-		
-		var messages = storage.getItem(socket.id) || []
-		
-		formData.ts = new Date()
-		
-		messages.push(formData)
-		
-		storage.setItem(socket.id, messages)
-		
-		// sample response
-		callback({status:403})
 	})
 
 })
