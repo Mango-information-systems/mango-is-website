@@ -16,7 +16,8 @@ function Contact() {
 	var self = this
 	
 	storage.init()
-	console.log('params', params)
+	
+	// requires to activate access for less secure apps here: https://www.google.com/settings/security/lesssecureapps
 	var mailer = nodemailer.createTransport('smtps://' + params.mail.user + ':' + params.mail.pass + '@smtp.gmail.com')
 	
 	/****************************************************
@@ -75,7 +76,7 @@ function Contact() {
 			from: '"mailing service" <mailing@mango-is.com.com>'
 			, to: 'contact@mango-is.com'
 			, 'reply-to': data.email
-			, subject: (data.name || data.email) + ' - ' + data.contactType + ' on mango-is.com'
+			, subject: data.subject || ((data.name || data.email) + ' - ' + data.contactType + ' on mango-is.com')
 			, html: message.join('<br>')
 		}
 		
@@ -83,10 +84,24 @@ function Contact() {
 			if(error){
 				console.error('error sending email')
 				console.error(error)
+				
 				if (errCount < 5) {
+					
 					setTimeout(function() {
 						emailMessage(userId, data, errCount+1)
 					}, 90000 * (errCount+1))
+				}
+				else if (errCount === 5) {
+					// attempt to alert syadmin after a few hours
+					setTimeout(function() {
+						emailMessage('system', {
+							name: 'mango-is-website server'
+							, subject: 'Error: mango-is.com contact mails fail!'
+							, message: 'Email transmission failed repeatedly - please connect to the server and check what the problem is'
+							
+						}, 6)
+					}, 60000 * 60 * 12)
+					
 				}
 			}
 			else {
