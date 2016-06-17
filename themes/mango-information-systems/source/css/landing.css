@@ -42,7 +42,7 @@ div.landing section h1.small:before {
   background-color: rgb(71,69,70); /* taken from the logo */
   color: #fff;
   text-align: center;
-  font-weight: bolder;
+  font-weight: 400;
   font-size: 1.5rem;
 }
 
