@@ -81,6 +81,8 @@ function Contact(app) {
 	*/		
 	function listenToForm() {
 		
+		debug('listening to contact forms submissions')
+		
 		self.form.addEventListener('submit', function(e) {
 		// user requests to send the contact form
 		
@@ -107,7 +109,7 @@ function Contact(app) {
 				
 			})
 			
-			 var trg = formData.trg || 'not-set'
+			 var trg = self.form.getAttribute('data-trg') || 'not-set'
 			
 			app.gaCustom.toGa('pageview', {page: trg})
 		})

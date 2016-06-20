@@ -6,7 +6,10 @@ var smoothscroll = require('smoothscroll')
 var app = {}
 
 app.io = io
+
 app.gaCustom = new GaCustom()
+
 app.contact = new Contact(app)
 
 
+app.gaCustom.init()
