@@ -171,7 +171,7 @@ sections:
         - Code and knowledge management
        CTA:
         label: Get a quote
-        target: /package-bi-development
+        trg: /package-bi-development
       -
        title: Full Service
        content:
