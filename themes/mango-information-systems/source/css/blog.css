@@ -30,7 +30,7 @@
 	margin-bottom: 1rem;
 }
 .postFooter, .postFooter a {
-	color: #565656; 
+	color: #565656;
 	text-decoration: none;
 }
 
@@ -45,12 +45,10 @@
   .post-thumb { margin-bottom: 2rem; }
 }
 
-
-
 /* POST */
 
-.post h1 { font-size: 2.4rem; line-height: 1.05; }
-.post h1 small { color: #565656; font-size:70%; }
+.post h1 { font-size: 2.4rem; line-height: 1.05; letter-spacing: 0.008rem; }
+.post h1 small { color: #565656; font-size:70%; letter-spacing: 0.0225rem; }
 .post h2 { font-size: 2rem; line-height: 1.05; color: #000; margin-top:2rem; }
 .post h3 { font-size: 1.6rem; line-height: 1.05; color: #000; margin-top:2rem; }
 
