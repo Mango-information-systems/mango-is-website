@@ -1,6 +1,6 @@
 ---
 layout: landing
-title: Conversion Optimisation - websites that sell
+title: Conversion Rate Optimisation - websites that sell
 author: Mango Information Systems
 description: Optimize your digital strategy for conversions. Mango Information Systems use data to tune your websites to turn visitors into buyers.
 date: 2016-06-03 16:21:12
@@ -30,7 +30,7 @@ sections:
    - type: h3
      value: Are your website conversions too low?<br>Optimizing the content of your site for conversions can fix this.
    - type: p
-     value: Sending the right message through your website will not only <strong>increase your conversions</strong>, but also improve your image and <strong>generate word-of-mouth referrals</strong>.
+     value: Sending the right message through your website will not only <strong>increase your conversion rate</strong>, but also improve your image and <strong>generate word-of-mouth referrals</strong>.
    - type: p
      value: Let us help you <strong>close significantly more deals</strong>.
  -
@@ -44,7 +44,7 @@ sections:
      columns:
       - content:
         - type: h4
-          value: Conversion measurement
+          value: Conversion rate measurement
         - type: p
           value: We'll arm you with the <strong>knowledge</strong> you need to outsmart your competitors
         - type: ul
@@ -84,7 +84,7 @@ sections:
        title: Analytics
        primary: true
        content:
-        - Conversion measurement
+        - Conversion rate measurement
         -
         -
        price: Starts at 960 &euro;
@@ -94,7 +94,7 @@ sections:
       -
        title: Consulting
        content:
-        - Conversion measurement
+        - Conversion rate measurement
         - Business Analysis
         -
        price: Starts at 1 920 &euro;
@@ -104,13 +104,13 @@ sections:
       -
        title: Full service
        content:
-        - Conversion measurement
+        - Conversion rate measurement
         - Business Analysis
         - Implementation
        price: Starts at 2 880 &euro;
        CTA:
         label: Get a quote
-        target: /package-conversion-full
+        trg: /package-conversion-full
  -
   # seventh section: team
   content:
