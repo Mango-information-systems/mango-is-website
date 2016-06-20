@@ -10,6 +10,5 @@ mango.sublime-workspace
 persist/
 public/
 source/css/font-awesome/
-source/js/d3.min.js
-source/js/reveal.js
 themes/mango-information-systems/source/js/smoothscroll.min.js
+source/js/site.js
