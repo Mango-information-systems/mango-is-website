@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<%- partial('_partial/head') %>
+	<body>
+		<%- body %>
+			
+		<%  if (page.scripts) {
+				page.scripts.forEach(function(scriptFile) {%>
+				<%- js(scriptFile) %>
+			<%  })
+			}
+		%>
+	</body>
+</html>

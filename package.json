@@ -1,0 +1,48 @@
+{
+  "name": "mango-is-website",
+  "version": "3.0.0-wip",
+  "private": true,
+  "scripts": {
+    "start": "npm run build:static && npm run watch & hexo server & npm run watch:socketServer",
+    "build": "npm run build:assets && hexo generate & npm run start:socketServer",
+    "build:assets": "npm run build:static && npm run build:js && npm run build:skeleton",
+    "build:static": "./bin/build-css.sh",
+    "build:js": "browserify dynamic/client.js -o source/js/site.js -v --poll=2000",
+    "build:skeleton": "cd skeleton-framework && npm run build",
+    "start:socketServer": "node ./dynamic/server",
+    "test": "node_modules/.bin/mocha",
+    "watch": "npm run watch:js & npm run watch:skeleton",
+    "watch:js": "watchify dynamic/client.js -o source/js/site.js -v --poll=2000",
+    "watch:skeleton": "cd skeleton-framework && npm run watch",
+    "watch:socketServer": "nodemon --watch dynamic dynamic/server.js"
+  },
+  "hexo": {
+    "version": "3.2.0"
+  },
+  "dependencies": {
+    "browserify": "^13.0.1",
+    "debug": "^2.2.0",
+    "font-awesome": "^4.6.1",
+    "form-to-obj": "0.0.3",
+    "gascrolldepth": "git+https://github.com/leighmcculloch/gascrolldepth.js.git#70834032",
+    "hexo": "^3.2.0",
+    "hexo-generator-archive": "^0.1.4",
+    "hexo-generator-category": "^0.1.3",
+    "hexo-renderer-ejs": "^0.2.0",
+    "hexo-renderer-markdown-it": "^3.4.1",
+    "hexo-server": "^0.2.0",
+    "node-persist": "0.0.11",
+    "nodemailer": "^2.4.2",
+    "smoothscroll": "^0.2.2",
+    "socket.io": "^1.4.6",
+    "socket.io-client": "^1.4.6",
+    "validator": "^5.4.0",
+    "xss-filters": "^1.2.6"
+  },
+  "devDependencies": {
+    "mocha": "^2.5.3",
+    "nodemon": "^1.9.2",
+    "should": "^9.0.2",
+    "watchify": "^3.7.0"
+  }
+}

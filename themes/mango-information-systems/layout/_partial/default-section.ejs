@@ -1,0 +1,121 @@
+<!-- begin default-section -->
+<%
+var sectionStyle = isFirst ? 'min-height:80%;' : ''
+
+sectionStyle += data['background-image'] ? 'background: url(' + data['background-image'] + ') no-repeat center center fixed; background-size: cover;' : ''
+
+function setContent(content) {
+
+		switch(content.type) {
+			case 'person':%>
+				<%-
+					partial('_partial/person', {data: content.content})
+				%><%
+			break
+			case 'card':%>
+				<%-
+					partial('_partial/card', {data: content.content})
+				%><%
+			break
+			case 'pricing':%>
+				<%-
+					partial('_partial/pricing', {data: content.offers})
+				%><%
+			break
+			case 'reference':%>
+				<%-
+					partial('_partial/reference', {data: content.content})
+				%><%
+			break
+			case 'client-logos':%>
+				<%-
+					partial('_partial/client-logos', {data: content.logos})
+				%><%
+			break
+			case 'cta':
+
+				var to= content.href? ' href="' + content.href + '"' : ''
+				, trg = content.trg? ' data-trg="' + content.trg + '"' : ''
+				, btnClass = content.primary? ' button-primary' : ''
+
+				%>
+				<a <%- to %> class="button cta <%- btnClass %>" <%- trg %>><%- content.value %></a>
+				<%
+			break
+			case 'image':%>
+				<%- image_tag(content.href, {
+					class: content.class
+					, alt: content.alt
+					, width: content.width || ''
+					, height: content.height || ''
+				}) %>
+			<%
+			break
+			case 'columns':
+				// two columns layout
+				content.columns.forEach(function(column, index) {
+					if (index % 2 === 0) {
+						%>
+						<div class="row">
+					<% } %>
+					<div class="one-half column">
+						<%
+							column.content.forEach(function(content) {
+						%>
+							<%- setContent(content) %>
+						<%
+							})
+						%>
+					</div>
+
+					<%
+					if (index % 2 !== 0) {
+						%>
+						</div>
+					<% }
+
+				})
+
+			break
+			default:
+				var id = content.id? ' id="' + content.id + '"' : ''
+					, tag = 'p'
+					, tagClass = content.class? ' class="' + content.class + '"' : ''
+
+				if (['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'div'].indexOf(content.type) !== -1)
+					tag = content.type
+
+				%>
+
+				<<%- tag %><%- id %><%- tagClass %>><%- content.value %></<%- tag %>>
+
+				<%
+
+			break
+		}
+
+	}
+
+%>
+
+<section style="<%- sectionStyle %>" class="<%- data.class %>">
+	<%
+		if (isFirst) {
+	%>
+		<a class="brand" rel="home" href="/">
+			<%- image_tag('/img/mango-information-systems-logo.png', {
+				class: 'u-img-responsive'
+				, alt: 'Mango Information Systems'
+				, width: '400px'
+				, height: '74px'
+			}) %>
+		</a>
+	<%
+	}
+	%>
+
+
+	<%- data.content.forEach(setContent) %>
+
+</section>
+<!-- / default-section -->

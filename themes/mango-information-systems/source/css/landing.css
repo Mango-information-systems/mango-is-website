@@ -1,0 +1,58 @@
+.container:first-child {
+	height: 100%;
+}
+
+section
+{
+	min-height: 60%;
+	padding-top: 140px;
+	padding-bottom: 100px;
+	padding-left: 10000px;
+	margin-left: -10000px;
+	padding-right: 10000px;
+	margin-right: -10000px;
+}
+
+section:nth-child(odd) {
+	background-color: #eee;
+    background: url("/img/bg-pattern-2x.jpg") repeat fixed;
+    background-size: 75px 62px;
+}
+section:nth-child(even) {
+	background-color: #FCFCFC;
+}
+
+section a.brand img {
+	margin-top: -120px;
+	margin-bottom: 120px;
+}
+
+div.landing section h1.small { line-height: 0.7; }
+div.landing section h1.small:before {
+	content: " ";
+	content:url('/img/m.png');
+	margin-right:0.5rem;
+	top: 0;
+	position:relative;
+}
+
+/* PRICING TABLES */
+
+.pricing-table thead th {
+  background-color: rgb(71,69,70); /* taken from the logo */
+  color: #fff;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.pricing-table tbody > tr:last-child > td {
+  border-bottom: 0;
+}
+
+.price {
+	color:rgb(71,69,70);
+	font-weight:bold;
+	text-align:center;
+	font-size:120%;
+ }

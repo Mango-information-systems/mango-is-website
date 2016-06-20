@@ -1,0 +1,3 @@
+[submodule "skeleton-framework"]
+	path = skeleton-framework
+	url = https://github.com/Mango-information-systems/skeleton-framework.git

@@ -1,0 +1,82 @@
+<!-- begin contactForm -->
+<form id="contact-form" name="contact-form" data-trg="<%- page.trg %>">
+	<p>Send us a message, we'll follow-up shortly</p>
+
+	<fieldset>
+
+		<div class="row">
+			<div class="six columns">
+				<div class="row">
+					<div class="four columns">
+						<span class="u-pull-right">
+							<label for="name">Name</label>
+						</span>
+					</div>
+					<div class="eight columns">
+						<input type="text" id="name" name="name" placeholder="John Smith" class="u-full-width">
+					</div>
+				</div>
+			</div>
+			<div class="six columns">
+				<div class="row">
+					<div class="four columns">
+						<span class="u-pull-right">
+							<label for="company">Company</label>
+						</span>
+					</div>
+					<div class="eight columns">
+						<input type="text" id="company" name="company" placeholder="Company" class="u-full-width">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="six columns">
+				<div class="row">
+					<div class="four columns">
+						<span class="u-pull-right">
+							<label for="email">Email</label>
+						</span>
+					</div>
+					<div class="eight columns">
+						<input type="email" id="email" name="email" placeholder="email@example.com" class="u-full-width">
+					</div>
+				</div>
+			</div>
+			<div class="six columns">
+				<div class="row">
+					<div class="four columns">
+						- Or - 
+						<span class="u-pull-right">
+							<label for="phone">Phone</label>
+						</span>
+					</div>
+					<div class="eight columns">
+						<input type="text" id="phone" name="phone" placeholder="0123456789" class="u-full-width">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="two columns">
+				<span class="u-pull-right">
+					<label for="message">Message<sup>*</sup></label>
+				</span>
+			</div>
+			<div class="ten columns">
+				<textarea id="message" name="message" placeholder="Please briefly describe your needs." required rows="4" class="u-full-width"></textarea>
+			</div>
+		</div>
+		<input id="contactType" name="contactType" type="hidden">
+		<input id="trg" name="trg" type="hidden">
+		<div id="contactFeedback"></div>
+		<div class="row">
+			<div class="ten columns offset-by-two">
+				<input type="text" id="fName" name="fName" placeholder="leave empty" class="u-full-width" style="display:none;" aria-hidden="true">
+				<button class="button-primary" id="contact-form-submit"><i class="fa fa-envelope" aria-hidden="true"></i> Send</button>
+			</div>
+		</div>
+		
+	</fieldset>
+</form>
+<!-- / contactForm -->

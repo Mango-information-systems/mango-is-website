@@ -1,0 +1,8 @@
+<% if (post.categories && post.categories.length && !is_category()){ %>
+	<div class="article-category">
+	<small>
+		category:
+		<a href="<%- url_for(post.categories.data[0].path) %>"><%- post.categories.data[0].name %></a>
+	</small>
+	</div>
+<% } %>

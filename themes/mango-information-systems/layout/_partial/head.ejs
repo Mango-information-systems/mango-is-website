@@ -1,0 +1,45 @@
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<%
+	var title = page.title
+
+	if (is_category())
+		title = page.category
+	%>
+	<title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<%- open_graph({twitter_id: theme.twitter}) %>
+	<% if (theme.rss){ %>
+		<link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
+	<% } %>
+	<% if (theme.favicon){ %>
+		<%- favicon_tag(theme.favicon) %>
+	<% } %>
+
+	<% if (config.highlight.enable){ %>
+		<link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+	<% } %>
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto|Raleway:400' rel='stylesheet' type='text/css'>
+
+	<%- css('css/font-awesome/css/font-awesome.min') %>
+	<%- css('css/normalize') %>
+	<%- css('css/skeleton.min') %>
+
+	<%  if (page.css) {
+			page.css.forEach(function(cssFile) {%>
+			<%- css('css/' + cssFile) %>
+		<%  })
+		}
+	%>
+
+	<% if (is_post() || is_archive() || is_category()) { %>
+		<%- css('css/blog') %>
+	<% }
+		else { %>
+		<%- css('css/landing') %>
+	<% } %>
+
+	<%- partial('google-analytics') %>
+</head>

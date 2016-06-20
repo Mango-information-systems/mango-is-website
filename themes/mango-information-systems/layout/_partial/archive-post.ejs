@@ -1,0 +1,27 @@
+<!-- begin archive-post -->
+<div class="row archive-post">
+
+	<%	if (post.thumbnail) { %>
+
+		<div class="three columns post-thumb">
+			<img class="u-max-full-width" src="<%- url_for(post.thumbnail) %>" itemprop="image">
+		</div>
+
+		<!-- open an 9 col for the title -->
+		<div class="nine columns">
+
+	<% } else { %>
+
+		<!-- open a 12 col for the title -->
+		<div class="twelve columns">
+
+	<% } %>
+
+		<%- partial('post/title', {class_name: 'archive-article-title'}) %>
+		
+		<%- post.description %>
+
+		<%- partial('post/postFooter', {date_format: 'MMMM Do YYYY', isIndex: true}) %>
+	</div>
+</div>
+<!-- / archive-post -->

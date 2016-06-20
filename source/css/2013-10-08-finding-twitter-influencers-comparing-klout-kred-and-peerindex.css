@@ -1,0 +1,16 @@
+svg {
+  cursor: pointer;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+  stroke-width: 1.3;
+}
+
+.dot {
+  stroke: #000;
+  stroke-width: .3;
+}

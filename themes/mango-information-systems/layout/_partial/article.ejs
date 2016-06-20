@@ -1,0 +1,46 @@
+<!-- begin article -->
+<article class="post" id="<%= post.layout %>-<%= post.slug %>" itemscope itemprop="blogPost">
+	<div class="row">
+		<div class="column ten offset-by-one">
+		<% if (post.link || post.title){ %>
+			<%- partial('post/title', {class_name: 'article-title'}) %>
+		<% } %>
+
+		</div>
+	</div>
+	<div class="row">
+		<div class="column ten offset-by-one">
+			<div itemprop="articleBody">
+				<% if (post.excerpt && index){ %>
+					<%- post.excerpt %>
+					<% if (theme.excerpt_link){ %>
+						<p>
+							<a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
+						</p>
+					<% } %>
+				<% } else { %>
+					<%- post.content %>
+				<% } %>
+			</div>
+		</div>
+	</div>
+	<div id="article-end" class="row">
+		<div class="column ten offset-by-one">
+			<%- partial('post/postFooter', {date_format: 'MMMM Do YYYY', isIndex: false}) %>
+		</div>
+	</div>
+</article>
+
+<% if (!index && post.comments && config.disqus_shortname){ %>
+
+<section id="comments">
+	<div class="row">
+		<div class="column ten offset-by-one">
+			<div id="disqus_thread">
+				<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			</div>
+		</div>
+	</div>
+</section>
+<% } %>
+<!-- / article -->

@@ -1,0 +1,10 @@
+<!-- begin header -->
+<header id="header">
+	<a href="<%- url_for() %>" id="logo"><%- image_tag('/img/mango-information-systems-logo.png', {
+		alt: config.title
+	}) %></a>
+	<% for (var i in theme.menu){ %>
+	  <a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+	<% } %>
+</header>
+<!-- / header -->

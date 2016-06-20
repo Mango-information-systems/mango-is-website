@@ -1,0 +1,19 @@
+<!-- begin reference -->
+<div class="row reference">
+
+		<%- image_tag(data.image.href, {
+			class: 'u-img-responsive u-pull-left'
+			, alt: data.image.alt
+			, width: data.image.width
+			, height: data.image.height
+		}) %>
+
+		<blockquote>
+			<%- data.quote %>
+		</blockquote>
+		<cite>
+			<%- data.author %>, <%- data.title %>
+		</cite>
+
+</div>
+<!-- / reference -->

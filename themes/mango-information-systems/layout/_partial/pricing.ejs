@@ -1,0 +1,95 @@
+<!-- begin pricing -->
+<%
+
+var rows = {
+	titles: []
+	, offersContent: []
+	, prices: []
+	, CTAs: []
+	, maxContentLength : 0
+	, pricesCount : 0
+}
+
+data.forEach(function(offer, index) {
+
+	rows.titles.push(offer.title)
+	rows.offersContent.push(offer.content)
+	rows.CTAs.push(offer.CTA)
+	if (offer.price)
+		rows.pricesCount++
+	rows.prices.push(offer.price)
+	rows.maxContentLength = Math.max(rows.maxContentLength, offer.content.length)
+
+	if (offer.primary)
+		rows.primaryIndex = index
+})
+
+var tableWidthClass = data.length === 1? 'u-narrow' : 'u-full-width'
+
+%>
+
+<table class="<%- tableWidthClass %> pricing-table">
+		<thead>
+			<tr>
+			<%
+			rows.titles.forEach(function(title) {
+			%>
+				<th><%- title %></th>
+			<%
+				})
+			%>
+			</tr>
+		</thead>
+		<tbody>
+			<%
+			for (var i = 0; i < rows.maxContentLength; i++) {
+
+			%>
+				<tr>
+					<%
+					for (var j = 0; j < rows.titles.length; j++) {
+					%>
+						<td><%- rows.offersContent[j] ? rows.offersContent[j][i] : '<br>' %></td>
+					<%
+						}
+					%>
+				</tr>
+			<%
+			}
+
+			if (rows.pricesCount) {
+
+				%>
+				<tr>
+				<%
+
+				rows.prices.forEach(function(content, index) {
+
+					%>
+					<td class="price"><%- rows.prices[index] ? rows.prices[index] : '<br>' %></td>
+				<%
+				})
+
+			}
+			%>
+			</tr>
+
+			<tr>
+			<%
+			rows.CTAs.forEach(function(content, index) {
+
+				var trg = content.trg? ' data-trg="' + content.trg + '"' : ''
+					, btnClass = index == rows.primaryIndex? ' button-primary' : ''
+
+				%>
+				<td><a href="/contact/" class="button cta <%- btnClass %> u-full-width" <%- trg %>><%- content.label %></a></td>
+			<%
+			})
+			%>
+			</tr>
+
+
+		</tbody>
+
+</table>
+<!-- / pricing -->
