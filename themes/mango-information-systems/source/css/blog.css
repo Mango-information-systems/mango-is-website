@@ -53,3 +53,30 @@
 .post h1 small { color: #565656; font-size:70%; }
 .post h2 { font-size: 2rem; line-height: 1.05; color: #000; margin-top:2rem; }
 .post h3 { font-size: 1.6rem; line-height: 1.05; color: #000; margin-top:2rem; }
+
+
+/* Breadcrumbs*/
+
+#header ol, #header img {
+	display: inline;
+}
+
+#header ol {
+	margin-left: 50px;
+	list-style: none;
+	color: #565656;
+}
+
+#header a{
+	color: #565656;
+}
+
+#header li {    
+	display: inline;
+	margin-right: 25px;
+}
+#header li:before {    
+	font-family: 'FontAwesome';
+	content: '\f054';
+	margin:0 5px 0 -15px;
+}
