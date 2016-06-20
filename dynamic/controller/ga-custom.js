@@ -58,7 +58,7 @@ function GaCustom() {
 		
 		ctaParent.addEventListener('click', function(e) {
 
-			if (e.target.className.indexOf('cta') !== -1) {
+			if (e.target.tagName === 'A' && e.target.className.indexOf('cta') !== -1) {
 				debug('cta clicked')
 				
 				e.preventDefault()
