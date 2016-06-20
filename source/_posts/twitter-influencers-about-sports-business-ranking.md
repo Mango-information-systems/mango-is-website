@@ -8,7 +8,7 @@ description: What is the methodology to analyze a social media audience? This po
 author: mehdi
 thumbnail: img/blog/thumbnails/2013-11-05-twitter-influencers-about-sports-business-ranking.png
 css: [2013-11-05-twitter-influencers-about-sports-business-ranking.css]
-scripts: [https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js, js/2013-11-05-twitter-influencers-about-sports-business-ranking.js]
+scripts: [js/legacy/d3.v3.min.js, js/2013-11-05-twitter-influencers-about-sports-business-ranking.js]
 date: 2013-11-05
 ---
 

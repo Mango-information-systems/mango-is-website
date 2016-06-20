@@ -1,5 +1,5 @@
 <!-- begin contactForm -->
-<form id="contact-form" name="contact-form">
+<form id="contact-form" name="contact-form" data-trg="<%- page.trg %>">
 	<p>Send us a message, we'll follow-up shortly</p>
 
 	<fieldset>
@@ -72,6 +72,7 @@
 		<div id="contactFeedback"></div>
 		<div class="row">
 			<div class="ten columns offset-by-two">
+				<input type="text" id="fName" name="fName" placeholder="leave empty" class="u-full-width" style="display:none;" aria-hidden="true">
 				<button class="button-primary" id="contact-form-submit"><i class="fa fa-envelope" aria-hidden="true"></i> Send</button>
 			</div>
 		</div>
