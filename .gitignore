@@ -7,7 +7,6 @@ node_modules
 npm-debug.log*
 mango.sublime-project
 mango.sublime-workspace
-persist/
 public/
 source/css/font-awesome/
 themes/mango-information-systems/source/js/smoothscroll.min.js
