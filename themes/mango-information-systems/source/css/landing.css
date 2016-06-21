@@ -13,6 +13,12 @@ section
 	margin-right: -10000px;
 }
 
+@media (max-width: 960px) {
+
+  section { padding-top: 2.5em; padding-bottom:2.5em; }
+
+}
+
 section:nth-child(odd) {
 	background-color: #eee;
     background: url("/img/bg-pattern-2x.jpg") repeat fixed;
