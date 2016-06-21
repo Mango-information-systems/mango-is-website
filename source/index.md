@@ -2,6 +2,7 @@
 title: Smarter business decisions
 layout: landing
 date: 2016-04-01 14:36:46
+__index: true
 sections:
  -
   # top section
@@ -70,14 +71,14 @@ sections:
         alt: Emolytics logo
       - href: /img/clients/eeip.png
         alt: EEIP logo
- - 
+ -
   # section: About us
   content:
    -
     type: h2
     class: small
     value: tbd
- - 
+ -
   # section: CTA repeat
   content:
    -
