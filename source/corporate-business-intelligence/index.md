@@ -45,7 +45,7 @@ sections:
    - type: reference
      content:
       image:
-       href: http://placehold.it/600x600
+       href: /corporate-business-intelligence/img/dusan-jakovljevic.jpg
        alt: Dusan Jakovljevic
        width: 140px
        height: 140px
@@ -198,7 +198,7 @@ sections:
       name: Mehdi El Fadil
       title: BI specialist
       image:
-       href: http://placehold.it/600x600
+       href: /img/mehdi-el-fadil.jpg
        width: 140px
        height: 140px
       bio: "<p>
@@ -215,7 +215,7 @@ sections:
       name: Merih Koyuncu
       title: BI project manager
       image:
-       href: http://placehold.it/600x600
+       href: /corporate-business-intelligence/img/merih-koyuncu.jpg
        width: 140px
        height: 140px
       bio: "<p>
@@ -232,7 +232,7 @@ sections:
       name: Francesco Romeo
       title: BI architect
       image:
-       href: http://placehold.it/600x600
+       href: /corporate-business-intelligence/img/francesco-romeo.jpg
        alt:
        width: 140px
        height: 140px
@@ -253,7 +253,7 @@ sections:
       name: Fabrizio Fanelli
       title: BI Analyst and Project Manager
       image:
-       href: http://placehold.it/600x600
+       href: /corporate-business-intelligence/img/fabrizio-fanelli.jpg
        width: 140px
        height: 140px
       bio: "<p>
