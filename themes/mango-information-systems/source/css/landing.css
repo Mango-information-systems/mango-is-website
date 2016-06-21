@@ -33,7 +33,7 @@ section a.brand img {
 	margin-bottom: 120px;
 }
 
-div.landing section h1.small { line-height: 0.7; }
+div.landing section h1.small { line-height: 0.9; }
 div.landing section h1.small:before {
 	content: " ";
 	content:url('/img/m.png');
