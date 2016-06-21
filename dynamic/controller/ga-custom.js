@@ -13,8 +13,6 @@ var debug = window.appDebug('gaCustom')
 * * custom page views
 * * scrollDepth
 * 
-* @param {object} ga: the Google Analytics function
-* 
 * @constructor
 * 
 */
@@ -35,7 +33,7 @@ function GaCustom() {
 		debug('initializing gaCustom')
 		
 		if (typeof ga === 'undefined')
-			var ga = function() {void 0}
+			window.ga = function() {void 0}
 		
 		// initialize scrollDepth measurement
 		gascrolldepth.init({
