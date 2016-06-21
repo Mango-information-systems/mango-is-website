@@ -13,8 +13,7 @@
 		  Category: 
 			<a href="<%- url_for(post.categories.data[0].path) %>"><%- post.categories.data[0].name %></a> -
 	  <% } %>
-	  Published by
-	  <a href="<%- url_for(post.author) %>"><%- post.author %></a>
+	  Published by  <%- titlecase(post.author) %>
 	  
 	  on <time datetime="<%= date_xml(post.date) %>" itemprop="datePublished">
 	  <%= date(post.date, date_format) %></time>
