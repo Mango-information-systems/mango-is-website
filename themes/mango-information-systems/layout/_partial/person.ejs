@@ -1,14 +1,19 @@
 <!-- begin person -->
 <div class="row person">
 
-	<div class="column lg-eight lg-offset-by-two md-ten md-offset-by-one sm-twelve">
+	<div class="columns
+
+		lg-two lg-offset-by-one
+		md-two md-offset-by-one
+		sm-ten sm-offset-by-one">
 
 		<%- image_tag(data.image.href, {
-			class: 'u-img-responsive u-pull-left'
+			class: 'u-img-responsive u-pull-left profile-photo'
 			, alt: data.name
-			, width: data.image.width
-			, height: data.image.height
 		}) %>
+
+	</div>
+	<div class="columns lg-seven md-eight sm-twelve">
 
 		<%- data.bio %>
 
