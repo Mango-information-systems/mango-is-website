@@ -3,7 +3,8 @@
 
 	<div class="columns lg-two lg-offset-by-one
 		md-two md-offset-by-one
-		sm-ten sm-offset-by-one">
+		sm-six sm-offset-by-three
+		xs-six offset-by-three">
 
 		<%- image_tag(data.image.href, {
 			class: 'u-img-responsive u-pull-left profile-photo'
@@ -11,10 +12,20 @@
 		}) %>
 
 	</div>
-	<div class="columns lg-seven md-eight sm-twelve">
-		<h4><%- data.name %> - <%- data.title %></h4>
-		<%- data.bio %>
+	<div class="columns lg-seven md-eight sm-twelve xs-twelve">
+		<% if (data.name) { %>
 
+		<h4><%- data.name %>
+
+			<% if (data.title) { %>
+			<br><small><%- data.title %></small>
+			<% } %>
+
+		</h4>
+
+		<% } %>
+
+		<%- data.bio %>
 	</div>
 
 </div>
