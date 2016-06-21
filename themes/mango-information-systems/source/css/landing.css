@@ -15,7 +15,18 @@ section
 
 @media (max-width: 960px) {
 
+	/* Reduce the section padding on small screens so there isn't too much white space. */
+
   section { padding-top: 2.5em; padding-bottom:2.5em; }
+
+	section a.brand img {
+
+		/* positions the logo once the padding has been reduced on a section */
+		padding-top: 85px;
+
+		/* don't let the logo get too small */
+		min-width: 300px;
+	}
 
 }
 
@@ -40,6 +51,10 @@ div.landing section h1.small:before {
 	margin-right:0.5rem;
 	top: 0;
 	position:relative;
+}
+
+div.home section h1.small:before {
+	content: none;
 }
 
 /* PRICING TABLES */
