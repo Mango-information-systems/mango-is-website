@@ -5,7 +5,7 @@ author: Mango Information Systems
 description: Get the most out of your data-warehousing infrastructure. Mango Information Systems designs customer-oriented, performant reporting solutions.
 date: 2016-04-01 14:36:46
 sections:
- - 
+ -
   # top section: value proposition
   content:
    - type: h1
@@ -24,7 +24,7 @@ sections:
      primary: true
      trg: /view-packages
      href: "#packages"
- - 
+ -
   # second section: problem / solution
   content:
    - type: p
@@ -37,22 +37,22 @@ sections:
      value: Mango Information Systems can <strong>get your projects back on track</strong>, and <strong>cut your spending by half</strong>.
    - type: p
      value: Working with skilled consultants will not only <strong>improve the quality of the reporting</strong> projects you deliver, but also <strong>reduce your costs</strong> by decreasing the need for maintenance, and the overhead of BI projects.
- - 
+ -
   # third section: references
   content:
    - type: h2
      value: What our customers say
    - type: reference
      content:
-      image: 
-       href: /corporate-business-intelligence/img/dusan-jakovljevic.jpg
+      image:
+       href: http://placehold.it/600x600
        alt: Dusan Jakovljevic
        width: 140px
        height: 140px
       quote: Mehdi has provided exceptional data integration service to Energy Efficiency in Industrial Services
       author: Dusan Jakovljevic
       title: Director at Energy Efficiency in Industrial Processes (EEIP)
- - 
+ -
   # fourth section: client logos
   content:
    - type: h2
@@ -67,7 +67,7 @@ sections:
         alt: Deloitte logo
       - href: /img/clients/european-commission-logo.png
         alt: European Commission logo
- - 
+ -
   # fifth section: Features content
   content:
    - type: h2
@@ -198,7 +198,7 @@ sections:
       name: Mehdi El Fadil
       title: BI specialist
       image:
-       href: /img/mehdi-el-fadil.jpg
+       href: http://placehold.it/600x600
        width: 140px
        height: 140px
       bio: "<p>
@@ -215,7 +215,7 @@ sections:
       name: Merih Koyuncu
       title: BI project manager
       image:
-       href: /corporate-business-intelligence/img/merih-koyuncu.jpg
+       href: http://placehold.it/600x600
        width: 140px
        height: 140px
       bio: "<p>
@@ -232,7 +232,7 @@ sections:
       name: Francesco Romeo
       title: BI architect
       image:
-       href: /corporate-business-intelligence/img/francesco-romeo.jpg
+       href: http://placehold.it/600x600
        alt:
        width: 140px
        height: 140px
@@ -253,7 +253,7 @@ sections:
       name: Fabrizio Fanelli
       title: BI Analyst and Project Manager
       image:
-       href: /corporate-business-intelligence/img/fabrizio-fanelli.jpg
+       href: http://placehold.it/600x600
        width: 140px
        height: 140px
       bio: "<p>
