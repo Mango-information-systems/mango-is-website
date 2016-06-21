@@ -45,7 +45,7 @@ sections:
    - type: reference
      content:
       image:
-       href: /corporate-business-intelligence/img/dusan-jakovljevic.jpg
+       href: /corporate-business-intelligence/img/dusan-jakovljevic-large.jpg
        alt: Dusan Jakovljevic
        width: 140px
        height: 140px
