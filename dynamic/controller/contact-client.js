@@ -19,6 +19,8 @@ function Contact(app) {
 	
 	this.form = document.getElementById('contact-form')
 	
+	this.form.style.display = 'block'
+	
 	this.submitButton = document.getElementById('contact-form-submit')
 	this.contactFeedback = document.getElementById('contactFeedback')
 	
@@ -26,7 +28,7 @@ function Contact(app) {
 		listenToForm()
 	
 	/**
-	* form error
+	* notify user of form submission error
 	* 
 	* @param {object} : error object returned by server
 	* 
@@ -72,6 +74,36 @@ function Contact(app) {
 	}
 	
 	/**
+	* invalid form
+	* 
+	* @private
+	* 
+	*/		
+	function invalidForm() {
+		
+		self.contactFeedback.innerHTML = ('<div class="alert alert-danger"><p>At least an email address or a phone number is needed.</p><p>Please double-check your entry and try again.</p></div>')
+		
+	}
+	
+	/**
+	* validate form
+	* 
+	* Check that at either an email address or a phone number is typed in
+	* 
+	* @param {object} : form data
+	* 
+	* @param {function} : callback function
+	* 
+	* @private
+	* 
+	*/		
+	function isValidForm(form) {
+		
+		return form.email !== '' || form.phone !== ''
+		
+	}
+	
+	/**
 	* form submission listener
 	* 
 	* @param {HTMLElement} : the form
@@ -88,31 +120,48 @@ function Contact(app) {
 		
 			e.preventDefault()
 
-			self.submitButton.classList.add('disabled')
-			
 			var formData = formToObj(self.form)
 			
-			debug('submitting form', formData)
+			if (isValidForm(formData))
+				submitForm(formData)
+			else
+				invalidForm(formData)
 			
-			// double-check that the connection is active
-			if (typeof app.socket === 'undefined')
-				app.socket = app.io(window.location.hostname + ':3030')
-
-			app.socket.emit('contact', formData, function(err) {
-				if (err) {
-					formError(err)
-				}
-				else {
-					debug('form sent successfully')
-					formSent()
-				}
-				
-			})
-			
-			 var trg = self.form.getAttribute('data-trg') || 'not-set'
-			
-			app.gaCustom.toGa('pageview', {page: trg})
 		})
+	}
+	
+	/**
+	* send form to server
+	* 
+	* @param {object} : form data
+	* 
+	* @private
+	* 
+	*/		
+	function submitForm(form) {
+		
+		self.submitButton.classList.add('disabled')
+
+		debug('submitting form', form)
+
+		// double-check that the connection is active
+		if (typeof app.socket === 'undefined')
+			app.socket = app.io(window.location.hostname + ':3030')
+
+		app.socket.emit('contact', form, function(err) {
+			if (err) {
+				formError(err)
+			}
+			else {
+				debug('form sent successfully')
+				formSent()
+			}
+			
+		})
+		
+		 var trg = self.form.getAttribute('data-trg') || 'not-set'
+		
+		app.gaCustom.toGa('pageview', {page: trg})
 	}
 	
 }

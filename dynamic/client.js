@@ -11,5 +11,4 @@ app.gaCustom = new GaCustom()
 
 app.contact = new Contact(app)
 
-
 app.gaCustom.init()
