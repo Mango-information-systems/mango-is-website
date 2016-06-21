@@ -39,6 +39,7 @@ function GaCustom() {
 		gascrolldepth.init({
 			userTiming: false
 			, pixelDepth: false
+			, elements: ['#article-end']
 		})
 		
 		// client-side error reporting

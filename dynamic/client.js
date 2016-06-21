@@ -9,6 +9,7 @@ app.io = io
 
 app.gaCustom = new GaCustom()
 
-app.contact = new Contact(app)
-
 app.gaCustom.init()
+
+if (window.location.pathname === '/contact/')
+	app.contact = new Contact(app)

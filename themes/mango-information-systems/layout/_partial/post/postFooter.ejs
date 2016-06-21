@@ -1,7 +1,12 @@
 <!-- begin post.postFooter -->
-<% isIndex = isIndex || false %>
+<%
+	isIndex = isIndex || false
+	
+	var articleEndMarker = isIndex? '' : 'id="article-end" '
 
-<div class="postFooter">
+%>
+
+<div <%- articleEndMarker %>class="postFooter">
 	<small>
 	  
 	  <% if (post.categories && post.categories.length && !is_category()){ %>
