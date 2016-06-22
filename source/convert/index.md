@@ -85,8 +85,8 @@ sections:
        primary: true
        content:
         - Conversion rate measurement
-        -
-        -
+        - "<span class='u-text-center empty-cell'> ~ </span>"
+        - "<span class='u-text-center empty-cell'> ~ </span>"
        price: Starts at 960 &euro;
        CTA:
         label: Get a quote
@@ -96,7 +96,7 @@ sections:
        content:
         - Conversion rate measurement
         - Business Analysis
-        -
+        - "<span class='u-text-center empty-cell'> ~ </span>"
        price: Starts at 1 920 &euro;
        CTA:
         label: Get a quote

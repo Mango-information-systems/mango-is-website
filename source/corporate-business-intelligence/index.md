@@ -157,16 +157,18 @@ sections:
         - Data modeling
         - Acceptance and testing
         - Design of reports/dashboards
+        - "<span class='u-text-center empty-cell'> ~ </span>"
+        - "<span class='u-text-center empty-cell'> ~ </span>"
        CTA:
         label: Get a quote
         trg: /package-bi-analysis
       -
        title: Development
        content:
-        -
-        -
-        -
-        -
+        - "<span class='u-text-center empty-cell'> ~ </span>"
+        - "<span class='u-text-center empty-cell'> ~ </span>"
+        - "<span class='u-text-center empty-cell'> ~ </span>"
+        - "<span class='u-text-center empty-cell'> ~ </span>"
         - Development of ETL and reports
         - Code and knowledge management
        CTA:
