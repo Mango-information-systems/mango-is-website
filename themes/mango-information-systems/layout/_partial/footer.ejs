@@ -20,8 +20,8 @@
         <ul class="footer-navigation">
 
           <% for (var link in site.data.menu){
-			  
-			  var linkClass = site.data.menu[link] + 'index.html' === '/' + page.path ? ' class="active"' : ''
+
+			  var linkClass = is_current(site.data.menu[link].substring(1) + 'index.html') ? ' class="active"' : ''
 			  
 			  %>
               <li>
