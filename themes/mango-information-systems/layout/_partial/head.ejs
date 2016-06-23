@@ -21,6 +21,10 @@
 		<link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
 	<% } %>
 
+	<% if (config.url !== 'http://mango-is.com' && config.url !== 'https://mango-is.com'){ %>
+		<meta name="robots" content="noindex, nofollow">
+	<% } %>
+
 	<link href='https://fonts.googleapis.com/css?family=Roboto|Raleway:400' rel='stylesheet' type='text/css'>
 
 	<%- css('css/font-awesome/css/font-awesome.min') %>
