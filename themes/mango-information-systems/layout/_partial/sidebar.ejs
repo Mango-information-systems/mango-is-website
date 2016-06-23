@@ -1,8 +1,14 @@
 <!-- begin sidebar -->
-<aside id="sidebar"<% if (theme.sidebar === 'bottom'){ %> class="outer"<% } %>>
-yo
-  <% theme.widgets.forEach(function(widget){ %>
-    <%- partial('_widget/' + widget) %>
-  <% }) %>
+<aside id="sidebar">
+
+	<% for (var link in site.data.menu){
+	  if (['/terms/'].indexOf(site.data.menu[link]) === -1) {
+	  
+	  %>
+		<a href="<%- url_for(site.data.menu[link]) %>"><%= link %></a>
+		</br>
+  <% }
+  } %>
+
 </aside>
 <!-- / sidebar -->

@@ -1,11 +1,21 @@
 <!-- begin header -->
 <header id="header">
-	<a href="<%- url_for() %>" id="logo"><%- image_tag('/img/mango-information-systems-logo.png', {
-		alt: config.title,
-		class: "u-img-responsive"
-	}) %></a>
-	<% for (var i in theme.menu){ %>
-	  <a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
-	<% } %>
+
+		<div class="row">
+			<div class="md-six lg-four columns">
+				<a rel="home" href="<%- url_for() %>">
+					<%- image_tag('/img/mango-information-systems-logo.png', {
+						alt: config.title
+						, class: "u-img-responsive"
+					}) %>
+				</a>
+			</div>
+			<div class="md-three lg-four columns u-text-center">
+				<a href="<%- url_for('/') %>">Home</a>
+			</div>
+			<div class="md-three lg-four columns u-text-center">
+				<a href="<%- url_for('/blog') %>">Blog</a>
+			</div>
+		</div>
 </header>
 <!-- / header -->

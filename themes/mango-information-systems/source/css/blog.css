@@ -25,8 +25,8 @@
 
 .index h2 a, .category h2 a { text-decoration: none; }
 .index h2, .category h2  { font-size: 2rem; line-height: 1.05; }
-.index h2 small, .category h2 small  { color: #565656; font-size:70%; }
-.article-category small, .article-category a  { color: #565656; font-size:70%; text-decoration:none; }
+.index h2 small, .category h2 small  { color: #565656; font-size: 70%; }
+.article-category small, .article-category a  { color: #565656; font-size: 70%; text-decoration: none; }
 
 .archive-post { margin-bottom: 4rem; }
 
@@ -47,6 +47,7 @@
 
   .index h2, .category h2  { font-size: 1.6rem; line-height: 1.05; }
   .post-thumb { margin-bottom: 2rem; }
+  
 }
 
 /* POST */
@@ -59,28 +60,30 @@ article.post { margin-top: 3em; }
 .post h3 { font-size: 1.6rem; line-height: 1.05; color: #000; margin-top:2rem; }
 
 
-/* Breadcrumbs*/
-
-#header ol, #header img {
-	display: inline;
-}
-
-#header ol {
-	margin-left: 50px;
-	list-style: none;
+#header a, #sidebar a{
+	font-family: 'Raleway';
+	font-size: .8rem;
+	text-decoration: none;
 	color: #565656;
 }
 
-#header a{
-	color: #565656;
+#header a:hover, #sidebar a:hover{
+	text-decoration: underline;
 }
 
-#header li {    
-	display: inline;
-	margin-right: 25px;
+
+
+/* Blog sidebar - larger screens only */
+
+#sidebar {
+	display: none;
 }
-#header li:before {    
-	font-family: 'FontAwesome';
-	content: '\f054';
-	margin:0 5px 0 -15px;
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+
+	#sidebar {
+		display: block;
+		margin-top: 250px;
+	}
 }

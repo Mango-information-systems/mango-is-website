@@ -1,10 +1,21 @@
 <!-- begin layout.post -->
 <div class="page-wrapper">
 	<div class="container">
+			
 		<%- partial('_partial/header') %>
+		
+		<div class="row">
+			<div class="xs-eleven lg-eight offset-by-one columns">
+				
+				<%- partial('_partial/article', {post: page, index: false}) %>
+				
+			</div>
+			<div class="xs-eleven lg-two offset-by-one columns">
+			
+				<%- partial('_partial/sidebar') %>
 
-		<%- partial('_partial/article', {post: page, index: false}) %>
-
+			</div>
+		</div>
 		<%- partial('_partial/footer') %>
 
 	</div>
