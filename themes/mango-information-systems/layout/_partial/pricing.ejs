@@ -27,7 +27,7 @@ data.forEach(function(offer, index) {
 var tableWidthClass = data.length === 1? 'u-narrow' : 'u-full-width'
 
 %>
-
+<div class="table-responsive">
 <table class="<%- tableWidthClass %> pricing-table">
 		<thead>
 			<tr>
@@ -88,8 +88,7 @@ var tableWidthClass = data.length === 1? 'u-narrow' : 'u-full-width'
 			%>
 			</tr>
 
-
 		</tbody>
 
-</table>
+</table></div>
 <!-- / pricing -->
