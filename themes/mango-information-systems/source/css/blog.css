@@ -93,5 +93,11 @@ article.post { margin-top: 3em; }
 	#sidebar {
 		display: block;
 		margin-top: 250px;
+    #sidebar {
+    display: block;
+    margin-top: 250px;
+    border: 1px solid #bbb;
+    border-width: 1px 0;
+    padding: 0.5rem 0 0.2rem 0;
 	}
 }
