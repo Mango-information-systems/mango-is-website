@@ -3,10 +3,9 @@
 
 	<% for (var link in site.data.menu){
 	  if (['/terms/'].indexOf(site.data.menu[link]) === -1) {
-	  
+
 	  %>
 		<a href="<%- url_for(site.data.menu[link]) %>"><%= link %></a>
-		</br>
   <% }
   } %>
 
