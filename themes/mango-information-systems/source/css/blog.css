@@ -19,7 +19,7 @@
 
 .index h1, .category h1  {
   font-size: 2.2rem;
-  line-height: 1.1; 
+  line-height: 1.1;
   text-align: center;
 }
 
@@ -47,7 +47,7 @@
 
   .index h2, .category h2  { font-size: 1.6rem; line-height: 1.05; }
   .post-thumb { margin-bottom: 2rem; }
-  
+
 }
 
 /* POST */
@@ -65,6 +65,14 @@ article.post { margin-top: 3em; }
 	font-size: .8rem;
 	text-decoration: none;
 	color: #565656;
+}
+
+/* handle items that wrap to two lines */
+
+#sidebar a {
+    line-height: 1.1;
+    display: block;
+    margin: 0 0 0.5rem 0;
 }
 
 #header a:hover, #sidebar a:hover{
