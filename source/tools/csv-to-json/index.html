@@ -1,0 +1,244 @@
+---
+layout: false
+---
+<!DOCTYPE html>
+
+<html lang="en" itemscope itemtype="http://schema.org/WebPage" xmlns:og="http://ogp.me/ns#" manifest="/cache_manifest.cfm">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Online CSV to JSON converter - Mango IS</title>
+	<meta property="og:title" content="Online CSV to JSON converter" />
+	<meta itemprop="name" content="Online CSV to JSON converter">
+	<meta property="og:type" content="blog" />
+    <meta property="og:description" content="Easy, privacy-friendly and offline-first online csv to json converter" />
+    <meta itemprop="description" content="Easy, privacy-friendly and offline-first online csv to json converter">
+    <meta property="og:url" content="/tools/csv-to-json/" />
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@mango_info">
+	<meta name="twitter:creator" content="@mango_info ">
+	<link rel="canonical" href="/tools/csv-to-json/"/>
+    <meta property="og:image" content="/tools/img/thumbnails/2015-01-08-csv-to-json.png" />
+    <meta itemprop="image" content="/tools/img/thumbnails/2015-01-08-csv-to-json.png">
+	<meta name="subject" content="Online CSV to JSON converter"/>
+	<meta name="description" content="Easy, privacy-friendly and offline-first online csv to json converter" />
+	<meta name="author" content="Mango Information Systems" />
+	<meta name="format" content="html"/>
+	<meta name="language" content="en"/>
+	
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="/css/legacy/bootstrap.min.css" type="text/css"/>
+	<link rel="stylesheet" href="/css/legacy/bootstrap-responsive.min.css" type="text/css"/>
+	<link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+	
+		
+	<link rel="stylesheet" href="/css/legacy/2015-01-08-csv-to-json.css" type="text/css"/>
+		
+	
+
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Le fav and touch icons -->
+	<link rel="shortcut icon" href="/img/favicon.png">
+	
+</head>
+<body>
+
+	
+		<div class="container-fluid">
+		<div class="navbar">
+			<div class="navbar-inner">
+				<div class="container">
+					<a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</a>
+					<a rel="home" href="/" class="brand">
+						<img alt="Mango Information Systems" src="/img/mango-information-systems-logo.png">
+					</a>
+					<div class="nav-collapse">
+						<ul class="nav">
+							<li><a href="">Home</a></li>
+							<li><a href="/convert/">Conversion optimization</a></li>
+							<li class="active"><a href="/blog/">Blog</a></li>
+							<li><a class="contact" href="/contact/">Contact</a></li>
+						</ul>
+					</div><!--/.nav-collapse -->
+				</div>
+			</div>
+		</div>
+	
+	<div class="row-fluid">
+	<div class="span12">
+		<article>
+			<h1 id="Online%20CSV%20to%20JSON%20converter">Online CSV to JSON converter</h1>
+
+			<div id="post">
+			<noscript>
+	<span class="alert alert-error">Please activate javascript in order to use the application.</span>
+</noscript>
+
+<div id="appWrapper">
+	<div id="csvSelectorPane">
+		<div class="row-fluid">
+			<div id="dropZone" class="span4 offset1">
+				<h2>New conversion</h2>
+				<p>
+					<span>Drop or <strong>select a file</strong></span><br>
+					<input id="fileSelect" type="file"/>
+				</p>
+				<p>
+					Or <strong>paste CSV</strong> text <small><a id="sampleCSV">sample</a></small>
+				</p>
+				<div class="form-control">
+					<textarea id="csvText" class="span12" placeholder="Paste from spreadsheet" rows="7"></textarea>
+					<div id="progress" style="float:right; min-height: 5px; width: 100%;background-color: #26963c;"></div>
+				</div>
+				<p>
+					Or <strong>enter a URL</strong>
+				</p>
+				<div class="form-control">
+					<input type="url" name="csvUrl" id="csvUrl" class="span12" placeholder="Type CSV Url then press Enter"/>
+				</div>
+				<div id="dropPlaceHolder">
+					<br>
+					<p class="text-center muted">Drop file here</p>
+				</div>
+			</div>
+			<div class="span4">
+				<h2>Your files</h2>
+				<div id="filesList">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="previewPane">
+	</div>
+
+	<div id="resultsPane">
+	</div>
+</div>
+
+<br>
+
+<div class="row-fluid">
+	<div class="span4 offset1">
+		<h2>About</h2>
+		<p>This tools lets you convert CSV data to JSON format in a few clicks.</p>
+		<h3>Offline first</h3>
+		<p>You can use the converter even when you're not connected to the Internet, it just works.</p>
+		<h3>Privacy friendly</h3>
+		<p>Your data never leaves your browser, thanks to the <a href="https://developer.mozilla.org/en-US/docs/Using_files_from_web_applications" target="_blank">HTML5 File API</a>.</p>
+		<h3>Design</h3>
+		<p>We focused on making it easy and efficient. Do not hesitate to <a href="https://github.com/Mango-information-systems/mango-is-website/issues">contact us</a> to suggest improvements.</p>
+		<h3>Powerful</h3>
+		<p>We've made sure that large files also get converted and don't lock your browser.</p>
+		<h3>Open source</h3>
+		<p>You can find the source code of this app <a href="https://github.com/Mango-information-systems/mango-is-website/tree/master/tools/csv-to-json">on Github</a>.</p>
+		<p>We use the open source library <a href="http://papaparse.com/" target="_blank">papaParse</a> to perform the conversions.</p>
+	</div>
+	<div class="span4">
+		<h2>How it works</h2>
+		<ol>
+			<li>Load file or paste your CSV data</li>
+			<li>Preview results and adapt parameters if necessary</li>
+			<li>Get the results</li>
+		</ol>
+	</div>
+</div>
+
+			<br/>
+			</div>
+			<hr/>
+			<div>
+				
+			</div>
+		</article>
+	</div>
+</div>
+
+	</div>
+	<footer>
+		<div class="container">
+			<div class="span5">
+				<small>
+					<div itemscope itemtype="http://schema.org/Organization">
+	<div>
+		<a rel="home" href="/" class="brand">
+			<img itemprop="logo" alt="logo of Mango Information Systems" src="/img/mango-information-systems-logo.png" />
+		</a>
+	</div>
+	<div>
+		<p><span itemprop="name">Mango Information Systems SPRL</span></p>
+	</div>
+	<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+		<p>
+			<span itemprop="streetAddress">Rue des pères blancs, 4</span><br>
+			<span itemprop="postalCode">1040</span> 
+			<span itemprop="addressLocality">Etterbeek</span><br>
+			<span itemprop="addressRegion">Brussels</span>, 
+			<span itemprop="addressCountry">Belgium</span>.
+		</p>
+	</div>
+	<div>
+		<p>
+			VAT: <span itemprop="vatID">BE 0829.240.825</span> <span itemprop="taxID" content="0829.240.825"></span><br>
+		</p>
+	</div>
+	<div>
+		<p>
+			<a href="http://mango-is.com/" itemprop="url">http://mango-is.com</a><br>
+			linkedIn: <a itemprop="sameAs" href="http://www.linkedin.com/company/mango-information-systems-sprl" target = "_blank">company page</a><br>
+			twitter: <a itemprop="sameAs" href="http://twitter.com/mango_info" target = "_blank">@mango_info</a>
+		</p>
+	</div>
+	<div itemprop="location">
+		<span itemscope itemtype="http://schema.org/Place">
+			<div itemprop="geo">
+				<span itemscope itemtype="http://schema.org/GeoCoordinates">
+					<span property="latitude" content="50.826702"></span>
+					<span property="longitude" content="4.4002322"></span>
+				</span>
+			</div>
+		</span>
+	</div>
+</div>
+
+				</small>
+			</div>
+			<div class="span6">
+				<small>
+					<ul class="unstyled">
+						<li><a href="/convert/">Conversion optimization</a></li>
+						<li class="active"><a href="/blog/">Blog</a></li>
+						<li><a href="/terms/">Copyright - terms of use</a></li>
+						<li><a class="contact" href="/contact/">Contact</a></li>
+					</ul>
+				</small>
+			</div>
+		</div>
+	</footer>
+
+	<script src="/js/legacy/jquery.js"></script>
+	<script src="/js/legacy/bootstrap.min.js"></script>
+	
+	<script src="/js/legacy/underscore-min.js"></script>
+
+	<script src="/js/legacy/localforage.nopromises.min.js"></script>
+
+	<script src="/js/legacy/papaparse.min.js"></script>
+
+	<script src="/js/legacy/2015-01-08-csv-to-json.js"></script>
+		
+	
+
+</body>
+</html>
