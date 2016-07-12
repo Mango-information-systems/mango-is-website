@@ -1,0 +1,22 @@
+CACHE MANIFEST
+#3.0.0
+
+CACHE:
+/css/legacy/bootstrap.min.css
+/css/legacy/bootstrap-responsive.min.css
+/css/legacy/2015-01-08-csv-to-json.css
+/img/mango-information-systems-logo.png
+/img/legacy/glyphicons-halflings-white.png
+/img/legacy/glyphicons-halflings.png
+/js/legacy/jquery.js
+/js/legacy/bootstrap.min.js
+/js/legacy/underscore-min.js
+/js/legacy/localforage.nopromises.min.js
+/js/legacy/papaparse.min.js
+/js/legacy/2015-01-08-csv-to-json.js
+
+FALLBACK:
+/ /offline.html
+
+NETWORK:
+*
