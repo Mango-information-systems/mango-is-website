@@ -9,13 +9,16 @@ Branding: All rights reserved to the copyright holder: Mango Information Systems
 
 ## setup
 
-Depends on hexo: `npm install hexo-cli -g`
+1. Install hexo-cli as a global dependency: `npm install hexo-cli -g`
+2. clone this repository `git clone https://github.com/Mango-information-systems/mango-is-website.git`
+3. install node dependencies: `cd mango-is-website; npm install`
+4. create `_config.yml` file based on `_config.yml-sample` and fill it with your own data
+5. create `themes/mango-information-systems/_config.yml` file based on `themes/mango-information-systems/_config.yml-sample` and fill it with your own data
 
-Install by cloning the repo, then running `npm install`.
+Then:
+* Develop with `npm start`. (serves a development version, while watching changes in the site content or CSS framework...)
+* Build with `npm run build`
 
-Develop with `npm start`. (serves a development version, while watching changes in the site content or CSS framework...)
-
-Build for production with `npm build`. (not yet functional)
 
 ## Development
 
