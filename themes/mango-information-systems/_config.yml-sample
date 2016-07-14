@@ -1,0 +1,25 @@
+# Header
+menu:
+  Home: /
+# rss: /atom.xml
+
+# Content
+excerpt_link: Read More
+fancybox: true
+
+# Sidebar
+widgets:
+- category
+- recent_posts
+
+# display widgets at the bottom of index pages (pagination == 2)
+#index_widgets:
+# - category
+
+# widget behavior
+show_count: false
+
+# Miscellaneous
+google_analytics: "UA-25766439-6"
+favicon: /img/favicon.png
+twitter: mango_info
