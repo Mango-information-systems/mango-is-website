@@ -20,6 +20,6 @@ widgets:
 show_count: false
 
 # Miscellaneous
-google_analytics: "UA-25766439-6"
+google_analytics: "UA-XXXXXXXX-Y"
 favicon: /img/favicon.png
-twitter: mango_info
+twitter: your_handle
