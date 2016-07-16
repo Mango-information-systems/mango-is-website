@@ -1,5 +1,6 @@
 var debug = require('debug')('contact')
 	, params = require('../params.json')
+	, path = require('path')
 	, storage = require('node-persist')
 	, xssFilters = require('xss-filters')
 	, validator = require('validator')
@@ -15,7 +16,9 @@ function Contact() {
 	
 	var self = this
 	
-	storage.init()
+	storage.init({
+		dir: path.resolve(__dirname + '/../../persist')
+	})
 	
 	// requires to activate access for less secure apps here: https://www.google.com/settings/security/lesssecureapps
 	var mailer = nodemailer.createTransport('smtps://' + params.mail.user + ':' + params.mail.pass + '@smtp.gmail.com')
