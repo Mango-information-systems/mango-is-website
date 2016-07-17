@@ -16,13 +16,6 @@ sections:
     class: small
     value: Mango works the data to help you take smarter decisions.
  -
-  # section: problem / solution + benefits
-  content:
-   -
-    type: h2
-    class: small
-    value: tbd
- -
   # section: offer
   content:
    -
@@ -76,13 +69,25 @@ sections:
   content:
    -
     type: h2
-    class: small
-    value: tbd
+    value: About us
+   -
+    type: p
+    value: Mango Information Systems is a <strong>Business Intelligence</strong> company helping organizations get <strong>more successful in the digital world</strong>.
+   -
+    type: p
+    value: We operate since 2010 from Brussels, Belgium.
+   -
+    type: p
+    value: "We act as a bridge between business and technical teams, and provide the following type of services:"
+   - type: ul
+     value: "<li>Contracting authority support</li>
+			<li>Strategic consulting</li>
+			<li>Technical experts in complex data-intensive projects</li>"
  -
   # section: CTA repeat
   content:
    -
     type: h2
     class: small
-    value: CTA repeat (tbd)
+    value: CTA repeat (buttons)
 ---
