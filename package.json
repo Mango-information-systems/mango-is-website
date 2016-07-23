@@ -9,7 +9,7 @@
     "build:static": "./bin/build-css.sh",
     "build:js": "browserify dynamic/client.js -o source/js/site.js -v",
     "build:skeleton": "cd skeleton-framework && npm run build",
-    "deploy": "sudo cp -rp public/* /var/www/mango-is/; sudo chown -R www-data:www-data /var/www/mango-is; sudo cp -rp dynamic/* /home/srv-node-mango/; sudo chown -R srv-node-mango:srv-node-mango /home/srv-node-mango; sudo systemctl restart node-mango-is",
+    "deploy": "./bin/deploy.sh",
     "postinstall": "git submodule update --init --recursive; cd skeleton-framework; npm install",
     "start:socketServer": "node ./dynamic/server",
     "test": "node_modules/.bin/mocha",
