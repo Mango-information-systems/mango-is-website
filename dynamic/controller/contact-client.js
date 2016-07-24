@@ -144,11 +144,10 @@ function Contact(app) {
 
 		debug('submitting form', form)
 
-
 		// double-check that the connection is active
 		if (typeof app.socket === 'undefined') {
 			
-			var suffix = process.env.NODE_ENV === 'production'? '/ws/' : ':3030'
+			var suffix = window.location.hostname === 'localhost'? ':3030' : '/ws/'
 			
 			app.socket = app.io(window.location.hostname + suffix)
 		}
