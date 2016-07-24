@@ -147,9 +147,7 @@ function Contact(app) {
 		// double-check that the connection is active
 		if (typeof app.socket === 'undefined') {
 			
-			var suffix = window.location.hostname === 'localhost'? ':3030' : '/ws/'
-			
-			app.socket = app.io(window.location.hostname + suffix)
+			app.socket = app.io(window.location.origin, {path: '/ws/'})
 		}
 
 		app.socket.emit('contact', form, function(err) {

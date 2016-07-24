@@ -1,4 +1,4 @@
-var io = require('socket.io')()
+var io = require('socket.io')({ path: '/ws/'})
 	, Contact = require('./controller/contact-server')
 	, debug = require('debug')('server')
 
