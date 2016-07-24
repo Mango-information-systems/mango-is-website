@@ -17,7 +17,7 @@ function Contact() {
 	var self = this
 	
 	storage.init({
-		dir: path.resolve(__dirname + '/../../persist')
+		dir: path.resolve(__dirname + '/../persist')
 	})
 	
 	// requires to activate access for less secure apps here: https://www.google.com/settings/security/lesssecureapps
