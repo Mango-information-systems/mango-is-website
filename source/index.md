@@ -64,6 +64,8 @@ sections:
         alt: Emolytics logo
       - href: /img/clients/eeip.png
         alt: EEIP logo
+      - href: /img/clients/smoall.png
+        alt: smoall logo
  -
   # section: About us
   content:
