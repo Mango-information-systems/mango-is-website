@@ -70,6 +70,7 @@ sections:
 				<li>user experience improvements</li>
 				<li>SEO</li>
 				<li>performance tuning</li>"
+      - content: []
  -
   # sixth section: Pricing
   content:
