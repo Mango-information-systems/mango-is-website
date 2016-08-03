@@ -88,8 +88,18 @@ sections:
  -
   # section: CTA repeat
   content:
-   -
-    type: h2
-    class: small
-    value: CTA repeat (buttons)
+   - type: columns
+     columns:
+      - content:
+        - type: div
+          value: " \
+		<a class='button u-full-width' href='/convert/'><i class='fa fa-filter' aria-hidden='true'></i> Conversion optimization</a> \
+		<br><br><a class='button u-full-width' href='/contact/'><i class='fa fa-pie-chart' aria-hidden='true'></i> Data-driven web applications</a> \
+		"
+      - content:
+        - type: div
+          value: " \
+		<a class='button u-full-width' href='/corporate-business-intelligence/'><i class='fa fa-bar-chart' aria-hidden='true'></i> Corporate Business Intelligence</a> \
+		<br><br><a class='button u-full-width' href='/contact/'><i class='fa fa-users' aria-hidden='true'></i> Social media audience Analytics</a> \
+		"
 ---
