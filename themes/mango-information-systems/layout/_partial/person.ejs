@@ -2,13 +2,15 @@
 <div class="row person">
 
 	<div class="columns lg-two lg-offset-by-one
-		md-two md-offset-by-one
-		sm-six sm-offset-by-three
-		xs-six offset-by-three">
+		md-two lg-offset-by-three
+		sm-six sm-offset-by-zero
+		xs-six">
 
 		<%- image_tag(data.image.href, {
 			class: 'u-img-responsive u-pull-left profile-photo'
 			, alt: data.name
+			, width: data.image.width || ''
+			, height: data.image.height || ''
 		}) %>
 
 	</div>
