@@ -20,6 +20,10 @@
 		<%- favicon_tag(theme.favicon) %>
 	<% } %>
 
+	<!--[if lt IE 9]>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+	
 	<% if (config.highlight.enable){ %>
 		<link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
 	<% } %>
@@ -49,4 +53,5 @@
 	<% } %>
 
 	<%- partial('google-analytics') %>
+	
 </head>
