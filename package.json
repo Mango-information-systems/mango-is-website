@@ -3,7 +3,7 @@
   "version": "3.0.0",
   "private": true,
   "scripts": {
-    "start": "npm run build:static && npm run watch & hexo server & npm run watch:socketServer",
+    "start": "npm run build:static && cp config/dev.theme._config.yml themes/mango-information-systems/_config.yml && npm run watch & hexo server & npm run watch:socketServer",
     "build:test": "npm run build:assets && cp config/test.theme._config.yml themes/mango-information-systems/_config.yml && hexo generate  --config config/test._config.yml",
     "build:prod": "npm run build:assets && cp config/prod.theme._config.yml themes/mango-information-systems/_config.yml && hexo generate  --config config/prod._config.yml",
     "build:assets": "npm run build:static && npm run build:js && npm run build:skeleton",
