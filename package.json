@@ -1,6 +1,6 @@
 {
   "name": "mango-is-website",
-  "version": "3.0.0-wip",
+  "version": "3.0.0",
   "private": true,
   "scripts": {
     "start": "npm run build:static && npm run watch & hexo server & npm run watch:socketServer",
