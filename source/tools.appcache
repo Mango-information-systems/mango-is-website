@@ -16,7 +16,7 @@ CACHE:
 /js/legacy/2015-01-08-csv-to-json.js
 
 FALLBACK:
-/ /offline.html
+/ /offline/
 
 NETWORK:
 *
