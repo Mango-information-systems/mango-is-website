@@ -55,24 +55,25 @@ function GaCustom() {
 		// CTA clicks tracking
 		var ctaParent = document.getElementsByClassName('page-wrapper')[0]
 		
-		ctaParent.addEventListener('click', function(e) {
+		if (typeof ctaParent !== 'undefined') {
+		
+			ctaParent.addEventListener('click', function(e) {
 
-			if (e.target.tagName === 'A' && e.target.className.indexOf('cta') !== -1) {
-				debug('cta clicked')
-				
-				e.preventDefault()
-				
-				var trg = e.target.getAttribute('data-trg')
+				if (e.target.tagName === 'A' && e.target.className.indexOf('cta') !== -1) {
+					debug('cta clicked')
+					
+					e.preventDefault()
+					
+					var trg = e.target.getAttribute('data-trg')
 
-				self.toGa('pageview', {page: trg})
-				
-				setTimeout(function() {
-					window.location = e.target.getAttribute('href')
-				}, 0)
-			}
-			
-
-		})
+					self.toGa('pageview', {page: trg})
+					
+					setTimeout(function() {
+						window.location = e.target.getAttribute('href')
+					}, 0)
+				}
+			})	
+		}
 		
 	}
 	
