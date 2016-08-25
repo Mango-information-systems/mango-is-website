@@ -11,7 +11,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<%- open_graph({
 		twitter_id: theme.twitter
-		, image: page.thumbnail
+		, image: page.thumbnail || 'img/default-thumbnail.png'
 	}) %>
 	<% if (theme.rss){ %>
 		<link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
