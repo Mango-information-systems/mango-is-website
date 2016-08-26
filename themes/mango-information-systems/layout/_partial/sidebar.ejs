@@ -8,6 +8,8 @@
 		<a href="<%- url_for(site.data.menu[link]) %>"><%= link %></a>
   <% }
   } %>
+  
+  <a title="rss feed" href="<%- url_for('/blog/atom.xml') %>"><i class="fa fa-rss-square" aria-label="RSS feed"></i></a>
 
 </aside>
 <!-- / sidebar -->
