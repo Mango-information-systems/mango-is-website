@@ -13,9 +13,6 @@
 		twitter_id: theme.twitter
 		, image: page.thumbnail || 'img/default-thumbnail.png'
 	}) %>
-	<% if (theme.rss){ %>
-		<link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
-	<% } %>
 	<% if (theme.favicon){ %>
 		<%- favicon_tag(theme.favicon) %>
 	<% } %>
@@ -46,6 +43,7 @@
 	%>
 
 	<% if (is_post() || is_archive() || is_category()) { %>
+		<%- feed_tag('/blog/atom.xml', {title: 'Mango Information Systems blog'}) %>
 		<%- css('css/blog') %>
 	<% }
 		else { %>
