@@ -16,6 +16,7 @@ Branding: All rights reserved to the copyright holder: Mango Information Systems
 5. create `_config.yml` (in project's root directory), `config/test._config.yml` and `config/prod._config.yml` files based on `config/_config.yml-sample`
 6. create `config/dev.theme._config.yml`, `config/test.theme._config.yml` and `config/prod.theme._config.yml` files, based on `theme._config.yml-sample`
 7. create `config/test.robots.txt` and `config/prod.robots.txt` files
+8. create `dynamic/params.json`, based on `dynamic/params-sample.json`
 
 ## Development
 
