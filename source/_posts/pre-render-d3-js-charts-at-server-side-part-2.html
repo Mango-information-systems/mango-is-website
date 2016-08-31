@@ -1,0 +1,21 @@
+---
+title: Pre-render d3.js charts at server side, part 2
+subtitle: 'Universal dynamic charts'
+description: Demonstration of how to pre-render d3.js data visualizations at server side, and have them dynamically updated on the client.
+category: engineering
+language: en
+author: mehdi
+thumbnail: img/blog/thumbnails/2013-10-23-pre-render-d3-js-charts-at-server-side.png
+scripts: [js/legacy/d3.v3.min.js, js/2016-08-31-pre-render-d3-js-charts-at-server-side-part-2.js]
+prevArticle: /blog/engineering/pre-render-d3-js-charts-at-server-side/
+date: 2016-08-31
+---
+
+<p><a href="http://d3js.org/" target="_blank">d3.js</a> is one of the best things that happened to data visualization on the web: full-featured, robust, and customizable...</p>
+
+<p>As it is usually used in browser environments, there are some benefits in using it on servers. In the <a href="">first article of this series</a>, we saw why and how pre-rendering charts on the server was interesting.</p>
+
+<p>The main goal is to do the heavy-lifting on the server in order to reduce page load time and other burden for the website visitors, while keeping all the power offered by d3.js, in terms of interactions in the browser.</p>
+
+<p>In this follow-up post we'll expand the concept so that it's possible to <strong>update the chart in the client</strong>, by re-using the server-generated data binding on the client</p>.
+
