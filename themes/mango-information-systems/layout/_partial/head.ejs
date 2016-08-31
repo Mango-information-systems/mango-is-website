@@ -42,7 +42,17 @@
 		}
 	%>
 
-	<% if (is_post() || is_archive() || is_category()) { %>
+	<link rel="canonical" href="<%- url_for(page.path).replace( /(\/index\.html?$)|(\/?$)/, '') %>"/>
+
+	
+	<% if (page.prevArticle) { %>
+		<link rel="prev" href="<%- url_for(page.prevArticle) %>" />
+	<% }
+	if (page.nextArticle) { %>
+		<link rel="next" href="<%- url_for(page.nextArticle) %>" />
+	<% }
+
+	if (is_post() || is_archive() || is_category()) { %>
 		<%- feed_tag('/blog/atom.xml', {title: 'Mango Information Systems blog'}) %>
 		<%- css('css/blog') %>
 	<% }
