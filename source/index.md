@@ -36,7 +36,7 @@ sections:
       href: /contact/
       trg: /package-web-apps
       title: <i class="fa fa-pie-chart" aria-hidden="true"></i> Data-driven web applications
-      text: Text
+      text: Smart apps with real-time data analysis and visualization
    - type: card
      content:
       href: /contact/
