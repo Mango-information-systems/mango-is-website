@@ -13,3 +13,9 @@ app.gaCustom.init()
 
 if (window.location.pathname === '/contact/')
 	app.contact = new Contact(app)
+
+console.log(pageAccelerator)
+
+pageAccelerator(function(err, res) {
+	console.log('page loaded', err, res)
+})
