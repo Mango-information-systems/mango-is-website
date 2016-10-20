@@ -42,8 +42,7 @@
 		}
 	%>
 
-	<link rel="canonical" href="<%- url_for(page.path).replace( /(\/index\.html?$)|(\/?$)/, '') %>"/>
-
+	<link rel="canonical" href="<%- config.url %><%- url_for(page.path).replace( /(\/index\.html?$)|(\/?$)/, '/') %>"/>
 	
 	<% if (page.prevArticle) { %>
 		<link rel="prev" href="<%- url_for(page.prevArticle) %>" />
