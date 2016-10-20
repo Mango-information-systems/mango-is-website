@@ -3,6 +3,12 @@
 	<meta charset="utf-8">
 	<%
 	var title = page.title
+	
+	if (typeof page.subtitle !== 'undefined')
+		title = title + ' - ' + page.subtitle
+
+	if (is_archive())
+		title = 'blog'
 
 	if (is_category())
 		title = page.category
@@ -10,7 +16,8 @@
 	<title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<%- open_graph({
-		twitter_id: theme.twitter
+		title: title
+		, twitter_id: theme.twitter
 		, image: page.thumbnail || 'img/default-thumbnail.png'
 	}) %>
 	<% if (theme.favicon){ %>
