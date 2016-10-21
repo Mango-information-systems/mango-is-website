@@ -27,6 +27,11 @@ function setContent(content) {
 					partial('_partial/reference', {data: content.content})
 				%><%
 			break
+			case 'post':%>
+				<%-
+					partial('_partial/archive-post', {post: content.content, index: true})
+				%><%
+			break
 			case 'client-logos':%>
 				<%-
 					partial('_partial/client-logos', {data: content.logos})
