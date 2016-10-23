@@ -64,8 +64,7 @@ article.post { margin-top: 3em; }
 	font-family: 'Raleway';
 	font-size: .8rem;
 	text-decoration: none;
-	color: #565656;
-}
+	color: #565656;}
 
 /* handle items that wrap to two lines */
 
@@ -79,8 +78,6 @@ article.post { margin-top: 3em; }
 	text-decoration: underline;
 }
 
-
-
 /* Blog sidebar - larger screens only */
 
 #sidebar {
@@ -93,5 +90,8 @@ article.post { margin-top: 3em; }
 	#sidebar {
 		display: block;
 		margin-top: 250px;
+		padding-left: 1.2rem;
+		border-left: 1px solid #cccccc;
+
 	}
 }

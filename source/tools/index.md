@@ -12,12 +12,12 @@ sections:
    - type: h1
      class: small
      value: Tools
- -
-  # List of tools
-  content:
    - type: h2
      class: small
      value: We love open source :)
+ -
+  # List of tools
+  content:
    - type: post
      content:
       class: index

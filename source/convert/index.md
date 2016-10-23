@@ -20,7 +20,7 @@ sections:
    - type: p
      value: <small><em>Let the web serve your business</em></small>
    - type: cta
-     value: View offers
+     value: View offers <i class="fa fa-chevron-down"></i>
      primary: true
      trg: /view-packages
      href: "#packages"
@@ -90,7 +90,7 @@ sections:
         - "<span class='u-text-center empty-cell'> ~ </span>"
        price: Starts at 960 &euro;
        CTA:
-        label: Get a quote
+        label: Get a quote <i class="fa fa-chevron-right"></i>
         trg: /package-conversion-analytics
       -
        title: Consulting
@@ -100,7 +100,7 @@ sections:
         - "<span class='u-text-center empty-cell'> ~ </span>"
        price: Starts at 1 920 &euro;
        CTA:
-        label: Get a quote
+        label: Get a quote <i class="fa fa-chevron-right"></i>
         trg: /package-conversion-consulting
       -
        title: Full service
@@ -110,7 +110,7 @@ sections:
         - Implementation
        price: Starts at 2 880 &euro;
        CTA:
-        label: Get a quote
+        label: Get a quote <i class="fa fa-chevron-right"></i>
         trg: /package-conversion-full
  -
   # seventh section: team
@@ -157,7 +157,7 @@ sections:
    - type: h2
      value: Let's talk!
    - type: cta
-     value: Contact us
+     value: <i class="fa fa-envelope"></i> Contact us
      class: contact
      primary: true
      href: /contact/
