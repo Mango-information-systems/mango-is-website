@@ -8,7 +8,7 @@ var storage = require('localforage')
 * @constructor
 * 
 *********************************************************/
-function Storage(app) {
+function Storage() {
 
 	var self = this
 
