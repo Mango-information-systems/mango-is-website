@@ -38,12 +38,17 @@ function StateManager(app) {
 	
 	
 	/**
-	* titi
+	* initialize application
 	* 
 	* @param {object} name
 	* 
 	*/	
-	this.titi = function() {}
+	this.init = function() {
+		
+		debug('initializing app')
+		
+		
+	}
 	
 }
 

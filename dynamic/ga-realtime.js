@@ -17,8 +17,6 @@ app.controller.stateManager = new StateManager(app)
 /**
 * initialize analytics API controller once the googgle Analytics javascript client library script is loadeed
 * 
-* @constructor
-* 
 */
 window.gApiLoaded = function() {
 	app.controller.analyticsApi = new AnalyticsApi(gapi)
