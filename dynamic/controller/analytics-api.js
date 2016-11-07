@@ -13,20 +13,24 @@ var debug = window.appDebug('analyticsApi')
 * @constructor
 * 
 */
-function AnalyticsApi(gapi) {
+function AnalyticsApi(gapi, callback) {
 	
 	console.log('instantiating analyticsApi')
 	
-	
+	// load the API client
 	gapi.load('client:auth2', function() {
 		
         gapi.auth2.init({
 			client_id: '920031075835-45tvjaphsuuqg4psqfbseuh04md7tes1.apps.googleusercontent.com'
+			, scope: 'https://www.googleapis.com/auth/analytics.readonly'
         }).then(function () {
 
-          auth2 = gapi.auth2.getAuthInstance()
-          console.log(auth2)
-		
+			debug('gapi client initialized', gapi.auth2.getAuthInstance())
+          
+			gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus)
+          
+			callback()
+        
 		})
 	})
 	
@@ -71,6 +75,21 @@ function AnalyticsApi(gapi) {
 		
 		
 	}
+	
+	/**
+	* listener
+	* 
+	* @return {} 
+	* 
+	* @private
+	* 
+	*/		
+	function updateSigninStatus (isSignedIn) {
+        
+		console.log('updateSigninStatus', isSignedIn)
+		
+		
+	}
 		
 	
 	/******************************************
@@ -80,12 +99,24 @@ function AnalyticsApi(gapi) {
 	 * ***************************************/
 
 	/**
-	* titi
+	* Sign iin with Google
 	* 
-	* @param {object} name
+	* @return {string} access token
 	* 
 	*/	
-	this.titi = function() {}
+	this.signIn = function() {
+		
+		debug('signing user in')
+		
+		gapi.auth2.getAuthInstance().signIn()
+		
+		//~ console.log('auth2', gapi.auth2)
+
+		return gapi.auth2.getAuthInstance().currentUser.get().getAuthResponse().access_token
+		
+		
+		
+	}
 	
 }
 

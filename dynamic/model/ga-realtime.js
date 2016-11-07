@@ -21,14 +21,14 @@ function Storage() {
 	* @return {string} the corresponding storage value
 	* 
 	*/
-	this.getItem = function(key) {
+	this.getItem = function(key, callback) {
 		
 		if (['accessToken'].indexOf(key) !== -1) {
 			storage.getItem(key, function(err, res) {
 				if (err)
 					console.error('error retrieving stored record', err)
 				else
-					return res
+					callback(res)
 			})
 		}
 		else 
