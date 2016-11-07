@@ -26,8 +26,16 @@ function AnalyticsApi(gapi, callback) {
         }).then(function () {
 
 			debug('gapi client initialized', gapi.auth2.getAuthInstance())
-          
-			gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus)
+			
+			// Proof-of-concept request
+			gapi.client.load('analytics', 'v3').then(function() {
+
+				// Get a list of all Google Analytics accounts for this user
+				gapi.client.analytics.management.accounts.list().then(function(data) {
+					
+						console.log('accounts list', data)
+				})
+			})
           
 			callback()
         

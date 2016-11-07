@@ -45,6 +45,7 @@ window.gApiLoaded = function() {
 			}
 			else {
 			// user is already logged-in
+			
 				app.view.dashboard = ejs.compile(fs.readFileSync(__dirname + '/../themes/mango-information-systems/layout/_partial/ga-realtime/metric.ejs', 'utf-8'))
 
 				//~var data = app.controller.analyticsApi.init()
