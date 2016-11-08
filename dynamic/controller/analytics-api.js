@@ -15,7 +15,16 @@ var debug = window.appDebug('analyticsApi')
 */
 function AnalyticsApi(gapi, callback) {
 	
+	var self = this
+	
 	console.log('instantiating analyticsApi')
+	
+	this.callback = callback
+	
+	this.data = {
+		name: 'ga'
+		, children: []
+	}
 	
 	// load the API client
 	gapi.load('client:auth2', function() {
@@ -27,21 +36,51 @@ function AnalyticsApi(gapi, callback) {
 
 			debug('gapi client initialized', gapi.auth2.getAuthInstance())
 			
-			// Proof-of-concept request
-			gapi.client.load('analytics', 'v3').then(function() {
-
-				// Get a list of all Google Analytics accounts for this user
-				gapi.client.analytics.management.accounts.list().then(function(data) {
-					
-						console.log('accounts list', data)
-				})
-			})
+			getAccounts()
           
-			callback()
+			//~ callback()
         
 		})
 	})
 	
+	/**
+	* get all Analytics accounts to which the user has access
+	* 
+	* @return {object} array of property Ids
+	* 
+	* @private
+	* 
+	*/		
+	function getAccounts () {
+		
+		gapi.client.load('analytics', 'v3').then(function() {
+
+			gapi.client.analytics.management.accounts.list().then(function(res) {
+				
+					//~ console.log('accounts list', res)
+					
+					if (res.status !== 200)
+						console.log('error receiving accounts list', res)
+					else {
+						//~ self.accounts = res.result.items
+						res.result.items.forEach(function(account) {
+							self.data.children.push({
+								id: account.id
+								, name: account.name
+								, children: []
+							})
+						})
+						
+						getProperties(0)
+					}
+			})
+			.then(null, function(err) {
+				// Log any errors.
+				console.log(err)
+			})
+		})
+		
+	}
 	
 	/**
 	* get all Analytics properties to which the user has access
@@ -51,23 +90,99 @@ function AnalyticsApi(gapi, callback) {
 	* @private
 	* 
 	*/		
-	function getProperties () {
+	function getProperties (accountIndex) {
 		
+		if (accountIndex === self.data.children.length) {
+			console.log('went through all accounts')
+			console.log('views', self.data)
+			
+			self.callback(self.data)
+		}
+		else {
+			
+			var accountId = self.data.children[accountIndex].id
+			
+			gapi.client.analytics.management.webproperties.list({'accountId': accountId}).then(function(res) {
+				
+					//~ console.log('properties list', res)
+					
+					if (res.status !== 200)
+						console.log('error receiving properties list', res)
+					else {
+						
+						//~ self.properties = res.result.items
+
+						res.result.items.forEach(function(property) {
+							self.data.children[accountIndex].children.push({
+								id: property.id
+								, name: property.name
+								, children: []
+							})
+						})
+						
+						getViews(accountIndex, 0)
+					}
+			})
+			.then(null, function(err) {
+				// Log any errors.
+				console.log(err)
+			})
+
+		}
 		
 	}
 	
 	/**
-	* get all Analytics views to which the user has access, for a given property
+	* get the first Analytics view to which the user has access, for a given property
 	* 
-	* @param {string} propertyId
+	* @param {number} accountIndex index of the properties fetching
+	* 
+	* @param {number} propertyIndex index of the properties fetching
 	* 
 	* @return {object} array of view Ids
 	* 
 	* @private
 	* 
 	*/		
-	function getViews (property) {
+	function getViews (accountIndex, propertyIndex) {
 		
+		if (propertyIndex === self.data.children[accountIndex].children.length) {
+			//~ console.log('went through all properties for account', accountIndex)
+			getProperties (++accountIndex)
+		}
+		else {
+		
+			var accountId = self.data.children[accountIndex].id
+				, propertyId = self.data.children[accountIndex].children[propertyIndex].id
+			
+			gapi.client.analytics.management.profiles.list({
+					'accountId': accountId
+					, 'webPropertyId': propertyId
+				}).then(function(res) {
+				
+					//~ console.log('views list', res)
+					
+					if (res.status !== 200)
+						console.log('error receiving views list', res)
+					else {
+
+						res.result.items.forEach(function(view) {
+							
+							self.data.children[accountIndex].children[propertyIndex].children.push({
+								id: view.id
+								, name: view.name
+							})
+						})
+				
+						getViews (accountIndex, ++propertyIndex)
+						
+					}
+			})
+			.then(null, function(err) {
+				// Log any errors.
+				console.log(err)
+			})
+		}
 		
 	}
 	
