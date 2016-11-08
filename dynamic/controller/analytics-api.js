@@ -24,7 +24,10 @@ function AnalyticsApi(gapi, callback) {
 	this.data = {
 		name: 'ga'
 		, children: []
+		, max: 0
 	}
+	
+	this.viewIds = []
 	
 	// load the API client
 	gapi.load('client:auth2', function() {
@@ -45,8 +48,6 @@ function AnalyticsApi(gapi, callback) {
 	
 	/**
 	* get all Analytics accounts to which the user has access
-	* 
-	* @return {object} array of property Ids
 	* 
 	* @private
 	* 
@@ -85,6 +86,8 @@ function AnalyticsApi(gapi, callback) {
 	/**
 	* get all Analytics properties to which the user has access
 	* 
+	* @param {number} accountIndex index of the account to fetch
+	* 
 	* @return {object} array of property Ids
 	* 
 	* @private
@@ -96,7 +99,8 @@ function AnalyticsApi(gapi, callback) {
 			console.log('went through all accounts')
 			console.log('views', self.data)
 			
-			self.callback(self.data)
+			//~ self.callback(self.data)
+			
 		}
 		else {
 			
@@ -116,7 +120,6 @@ function AnalyticsApi(gapi, callback) {
 							self.data.children[accountIndex].children.push({
 								id: property.id
 								, name: property.name
-								, children: []
 							})
 						})
 						
@@ -129,17 +132,47 @@ function AnalyticsApi(gapi, callback) {
 			})
 
 		}
+
+	}
+	
+	/**
+	* get realtime visit stats for a given views
+	* 
+	* @param {number} accountIndex index of the account to fetch
+	* 
+	* @param {number} propertyIndex index of the property fetch
+	* 
+	* @private
+	* 
+	*/		
+	function getRealTimeStats (accountIndex, propertyIndex) {
+
+		gapi.client.analytics.data.realtime.get({
+			'ids': 'ga:' + self.data.children[accountIndex].children[propertyIndex].viewId,
+			'metrics': 'rt:activeUsers'
+		})
+		.then(function(response) {
+			
+			self.data.children[accountIndex].children[propertyIndex].value = response.result.totalsForAllResults['rt:activeUsers']
+			self.data.max = Math.max(self.data.max, response.result.totalsForAllResults['rt:activeUsers'])
+			
+			// todo: setup view rendering
+			// todo: setup stats update
+			
+		})
+		.then(null, function(err) {
+				// Log any errors.
+				console.log(err)
+		})
 		
 	}
 	
 	/**
 	* get the first Analytics view to which the user has access, for a given property
 	* 
-	* @param {number} accountIndex index of the properties fetching
+	* @param {number} accountIndex index of the account to fetch
 	* 
-	* @param {number} propertyIndex index of the properties fetching
-	* 
-	* @return {object} array of view Ids
+	* @param {number} propertyIndex index of the property fetch
 	* 
 	* @private
 	* 
@@ -166,16 +199,14 @@ function AnalyticsApi(gapi, callback) {
 						console.log('error receiving views list', res)
 					else {
 
-						res.result.items.forEach(function(view) {
-							
-							self.data.children[accountIndex].children[propertyIndex].children.push({
-								id: view.id
-								, name: view.name
-							})
-						})
-				
-						getViews (accountIndex, ++propertyIndex)
+						self.data.children[accountIndex].children[propertyIndex].viewId = res.result.items[0].id
+						self.data.children[accountIndex].children[propertyIndex].viewName = res.result.items[0].name
 						
+						self.viewIds.push(res.result.items[0].id)
+				
+						getRealTimeStats (accountIndex, propertyIndex)
+						
+						getViews (accountIndex, ++propertyIndex)
 					}
 			})
 			.then(null, function(err) {
@@ -194,7 +225,7 @@ function AnalyticsApi(gapi, callback) {
 	* @private
 	* 
 	*/		
-	function getVisitorsCount (viewId) {
+	function getViewStats (viewId) {
 		
 		
 	}
