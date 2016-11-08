@@ -13,19 +13,19 @@ var debug = window.appDebug('analyticsApi')
 * @constructor
 * 
 */
-function AnalyticsApi(gapi, callback) {
+function AnalyticsApi(gapi, component) {
 	
 	var self = this
 	
 	console.log('instantiating analyticsApi')
-	
-	this.callback = callback
 	
 	this.data = {
 		name: 'ga'
 		, children: []
 		, max: 0
 	}
+	// temp alternative structure to hierarchy
+	this.viewData = []
 	
 	this.viewIds = []
 	
@@ -41,8 +41,6 @@ function AnalyticsApi(gapi, callback) {
 			
 			getAccounts()
           
-			//~ callback()
-        
 		})
 	})
 	
@@ -97,9 +95,7 @@ function AnalyticsApi(gapi, callback) {
 		
 		if (accountIndex === self.data.children.length) {
 			console.log('went through all accounts')
-			console.log('views', self.data)
-			
-			//~ self.callback(self.data)
+			//~ console.log('views', self.data)
 			
 		}
 		else {
@@ -153,8 +149,26 @@ function AnalyticsApi(gapi, callback) {
 		})
 		.then(function(response) {
 			
-			self.data.children[accountIndex].children[propertyIndex].value = response.result.totalsForAllResults['rt:activeUsers']
-			self.data.max = Math.max(self.data.max, response.result.totalsForAllResults['rt:activeUsers'])
+			var view = self.data.children[accountIndex].children[propertyIndex]
+			
+			view.value = response.result.totalsForAllResults['rt:activeUsers']
+			//~ self.data.max = Math.max(self.data.max, response.result.totalsForAllResults['rt:activeUsers'])
+			
+			self.viewData.push({
+				'viewName': view.viewName
+				, 'propertyName': view.name
+				, 'visitorsCount': view.value
+			})
+			
+			component.container.html('')
+
+			component.container.selectAll('.widget')
+				.data(self.viewData)
+				.enter()
+				  .append('div')
+				  .html(function(d) {
+					return component.template(d)
+				  })
 			
 			// todo: setup view rendering
 			// todo: setup stats update

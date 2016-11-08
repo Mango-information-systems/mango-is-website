@@ -12,13 +12,18 @@ var d3 = require('d3')
 
 var appContainer = d3.select('#app')
 
+app.view.dashboard = ejs.compile(fs.readFileSync(__dirname + '/../themes/mango-information-systems/layout/_partial/ga-realtime/metric.ejs', 'utf-8'))
+
 /**
 * initialize analytics API controller once the googgle Analytics javascript client library script is loadeed
 * 
 */
 window.gApiLoaded = function() {
 	
-	app.controller.analyticsApi = new AnalyticsApi(gapi, start)
+	app.controller.analyticsApi = new AnalyticsApi(gapi, {
+		container: appContainer
+		, template: app.view.dashboard
+	})
 	
 	function start() {
 
@@ -49,30 +54,6 @@ window.gApiLoaded = function() {
 				app.view.dashboard = ejs.compile(fs.readFileSync(__dirname + '/../themes/mango-information-systems/layout/_partial/ga-realtime/metric.ejs', 'utf-8'))
 
 				//~var data = app.controller.analyticsApi.init()
-
-				var data = [
-					{
-						'viewName': 'view 1'
-						, 'propertyName': 'site 1'
-						, 'visitorsCount': 155
-					}
-					, {
-						'viewName': 'view 2'
-						, 'propertyName': 'site 1'
-						, 'visitorsCount': 29
-					}
-				
-				]
-
-				appContainer.html('')
-
-				appContainer.selectAll('.widget')
-					.data(data)
-					.enter()
-					  .append('div')
-					  .html(function(d) {
-						return app.view.dashboard(d)
-					  })
 
 			}
 		})
