@@ -36,7 +36,7 @@ function DonutChart() {
 		    .append('path')
 			.style('fill', function(d, i) {
 
-				return self.barColors[0](d.value / self.maxValue)
+				return self.barColors(d.value / self.maxValue)
 			})
 		    .attr('d', function(d, i) {
 				
@@ -227,17 +227,13 @@ function DonutChart() {
 		
 		
 		self.arcs = []
-		self.barColors = [
-			d3.interpolateBlues
-			, d3.interpolateGreens
-		]
+		self.barColors = d3[opts.barColorsFn]
 		
 		self.maxValue = 0
 
 		self.data.forEach(function(view, ix) {
 			
 			// create arc function for this view
-			// TODO fix scales and make sure it's not in reverse order compared to labels
 			var outerRadius = self.yScale.range([138, 27])(ix)
 				, arc = d3.arc()
 				  .innerRadius(outerRadius - 16)

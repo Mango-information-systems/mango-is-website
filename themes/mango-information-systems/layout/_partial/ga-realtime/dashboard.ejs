@@ -1,14 +1,23 @@
+<% 
+var barColors = [
+	'interpolateBlues'
+	, 'interpolateGreens'
+	, 'interpolateOranges'
+	, 'interpolatePurples'
+	, 'interpolateReds'
+	, 'interpolateGreys'
+]
 
-<% accounts.forEach(function(account) { %>
+accounts.forEach(function(account) { %>
 	
 	<h5 class="small"><%- account.name %></h5>
 	<div class="row">
 
-		<% account.webProperties.forEach(function(property) { %>
+		<% account.webProperties.forEach(function(property, i) { %>
 				<div class="three columns">
 					<div>
 					
-						<%- donut.render({data: property}) %>
+						<%- donut.render({data: property, barColorsFn: barColors[i % 6]}) %>
 						
 						<div>
 							<small><%- property.name %></small>
