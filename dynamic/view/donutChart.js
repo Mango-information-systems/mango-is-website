@@ -16,82 +16,12 @@ function DonutChart() {
 
 	var self = this
 		, tau = 2 * Math.PI
-	
-	//~ this.g = svg.append('g').attr('transform', 'translate(350, 150)')
-	//~ 
-	//~ this.totalCount = svg.select('#totalCount')
-	//~ this.replyCount = svg.select('#replyCount')
-	//~ this.hashtagCount = svg.select('#hashtagCount')
-	//~ this.linkCount = svg.select('#linkCount')
-	//~ this.mentionCount = svg.select('#mentionCount')
-	//~ this.mediaCount = svg.select('#mediaCount')
-	//~ 
-	//~ var bgArc = d3.arc()
-		//~ .innerRadius(40)
-		//~ .outerRadius(145)
-		//~ .startAngle(- tau / 4)
-	//~ 
-	//~ var replyArc = d3.arc()
-		//~ .innerRadius(125)
-		//~ .outerRadius(140)
-		//~ .startAngle(- tau / 4)
-	//~ 
-	//~ var hashtagArc = d3.arc()
-		//~ .innerRadius(105)
-		//~ .outerRadius(120)
-		//~ .startAngle(- tau / 4)
-	//~ 
-	//~ var linkArc = d3.arc()
-		//~ .innerRadius(85)
-		//~ .outerRadius(100)
-		//~ .startAngle(- tau / 4)
-	//~ 
-	//~ var mentionArc = d3.arc()
-		//~ .innerRadius(65)
-		//~ .outerRadius(80)
-		//~ .startAngle(- tau / 4)
-	//~ 
-	//~ var mediaArc = d3.arc()
-		//~ .innerRadius(45)
-		//~ .outerRadius(60)
-		//~ .startAngle(- tau / 4)
-	//~ 
-	//~ var background = this.g.append('path')
-		//~ .datum({endAngle: 3/4 * tau - tau / 4})
-		//~ .style('fill', '#eeeeee')
-		//~ .attr('d', bgArc)
-	//~ 
-	//~ this.replySlice = this.g.append('path')
-		//~ .datum({endAngle: 0.001 * tau - tau / 4})
-		//~ .style('fill', '#008000')
-		//~ .attr('d', replyArc)
-	//~ 
-	//~ this.hashtagSlice = this.g.append('path')
-		//~ .datum({endAngle: 0.001 * tau - tau / 4})
-		//~ .style('fill', 'black')
-		//~ .attr('d', hashtagArc)
-	//~ 
-	//~ this.linkSlice = this.g.append('path')
-		//~ .datum({endAngle: 0.001 * tau - tau / 4})
-		//~ .style('fill', '#FFE936')
-		//~ .attr('d', linkArc)
-	//~ 
-	//~ this.mentionSlice = this.g.append('path')
-		//~ .datum({endAngle: 0.001 * tau - tau / 4})
-		//~ .style('fill', '#FF0F21')
-		//~ .attr('d', mentionArc)
-	//~ 
-	//~ this.mediaSlice = this.g.append('path')
-		//~ .datum({endAngle: 0.001 * tau - tau / 4})
-		//~ .style('fill', '#00aced')
-		//~ .attr('d', mediaArc)
-		//~ 
+
 	/****************************************
 	 *
 	 * Private methods
 	 *
 	 ****************************************/
-	
 	
 	/**
 	 * Draw or update the donut chart arcs
@@ -102,21 +32,20 @@ function DonutChart() {
 	function drawBars() {
 
 		// TODO color with https://github.com/d3/d3-scale-chromatic#sequential-single-hue
-
-		var yScale = d3.scaleLinear()
-		  .domain([0, self.data.length])
-		  .range([20, 130])
+		//~ .datum({endAngle: 0.001 * tau - tau / 4})
+		//~ .style('fill', '#008000')
+		//~ .attr('d', replyArc)
 		
-		self.svg.selectAll('.label').data(self.data)
+		
+		self.g.selectAll('.bar').data(self.data)
 		  .enter()
-		    .append('text')
-		    .text(function(d) {
-			  return d.name  
-		    })
-		    .attr('x', 240)
-		    .attr('text-anchor', 'end')
-		    .attr('y', function(d, i) {
-			  return yScale(i)
+		    .append('path')
+		    .attr('d', function(d, i) {
+				
+			  //~ return self.arcs[i]({endAngle : d.value / self.maxValue * tau / 2})
+			  
+			  // temp mockup data
+			  return self.arcs[i]({endAngle : (i + 1) / 4 * tau / 2})
 		    })
 	}
 	/**
@@ -126,10 +55,6 @@ function DonutChart() {
 	 * 
 	 */
 	function drawLabels() {
-
-		var yScale = d3.scaleLinear()
-		  .domain([0, self.data.length])
-		  .range([20, 130])
 		
 		self.svg.selectAll('.label').data(self.data)
 		  .enter()
@@ -140,7 +65,7 @@ function DonutChart() {
 		    .attr('x', 240)
 		    .attr('text-anchor', 'end')
 		    .attr('y', function(d, i) {
-			  return yScale(i)
+			  return self.yScale.range([20, 130])(i)
 		    })
 	}
 	
@@ -151,10 +76,6 @@ function DonutChart() {
 	 * 
 	 */
 	function drawValues() {
-
-		var yScale = d3.scaleLinear()
-		  .domain([0, self.data.length])
-		  .range([210, 320])
 		
 		self.svg.selectAll('.value').data(self.data)
 		  .enter()
@@ -165,91 +86,60 @@ function DonutChart() {
 		    .attr('x', 240)
 		    .attr('text-anchor', 'end')
 		    .attr('y', function(d, i) {
-			  return yScale(i)
+			  return self.yScale.range([210, 320])(i)
 		    })
 	}
 	
-	//~ /**
-	 //~ * Returns a tween for a transition’s "d" attribute, transitioning any selected
-	 //~ * arcs from their current angle to the specified new angle.
-	 //~ * 
-	 //~ * As seen in http://bl.ocks.org/mbostock/5100636
-	 //~ *
-	 //~ * @param {number} newAngle
-	 //~ * 
-	 //~ * @return {function} tween function
-	 //~ * 
-	 //~ * @private
-	 //~ * 
-	 //~ */
-	//~ function arcTween(newAngle, arc) {
-//~ 
-		//~ return function(d) {
-//~ 
-			//~ var interpolate = d3.interpolate(d.endAngle, newAngle)
-//~ 
-			//~ return function(t) {
-				//~ d.endAngle = interpolate(t)
-				//~ return arc(d)
-			//~ }
-		//~ }
-	//~ }
-	//~ 
-	//~ /**
-	 //~ * Returns a tween for a transition’s "text" attribute, transitioning any selected
-	 //~ * text from their current value to the specified new value.
-	 //~ * 
-	 //~ * @param {number} oldValue
-	 //~ * @param {number} newValue
-	 //~ * 
-	 //~ * @return {function} tween function
-	 //~ * 
-	 //~ * @private
-	 //~ * 
-	 //~ */
-	//~ function textTween(oldValue, newValue) {
-//~ 
-		//~ return function(d) {
-//~ 
-			//~ var interpolate = d3.interpolate(oldValue, newValue)
-//~ 
-			//~ return function(t) {
-				//~ self.totalCount.text(Math.floor(interpolate(t)))
-			//~ }
-		//~ }
-	//~ }
-	//~ 
-	//~ /**
-	 //~ * Update statistics with data from one extra tweet
-	 //~ *
-	 //~ * @param {object} msg new tweet
-	 //~ * 
-	 //~ * @private
-	 //~ * 
-	 //~ */
-	//~ function updateStats (msg) {
-//~ 
-		//~ if (msg.is_reply)
-			//~ self.stats.replyCount++
-			//~ 
-		//~ if(msg.has_hashtag)
-			//~ self.stats.hashtagCount++
-		//~ 
-		//~ if(msg.has_link)
-			//~ self.stats.linkCount++
-		//~ 
-		//~ if(msg.has_mention)
-			//~ self.stats.mentionCount++
-		//~ 
-		//~ if(msg.has_media)
-			//~ self.stats.mediaCount++
-		//~ 
-		//~ self.stats.previousTotal = self.stats.totalCount
-		//~ 
-		//~ self.stats.totalCount++
-//~ 
-	//~ }
-//~ 
+	/**
+	 * Returns a tween for a transition’s "d" attribute, transitioning any selected
+	 * arcs from their current angle to the specified new angle.
+	 * 
+	 * As seen in http://bl.ocks.org/mbostock/5100636
+	 *
+	 * @param {number} newAngle
+	 * 
+	 * @return {function} tween function
+	 * 
+	 * @private
+	 * 
+	 */
+	function arcTween(newAngle, arc) {
+
+		return function(d) {
+
+			var interpolate = d3.interpolate(d.endAngle, newAngle)
+
+			return function(t) {
+				d.endAngle = interpolate(t)
+				return arc(d)
+			}
+		}
+	}
+	
+	/**
+	 * Returns a tween for a transition’s "text" attribute, transitioning any selected
+	 * text from their current value to the specified new value.
+	 * 
+	 * @param {number} oldValue
+	 * @param {number} newValue
+	 * 
+	 * @return {function} tween function
+	 * 
+	 * @private
+	 * 
+	 */
+	function textTween(oldValue, newValue) {
+
+		return function(d) {
+
+			var interpolate = d3.interpolate(oldValue, newValue)
+
+			return function(t) {
+				self.totalCount.text(Math.floor(interpolate(t)))
+			}
+		}
+	}
+
 	//~ /**
 	 //~ * Update total tweets counters
 	 //~ * 
@@ -342,17 +232,45 @@ function DonutChart() {
 			}
 		})
 		
+		self.yScale = d3.scaleLinear()
+		  .domain([0, self.data.length])
+		
+		
+		self.arcs = []
+		self.maxValue = 50
+		
+		opts.data.profiles.forEach(function(view, ix) {
+			
+			// create arc function for this view
+			// TODO fix scales and make sure it's not in reverse order compared to labels
+			var outerRadius = self.yScale.range([140, 30])(ix)
+				, arc = d3.arc()
+				  .innerRadius(outerRadius - 16)
+				  .outerRadius(outerRadius)
+				  .startAngle(0)
+			  
+			self.arcs.push(arc)
+			
+			// update max if applicable
+			self.maxValue = view.value > self.maxValue ? view.value : self.maxValue
+			
+		})
+		
 		var bgArc = d3.arc()
 			.innerRadius(40)
 			.outerRadius(145)
 			.startAngle(0)
 			
 		var bg = self.g.append('path')
-			.datum({endAngle: 3/4 * tau - tau / 4})
+			.datum({endAngle: tau / 2})
 			.style('fill', '#eeeeee')
 			.attr('d', bgArc)
 		
 		drawLabels()
+		
+		drawBars()
+		
+		// TODO remove this from render, once update function is created
 		drawValues()
 		
 		//~ console.log('svg', self.svg)
