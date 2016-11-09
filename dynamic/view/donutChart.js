@@ -1,4 +1,4 @@
-var d3 = require('d3')
+var d3 = Object.assign({}, require('d3'), require('d3-scale-chromatic'))
 
 
 /**
@@ -31,21 +31,16 @@ function DonutChart() {
 	 */
 	function drawBars() {
 
-		// TODO color with https://github.com/d3/d3-scale-chromatic#sequential-single-hue
-		//~ .datum({endAngle: 0.001 * tau - tau / 4})
-		//~ .style('fill', '#008000')
-		//~ .attr('d', replyArc)
-		
-		
 		self.g.selectAll('.bar').data(self.data)
 		  .enter()
 		    .append('path')
+			.style('fill', function(d, i) {
+
+				return self.barColors[0](d.value / self.maxValue)
+			})
 		    .attr('d', function(d, i) {
 				
-			  //~ return self.arcs[i]({endAngle : d.value / self.maxValue * tau / 2})
-			  
-			  // temp mockup data
-			  return self.arcs[i]({endAngle : (i + 1) / 4 * tau / 2})
+				return self.arcs[i]({endAngle : d.value / self.maxValue * tau / 2})
 		    })
 	}
 	/**
@@ -81,7 +76,7 @@ function DonutChart() {
 		  .enter()
 		    .append('text')
 		    .text(function(d) {
-			  return d.value  
+			  return  Math.floor(d.value)
 		    })
 		    .attr('x', 240)
 		    .attr('text-anchor', 'end')
@@ -147,13 +142,6 @@ function DonutChart() {
 	 //~ * 
 	 //~ */
 	//~ function updateTotalCount() {
-		//~ 
-		//~ self.replyCount.text(self.stats.replyCount)
-		//~ self.hashtagCount.text(self.stats.hashtagCount)
-		//~ self.linkCount.text(self.stats.linkCount)
-		//~ self.mentionCount.text(self.stats.mentionCount)
-		//~ self.mediaCount.text(self.stats.mediaCount)
-		//~ 
 		//~ self.totalCount.datum(self.stats.totalCount).transition()
 		    //~ .tween('text', textTween(self.stats.previousTotal, self.stats.totalCount))
 	//~ }
@@ -228,7 +216,9 @@ function DonutChart() {
 			return {
 				id: view.id
 				, name: view.name
-				, value: 0
+				//~ , value: 0
+				// TMP data mock
+				, value: Math.random() * 100
 			}
 		})
 		
@@ -237,13 +227,18 @@ function DonutChart() {
 		
 		
 		self.arcs = []
-		self.maxValue = 50
+		self.barColors = [
+			d3.interpolateBlues
+			, d3.interpolateGreens
+		]
 		
-		opts.data.profiles.forEach(function(view, ix) {
+		self.maxValue = 0
+
+		self.data.forEach(function(view, ix) {
 			
 			// create arc function for this view
 			// TODO fix scales and make sure it's not in reverse order compared to labels
-			var outerRadius = self.yScale.range([140, 30])(ix)
+			var outerRadius = self.yScale.range([138, 27])(ix)
 				, arc = d3.arc()
 				  .innerRadius(outerRadius - 16)
 				  .outerRadius(outerRadius)
