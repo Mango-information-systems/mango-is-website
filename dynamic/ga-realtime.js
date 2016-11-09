@@ -1,18 +1,21 @@
 var fs = require('fs')
 
+window.appDebug = require('debug')
+
 var d3 = require('d3')
+	, debug = window.appDebug('ga-realtime')
 	, ejs = require('ejs')
 	, AnalyticsApi = require('./controller/analytics-api')
-	, Model = require('./model/ga-realtime')
 	, app = {
-		model: new Model()
-		, controller: {}
-		, view: {}
+		controller: {}
+		, view: {
+			signIn: require('./view/sign-in-with-google')
+			, dashboard: require('./view/dashboard')
+		}
+		, data: {}
 	}
 
 var appContainer = d3.select('#app')
-
-app.view.dashboard = ejs.compile(fs.readFileSync(__dirname + '/../themes/mango-information-systems/layout/_partial/ga-realtime/metric.ejs', 'utf-8'))
 
 /**
 * initialize analytics API controller once the googgle Analytics javascript client library script is loadeed
@@ -20,47 +23,71 @@ app.view.dashboard = ejs.compile(fs.readFileSync(__dirname + '/../themes/mango-i
 */
 window.gApiLoaded = function() {
 	
-	app.controller.analyticsApi = new AnalyticsApi(gapi, {
-		container: appContainer
-		, template: app.view.dashboard
-	})
-	
-	function start() {
+	app.controller.analyticsApi = new AnalyticsApi(gapi, start)
 
-		app.model.getItem('accessToken', function(isConnected) {
+	//~console.log('loaded', window.location.hash)
+	// cf. https://github.com/google/google-api-javascript-client/blob/master/samples/authSample.html
 
-			if (typeof isConnected === 'undefined') {
-			// user has not connected his Google Analytics account yet
-				app.view.connectWithGoogle = ejs.compile(fs.readFileSync(__dirname + '/../themes/mango-information-systems/layout/_partial/connect-with-google.ejs', 'utf-8'))
+}
 
-				appContainer.html(app.view.connectWithGoogle())
-				
-				d3.select('#login').on('click', function() {
-					
-					d3.event.preventDefault()
-					d3.event.stopPropagation()
-					
-					accessToken = app.controller.analyticsApi.signIn()
-					
-					app.model.setItem('accessToken', accessToken)
-					
-					return false
-				})
-				
-			}
-			else {
-			// user is already logged-in
-			
-				app.view.dashboard = ejs.compile(fs.readFileSync(__dirname + '/../themes/mango-information-systems/layout/_partial/ga-realtime/metric.ejs', 'utf-8'))
+/**
+* Display login form or data, depending on user's connection status
+* 
+*/
+function start(hasError) {
 
-				//~var data = app.controller.analyticsApi.init()
+	if (!gapi.auth2.getAuthInstance().isSignedIn.get()) {
+	// user has not connected his Google Analytics account yet
 
+		app.view.signIn.render({
+			target: appContainer
+			, hasError: hasError
+			, action: function() {
+				app.controller.analyticsApi.signIn(start)
 			}
 		})
+
 	}
+	else {
+	// user is already logged-in
+	
+		showData()
+
+	}
+}
+
+/**
+* 
+* 
+*/
+function handleSigninResponse(err) {
+	if (err)
+		start(true)
+	else
+		showData()
+}
+
+/**
+* Display login form or data, depending on user's connection status
+* 
+*/
+function showData() {
+	
+	//~ app.view.dashboard = ejs.compile(fs.readFileSync(__dirname + '/../themes/mango-information-systems/layout/_partial/ga-realtime/metric.ejs', 'utf-8'))
+	
+	app.controller.analyticsApi.getViews(function(res) {
+		app.data = res.result.items
+		
+		//~ console.log('views list', app.data)
+		
+		app.view.dashboard.render({
+			target: appContainer
+			, data: app.data
+		}, function() {
+			console.log('done')
+		})
+		
+	})
 	
 	
 }
-
-//~console.log('loaded', window.location.hash)
-// cf. https://github.com/google/google-api-javascript-client/blob/master/samples/authSample.html

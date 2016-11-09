@@ -1,3 +1,11 @@
+<% if (hasError) {%>
+	<div class="alert alert-danger">
+		<h5>Oops, login failed</h5>
+		<p>Something went wrong when trying to connect to your Google account. Sorry about this.</p>
+		<p>Would you mind trying again?</p>
+	</div>
+<% } %>
+
 <h4 class="small">Connect your google account</h4>
 
 <a id="login" href="#" class="button cta  button-primary"><i class="fa fa-google"></i> Login</a>

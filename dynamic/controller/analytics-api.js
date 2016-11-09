@@ -13,11 +13,9 @@ var debug = window.appDebug('analyticsApi')
 * @constructor
 * 
 */
-function AnalyticsApi(gapi, component) {
+function AnalyticsApi(gapi, callback) {
 	
 	var self = this
-	
-	console.log('instantiating analyticsApi')
 	
 	this.data = {
 		name: 'ga'
@@ -37,10 +35,20 @@ function AnalyticsApi(gapi, component) {
 			, scope: 'https://www.googleapis.com/auth/analytics.readonly'
         }).then(function () {
 
-			debug('gapi client initialized', gapi.auth2.getAuthInstance())
+			gapi.client.load('analytics', 'v3').then(function() {
+				
+				debug('gapi client initialized, and analytics API loaded', gapi.auth2.getAuthInstance())
+				
+				callback()
+			  
+			})
+			.then(null, function(err) {
+				console.log('error loading analytics API v3', err)
+			})
 			
-			getAccounts()
-          
+		})
+		.then(null, function(err) {
+			console.log('error initializing auth2', err)
 		})
 	})
 	
@@ -51,31 +59,41 @@ function AnalyticsApi(gapi, component) {
 	* 
 	*/		
 	function getAccounts () {
-		
-		gapi.client.load('analytics', 'v3').then(function() {
+	
 
-			gapi.client.analytics.management.accounts.list().then(function(res) {
+		gapi.client.analytics.management.accountSummaries.list().then(function(res) {
+
+			console.log('account summary', res)
+			
+			// build hierarchical data structure 
+			res.result.items.forEach(function(account, accountIndex) {
 				
-					//~ console.log('accounts list', res)
+				self.data.children.push({
+					id: account.id
+					, name: account.name
+					, children: []
+				})
+				
+				account.webProperties.forEach(function(property, propertyIndex) {
 					
-					if (res.status !== 200)
-						console.log('error receiving accounts list', res)
-					else {
-						//~ self.accounts = res.result.items
-						res.result.items.forEach(function(account) {
-							self.data.children.push({
-								id: account.id
-								, name: account.name
-								, children: []
-							})
-						})
+					self.data.children[accountIndex].children.push({
+						id: property.id
+						, name: property.name
+					})
+					
+					property.profiles.forEach(function(view, viewIndex) {
 						
-						getProperties(0)
-					}
-			})
-			.then(null, function(err) {
-				// Log any errors.
-				console.log(err)
+// temp limit	
+if (viewIndex === 0) {
+						self.data.children[accountIndex].children[propertyIndex].viewId = view.id
+						self.data.children[accountIndex].children[propertyIndex].viewName = view.name
+						
+						self.viewIds.push(view.id)
+						
+						getRealTimeStats (accountIndex, propertyIndex)
+}
+					})
+				})
 			})
 		})
 		
@@ -143,6 +161,9 @@ function AnalyticsApi(gapi, component) {
 	*/		
 	function getRealTimeStats (accountIndex, propertyIndex) {
 
+		//~ var batch = gapi.client.newBatch()
+		// cf. https://developers.google.com/api-client-library/javascript/features/batch
+
 		gapi.client.analytics.data.realtime.get({
 			'ids': 'ga:' + self.data.children[accountIndex].children[propertyIndex].viewId,
 			'metrics': 'rt:activeUsers'
@@ -176,6 +197,7 @@ function AnalyticsApi(gapi, component) {
 		})
 		.then(null, function(err) {
 				// Log any errors.
+				console.log('error requesting stats', accountIndex, propertyIndex, self.data.children[accountIndex].children[propertyIndex].viewId)
 				console.log(err)
 		})
 		
@@ -267,12 +289,27 @@ function AnalyticsApi(gapi, component) {
 	 * ***************************************/
 
 	/**
-	* Sign iin with Google
+	* Sign in with Google
+	* 
+	*/	
+	this.signIn = function(callback) {
+		
+		debug('signing user in')
+		
+		gapi.auth2.getAuthInstance().signIn()
+		
+		// TODO handle errors at sign-in
+		callback(null)
+		
+	}
+
+	/**
+	* get the hierarchy of Accounts / Properties / Views user has access to
 	* 
 	* @return {string} access token
 	* 
-	*/	
-	this.signIn = function() {
+	*/
+	this.getData = function(callback) {
 		
 		debug('signing user in')
 		
@@ -282,7 +319,20 @@ function AnalyticsApi(gapi, component) {
 
 		return gapi.auth2.getAuthInstance().currentUser.get().getAuthResponse().access_token
 		
+	}
+
+	/**
+	* get the hierarchy of Accounts / Properties / Views user has access to
+	* 
+	*/
+	this.getViews = function(callback) {
 		
+		debug('retrieving list of views')
+	
+		gapi.client.analytics.management.accountSummaries.list().then(function(res) {
+			
+			callback(res)
+		})
 		
 	}
 	

@@ -1,0 +1,24 @@
+
+<% accounts.forEach(function(account) { %>
+	
+	<h5 class="small"><%- account.name %></h5>
+	<div class="row">
+
+		<% account.webProperties.forEach(function(property) { %>
+				<div class="three columns">
+					<div>
+					
+						<%- donut.render({data: property}) %>
+						
+						<div>
+							<small><%- property.name %></small>
+						</div>
+
+					</div>
+				</div>
+
+		<% }) %>
+		
+	</div>
+	
+<% }) %>
