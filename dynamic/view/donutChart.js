@@ -34,6 +34,7 @@ function DonutChart() {
 		self.g.selectAll('.bar').data(self.data)
 		  .enter()
 		    .append('path')
+		    .attr('class', 'bar')
 			.style('fill', function(d, i) {
 
 				return self.barColors(d.value / self.maxValue)
@@ -81,8 +82,19 @@ function DonutChart() {
 		    .attr('x', 240)
 		    .attr('text-anchor', 'end')
 		    .attr('y', function(d, i) {
-			  return self.yScale.range([210, 320])(i)
+			  return self.yScale.range([290, 180])(i)
 		    })
+	}
+	
+	function test() {
+		
+		self.data[0].value = Math.random() * 100
+
+		self.g.selectAll('.bar').data(self.data)
+		  .transition()
+		  .duration(2000)
+		  .ease(d3.easeExpInOut)
+		  .attrTween('d', arcTween())	
 	}
 	
 	/**
@@ -98,15 +110,16 @@ function DonutChart() {
 	 * @private
 	 * 
 	 */
-	function arcTween(newAngle, arc) {
+	function arcTween() {
 
-		return function(d) {
+		return function(d, i) {
+console.log('update', d, i)
 
-			var interpolate = d3.interpolate(d.endAngle, newAngle)
+			var interpolate = d3.interpolate(d.endAngle, d.value / self.maxValue * tau / 2)
 
 			return function(t) {
 				d.endAngle = interpolate(t)
-				return arc(d)
+				return self.arcs[i](d)
 			}
 		}
 	}
@@ -183,14 +196,12 @@ function DonutChart() {
 		  //~ .ease(d3.easeExpInOut)
 		  //~ .attrTween('d', arcTween( 3 / 4 * self.stats.mediaCount / self.stats.totalCount * tau - tau / 4, mediaArc))
 	//~ }
-//~ 
-	//~ /****************************************
-	 //~ *
-	 //~ * Public methods
-	 //~ *
-	 //~ ****************************************/
-//~ 
 
+	/****************************************
+	 *
+	 * Public methods
+	 *
+	 ****************************************/
 
 	/**
 	 * 
@@ -231,19 +242,22 @@ function DonutChart() {
 		
 		self.maxValue = 0
 
-		self.data.forEach(function(view, ix) {
+		self.data.forEach(function(view, i) {
 			
 			// create arc function for this view
-			var outerRadius = self.yScale.range([138, 27])(ix)
+			var outerRadius = self.yScale.range([138, 27])(i)
 				, arc = d3.arc()
 				  .innerRadius(outerRadius - 16)
 				  .outerRadius(outerRadius)
 				  .startAngle(0)
 			  
+			  
 			self.arcs.push(arc)
 			
 			// update max if applicable
 			self.maxValue = view.value > self.maxValue ? view.value : self.maxValue
+			
+			self.data[i].endAngle = view.value / self.maxValue * tau / 2
 			
 		})
 		
@@ -264,6 +278,8 @@ function DonutChart() {
 		// TODO remove this from render, once update function is created
 		drawValues()
 		
+		
+		setTimeout(test, 2000)
 		//~ console.log('svg', self.svg)
 		
 		return self.svg.nodes()[0].outerHTML
