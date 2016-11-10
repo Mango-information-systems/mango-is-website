@@ -8,12 +8,12 @@ var barColors = [
 	, 'interpolateGreys'
 ]
 
-accounts.forEach(function(account) { %>
+accounts.forEach(function(account, i) { %>
 	
 	<h5 class="small"><%- account.name %></h5>
 	<div class="row">
 
-		<% account.webProperties.forEach(function(property, i) { %>
+		<% account.webProperties.forEach(function(property) { %>
 				<div class="three columns">
 					<div>
 					

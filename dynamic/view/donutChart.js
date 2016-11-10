@@ -77,9 +77,6 @@ function DonutChart() {
 		self.svg.selectAll('.value').data(self.data)
 		  .enter()
 		    .append('text')
-		    .text(function(d) {
-			  return  Math.floor(d.value)
-		    })
 		    .attr('class', 'value')
 		    .attr('x', 240)
 		    .attr('text-anchor', 'end')
@@ -231,9 +228,6 @@ function DonutChart() {
 		
 		drawBars()
 		
-		// TODO remove this from render, once update function is created
-		drawValues()
-		
 		return self.svg.nodes()[0].outerHTML
 
 	}
@@ -285,14 +279,6 @@ function DonutChart() {
 			  })
 		  
 		drawValues()
-		
-		//~ self.svg.selectAll('.value')
-			//~ .each(function(d, i) {
-				//~ d.previous = d.value
-				//~ d.value = data.profiles[i].value
-			//~ })
-			//~ .transition()
-		    //~ .tween('text', textTween())
 	}
 
 }
