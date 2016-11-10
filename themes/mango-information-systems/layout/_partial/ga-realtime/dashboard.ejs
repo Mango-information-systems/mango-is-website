@@ -17,7 +17,7 @@ accounts.forEach(function(account) { %>
 				<div class="three columns">
 					<div>
 					
-						<%- donut.render({data: property, barColorsFn: barColors[i % 6]}) %>
+						<%- donuts[property.id].render({data: property, barColorsFn: barColors[i % 6]}) %>
 						
 						<div>
 							<small><%- property.name %></small>

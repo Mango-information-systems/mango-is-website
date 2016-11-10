@@ -1,6 +1,5 @@
 var fs = require('fs')
 	, ejs = require('ejs')
-	, DonutChart = require('./donutChart')
 
 function render(opts, callback) {
 
@@ -8,7 +7,7 @@ function render(opts, callback) {
 
 	opts.target.html(dashboardTemplate({
 		accounts: opts.data
-		, donut: new DonutChart()
+		, donuts: opts.donuts
 	}))
 	
 	callback()

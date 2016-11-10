@@ -6,11 +6,13 @@ var d3 = require('d3')
 	, debug = window.appDebug('ga-realtime')
 	, ejs = require('ejs')
 	, AnalyticsApi = require('./controller/analytics-api')
+	, DonutChart = require('./view/donutChart')
 	, app = {
 		controller: {}
 		, view: {
 			signIn: require('./view/sign-in-with-google')
 			, dashboard: require('./view/dashboard')
+			, donuts: {}
 		}
 		, data: {}
 	}
@@ -73,21 +75,42 @@ function handleSigninResponse(err) {
 */
 function showData() {
 	
-	//~ app.view.dashboard = ejs.compile(fs.readFileSync(__dirname + '/../themes/mango-information-systems/layout/_partial/ga-realtime/metric.ejs', 'utf-8'))
-	
 	app.controller.analyticsApi.getViews(function(res) {
 		app.data = res.result.items
+		
+		app.data.forEach(function(account) {
+			
+			account.webProperties.forEach(function(property) {
+				
+				app.view.donuts[property.id] = new DonutChart()
+			})
+		})
 		
 		//~ console.log('views list', app.data)
 		
 		app.view.dashboard.render({
 			target: appContainer
 			, data: app.data
+			, donuts: app.view.donuts
 		}, function() {
+			
+			
+			app.data.forEach(function(account) {
+				
+				account.webProperties.forEach(function(property) {
+					
+					app.view.donuts[property.id].setSelectors()
+				})
+			})
+			
 			console.log('done')
 		})
 		
 	})
+	
+	setTimeout(function() {
+		app.view.donuts['UA-19572298-1'].update()
+	}, 1500)
 	
 	
 }
