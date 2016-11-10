@@ -25,7 +25,9 @@ var appContainer = d3.select('#app')
 */
 window.gApiLoaded = function() {
 	
-	app.controller.analyticsApi = new AnalyticsApi(gapi, start)
+	app.controller.updateStatsCharts = updateStatsCharts
+	
+	app.controller.analyticsApi = new AnalyticsApi(gapi, start, app.controller.updateStatsCharts)
 
 	//~console.log('loaded', window.location.hash)
 	// cf. https://github.com/google/google-api-javascript-client/blob/master/samples/authSample.html
@@ -70,17 +72,26 @@ function handleSigninResponse(err) {
 }
 
 /**
-* Display login form or data, depending on user's connection status
+* Render dashboard and initiate data refresh process
 * 
 */
 function showData() {
 	
 	app.controller.analyticsApi.getViews(function(res) {
+		
 		app.data = res.result.items
+		
+		// pointer to each view in the hierarchy, by Id
+		app.viewMap = {}
 		
 		app.data.forEach(function(account) {
 			
 			account.webProperties.forEach(function(property) {
+				
+				property.profiles.forEach(function(view) {
+					app.viewMap[view.id] = view
+					view.value = 0
+				})
 				
 				property.maxValue = 0
 				
@@ -109,24 +120,13 @@ function showData() {
 		
 	})
 	
-	// sample data update
-	setTimeout(function() {
+	app.controller.analyticsApi.getStats()
+	
+	setInterval(function() {
+		
+		app.controller.analyticsApi.getStats()
 			
-			app.data.forEach(function(account) {
-				
-				var maxValue = setMaxvalue(account)
-				
-				account.webProperties.forEach(function(property, i) {
-					
-					property.maxValue = maxValue
-					
-					setTimeout(function() {
-						app.view.donuts[property.id].update(property)
-					}, i * 200)
-				})
-			})
-			
-	}, 1500)
+	}, 15000)
 	
 	
 }
@@ -144,9 +144,6 @@ function setMaxvalue(account) {
 	account.webProperties.forEach(function(property, i) {
 		
 		property.profiles.forEach(function(view) {
-
-			// TMP mock stats value
-			view.value = Math.random() * 100
 			
 			if (view.value > maxValue)
 				maxValue = view.value
@@ -154,5 +151,35 @@ function setMaxvalue(account) {
 	})
 	
 	return maxValue
+	
+}
+
+
+/**
+* update charts whenever new data is received from Google Analytics API
+* 
+*/
+function updateStatsCharts(stats){
+	
+	// update visitorsCount metrics values
+	stats.forEach(function(stat) {
+		app.viewMap[stat.viewId].value = stat.value
+	})
+	
+	app.data.forEach(function(account) {
+		
+		// update maxValue for each account
+		var maxValue = setMaxvalue(account)
+		
+		account.webProperties.forEach(function(property, i) {
+			
+			property.maxValue = maxValue
+			
+			// update all charts
+			setTimeout(function() {
+				app.view.donuts[property.id].update(property)
+			}, i * 200)
+		})
+	})
 	
 }

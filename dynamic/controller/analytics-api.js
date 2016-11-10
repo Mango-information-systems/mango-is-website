@@ -9,23 +9,18 @@ var debug = window.appDebug('analyticsApi')
 * * make API calls
 * 
 * @param {object} gapi: the google api client library instance
+* @param {function} callback: the google api client library instance
+* @param {function} updateFunction: the function to call whenever some update stats are received
 * 
 * @constructor
 * 
 */
-function AnalyticsApi(gapi, callback) {
+function AnalyticsApi(gapi, callback, updateFunction) {
 	
 	var self = this
 	
-	this.data = {
-		name: 'ga'
-		, children: []
-		, max: 0
-	}
-	// temp alternative structure to hierarchy
-	this.viewData = []
-	
-	this.viewIds = []
+	this.views = []
+	this.updateFunction = updateFunction
 	
 	// load the API client
 	gapi.load('client:auth2', function() {
@@ -52,58 +47,57 @@ function AnalyticsApi(gapi, callback) {
 		})
 	})
 	
+	/******************************************
+	 * 
+	 * Private functions
+	 * 
+	 * ***************************************/
+	
 	/**
-	* get realtime visit stats for a given views
+	* get realtime visit stats for a given subset of views (up to 10. re. user rate limits)
 	* 
-	* @param {number} accountIndex index of the account to fetch
-	* 
-	* @param {number} propertyIndex index of the property fetch
+	* @param {object} viewIds array of 10 viewIds
 	* 
 	* @private
-	* 
-	*/		
-	function getRealTimeStats (accountIndex, propertyIndex) {
-
-		//~ var batch = gapi.client.newBatch()
+	*/	
+	function getViewStats(viewIds) {
+		
+		var batch = gapi.client.newBatch()
 		// cf. https://developers.google.com/api-client-library/javascript/features/batch
 
-		gapi.client.analytics.data.realtime.get({
-			'ids': 'ga:' + self.data.children[accountIndex].children[propertyIndex].viewId,
-			'metrics': 'rt:activeUsers'
+		viewIds.forEach(function(viewId) {
+			batch.add(gapi.client.request({
+				path: 'analytics/v3/data/realtime'
+				, params: {
+					ids: 'ga:' + viewId
+					, metrics: 'rt:activeUsers'
+				}
+			}), {id: viewId})
+
 		})
-		.then(function(response) {
+
+		batch.then(function(response) {
 			
-			var view = self.data.children[accountIndex].children[propertyIndex]
+			var res = []
 			
-			view.value = response.result.totalsForAllResults['rt:activeUsers']
-			//~ self.data.max = Math.max(self.data.max, response.result.totalsForAllResults['rt:activeUsers'])
-			
-			self.viewData.push({
-				'viewName': view.viewName
-				, 'propertyName': view.name
-				, 'visitorsCount': view.value
+			Object.keys(response.result).forEach(function(viewId) {
+
+				if (response.result[viewId].status === 200)
+					res.push({
+						viewId: viewId
+						, value: response.result[viewId].result.totalsForAllResults['rt:activeUsers']
+					})
+				else
+					console.log('error with some of the batch requests', response.result[viewId])
 			})
 			
-			component.container.html('')
-
-			component.container.selectAll('.widget')
-				.data(self.viewData)
-				.enter()
-				  .append('div')
-				  .html(function(d) {
-					return component.template(d)
-				  })
-			
-			// todo: setup view rendering
-			// todo: setup stats update
+			self.updateFunction(res)
 			
 		})
 		.then(null, function(err) {
-				// Log any errors.
-				console.log('error requesting stats', accountIndex, propertyIndex, self.data.children[accountIndex].children[propertyIndex].viewId)
-				console.log(err)
+			console.log('error requesting stats in batch')
+			console.log(err)
 		})
-		
 	}
 	
 	/******************************************
@@ -111,6 +105,56 @@ function AnalyticsApi(gapi, callback) {
 	 * Public functions
 	 * 
 	 * ***************************************/
+	
+	/**
+	* get realtime visit stats for a given views
+	* calls self.updateFunction once done
+	* 
+	*/		
+	this.getStats = function() {
+
+		// split the viewIds in chunks of 10 in order to batch request them without reaching user rate limits
+		var chunksCount = Math.ceil(self.views.length / 10)
+
+		d3.range(chunksCount).forEach(function(i) {
+
+			setTimeout(function() {
+				getViewStats(self.views.slice(i * 10, i * 10+10))
+			}, i * 1100)
+		})
+		
+	}
+
+	/**
+	* get the hierarchy of Accounts / Properties / Views user has access to
+	* 
+	* @param {function} callback function
+	* 
+	*/
+	this.getViews = function(callback) {
+		
+		debug('retrieving list of views')
+	
+		gapi.client.analytics.management.accountSummaries.list().then(function(res) {
+			
+			// store the view Ids for metrics queries
+			res.result.items.forEach(function(account) {
+				account.webProperties.forEach(function(property) {
+					property.profiles.forEach(function(view) {
+						self.views.push(view.id)
+					})					
+				})
+			})
+			
+			callback(res)
+		})
+		.then(null, function(err) {
+
+			console.log('error requesting list of views')
+			console.log(err)
+		})
+		
+	}
 
 	/**
 	* Sign in with Google
@@ -140,21 +184,6 @@ function AnalyticsApi(gapi, callback) {
 		//~ gapi.auth2.getAuthInstance().signOut()
 		
 		//~ callback(null)
-		
-	}
-
-	/**
-	* get the hierarchy of Accounts / Properties / Views user has access to
-	* 
-	*/
-	this.getViews = function(callback) {
-		
-		debug('retrieving list of views')
-	
-		gapi.client.analytics.management.accountSummaries.list().then(function(res) {
-			
-			callback(res)
-		})
 		
 	}
 	
