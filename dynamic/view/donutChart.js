@@ -29,7 +29,7 @@ function DonutChart() {
 	 * 
 	 */
 	function drawBars() {
-console.log('drawing bars')
+
 		self.g.selectAll('.bar')
 			.data(self.data, function(d) { return d.id })
 		  .enter()
@@ -74,16 +74,22 @@ console.log('drawing bars')
 	 */
 	function drawValues() {
 		
-		self.svg.selectAll('.value').data(self.data, function(d) { return d.id })
+		self.svg.selectAll('.value').data(self.data)
 		  .enter()
 		    .append('text')
 		    .text(function(d) {
 			  return  Math.floor(d.value)
 		    })
+		    .attr('class', 'value')
 		    .attr('x', 240)
 		    .attr('text-anchor', 'end')
 		    .attr('y', function(d, i) {
 			  return self.yScale.range([290, 180])(i)
+		    })
+		    
+		self.svg.selectAll('.value').data(self.data)
+		    .text(function(d) {
+			  return  Math.floor(d.value)
 		    })
 	}
 	
@@ -100,22 +106,6 @@ console.log('drawing bars')
 	 * @private
 	 * 
 	 */
-	//~ function arcTween() {
-//~ 
-		//~ return function(d, i) {
-//~ console.log('arcTween, interpolating between', d.value, newValue)
-//~ 
-			//~ var interpolate = d3.interpolate(d.value, newValue)
-//~ 
-			//~ return function(t) {
-				//~ val = interpolate(t)
-//~ 
-				//~ return self.arcs[i]({endAngle : val / self.maxValue * tau / 2})
-			//~ }
-		//~ }
-	//~ }
-	
-	
 	function arcTween(d, i) {
 		
 		var interpolate = d3.interpolate({value: d.previous}, d)
@@ -140,15 +130,14 @@ console.log('drawing bars')
 	 * @private
 	 * 
 	 */
-	function textTween(oldValue, newValue) {
+	function textTween(d, i) {
 
-		return function(d) {
+		// TODO fix this (broken)
 
-			var interpolate = d3.interpolate(oldValue, newValue)
+		var interpolate = d3.interpolate({value: d.previous}, d)
 
-			return function(t) {
-				self.totalCount.text(Math.floor(interpolate(t)))
-			}
+		return function(t) {
+			return Math.floor(interpolate(t))
 		}
 	}
 
@@ -161,21 +150,6 @@ console.log('drawing bars')
 	//~ function updateTotalCount() {
 		//~ self.totalCount.datum(self.stats.totalCount).transition()
 		    //~ .tween('text', textTween(self.stats.previousTotal, self.stats.totalCount))
-	//~ }
-	//~ 
-	//~ /**
-	 //~ * Update mentions counts arc
-	 //~ * 
-	 //~ * @private
-	 //~ * 
-	 //~ */
-	//~ function updateArcs() {
-		//~ 
-		//~ self.replySlice.transition()
-		  //~ .duration(600)
-		  //~ .ease(d3.easeExpInOut)
-		  //~ .attrTween('d', arcTween( 3 / 4 * self.stats.replyCount / self.stats.totalCount * tau - tau / 4, replyArc))
-		  //~ 
 	//~ }
 
 	/****************************************
@@ -209,15 +183,11 @@ console.log('drawing bars')
 		// initialize data structure
 		self.data = opts.data.profiles.map(function(view) {
 			
-			// TMP data mock
-			var val = Math.random() * 100
-			
 			return {
 				id: view.id
 				, name: view.name
-				//~ , value: 0
-				// TMP data mock
-				, value: val
+				, value: 0
+				, previous: 0
 			}
 		})
 		
@@ -229,12 +199,9 @@ console.log('drawing bars')
 		
 		self.barColors = d3[opts.barColorsFn]
 		
-		self.maxValue = 0
+		self.maxValue = +Infinity
 
 		self.data.forEach(function(view, i) {
-			
-			// update max if applicable
-			self.maxValue = view.value > self.maxValue ? view.value : self.maxValue
 			
 			// create arc function for this view
 			var outerRadius = self.yScale.range([138, 27])(i)
@@ -276,13 +243,13 @@ console.log('drawing bars')
 	 * 
 	 */
 	this.setSelectors = function () {
-		console.log('updating selectors')
 		
 		self.svg = d3.select('#' + self.propertyId)
 		self.g = self.svg.select('g')
 		
 		// bind data
 		self.g.selectAll('.bar').data(self.data)
+		self.g.selectAll('.value').data(self.data)
 		
 	}
 
@@ -290,24 +257,42 @@ console.log('drawing bars')
 	 * Update donut chart
 	 *
 	 * @param {number} data updated visit stats
-	 * @param {number} maxValue new maxValue
 	 * 
 	 */
-	this.update = function (data, maxValue) {
+	this.update = function (data) {
+
+		// update data, keeping previous value information
+		self.data = data.profiles.map(function(view, i) {
+			
+			return {
+				id: view.id
+				, name: view.name
+				, value: view.value
+				, previous: self.data[i].value
+			}
+		})
 		
-		//~ updateMaxValue()
+		self.maxValue = data.maxValue
 		
 		self.g.selectAll('.bar')
-			.each(function(d) {
-				d.previous = d.value
-				d.value = Math.random() * 100
-			})
-		  .transition()
-		  .duration(2000)
-		  .ease(d3.easeExpInOut)
-		  .attr('class', function(d) {console.log('processing bar', d); return 'a'})
-		  .attrTween('d', arcTween)	
+			.data(self.data)
+			.transition()
+			.duration(600)
+			  .ease(d3.easeExpInOut)
+			  .attrTween('d', arcTween)	
+			  .style('fill', function(d, i) {
+				return self.barColors(d.value / self.maxValue)
+			  })
 		  
+		drawValues()
+		
+		//~ self.svg.selectAll('.value')
+			//~ .each(function(d, i) {
+				//~ d.previous = d.value
+				//~ d.value = data.profiles[i].value
+			//~ })
+			//~ .transition()
+		    //~ .tween('text', textTween())
 	}
 
 }

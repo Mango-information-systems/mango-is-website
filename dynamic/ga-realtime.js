@@ -82,6 +82,8 @@ function showData() {
 			
 			account.webProperties.forEach(function(property) {
 				
+				property.maxValue = 0
+				
 				app.view.donuts[property.id] = new DonutChart()
 			})
 		})
@@ -94,7 +96,6 @@ function showData() {
 			, donuts: app.view.donuts
 		}, function() {
 			
-			
 			app.data.forEach(function(account) {
 				
 				account.webProperties.forEach(function(property) {
@@ -103,14 +104,55 @@ function showData() {
 				})
 			})
 			
-			console.log('done')
+			console.log('charts drawn')
 		})
 		
 	})
 	
+	// sample data update
 	setTimeout(function() {
-		app.view.donuts['UA-19572298-1'].update()
+			
+			app.data.forEach(function(account) {
+				
+				var maxValue = setMaxvalue(account)
+				
+				account.webProperties.forEach(function(property, i) {
+					
+					property.maxValue = maxValue
+					
+					setTimeout(function() {
+						app.view.donuts[property.id].update(property)
+					}, i * 200)
+				})
+			})
+			
 	}, 1500)
 	
+	
+}
+
+
+
+/**
+* compute and return highest metric value across all properties of a given acount
+* 
+*/
+function setMaxvalue(account) {
+	
+	var maxValue = 0
+				
+	account.webProperties.forEach(function(property, i) {
+		
+		property.profiles.forEach(function(view) {
+
+			// TMP mock stats value
+			view.value = Math.random() * 100
+			
+			if (view.value > maxValue)
+				maxValue = view.value
+		})
+	})
+	
+	return maxValue
 	
 }
