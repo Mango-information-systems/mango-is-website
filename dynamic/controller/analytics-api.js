@@ -53,103 +53,6 @@ function AnalyticsApi(gapi, callback) {
 	})
 	
 	/**
-	* get all Analytics accounts to which the user has access
-	* 
-	* @private
-	* 
-	*/		
-	function getAccounts () {
-	
-
-		gapi.client.analytics.management.accountSummaries.list().then(function(res) {
-
-			console.log('account summary', res)
-			
-			// build hierarchical data structure 
-			res.result.items.forEach(function(account, accountIndex) {
-				
-				self.data.children.push({
-					id: account.id
-					, name: account.name
-					, children: []
-				})
-				
-				account.webProperties.forEach(function(property, propertyIndex) {
-					
-					self.data.children[accountIndex].children.push({
-						id: property.id
-						, name: property.name
-					})
-					
-					property.profiles.forEach(function(view, viewIndex) {
-						
-// temp limit	
-if (viewIndex === 0) {
-						self.data.children[accountIndex].children[propertyIndex].viewId = view.id
-						self.data.children[accountIndex].children[propertyIndex].viewName = view.name
-						
-						self.viewIds.push(view.id)
-						
-						getRealTimeStats (accountIndex, propertyIndex)
-}
-					})
-				})
-			})
-		})
-		
-	}
-	
-	/**
-	* get all Analytics properties to which the user has access
-	* 
-	* @param {number} accountIndex index of the account to fetch
-	* 
-	* @return {object} array of property Ids
-	* 
-	* @private
-	* 
-	*/		
-	function getProperties (accountIndex) {
-		
-		if (accountIndex === self.data.children.length) {
-			console.log('went through all accounts')
-			//~ console.log('views', self.data)
-			
-		}
-		else {
-			
-			var accountId = self.data.children[accountIndex].id
-			
-			gapi.client.analytics.management.webproperties.list({'accountId': accountId}).then(function(res) {
-				
-					//~ console.log('properties list', res)
-					
-					if (res.status !== 200)
-						console.log('error receiving properties list', res)
-					else {
-						
-						//~ self.properties = res.result.items
-
-						res.result.items.forEach(function(property) {
-							self.data.children[accountIndex].children.push({
-								id: property.id
-								, name: property.name
-							})
-						})
-						
-						getViews(accountIndex, 0)
-					}
-			})
-			.then(null, function(err) {
-				// Log any errors.
-				console.log(err)
-			})
-
-		}
-
-	}
-	
-	/**
 	* get realtime visit stats for a given views
 	* 
 	* @param {number} accountIndex index of the account to fetch
@@ -203,85 +106,6 @@ if (viewIndex === 0) {
 		
 	}
 	
-	/**
-	* get the first Analytics view to which the user has access, for a given property
-	* 
-	* @param {number} accountIndex index of the account to fetch
-	* 
-	* @param {number} propertyIndex index of the property fetch
-	* 
-	* @private
-	* 
-	*/		
-	function getViews (accountIndex, propertyIndex) {
-		
-		if (propertyIndex === self.data.children[accountIndex].children.length) {
-			//~ console.log('went through all properties for account', accountIndex)
-			getProperties (++accountIndex)
-		}
-		else {
-		
-			var accountId = self.data.children[accountIndex].id
-				, propertyId = self.data.children[accountIndex].children[propertyIndex].id
-			
-			gapi.client.analytics.management.profiles.list({
-					'accountId': accountId
-					, 'webPropertyId': propertyId
-				}).then(function(res) {
-				
-					//~ console.log('views list', res)
-					
-					if (res.status !== 200)
-						console.log('error receiving views list', res)
-					else {
-
-						self.data.children[accountIndex].children[propertyIndex].viewId = res.result.items[0].id
-						self.data.children[accountIndex].children[propertyIndex].viewName = res.result.items[0].name
-						
-						self.viewIds.push(res.result.items[0].id)
-				
-						getRealTimeStats (accountIndex, propertyIndex)
-						
-						getViews (accountIndex, ++propertyIndex)
-					}
-			})
-			.then(null, function(err) {
-				// Log any errors.
-				console.log(err)
-			})
-		}
-		
-	}
-	
-	/**
-	* get the realtime visitors count from certain Google Analytics view
-	* 
-	* @return {number} the number of visitors
-	* 
-	* @private
-	* 
-	*/		
-	function getViewStats (viewId) {
-		
-		
-	}
-	
-	/**
-	* listener
-	* 
-	* @return {} 
-	* 
-	* @private
-	* 
-	*/		
-	function updateSigninStatus (isSignedIn) {
-        
-		console.log('updateSigninStatus', isSignedIn)
-		
-		
-	}
-		
-	
 	/******************************************
 	 * 
 	 * Public functions
@@ -304,20 +128,18 @@ if (viewIndex === 0) {
 	}
 
 	/**
-	* get the hierarchy of Accounts / Properties / Views user has access to
+	* Sign out from Google
 	* 
-	* @return {string} access token
-	* 
-	*/
-	this.getData = function(callback) {
+	*/	
+	this.signOut = function(callback) {
 		
-		debug('signing user in')
+		debug('signing user out')
 		
-		gapi.auth2.getAuthInstance().signIn()
+		// TODO
 		
-		//~ console.log('auth2', gapi.auth2)
-
-		return gapi.auth2.getAuthInstance().currentUser.get().getAuthResponse().access_token
+		//~ gapi.auth2.getAuthInstance().signOut()
+		
+		//~ callback(null)
 		
 	}
 
