@@ -120,7 +120,7 @@ function AnalyticsApi(gapi, callback, updateFunction) {
 
 			setTimeout(function() {
 				getViewStats(self.views.slice(i * 10, i * 10+10))
-			}, i * 1100)
+			}, chunksCount * i * 1100)
 		})
 		
 	}
@@ -164,10 +164,10 @@ function AnalyticsApi(gapi, callback, updateFunction) {
 		
 		debug('signing user in')
 		
-		gapi.auth2.getAuthInstance().signIn()
-		
-		// TODO handle errors at sign-in
-		callback(null)
+		gapi.auth2.getAuthInstance().signIn().then( function(res) {
+			// TODO handle errors at sign-in
+			callback(null)
+		})
 		
 	}
 
@@ -178,12 +178,11 @@ function AnalyticsApi(gapi, callback, updateFunction) {
 	this.signOut = function(callback) {
 		
 		debug('signing user out')
-		
-		// TODO
-		
-		//~ gapi.auth2.getAuthInstance().signOut()
-		
-		//~ callback(null)
+
+		gapi.auth2.getAuthInstance().signOut().then( function(res) {
+			// TODO handle errors at sign-out
+			callback(null)
+		})
 		
 	}
 	

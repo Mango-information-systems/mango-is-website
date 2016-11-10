@@ -1,4 +1,5 @@
 var fs = require('fs')
+	, d3 = require('d3')
 	, ejs = require('ejs')
 
 function render(opts, callback) {
@@ -10,15 +11,20 @@ function render(opts, callback) {
 		, donuts: opts.donuts
 	}))
 	
-	callback()
+	d3.select('#logout').on('click', function() {
+		
+		d3.event.preventDefault()
+		d3.event.stopPropagation()
+		
+		opts.action()
+		
+		return false
+	})
 	
-}
-
-function update(opts) {
+	callback()
 	
 }
 
 module.exports = {
 	render: render
-	, update: update
 }

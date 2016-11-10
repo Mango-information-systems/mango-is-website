@@ -105,8 +105,13 @@ function showData() {
 			target: appContainer
 			, data: app.data
 			, donuts: app.view.donuts
+			, action: function() {
+				app.controller.analyticsApi.signOut(start)
+			}
 		}, function() {
+			// dashboard initial rendering is done
 			
+			// update d3 selectors so that they use DOM nodes (they were initialized in a detached node)
 			app.data.forEach(function(account) {
 				
 				account.webProperties.forEach(function(property) {
@@ -115,18 +120,19 @@ function showData() {
 				})
 			})
 			
-			console.log('charts drawn')
 		})
+	
+		// retrieve views metrics
+		app.controller.analyticsApi.getStats()
+		
+		// periodically refresh metrics
+		setInterval(function() {
+			
+			app.controller.analyticsApi.getStats()
+				
+		}, 25000)
 		
 	})
-	
-	app.controller.analyticsApi.getStats()
-	
-	setInterval(function() {
-		
-		app.controller.analyticsApi.getStats()
-			
-	}, 15000)
 	
 	
 }
