@@ -12,12 +12,57 @@ var d3 = require('d3')
 		, view: {
 			signIn: require('./view/sign-in-with-google')
 			, dashboard: require('./view/dashboard')
+			, cookieWarning: require('./view/cookie-warning')
 			, donuts: {}
 		}
 		, data: {}
 	}
 
 var appContainer = d3.select('#app')
+	
+/**
+* update charts whenever new data is received from Google Analytics API
+* 
+*/
+app.controller.updateStatsCharts = function (stats){
+	
+	// update visitorsCount metrics values
+	stats.forEach(function(stat) {
+		app.viewMap[stat.viewId].value = stat.value
+	})
+	
+	app.data.forEach(function(account) {
+		
+		// update maxValue for each account
+		var maxValue = setMaxvalue(account)
+		
+		account.webProperties.forEach(function(property, i) {
+			
+			property.maxValue = maxValue
+			
+			// update all charts
+			setTimeout(function() {
+				app.view.donuts[property.id].update(property)
+			}, i * 200)
+		})
+	})
+	
+}
+
+
+/**
+* initialize analytics API controller once the googgle Analytics javascript client library script is loadeed
+* 
+*/
+var cookieCheckTimeout = setTimeout(function() {
+	
+	if (!/google/.test(document.cookie))
+		app.view.cookieWarning.render({target: appContainer })
+	
+}, 1000)
+
+
+
 
 /**
 * initialize analytics API controller once the googgle Analytics javascript client library script is loadeed
@@ -25,7 +70,7 @@ var appContainer = d3.select('#app')
 */
 window.gApiLoaded = function() {
 	
-	app.controller.updateStatsCharts = updateStatsCharts
+	//~ clearTimeout(cookieCheckTimeout)
 	
 	app.controller.analyticsApi = new AnalyticsApi(gapi, start, app.controller.updateStatsCharts)
 
@@ -157,35 +202,5 @@ function setMaxvalue(account) {
 	})
 	
 	return maxValue
-	
-}
-
-
-/**
-* update charts whenever new data is received from Google Analytics API
-* 
-*/
-function updateStatsCharts(stats){
-	
-	// update visitorsCount metrics values
-	stats.forEach(function(stat) {
-		app.viewMap[stat.viewId].value = stat.value
-	})
-	
-	app.data.forEach(function(account) {
-		
-		// update maxValue for each account
-		var maxValue = setMaxvalue(account)
-		
-		account.webProperties.forEach(function(property, i) {
-			
-			property.maxValue = maxValue
-			
-			// update all charts
-			setTimeout(function() {
-				app.view.donuts[property.id].update(property)
-			}, i * 200)
-		})
-	})
 	
 }
