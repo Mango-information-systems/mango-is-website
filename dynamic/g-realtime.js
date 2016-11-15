@@ -196,7 +196,7 @@ function setMaxvalue(account) {
 		
 		property.profiles.forEach(function(view) {
 			
-			if (view.value > maxValue)
+			if (+view.value > +maxValue)
 				maxValue = view.value
 		})
 	})
