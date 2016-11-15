@@ -19,12 +19,12 @@ accounts.forEach(function(account, i) { %>
 		<% account.webProperties.forEach(function(property) { %>
 				<div class="three columns">
 					<div>
+						<p>
+							<small><%- property.name %></small>
+						</p>
 					
 						<%- donuts[property.id].render({data: property, barColorsFn: barColors[i % 6]}) %>
 						
-						<div>
-							<small><%- property.name %></small>
-						</div>
 
 					</div>
 				</div>

@@ -4,7 +4,7 @@ title: Realtime web traffic monitor dashboard across google Analytics properties
 author: Mango Information Systems
 date: 2016-10-24 16:29:26
 description: visualize the traffic acorss all of your websites and servers at once
-css: [2014-09-26-Belgians-twitter-and-klout.css]
+css: [g-realtime.css]
 scripts: [js/g-realtime.js, https://apis.google.com/js/api.js?onload=gApiLoaded]
 __index: true
 sections:
