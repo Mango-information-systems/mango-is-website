@@ -1,6 +1,6 @@
-var fs = require('fs')
-	, d3 = require('d3')
+var d3 = require('d3')
 	, ejs = require('ejs')
+	, fs = require('fs')
 
 function render(opts, callback) {
 
@@ -8,15 +8,23 @@ function render(opts, callback) {
 
 	opts.target.html(dashboardTemplate({
 		accounts: opts.data
-		, donuts: opts.donuts
 	}))
+	
+	var accountSelector = d3.select('#accountSelector')
+	
+	accountSelector.on('change', function() {
+		
+		opts.selectFn(accountSelector.node().value)
+		
+		return false
+	})
 	
 	d3.select('#logout').on('click', function() {
 		
 		d3.event.preventDefault()
 		d3.event.stopPropagation()
 		
-		opts.action()
+		opts.logOutFn()
 		
 		return false
 	})

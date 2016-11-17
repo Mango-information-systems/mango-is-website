@@ -1,5 +1,9 @@
 var d3 = Object.assign({}, require('d3'), require('d3-scale-chromatic'))
+	, ejs = require('ejs')
+	, fs = require('fs')
+
 window.d3 = d3
+
 /**
 * donut chart view
 *
@@ -156,12 +160,12 @@ function DonutChart() {
 	 ****************************************/
 
 	/**
-	 * 
+	 * Initialize the donut chart
 	 *
-	 * @param {object} 
+	 * @param {object} opts
 	 * 
 	 */
-	this.render = function (opts) {
+	this.init = function (opts) {
 		//~ console.log(opts.data.profiles)
 	
 		// create SVG container (detached)
@@ -174,6 +178,35 @@ function DonutChart() {
 		self.svg.attr('viewBox', '0 0 500 300')
 			
 		self.g = self.svg.append('g').attr('transform', 'translate(250, 150)')
+		
+		
+		self.arcs = []
+		
+		self.barColors = d3.interpolateOranges
+		
+		self.maxValue = +Infinity
+		
+		var bgArc = d3.arc()
+			.innerRadius(40)
+			.outerRadius(145)
+			.startAngle(0)
+			.endAngle(tau / 2)
+			
+		var bg = self.g.append('path')
+			.style('fill', '#eeeeee')
+			.attr('d', bgArc)
+		
+		self.reset(opts)
+		
+		return self.svg.nodes()[0].outerHTML
+
+	}
+
+	/**
+	 * Reset chart when switching between accounts
+	 * 
+	 */
+	this.reset = function (opts) {
 		
 		self.propertyId = opts.data.id
 		
@@ -190,13 +223,6 @@ function DonutChart() {
 		
 		self.yScale = d3.scaleLinear()
 		  .domain([0, self.data.length])
-		
-		
-		self.arcs = []
-		
-		self.barColors = d3[opts.barColorsFn]
-		
-		self.maxValue = +Infinity
 
 		self.data.forEach(function(view, i) {
 			
@@ -214,22 +240,9 @@ function DonutChart() {
 			
 		})
 		
-		var bgArc = d3.arc()
-			.innerRadius(40)
-			.outerRadius(145)
-			.startAngle(0)
-			.endAngle(tau / 2)
-			
-		var bg = self.g.append('path')
-			.style('fill', '#eeeeee')
-			.attr('d', bgArc)
-		
 		drawLabels()
 		
 		drawBars()
-		
-		return self.svg.nodes()[0].outerHTML
-
 	}
 
 	/**
@@ -262,7 +275,7 @@ function DonutChart() {
 				id: view.id
 				, name: view.name
 				, value: view.value
-				, previous: self.data[i].value
+				, previous: self.data[i].value || 0
 			}
 		})
 		

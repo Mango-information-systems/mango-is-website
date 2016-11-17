@@ -19,7 +19,6 @@ function AnalyticsApi(gapi, callback, updateFunction) {
 	
 	var self = this
 	
-	this.views = []
 	this.updateFunction = updateFunction
 	
 	// load the API client
@@ -111,15 +110,17 @@ function AnalyticsApi(gapi, callback, updateFunction) {
 	* calls self.updateFunction once done
 	* 
 	*/		
-	this.getStats = function() {
+	this.getStats = function(views) {
+
+		debug('getStats', views)
 
 		// split the viewIds in chunks of 10 in order to batch request them without reaching user rate limits
-		var chunksCount = Math.ceil(self.views.length / 10)
+		var chunksCount = Math.ceil(views.length / 10)
 
 		d3.range(chunksCount).forEach(function(i) {
 
 			setTimeout(function() {
-				getViewStats(self.views.slice(i * 10, i * 10+10))
+				getViewStats(views.slice(i * 10, i * 10+10))
 			}, chunksCount * i * 1100)
 		})
 		
@@ -136,15 +137,6 @@ function AnalyticsApi(gapi, callback, updateFunction) {
 		debug('retrieving list of views')
 	
 		gapi.client.analytics.management.accountSummaries.list().then(function(res) {
-			
-			// store the view Ids for metrics queries
-			res.result.items.forEach(function(account) {
-				account.webProperties.forEach(function(property) {
-					property.profiles.forEach(function(view) {
-						self.views.push(view.id)
-					})					
-				})
-			})
 			
 			callback(res)
 		})

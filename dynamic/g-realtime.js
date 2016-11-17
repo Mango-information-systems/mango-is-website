@@ -6,20 +6,28 @@ var d3 = require('d3')
 	, debug = window.appDebug('ga-realtime')
 	, ejs = require('ejs')
 	, AnalyticsApi = require('./controller/analytics-api')
-	, DonutChart = require('./view/donutChart')
 	, app = {
 		controller: {}
 		, view: {
 			signIn: require('./view/sign-in-with-google')
 			, dashboard: require('./view/dashboard')
 			, cookieWarning: require('./view/cookie-warning')
-			, donuts: {}
+			, donuts: require('./view/donuts')
 		}
 		, data: {}
 	}
 
 var appContainer = d3.select('#app')
-	
+	, dashboardBody
+
+
+/******************************************
+ * 
+ * Inline controllers
+ * 
+ * ***************************************/
+ 
+ 
 /**
 * update charts whenever new data is received from Google Analytics API
 * 
@@ -31,24 +39,47 @@ app.controller.updateStatsCharts = function (stats){
 		app.viewMap[stat.viewId].value = stat.value
 	})
 	
-	app.data.forEach(function(account) {
+	var account = app.data[app.data.currentAccountIndex]
 		
-		// update maxValue for each account
-		var maxValue = setMaxvalue(account)
+	// update maxValue for each account
+	var maxValue = setMaxvalue(account)
+	
+	account.webProperties.forEach(function(property, i) {
 		
-		account.webProperties.forEach(function(property, i) {
-			
-			property.maxValue = maxValue
-			
-			// update all charts
-			setTimeout(function() {
-				app.view.donuts[property.id].update(property)
-			}, i * 200)
-		})
+		property.maxValue = maxValue
+		
 	})
+	
+	app.view.donuts.update(account.webProperties)
 	
 }
 
+/**
+* Switch monitored account
+* 
+*/	
+app.controller.switchAccount = function(ix) {
+	
+	debug('switching account', ix)
+
+	app.data.currentAccountIndex = ix
+	
+	app.view.donuts.render({
+		target: dashboardBody
+		, properties: app.data[app.data.currentAccountIndex].webProperties
+	})
+	
+	app.controller.analyticsApi.getStats(app.data.viewsByAccount[ix])
+	
+}
+
+
+/******************************************
+ * 
+ * End inline controllers //
+ * 
+ * ***************************************/
+ 
 
 /**
 * initialize analytics API controller once the googgle Analytics javascript client library script is loadeed
@@ -61,21 +92,13 @@ var cookieCheckTimeout = setTimeout(function() {
 	
 }, 1000)
 
-
-
-
 /**
 * initialize analytics API controller once the googgle Analytics javascript client library script is loadeed
 * 
 */
 window.gApiLoaded = function() {
 	
-	//~ clearTimeout(cookieCheckTimeout)
-	
 	app.controller.analyticsApi = new AnalyticsApi(gapi, start, app.controller.updateStatsCharts)
-
-	//~console.log('loaded', window.location.hash)
-	// cf. https://github.com/google/google-api-javascript-client/blob/master/samples/authSample.html
 
 }
 
@@ -100,7 +123,7 @@ function start(hasError) {
 	else {
 	// user is already logged-in
 	
-		showData()
+		getViews()
 
 	}
 }
@@ -113,69 +136,81 @@ function handleSigninResponse(err) {
 	if (err)
 		start(true)
 	else
-		showData()
+		getViews()
 }
 
 /**
 * Render dashboard and initiate data refresh process
 * 
 */
-function showData() {
+function getViews() {
 	
 	app.controller.analyticsApi.getViews(function(res) {
 		
 		app.data = res.result.items
 		
+		app.data.viewsByAccount = {}
+		
 		// pointer to each view in the hierarchy, by Id
 		app.viewMap = {}
 		
-		app.data.forEach(function(account) {
+		// use the first account by default
+		app.data.currentAccountIndex = 0
+		
+		
+		// store the view Ids for metrics queries
+		app.data.forEach(function(account, i) {
+
+			app.data.viewsByAccount[i] = []
 			
 			account.webProperties.forEach(function(property) {
-				
+			
 				property.profiles.forEach(function(view) {
+					
+					app.data.viewsByAccount[i].push(view.id)
+					
 					app.viewMap[view.id] = view
+					
 					view.value = 0
 				})
 				
 				property.maxValue = 0
 				
-				app.view.donuts[property.id] = new DonutChart()
 			})
 		})
-		
-		//~ console.log('views list', app.data)
 		
 		app.view.dashboard.render({
 			target: appContainer
 			, data: app.data
-			, donuts: app.view.donuts
-			, action: function() {
+			, logOutFn: function() {
 				app.controller.analyticsApi.signOut(start)
+			}
+			, selectFn: function(ix) {
+				//~ app.view.donuts[property.id].reset()
+				app.controller.switchAccount(ix)
+				
 			}
 		}, function() {
 			// dashboard initial rendering is done
 			
-			// update d3 selectors so that they use DOM nodes (they were initialized in a detached node)
-			app.data.forEach(function(account) {
-				
-				account.webProperties.forEach(function(property) {
-					
-					app.view.donuts[property.id].setSelectors()
-				})
+			dashboardBody = d3.select('#dashboardBody')
+			
+			app.view.donuts.render({
+				target: dashboardBody
+				, properties: app.data[app.data.currentAccountIndex].webProperties
 			})
 			
 		})
 	
 		// retrieve views metrics
-		app.controller.analyticsApi.getStats()
+		app.controller.analyticsApi.getStats(app.data.viewsByAccount[app.data.currentAccountIndex])
 		
 		// periodically refresh metrics
 		setInterval(function() {
 			
-			app.controller.analyticsApi.getStats()
+			app.controller.analyticsApi.getStats(app.data.viewsByAccount[app.data.currentAccountIndex])
 				
-		}, 25000)
+		}, 10000)
 		
 	})
 	

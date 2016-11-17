@@ -2,35 +2,14 @@
 <div class="u-pull-right">
 	<small><a id="logout" href="#" style="color:#565656"><i class="fa fa-sign-out"></i> Logout</a></small>
 </div>
-<% 
-var barColors = [
-	'interpolateBlues'
-	, 'interpolateGreens'
-	, 'interpolateOranges'
-	, 'interpolatePurples'
-	, 'interpolateReds'
-	, 'interpolateGreys'
-]
-accounts.forEach(function(account, i) { %>
+<select id="accountSelector" name="accountSelector">
 	
-	<h5 class="small"><%- account.name %></h5>
-	<div class="row">
+	<% accounts.forEach(function(account, i) { %>
+			<option value="<%- i %>" <% if (i === 0) { %> selected <% } %> ><%- account.name %></option> 
+	<% }) %>
 
-		<% account.webProperties.forEach(function(property) { %>
-				<div class="three columns">
-					<div>
-						<p>
-							<small><%- property.name %></small>
-						</p>
-					
-						<%- donuts[property.id].render({data: property, barColorsFn: barColors[i % 6]}) %>
-						
+</select>
 
-					</div>
-				</div>
-
-		<% }) %>
-		
-	</div>
+<div id="dashboardBody" class="row">
 	
-<% }) %>
+</div>
