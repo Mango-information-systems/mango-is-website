@@ -1,9 +1,9 @@
 ---
 layout: landing
-title: Realtime web traffic monitor dashboard across google Analytics properties
+title: Free multi-site live web traffic monitor
 author: Mango Information Systems
 date: 2016-10-24 16:29:26
-description: visualize the traffic acorss all of your websites and servers at once
+description: Visualize the traffic across all of your websites in real time, with Google Analytics data.
 css: [g-realtime.css]
 scripts: [js/g-realtime.js, https://apis.google.com/js/api.js?onload=gApiLoaded]
 __index: true
@@ -13,10 +13,10 @@ sections:
   content:
    - type: h1
      class: small
-     value: Realtime google analytics properties dashboards
+     value: Realtime multi-site live google analytics dashboard
    - type: h2
      class: small
-     value: monitor multiple google analytics properties in a single live dashboard
+     value: Monitor the traffic across multiple sites in a single screen in realtime.
  -
   # app
   content:
