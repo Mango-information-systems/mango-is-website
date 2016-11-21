@@ -4,6 +4,7 @@ title: Free multi-site live web traffic monitor
 author: Mango Information Systems
 date: 2016-10-24 16:29:26
 description: Visualize the traffic across all of your websites in real time, with Google Analytics data.
+thumbnail: img/thumbnails/ga-realtime.png
 css: [g-realtime.css]
 scripts: [js/g-realtime.js, https://apis.google.com/js/api.js?onload=gApiLoaded]
 __index: true
