@@ -88,7 +88,7 @@ app.controller.switchAccount = function(ix) {
 */
 var cookieCheckTimeout = setTimeout(function() {
 	
-	if (!/google/.test(document.cookie))
+	if (!/G_AUTHUSER_H/.test(document.cookie))
 		app.view.cookieWarning.render({target: appContainer })
 	
 }, 1000)
