@@ -19,6 +19,7 @@ var d3 = require('d3')
 
 var appContainer = d3.select('#app')
 	, dashboardBody
+	, refreshInterval
 
 
 /******************************************
@@ -184,6 +185,7 @@ function getViews() {
 			, data: app.data
 			, logOutFn: function() {
 				app.controller.analyticsApi.signOut(start)
+				clearInterval(refreshInterval)
 			}
 			, selectFn: function(ix) {
 				//~ app.view.donuts[property.id].reset()
@@ -206,7 +208,7 @@ function getViews() {
 		app.controller.analyticsApi.getStats(app.data.viewsByAccount[app.data.currentAccountIndex])
 		
 		// periodically refresh metrics
-		setInterval(function() {
+		refreshInterval = setInterval(function() {
 			
 			app.controller.analyticsApi.getStats(app.data.viewsByAccount[app.data.currentAccountIndex])
 				
