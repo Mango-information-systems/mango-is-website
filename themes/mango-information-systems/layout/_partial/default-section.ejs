@@ -87,7 +87,7 @@ function setContent(content) {
 					, tag = 'p'
 					, tagClass = content.class? ' class="' + content.class + '"' : ''
 
-				if (['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'div'].indexOf(content.type) !== -1)
+				if (['div', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ol', 'ul'].indexOf(content.type) !== -1)
 					tag = content.type
 
 				%>
