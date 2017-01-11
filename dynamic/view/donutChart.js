@@ -63,7 +63,7 @@ function DonutChart() {
 		    .text(function(d) {
 			  return d.name  
 		    })
-		    .attr('x', 240)
+		    .attr('x', 270)
 		    .attr('text-anchor', 'end')
 		    .attr('y', function(d, i) {
 			  return self.yScale.range([20, 130])(i)
@@ -82,7 +82,7 @@ function DonutChart() {
 		  .enter()
 		    .append('text')
 		    .attr('class', 'value')
-		    .attr('x', 240)
+		    .attr('x', 270)
 		    .attr('text-anchor', 'end')
 		    .attr('y', function(d, i) {
 			  return self.yScale.range([290, 180])(i)
@@ -177,7 +177,7 @@ function DonutChart() {
 		self.svg.attr('preserveAspectRatio', 'xMinYMin')
 		self.svg.attr('viewBox', '0 0 500 300')
 			
-		self.g = self.svg.append('g').attr('transform', 'translate(250, 150)')
+		self.g = self.svg.append('g').attr('transform', 'translate(280, 150)')
 		
 		
 		self.arcs = []
