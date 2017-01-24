@@ -74,10 +74,10 @@ sections:
     value: About us
    -
     type: p
-    value: Mango Information Systems is a <strong>Business Intelligence</strong> company helping organizations get <strong>more successful in the digital world</strong>.
+    value: Mango Information Systems is a <strong>Business Intelligence</strong> company that helps organizations be <strong>more successful in the digital world</strong>.
    -
     type: p
-    value: We operate since 2010 from Brussels, Belgium.
+    value: We've been operating from Brussels, Belgium since 2010.
    -
     type: p
     value: "We act as a bridge between business and technical teams, and provide the following type of services:"

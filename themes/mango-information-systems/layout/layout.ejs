@@ -7,9 +7,15 @@
 			<%- body %>
 				
 			<%  if (page.scripts) {
-					page.scripts.forEach(function(scriptFile) {%>
-					<%- js(scriptFile) %>
-				<%  })
+					page.scripts.forEach(function(scriptFile) {
+						if (scriptFile.substr(0, 4) === 'http') {%>
+							<script src="<%- scriptFile %>"></script>
+						<% }
+						else
+						{%>
+							<%- js(scriptFile) %>
+						<% }
+					})
 				}
 			%>
 		</body>

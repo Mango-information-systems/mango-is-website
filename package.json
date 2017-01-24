@@ -1,6 +1,6 @@
 {
   "name": "mango-is-website",
-  "version": "3.3.1",
+  "version": "3.7.1",
   "private": true,
   "scripts": {
     "start": "npm run build:static && cp config/dev.theme._config.yml themes/mango-information-systems/_config.yml && npm run watch & hexo server & npm run watch:socketServer",
@@ -8,7 +8,7 @@
     "build:prod": "npm run build:assets && cp config/prod.theme._config.yml themes/mango-information-systems/_config.yml && hexo generate  --config config/prod._config.yml",
     "build:assets": "npm run build:static && npm run build:js && npm run build:skeleton",
     "build:static": "./bin/build-css.sh",
-    "build:js": "browserify -t uglifyify dynamic/client.js | uglifyjs -c > source/js/site.js",
+    "build:js": "./bin/build-js.sh",
     "build:skeleton": "cd skeleton-framework && npm run build",
     "deploy:test": "./bin/deploy.sh test",
     "deploy:prod": "./bin/deploy.sh prod",
@@ -16,7 +16,7 @@
     "start:socketServer": "node ./dynamic/server",
     "test": "node_modules/.bin/mocha",
     "watch": "npm run watch:js & npm run watch:skeleton",
-    "watch:js": "watchify dynamic/client.js -o source/js/site.js -v --poll=2000",
+    "watch:js": "watchify dynamic/client.js -o source/js/site.js -v --poll=2000 & watchify -t brfs dynamic/g-realtime.js -o source/js/g-realtime.js -v --poll=2000",
     "watch:skeleton": "cd skeleton-framework && npm run watch",
     "watch:socketServer": "nodemon --watch dynamic dynamic/server.js"
   },
@@ -24,8 +24,12 @@
     "version": "3.2.2"
   },
   "dependencies": {
+    "brfs": "^1.4.3",
     "browserify": "^13.0.1",
+    "d3": "^4.2.8",
+    "d3-scale-chromatic": "^1.1.0",
     "debug": "^2.2.0",
+    "ejs": "^2.5.2",
     "font-awesome": "^4.6.1",
     "form-to-obj": "0.0.3",
     "gascrolldepth": "git+https://github.com/leighmcculloch/gascrolldepth.js.git#70834032",

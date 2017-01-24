@@ -27,6 +27,11 @@ function setContent(content) {
 					partial('_partial/reference', {data: content.content})
 				%><%
 			break
+			case 'post':%>
+				<%-
+					partial('_partial/archive-post', {post: content.content, index: true})
+				%><%
+			break
 			case 'client-logos':%>
 				<%-
 					partial('_partial/client-logos', {data: content.logos})
@@ -82,7 +87,7 @@ function setContent(content) {
 					, tag = 'p'
 					, tagClass = content.class? ' class="' + content.class + '"' : ''
 
-				if (['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'div'].indexOf(content.type) !== -1)
+				if (['div', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ol', 'ul'].indexOf(content.type) !== -1)
 					tag = content.type
 
 				%>

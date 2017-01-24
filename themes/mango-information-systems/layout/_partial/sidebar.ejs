@@ -5,11 +5,15 @@
 	  if (['/terms/'].indexOf(site.data.menu[link]) === -1) {
 
 	  %>
-		<a href="<%- url_for(site.data.menu[link]) %>"><%= link %></a>
+		<a href="<%- url_for(site.data.menu[link]) %>"><%- link %></a>
   <% }
   } %>
-  
+
   <a title="rss feed" href="<%- url_for(config.feed.path) %>"><i class="fa fa-rss-square" aria-label="RSS feed"></i></a>
+  <a title="share on twitter" href="https://twitter.com/home?status=<%- page.title %>%20%3E%20<%- page.permalink %>"><i class="fa fa-twitter" aria-label="share on twitter"></i></a>
+  <a title="share on facebook" href="https://www.facebook.com/sharer/sharer.php?u=<%- page.permalink %>"><i class="fa fa-facebook" aria-label="share on facebook"></i></a>
+  <a title="share on linkedIn" href="https://www.linkedin.com/shareArticle?mini=true&url=<%- page.permalink %>&title=<%- page.title %>&summary=<%- page.description %>&source=mango-is.com"><i class="fa fa-linkedin" aria-label="share on linkedin"></i></a>
+
 
 </aside>
 <!-- / sidebar -->

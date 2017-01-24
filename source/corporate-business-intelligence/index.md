@@ -20,7 +20,7 @@ sections:
    - type: p
      value: <small><em>Let us help you succeed</em></small>
    - type: cta
-     value: View offers
+     value: View offers <i class="fa fa-chevron-down"></i>
      primary: true
      trg: /view-packages
      href: "#packages"
@@ -146,7 +146,7 @@ sections:
         - ETL
         - performance
        CTA:
-        label: Get a quote
+        label: Get a quote <i class="fa fa-chevron-right"></i>
         trg: /package-bi-fixer
    - type: pricing
      offers:
@@ -160,7 +160,7 @@ sections:
         - "<span class='u-text-center empty-cell'> ~ </span>"
         - "<span class='u-text-center empty-cell'> ~ </span>"
        CTA:
-        label: Get a quote
+        label: Get a quote <i class="fa fa-chevron-right"></i>
         trg: /package-bi-analysis
       -
        title: Development
@@ -172,7 +172,7 @@ sections:
         - Development of ETL and reports
         - Code and knowledge management
        CTA:
-        label: Get a quote
+        label: Get a quote <i class="fa fa-chevron-right"></i>
         trg: /package-bi-development
       -
        title: Full Service
@@ -184,7 +184,7 @@ sections:
         - Development of ETL and reports
         - Code and knowledge management
        CTA:
-        label: Get a quote
+        label: Get a quote <i class="fa fa-chevron-right"></i>
         trg: /package-bi-full
  -
   # seventh section: team
@@ -276,7 +276,7 @@ sections:
    - type: h2
      value: Let's talk!
    - type: cta
-     value: Contact us
+     value: <i class="fa fa-envelope"></i> Contact us
      class: contact
      primary: true
      href: /contact/

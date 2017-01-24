@@ -1,5 +1,5 @@
 <!-- begin archive-post -->
-<div class="row archive-post">
+<div class="row archive-post <%- post.class %>">
 
 	<%	if (post.thumbnail) { %>
 
@@ -21,7 +21,12 @@
 		
 		<%- post.description %>
 
-		<%- partial('post/postFooter', {date_format: 'MMMM Do YYYY', isIndex: true}) %>
+		<% if (typeof post.footer === 'undefined' || post.footer !== false ) { %>
+	
+			<%- partial('post/postFooter', {date_format: 'MMMM Do YYYY', isIndex: true}) %>
+			
+		<% } %>
+		
 	</div>
 </div>
 <!-- / archive-post -->

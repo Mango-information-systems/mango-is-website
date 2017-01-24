@@ -1,6 +1,7 @@
-Home: /
-Blog: /blog/
-Business Intelligence: /corporate-business-intelligence/
-Conversion optimization: /convert/
-Copyright - terms of use: /terms/
-Contact: /contact/
+<i class="fa fa-fw fa-home"></i> Home: /
+<i class="fa fa-fw fa-bar-chart"></i> Business Intelligence: /corporate-business-intelligence/
+<i class="fa fa-fw fa-filter"></i> Conversion optimization: /convert/
+<i class="fa fa-fw fa-book"></i> Blog: /blog/
+<i class="fa fa-fw fa-wrench"></i> Tools: /tools/
+<i class="fa fa-fw fa-info"></i> Copyright - terms of use: /terms/
+<i class="fa fa-fw fa-envelope"></i> Contact: /contact/
