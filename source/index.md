@@ -44,6 +44,50 @@ sections:
       title: <i class="fa fa-users" aria-hidden="true"></i> Social media audience Analytics
       text: Reach your target niche on social media
  -
+  # section: references
+  content:
+   - type: h2
+     value: What our customers say
+   - type: reference
+     content:
+      image:
+       href: /img/clients/jean-christophe-blondiau.jpg
+       alt: Jean-Christophe Blondiau
+       width: 140px
+       height: 140px
+      quote: Mehdi is responsible for the development of a data-intensive web application.<br>He demonstrates his commitment to the success of this enterprise through flexibility and short response time.<br>He is totally focused on delivering results.
+      author: Jean-Christophe Blondiau
+      title: Director at co-emergence
+   - type: reference
+     content:
+      image:
+       href: /corporate-business-intelligence/img/dusan-jakovljevic-large.jpg
+       alt: Dusan Jakovljevic
+       width: 140px
+       height: 140px
+      quote: Mehdi has provided exceptional data integration service to Energy Efficiency in Industrial Services
+      author: Dusan Jakovljevic
+      title: Director at Energy Efficiency in Industrial Processes (EEIP)
+ -
+  # section: About us
+  content:
+   -
+    type: h2
+    value: About us
+   -
+    type: p
+    value: Mango Information Systems is a <strong>Business Intelligence</strong> company that helps organizations be <strong>more successful in the digital world</strong>.
+   -
+    type: p
+    value: Founded by <a href="https://www.linkedin.com/in/elfadme/" target="_new">Mehdi El Fadil</a> in 2010, we're operating from Brussels, Belgium.
+   -
+    type: p
+    value: "We act as a bridge between business and technical teams, and provide the following type of services:"
+   - type: ul
+     value: "<li>Contracting authority support</li>
+			<li>Strategic consulting</li>
+			<li>Technical experts in complex data-intensive projects</li>"
+ -
   # section: client logos
   content:
    - type: h2
@@ -66,25 +110,6 @@ sections:
         alt: EEIP logo
       - href: /img/clients/smoall.png
         alt: smoall logo
- -
-  # section: About us
-  content:
-   -
-    type: h2
-    value: About us
-   -
-    type: p
-    value: Mango Information Systems is a <strong>Business Intelligence</strong> company that helps organizations be <strong>more successful in the digital world</strong>.
-   -
-    type: p
-    value: We've been operating from Brussels, Belgium since 2010.
-   -
-    type: p
-    value: "We act as a bridge between business and technical teams, and provide the following type of services:"
-   - type: ul
-     value: "<li>Contracting authority support</li>
-			<li>Strategic consulting</li>
-			<li>Technical experts in complex data-intensive projects</li>"
  -
   # section: CTA repeat
   content:
