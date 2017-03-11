@@ -23,9 +23,10 @@ sections:
     value: Explore what we do
    - type: card
      content:
-      href: /convert/
       title: <i class="fa fa-filter" aria-hidden="true"></i> Conversion optimization
-      text: Using analytics to help businesses sell more
+      text: "<p>Some of our clients get very good at promoting their websites and attracting visitors, but then fail at converting them into paying customers. </p>
+      <p>Using analytics we help businesses identify and fix the bottlenecks, to eventually sell more.</p>
+      <p>If you feel this pain, <a href='/convert/'>have a look at our offering</a>.</p>"
    - type: card
      content:
       href: /corporate-business-intelligence/
