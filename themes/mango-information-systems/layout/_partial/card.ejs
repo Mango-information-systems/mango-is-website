@@ -1,6 +1,11 @@
 <!-- begin card -->
 <div class="row">
-	<a href="<%- data.href %>" data-trg="<%- data.trg %>" class="card">
+	<% if (typeof data.href === 'undefined') { %>
+		<div class="card">
+	<% }
+	else { %>
+		<a href="<%- data.href %>" data-trg="<%- data.trg %>" class="card">
+	<% } %>
 		<h3><%- data.title %></h3>
 		<p><%- data.text %> </p>
 	</a>
