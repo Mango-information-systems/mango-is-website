@@ -23,27 +23,23 @@ sections:
     value: Explore what we do
    - type: card
      content:
+      trg: /package-web-apps
+      title: <i class="fa fa-pie-chart" aria-hidden="true"></i> Data-driven web applications
+      text: "<p>We use web technologies to build modern, realtime web analytics applications.</p>
+      <p>We believe that data visualizations should not be here just for eye candy, but actually provide valuable and actionable insights.</p>
+      <p>Let's see whether we should work together, <a href='/contact/'>get in touch</a>!</p>"
+   - type: card
+     content:
       title: <i class="fa fa-filter" aria-hidden="true"></i> Conversion optimization
       text: "<p>Some of our clients get very good at promoting their websites and attracting visitors, but then fail at converting them into paying customers. </p>
       <p>Using analytics we help businesses identify and fix the bottlenecks, to eventually sell more.</p>
-      <p>If you feel this pain, <a href='/convert/'>have a look at our offering</a>.</p>"
+      <p>If you feel this pain, <a href='/convert/'>have a look at how we do it</a>.</p>"
    - type: card
      content:
-      href: /corporate-business-intelligence/
       title: <i class="fa fa-bar-chart" aria-hidden="true"></i> Corporate Business Intelligence
-      text: "Ensure more successful data-warehousing projects"
-   - type: card
-     content:
-      href: /contact/
-      trg: /package-web-apps
-      title: <i class="fa fa-pie-chart" aria-hidden="true"></i> Data-driven web applications
-      text: Smart apps with real-time data analysis and visualization
-   - type: card
-     content:
-      href: /contact/
-      trg: /package-social
-      title: <i class="fa fa-users" aria-hidden="true"></i> Social media audience Analytics
-      text: Reach your target niche on social media
+      text: "<p>Every organization runs better when they take decisions based on facts, rather than assumptions.</p>
+      <p>Data-warehousing projects are complex and challenging, and we use our experience to increase the chances of success.</p>
+      <p><a href='/corporate-business-intelligence/'>Check our offering</a> to know more.</p>"
  -
   # section: references
   content:
@@ -114,18 +110,19 @@ sections:
  -
   # section: CTA repeat
   content:
+   - type: div
+     class: row
+     value: "<div class='twelve columns'><a class='button u-full-width' href='/contact/'><i class='fa fa-pie-chart' aria-hidden='true'></i> Data-driven web applications</a></div><br><br>"
    - type: columns
      columns:
       - content:
-        - type: div
+        - type: p
           value: " \
 		<a class='button u-full-width' href='/convert/'><i class='fa fa-filter' aria-hidden='true'></i> Conversion optimization</a> \
-		<br><br><a class='button u-full-width' href='/contact/'><i class='fa fa-pie-chart' aria-hidden='true'></i> Data-driven web applications</a> \
 		"
       - content:
-        - type: div
+        - type: p
           value: " \
 		<a class='button u-full-width' href='/corporate-business-intelligence/'><i class='fa fa-bar-chart' aria-hidden='true'></i> Corporate Business Intelligence</a> \
-		<br><br><a class='button u-full-width' href='/contact/'><i class='fa fa-users' aria-hidden='true'></i> Social media audience Analytics</a> \
 		"
 ---
