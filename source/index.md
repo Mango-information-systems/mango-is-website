@@ -25,21 +25,21 @@ sections:
      content:
       trg: /package-web-apps
       title: <i class="fa fa-pie-chart" aria-hidden="true"></i> Data-driven web applications
-      text: "<p>We use web technologies to build modern, realtime web analytics applications.</p>
-      <p>We believe that data visualizations should not be here just for eye candy, but actually <strong>provide valuable and actionable insights</strong>.</p>
+      text: "<p>We build modern, realtime web analytics applications [using the latest web technologies].</p>
+      <p>We believe that data visualizations aren't just eye candy, but actually <strong>provide valuable and actionable insights</strong>.</p>
       <p>Let's see whether we should work together, <a href='/contact/'>get in touch</a>!</p>"
    - type: card
      content:
       title: <i class="fa fa-filter" aria-hidden="true"></i> Conversion optimization
-      text: "<p>Some of our clients get very good at promoting their websites and attracting visitors, but then struggle at converting them into paying customers. </p>
+      text: "<p>Some of our clients are very good at promoting their websites and attracting visitors, but struggle to convert them into paying customers.</p>
       <p>Using analytics we help businesses identify and <strong>fix the bottlenecks</strong>, to eventually <strong>sell more</strong>.</p>
       <p>If you feel this pain, <a href='/convert/'>have a look at how we do it</a>.</p>"
    - type: card
      content:
       title: <i class="fa fa-bar-chart" aria-hidden="true"></i> Corporate Business Intelligence
       text: "<p>Every organization runs better when they take decisions based on facts, rather than assumptions.</p>
-      <p>Data-warehousing projects are complex and challenging, and we use our experience to <strong>increase the chances of success</strong>.</p>
-      <p><a href='/corporate-business-intelligence/'>Check our offering</a> to know more.</p>"
+      <p>Data-warehousing projects are complex and challenging. Our experience <strong>increases the chances of your success</strong>.</p>
+      <p><a href='/corporate-business-intelligence/'>Check what we offer</a> to know more.</p>"
  -
   # section: references
   content:
@@ -76,7 +76,7 @@ sections:
     value: Mango Information Systems is a <strong>Business Intelligence</strong> company that helps organizations be <strong>more successful in the digital world</strong>.
    -
     type: p
-    value: Founded by <a href="https://www.linkedin.com/in/elfadme/" target="_new">Mehdi El Fadil</a> in 2010, we're operating from Brussels, Belgium.
+    value: Founded by <a href="https://www.linkedin.com/in/elfadme/" target="_new">Mehdi El Fadil</a> in 2010, we operate from Brussels, Belgium.
    -
     type: p
     value: "We act as a bridge between business and technical teams, and provide the following type of services:"
