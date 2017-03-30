@@ -4,10 +4,16 @@ CACHE MANIFEST
 CACHE:
 /css/legacy/bootstrap.min.css
 /css/legacy/bootstrap-responsive.min.css
+/css/font-awesome/css/font-awesome.min.css
+/css/normalize.css
+/css/skeleton.min.css
+/css/landing.css
 /css/legacy/2015-01-08-csv-to-json.css
 /img/mango-information-systems-logo.png
 /img/legacy/glyphicons-halflings-white.png
 /img/legacy/glyphicons-halflings.png
+/img/bg-pattern-2x.jpg
+/img/bg-pattern-dark-2x.jpg
 /js/legacy/jquery.js
 /js/legacy/bootstrap.min.js
 /js/legacy/underscore-min.js
