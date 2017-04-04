@@ -25,7 +25,7 @@ sections:
      content:
       trg: /package-web-apps
       title: <i class="fa fa-pie-chart" aria-hidden="true"></i> Data-driven web applications
-      text: "<p>We build modern, realtime web analytics applications [using the latest web technologies].</p>
+      text: "<p>We build modern, realtime web analytics applications.</p>
       <p>We believe that data visualizations aren't just eye candy, but actually <strong>provide valuable and actionable insights</strong>.</p>
       <p>Let's see whether we should work together, <a href='/contact/'>get in touch</a>!</p>"
    - type: card
