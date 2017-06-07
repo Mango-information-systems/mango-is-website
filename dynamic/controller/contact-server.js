@@ -4,7 +4,8 @@ var debug = require('debug')('contact')
 	, storage = require('node-persist')
 	, xssFilters = require('xss-filters')
 	, validator = require('validator')
-	, nodemailer = require('nodemailer')
+	, mailgun = require('mailgun-js')({apiKey: params.mail.key, domain: params.mail.domain})
+
 
 /********************************************************
 * Contact form submission processing
@@ -19,9 +20,6 @@ function Contact() {
 	storage.init({
 		dir: path.resolve(__dirname + '/../persist')
 	})
-	
-	// requires to activate access for less secure apps here: https://www.google.com/settings/security/lesssecureapps
-	var mailer = nodemailer.createTransport('smtps://' + params.mail.user + ':' + params.mail.pass + '@smtp.gmail.com')
 	
 	/****************************************************
 	* 
@@ -76,14 +74,17 @@ function Contact() {
 		message.push(data.message)
 		
 		var mailContent = {
-			from: '"mailing service" <mailing@mango-is.com.com>'
+			from: '"mailing service" <mailing@mango-is.com>'
 			, to: 'contact@mango-is.com'
-			, 'reply-to': data.email
+			, 'h:Reply-To': data.email
 			, subject: data.subject || ((data.name || data.email) + ' - ' + data.contactType + ' on mango-is.com')
 			, html: message.join('<br>')
 		}
 		
-		mailer.sendMail(mailContent, function(error, info){
+		
+
+		mailgun.messages().send(mailContent, function (error, body) {
+			
 			if(error){
 				console.error('error sending email')
 				console.error(error)
@@ -108,7 +109,7 @@ function Contact() {
 				}
 			}
 			else {
-				debug('email sent,' + info.response)
+				debug('email sent,' + body.message)
 			}
 		})
 		

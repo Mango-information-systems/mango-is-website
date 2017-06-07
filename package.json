@@ -1,6 +1,6 @@
 {
   "name": "mango-is-website",
-  "version": "3.9.1",
+  "version": "3.10.0",
   "private": true,
   "scripts": {
     "start": "npm run build:static && cp config/dev.theme._config.yml themes/mango-information-systems/_config.yml && npm run watch & hexo server & npm run watch:socketServer",
@@ -41,8 +41,8 @@
     "hexo-renderer-ejs": "^0.2.0",
     "hexo-renderer-markdown-it": "^3.4.1",
     "hexo-server": "^0.2.0",
+    "mailgun-js": "^0.11.2",
     "node-persist": "0.0.11",
-    "nodemailer": "^2.4.2",
     "smoothscroll": "^0.2.2",
     "socket.io": "^1.4.6",
     "socket.io-client": "^1.4.6",
