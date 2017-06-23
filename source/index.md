@@ -58,11 +58,22 @@ sections:
    - type: reference
      content:
       image:
+       href: /img/clients/bastien-wauters.jpg
+       alt: Bastien Wauters
+       width: 140px
+       height: 140px
+      quote: "As we were looking at optimizing the conversion rate of our startup smoall.com, Mehdi helped us by setting up a reporting system, measuring the performance of each step of the funnel.<br>
+		Mehdi has a strong analytical mind, but also understands business, and dedicates all his efforts to his clients' goals."
+      author: Bastien Wauters
+      title: Managing Director & Co-founder at smoall
+   - type: reference
+     content:
+      image:
        href: /corporate-business-intelligence/img/dusan-jakovljevic-large.jpg
        alt: Dusan Jakovljevic
        width: 140px
        height: 140px
-      quote: Mehdi has provided exceptional data integration service to Energy Efficiency in Industrial Services
+      quote: Mehdi has provided exceptional data integration service to Energy Efficiency in Industrial Services.
       author: Dusan Jakovljevic
       title: Director at Energy Efficiency in Industrial Processes (EEIP)
  -
