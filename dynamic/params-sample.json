@@ -3,4 +3,8 @@
 		"key": "key-xxxxxxx"
 		, "domain": "yyyyyy"
 	}
+	, "stackExchange": {
+		"clientId": ""
+		, "key": ""
+	}
 }
