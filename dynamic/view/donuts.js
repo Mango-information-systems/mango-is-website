@@ -1,5 +1,4 @@
-var d3 = require('d3')
-	, ejs = require('ejs')
+var ejs = require('ejs')
 	, fs = require('fs')
 	, DonutChart = require('./donutChart')
 

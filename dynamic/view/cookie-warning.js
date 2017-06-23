@@ -1,7 +1,3 @@
-var fs = require('fs')
-	, d3 = require('d3')
-	, ejs = require('ejs')
-
 function render(opts) {
 		opts.target.html(
 	'<div class="alert alert-danger"> \

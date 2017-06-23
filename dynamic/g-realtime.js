@@ -1,10 +1,7 @@
-var fs = require('fs')
-
 window.appDebug = require('debug')
 
 var d3 = require('d3')
 	, debug = window.appDebug('ga-realtime')
-	, ejs = require('ejs')
 	, AnalyticsApi = require('./controller/analytics-api')
 	, app = {
 		controller: {}
@@ -20,7 +17,6 @@ var d3 = require('d3')
 var appContainer = d3.select('#app')
 	, dashboardBody
 	, refreshInterval
-
 
 /******************************************
  * 
@@ -121,17 +117,6 @@ function start(err) {
 		getViews()
 
 	}
-}
-
-/**
-* 
-* 
-*/
-function handleSigninResponse(err) {
-	if (err)
-		start(true)
-	else
-		getViews()
 }
 
 /**

@@ -1,6 +1,4 @@
 var d3 = Object.assign({}, require('d3'), require('d3-scale-chromatic'))
-	, ejs = require('ejs')
-	, fs = require('fs')
 
 window.d3 = d3
 
