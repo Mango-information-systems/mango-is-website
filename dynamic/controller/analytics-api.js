@@ -43,6 +43,7 @@ function AnalyticsApi(gapi, callback, updateFunction) {
 		})
 		.then(null, function(err) {
 			console.log('error initializing auth2', err)
+			callback(err)
 		})
 	})
 	

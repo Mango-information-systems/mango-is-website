@@ -82,16 +82,6 @@ app.controller.switchAccount = function(ix) {
  * ***************************************/
  
 
-/**
-* initialize analytics API controller once the googgle Analytics javascript client library script is loadeed
-* 
-*/
-var cookieCheckTimeout = setTimeout(function() {
-	
-	if (!/G_AUTHUSER_H/.test(document.cookie))
-		app.view.cookieWarning.render({target: appContainer })
-	
-}, 1000)
 
 /**
 * initialize analytics API controller once the googgle Analytics javascript client library script is loadeed
@@ -107,19 +97,23 @@ window.gApiLoaded = function() {
 * Display login form or data, depending on user's connection status
 * 
 */
-function start(hasError) {
+function start(err) {
 
-	if (!gapi.auth2.getAuthInstance().isSignedIn.get()) {
+	if (err && err.error == 'idpiframe_initialization_failed') {
+	// third-party cookies are disabled (or something)
+		// https://github.com/google/google-api-javascript-client/issues/260#issuecomment-278514289
+		app.view.cookieWarning.render({target: appContainer })
+	}
+	else if (!gapi.auth2.getAuthInstance().isSignedIn.get()) {
 	// user has not connected his Google Analytics account yet
 
 		app.view.signIn.render({
 			target: appContainer
-			, hasError: hasError
+			, hasError: typeof err !== 'undefined'
 			, action: function() {
 				app.controller.analyticsApi.signIn(start)
 			}
 		})
-
 	}
 	else {
 	// user is already logged-in
