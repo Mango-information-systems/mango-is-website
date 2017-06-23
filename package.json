@@ -1,6 +1,6 @@
 {
   "name": "mango-is-website",
-  "version": "3.11.0",
+  "version": "3.12.0",
   "private": true,
   "scripts": {
     "start": "npm run build:static && cp config/dev.theme._config.yml themes/mango-information-systems/_config.yml && npm run watch & hexo server & npm run watch:socketServer",
