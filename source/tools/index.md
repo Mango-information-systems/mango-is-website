@@ -1,8 +1,8 @@
 ---
 layout: landing
-title: Tools
+title: Tools directory
 author: Mango Information Systems
-description: Software created by Mango Information Systems
+description: List of open source software created by us, with public access
 date: 2016-06-03 16:21:12
 __index: true
 sections:
@@ -29,10 +29,25 @@ sections:
    - type: post
      content:
       class: index
+      path: /tools/ga-realtime/
+      thumbnail: img/thumbnails/ga-realtime.png
+      title: Free multi-site live web traffic monitor
+      subtitle: Visualize the visits across all of your websites in real time, with Google Analytics data.
+      footer: false
+   - type: post
+     content:
+      class: index
       path: /tools/csv-to-json/
       thumbnail: img/thumbnails/2015-01-08-csv-to-json.png
       title: CSV to JSON converter
       subtitle: Easy, privacy-friendly and offline-first online csv to json converter
+      footer: false
+   - type: post
+     content:
+      class: index
+      path: https://github.com/Mango-information-systems
+      title: More on GitHub
+      subtitle: Checkout our GitHub organization for more code...
       footer: false
 ---
 
