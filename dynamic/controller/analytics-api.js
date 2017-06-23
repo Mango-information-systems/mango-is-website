@@ -159,7 +159,7 @@ function AnalyticsApi(gapi, callback, updateFunction) {
 		
 		gapi.auth2.getAuthInstance().signIn().then( function(res) {
 			// TODO handle errors at sign-in
-			callback(null)
+			callback()
 		})
 		
 	}
@@ -174,7 +174,7 @@ function AnalyticsApi(gapi, callback, updateFunction) {
 
 		gapi.auth2.getAuthInstance().signOut().then( function(res) {
 			// TODO handle errors at sign-out
-			callback(null)
+			callback()
 		})
 		
 	}
