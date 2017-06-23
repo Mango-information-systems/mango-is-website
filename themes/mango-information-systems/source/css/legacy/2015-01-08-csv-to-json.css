@@ -17,12 +17,10 @@
 	overflow: auto;
 }
 .resultsPreview {
-	max-height: 275px;
+	max-height: 500px;
 	overflow: auto;
 }
 
-legend {
-	margin-bottom: 4px;
-	font-size: 18px;
-	line-height: 22px;
+legend, label {
+	font-weight: 400;
 }

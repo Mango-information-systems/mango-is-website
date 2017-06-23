@@ -14,77 +14,63 @@ var views = {
 			// markup to display CSV parsing settings form and JSON file preview
 			
 			var tmpl = ' \
-				<div class="row-fluid"> \
-					<div class="span4 offset1"> \
+				<div class="row"> \
+					<div class="five columns"> \
 						<h3>Adjust settings</h3> \
-						<form class="form-horizontal" action="javascript:void(0)"> \
+						<form action="javascript:void(0)"> \
 							<fieldset> \
 								<legend>Header row</legend> \
-								<div class="form-group"> \
-									<div class="span12"> \
-										<div class="checkbox"> \
-											<label for="header"> \
-												<input type="checkbox" name="header" id="header" <%= headerChecked %>/> \
-												First line is header \
-											</label> \
-										</div> \
-									</div> \
-								</div> \
+								<label for="header"> \
+									<input type="checkbox" name="header" id="header" <%= headerChecked %>/> \
+									First line is header \
+								</label> \
 							</fieldset> \
 							<fieldset> \
 								<legend>Column delimiter(s)</legend> \
-								<div class="form-group"> \
-									<div class="span4"> \
-										<div class="radio"> \
-											<label for="tab"> \
-												<input type="radio" name="delimiter" value="\t" id="tab" <%= tabChecked %>/> \
-												tab\
-											</label> \
-										</div> \
+								<div class="row"> \
+									<div class="six columns"> \
+										<label for="tab"> \
+											<input type="radio" name="delimiter" value="\t" id="tab" <%= tabChecked %>/> \
+											tab\
+										</label> \
 									</div> \
-									<div class="span4"> \
-										<div class="radio"> \
-											<label for="comma"> \
-												<input type="radio" name="delimiter" value="," id="comma" <%= commaChecked %>/> \
-												comma (,) \
-											</label> \
-										</div> \
-									</div> \
-									<div class="span4"> \
-										<div class="radio"> \
-											<label for="semicolon"> \
-												<input type="radio" name="delimiter" value=";" id="semicolon" <%= semicolonChecked %>/> \
-												semicolon (;) \
-											</label> \
-										</div> \
+									<div class="six columns"> \
+										<label for="comma"> \
+											<input type="radio" name="delimiter" value="," id="comma" <%= commaChecked %>/> \
+											comma (,) \
+										</label> \
 									</div> \
 								</div> \
-								<div class="form-group"> \
-									<div class="span4"> \
-										<div class="radio"> \
-											<label for="colon"> \
-												<input type="radio" name="delimiter" value=":" id="colon" <%= colonChecked %>/> \
-												colon (:)\
-											</label> \
-										</div> \
+								<div class="row"> \
+									<div class="six columns"> \
+										<label for="semicolon"> \
+											<input type="radio" name="delimiter" value=";" id="semicolon" <%= semicolonChecked %>/> \
+											semicolon (;) \
+										</label> \
 									</div> \
-									<div class="span4"> \
-										<div class="radio"> \
-											<label for="space"> \
-												<input type="radio" name="delimiter" value=" " id="space" <%= spaceChecked %>/> \
-												space \
-											</label> \
-										</div> \
+									<div class="six columns"> \
+										<label for="colon"> \
+											<input type="radio" name="delimiter" value=":" id="colon" <%= colonChecked %>/> \
+											colon (:)\
+										</label> \
 									</div> \
-									<div class="span4"> \
-										<div class="row-fluid"> \
-											<div class="radio span2"> \
+								</div> \
+								<div class="row"> \
+									<div class="six columns"> \
+										<label for="space"> \
+											<input type="radio" name="delimiter" value=" " id="space" <%= spaceChecked %>/> \
+											space \
+										</label> \
+									</div> \
+									<div class="six columns"> \
+										<div class="row"> \
+											<div class="two columns"> \
 												<label for="custom"> \
 														<input type="radio" name="delimiter" value="custom" id="custom" <%= customChecked %>/> \
 												</label> \
 											</div> \
-											<div class="span8"> \
-												<input type="text" class=" customdelimiters input-small"id="customdelimiterTxt" maxlength="1" value = "<%= customDelimiter %>" placeholder="custom"/> \
+											<div class="eight columns"> \
+												<input type="text" class=" customdelimiters u-full-width" id="customdelimiterTxt" maxlength="1" value = "<%= customDelimiter %>" placeholder="custom"/> \
 											</div> \
 										</div> \
 									</div> \
@@ -93,17 +79,17 @@ var views = {
 						</form> \
 						<%= errors %> \
 					</div> \
-					<div class="span6"> \
+					<div class="seven columns"> \
 						<h3>Preview results</h3> \
 						<pre class="resultsPreview"> \
 <code><%- JSON.stringify(json, null, "\t") %></code> \
 						</pre> \
 					</div> \
 				</div> \
-				<div class="row-fluid"> \
-					<div class="span4 offset1"> \
-						<a title="Undo and convert another file" class="back btn btn-default"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back</a> \
-						<a title="Process the whole file" class="convert btn btn-primary pull-right">Convert <i class="fa fa-chevron-right" aria-hidden="true" style="color:white"></i></a> \
+				<div class="row"> \
+					<div class="five columns"> \
+						<a title="Undo and convert another file" class="back button button-default"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back</a> \
+						<a title="Process the whole file" class="convert button button-primary pull-right">Convert <i class="fa fa-chevron-right" aria-hidden="true"></i></a> \
 					</div> \
 				</div>'
 			
@@ -142,16 +128,9 @@ var views = {
 		// markup to display the JSON file result
 			
 			var tmpl = ' \
-				<div class="row-fluid"> \
-					<div class="span4 offset1"> \
+				<div class="row"> \
+					<div class="twelve columns"> \
 						<h3><%= fileName %></h3> \
-						<% if (json.results.length < 1000) { %> \
-							<textarea class="results span12" rows="11"><%- JSON.stringify(json, null, "\t") %></textarea> \
-						<% } else { %> \
-							<p><%= button %></p> \
-						<% } %> \
-					</div> \
-					<div class="span7"> \
 						<% if (json.results.length > 1000) { %> \
 							<div class="alert alert-info" role="alert"> \
 								<p>Because the file is large file, it won\'t be saved in the browser\'s memory for later use.</p> \
@@ -159,15 +138,20 @@ var views = {
 							</div> \
 						<% } %> \
 						<%= errors %> \
+						<% if (json.results.length < 1000) { %> \
+							<textarea class="results twelve columns" rows="11"><%- JSON.stringify(json, null, "\t") %></textarea> \
+						<% } else { %> \
+							<p><%= button %></p> \
+						<% } %> \
 					</div> \
 				</div> \
-				<div class="row-fluid"> \
-					<div class="span4 offset1"> \
-						<a title="convert another file" class="back btn btn-default"><i class="fa fa-chevron-left" aria-hidden="true"></i> Convert another file</a> \
+				<div class="row"> \
+					<div class="twelve columns"> \
+						<a title="convert another file" class="back button button-default"><i class="fa fa-chevron-left" aria-hidden="true"></i> Convert another file</a> \
 						<% if (json.results.length < 1000) { %> \
 							<span class="pull-right" data-filename="<%= fileName %>"> \
 								<span class="muted"><em>Saved</em></span> \
-								<a title="delete file" class="btn btn-default delete"><i class="fa fa-times" aria-hidden="true"></i> Delete</a> \
+								<a title="delete file" class="button button-default delete"><i class="fa fa-times" aria-hidden="true"></i> Delete</a> \
 								<%= button %> \
 							</span> \
 						<% } %> \
@@ -176,10 +160,10 @@ var views = {
 				'
 
 			if (data.results.length < 1000) {
-				var button = views.fileDownloadButton(data, fileName, '<i class="fa fa-download" aria-hidden="true" style="color:white"></i> Download', '', 'btn-primary')
+				var button = views.fileDownloadButton(data, fileName, '<i class="fa fa-download" aria-hidden="true"></i> Download', '', 'button-primary')
 			}
 			else {
-				var button = views.fileDownloadButton(data, fileName, 'Download results file', 'btn-block', 'btn-primary')
+				var button = views.fileDownloadButton(data, fileName, 'Download results file', 'button-block', 'button-primary')
 				
 			}
 			
@@ -219,7 +203,7 @@ var views = {
 		, fileDownloadButton: function(data, fileName, label, size, style) {
 			// vased on http://stackoverflow.com/a/15353235/1006854
 			
-			var tmpl = '<a class="download btn <%= style %> <%= size %>" href="<%- window.URL.createObjectURL(json) %>" \
+			var tmpl = '<a class="download button <%= style %> <%= size %>" href="<%- window.URL.createObjectURL(json) %>" \
 				download="<%= fileName %>"><%= label %></a>'
 				
 			var JSONBlob = new Blob([JSON.stringify(data)], { type: 'application/json' })
@@ -259,12 +243,12 @@ var views = {
 	, controller = {
 		showCsvSelectorPane: function() {
 			resetFileOpts()
+
 			$csvSelectorPane.slideDown()
-			if ($resultsPane.is(":visible"))
-				$resultsPane.slideUp().empty()
-			else
-				$previewPane.slideUp().empty()
-			//~ $csvSelectorPane.slideDown(function() {$previewPane.slideUp().empty()})
+
+			$resultsPane.slideUp().empty()
+			$previewPane.slideUp().empty()
+
 		}
 		, previewParse: function(opts) {
 		// parse CSV file, URL or data string
