@@ -2,6 +2,7 @@
 _config*.yml
 att/
 params.json
+params-client.json
 db.json
 node_modules
 npm-debug.log*
@@ -12,3 +13,4 @@ source/css/font-awesome/
 themes/mango-information-systems/source/js/smoothscroll.min.js
 source/js/site.js
 source/js/g-realtime.js
+source/js/stackexchange-stats.js

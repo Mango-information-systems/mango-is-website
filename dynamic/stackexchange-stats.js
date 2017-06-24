@@ -1,15 +1,16 @@
 window.appDebug = require('debug')
 
 var d3 = require('d3')
-	, debug = window.appDebug('stackexchange-stats')
-	, AnalyticsApi = require('./controller/analytics-api')
+	, debug = window.appDebug('SE-stats')
+	, params = require('./params-client')
+	, StackExchangeApi = require('./controller/stackExchange-api')
 	, app = {
 		controller: {}
 		, view: {
-			signIn: require('./view/sign-in-with-google')
-			, dashboard: require('./view/dashboard')
-			, cookieWarning: require('./view/cookie-warning')
-			, donuts: require('./view/donuts')
+			signIn: require('./view/sign-in-with-stackExchange')
+			//~ , dashboard: require('./view/dashboard')
+			//~ , cookieWarning: require('./view/cookie-warning')
+			//~ , donuts: require('./view/donuts')
 		}
 		, data: {}
 	}
@@ -24,6 +25,23 @@ var appContainer = d3.select('#app')
  * 
  * ***************************************/
  
+SE.init({ 
+    clientId: params.stackExchange.clientId, 
+    key: params.stackExchange.key, 
+    channelUrl: 'http://localhost:4000/tools/stackexchange-tags-dataviz/',
+    complete: function(data) { 
+		debug('SE init complete', data)
+		
+		console.log('SE', SE)
+		// initialize stackExchange API controller
+		app.controller.stackExchangeApi = new StackExchangeApi(SE)
+		
+		start()
+    }
+});
+
+ 
+ 
  
 /**
 * update charts whenever new data is received from Google Analytics API
@@ -31,23 +49,23 @@ var appContainer = d3.select('#app')
 */
 app.controller.updateStatsCharts = function (stats){
 	
-	// update visitorsCount metrics values
-	stats.forEach(function(stat) {
-		app.viewMap[stat.viewId].value = stat.value
-	})
-	
-	var account = app.data[app.data.currentAccountIndex]
-		
-	// update maxValue for each account
-	var maxValue = setMaxvalue(account)
-	
-	account.webProperties.forEach(function(property, i) {
-		
-		property.maxValue = maxValue
-		
-	})
-	
-	app.view.donuts.update(account.webProperties)
+	//~ // update visitorsCount metrics values
+	//~ stats.forEach(function(stat) {
+		//~ app.viewMap[stat.viewId].value = stat.value
+	//~ })
+	//~ 
+	//~ var account = app.data[app.data.currentAccountIndex]
+		//~ 
+	//~ // update maxValue for each account
+	//~ var maxValue = setMaxvalue(account)
+	//~ 
+	//~ account.webProperties.forEach(function(property, i) {
+		//~ 
+		//~ property.maxValue = maxValue
+		//~ 
+	//~ })
+	//~ 
+	//~ app.view.donuts.update(account.webProperties)
 	
 }
 
@@ -57,16 +75,16 @@ app.controller.updateStatsCharts = function (stats){
 */	
 app.controller.switchAccount = function(ix) {
 	
-	debug('switching account', ix)
-
-	app.data.currentAccountIndex = ix
-	
-	app.view.donuts.render({
-		target: dashboardBody
-		, properties: app.data[app.data.currentAccountIndex].webProperties
-	})
-	
-	app.controller.analyticsApi.getStats(app.data.viewsByAccount[ix])
+	//~ debug('switching account', ix)
+//~ 
+	//~ app.data.currentAccountIndex = ix
+	//~ 
+	//~ app.view.donuts.render({
+		//~ target: dashboardBody
+		//~ , properties: app.data[app.data.currentAccountIndex].webProperties
+	//~ })
+	//~ 
+	//~ app.controller.stackExchangeApi.getStats(app.data.viewsByAccount[ix])
 	
 }
 
@@ -76,18 +94,6 @@ app.controller.switchAccount = function(ix) {
  * End inline controllers //
  * 
  * ***************************************/
- 
-
-
-/**
-* initialize analytics API controller once the googgle Analytics javascript client library script is loadeed
-* 
-*/
-window.gApiLoaded = function() {
-	
-	app.controller.analyticsApi = new AnalyticsApi(gapi, start, app.controller.updateStatsCharts)
-
-}
 
 /**
 * Display login form or data, depending on user's connection status
@@ -95,39 +101,23 @@ window.gApiLoaded = function() {
 */
 function start(err) {
 
-	if (err && err.error == 'idpiframe_initialization_failed') {
-	// third-party cookies are disabled (or something)
-		// https://github.com/google/google-api-javascript-client/issues/260#issuecomment-278514289
-		app.view.cookieWarning.render({target: appContainer })
-	}
-	else if (!gapi.auth2.getAuthInstance().isSignedIn.get()) {
+	//~ if (!gapi.auth2.getAuthInstance().isSignedIn.get()) {
 	// user has not connected his Google Analytics account yet
 
 		app.view.signIn.render({
 			target: appContainer
 			, hasError: typeof err !== 'undefined'
 			, action: function() {
-				app.controller.analyticsApi.signIn(start)
+				app.controller.stackExchangeApi.signIn(start)
 			}
 		})
-	}
-	else {
-	// user is already logged-in
-	
-		getViews()
-
-	}
-}
-
-/**
-* 
-* 
-*/
-function handleSigninResponse(err) {
-	if (err)
-		start(true)
-	else
-		getViews()
+	//~ }
+	//~ else {
+	//~ // user is already logged-in
+	//~ 
+		//~ getViews()
+//~ 
+	//~ }
 }
 
 /**
@@ -136,7 +126,7 @@ function handleSigninResponse(err) {
 */
 function getViews() {
 	
-	app.controller.analyticsApi.getViews(function(res) {
+	app.controller.stackExchangeApi.getViews(function(res) {
 		
 		app.data = res.result.items
 		
@@ -174,7 +164,7 @@ function getViews() {
 			target: appContainer
 			, data: app.data
 			, logOutFn: function() {
-				app.controller.analyticsApi.signOut(start)
+				app.controller.stackExchangeApi.signOut(start)
 				clearInterval(refreshInterval)
 			}
 			, selectFn: function(ix) {
@@ -195,12 +185,12 @@ function getViews() {
 		})
 	
 		// retrieve views metrics
-		app.controller.analyticsApi.getStats(app.data.viewsByAccount[app.data.currentAccountIndex])
+		app.controller.stackExchangeApi.getStats(app.data.viewsByAccount[app.data.currentAccountIndex])
 		
 		// periodically refresh metrics
 		refreshInterval = setInterval(function() {
 			
-			app.controller.analyticsApi.getStats(app.data.viewsByAccount[app.data.currentAccountIndex])
+			app.controller.stackExchangeApi.getStats(app.data.viewsByAccount[app.data.currentAccountIndex])
 				
 		}, 10000)
 		
