@@ -80,7 +80,7 @@ app.controller.switchAccount = function(ix) {
 
 
 /**
-* initialize analytics API controller once the googgle Analytics javascript client library script is loadeed
+* initialize analytics API controller once the google Analytics javascript client library script is loadeed
 * 
 */
 window.gApiLoaded = function() {

@@ -9,7 +9,7 @@ var debug = window.appDebug('analyticsApi')
 * * make API calls
 * 
 * @param {object} gapi: the google api client library instance
-* @param {function} callback: the google api client library instance
+* @param {function} callback: the function to be called once user authentication is done
 * @param {function} updateFunction: the function to call whenever some update stats are received
 * 
 * @constructor
