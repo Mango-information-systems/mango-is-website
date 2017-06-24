@@ -1,6 +1,8 @@
 window.appDebug = require('debug')
 
 var debug = window.appDebug('SE-api')
+	, request = require('request')
+	, params = require('../params-client')
 
 /**
 * wrapper around stackExchange API This controller handles the following logic:
@@ -15,11 +17,22 @@ var debug = window.appDebug('SE-api')
 * @constructor
 * 
 */
-function AnalyticsApi(SE, callback, updateFunction) {
+function SEApi(accessToken) {
+	
 	
 	var self = this
-	
-	this.updateFunction = updateFunction
+		, apiUrl = 'https://api.stackexchange.com/2.2/'
+		if (typeof accessToken !== 'undefined')
+			this.accessToken = accessToken
+
+	SE.init({ 
+		clientId: params.stackExchange.clientId, 
+		key: params.stackExchange.key
+		, channelUrl: window.location.href
+		, complete: function(data) { 
+			debug('SE init complete', data)
+		}
+	})
 	
 	/******************************************
 	 * 
@@ -28,51 +41,72 @@ function AnalyticsApi(SE, callback, updateFunction) {
 	 * ***************************************/
 	
 	/**
-	* get realtime visit stats for a given subset of views (up to 10. re. user rate limits)
+	* get tag stats for a given user
 	* 
-	* @param {object} viewIds array of 10 viewIds
+	* @param {number} userId
+	* @param {function}  callback function
 	* 
 	* @private
 	*/	
-	function getViewStats(viewIds) {
-		
-		var batch = gapi.client.newBatch()
-		// cf. https://developers.google.com/api-client-library/javascript/features/batch
+	function getTagStats(currentPage, callback) {
 
-		viewIds.forEach(function(viewId) {
-			batch.add(gapi.client.request({
-				path: 'analytics/v3/data/realtime'
-				, params: {
-					ids: 'ga:' + viewId
-					, metrics: 'rt:activeUsers'
-				}
-			}), {id: viewId})
-
-		})
-
-		batch.then(function(response) {
+		request.get(apiUrl + 'me/tags', {
+			qs: {
+				key: params.stackExchange.key
+				, site: 'stackoverflow'
+				, order: 'desc'
+				, sort: 'popular'
+				, access_token: self.accessToken
+				, filter: 'default'
+				, pagesize: 100
+				, page: currentPage
+			}
+			, json: true
+			, gzip: true
+		}, function(err, res, body) {
+			if (err) 
+				throw err
+			//~ console.log('getStats result', err, res.statusCode)
+			//~ console.log(body)
+			//~ callback(body.items[0].user_id)
 			
-			var res = []
+			self.tagStats = self.tagStats.concat(body.items)
 			
-			Object.keys(response.result).forEach(function(viewId) {
-
-				if (response.result[viewId].status === 200)
-					res.push({
-						viewId: viewId
-						, value: response.result[viewId].result.totalsForAllResults['rt:activeUsers']
-					})
-				else
-					console.log('error with some of the batch requests', response.result[viewId])
-			})
+			if (body.has_more)
+				getTagStats(currentPage+1, callback)
+			else
+				callback(self.tagStats)
 			
-			self.updateFunction(res)
-			
-		})
-		.then(null, function(err) {
-			console.log('error requesting stats in batch')
-			console.log(err)
 		})
 	}
+	
+	/**
+	* get stackOverflow userId for the connected user
+	* 
+	* @param {function} callback function
+	* 
+	* @private
+	*/	
+	//~ function getUserId(callback) {
+		//~ 
+		//~ request.get(apiUrl + 'me', {
+			//~ qs: {
+				//~ key: params.stackExchange.key
+				//~ , site: 'stackoverflow'
+				//~ , order: 'desc'
+				//~ , sort: 'reputation'
+				//~ , access_token: self.accessToken
+				//~ , filter: 'default'
+			//~ }
+			//~ , json: true
+			//~ , gzip: true
+		//~ }, function(err, res, body) {
+			//~ if (err) 
+				//~ throw err
+			//~ console.log(body)
+			//~ callback(body.items[0].user_id)
+		//~ })
+	//~ }
 	
 	/******************************************
 	 * 
@@ -81,24 +115,19 @@ function AnalyticsApi(SE, callback, updateFunction) {
 	 * ***************************************/
 	
 	/**
-	* get realtime visit stats for a given views
-	* calls self.updateFunction once done
+	* get stackOverflow activity stats
 	* 
 	*/		
-	this.getStats = function(views) {
+	this.getStats = function(callback) {
 
-		debug('getStats', views)
-
-		// split the viewIds in chunks of 10 in order to batch request them without reaching user rate limits
-		var chunksCount = Math.ceil(views.length / 10)
-
-		d3.range(chunksCount).forEach(function(i) {
-
-			setTimeout(function() {
-				getViewStats(views.slice(i * 10, i * 10+10))
-			}, chunksCount * i * 1100)
-		})
+		debug('getStats')
 		
+		self.tagStats = []
+		
+console.log('callback function', callback)
+		
+		getTagStats(1, callback)
+
 	}
 
 	/**
@@ -124,7 +153,7 @@ function AnalyticsApi(SE, callback, updateFunction) {
 	}
 
 	/**
-	* Sign in with Google
+	* Sign in with SE
 	* 
 	*/	
 	this.signIn = function(callback) {
@@ -133,14 +162,21 @@ function AnalyticsApi(SE, callback, updateFunction) {
 		
 		SE.authenticate({
 			success: function(data) { 
-				alert(
-					'User Authorized with account id = ' + 
-					data.networkUsers[0].account_id + ', got access token = ' + 
-					data.accessToken
-				)
+				console.log('auth response', data)
+				
+				//~ console.log(
+					//~ 'User Authorized with account id = ' + 
+					//~ data.networkUsers[0].account_id + ', got access token = ' + 
+					//~ data.accessToken
+				//~ )
+				
+				this.accessToken = data.accessToken
+				
+				callback(null, data.accessToken)
 			},
 			error: function(data) { 
-				alert('An error occurred:\n' + data.errorName + '\n' + data.errorMessage) 
+				console.log('An error occurred:\n' + data.errorName + '\n' + data.errorMessage) 
+				throw new Error(data.errorName, data.errorMessage)
 			},
 			networkUsers: true
 		})
@@ -148,21 +184,17 @@ function AnalyticsApi(SE, callback, updateFunction) {
 		
 	}
 
-	/**
-	* Sign out from Google
-	* 
-	*/	
-	this.signOut = function(callback) {
-		
-		debug('signing user out')
-
-		gapi.auth2.getAuthInstance().signOut().then( function(res) {
-			// TODO handle errors at sign-out
-			callback()
-		})
-		
-	}
+	//~ /**
+	//~ * Sign out from SE
+	//~ * 
+	//~ */	
+	//~ this.signOut = function(callback) {
+		//~ 
+		//~ debug('signing user out')
+//~ 
+		//~ 
+	//~ }
 	
 }
 
-module.exports = AnalyticsApi
+module.exports = SEApi

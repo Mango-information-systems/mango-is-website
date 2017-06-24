@@ -2,7 +2,7 @@ window.appDebug = require('debug')
 
 var d3 = require('d3')
 	, debug = window.appDebug('SE-stats')
-	, params = require('./params-client')
+	, storage = require('localforage')
 	, StackExchangeApi = require('./controller/stackExchange-api')
 	, app = {
 		controller: {}
@@ -24,24 +24,6 @@ var appContainer = d3.select('#app')
  * Inline controllers
  * 
  * ***************************************/
- 
-SE.init({ 
-    clientId: params.stackExchange.clientId, 
-    key: params.stackExchange.key, 
-    channelUrl: 'http://localhost:4000/tools/stackexchange-tags-dataviz/',
-    complete: function(data) { 
-		debug('SE init complete', data)
-		
-		console.log('SE', SE)
-		// initialize stackExchange API controller
-		app.controller.stackExchangeApi = new StackExchangeApi(SE)
-		
-		start()
-    }
-});
-
- 
- 
  
 /**
 * update charts whenever new data is received from Google Analytics API
@@ -95,29 +77,70 @@ app.controller.switchAccount = function(ix) {
  * 
  * ***************************************/
 
+start(null)
+
 /**
 * Display login form or data, depending on user's connection status
 * 
 */
-function start(err) {
+function start(hasError, accessToken) {
 
-	//~ if (!gapi.auth2.getAuthInstance().isSignedIn.get()) {
-	// user has not connected his Google Analytics account yet
+	storage.getItem('chartData', function (err, chartData) {
 
-		app.view.signIn.render({
-			target: appContainer
-			, hasError: typeof err !== 'undefined'
-			, action: function() {
-				app.controller.stackExchangeApi.signIn(start)
+		if (err)
+			throw err
+		else if (chartData !== null) {
+			
+			
+		}
+		else {
+		// chart data is not yet retrieved, check user's connection to SE API
+			if (typeof accessToken !== 'undefined') {
+				// access token has just been retrieved from the SE API, store it
+				console.log('saving accessToken', accessToken)
+				storage.setItem('accessToken', accessToken)
+				
+				// extract chart data
+				app.controller.stackExchangeApi.getStats(function(stats) {
+					console.log('top tags', stats)
+				})
 			}
-		})
-	//~ }
-	//~ else {
-	//~ // user is already logged-in
-	//~ 
-		//~ getViews()
-//~ 
-	//~ }
+			else {
+				storage.getItem('accessToken', function (err, accessToken) {
+			
+					if (err)
+						throw err
+					else if (accessToken !== null) {
+						// user is already logged-in
+						console.log('user connected')
+						
+						// initialize stackExchange API controller
+						app.controller.stackExchangeApi = new StackExchangeApi(accessToken)
+
+						
+						// extract chart data
+						app.controller.stackExchangeApi.getStats(function(stats) {
+					console.log('top tags', stats)
+				})
+						
+					}
+					else {
+						// initialize stackExchange API controller
+						app.controller.stackExchangeApi = new StackExchangeApi()
+						
+						// display login form
+						app.view.signIn.render({
+							target: appContainer
+							, hasError: hasError !== null
+							, action: function() {
+								app.controller.stackExchangeApi.signIn(start)
+							}
+						})
+					}
+				})
+			}
+		}
+	})
 }
 
 /**
