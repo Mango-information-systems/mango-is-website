@@ -4,13 +4,12 @@ var d3 = require('d3')
 	, debug = window.appDebug('SE-stats')
 	, storage = require('localforage')
 	, StackExchangeApi = require('./controller/stackExchange-api')
+	, Force = require('./view/force')
 	, app = {
 		controller: {}
 		, view: {
 			signIn: require('./view/sign-in-with-stackExchange')
-			//~ , dashboard: require('./view/dashboard')
-			//~ , cookieWarning: require('./view/cookie-warning')
-			//~ , donuts: require('./view/donuts')
+			, chart: new Force()
 		}
 		, data: {}
 	}
@@ -18,6 +17,9 @@ var d3 = require('d3')
 var appContainer = d3.select('#app')
 	, dashboardBody
 	, refreshInterval
+	, chartInitialized = false
+
+window.storage = storage
 
 /******************************************
  * 
@@ -90,7 +92,13 @@ function start(hasError, accessToken) {
 		if (err)
 			throw err
 		else if (chartData !== null) {
-			
+
+			if (!chartInitialized) {
+				app.view.chart.init()
+				chartInitialized = true
+			}
+
+			app.view.chart.update(chartData)
 			
 		}
 		else {
@@ -102,7 +110,16 @@ function start(hasError, accessToken) {
 				
 				// extract chart data
 				app.controller.stackExchangeApi.getStats(function(stats) {
+
 					console.log('top tags', stats)
+
+					if (!chartInitialized) {
+						app.view.chart.init()
+						chartInitialized = true
+					}
+
+					app.view.chart.update(stats)
+
 				})
 			}
 			else {
@@ -120,8 +137,16 @@ function start(hasError, accessToken) {
 						
 						// extract chart data
 						app.controller.stackExchangeApi.getStats(function(stats) {
-					console.log('top tags', stats)
-				})
+							
+							console.log('top tags', stats)
+							
+							if (!chartInitialized) {
+								app.view.chart.init()
+								chartInitialized = true
+							}
+							
+							app.view.chart.update(stats)
+						})
 						
 					}
 					else {

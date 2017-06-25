@@ -43,12 +43,11 @@ function SEApi(accessToken) {
 	/**
 	* get tag stats for a given user
 	* 
-	* @param {number} userId
-	* @param {function}  callback function
+	* @param {function} callback function
 	* 
 	* @private
 	*/	
-	function getTagStats(currentPage, callback) {
+	function getTagStats(callback) {
 
 		request.get(apiUrl + 'me/tags', {
 			qs: {
@@ -58,8 +57,7 @@ function SEApi(accessToken) {
 				, sort: 'popular'
 				, access_token: self.accessToken
 				, filter: 'default'
-				, pagesize: 100
-				, page: currentPage
+				, pagesize: 30
 			}
 			, json: true
 			, gzip: true
@@ -70,12 +68,7 @@ function SEApi(accessToken) {
 			//~ console.log(body)
 			//~ callback(body.items[0].user_id)
 			
-			self.tagStats = self.tagStats.concat(body.items)
-			
-			if (body.has_more)
-				getTagStats(currentPage+1, callback)
-			else
-				callback(self.tagStats)
+			callback(body.items)
 			
 		})
 	}
@@ -122,11 +115,7 @@ function SEApi(accessToken) {
 
 		debug('getStats')
 		
-		self.tagStats = []
-		
-console.log('callback function', callback)
-		
-		getTagStats(1, callback)
+		getTagStats(callback)
 
 	}
 
