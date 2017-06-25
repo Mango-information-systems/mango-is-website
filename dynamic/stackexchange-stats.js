@@ -19,6 +19,7 @@ var appContainer = d3.select('#app')
 	, refreshInterval
 	, chartInitialized = false
 
+// temp
 window.storage = storage
 
 /******************************************
@@ -109,16 +110,18 @@ function start(hasError, accessToken) {
 				storage.setItem('accessToken', accessToken)
 				
 				// extract chart data
-				app.controller.stackExchangeApi.getStats(function(stats) {
+				app.controller.stackExchangeApi.getStats(function(chartData) {
 
-					console.log('top tags', stats)
+					console.log('top tags', chartData)
+
+					storage.setItem('chartData', chartData)
 
 					if (!chartInitialized) {
 						app.view.chart.init()
 						chartInitialized = true
 					}
 
-					app.view.chart.update(stats)
+					app.view.chart.update(chartData)
 
 				})
 			}
@@ -136,16 +139,18 @@ function start(hasError, accessToken) {
 
 						
 						// extract chart data
-						app.controller.stackExchangeApi.getStats(function(stats) {
+						app.controller.stackExchangeApi.getStats(function(chartData) {
 							
-							console.log('top tags', stats)
+							console.log('top tags', chartData)
+
+							storage.setItem('chartData', chartData)
 							
 							if (!chartInitialized) {
 								app.view.chart.init()
 								chartInitialized = true
 							}
 							
-							app.view.chart.update(stats)
+							app.view.chart.update(chartData)
 						})
 						
 					}

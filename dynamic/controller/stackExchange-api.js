@@ -58,6 +58,7 @@ function SEApi(accessToken) {
 				, access_token: self.accessToken
 				, filter: 'default'
 				, pagesize: 30
+				//~ , pagesize: 4
 			}
 			, json: true
 			, gzip: true
@@ -68,9 +69,130 @@ function SEApi(accessToken) {
 			//~ console.log(body)
 			//~ callback(body.items[0].user_id)
 			
-			callback(body.items)
+			getTagGraph(0, 1, body.items, [], callback)
 			
 		})
+	}
+	
+	/**
+	* get tag relationships graph
+	* 
+	* @param {function} callback function
+	* 
+	* @private
+	*/	
+	function getTagGraph(tagIndex, pageIndex, tags, relations, callback) {
+
+
+		if (tagIndex >= tags.length)
+			formatGraph(tags, relations, callback)
+		else {
+//~ console.log('retrieving related tags for', tags[tagIndex].name)
+			request.get(apiUrl + 'tags/' + tags[tagIndex].name + '/related', {
+				qs: {
+					key: params.stackExchange.key
+					, site: 'stackoverflow'
+					, access_token: self.accessToken
+					, filter: 'default'
+					, pagesize: 30
+					, page: pageIndex
+				}
+				, json: true
+				, gzip: true
+			}, function(err, res, body) {
+				if (err) 
+					throw err
+				//~ console.log('getTagGraph result', err, res.statusCode)
+				//~ console.log(body)
+
+				relations.push({tag: tags[tagIndex].name, relations: body.items})
+				//~ console.log('relations', relations)
+				if (body.has_more)
+					// get next page
+					getTagGraph(tagIndex, pageIndex + 1, tags, relations, callback)
+				else
+					// get relations for next tag
+					getTagGraph(tagIndex+1, 1, tags, relations, callback)
+				
+			})
+		}
+	}
+	
+	/**
+	* format graph dataset
+	* 
+	* @param {function} callback function
+	* 
+	* @private
+	*/	
+	function formatGraph(tags, relations, callback) {
+//~ console.log('relations', relations)
+
+		var res = {
+				nodes: []
+				, links: []
+				, maxWeight: 0
+				, minWeight: +Infinity
+			}
+			, linksObj = {}
+			, validTags = []
+		
+		tags.forEach(function(tag) {
+			res.nodes.push({
+				name: tag.name
+				, count: tag.count
+			})
+			
+			validTags.push(tag.name)
+		})
+		
+		// filter and sort relations
+		relations.forEach(function(relation) {
+			
+			var from = relation.tag
+			
+			relation.relations.forEach(function(to) {
+				
+				if (validTags.indexOf(to.name) !== -1 && from !== to.name) {
+					
+					var sortedTagNames = [from, to.name].sort()
+
+					if (!linksObj[sortedTagNames[0]])
+						linksObj[sortedTagNames[0]] = {}
+//~ console.log('relation', from, to.name)
+
+					// store relation
+					linksObj[sortedTagNames[0]][sortedTagNames[1]] = to.count
+
+					// update min/max counts - to be used as edge weight scale's domain
+					if (to.count > res.maxWeight)
+						res.maxWeight = to.count
+					if (to.count < res.minWeight)
+						res.minWeight = to.count
+
+				}
+			})
+		}) 
+		
+		Object.keys(linksObj).forEach(function(from) {
+			
+			Object.keys(linksObj[from]).forEach(function(to) {
+				
+				res.links.push({
+					source: validTags.indexOf(from)
+					, target: validTags.indexOf(to)
+					, weight: linksObj[from][to]
+				})
+			})
+		})
+		
+		//~ console.log(validTags)
+		//~ console.log(linksObj)
+		//~ console.log(res)
+		
+		callback(res)
+
+
 	}
 	
 	/**
@@ -117,28 +239,6 @@ function SEApi(accessToken) {
 		
 		getTagStats(callback)
 
-	}
-
-	/**
-	* get the hierarchy of Accounts / Properties / Views user has access to
-	* 
-	* @param {function} callback function
-	* 
-	*/
-	this.getViews = function(callback) {
-		
-		debug('retrieving list of views')
-	
-		gapi.client.analytics.management.accountSummaries.list().then(function(res) {
-			
-			callback(res)
-		})
-		.then(null, function(err) {
-
-			console.log('error requesting list of views')
-			console.log(err)
-		})
-		
 	}
 
 	/**

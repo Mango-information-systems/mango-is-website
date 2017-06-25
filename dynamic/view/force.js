@@ -12,8 +12,8 @@ function ForceChart() {
 
 	var self = this
 	
-	var r = d3.scaleLinear()
-		  .range([10, 40])
+	var textScale = d3.scaleLinear()
+		  .range([1, 3])
 		, color = d3.scaleOrdinal(d3.schemeCategory10)
 
 	/****************************************
@@ -32,13 +32,16 @@ function ForceChart() {
 	 */
 	 function ticked() {
 		 
-		  self.node.attr('cx', function(d) { return d.x })
-			  .attr('cy', function(d) { return d.y })
+		  //~ self.node.attr('cx', function(d) { return d.x })
+			  //~ .attr('cy', function(d) { return d.y })
 
-		  //~ self.link.attr('x1', function(d) { return d.source.x })
-			  //~ .attr('y1', function(d) { return d.source.y })
-			  //~ .attr('x2', function(d) { return d.target.x })
-			  //~ .attr('y2', function(d) { return d.target.y })
+		  self.node.attr('x', function(d) { return d.x })
+			  .attr('y', function(d) { return d.y })
+
+		  self.link.attr('x1', function(d) { return d.source.x })
+			  .attr('y1', function(d) { return d.source.y })
+			  .attr('x2', function(d) { return d.target.x })
+			  .attr('y2', function(d) { return d.target.y })
 	 }
 
 	/**
@@ -111,9 +114,11 @@ function ForceChart() {
 		
 		self.svg.attr('transform', 'translate(' + width / 2 + ',' + height / 2 + ')')
 		
-		self.link = self.svg.append('g').attr('stroke', '#000').attr('stroke-width', 1.5).selectAll('.link')
+		self.link = self.svg.append('g').attr('stroke', '#ddd').attr('stroke-width', 1.5).selectAll('.link')
 		
-		self.node = self.svg.append('g').attr('stroke', '#fff').attr('stroke-width', 1.5).selectAll('.node')
+		self.node = self.svg.append('g')
+			//~ .attr('stroke', '#fff').attr('stroke-width', 1.5)
+			.selectAll('.node')
 	}
 
 	/**
@@ -139,32 +144,50 @@ function ForceChart() {
 	 */
 	this.update = function (data) {
 		
-		r.domain([data[data.length-1].count, data[0].count])
+		textScale.domain([data.nodes[data.nodes.length-1].count, data.nodes[0].count])
 
-		var links = []
+console.log('graph data', data)
 
-		var simulation = d3.forceSimulation(data)
+		var linkDistance = d3.scaleLinear()
+			.domain([data.maxWeight, data.minWeight])
+			.range([0, 50])
+
+console.log('linkDistance scale', data.maxWeight, data.minWeight)
+console.log(data.links[0])
+
+		var simulation = d3.forceSimulation(data.nodes)
 			.force('charge', d3.forceManyBody().strength(-50))
-			.force('link', d3.forceLink(links).distance(200))
+			.force('link', d3.forceLink(data.links).distance(function(d) {return linkDistance(d.weight)}))
 			.force('x', d3.forceX())
 			.force('y', d3.forceY())
-			.force('center', d3.forceCenter())
+			//~ .force('collide', d3.forceCollide(function(d) {return 10 * textScale(d.count)}))
+			//~ .force('center', d3.forceCenter())
 			//~ .alphaTarget(1)
 			.on('tick', ticked)
 
 		// Apply the general update pattern to the nodes.
-		self.node = self.node.data(data, function(d) { return d.name})
+		self.node = self.node.data(data.nodes, function(d) { return d.name})
 
-		self.node = self.node.enter().append('circle')
-		  .attr('fill', function(d) { return color(d.name) })
-		  .call(function(node) { node.transition().attr('r', function(d) { return r(d.count)}) })
+		//~ self.node = self.node.enter().append('circle')
+		  //~ .attr('fill', function(d) { return color(d.name) })
+		  //~ .call(function(node) { node.transition().attr('r', function(d) { return r(d.count)}) })
+		//~ .merge(self.node)
+
+		self.node = self.node.enter()
+		  .append('text')
+		  .attr('transform', function(d) { return 'scale(' + textScale(d.count) + ')'})
+		  .text(function(d) { return d.name})
+		  //~ .attr('fill', function(d) { return color(d.name) })
+		  //~ .call(function(node) { node.transition().attr('r', function(d) { return r(d.count)}) })
 		.merge(self.node)
 
 		
-		//~ var links = [{source: data[0], target: data[1]}]
-
 		// Apply the general update pattern to the links.
-		self.link = self.link.data(links, function(d) { return d.source.name + '-' + d.target.name })
+		self.link = self.link.data(data.links, function(d) { 
+			if ((d.target.name === 'svg' || d.target.name === 'javascript') && d.source.name === 'd3.js')
+				console.log(d, d.weight, linkDistance(d.weight))
+			return d.source.name + '-' + d.target.name
+		})
 //~ 
 		//~ // Keep the exiting links connected to the moving remaining nodes.
 		//~ link.exit().transition()
@@ -174,20 +197,19 @@ function ForceChart() {
 		  //~ .attrTween('y1', function(d) { return function() { return d.source.y } })
 		  //~ .attrTween('y2', function(d) { return function() { return d.target.y } })
 		  //~ .remove()
-//~ 
-		//~ link = link.enter().append('line')
+
+		self.link = self.link.enter().append('line')
 		  //~ .call(function(link) { link.transition().attr('stroke-opacity', 1) })
-		//~ .merge(link)
+		.merge(self.link)
 
 		// Update and restart the simulation.
 		//~ simulation.nodes(nodes)
-		simulation.nodes(data)
-		//~ simulation.force('link').links(links)
-		simulation.force('link').links(links)
+		simulation.nodes(data.nodes)
+		simulation.force('link').links(data.links)
 		simulation.alpha(1).restart()
 		
 		
-		//~ self.svg.selectAll('.tag').data(data)
+		//~ self.svg.selectAll('.tag').data(data.nodes)
 		  //~ .enter()
 		    //~ .append('text')
 		    //~ .text(function(d) { console.log('here'); return d.name})
