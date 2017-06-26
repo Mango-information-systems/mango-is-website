@@ -13,7 +13,7 @@ function ForceChart() {
 	var self = this
 	
 	var textScale = d3.scaleLinear()
-		  .range([1, 3])
+		  .range([1, 1.5])
 		, color = d3.scaleOrdinal(d3.schemeCategory10)
 		, r = d3.scaleLinear()
 		  .range([3, 15])
@@ -104,8 +104,8 @@ function ForceChart() {
 	this.init = function () {
 		
 		
-		self.width = 500
-		self.height = 300
+		self.width = 650
+		self.height = 500
 		
 		self.svg = d3.select('#app').html('')
 			.append('svg')
@@ -185,11 +185,12 @@ console.log('graph data', data)
 
 
 		self.node.append('circle')
-		  .attr('fill', function(d) { return color(d.name) })
+		  .attr('fill', function(d) { return color(d.group) })
 		  .attr('r', function(d) { return r(d.count)})
 		  
 		self.node.append('text')
 		  .text(function(d) { return d.name})
+		  .attr('transform', function(d) { return 'scale(' + textScale(d.count) + ')'})
 		  
 		  //~ .call(function(node) { node.transition().attr('r', function(d) { return r(d.count)}) })
 		//~ .merge(self.node)
@@ -204,8 +205,8 @@ console.log('graph data', data)
 		// Apply the general update pattern to the links.
 		self.link = self.link.data(data.links, function(d) { 
 //~ if ((d.target.name === 'google-analytics-api') && d.source.name === 'google-analytics')
-if (['google-analytics', 'google-analytics-api'].indexOf(d.target.name) !== -1 || ['google-analytics', 'google-analytics-api'].indexOf(d.source.name) !== -1)
-	console.log(d.target.name, d.source.name, d.weight)
+//~ if (['google-analytics', 'google-analytics-api'].indexOf(d.target.name) !== -1 || ['google-analytics', 'google-analytics-api'].indexOf(d.source.name) !== -1)
+	//~ console.log(d.target.name, d.source.name, d.weight)
 			return d.source.name + '-' + d.target.name
 		})
 //~ 

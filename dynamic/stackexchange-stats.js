@@ -21,6 +21,7 @@ var appContainer = d3.select('#app')
 
 // temp
 window.storage = storage
+//~ storage.removeItem('chartData')
 
 /******************************************
  * 

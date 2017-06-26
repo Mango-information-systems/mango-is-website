@@ -3,6 +3,8 @@ window.appDebug = require('debug')
 var debug = window.appDebug('SE-api')
 	, request = require('request')
 	, params = require('../params-client')
+	, jLouvain = require('jLouvain') // todo move this (and the whole formatGraph function)
+	
 
 /**
 * wrapper around stackExchange API This controller handles the following logic:
@@ -57,7 +59,7 @@ function SEApi(accessToken) {
 				, sort: 'popular'
 				, access_token: self.accessToken
 				, filter: 'default'
-				, pagesize: 30
+				, pagesize: 60
 				//~ , pagesize: 4
 			}
 			, json: true
@@ -146,6 +148,10 @@ function SEApi(accessToken) {
 			validTags.push(tag.name)
 		})
 		
+		
+		
+var edgeData = []
+		
 		// filter and sort relations
 		relations.forEach(function(relation) {
 			
@@ -161,6 +167,7 @@ function SEApi(accessToken) {
 						linksObj[sortedTagNames[0]] = {}
 //~ console.log('relation', from, to.name)
 
+
 					// store relation
 					linksObj[sortedTagNames[0]][sortedTagNames[1]] = to.count
 
@@ -174,10 +181,13 @@ function SEApi(accessToken) {
 			})
 		}) 
 		
+		
 		Object.keys(linksObj).forEach(function(from) {
 			
 			Object.keys(linksObj[from]).forEach(function(to) {
-				
+
+edgeData.push({source: from, target: to, weight: linksObj[from][to]})
+
 				res.links.push({
 					source: validTags.indexOf(from)
 					, target: validTags.indexOf(to)
@@ -186,6 +196,13 @@ function SEApi(accessToken) {
 			})
 		})
 		
+var community = jLouvain().nodes(validTags).edges(edgeData)
+	, groups = community()
+
+	res.nodes.forEach(function(node) {
+		node.group = groups[node.name]
+	})
+console.log('community', groups)
 		//~ console.log(validTags)
 		//~ console.log(linksObj)
 		//~ console.log(res)
