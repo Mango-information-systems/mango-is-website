@@ -174,7 +174,100 @@ console.log('graph data', data)
 			.force('link', d3.forceLink(data.links).distance(75).strength(function(d) {return weightScale(d.weight)}))
 			.force('charge', d3.forceManyBody().strength(-200))
 			.force('center', d3.forceCenter(self.width / 2, self.height / 2))
+			.force('collide', d3.forceCollide(function(d) {return 2 * (textScale(d.count) + d.name.length) }))
 			.on('tick', ticked)
+
+// TODO prevent labels from overlapping.
+// cf technique below used in Tribalytics
+// or maybe this one https://stackoverflow.com/questions/17425268/d3js-automatic-labels-placement-to-avoid-overlaps-force-repulsion
+
+// trigger relax function on force simulation end... simulation.on('end', relax)
+
+	//~ function relax(textLabels) {
+		//~ // relax the position of overlapping labels
+		//~ // only vertical position is modified
+		//~ // based on https://blog.safaribooksonline.com/2014/03/11/solving-d3-label-placement-constraint-relaxing/
+//~ 
+		//~ var alpha = 0.5
+			//~ , spacing = 12
+			//~ , again = false;
+//~ 
+		//~ textLabels.each(function (d, i) {
+			//~ a = this;
+			//~ da = d3.select(a);
+			//~ y1 = da.attr("y");
+			//~ textLabels.each(function (d, j) {
+				//~ b = this;
+				//~ // a & b are the same element and don't collide.
+				//~ if (a == b) return;
+				//~ db = d3.select(b);
+				//~ // Now let's calculate the distance between
+				//~ // these elements. 
+				//~ y2 = db.attr("y");
+				//~ deltaY = y1 - y2;
+				//~ 
+				//~ // Our spacing is greater than our specified spacing,
+				//~ // so they don't collide.
+//~ 
+				//~ if (!overlap ( a, b)) return;
+				//~ 
+				//~ // If the labels collide, we'll push each 
+				//~ // of the two labels up and down a little bit.
+				//~ again = true;
+				//~ sign = deltaY > 0 ? 1 : -1;
+				//~ adjust = sign * alpha;
+				//~ da.attr("y",+y1 + adjust);
+				//~ da.selectAll('tspan').attr("y",+y1 + adjust);
+				//~ db.attr("y",+y2 - adjust);
+				//~ db.selectAll('tspan').attr("y",+y2 - adjust);
+			//~ });
+		//~ });
+		//~ // Adjust our line leaders here
+		//~ // so that they follow the labels. 
+		//~ if(again) {
+			//~ setTimeout(function() {relax(textLabels)},20)
+		//~ }
+	//~ }
+//~ 
+	//~ function overlap (a, b) {
+		//~ // Check whether the bounding box of two texts do overlap.
+		//~ // inspired by http://www.geeksforgeeks.org/find-two-rectangles-overlap/
+//~ 
+		//~ var aBbox = a.getBBox()
+			//~ , bBbox = b.getBBox()
+			//~ , aPoints = {
+				//~ l: {
+					//~ x: aBbox.x
+					//~ , y: aBbox.y
+				//~ }
+				//~ , r: {
+					//~ x: aBbox.x + aBbox.width
+					//~ , y: aBbox.y + aBbox.height
+				//~ }
+			//~ }
+			//~ , bPoints = {
+				//~ l: {
+					//~ x: bBbox.x
+					//~ , y: bBbox.y
+				//~ }
+				//~ , r: {
+					//~ x: bBbox.x + bBbox.width
+					//~ , y: bBbox.y + bBbox.height
+				//~ }
+			//~ }
+		//~ 
+		//~ // Check whether one rectangle is on left side of other
+		//~ if (aPoints.l.x > bPoints.r.x || bPoints.l.x > aPoints.r.x)
+			//~ return false
+		//~ 
+		//~ // Check whether one rectangle is on above the other
+		//~ if (aPoints.l.y > bPoints.r.y || bPoints.l.y > aPoints.r.y)
+			//~ return false
+			//~ 
+		//~ return true
+		//~ 
+	//~ }
+
 
 		// Apply the general update pattern to the nodes.
 		self.node = self.node.data(data.nodes, function(d) { return d.name}).enter().append('g')
@@ -184,12 +277,14 @@ console.log('graph data', data)
 				  .on("end", dragended))
 
 
-		self.node.append('circle')
-		  .attr('fill', function(d) { return color(d.group) })
-		  .attr('r', function(d) { return r(d.count)})
+		//~ self.node.append('circle')
+		  //~ .attr('fill', function(d) { return color(d.group) })
+		  //~ .attr('r', function(d) { return r(d.count)})
 		  
 		self.node.append('text')
 		  .text(function(d) { return d.name})
+		  .attr('fill', function(d) { return color(d.group) })
+		  .attr('dy', '2.5')
 		  .attr('transform', function(d) { return 'scale(' + textScale(d.count) + ')'})
 		  
 		  //~ .call(function(node) { node.transition().attr('r', function(d) { return r(d.count)}) })
