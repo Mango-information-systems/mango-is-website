@@ -20,8 +20,7 @@ var debug = window.appDebug('SE-api')
 * 
 */
 function SEApi(accessToken) {
-	
-	
+
 	var self = this
 		, apiUrl = 'https://api.stackexchange.com/2.2/'
 		if (typeof accessToken !== 'undefined')
@@ -52,6 +51,7 @@ function SEApi(accessToken) {
 	function getTagStats(callback) {
 
 		request.get(apiUrl + 'me/tags', {
+		//~ request.get(apiUrl + 'users/22656/tags', {
 			qs: {
 				key: params.stackExchange.key
 				, site: 'stackoverflow'
@@ -65,13 +65,18 @@ function SEApi(accessToken) {
 			, json: true
 			, gzip: true
 		}, function(err, res, body) {
-			if (err) 
+			if (err || res.statusCode !== 200) 
 				throw err
-			//~ console.log('getStats result', err, res.statusCode)
-			//~ console.log(body)
-			//~ callback(body.items[0].user_id)
+				
+			//~ console.log('getTagStats result', err, res.statusCode)
+			//~ console.log('tagStats', body)
+
+			// temporary
+			// work around a bug in jLouvain.js, crashing whenever a name is 'constructor' (overrides object's native property)
+			// todo report / fix the bug
+			var tags = body.items.filter(function(tag) {return tag.name !== 'constructor'})
 			
-			getTagGraph(0, 1, body.items, [], callback)
+			getTagGraph(0, 1, tags, [], callback)
 			
 		})
 	}
@@ -85,12 +90,11 @@ function SEApi(accessToken) {
 	*/	
 	function getTagGraph(tagIndex, pageIndex, tags, relations, callback) {
 
-
 		if (tagIndex >= tags.length)
 			formatGraph(tags, relations, callback)
 		else {
 //~ console.log('retrieving related tags for', tags[tagIndex].name)
-			request.get(apiUrl + 'tags/' + tags[tagIndex].name + '/related', {
+			request.get(apiUrl + 'tags/' + encodeURIComponent(tags[tagIndex].name) + '/related', {
 				qs: {
 					key: params.stackExchange.key
 					, site: 'stackoverflow'
@@ -102,12 +106,14 @@ function SEApi(accessToken) {
 				, json: true
 				, gzip: true
 			}, function(err, res, body) {
-				if (err) 
+				if (err || res.statusCode !== 200) 
 					throw err
+				
 				//~ console.log('getTagGraph result', err, res.statusCode)
 				//~ console.log(body)
 
 				relations.push({tag: tags[tagIndex].name, relations: body.items})
+				
 				//~ console.log('relations', relations)
 				if (body.has_more)
 					// get next page
@@ -128,7 +134,7 @@ function SEApi(accessToken) {
 	* @private
 	*/	
 	function formatGraph(tags, relations, callback) {
-//~ console.log('relations', relations)
+		//~ console.log('relations', relations)
 
 		var res = {
 				nodes: []
@@ -148,10 +154,6 @@ function SEApi(accessToken) {
 			validTags.push(tag.name)
 		})
 		
-		
-		
-var edgeData = []
-		
 		// filter and sort relations
 		relations.forEach(function(relation) {
 			
@@ -167,7 +169,6 @@ var edgeData = []
 						linksObj[sortedTagNames[0]] = {}
 //~ console.log('relation', from, to.name)
 
-
 					// store relation
 					linksObj[sortedTagNames[0]][sortedTagNames[1]] = to.count
 
@@ -179,14 +180,17 @@ var edgeData = []
 
 				}
 			})
+				
 		}) 
 		
+		// store edges in an array (to be used by community detection algorithm
+		var edgeData = []
 		
 		Object.keys(linksObj).forEach(function(from) {
 			
 			Object.keys(linksObj[from]).forEach(function(to) {
 
-edgeData.push({source: from, target: to, weight: linksObj[from][to]})
+				edgeData.push({source: from, target: to, weight: linksObj[from][to]})
 
 				res.links.push({
 					source: validTags.indexOf(from)
@@ -195,14 +199,17 @@ edgeData.push({source: from, target: to, weight: linksObj[from][to]})
 				})
 			})
 		})
-		
-var community = jLouvain().nodes(validTags).edges(edgeData)
-	, groups = community()
 
-	res.nodes.forEach(function(node) {
-		node.group = groups[node.name]
-	})
-console.log('community', groups)
+		var community = jLouvain().nodes(validTags).edges(edgeData)
+			, groups = community()
+
+		// store community info in each node record
+		res.nodes.forEach(function(node) {
+			node.group = groups[node.name]
+		})
+		
+		//~ console.log('community', groups)
+		
 		//~ console.log(validTags)
 		//~ console.log(linksObj)
 		//~ console.log(res)
