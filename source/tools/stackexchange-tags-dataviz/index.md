@@ -14,7 +14,7 @@ sections:
   content:
    - type: h1
      class: small
-     value: StackExchange tags data visualization
+     value: StackExchange tags data visualization<sup style="color:#aaa;">beta</sup>
    - type: h2
      class: small
      value: Showcase your stackExchange tags stats in a neat data visualization.
