@@ -50,21 +50,20 @@ function SEApi(accessToken) {
 	*/	
 	function getTagStats(callback) {
 
-		request.get(apiUrl + 'me/tags', {
-		//~ request.get(apiUrl + 'users/22656/tags', {
-			qs: {
-				key: params.stackExchange.key
-				, site: 'stackoverflow'
-				, order: 'desc'
-				, sort: 'popular'
-				, access_token: self.accessToken
-				, filter: 'default'
-				, pagesize: 60
-				//~ , pagesize: 4
+		request.get(apiUrl + 'me/tags?'
+		//~ request.get(apiUrl + 'users/831180/tags?'
+				+ 'key=' + params.stackExchange.key
+				+ '&site=' + 'stackoverflow'
+				+ '&order=' + 'desc'
+				+ '&sort=' + 'popular'
+				+ '&access_token=' + self.accessToken
+				+ '&filter=' + 'default'
+				+ '&pagesize=' + 60
+			, {
+				json: true
+				, gzip: true
 			}
-			, json: true
-			, gzip: true
-		}, function(err, res, body) {
+		, function(err, res, body) {
 			if (err || res.statusCode !== 200) 
 				throw err
 				
@@ -94,18 +93,19 @@ function SEApi(accessToken) {
 			formatGraph(tags, relations, callback)
 		else {
 //~ console.log('retrieving related tags for', tags[tagIndex].name)
-			request.get(apiUrl + 'tags/' + encodeURIComponent(tags[tagIndex].name) + '/related', {
-				qs: {
-					key: params.stackExchange.key
-					, site: 'stackoverflow'
-					, access_token: self.accessToken
-					, filter: 'default'
-					, pagesize: 30
-					, page: pageIndex
+
+			request.get(apiUrl + 'tags/' + encodeURIComponent(tags[tagIndex].name) + '/related?'
+				+ 'key=' + params.stackExchange.key
+				 + '&site=' + 'stackoverflow'
+				 + '&access_token=' + self.accessToken
+				 + '&filter=' + 'default'
+				 + '&pagesize=' + 30
+				 + '&page=' + pageIndex
+				, {
+					json: true
+					, gzip: true
 				}
-				, json: true
-				, gzip: true
-			}, function(err, res, body) {
+			, function(err, res, body) {
 				if (err || res.statusCode !== 200) 
 					throw err
 				
