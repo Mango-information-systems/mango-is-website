@@ -23,6 +23,9 @@
   "hexo": {
     "version": "3.2.2"
   },
+  "browser": {
+    "request": "xhr"
+  },
   "dependencies": {
     "brfs": "^1.4.3",
     "browserify": "^13.0.1",
@@ -51,6 +54,7 @@
     "socket.io-client": "^1.4.6",
     "uglifyify": "^3.0.2",
     "validator": "^5.4.0",
+    "xhr": "^2.4.0",
     "xss-filters": "^1.2.6"
   },
   "devDependencies": {
