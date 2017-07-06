@@ -50,34 +50,34 @@ function SEApi(accessToken) {
 	*/	
 	function getTagStats(callback) {
 
-		request.get(apiUrl + 'me/tags?'
-		//~ request.get(apiUrl + 'users/831180/tags?'
-				+ 'key=' + params.stackExchange.key
-				+ '&site=' + 'stackoverflow'
-				+ '&order=' + 'desc'
-				+ '&sort=' + 'popular'
-				+ '&access_token=' + self.accessToken
-				+ '&filter=' + 'default'
-				+ '&pagesize=' + 60
-			, {
-				json: true
-				, gzip: true
-			}
-		, function(err, res, body) {
-			if (err || res.statusCode !== 200) 
-				throw err
-				
-			//~ console.log('getTagStats result', err, res.statusCode)
-			//~ console.log('tagStats', body)
+			request.get(apiUrl + 'me/tags?'
+			//~ request.get(apiUrl + 'users/831180/tags?'
+					+ 'key=' + params.stackExchange.key
+					+ '&site=' + 'stackoverflow'
+					+ '&order=' + 'desc'
+					+ '&sort=' + 'popular'
+					+ '&access_token=' + self.accessToken
+					+ '&filter=' + 'default'
+					+ '&pagesize=' + 60
+				, {
+					json: true
+					, gzip: true
+				}
+			, function(err, res, body) {
+				if (err || res.statusCode !== 200) 
+					throw err
+					
+				//~ console.log('getTagStats result', err, res.statusCode)
+				//~ console.log('tagStats', body)
 
-			// temporary
-			// work around a bug in jLouvain.js, crashing whenever a name is 'constructor' (overrides object's native property)
-			// todo report / fix the bug
-			var tags = body.items.filter(function(tag) {return tag.name !== 'constructor'})
-			
-			getTagGraph(0, 1, tags, [], callback)
-			
-		})
+				// temporary
+				// work around a bug in jLouvain.js, crashing whenever a name is 'constructor' (overrides object's native property)
+				// todo report / fix the bug
+				var tags = body.items.filter(function(tag) {return tag.name !== 'constructor'})
+				
+				getTagGraph(0, 1, tags, [], callback)
+				
+			})
 	}
 	
 	/**
@@ -106,21 +106,32 @@ function SEApi(accessToken) {
 					, gzip: true
 				}
 			, function(err, res, body) {
-				if (err || res.statusCode !== 200) 
-					throw err
-				
-				//~ console.log('getTagGraph result', err, res.statusCode)
-				//~ console.log(body)
+				if (err || res.statusCode !== 200) {
+					if (res.statusCode === 0 &&err.message === '[object ProgressEvent]') {
+						// requesting this tag's graph failed because of adblocking addon, skip it
+						self.incompleteData = true
+						getTagGraph(tagIndex+1, 1, tags, relations, callback)
+					}
+					else {
+						console.log('error retrieving tags graph', res.statusCode)
+						throw err
+					}
+				}
+				else {
+					
+					//~ console.log('getTagGraph result', err, res.statusCode)
+					//~ console.log(body)
 
-				relations.push({tag: tags[tagIndex].name, relations: body.items})
-				
-				//~ console.log('relations', relations)
-				if (body.has_more)
-					// get next page
-					getTagGraph(tagIndex, pageIndex + 1, tags, relations, callback)
-				else
-					// get relations for next tag
-					getTagGraph(tagIndex+1, 1, tags, relations, callback)
+					relations.push({tag: tags[tagIndex].name, relations: body.items})
+					
+					//~ console.log('relations', relations)
+					if (body.has_more)
+						// get next page
+						getTagGraph(tagIndex, pageIndex + 1, tags, relations, callback)
+					else
+						// get relations for next tag
+						getTagGraph(tagIndex+1, 1, tags, relations, callback)
+				}
 				
 			})
 		}
@@ -207,6 +218,9 @@ function SEApi(accessToken) {
 		res.nodes.forEach(function(node) {
 			node.group = groups[node.name]
 		})
+		
+		if (self.incompleteData)
+			res.isIncomplete = true
 		
 		//~ console.log('community', groups)
 		
