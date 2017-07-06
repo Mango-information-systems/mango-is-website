@@ -118,14 +118,17 @@ function showChart(chartData) {
 	}
 
 	app.view.chart.update(chartData)
-					
+console.log('chartData.isIncomplete', chartData.isIncomplete)
+
 	if (chartData.isIncomplete) {
-		app.view.warningMessage.render({target: appContainer.append('div'), message: '<div class="alert alert-danger"> \
-			<h5><i class="fa fa-exclamation-triangle"></i> Incomplete data retrieved</h5> \
-			<p>The whole tags graph could not be retrieved, most probably due to your ad blocker.</p> \
+		
+		app.view.warningMessage.render({
+			target: appContainer
+			, append: true
+			, title: 'Incomplete data retrieved'
+			, message: '<p>The whole tags graph could not be retrieved, most probably due to your ad blocker.</p> \
 			<p>For more accurate results, you may disable your ad blocker. There is no ad on this site, anyway.</p> \
-			<p>Up to you ;)</p> \
-			</div>'
+			<p>Up to you ;)</p>'
 		})
 	}
 	

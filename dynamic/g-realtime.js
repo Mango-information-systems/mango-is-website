@@ -98,15 +98,15 @@ function start(err) {
 	if (err && err.error == 'idpiframe_initialization_failed') {
 	// third-party cookies are disabled (or something)
 		// https://github.com/google/google-api-javascript-client/issues/260#issuecomment-278514289
-		app.view.warningMessage.render({target: appContainer, message: '<div class="alert alert-danger"> \
-			<h5><i class="fa fa-exclamation-triangle"></i> Third-party cookies required</h5> \
-			<p>This tool requires Google to store cookies (data) in this web page.</p> \
+		app.view.warningMessage.render({
+			target: appContainer
+			, title: 'Third-party cookies required'
+			, message: '<p>This tool requires Google to store cookies (data) in this web page.</p> \
 			<p>Solutions:</p> \
 			<ul> \
 			<li>Enable third-party cookies in your browser (<a href="https://www.google.com/search?q=how+to+enable+third+party+cookies">instructions</a>)</li> \
 			<li>Or use another browser, like Firefox</li> \
-			</ul> \
-			</div>'
+			</ul>'
 		})
 	}
 	else if (!gapi.auth2.getAuthInstance().isSignedIn.get()) {
