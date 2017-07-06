@@ -118,7 +118,6 @@ function showChart(chartData) {
 	}
 
 	app.view.chart.update(chartData)
-console.log('chartData.isIncomplete', chartData.isIncomplete)
 
 	if (chartData.isIncomplete) {
 		
