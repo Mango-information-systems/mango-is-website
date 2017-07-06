@@ -1,3 +1,20 @@
+
+body {
+	font-size: .8rem;
+	line-height: 1.4rem;
+}
+
+
+@media (min-width: 560px) {
+  /* Larger than phablet (also point when grid becomes active) */
+
+	body {
+		font-size: 1rem;
+		line-height: 1.6rem;
+	}
+
+}
+
 /* Blog post specific styles */
 
 .published-meta {
@@ -52,19 +69,70 @@
 
 /* POST */
 
-article.post { margin-top: 3em; }
+article.post {
+	margin-top: 3em;
+}
 
-.post h1 { font-size: 2.4rem; line-height: 1.05; letter-spacing: 0.008rem; }
-.post h1 small { color: #565656; font-size:70%; letter-spacing: 0.0225rem; }
-.post h2 { font-size: 2rem; line-height: 1.05; color: #000; margin-top:2rem; }
-.post h3 { font-size: 1.6rem; line-height: 1.05; color: #000; margin-top:2rem; }
+.post h1 {
+	font-size: 1.8rem;
+	letter-spacing: 0.008rem;
+}
+
+.post h1 small {
+	color: #565656;
+	font-size: 70%;
+	letter-spacing: 0.0225rem;
+}
+
+.post h2 {
+	font-size: 1.6rem;
+	line-height: 1.5rem;
+	color: #000;
+	margin-top: 1.8rem;
+}
+
+.post h3 {
+	font-size: 1.4rem;
+	line-height: 1.05;
+	color: #000;
+	margin-top: 1.4rem;
+	margin-bottom: 1.2rem;
+}
+
+
+@media (min-width: 720px) {
+  /* Larger than tablet */
+
+	.post h1 {
+		font-size: 2.4rem;
+		line-height: 2.8rem;
+		letter-spacing: 0.008rem;
+	}
+
+	.post h2 {
+		font-size: 2rem;
+		line-height: 1.05;
+		color: #000;
+		margin-top: 2rem;
+	}
+
+	.post h3 {
+		font-size: 1.6rem;
+		line-height: 1.05;
+		color: #000;
+		margin-top: 2rem;
+		margin-bottom: 1.6rem;
+	}
+
+}
 
 
 #header a, #sidebar a{
 	font-family: 'Raleway';
 	font-size: .8rem;
 	text-decoration: none;
-	color: #565656;}
+	color: #565656;
+}
 
 /* handle items that wrap to two lines */
 

@@ -2,33 +2,44 @@
 	height: 100%;
 }
 
-section
-{
+section {
 	min-height: 60%;
-	padding-top: 140px;
-	padding-bottom: 100px;
+	padding-top: 2.5em;
+	padding-bottom:2.5em;
 	padding-left: 10000px;
 	margin-left: -10000px;
 	padding-right: 10000px;
 	margin-right: -10000px;
 }
 
-@media (max-width: 960px) {
+section a.brand img {
 
-	/* Reduce the section padding on small screens so there isn't too much white space. */
+	padding-top: 5rem;
+	/* don't let the logo get too small */
+	min-width: 300px;
+}
 
-  section { padding-top: 2.5em; padding-bottom:2.5em; }
+section a.brand img {
+	margin-top: -5rem;
+	margin-bottom: 5rem;
+}
 
+
+
+@media (min-width: 1200px) {
+  /* Larger than Desktop HD */
+  
+	section {
+		padding-top: 5.5rem;
+		padding-bottom: 5.5rem;
+	}
+	
 	section a.brand img {
 
-		/* positions the logo once the padding has been reduced on a section */
-		padding-top: 85px;
-
-		/* don't let the logo get too small */
-		min-width: 300px;
+		padding-top: 2rem;
 	}
-
 }
+
 
 section:nth-child(odd) {
 	background-color: #eee;
@@ -39,12 +50,8 @@ section:nth-child(even) {
 	background-color: #FCFCFC;
 }
 
-section a.brand img {
-	margin-top: -120px;
-	margin-bottom: 120px;
-}
+/* M letter/logo before h1 bullet-list style */
 
-div.landing section h1.small { line-height: 0.9; }
 div.landing section h1.small:before {
 	content: " ";
 	content:url('/img/m.png');
