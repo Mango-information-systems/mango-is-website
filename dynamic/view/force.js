@@ -23,7 +23,7 @@ function ForceChart() {
 	 ****************************************/
 	
 	/**
-	 * update chart on tick event
+	 * update nodes on tick event
 	 * 
 	 * @private
 	 * 
@@ -32,10 +32,44 @@ function ForceChart() {
 		 
 		self.node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
 
+	 }
+
+	/**
+	 * display links when the animation is over
+	 * 
+	 * @private
+	 * 
+	 */
+	 function ended() {
+		
+		console.log('end')
+		
 		self.link.attr('x1', function(d) { return d.source.x })
 			.attr('y1', function(d) { return d.source.y })
 			.attr('x2', function(d) { return d.target.x })
 			.attr('y2', function(d) { return d.target.y })
+			.attr('stroke-opacity', function(d) { return self.weightScale(d.weight)})
+			
+		d3.select('#links')
+		  .transition()
+		    .style('opacity', 1)
+		
+	 }
+
+	/**
+	 * hide links when the animation starts
+	 * 
+	 * @private
+	 * 
+	 */
+	 function started() {
+		
+		console.log('start')
+		
+		d3.select('#links')
+		  .transition()
+		    .style('opacity', 0)
+		
 	 }
 
 
@@ -81,8 +115,10 @@ function ForceChart() {
 			  .append('g')
 		
 		self.link = self.svg.append('g')
+			.attr('id', 'links')
 			.attr('stroke', '#ddd')
 			.attr('stroke-width', 1.5)
+			.style('opacity', 0)
 			.selectAll('.link')
 		
 		self.node = self.svg.append('g')
@@ -105,16 +141,18 @@ function ForceChart() {
 			.domain([data.maxWeight, data.minWeight])
 			.range([50, 200])
 			
-		var weightScale = d3.scaleLog()
+		self.weightScale = d3.scaleLog()
 			.domain(d3.extent(data.links, function (d) { return d.weight }))
 			.range([.1, 1])
 			
 		self.simulation = d3.forceSimulation(data.nodes)
-			.force('link', d3.forceLink(data.links).distance(75).strength(function(d) {return weightScale(d.weight)}))
+			.force('link', d3.forceLink(data.links).distance(75).strength(function(d) {return self.weightScale(d.weight)}))
 			.force('charge', d3.forceManyBody().strength(-200))
 			.force('center', d3.forceCenter(self.width / 2, self.height / 2))
 			.force('collide', d3.forceCollide(function(d) {return 2 * (textScale(d.count) + d.name.length) }))
 			.on('tick', ticked)
+			.on('end', ended)
+			.on('start', started)
 
 // TODO prevent labels from overlapping.
 // cf technique below used in Tribalytics
@@ -226,7 +264,6 @@ function ForceChart() {
 		})
 
 		self.link = self.link.enter().append('line')
-			.attr('stroke-opacity', function(d) { return weightScale(d.weight)})
 
 		// Update and restart the simulation.
 		self.simulation.nodes(data.nodes)
