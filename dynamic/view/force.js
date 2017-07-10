@@ -56,25 +56,16 @@ function ForceChart() {
 		
 	 }
 
-	/**
-	 * hide links when the animation starts
-	 * 
-	 * @private
-	 * 
-	 */
-	 function started() {
-		
-		console.log('start')
-		
-		d3.select('#links')
-		  .transition()
-		    .style('opacity', 0)
-		
-	 }
-
-
 	function dragstarted(d) {
-	  if (!d3.event.active) self.simulation.alphaTarget(0.3).restart();
+		
+	  if (!d3.event.active) {
+		  
+		  self.simulation.alphaTarget(0.3).restart()
+		
+			d3.select('#links')
+			  .transition()
+				.style('opacity', 0) // hide links when the animation restarts
+	  }
 	  d.fx = d.x;
 	  d.fy = d.y;
 	}
@@ -152,7 +143,6 @@ function ForceChart() {
 			.force('collide', d3.forceCollide(function(d) {return 2 * (textScale(d.count) + d.name.length) }))
 			.on('tick', ticked)
 			.on('end', ended)
-			.on('start', started)
 
 // TODO prevent labels from overlapping.
 // cf technique below used in Tribalytics
