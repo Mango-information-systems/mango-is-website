@@ -37,6 +37,7 @@
     "form-to-obj": "0.0.3",
     "gascrolldepth": "git+https://github.com/leighmcculloch/gascrolldepth.js.git#70834032",
     "hexo": "^3.2.0",
+    "hexo-browsersync": "^0.2.0",
     "hexo-generator-archive": "^0.1.4",
     "hexo-generator-category": "^0.1.3",
     "hexo-generator-feed": "^1.2.0",
