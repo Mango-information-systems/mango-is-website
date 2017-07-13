@@ -45,38 +45,68 @@ sections:
   # section: references
   content:
    - type: h2
-     value: What our customers say
+     value: Some of the work we did
    - type: reference
      content:
+      client: co-emergence
+      project: Creation of a realtime web application
+      summary: summary text
+      domains: [business analysis, project management]
+      tech: [node.js, d3.js, websockets]
+      dataTech: [json]
+      quote: Mehdi is responsible for the development of a data-intensive web application.<br>He demonstrates his commitment to the success of this enterprise through flexibility and short response time. He is <strong>totally focused on delivering results</strong>.
+      author: Jean-Christophe Blondiau
+      authorTitle: Director
       image:
        href: /img/clients/jean-christophe-blondiau.jpg
        alt: Jean-Christophe Blondiau
        width: 140px
        height: 140px
-      quote: Mehdi is responsible for the development of a data-intensive web application.<br>He demonstrates his commitment to the success of this enterprise through flexibility and short response time. He is <strong>totally focused on delivering results</strong>.
-      author: Jean-Christophe Blondiau
-      title: Director at co-emergence
    - type: reference
      content:
+      client: smoall
+      project: conversion optimization
+      domains: [saas, sales, conversion rate optimization]
+      tech: [google analytics, javascript, wordpress]
+      quote: "As we were looking at optimizing the conversion rate of our startup smoall.com, Mehdi helped us by setting up a reporting system, measuring the performance of each step of the funnel.<br>
+		Mehdi has a strong analytical mind, but also understands business, and dedicates all his efforts to his clients' goals."
+      author: Bastien Wauters
+      authorTitle: Managing Director & Co-founder
       image:
        href: /img/clients/bastien-wauters.jpg
        alt: Bastien Wauters
        width: 140px
        height: 140px
-      quote: "As we were looking at optimizing the conversion rate of our startup smoall.com, Mehdi helped us by setting up a reporting system, measuring the performance of each step of the funnel.<br>
-		Mehdi has a strong analytical mind, but also understands business, and dedicates all his efforts to his clients' goals."
-      author: Bastien Wauters
-      title: Managing Director & Co-founder at smoall
    - type: reference
      content:
+      client: Tribalytics (internal project)
+      project: Social media audience analysis
+      domains: [saas, sales, project management, entrepreneurship]
+      tech: [node.js, gephi, d3.js, php Laravel]
+      dataTech: [redis, mysql, mariadb, twitter API, nominatim API, json]
+      quote: "Tribalytics has soon become one of those tools I cannot stop using."
+      author: Gianluca Fiorelli
+      authorTitle: SEO Strategist - I Love SEO
+      image:
+       href: /img/clients/gianluca-fiorelli.jpg
+       alt: Gianluca Fiorelli
+       width: 140px
+       height: 140px
+   - type: reference
+     content:
+      client: Energy Efficiency in Industrial Processes (EEIP)
+      project: data integration
+      domains: [web application development]
+      tech: [node.js, scraping, drupal]
+      dataTech: [mysql]
+      quote: Mehdi has provided exceptional data integration service to Energy Efficiency in Industrial Services.
+      author: Dusan Jakovljevic
+      authorTitle: Director
       image:
        href: /corporate-business-intelligence/img/dusan-jakovljevic-large.jpg
        alt: Dusan Jakovljevic
        width: 140px
        height: 140px
-      quote: Mehdi has provided exceptional data integration service to Energy Efficiency in Industrial Services.
-      author: Dusan Jakovljevic
-      title: Director at Energy Efficiency in Industrial Processes (EEIP)
  -
   # section: About us
   content:
