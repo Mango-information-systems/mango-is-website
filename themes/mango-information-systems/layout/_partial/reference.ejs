@@ -1,32 +1,67 @@
 <!-- begin reference -->
 <div class="row reference">
-
-		<div class="columns
-
-				lg-three lg-offset-by-one
-				md-three
-				sm-six
-				xs-eight
-				">
-
-			<%- image_tag(data.image.href, {
-			class: 'u-img-responsive u-pull-left profile-photo'
-			, alt: data.image.alt
-			}) %>
+	<% if (typeof data.href === 'undefined') { %>
+		<div class="card twelve columns">
+	<% }
+	else { %>
+		<a href="<%- data.href %>" data-trg="<%- data.trg %>" class="card">
+	<% } %>
+	
+		<div class="row">
+			<div class="sm-eight columns">
+				<h3>Project name <small>client name </small></h3>
+				<p>(activity panel)
+				</p>
+			</div>
+			<div class="sm-four columns">
+				<ul class="list-inline">
+					<li> <span class="tag tag-domain">domain</span></li>
+					<li> <span class="tag tag-domain">domain</span></li>
+				</ul>
+				<ul class="list-inline">
+					<li> <span class="tag tag-tech">technology</span></li>
+					<li> <span class="tag tag-tech">tech</span></li>
+				</ul>
+				<ul class="list-inline">
+					<li> <span class="tag">data source</span></li>
+					<li> <span class="tag">data target</span></li>
+				</ul>
+			</div>
 		</div>
+		
+		<div class="row">
+			<div class="columns lg-three lg-offset-by-one
+								md-three
+								sm-six
+								xs-eight">
+				<%- image_tag(data.image.href, {
+				class: 'u-img-responsive u-pull-left profile-photo'
+				, alt: data.image.alt
+				}) %>
+			</div>
 
-		<div class="columns
-							lg-seven lg-offset-by-one
-							md-eight md-offset-by-one
-							sm-twelve
-							xs-twelve">
-			<blockquote>
-				<%- data.quote %>
-			</blockquote>
-			<cite>
-				<%- data.author %>, <%- data.title %>
-			</cite>
+			<div class="columns lg-seven lg-offset-by-one
+								md-eight md-offset-by-one
+								sm-twelve
+								xs-twelve">
+				<blockquote>
+					<%- data.quote %>
+				</blockquote>
+				<cite>
+					<%- data.author %>, <%- data.title %>
+				</cite>
+			</div>
+			
 		</div>
+	
+	<% if (typeof data.href === 'undefined') { %>
+		</div>
+	<% }
+	else { %>
+		</a>
+	<% } %>
+
+
 
 </div>
 <!-- / reference -->
