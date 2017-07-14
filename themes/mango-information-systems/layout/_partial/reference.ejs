@@ -1,5 +1,5 @@
 <!-- begin reference -->
-<div class="row reference">
+<div class="row reference" itemscope itemtype="http://schema.org/Product">
 	<% if (typeof data.href === 'undefined') { %>
 		<div class="card twelve columns">
 	<% }
@@ -9,8 +9,8 @@
 	
 		<div class="row">
 			<div class="sm-eight columns">
-				<h3><%- data.project %> <small><%- data.client %></small></h3>
-				<p><%- data.summary %>
+				<h3 itemprop="name"><%- data.project %> <small><%- data.client %></small></h3>
+				<p itemprop="description"><%- data.summary %>
 				</p>
 			</div>
 			<div class="sm-four columns">
@@ -23,7 +23,7 @@
 				<ul class="list-inline">
 					<% _.each(data.tech, function(tech) {
 					%>
-						<li><span class="tag tag-tech"><%- tech %></span></li>
+						<li itemscope itemtype="http://schema.org/ComputerLanguage"><span class="tag tag-tech" itemprop="name"><%- tech %></span></li>
 					<% }) %>
 				</ul>
 				<ul class="list-inline">
@@ -35,7 +35,7 @@
 			</div>
 		</div>
 		
-		<div class="row">
+		<div class="row" itemprop="review" itemscope itemtype="http://schema.org/Review">
 			<div class="columns lg-three lg-offset-by-one
 								md-three
 								sm-six
@@ -50,11 +50,11 @@
 								md-eight md-offset-by-one
 								sm-twelve
 								xs-twelve">
-				<blockquote>
+				<blockquote itemprop="reviewBody">
 					<%- data.quote %>
 				</blockquote>
 				<cite>
-					<%- data.author %>, <%- data.authorTitle %>
+					<span itemprop="author"><%- data.author %></span>, <%- data.authorTitle %>
 				</cite>
 			</div>
 			
