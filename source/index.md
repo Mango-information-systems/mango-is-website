@@ -51,8 +51,8 @@ sections:
       client: co-emergence
       project: Creation of a realtime web application
       summary: summary text
-      domains: [business analysis, project management]
-      tech: [node.js, d3.js, websockets]
+      domains: [business analysis, project management, real-time analytics, reporting]
+      tech: [node.js, d3.js, websockets, backbone.js]
       dataTech: [json]
       quote: Mehdi is responsible for the development of a data-intensive web application.<br>He demonstrates his commitment to the success of this enterprise through flexibility and short response time. He is <strong>totally focused on delivering results</strong>.
       author: Jean-Christophe Blondiau
@@ -81,7 +81,7 @@ sections:
      content:
       client: Tribalytics (internal project)
       project: Social media audience analysis
-      domains: [saas, sales, project management, entrepreneurship]
+      domains: [saas, sales, project management, entrepreneurship, graph analysis, natural language processing]
       tech: [node.js, gephi, d3.js, php Laravel]
       dataTech: [redis, mysql, mariadb, twitter API, nominatim API, json]
       quote: "Tribalytics has soon become one of those tools I cannot stop using."
