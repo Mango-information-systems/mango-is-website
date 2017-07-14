@@ -283,6 +283,7 @@ function ForceChart() {
 			.force('link', d3.forceLink(data.links).distance(75).strength(function(d) {return self.weightScale(d.weight)}))
 			.force('charge', d3.forceManyBody().strength(-200))
 			.force('center', d3.forceCenter(self.width / 2, self.height / 2))
+			.force('x', d3.forceX().strength(-.2))
 			.on('tick', ticked)
 			.on('end', ended)
 
