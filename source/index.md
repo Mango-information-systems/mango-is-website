@@ -83,6 +83,7 @@ sections:
       domains: [to be completed]
       tech: [to be completed]
       dataTech: [to be completed]
+      thumbnail: thumbnails/twitto-thumbnail.png
    - type: reference
      content:
       client: Energy Efficiency in Industrial Processes (EEIP)
