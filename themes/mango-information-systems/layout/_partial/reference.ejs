@@ -1,71 +1,119 @@
 <!-- begin reference -->
-<div class="row reference" itemscope itemtype="http://schema.org/Product">
-	<% if (typeof data.href === 'undefined') { %>
-		<div class="card twelve columns">
-	<% }
-	else { %>
-		<a href="<%- data.href %>" data-trg="<%- data.trg %>" class="card">
-	<% } %>
+<div class="row reference">
+	<div class="card twelve columns">
 	
 		<div class="row">
-			<div class="sm-eight columns">
-				<h3 itemprop="name"><%- data.project %> <small><%- data.client %></small></h3>
-				<p itemprop="description"><%- data.summary %>
+		
+			<% if(typeof data.thumbnail !== 'undefined') {
+			%>
+				<div class="four columns">
+					<div class="card">
+						<img class="u-img-responsive" src="img/<%- data.thumbnail %>" alt=""/>
+					</div>
+				</div>
+			<% 
+			}
+			%>
+			<div class="eight columns">
+				<h3 itemprop="name"><%- data.project %></h3>
+				<p itemprop="description"><%- data.description %>
 				</p>
 			</div>
-			<div class="sm-four columns">
-				<ul class="list-inline">
-					<% _.each(data.domains, function(domain) {
-					%>
-						<li><span class="tag tag-domain"><%- domain %></span></li>
-					<% }) %>
-				</ul>
-				<ul class="list-inline">
-					<% _.each(data.tech, function(tech) {
-					%>
-						<li itemscope itemtype="http://schema.org/ComputerLanguage"><span class="tag tag-tech" itemprop="name"><%- tech %></span></li>
-					<% }) %>
-				</ul>
-				<ul class="list-inline">
-					<% _.each(data.dataTech, function(dataTech) {
-					%>
-						<li><span class="tag"><%- dataTech %></span></li>
-					<% }) %>
-				</ul>
-			</div>
+		
+			<% if(typeof data.thumbnail === 'undefined') {
+			%>
+				<div class="four columns">
+					<h4 class="u-pull-right">Toolbox</h4>
+					<div class="u-cf"></div>
+					<ul class="list-inline">
+						<% _.each(data.domains, function(domain) {
+						%>
+							<li class="u-pull-right"><span class="tag tag-domain"><%- domain %></span></li>
+						<% }) %>
+					</ul>
+					<div class="u-cf"></div>
+					<ul class="list-inline">
+						<% _.each(data.tech, function(tech) {
+						%>
+							<li class="u-pull-right" itemscope itemtype="http://schema.org/ComputerLanguage"><span class="tag tag-tech" itemprop="name"><%- tech %></span></li>
+						<% }) %>
+					</ul>
+					<div class="u-cf"></div>
+					<ul class="list-inline">
+						<% _.each(data.dataTech, function(dataTech) {
+						%>
+							<li class="u-pull-right"><span class="tag"><%- dataTech %></span></li>
+						<% }) %>
+					</ul>
+				</div>
+					
+			<% 
+			}
+			%>
 		</div>
 		
-		<div class="row" itemprop="review" itemscope itemtype="http://schema.org/Review">
-			<div class="columns lg-three lg-offset-by-one
-								md-three
-								sm-six
-								xs-eight">
-				<%- image_tag(data.image.href, {
-				class: 'u-img-responsive u-pull-left profile-photo'
-				, alt: data.image.alt
-				}) %>
-			</div>
-
-			<div class="columns lg-seven lg-offset-by-one
-								md-eight md-offset-by-one
-								sm-twelve
-								xs-twelve">
-				<blockquote itemprop="reviewBody">
-					<%- data.quote %>
-				</blockquote>
-				<cite>
-					<span itemprop="author"><%- data.author %></span>, <%- data.authorTitle %>
-				</cite>
+		<% if(typeof data.thumbnail !== 'undefined') {
+		%>
+			<div class="row">
+				<div class="twelve columns">
+					<h4>Toolbox</h4>
+					<ul class="list-inline">
+						<% _.each(data.domains, function(domain) {
+						%>
+							<li><span class="tag tag-domain"><%- domain %></span></li>
+						<% }) %>
+					</ul>
+					<ul class="list-inline">
+						<% _.each(data.tech, function(tech) {
+						%>
+							<li itemscope itemtype="http://schema.org/ComputerLanguage"><span class="tag tag-tech" itemprop="name"><%- tech %></span></li>
+						<% }) %>
+					</ul>
+					<ul class="list-inline">
+						<% _.each(data.dataTech, function(dataTech) {
+						%>
+							<li><span class="tag"><%- dataTech %></span></li>
+						<% }) %>
+					</ul>
+				</div>
 			</div>
 			
-		</div>
+		<% 
+		}
+		
+		if(typeof data.quotes !== 'undefined') {
+		%>
+			<h4>Customer quotes</h4>
+		<% 
+		}
+		
+		_.each(data.quotes, function(quote) {
+		%>
+			<div class="row" itemprop="review" itemscope itemtype="http://schema.org/Review">
+				<div class="columns md-three
+									sm-six
+									xs-eight">
+					<%- image_tag(quote.image.href, {
+					class: 'u-img-responsive u-pull-left profile-photo'
+					, alt: quote.image.alt
+					}) %>
+				</div>
+
+				<div class="columns md-nine
+									sm-twelve
+									xs-twelve">
+					<blockquote itemprop="reviewBody">
+						<%- quote.text %>
+					</blockquote>
+					<cite>
+						<span itemprop="author"><%- quote.author %></span>, <%- quote.authorTitle %>
+					</cite>
+				</div>
+				
+			</div>
+		<% }) %>
 	
-	<% if (typeof data.href === 'undefined') { %>
-		</div>
-	<% }
-	else { %>
-		</a>
-	<% } %>
+	</div>
 
 
 

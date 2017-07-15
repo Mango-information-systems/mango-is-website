@@ -1,0 +1,47 @@
+<!-- begin product-section -->
+<%
+var sectionStyle = data['background-image'] ? 'background: url(' + data['background-image'] + ') no-repeat center center fixed; background-size: cover;' : ''
+%>
+
+<section style="<%- sectionStyle %>" class="<%- data.class %>" itemscope  itemtype="http://schema.org/Product">
+
+		<h2 itemprop="name"><%- data.content[0].content.name %></h2>
+	<%
+	function setContent(content) {
+
+			switch(content.type) {
+				case 'product':%>
+					<%-
+						partial('_partial/product', {data: content.content})
+					%><%
+				break
+				case 'reference':%>
+					<%-
+						partial('_partial/reference', {data: content.content})
+					%><%
+				break
+				default:
+					var id = content.id? ' id="' + content.id + '"' : ''
+						, tag = 'p'
+						, tagClass = content.class? ' class="' + content.class + '"' : ''
+
+					if (['div', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ol', 'ul'].indexOf(content.type) !== -1)
+						tag = content.type
+
+					%>
+
+					<<%- tag %><%- id %><%- tagClass %>><%- content.value %></<%- tag %>>
+
+					<%
+
+				break
+			}
+
+		}
+
+	%>
+
+	<%- data.content.forEach(setContent) %>
+
+</section>
+<!-- / product-section -->

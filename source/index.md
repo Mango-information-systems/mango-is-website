@@ -19,22 +19,6 @@ sections:
  -
   # section: offer
   content:
-   -
-    type: h2
-    value: Explore what we do
-   - type: card
-     content:
-      trg: /package-web-apps
-      title: <i class="fa fa-pie-chart" aria-hidden="true"></i> Data-driven web applications
-      text: "<p>We build modern, realtime web analytics applications.</p>
-      <p>We believe that data visualizations aren't just eye candy, but actually <strong>provide valuable and actionable insights</strong>.</p>
-      <p>Let's see whether we should work together, <a href='/contact/'>get in touch</a>!</p>"
-   - type: card
-     content:
-      title: <i class="fa fa-filter" aria-hidden="true"></i> Conversion optimization
-      text: "<p>Some of our clients are very good at promoting their websites and attracting visitors, but struggle to convert them into paying customers.</p>
-      <p>Using analytics we help businesses identify and <strong>fix the bottlenecks</strong>, to eventually <strong>sell more</strong>.</p>
-      <p>If you feel this pain, <a href='/convert/'>have a look at how we do it</a>.</p>"
    - type: card
      content:
       title: <i class="fa fa-bar-chart" aria-hidden="true"></i> Corporate Business Intelligence
@@ -42,56 +26,63 @@ sections:
       <p>Data-warehousing projects are complex and challenging. Our experience <strong>increases the chances of your success</strong>.</p>
       <p><a href='/corporate-business-intelligence/'>Check what we offer</a> to know more.</p>"
  -
-  # section: references
+  # section: data-driven web apps
+  type: product
   content:
-   - type: h2
-     value: Some of the work we did
+   - type: product
+     content:
+      name: <i class="fa fa-pie-chart" aria-hidden="true"></i> Data-driven web applications
+      description: "<p>We build modern, realtime web analytics applications.</p>
+      <p>We believe that data visualizations aren't just eye candy, but actually <strong>provide valuable and actionable insights</strong>.</p>
+      <p>Let's see whether we should work together, <a href='/contact/'>get in touch</a>!</p>"
    - type: reference
      content:
-      client: co-emergence
-      project: Creation of a realtime web application
-      summary: summary text
-      domains: [business analysis, project management, real-time analytics, reporting]
-      tech: [node.js, d3.js, websockets, backbone.js]
-      dataTech: [json]
-      quote: Mehdi is responsible for the development of a data-intensive web application.<br>He demonstrates his commitment to the success of this enterprise through flexibility and short response time. He is <strong>totally focused on delivering results</strong>.
-      author: Jean-Christophe Blondiau
-      authorTitle: Director
-      image:
-       href: /img/clients/jean-christophe-blondiau.jpg
-       alt: Jean-Christophe Blondiau
-       width: 140px
-       height: 140px
+      project: to be completed
+      description: to be completed
+      domains: [to be completed]
+      tech: [to be completed]
+      quotes:
+        - text: Mehdi is responsible for the development of a data-intensive web application.<br>He demonstrates his commitment to the success of this enterprise through flexibility and short response time. He is <strong>totally focused on delivering results</strong>.
+          author: Jean-Christophe Blondiau
+          authorTitle: Director
+          client: co-emergence
+          image:
+           href: /img/clients/jean-christophe-blondiau.jpg
+           alt: Jean-Christophe Blondiau
+           width: 140px
+           height: 140px
    - type: reference
      content:
-      client: smoall
-      project: conversion optimization
-      domains: [saas, sales, conversion rate optimization]
-      tech: [google analytics, javascript, wordpress]
-      quote: "As we were looking at optimizing the conversion rate of our startup smoall.com, Mehdi helped us by setting up a reporting system, measuring the performance of each step of the funnel.<br>
-		Mehdi has a strong analytical mind, but also understands business, and dedicates all his efforts to his clients' goals."
-      author: Bastien Wauters
-      authorTitle: Managing Director & Co-founder
-      image:
-       href: /img/clients/bastien-wauters.jpg
-       alt: Bastien Wauters
-       width: 140px
-       height: 140px
-   - type: reference
-     content:
-      client: Tribalytics (internal project)
-      project: Social media audience analysis
+      project: Tribalytics
+      description: to be completed
       domains: [saas, sales, project management, entrepreneurship, graph analysis, natural language processing]
       tech: [node.js, gephi, d3.js, php Laravel]
       dataTech: [redis, mysql, mariadb, twitter API, nominatim API, json]
-      quote: "Tribalytics has soon become one of those tools I cannot stop using."
-      author: Gianluca Fiorelli
-      authorTitle: SEO Strategist - I Love SEO
-      image:
-       href: /img/clients/gianluca-fiorelli.jpg
-       alt: Gianluca Fiorelli
-       width: 140px
-       height: 140px
+      thumbnail: tribalytics-thumbnail.png
+      quotes:
+        - text: "Tribalytics has soon become one of those tools I cannot stop using."
+          author: Gianluca Fiorelli
+          authorTitle: SEO Strategist - I Love SEO
+          image:
+           href: /img/clients/gianluca-fiorelli.jpg
+           alt: Gianluca Fiorelli
+           width: 140px
+           height: 140px
+        - text: "The most important people to follow are not always the ones you would think at first. Tribalytics help you to identify and connect with the true opinion leaders in your market."
+          author: David Hachez
+          authorTitle: CEO & Co-founder - Emolytics
+          image:
+           href: /img/clients/david-hachez.jpg
+           alt: David Hachez
+           width: 140px
+           height: 140px
+   - type: reference
+     content:
+      project: Twitto.be
+      description: to be completed
+      domains: [to be completed]
+      tech: [to be completed]
+      dataTech: [to be completed]
    - type: reference
      content:
       client: Energy Efficiency in Industrial Processes (EEIP)
@@ -99,14 +90,41 @@ sections:
       domains: [web application development]
       tech: [node.js, scraping, drupal]
       dataTech: [mysql]
-      quote: Mehdi has provided exceptional data integration service to Energy Efficiency in Industrial Services.
-      author: Dusan Jakovljevic
-      authorTitle: Director
-      image:
-       href: /corporate-business-intelligence/img/dusan-jakovljevic-large.jpg
-       alt: Dusan Jakovljevic
-       width: 140px
-       height: 140px
+      quotes:
+        - text: Mehdi has provided exceptional data integration service to Energy Efficiency in Industrial Services.
+          author: Dusan Jakovljevic
+          authorTitle: Director
+          image:
+           href: /corporate-business-intelligence/img/dusan-jakovljevic-large.jpg
+           alt: Dusan Jakovljevic
+           width: 140px
+           height: 140px
+ -
+  # section: conversion optimization
+  type: product
+  content:
+   - type: product
+     content:
+      name: <i class="fa fa-filter" aria-hidden="true"></i> Conversion optimization
+      description: "<p>Some of our clients are very good at promoting their websites and attracting visitors, but struggle to convert them into paying customers.</p>
+      <p>Using analytics we help businesses identify and <strong>fix the bottlenecks</strong>, to eventually <strong>sell more</strong>.</p>
+      <p>If you feel this pain, <a href='/convert/'>have a look at how we do it</a>.</p>"
+   - type: reference
+     content:
+      project: smoall.com consulting
+      domains: [saas, sales, conversion rate optimization]
+      tech: [google analytics, javascript, wordpress]
+      quotes:
+        - text: "As we were looking at optimizing the conversion rate of our startup smoall.com, Mehdi helped us by setting up a reporting system, measuring the performance of each step of the funnel.<br>
+		Mehdi has a strong analytical mind, but also understands business, and dedicates all his efforts to his clients' goals."
+          author: Bastien Wauters
+          authorTitle: Managing Director & Co-founder
+          client: smoall
+          image:
+           href: /img/clients/bastien-wauters.jpg
+           alt: Bastien Wauters
+           width: 140px
+           height: 140px
  -
   # section: About us
   content:

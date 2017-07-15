@@ -3,12 +3,19 @@
 	<div class="container landing <% if (is_home()) { %> home <% } %>">
 
 	<%
-	page.sections.forEach(function(section, index) { %>
-		<%-
-			partial('_partial/default-section', {data: section, isFirst: index == 0})
-		%>
-
-	<%
+	page.sections.forEach(function(section, index) {
+		if (section.type ==='product') {%>
+			<%-
+				partial('_partial/product-section', {data: section})
+			%>
+		<%
+		}
+		else { %>
+			<%-
+				partial('_partial/default-section', {data: section, isFirst: index == 0})
+			%>
+		<%
+		}
 	 }) %>
 
 	<%- partial('_partial/footer') %>
