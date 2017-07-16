@@ -45,7 +45,7 @@ sections:
    - type: reference
      content:
       project: Tribalytics
-      description: to be completed
+      description: "<p>to be completed</p> <p><small>Read also: <a href='https://mango-is.com/blog/business/getting-started-with-twitter/'>Getting started with Twitter - Using social media for sales conversions</a> in our blog.</small></p>"
       domains: [saas, sales, project management, entrepreneurship, graph analysis, natural language processing]
       tech: [node.js, gephi, d3.js, php Laravel]
       dataTech: [redis, mysql, mariadb, twitter API, nominatim API, json]
@@ -117,6 +117,9 @@ sections:
            alt: Bastien Wauters
            width: 140px
            height: 140px
+   -
+    type: p
+    value: "Read also: <a href='https://mango-is.com/blog/convert/a-sublime-landing-page/'>A sublime landing page - How to convince visitors to buy on the web</a> in our blog."
  -
   # section: Business Intelligence
   type: product
