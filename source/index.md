@@ -71,9 +71,9 @@ sections:
      content:
       project: Twitto.be
       description: to be completed
-      domains: [to be completed]
-      tech: [to be completed]
-      dataTech: [to be completed]
+      domains: [business analysis, application design, software architecture, web]
+      tech: [node.js, d3.js, websockets, html5, css3, javascript]
+      dataTech: [twitter realtime API]
       thumbnail: thumbnails/twitto-thumbnail.png
    - type: reference
      content:
@@ -91,6 +91,9 @@ sections:
            alt: Dusan Jakovljevic
            width: 140px
            height: 140px
+   -
+    type: p
+    value: <i class="fa fa-info-circle" aria-hidden="true"></i> Have a look at our <a href="https://mango-is.com/tools/">open source tools</a> for more.
  -
   # section: conversion optimization
   type: product
@@ -119,7 +122,7 @@ sections:
            height: 140px
    -
     type: p
-    value: "Read also: <a href='https://mango-is.com/blog/convert/a-sublime-landing-page/'>A sublime landing page - How to convince visitors to buy on the web</a> in our blog."
+    value: "<i class='fa fa-info-circle' aria-hidden='true'></i> Read also: <a href='https://mango-is.com/blog/convert/a-sublime-landing-page/'>A sublime landing page - How to convince visitors to buy on the web</a> in our blog."
  -
   # section: Business Intelligence
   type: product
@@ -134,15 +137,15 @@ sections:
      content:
       project: Data-warehousing at the European Commission
       description: to be completed
-      domains: [to be completed]
-      tech: [to be completed]
-      dataTech: [to be completed]
+      domains: [Data-Warehousing, Business Intelligence, data modeling, business analysis, data integration (ETL)]
+      tech: [BusinessObjects, BusinessObjects Data Integrator, powerDesigner, Toad, PL/SQL, Confluence, Jira, ABAC DWU, Sysper2]
+      dataTech: [Oracle database, SQL Server]
       quotes:
-        - text: "quote from Christopher"
-          author: 
-          authorTitle: 
+        - text: "Mehdi was committed at 100% on the projects and on his assigned tasks, always trying to reach the milestones in time. He is a reliable person, highly skilled at technically designing a good datawarehouse architecture. He has a high regard for quality."
+          author: Christopher BORRELLY
+          authorTitle: Project Manager at European Commission
           image:
-           href: /img/clients/.jpg
+           href: /img/clients/christopher-borrelly.jpg
            alt: 
            width: 140px
            height: 140px
@@ -151,14 +154,14 @@ sections:
       project: Data-warehousing at bpost
       description: to be completed
       domains: [to be completed]
-      tech: [to be completed]
-      dataTech: [to be completed]
+      tech: [SAP BusinessObjects, SAP BusinessObjects Data Services, powerDesigner, Toad, PL/SQL]
+      dataTech: [Oracle, Sybase]
       quotes:
-        - text: "quote from Merih"
-          author: 
-          authorTitle: 
+        - text: "Mehdi is very meticulous and methodic in his work. He can easily combine an analyst (business / functional / technical) as well a developer role, and has a deep knowledge of DWH. He's also a very good team player. Really a pleasure to work with him."
+          author: Merih Koyuncu
+          authorTitle: Project Manager at bpost
           image:
-           href: /img/clients/.jpg
+           href: /img/clients/merih-koyuncu.jpg
            alt: 
            width: 140px
            height: 140px
