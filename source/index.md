@@ -28,10 +28,10 @@ sections:
       <p>Let's see whether we should work together, <a href='/contact/'>get in touch</a>!</p>"
    - type: reference
      content:
-      project: to be completed
-      description: to be completed
-      domains: [to be completed]
-      tech: [to be completed]
+      project: "ED: collaborative platform"
+      description: Development of a platform allowing users to collaborate in realtime based on shared content. Analytics is performed live and presented in dashboards and reports.
+      domains: [business analysis, realtime analytics, reporting, software architecture]
+      tech: [node.js, d3.js, websockets]
       quotes:
         - text: Mehdi is responsible for the development of a data-intensive web application.<br>He demonstrates his commitment to the success of this enterprise through flexibility and short response time. He is <strong>totally focused on delivering results</strong>.
           author: Jean-Christophe Blondiau
