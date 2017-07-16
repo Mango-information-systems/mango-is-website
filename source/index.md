@@ -17,21 +17,12 @@ sections:
     class: small
     value: Mango works the data to help you take smarter decisions.
  -
-  # section: offer
-  content:
-   - type: card
-     content:
-      title: <i class="fa fa-bar-chart" aria-hidden="true"></i> Corporate Business Intelligence
-      text: "<p>Every organization runs better when they take decisions based on facts, rather than assumptions.</p>
-      <p>Data-warehousing projects are complex and challenging. Our experience <strong>increases the chances of your success</strong>.</p>
-      <p><a href='/corporate-business-intelligence/'>Check what we offer</a> to know more.</p>"
- -
   # section: data-driven web apps
   type: product
   content:
    - type: product
      content:
-      name: <i class="fa fa-pie-chart" aria-hidden="true"></i> Data-driven web applications
+      name: <i class="fa fa-pie-chart text-primary" aria-hidden="true"></i> Data-driven web applications
       description: "<p>We build modern, realtime web analytics applications.</p>
       <p>We believe that data visualizations aren't just eye candy, but actually <strong>provide valuable and actionable insights</strong>.</p>
       <p>Let's see whether we should work together, <a href='/contact/'>get in touch</a>!</p>"
@@ -106,7 +97,7 @@ sections:
   content:
    - type: product
      content:
-      name: <i class="fa fa-filter" aria-hidden="true"></i> Conversion optimization
+      name: <i class="fa fa-filter text-primary" aria-hidden="true"></i> Conversion optimization
       description: "<p>Some of our clients are very good at promoting their websites and attracting visitors, but struggle to convert them into paying customers.</p>
       <p>Using analytics we help businesses identify and <strong>fix the bottlenecks</strong>, to eventually <strong>sell more</strong>.</p>
       <p>If you feel this pain, <a href='/convert/'>have a look at how we do it</a>.</p>"
@@ -124,6 +115,48 @@ sections:
           image:
            href: /img/clients/bastien-wauters.jpg
            alt: Bastien Wauters
+           width: 140px
+           height: 140px
+ -
+  # section: Business Intelligence
+  type: product
+  content:
+   - type: product
+     content:
+      name: <i class="fa fa-bar-chart text-primary" aria-hidden="true"></i> Corporate Business Intelligence
+      description: "<p>Every organization runs better when they take decisions based on facts, rather than assumptions.</p>
+      <p>Data-warehousing projects are complex and challenging. Our experience <strong>increases the chances of your success</strong>.</p>
+      <p><a href='/corporate-business-intelligence/'>Check what we offer</a> to know more.</p>"
+   - type: reference
+     content:
+      project: Data-warehousing at the European Commission
+      description: to be completed
+      domains: [to be completed]
+      tech: [to be completed]
+      dataTech: [to be completed]
+      quotes:
+        - text: "quote from Christopher"
+          author: 
+          authorTitle: 
+          image:
+           href: /img/clients/.jpg
+           alt: 
+           width: 140px
+           height: 140px
+   - type: reference
+     content:
+      project: Data-warehousing at bpost
+      description: to be completed
+      domains: [to be completed]
+      tech: [to be completed]
+      dataTech: [to be completed]
+      quotes:
+        - text: "quote from Merih"
+          author: 
+          authorTitle: 
+          image:
+           href: /img/clients/.jpg
+           alt: 
            width: 140px
            height: 140px
  -
@@ -171,19 +204,10 @@ sections:
  -
   # section: CTA repeat
   content:
+   - type: h2
+     class: u-text-center
+     value: Let's talk!
    - type: div
      class: row
-     value: "<div class='twelve columns'><a class='button u-full-width' href='/contact/'><i class='fa fa-pie-chart' aria-hidden='true'></i> Data-driven web applications</a></div><br><br>"
-   - type: columns
-     columns:
-      - content:
-        - type: p
-          value: " \
-		<a class='button u-full-width' href='/convert/'><i class='fa fa-filter' aria-hidden='true'></i> Conversion optimization</a> \
-		"
-      - content:
-        - type: p
-          value: " \
-		<a class='button u-full-width' href='/corporate-business-intelligence/'><i class='fa fa-bar-chart' aria-hidden='true'></i> Corporate Business Intelligence</a> \
-		"
+     value: "<div class='eight  offset-by-two columns'><a class='button button-primary u-full-width' href='/contact/'><i class='fa fa-envelope' aria-hidden='true'></i> Contact us</a></div><br><br>"
 ---
