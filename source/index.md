@@ -15,22 +15,36 @@ sections:
    -
     type: h2
     class: small
-    value: Mango works the data to help you take smarter decisions.
+    value: Mango get hired to is a data science to help you take smarter decisions.
  -
-  # section: data-driven web apps
-  type: product
+  # second section: problem / solution
   content:
-   - type: product
-     content:
-      name: <i class="fa fa-pie-chart text-primary" aria-hidden="true"></i> Data-driven web applications
-      description: "<p>We build modern, realtime web analytics applications.</p>
-      <p>We believe that data visualizations aren't just eye candy, but actually <strong>provide valuable and actionable insights</strong>.</p>
-      <p>Let's see whether we should work together, <a href='/contact/'>get in touch</a>!</p>"
+   - type: p
+     value: One of the biggest challenge in most organizations is to get the right information in order to take the right business decision.
+   - type: p
+     value: Are you in that situation?
+   - type: h3
+     value: We help our clients enhance their decision-making process by providing them the factual data they need.
+   - type: h3
+     value: This helps them be more efficient, decrease their costs and grow their market share.
+   - type: p
+     value: What we do
+   - type: p
+     value: "<details><summary><i class='fa fa-flask text-primary' aria-hidden='true'></i> Data science</summary></details>
+			 <details><summary><i class='fa fa-pie-chart text-primary' aria-hidden='true'></i> Data-driven web applications</summary><p>We build modern, realtime web analytics applications.</p>
+      <p>We believe that data visualizations aren't just eye candy, but actually <strong>provide valuable and actionable insights</strong>.</p></details>
+			 <details><summary><i class='fa fa-bar-chart text-primary' aria-hidden='true'></i> Corporate Business Intelligence</summary><p>Every organization runs better when they take decisions based on facts, rather than assumptions.</p><p>Data-warehousing projects are complex and challenging. Our experience <strong>increases the chances of your success</strong>.</p></details>"
+ -
+  content:
+   - type: h2
+     value: References
+   - type: p
+     value: ""
    - type: reference
      content:
       project: "ED: collaborative platform"
-      description: Development of a platform allowing users to collaborate in realtime based on shared content. Analytics is performed live and presented in dashboards and reports.
-      domains: [business analysis, realtime analytics, reporting, software architecture]
+      description: Development of a platform allowing users to collaborate in realtime based on shared content. Analytics is performed live and presented in dashboards and reports. - business analysis, realtime analytics, reporting, software architecture
+      domains: [realtime collaborative web application]
       tech: [node.js, d3.js, websockets]
       quotes:
         - text: Mehdi is responsible for the development of a data-intensive web application.<br>He demonstrates his commitment to the success of this enterprise through flexibility and short response time. He is <strong>totally focused on delivering results</strong>.
@@ -70,7 +84,7 @@ sections:
    - type: reference
      content:
       project: Twitto.be
-      description: to be completed
+      description: to be completed. <p><small><i class="fa fa-info-circle" aria-hidden="true"></i> Have a look at our <a href="/tools/">open source tools</a> for more.</small></p>
       domains: [business analysis, application design, software architecture, web]
       tech: [node.js, d3.js, websockets, html5, css3, javascript]
       dataTech: [twitter realtime API]
@@ -79,8 +93,8 @@ sections:
      content:
       client: Energy Efficiency in Industrial Processes (EEIP)
       project: data integration
-      domains: [web application development]
-      tech: [node.js, scraping, drupal]
+      domains: [scraping]
+      tech: [node.js, drupal]
       dataTech: [mysql]
       quotes:
         - text: Mehdi has provided exceptional data integration service to Energy Efficiency in Industrial Services.
@@ -91,23 +105,12 @@ sections:
            alt: Dusan Jakovljevic
            width: 140px
            height: 140px
-   -
-    type: p
-    value: <i class="fa fa-info-circle" aria-hidden="true"></i> Have a look at our <a href="/tools/">open source tools</a> for more.
- -
-  # section: conversion optimization
-  type: product
-  content:
-   - type: product
-     content:
-      name: <i class="fa fa-filter text-primary" aria-hidden="true"></i> Conversion optimization
-      description: "<p>Some of our clients are very good at promoting their websites and attracting visitors, but struggle to convert them into paying customers.</p>
-      <p>Using analytics we help businesses identify and <strong>fix the bottlenecks</strong>, to eventually <strong>sell more</strong>.</p>"
    - type: reference
      content:
       project: smoall.com consulting
-      description: Smoall hired us to enhance their website in order to increase the signup rate to their application. Once the redesign done, we measured an increase of 328% in the home page's performance.
-      domains: [saas, sales, conversion rate optimization]
+      description: "Smoall hired us to enhance their website in order to increase the signup rate to their application. Once the redesign done, we measured an increase of 328% in the home page's performance.
+      <p><small><i class='fa fa-info-circle' aria-hidden='true'></i> Read also: <a href='/blog/convert/a-sublime-landing-page/'>A sublime landing page - How to convince visitors to buy on the web</a> in our blog.</small></p>"
+      domains: [conversion rate optimization]
       tech: [google analytics, javascript, wordpress]
       quotes:
         - text: "As we were looking at optimizing the conversion rate of our startup smoall.com, Mehdi helped us by setting up a reporting system, measuring the performance of each step of the funnel.<br>
@@ -120,25 +123,13 @@ sections:
            alt: Bastien Wauters
            width: 140px
            height: 140px
-   -
-    type: p
-    value: "<i class='fa fa-info-circle' aria-hidden='true'></i> Read also: <a href='/blog/convert/a-sublime-landing-page/'>A sublime landing page - How to convince visitors to buy on the web</a> in our blog."
- -
-  # section: Business Intelligence
-  type: product
-  content:
-   - type: product
-     content:
-      name: <i class="fa fa-bar-chart text-primary" aria-hidden="true"></i> Corporate Business Intelligence
-      description: "<p>Every organization runs better when they take decisions based on facts, rather than assumptions.</p>
-      <p>Data-warehousing projects are complex and challenging. Our experience <strong>increases the chances of your success</strong>.</p>"
    - type: reference
      content:
-      project: Data-warehousing at the European Commission
-      description: to be completed
-      domains: [Data-Warehousing, Business Intelligence, data modeling, business analysis, data integration (ETL)]
-      tech: [BusinessObjects, BusinessObjects Data Integrator, powerDesigner, Toad, PL/SQL, Confluence, Jira]
-      dataTech: [Oracle database, SQL Server, Eurostat, ABAC DWU, Sysper2]
+      project: Data-warehousing
+      description: "to be completed with keywords: Data-Warehousing, data modeling, business analysis, data integration (ETL)"
+      domains: [Corporate Business Intelligence]
+      tech: [SAP BusinessObjects, SAP BusinessObjects Data Services, powerDesigner, Toad, PL/SQL, Confluence, Jira]
+      dataTech: [Oracle database, SQL Server, Eurostat, ABAC DWU, Sysper2, Sybase]
       quotes:
         - text: "Mehdi was committed at 100% on the projects and on his assigned tasks, always trying to reach the milestones in time. He is a reliable person, highly skilled at technically designing a good datawarehouse architecture. He has a high regard for quality."
           author: Christopher Borrelly
@@ -148,14 +139,6 @@ sections:
            alt: 
            width: 140px
            height: 140px
-   - type: reference
-     content:
-      project: Data-warehousing at bpost
-      description: to be completed
-      domains: [to be completed]
-      tech: [SAP BusinessObjects, SAP BusinessObjects Data Services, powerDesigner, Toad, PL/SQL]
-      dataTech: [Oracle, Sybase]
-      quotes:
         - text: "Mehdi is very meticulous and methodic in his work. He can easily combine an analyst (business / functional / technical) as well a developer role, and has a deep knowledge of DWH. He's also a very good team player. Really a pleasure to work with him."
           author: Merih Koyuncu
           authorTitle: Project Manager at bpost
