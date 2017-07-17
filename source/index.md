@@ -45,7 +45,7 @@ sections:
    - type: reference
      content:
       project: Tribalytics
-      description: "<p>to be completed</p> <p><small>Read also: <a href='https://mango-is.com/blog/business/getting-started-with-twitter/'>Getting started with Twitter - Using social media for sales conversions</a> in our blog.</small></p>"
+      description: "<p>to be completed</p> <p><small>Read also: <a href='/blog/business/getting-started-with-twitter/'>Getting started with Twitter - Using social media for sales conversions</a> in our blog.</small></p>"
       domains: [saas, sales, project management, entrepreneurship, graph analysis, natural language processing]
       tech: [node.js, gephi, d3.js, php Laravel]
       dataTech: [redis, mysql, mariadb, twitter API, nominatim API, json]
@@ -93,7 +93,7 @@ sections:
            height: 140px
    -
     type: p
-    value: <i class="fa fa-info-circle" aria-hidden="true"></i> Have a look at our <a href="https://mango-is.com/tools/">open source tools</a> for more.
+    value: <i class="fa fa-info-circle" aria-hidden="true"></i> Have a look at our <a href="/tools/">open source tools</a> for more.
  -
   # section: conversion optimization
   type: product
@@ -102,11 +102,11 @@ sections:
      content:
       name: <i class="fa fa-filter text-primary" aria-hidden="true"></i> Conversion optimization
       description: "<p>Some of our clients are very good at promoting their websites and attracting visitors, but struggle to convert them into paying customers.</p>
-      <p>Using analytics we help businesses identify and <strong>fix the bottlenecks</strong>, to eventually <strong>sell more</strong>.</p>
-      <p>If you feel this pain, <a href='/convert/'>have a look at how we do it</a>.</p>"
+      <p>Using analytics we help businesses identify and <strong>fix the bottlenecks</strong>, to eventually <strong>sell more</strong>.</p>"
    - type: reference
      content:
       project: smoall.com consulting
+      description: Smoall hired us to enhance their website in order to increase the signup rate to their application. Once the redesign done, we measured an increase of 328% in the home page's performance.
       domains: [saas, sales, conversion rate optimization]
       tech: [google analytics, javascript, wordpress]
       quotes:
@@ -122,7 +122,7 @@ sections:
            height: 140px
    -
     type: p
-    value: "<i class='fa fa-info-circle' aria-hidden='true'></i> Read also: <a href='https://mango-is.com/blog/convert/a-sublime-landing-page/'>A sublime landing page - How to convince visitors to buy on the web</a> in our blog."
+    value: "<i class='fa fa-info-circle' aria-hidden='true'></i> Read also: <a href='/blog/convert/a-sublime-landing-page/'>A sublime landing page - How to convince visitors to buy on the web</a> in our blog."
  -
   # section: Business Intelligence
   type: product
@@ -131,18 +131,17 @@ sections:
      content:
       name: <i class="fa fa-bar-chart text-primary" aria-hidden="true"></i> Corporate Business Intelligence
       description: "<p>Every organization runs better when they take decisions based on facts, rather than assumptions.</p>
-      <p>Data-warehousing projects are complex and challenging. Our experience <strong>increases the chances of your success</strong>.</p>
-      <p><a href='/corporate-business-intelligence/'>Check what we offer</a> to know more.</p>"
+      <p>Data-warehousing projects are complex and challenging. Our experience <strong>increases the chances of your success</strong>.</p>"
    - type: reference
      content:
       project: Data-warehousing at the European Commission
       description: to be completed
       domains: [Data-Warehousing, Business Intelligence, data modeling, business analysis, data integration (ETL)]
-      tech: [BusinessObjects, BusinessObjects Data Integrator, powerDesigner, Toad, PL/SQL, Confluence, Jira, ABAC DWU, Sysper2]
-      dataTech: [Oracle database, SQL Server]
+      tech: [BusinessObjects, BusinessObjects Data Integrator, powerDesigner, Toad, PL/SQL, Confluence, Jira]
+      dataTech: [Oracle database, SQL Server, Eurostat, ABAC DWU, Sysper2]
       quotes:
         - text: "Mehdi was committed at 100% on the projects and on his assigned tasks, always trying to reach the milestones in time. He is a reliable person, highly skilled at technically designing a good datawarehouse architecture. He has a high regard for quality."
-          author: Christopher BORRELLY
+          author: Christopher Borrelly
           authorTitle: Project Manager at European Commission
           image:
            href: /img/clients/christopher-borrelly.jpg
