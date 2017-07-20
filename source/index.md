@@ -48,7 +48,7 @@ sections:
   content:
    - type: h4
      class: u-text-center
-     value: Want to be our next satisfied customer? Let's talk!
+     value: Should we be working together? Let's talk!
    - type: div
      class: row
      value: "<div class='eight  offset-by-two columns'><a class='button button-primary u-full-width' href='/contact/'><i class='fa fa-envelope' aria-hidden='true'></i> Contact us</a><p></p></div>"
@@ -169,7 +169,7 @@ sections:
            height: 140px
    - type: h4
      class: u-text-center
-     value: Want to be our next satisfied customer? Let's talk!
+     value: May we be of any help to you? Let's talk!
    - type: div
      class: row
      value: "<div class='eight  offset-by-two columns'><a class='button button-primary u-full-width' href='/contact/'><i class='fa fa-envelope' aria-hidden='true'></i> Contact us</a></div><br><br>"
