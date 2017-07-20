@@ -79,9 +79,14 @@
 		<% 
 		}
 		
-		if(typeof data.quotes !== 'undefined') {
+		if(typeof data.quotes !== 'undefined' && data.quotes.length === 1) {
 		%>
-			<h4>Customer quotes</h4>
+			<h4>Customer quote</h4>
+		<% 
+		}
+		else  if(typeof data.quotes !== 'undefined') {
+		%>
+			<h4>Customers quotes</h4>
 		<% 
 		}
 		
