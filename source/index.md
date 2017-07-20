@@ -163,7 +163,7 @@ sections:
           author: Dusan Jakovljevic
           authorTitle: Director at <a href="https://www.ee-ip.org/">Energy Efficiency in Industrial Processes (EEIP)</a>
           image:
-           href: /corporate-business-intelligence/img/dusan-jakovljevic-large.jpg
+           href: /img/clients/dusan-jakovljevic.jpg
            alt: Dusan Jakovljevic
            width: 140px
            height: 140px
