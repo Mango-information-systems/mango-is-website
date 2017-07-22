@@ -7,7 +7,7 @@
 			<% if(typeof data.thumbnail !== 'undefined') {
 			%>
 				<div class="four columns">
-					<img class="u-img-responsive" src="img/<%- data.thumbnail %>" alt=""/>
+					<img class="u-img-responsive fa-border" src="img/<%- data.thumbnail %>" alt=""/>
 				</div>
 			<% 
 			}
@@ -93,7 +93,7 @@
 		_.each(data.quotes, function(quote) {
 		%>
 			<div class="row" itemprop="review" itemscope itemtype="http://schema.org/Review">
-				<div class="columns md-three
+				<div class="columns md-two
 									sm-six
 									xs-eight">
 					<%- image_tag(quote.image.href, {
@@ -102,7 +102,7 @@
 					}) %>
 				</div>
 
-				<div class="columns md-nine
+				<div class="columns md-ten
 									sm-twelve
 									xs-twelve">
 					<blockquote itemprop="reviewBody">
