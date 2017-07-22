@@ -15,7 +15,7 @@ sections:
    -
     type: h2
     class: small
-    value: Mango get hired to is a data science to help you take smarter decisions.
+    value: Mango uses data science to help organizations take smarter decisions.
  -
   # second section: problem / solution
   content:
@@ -155,8 +155,8 @@ sections:
      content:
       project: Data Integration
       description: Keeping data synchronized between different systems is often more challenging than we think. For basic tasks, <a href="https://zapier.com/">Zapier</a> or <a href="https://ifttt.com/">IFTTT</a> may do the job. When something more elaborate is needed, we're here to build a reliable solution.
-      domains: [CRM, scraping, APIs]
-      tech: [node.js, REST, web services, oAuth]
+      domains: [CRM, scraping, APIs, ETL]
+      tech: [node.js, REST, web services, oAuth, SAP BusinessObjects Data Services]
       dataTech: [mysql, XML, JSON]
       quotes:
         - text: Mehdi has provided exceptional data integration service to Energy Efficiency in Industrial Services.
@@ -181,17 +181,16 @@ sections:
     value: Facts and figures
    -
     type: p
-    value: Mango Information Systems is a <strong>Business Intelligence</strong> company that helps organizations be <strong>more successful in the digital world</strong>.
+    value: live since 2010 (metric)
    -
     type: p
-    value: Founded by <a href="https://www.linkedin.com/in/elfadme/" target="_new">Mehdi El Fadil</a> in 2010, we operate from Brussels, Belgium.
+    value: operate from Brussels, Belgium (map thumbnail)
    -
     type: p
-    value: "We act as a bridge between business and technical teams, and provide the following type of services:"
-   - type: ul
-     value: "<li>Contracting authority support</li>
-			<li>Strategic consulting</li>
-			<li>Technical experts in complex data-intensive projects</li>"
+    value: figures about projects count, average project duration in man-days?
+   -
+    type: p
+    value: figures about skills
  -
   # section: client logos
   content:
