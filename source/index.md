@@ -161,23 +161,25 @@ sections:
      class: row
      value: "<div class='eight  offset-by-two columns'><a class='button button-primary u-full-width' href='/contact/'><i class='fa fa-envelope' aria-hidden='true'></i> Contact us</a></div><br><br>"
  -
-  # section: 
+  # section: About us
   content:
    -
     type: h2
-    value: Facts and figures
+    value: About us
    -
     type: p
-    value: live since 2010 (metric)
+    value: Mango Information Systems is a consulting company operating since 2010 from Brussels, Belgium.
    -
     type: p
-    value: operate from Brussels, Belgium (map thumbnail)
+    value: It was founded by <a href="https://www.linkedin.com/in/elfadme/" target="_new">Mehdi El Fadil</a>.
    -
     type: p
-    value: figures about projects count, average project duration in man-days?
-   -
-    type: p
-    value: figures about skills
+    value: "We act as a bridge between business and technical teams, and provide the following type of services:"
+   - type: ul
+     value: "<li>Contracting authority support</li>
+			<li>Strategic consulting</li>
+			<li>Business analysis</li>
+			<li>Technical experts in complex data-intensive projects</li>"
  -
   # section: client logos
   content:
