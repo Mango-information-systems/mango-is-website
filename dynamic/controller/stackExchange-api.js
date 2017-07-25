@@ -64,8 +64,10 @@ function SEApi(accessToken) {
 				, gzip: true
 			}
 		, function(err, res, body) {
-			if (err || res.statusCode !== 200) 
+			if (err || res.statusCode !== 200) {
+				console.log('error retrieving tags stats', res.statusCode, body)
 				throw err
+			}
 				
 			//~ console.log('getTagStats result', err, res.statusCode)
 			//~ console.log('tagStats', body)
@@ -106,8 +108,10 @@ function SEApi(accessToken) {
 					, gzip: true
 				}
 			, function(err, res, body) {
-				if (err || res.statusCode !== 200) 
+				if (err || res.statusCode !== 200) {
+					console.log('error retrieving tags graph', res.statusCode, body)
 					throw err
+				}
 				
 				//~ console.log('getTagGraph result', err, res.statusCode)
 				//~ console.log(body)
