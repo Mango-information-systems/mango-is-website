@@ -4,18 +4,11 @@
 
 	<%
 	page.sections.forEach(function(section, index) {
-		if (section.type ==='product') {%>
-			<%-
-				partial('_partial/product-section', {data: section})
-			%>
+	%>
+		<%-
+			partial('_partial/default-section', {data: section, isFirst: index == 0})
+		%>
 		<%
-		}
-		else { %>
-			<%-
-				partial('_partial/default-section', {data: section, isFirst: index == 0})
-			%>
-		<%
-		}
 	 }) %>
 
 	<%- partial('_partial/footer') %>
