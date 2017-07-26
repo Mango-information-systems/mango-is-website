@@ -127,7 +127,7 @@ sections:
           authorTitle: Project Manager at <a href="https://ec.europa.eu/">European Commission</a>
           image:
            href: /img/clients/christopher-borrelly.jpg
-           alt: 
+           alt: Christopher Borrelly
            width: 140px
            height: 140px
         - text: "Mehdi is very meticulous and methodic in his work. He can easily combine an analyst (business / functional / technical) as well a developer role, and has a deep knowledge of DWH. He's also a very good team player. Really a pleasure to work with him."
@@ -135,7 +135,7 @@ sections:
           authorTitle: Project Manager at <a href="https://www.bpost.be/">bpost</a>
           image:
            href: /img/clients/merih-koyuncu.jpg
-           alt: 
+           alt: Merih Koyuncu
            width: 140px
            height: 140px
    - type: reference
