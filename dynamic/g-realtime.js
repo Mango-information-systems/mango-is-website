@@ -1,7 +1,7 @@
 window.appDebug = require('debug')
 
 var d3 = require('d3')
-	, debug = window.appDebug('ga-realtime')
+	, debug = window.appDebug('multiga')
 	, AnalyticsApi = require('./controller/analytics-api')
 	, app = {
 		controller: {}

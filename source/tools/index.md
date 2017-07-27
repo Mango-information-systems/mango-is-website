@@ -29,10 +29,10 @@ sections:
    - type: post
      content:
       class: index
-      path: /tools/ga-realtime/
-      thumbnail: img/thumbnails/ga-realtime.png
-      title: Free multi-site live web traffic monitor
-      subtitle: Visualize the visits across all of your websites in real time, with Google Analytics data.
+      path: /tools/multiga/
+      thumbnail: img/thumbnails/multiGa.png
+      title: "multiGa: realtime multi-website traffic dashboard"
+      subtitle: Free dashboard showing Google Analytics live traffic data on multiple websites. Ideal to find out if it's the right moment to upgrade your server ;)
       footer: false
    - type: post
      content:
