@@ -50,25 +50,27 @@ function SEApi(accessToken) {
 	*/	
 	function getTagStats(callback) {
 
-			request.get(apiUrl + 'me/tags?'
-			//~ request.get(apiUrl + 'users/831180/tags?'
-					+ 'key=' + params.stackExchange.key
-					+ '&site=' + 'stackoverflow'
-					+ '&order=' + 'desc'
-					+ '&sort=' + 'popular'
-					+ '&access_token=' + self.accessToken
-					+ '&filter=' + 'default'
-					+ '&pagesize=' + 60
-				, {
-					json: true
-					, gzip: true
-				}
-			, function(err, res, body) {
-				if (err || res.statusCode !== 200) 
-					throw err
-					
-				//~ console.log('getTagStats result', err, res.statusCode)
-				//~ console.log('tagStats', body)
+		request.get(apiUrl + 'me/tags?'
+		//~ request.get(apiUrl + 'users/831180/tags?'
+				+ 'key=' + params.stackExchange.key
+				+ '&site=' + 'stackoverflow'
+				+ '&order=' + 'desc'
+				+ '&sort=' + 'popular'
+				+ '&access_token=' + self.accessToken
+				+ '&filter=' + 'default'
+				+ '&pagesize=' + 60
+			, {
+				json: true
+				, gzip: true
+			}
+		, function(err, res, body) {
+			if (err || res.statusCode !== 200) {
+				console.log('error retrieving tags stats', res.statusCode, body)
+				throw err
+			}
+				
+			//~ console.log('getTagStats result', err, res.statusCode)
+			//~ console.log('tagStats', body)
 
 				// temporary
 				// work around a bug in jLouvain.js, crashing whenever a name is 'constructor' (overrides object's native property)
@@ -107,6 +109,7 @@ function SEApi(accessToken) {
 				}
 			, function(err, res, body) {
 				if (err || res.statusCode !== 200) {
+
 					if (res.statusCode === 0 &&err.message === '[object ProgressEvent]') {
 						// requesting this tag's graph failed because of adblocking addon, skip it
 						self.incompleteData = true

@@ -20,32 +20,19 @@ sections:
   # second section: problem / solution
   content:
    - type: p
-     value: One of the biggest challenge in most organizations is to get the right information in order to take the right business decision.
+     value: One of the biggest challenges in any organization is to <strong>get the right information in order to take good business decisions</strong>.
    - type: p
-     value: Are you in that situation?
-   - type: h3
-     value: We help our clients enhance their decision-making process by providing them the factual data they need.
-   - type: h3
-     value: This helps them be more efficient, decrease their costs and grow their market share.
+     value: Are you in that situation? We help our clients enhance their decision-making process by providing them the factual data they need.
+   - type: p
+     value: This helps them <strong>be more efficient, decrease their costs and grow their market share</strong>.
    - type: p
      value: What we do
-   - type: p
-     value: "<details><summary><i class='fa fa-flask text-primary' aria-hidden='true'></i> Data science</summary></details>
-			 <details><summary><i class='fa fa-pie-chart text-primary' aria-hidden='true'></i> Data-driven web applications</summary><p>We build modern, realtime web analytics applications.</p>
-      <p>We believe that data visualizations aren't just eye candy, but actually <strong>provide valuable and actionable insights</strong>.</p></details>
-			 <details><summary><i class='fa fa-bar-chart text-primary' aria-hidden='true'></i> Corporate Business Intelligence</summary><p>Every organization runs better when they take decisions based on facts, rather than assumptions.</p><p>Data-warehousing projects are complex and challenging. Our experience <strong>increases the chances of your success</strong>.</p></details>"
-
- -
-  # section: About us
-  content:
-   -
-    type: h2
-    value: About us
-   -
-    type: p
-    value: To be completed - short section
- -
-  content:
+   - type: ul
+     class: list-inline row u-text-center
+     value: "<li class='four columns' itemscope itemtype='http://schema.org/Product'><i class='fa fa-flask text-primary' aria-hidden='true'></i> <span  itemprop='name'>Data science</span></li>
+			 <li class='four columns' itemscope itemtype='http://schema.org/Product'><i class='fa fa-pie-chart text-primary' aria-hidden='true'></i> <span  itemprop='name'>Data-driven web applications</span></li>
+			 <li class='four columns' itemscope itemtype='http://schema.org/Product'><i class='fa fa-bar-chart text-primary' aria-hidden='true'></i> <span  itemprop='name'>Corporate Business Intelligence</span></li>
+			 <br/><br/><br/><br/>"
    - type: h4
      class: u-text-center
      value: Should we be working together? Let's talk!
@@ -140,7 +127,7 @@ sections:
           authorTitle: Project Manager at <a href="https://ec.europa.eu/">European Commission</a>
           image:
            href: /img/clients/christopher-borrelly.jpg
-           alt: 
+           alt: Christopher Borrelly
            width: 140px
            height: 140px
         - text: "Mehdi is very meticulous and methodic in his work. He can easily combine an analyst (business / functional / technical) as well a developer role, and has a deep knowledge of DWH. He's also a very good team player. Really a pleasure to work with him."
@@ -148,7 +135,7 @@ sections:
           authorTitle: Project Manager at <a href="https://www.bpost.be/">bpost</a>
           image:
            href: /img/clients/merih-koyuncu.jpg
-           alt: 
+           alt: Merih Koyuncu
            width: 140px
            height: 140px
    - type: reference
@@ -174,23 +161,25 @@ sections:
      class: row
      value: "<div class='eight  offset-by-two columns'><a class='button button-primary u-full-width' href='/contact/'><i class='fa fa-envelope' aria-hidden='true'></i> Contact us</a></div><br><br>"
  -
-  # section: 
+  # section: About us
   content:
    -
     type: h2
-    value: Facts and figures
+    value: About us
    -
     type: p
-    value: live since 2010 (metric)
+    value: Mango Information Systems is a consulting company operating since 2010 from Brussels, Belgium.
    -
     type: p
-    value: operate from Brussels, Belgium (map thumbnail)
+    value: It was founded by <a href="https://www.linkedin.com/in/elfadme/" target="_new">Mehdi El Fadil</a>.
    -
     type: p
-    value: figures about projects count, average project duration in man-days?
-   -
-    type: p
-    value: figures about skills
+    value: "We act as a bridge between business and technical teams, and provide the following type of services:"
+   - type: ul
+     value: "<li>Contracting authority support</li>
+			<li>Strategic consulting</li>
+			<li>Business analysis</li>
+			<li>Technical experts in complex data-intensive projects</li>"
  -
   # section: client logos
   content:
