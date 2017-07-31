@@ -2,7 +2,7 @@
 layout: blog
 title: A dashboard to find the best time to upgrade your server
 subtitle: Introducing multiGa live Google Analytics dashboard
-description: 
+description: The story of how why and how we created a free dashboard showing Google Analytics live traffic data on multiple websites.
 category: engineering
 date: 2017-07-27 16:46:35
 language: en
