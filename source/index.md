@@ -20,17 +20,13 @@ sections:
   # second section: problem / solution
   content:
    - type: p
-     value: One of the biggest challenges in any organization is to <strong>get the right information in order to take good business decisions</strong>.
+     value: One of the biggest challenges in any organization is to <strong>get accurate information to take good business decisions</strong>.
    - type: p
-     value: Are you in that situation? We help our clients enhance their decision-making process by providing them the factual data they need.
-   - type: p
-     value: This helps them <strong>be more efficient, decrease their costs and grow their market share</strong>.
-   - type: p
-     value: What we do
+     value: We provide factual data to our clients, this helps them <strong>be more efficient, decrease their costs and grow their market share</strong>.
    - type: ul
      class: list-inline row u-text-center
-     value: "<li class='four columns' itemscope itemtype='http://schema.org/Product'><i class='fa fa-flask text-primary' aria-hidden='true'></i> <span  itemprop='name'>Data science</span></li>
-			 <li class='four columns' itemscope itemtype='http://schema.org/Product'><i class='fa fa-pie-chart text-primary' aria-hidden='true'></i> <span  itemprop='name'>Data-driven web applications</span></li>
+     value: "<li class='four columns' itemscope itemtype='http://schema.org/Product'><i class='fa fa-pie-chart text-primary' aria-hidden='true'></i> <span  itemprop='name'>Data-driven web applications</span></li>
+			 <li class='four columns' itemscope itemtype='http://schema.org/Product'><i class='fa fa-flask text-primary' aria-hidden='true'></i> <span  itemprop='name'>Data science</span></li>
 			 <li class='four columns' itemscope itemtype='http://schema.org/Product'><i class='fa fa-bar-chart text-primary' aria-hidden='true'></i> <span  itemprop='name'>Corporate Business Intelligence</span></li>
 			 <br/><br/><br/><br/>"
    - type: h4
@@ -43,9 +39,11 @@ sections:
      class: u-text-center
      value: <p>Or read what our clients say below</p><p><i class='fa fa-angle-down' aria-hidden='true'></i></p>
  -
+  # third section: references
   content:
    - type: h2
      value: References
+     id: references
    - type: p
      value: ""
    - type: reference
@@ -166,6 +164,7 @@ sections:
    -
     type: h2
     value: About us
+    id: about-us
    -
     type: p
     value: Mango Information Systems is a consulting company operating since 2010 from Brussels, Belgium.
@@ -185,6 +184,7 @@ sections:
   content:
    - type: h2
      value: They trust us
+     id: clients
    - type: client-logos
      logos:
       - href: /img/clients/unicef.png

@@ -22,23 +22,23 @@ sections:
      content:
       class: index
       path: https://twitto.be/
-      thumbnail: img/twitto-be-dashboard-screenshot.png
+      thumbnail: /img/twitto-be-dashboard-screenshot.png
       title: twitto.be
       subtitle: A live dashboard of tweets geolocated in Belgium
       footer: false
    - type: post
      content:
       class: index
-      path: /tools/ga-realtime/
-      thumbnail: img/thumbnails/ga-realtime.png
-      title: Free multi-site live web traffic monitor
-      subtitle: Visualize the visits across all of your websites in real time, with Google Analytics data.
+      path: /tools/multiga/
+      thumbnail: /img/thumbnails/multiGa.png
+      title: "multiGa: realtime multi-website traffic dashboard"
+      subtitle: Free dashboard showing Google Analytics live traffic data on multiple websites. Ideal to find out if it's the right moment to upgrade your server ;)
       footer: false
    - type: post
      content:
       class: index
       path: /tools/csv-to-json/
-      thumbnail: img/thumbnails/2015-01-08-csv-to-json.png
+      thumbnail: /img/thumbnails/2015-01-08-csv-to-json.png
       title: CSV to JSON converter
       subtitle: Easy, privacy-friendly and offline-first online csv to json converter
       footer: false

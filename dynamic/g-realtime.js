@@ -1,7 +1,7 @@
 window.appDebug = require('debug')
 
 var d3 = require('d3')
-	, debug = window.appDebug('ga-realtime')
+	, debug = window.appDebug('multiga')
 	, AnalyticsApi = require('./controller/analytics-api')
 	, app = {
 		controller: {}
@@ -104,7 +104,7 @@ function start(err) {
 			, message: '<p>This tool requires Google to store cookies (data) in this web page.</p> \
 			<p>Solutions:</p> \
 			<ul> \
-			<li>Enable third-party cookies in your browser (<a href="https://www.google.com/search?q=how+to+enable+third+party+cookies">instructions</a>)</li> \
+			<li>Enable third-party cookies in your browser (<a href="https://www.google.com/search?q=how+to+enable+third+party+cookies" target = "_blank">instructions</a>)</li> \
 			<li>Or use another browser, like Firefox</li> \
 			</ul>'
 		})

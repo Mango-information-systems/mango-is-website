@@ -6,7 +6,7 @@ author: mehdi
 title: Finding twitter influencers
 subtitle: the recurring problem of defining influence
 description: Review of key concepts and issues in social media influence scores like Klout. Why and how a marketer should use them.
-thumbnail: img/blog/thumbnails/2013-10-04-finding-twitter-influencers-the-recurring-problem-of-defining-influence.png
+thumbnail: /img/blog/thumbnails/2013-10-04-finding-twitter-influencers-the-recurring-problem-of-defining-influence.png
 nextArticle: /blog/business/finding-twitter-influencers-comparing-klout-kred-and-peerindex/
 date: 2013-10-04
 last-update: 2013-10-07

@@ -300,7 +300,7 @@ function SEApi(accessToken) {
 					//~ data.accessToken
 				//~ )
 				
-				this.accessToken = data.accessToken
+				self.accessToken = data.accessToken
 				
 				callback(null, data.accessToken)
 			},

@@ -180,7 +180,7 @@ function DonutChart() {
 		
 		self.arcs = []
 		
-		self.barColors = d3.interpolateOranges
+		self.barColors = d3.interpolateRdYlGn
 		
 		self.maxValue = +Infinity
 		
