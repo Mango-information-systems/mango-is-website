@@ -7,7 +7,7 @@ category: engineering
 date: 2017-07-27 16:46:35
 language: en
 author: mehdi
-thumbnail: img/thumbnails/multiGa.png
+thumbnail: /img/thumbnails/multiGa.png
 ---
 
 ## Summary

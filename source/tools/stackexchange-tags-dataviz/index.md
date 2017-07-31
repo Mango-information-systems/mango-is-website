@@ -4,7 +4,7 @@ title: stackExchange tags visualization
 author: Mango Information Systems
 date: 2016-10-24 16:29:26
 description: Showcase your stackExchange tags in a neat data visualization. Works on stackOverflow as well as the other stackExchange network sites.
-thumbnail: img/thumbnails/stackexchange-tags.png
+thumbnail: /img/thumbnails/stackexchange-tags.png
 css: [stackexchange-stats.css]
 scripts: [https://api.stackexchange.com/js/2.0/all.js, js/stackexchange-stats.js]
 __index: true

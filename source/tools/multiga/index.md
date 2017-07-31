@@ -4,7 +4,7 @@ title: "multiGa: realtime multi-website traffic dashboard"
 author: Mango Information Systems
 date: 2016-10-24 16:29:26
 description: Free dashboard showing Google Analytics live traffic data on multiple websites. Ideal to find out if it's the right moment to upgrade your server ;)
-thumbnail: img/thumbnails/multiGa.png
+thumbnail: /img/thumbnails/multiGa.png
 scripts: [js/g-realtime.js, https://apis.google.com/js/api.js?onload=gApiLoaded]
 __index: true
 sections:
