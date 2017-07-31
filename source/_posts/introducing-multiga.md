@@ -29,7 +29,8 @@ The concept is pretty simple:
 2. Data is retrieved, and the dashboard shows the realtime visits of each property and views belonging to one account.
 3. A select menu allows you to switch between accounts, if needed.
 
--- todo add screenshots here
+<img src="/img/multiGa.gif" alt="preview/demo of multiGa" class="u-img-responsive fa-border"/>
+
 
 ## Findings
 
