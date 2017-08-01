@@ -2,3 +2,7 @@ text {
 	font-size: .33rem;
 	text-anchor: middle;
 }
+
+path {
+	fill: none;
+}
