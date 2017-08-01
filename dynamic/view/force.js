@@ -44,15 +44,21 @@ function ForceChart() {
 		
 		console.log('end')
 		
-		self.link.attr('x1', function(d) { return d.source.x })
-			.attr('y1', function(d) { return d.source.y })
-			.attr('x2', function(d) { return d.target.x })
-			.attr('y2', function(d) { return d.target.y })
-			.attr('stroke-opacity', function(d) { return self.weightScale(d.weight)})
-			
+		// curved links lines
+		// as seen in https://stackoverflow.com/a/13456081
+		self.link.attr('d', function(d) {
+
+			var dx = d.target.x - d.source.x
+				, dy = d.target.y - d.source.y
+				, dr = Math.sqrt(dx * dx + dy * dy)
+			return 'M' + d.source.x + ',' + d.source.y + 'A' + dr + ',' + dr + ' 0 0,1 ' + d.target.x + ',' + d.target.y
+		  })
+		  .attr('stroke-opacity', function(d) { return self.weightScale(d.weight)})
+		  .attr('stroke',  function(d) { return d.source.group === d.target.group ? color(d.source.group) : '#ccc'})
+
 		d3.select('#links')
 		  .transition()
-		    .style('opacity', 1)
+		    .style('opacity', .3)
 		    
 		// avoid overlapping labels
 		relax(self.node)
@@ -305,7 +311,7 @@ function ForceChart() {
 			return d.source.name + '-' + d.target.name
 		})
 
-		self.link = self.link.enter().append('line')
+		self.link = self.link.enter().append('path')
 
 		// Update and restart the simulation.
 		self.simulation.nodes(data.nodes)
