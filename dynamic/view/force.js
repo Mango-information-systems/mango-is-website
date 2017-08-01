@@ -14,7 +14,7 @@ function ForceChart() {
 		, nodeMargin = 37
 	
 	var textScale = d3.scaleLinear()
-		  .range([1, 2])
+		  .range([1, 3])
 		, color = d3.scaleOrdinal(d3.schemeCategory10)
 
 	/****************************************
