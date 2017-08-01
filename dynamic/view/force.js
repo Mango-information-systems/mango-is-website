@@ -158,22 +158,22 @@ function ForceChart() {
 			, bBbox = b.getBoundingClientRect()
 			, aPoints = {
 				l: {
-					x: aBbox.x
-					, y: aBbox.y
+					x: aBbox.left
+					, y: aBbox.top
 				}
 				, r: {
-					x: aBbox.x + aBbox.width
-					, y: aBbox.y + aBbox.height
+					x: aBbox.left + aBbox.width
+					, y: aBbox.top + aBbox.height
 				}
 			}
 			, bPoints = {
 				l: {
-					x: bBbox.x
-					, y: bBbox.y
+					x: bBbox.left
+					, y: bBbox.top
 				}
 				, r: {
-					x: bBbox.x + bBbox.width
-					, y: bBbox.y + bBbox.height
+					x: bBbox.left + bBbox.width
+					, y: bBbox.top + bBbox.height
 				}
 			}
 		
