@@ -100,7 +100,7 @@ function ForceChart() {
 		// based on https://blog.safaribooksonline.com/2014/03/11/solving-d3-label-placement-constraint-relaxing/
 
 		var alpha = 0.5
-			, spacing = 6
+			, spacing = 12
 			, again = false
 
 		textLabels.each(function (d, i) {
