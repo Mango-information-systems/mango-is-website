@@ -243,26 +243,27 @@ function SEApi(accessToken) {
 	* 
 	* @private
 	*/	
-	//~ function getUserId(callback) {
-		//~ 
-		//~ request.get(apiUrl + 'me', {
-			//~ qs: {
-				//~ key: params.stackExchange.key
-				//~ , site: 'stackoverflow'
-				//~ , order: 'desc'
-				//~ , sort: 'reputation'
-				//~ , access_token: self.accessToken
-				//~ , filter: 'default'
-			//~ }
-			//~ , json: true
-			//~ , gzip: true
-		//~ }, function(err, res, body) {
-			//~ if (err) 
-				//~ throw err
-			//~ console.log(body)
-			//~ callback(body.items[0].user_id)
-		//~ })
-	//~ }
+	function getUserId(callback) {
+		
+		request.get(apiUrl + 'me?'
+				+ 'key=' + params.stackExchange.key
+				+ '&site=' + 'stackoverflow'
+				+ '&order=' + 'desc'
+				+ '&sort=' + 'reputation'
+				+ '&access_token=' + self.accessToken
+				+ '&filter=' + 'default'
+			, {
+				json: true
+				, gzip: true
+			}
+			
+			, function(err, res, body) {
+			if (err || res.statusCode !== 200) 
+				throw err
+
+			callback(body.items[0])
+		})
+	}
 	
 	/******************************************
 	 * 
@@ -278,7 +279,11 @@ function SEApi(accessToken) {
 
 		debug('getStats')
 		
-		getTagStats(callback)
+		getUserId(callback)
+		
+		// temporarily disabled #122
+		
+		//~ getTagStats(callback)
 
 	}
 

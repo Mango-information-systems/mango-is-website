@@ -50,16 +50,8 @@ function start(hasError, accessToken) {
 				console.log('saving accessToken', accessToken)
 				storage.setItem('accessToken', accessToken)
 				
-				// extract chart data
-				app.controller.stackExchangeApi.getStats(function(chartData) {
-
-					console.log('top tags', chartData)
-
-					storage.setItem('chartData', chartData)
-
-					showChart(chartData)
-
-				})
+				// extract data from SE API
+				extractStats()
 			}
 			else {
 				
@@ -75,16 +67,8 @@ function start(hasError, accessToken) {
 						app.controller.stackExchangeApi = new StackExchangeApi(accessToken)
 
 						
-						// extract chart data
-						app.controller.stackExchangeApi.getStats(function(chartData) {
-							
-							console.log('top tags', chartData)
-
-							storage.setItem('chartData', chartData)
-							
-							showChart(chartData)
-							
-						})
+						// extract data from SE API
+						extractStats()
 						
 					}
 					else {
@@ -103,6 +87,28 @@ function start(hasError, accessToken) {
 				})
 			}
 		}
+	})
+}
+
+/**
+* Retrieve the stats
+* 
+*/
+function extractStats() {
+	app.controller.stackExchangeApi.getStats(function(data) {
+
+		if (typeof data.nodes === 'undefined') {
+			console.log('got user info', data)
+			// TODO
+		}
+		else {
+			console.log('top tags', data)
+
+			storage.setItem('chartData', data)
+
+			showChart(data)
+		}
+
 	})
 }
 
