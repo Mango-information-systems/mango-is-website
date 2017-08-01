@@ -1,7 +1,7 @@
 window.appDebug = require('debug')
 
 var d3 = require('d3')
-	, debug = window.appDebug('SE-stats')
+	, debug = window.appDebug('myTagOverflow')
 	, storage = require('localforage')
 	, StackExchangeApi = require('./controller/stackExchange-api')
 	, Force = require('./view/force')

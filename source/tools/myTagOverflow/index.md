@@ -1,12 +1,12 @@
 ---
 layout: landing
-title: stackExchange tags visualization
+title: "myTagOverflow: visualize your top tags on stackOverflow"
 author: Mango Information Systems
 date: 2016-10-24 16:29:26
-description: Showcase your stackExchange tags in a neat data visualization. Works on stackOverflow as well as the other stackExchange network sites.
-thumbnail: /img/thumbnails/stackexchange-tags.png
-css: [stackexchange-stats.css]
-scripts: [https://api.stackexchange.com/js/2.0/all.js, js/stackexchange-stats.js]
+description: Showcase your stackOverflow tags in a neat data visualization.
+thumbnail: /img/thumbnails/myTagOverflow.png
+css: [myTagOverflow.css]
+scripts: [https://api.stackexchange.com/js/2.0/all.js, js/myTagOverflow.js]
 __index: true
 sections:
  -
@@ -14,7 +14,7 @@ sections:
   content:
    - type: h1
      class: small
-     value: StackExchange tags data visualization<sup style="color:#aaa;">beta</sup>
+     value: myTagOverflow - StackOverflow top tags data visualization<sup style="color:#aaa;">beta</sup>
    - type: h2
      class: small
      value: Showcase your stackExchange tags stats in a neat data visualization.

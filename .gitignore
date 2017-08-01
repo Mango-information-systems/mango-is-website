@@ -13,5 +13,5 @@ source/css/font-awesome/
 source/css/normalize.css
 source/js/site.js
 source/js/g-realtime.js
-source/js/stackexchange-stats.js
+source/js/myTagOverflow.js
 themes/mango-information-systems/source/js/smoothscroll.min.js
