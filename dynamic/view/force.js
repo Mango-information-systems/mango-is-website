@@ -11,6 +11,7 @@ var d3 = require('d3')
 function ForceChart() {
 
 	var self = this
+		, nodeMargin = 37
 	
 	var textScale = d3.scaleLinear()
 		  .range([1, 2])
@@ -30,7 +31,13 @@ function ForceChart() {
 	 */
 	 function ticked() {
 		 
-		self.node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+		self.node.attr('transform', function(d) {
+			
+			d.x = Math.max(nodeMargin, Math.min(self.width - nodeMargin, d.x))
+				d.y = Math.max(nodeMargin, Math.min(self.height - nodeMargin, d.y))
+			
+			return 'translate(' + d.x + ',' + d.y + ')'
+		})
 
 	 }
 
@@ -112,7 +119,7 @@ function ForceChart() {
 		textLabels.each(function (d, i) {
 			a = this
 			da = d3.select(a)
-			//~ y1 = da.attr("y")
+			//~ y1 = da.attr('y')
 			
 			var daTransform = getTransformation(da.attr('transform'))
 			
@@ -125,7 +132,7 @@ function ForceChart() {
 				db = d3.select(b)
 				// Now let's calculate the distance between
 				// these elements. 
-				//~ y2 = db.attr("y")
+				//~ y2 = db.attr('y')
 				var dbTransform = getTransformation(db.attr('transform'))
 				y2 = dbTransform.translateY
 				
@@ -144,9 +151,9 @@ function ForceChart() {
 				sign = deltaY > 0 ? 1 : -1
 				adjust = sign * alpha
 				
-				da.attr("transform", 'translate(' + daTransform.translateX + ',' + (y1 + adjust) + ')')
+				da.attr('transform', 'translate(' + daTransform.translateX + ',' + (y1 + adjust) + ')')
 
-				db.attr("transform", 'translate(' + dbTransform.translateX + ',' + (y2 - adjust) + ')')
+				db.attr('transform', 'translate(' + dbTransform.translateX + ',' + (y2 - adjust) + ')')
 			})
 		})
 		// Adjust our line leaders here
@@ -200,10 +207,10 @@ function ForceChart() {
 	  // Create a dummy g for calculation purposes only. This will never
 	  // be appended to the DOM and will be discarded once this function 
 	  // returns.
-	  var g = document.createElementNS("http://www.w3.org/2000/svg", "g");
+	  var g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
 	  
 	  // Set the transform attribute to the provided string value.
-	  g.setAttributeNS(null, "transform", transform);
+	  g.setAttributeNS(null, 'transform', transform);
 	  
 	  // consolidate the SVGTransformList containing all transformations
 	  // to a single SVGTransform of type SVG_TRANSFORM_MATRIX and get
@@ -296,9 +303,9 @@ function ForceChart() {
 		// Apply the general update pattern to the nodes.
 		self.node = self.node.data(data.nodes, function(d) { return d.name}).enter().append('g')
 			  .call(d3.drag()
-				  .on("start", dragstarted)
-				  .on("drag", dragged)
-				  .on("end", dragended))
+				  .on('start', dragstarted)
+				  .on('drag', dragged)
+				  .on('end', dragended))
 
 		self.node.append('text')
 		  .text(function(d) { return d.name})
