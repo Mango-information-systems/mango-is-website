@@ -49,7 +49,7 @@ function ForceChart() {
 	 */
 	 function ended() {
 		
-		console.log('end')
+		//~ debug('force simulation ended')
 		
 		// curved links lines
 		// as seen in https://stackoverflow.com/a/13456081
@@ -251,12 +251,12 @@ function ForceChart() {
 		
 		
 		self.width = 650
-		self.height = 500
+		self.height = 350
 		
-		self.svg = d3.select('#app').html('')
+		self.svg = d3.select('#chart').html('')
 			.append('svg')
 			  .attr('width', '100%')
-			  .attr('height', '100%')
+			  .attr('height', '80%')
 			  .attr('preserveAspectRatio', 'xMinYMin')
 			  .attr('viewBox', '0 0 ' + self.width + ' ' + self.height)
 			  .append('g')

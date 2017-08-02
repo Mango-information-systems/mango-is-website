@@ -41,46 +41,6 @@ function SEApi(accessToken) {
 	 * 
 	 * ***************************************/
 	
-	/**
-	* get tag stats for a given user
-	* 
-	* @param {function} callback function
-	* 
-	* @private
-	*/	
-	function getTagStats(callback) {
-
-		request.get(apiUrl + 'me/tags?'
-		//~ request.get(apiUrl + 'users/831180/tags?'
-				+ 'key=' + params.stackExchange.key
-				+ '&site=' + 'stackoverflow'
-				+ '&order=' + 'desc'
-				+ '&sort=' + 'popular'
-				+ '&access_token=' + self.accessToken
-				+ '&filter=' + 'default'
-				+ '&pagesize=' + 60
-			, {
-				json: true
-				, gzip: true
-			}
-		, function(err, res, body) {
-			if (err || res.statusCode !== 200) {
-				console.log('error retrieving tags stats', res.statusCode, body)
-				throw err
-			}
-				
-			//~ console.log('getTagStats result', err, res.statusCode)
-			//~ console.log('tagStats', body)
-
-				// temporary
-				// work around a bug in jLouvain.js, crashing whenever a name is 'constructor' (overrides object's native property)
-				// todo report / fix the bug
-				var tags = body.items.filter(function(tag) {return tag.name !== 'constructor'})
-				
-				getTagGraph(0, 1, tags, [], callback)
-				
-			})
-	}
 	
 	/**
 	* get tag relationships graph
@@ -236,14 +196,65 @@ function SEApi(accessToken) {
 
 	}
 	
+
+	/******************************************
+	 * 
+	 * Public functions
+	 * 
+	 * ***************************************/
+	
 	/**
-	* get stackOverflow userId for the connected user
+	* get stackOverflow tags graph
 	* 
 	* @param {function} callback function
 	* 
-	* @private
-	*/	
-	function getUserId(callback) {
+	*/		
+	this.getStats = function(callback) {
+
+		debug('getStats')
+		
+		request.get(apiUrl + 'me/tags?'
+		//~ request.get(apiUrl + 'users/831180/tags?'
+				+ 'key=' + params.stackExchange.key
+				+ '&site=' + 'stackoverflow'
+				+ '&order=' + 'desc'
+				+ '&sort=' + 'popular'
+				+ '&access_token=' + self.accessToken
+				+ '&filter=' + 'default'
+				+ '&pagesize=' + 60
+			, {
+				json: true
+				, gzip: true
+			}
+		, function(err, res, body) {
+			if (err || res.statusCode !== 200) {
+				console.log('error retrieving tags stats', res.statusCode, body)
+				throw err
+			}
+				
+			//~ console.log('getStats result', err, res.statusCode)
+			//~ console.log('tagStats', body)
+
+			// temporary
+			// work around a bug in jLouvain.js, crashing whenever a name is 'constructor' (overrides object's native property)
+			// todo report / fix the bug
+			var tags = body.items.filter(function(tag) {return tag.name !== 'constructor'})
+			
+			getTagGraph(0, 1, tags, [], callback)
+				
+		})
+
+	}
+	
+	/**
+	* get stackOverflow user information stats
+	* 
+	* @param {function} callback function
+	* 
+	*/		
+	this.getUser = function(callback) {
+
+		debug('getUser')
 		
 		request.get(apiUrl + 'me?'
 				+ 'key=' + params.stackExchange.key
@@ -256,35 +267,12 @@ function SEApi(accessToken) {
 				json: true
 				, gzip: true
 			}
-			
-			, function(err, res, body) {
+		, function(err, res, body) {
 			if (err || res.statusCode !== 200) 
 				throw err
 
 			callback(body.items[0])
 		})
-	}
-	
-	/******************************************
-	 * 
-	 * Public functions
-	 * 
-	 * ***************************************/
-	
-	/**
-	* get stackOverflow activity stats
-	* 
-	*/		
-	this.getStats = function(callback) {
-
-		debug('getStats')
-		
-		getUserId(callback)
-		
-		// temporarily disabled #122
-		
-		//~ getTagStats(callback)
-
 	}
 
 	/**
