@@ -214,7 +214,7 @@ function SEApi(accessToken) {
 		debug('getStats')
 		
 		request.get(apiUrl + 'me/tags?'
-		//~ request.get(apiUrl + 'users/831180/tags?'
+		//~ request.get(apiUrl + 'users/831180/tags?' // test with a different account
 				+ 'key=' + params.stackExchange.key
 				+ '&site=' + 'stackoverflow'
 				+ '&order=' + 'desc'
@@ -257,6 +257,7 @@ function SEApi(accessToken) {
 		debug('getUser')
 		
 		request.get(apiUrl + 'me?'
+		//~ request.get(apiUrl + 'users/831180?' // test with a different account
 				+ 'key=' + params.stackExchange.key
 				+ '&site=' + 'stackoverflow'
 				+ '&order=' + 'desc'
