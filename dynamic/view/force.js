@@ -98,7 +98,6 @@ function ForceChart() {
 		d.fy = null
 	}
 
-
 	/**
 	 * relax position of text labels, whenever they are overlapping.
 	 * 
@@ -253,6 +252,10 @@ function ForceChart() {
 		self.width = 650
 		self.height = 350
 		
+		self.legend = d3.select('#legend').html('')
+			.append('div')
+			.selectAll('.group')
+		
 		self.svg = d3.select('#chart').html('')
 			.append('svg')
 			  .attr('width', '100%')
@@ -319,6 +322,19 @@ function ForceChart() {
 		})
 
 		self.link = self.link.enter().append('path')
+		
+		
+		// fill up legend
+		self.legend = self.legend.data(d3.range(data.communitiesCount))
+			.enter().append('div')
+			  .html(function(d) { 
+				return '<i class="fa fa-circle" aria-hidden="true" style="color:' + color(d) + ';"></i> \
+					<span contenteditable="true">edit me</span> \
+				'
+			  })
+		
+		
+		
 
 		// Update and restart the simulation.
 		self.simulation.nodes(data.nodes)
