@@ -10,7 +10,10 @@ function render(target) {
 		<div class="xs-twelve lg-two columns"> \
 			<div class="row"> \
 				<div id="user" class="twelve columns"></div> \
-				<div id="legend" class="twelve columns"></div> \
+				<div id="legend" class="twelve columns"> \
+					<div class="row"> \
+					</div> \
+				</div> \
 			</div> \
 		</div> \
 		<div id="chart" class="xs-twelve lg-ten columns"> \

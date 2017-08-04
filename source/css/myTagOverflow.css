@@ -1,5 +1,5 @@
 /* user panel */
-#user {
+#user, #legend {
 	font-size: .75rem;
 	line-height: 1.1rem;
 }
