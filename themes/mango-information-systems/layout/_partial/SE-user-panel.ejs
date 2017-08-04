@@ -1,12 +1,17 @@
 <div class="row">
-	<div class="twelve columns">
-		<h5><a href=" <%- link %> " target = "_blank"> <%- display_name %> </a></h5>
-		<p> <%- location %> </p>
-		<p>member since  <%- creationDate.toLocaleString('en-us', { month: 'short' }) %>   <%- creationDate.getFullYear() %> </p>
+	<div class="xs-six lg-twelve columns">
+		<h4><%- display_name %></h4>
+		<p><%- location %></p>
+		<p>member since  <%- creationDate.toLocaleString('en-us', { month: 'short' }) %>   <%- creationDate.getFullYear() %></p>
 	</div>
-</div>
-<div class="row">
-	<div class="twelve columns">
+	<div class="xs-six lg-twelve columns">
+
+		<p class="metric"><%- reputation %></p>
+		<p class="metric-legend">reputation</p>
+		<p>
+			<a href=" <%- link %> " target = "_blank">view on stackOverflow</a>
+		</p>
+		
 		<p>
 			
 		<% if (badge_counts.gold) {%>	
@@ -26,8 +31,6 @@
 			<span title="<%- badge_counts.bronze %> bronze badges"><i class="fa fa-circle" aria-hidden="true" style="color:#D1A684;"></i> <%- badge_counts.bronze %></span>
 			
 		<% } %>
-
-		<p class="lead"> <%- reputation %> </p>
 
 	</div>
 </div>

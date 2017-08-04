@@ -1,3 +1,39 @@
+/* user panel */
+#user {
+	font-size: .75rem;
+	line-height: 1.1rem;
+}
+
+#user h4{
+	font-size: 1rem;
+	margin-top: .5rem;
+	margin-bottom: .5rem;
+}
+
+@media (min-width: 960px) {
+  /* Larger than desktop */
+
+	#user h4{
+		margin-top: 1rem;
+	}
+}
+
+#user p {
+	margin-bottom: 0;
+}
+#user .metric {
+	font-size: 1.6rem;
+	margin-top: .5rem;
+	text-align: center;
+}
+#user .metric-legend {
+	margin-bottom: .5rem;
+	font-size: .6rem;
+	text-align: center;
+	color: #aaa;
+}
+
+/* SVG */
 text {
 	font-size: .33rem;
 	text-anchor: middle;
