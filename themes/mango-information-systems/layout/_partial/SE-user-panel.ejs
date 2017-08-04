@@ -1,0 +1,33 @@
+<div class="row">
+	<div class="twelve columns">
+		<h5><a href=" <%- link %> " target = "_blank"> <%- display_name %> </a></h5>
+		<p> <%- location %> </p>
+		<p>member since  <%- creationDate.toLocaleString('en-us', { month: 'short' }) %>   <%- creationDate.getFullYear() %> </p>
+	</div>
+</div>
+<div class="row">
+	<div class="twelve columns">
+		<p>
+			
+		<% if (badge_counts.gold) {%>	
+			
+			<span title="<%- badge_counts.gold %> gold badges"><i class="fa fa-circle" aria-hidden="true" style="color:#FFCC01;"></i> <%- badge_counts.gold %></span>
+			
+		<% } %>
+			
+		<% if (badge_counts.silver) {%>	
+			
+			<span title="<%- badge_counts.silver %> silver badges"><i class="fa fa-circle" aria-hidden="true" style="color:#B4B8BC;"></i> <%- badge_counts.silver %></span>
+			
+		<% } %>
+			
+		<% if (badge_counts.bronze) {%>	
+			
+			<span title="<%- badge_counts.bronze %> bronze badges"><i class="fa fa-circle" aria-hidden="true" style="color:#D1A684;"></i> <%- badge_counts.bronze %></span>
+			
+		<% } %>
+
+		<p class="lead"> <%- reputation %> </p>
+
+	</div>
+</div>
