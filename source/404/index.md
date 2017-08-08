@@ -19,5 +19,5 @@ sections:
    - type: p
      value: <small>... or if you are looking for some distraction...</small>
    - type: p
-     value: "<div><iframe style='display:block; max-width: 100%;' src='http://embed.ted.com/talks/renny_gleeson_404_the_story_of_a_page_not_found.html' width='560' height='315' frameborder='0' scrolling='no' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>"
+     value: "<div><iframe style='display:block; max-width: 100%;' src='//embed.ted.com/talks/renny_gleeson_404_the_story_of_a_page_not_found.html' width='560' height='315' frameborder='0' scrolling='no' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>"
 ---
