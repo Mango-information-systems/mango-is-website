@@ -327,7 +327,7 @@ function ForceChart() {
 		// fill up legend
 		self.legend = self.legend.data(d3.range(data.communitiesCount))
 			.enter().append('div')
-			  .attr('class', 'twelve columns')
+			  .attr('class', 'xs-six lg-twelve columns')
 			  .html(function(d) { 
 				return '<i class="fa fa-circle" aria-hidden="true" style="color:' + color(d) + ';"></i> \
 					<span contenteditable="true">edit me</span> \

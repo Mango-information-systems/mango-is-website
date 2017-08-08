@@ -1,6 +1,6 @@
 /* user panel */
 #user, #legend {
-	font-size: .75rem;
+	font-size: .7rem;
 	line-height: 1.1rem;
 }
 
@@ -24,12 +24,10 @@
 #user .metric {
 	font-size: 1.6rem;
 	margin-top: .5rem;
-	text-align: center;
 }
 #user .metric-legend {
 	margin-bottom: .5rem;
 	font-size: .6rem;
-	text-align: center;
 	color: #aaa;
 }
 

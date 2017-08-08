@@ -9,8 +9,8 @@ function render(target) {
 	target.html(' \
 		<div class="xs-twelve lg-two columns"> \
 			<div class="row"> \
-				<div id="user" class="twelve columns"></div> \
-				<div id="legend" class="twelve columns"> \
+				<div id="user" class="xs-six lg-twelve columns"></div> \
+				<div id="legend" class="xs-six lg-twelve columns"> \
 					<div class="row"> \
 					</div> \
 				</div> \
