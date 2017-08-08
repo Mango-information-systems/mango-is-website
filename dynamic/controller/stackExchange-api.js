@@ -182,6 +182,15 @@ function SEApi(accessToken) {
 			node.group = groups[node.name]
 		})
 		
+		var maxCommunityId = 0
+		
+		Object.keys(groups).forEach(function(key) {
+			if (groups[key] > maxCommunityId)
+				maxCommunityId = groups[key]
+		})
+		
+		res.communitiesCount = maxCommunityId + 1
+		
 		if (self.incompleteData)
 			res.isIncomplete = true
 		
@@ -228,8 +237,15 @@ function SEApi(accessToken) {
 			}
 		, function(err, res, body) {
 			if (err || res.statusCode !== 200) {
-				console.log('error retrieving tags stats', res.statusCode, body)
-				throw err
+				if (body.error_id === 403) {
+					debug('access token expired, user needs to initiate sign in again...')
+					// TODO
+					console.log('access token expired, user needs to initiate sign in again...')
+				}
+				else {
+					console.log('error retrieving tags stats', res.statusCode, body)
+					throw err
+				}
 			}
 				
 			//~ console.log('getStats result', err, res.statusCode)
