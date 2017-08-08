@@ -1,9 +1,9 @@
 ---
 layout: landing
-title: "myTagOverflow: visualize your top tags on stackOverflow"
+title: "myTagOverflow: showcase your top tags from stackOverflow"
 author: Mango Information Systems
 date: 2016-10-24 16:29:26
-description: Showcase your stackOverflow tags in a neat data visualization.
+description: Need to demonstrate your technical abilities? myTagOverflow shows the tags on which you have been active in a cool graph visualization.
 thumbnail: /img/thumbnails/myTagOverflow.png
 css: [myTagOverflow.css]
 scripts: [https://api.stackexchange.com/js/2.0/all.js, js/myTagOverflow.js]
