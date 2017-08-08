@@ -7,7 +7,7 @@
 function render(target) {
 
 	target.html(' \
-		<div class="xs-twelve lg-two columns"> \
+		<div class="xs-twelve lg-three columns"> \
 			<div class="row"> \
 				<div id="user" class="xs-six lg-twelve columns"></div> \
 				<div id="legend" class="xs-six lg-twelve columns"> \
@@ -16,7 +16,7 @@ function render(target) {
 				</div> \
 			</div> \
 		</div> \
-		<div id="chart" class="xs-twelve lg-ten columns"> \
+		<div id="chart" class="xs-twelve lg-nine columns"> \
 			<svg width="120px" height="120px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-ripple"> \
 				<rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect> \
 				<g> \

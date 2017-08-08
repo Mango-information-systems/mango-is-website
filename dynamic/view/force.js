@@ -112,7 +112,7 @@ function ForceChart() {
 		// based on https://blog.safaribooksonline.com/2014/03/11/solving-d3-label-placement-constraint-relaxing/
 
 		var alpha = 0.5
-			, spacing = 12
+			, spacing = 14
 			, again = false
 
 		textLabels.each(function (d, i) {
@@ -299,7 +299,7 @@ function ForceChart() {
 			.force('link', d3.forceLink(data.links).distance(75).strength(function(d) {return self.weightScale(d.weight)}))
 			.force('charge', d3.forceManyBody().strength(-200))
 			.force('center', d3.forceCenter(self.width / 2, self.height / 2))
-			.force('x', d3.forceX().strength(-.2))
+			.force('x', d3.forceX().strength(-.3))
 			.on('tick', ticked)
 			.on('end', ended)
 
