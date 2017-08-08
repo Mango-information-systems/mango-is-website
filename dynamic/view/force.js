@@ -11,7 +11,7 @@ var d3 = require('d3')
 function ForceChart() {
 
 	var self = this
-		, nodeMargin = 37
+		, nodeMargin = 45
 	
 	var textScale = d3.scaleLinear()
 		  .range([1, 3])
@@ -112,7 +112,7 @@ function ForceChart() {
 		// based on https://blog.safaribooksonline.com/2014/03/11/solving-d3-label-placement-constraint-relaxing/
 
 		var alpha = 0.5
-			, spacing = 14
+			, spacing = 15
 			, again = false
 
 		textLabels.each(function (d, i) {
@@ -158,7 +158,7 @@ function ForceChart() {
 		// Adjust our line leaders here
 		// so that they follow the labels. 
 		if(again) {
-			setTimeout(function() {relax(textLabels)},20)
+			setTimeout(function() {relax(textLabels)}, 10)
 		}
 	}
 
@@ -299,7 +299,7 @@ function ForceChart() {
 			.force('link', d3.forceLink(data.links).distance(75).strength(function(d) {return self.weightScale(d.weight)}))
 			.force('charge', d3.forceManyBody().strength(-200))
 			.force('center', d3.forceCenter(self.width / 2, self.height / 2))
-			.force('x', d3.forceX().strength(-.3))
+			.force('x', d3.forceX().strength(-.25))
 			.on('tick', ticked)
 			.on('end', ended)
 
@@ -327,7 +327,7 @@ function ForceChart() {
 		// fill up legend
 		self.legend = self.legend.data(d3.range(data.communitiesCount))
 			.enter().append('div')
-			  .attr('class', 'xs-six lg-twelve columns')
+			  .attr('class', 'xs-twelve sm-six lg-twelve columns')
 			  .html(function(d) { 
 				return '<i class="fa fa-circle" aria-hidden="true" style="color:' + color(d) + ';"></i> \
 					<span contenteditable="true">edit me</span> \
