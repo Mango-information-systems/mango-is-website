@@ -31,6 +31,15 @@
 	color: #aaa;
 }
 
+/* Editable legend */
+input[type=text] {
+	display: inline-block;
+	height: 1.5rem;
+	max-width: 90%;
+	margin-bottom: .25rem;
+	padding: .2rem .4rem;
+}
+
 /* SVG */
 text {
 	font-size: .44rem;

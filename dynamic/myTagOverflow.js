@@ -21,6 +21,16 @@ var appContainer = d3.select('#app')
 	, dashboardBody
 	, refreshInterval
 	, chartInitialized = false
+	, legendLabels
+	
+storage.getItem('legend', function(err, res) {
+	
+	if (res === null)
+		legendLabels = []
+	else 
+		legendLabels = res
+	
+})
 
 app.view.myTagOverflow.render(appContainer)
 
@@ -158,6 +168,16 @@ function extractStats() {
 	app.controller.stackExchangeApi.getStats(function(data) {
 
 		storage.setItem('tagsGraph', data)
+		
+		// initialize legend items
+		
+		d3.range(data.communitiesCount).forEach(function(ix) {
+			console.log('legend init', ix)
+			
+			legendLabels.push('edit me')
+			
+			storage.setItem('legend', legendLabels)
+		})
 
 		showChart(data)
 
@@ -173,7 +193,10 @@ function showChart(tagsGraph) {
 	debug('displaying tag graph', tagsGraph)
 	
 	if (!chartInitialized) {
-		app.view.chart.init()
+		app.view.chart.init({
+			legendLabels: legendLabels
+			, updateLegend: updateLegend
+		})
 		chartInitialized = true
 	}
 
@@ -203,4 +226,14 @@ function showUserInfo(user) {
 	
 	app.view.userInfo.render(appContainer.select('#user'), user)
 	
+}
+
+
+function updateLegend(ix, value) {
+	
+	debug('updating legend label', ix, value)
+	
+	legendLabels[ix] = value
+	
+	storage.setItem('legend', legendLabels)
 }

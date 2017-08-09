@@ -1,4 +1,5 @@
 var d3 = require('d3')
+	, easyedit = require('easyedit')
 
 /**
 * force layout chart view
@@ -252,8 +253,11 @@ function ForceChart() {
 	 * initialize chart
 	 * 
 	 */
-	this.init = function () {
+	this.init = function (opts) {
 		
+		
+		self.updateLegend = opts.updateLegend
+		self.legendLabels = opts.legendLabels
 		
 		self.width = 650
 		self.height = 350
@@ -330,13 +334,25 @@ function ForceChart() {
 		self.legend = self.legend.data(d3.range(data.communitiesCount))
 			.enter().append('div')
 			  .attr('class', 'xs-twelve sm-six lg-twelve columns')
-			  .html(function(d) { 
+			  .html(function(d, i) { 
 				return '<i class="fa fa-circle" aria-hidden="true" style="color:' + color(d) + ';"></i> \
-					<span contenteditable="true">edit me</span> \
+					<span class="legend">' + self.legendLabels[i] + '</span> \
 				'
 			  })
-		
-		
+	
+		d3.selectAll('.legend').each(function(data, ix) {
+			new easyedit(this, {
+				styles: {
+					height: 'auto'
+					, padding: '.2rem .4rem'
+				}
+				, onsuccess: function(value) {
+					console.log(ix + ' div changed to: ' + value)
+					self.updateLegend(ix, value)
+					
+				}
+			})
+		})
 		
 
 		// Update and restart the simulation.
