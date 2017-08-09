@@ -33,16 +33,19 @@ sections:
    - type: ol
      value: "<li>Connect your stackExchange account</li>
 		<li>Visualize statistics about the tags you interact the most with on stackExchange</li>
-		<li>Use the visualization in your own website, or share on social media...</li>"
+		<li>Adjust the graph layout by dragging/dropping tags</li>
+		<li>Use the visualization in your own website, CV or share on social media...</li>"
  -
   # About
   content:
    - type: h3
      value: About
    - type: p
-     value: This tool lets you visualize [...].
+     value: myTagOverflow creates a visualization of the top tags related to your activity on stackOverflow.
    - type: p
-     value: It is useful when you need to [...].
+     value: It may be useful when you want to demonstrate your technical abilities, based on factual data ;).
+   - type: p
+     value: If you like it, you may be interested by <a href="http://p.migdal.pl/tagoverflow/?site=stackoverflow&size=16">tagOverflow</a>, a similar project (independent from myTagOverflow) generating a similar visualization for the whole stackExchange sites (not per user).
    - type: h4
      value: Privacy friendly
    - type: p
@@ -50,5 +53,7 @@ sections:
    - type: h4
      value: Open source
    - type: p
-     value: This tool is open source, dual-licensed under MIT and LGPL. You can find the source code of this app <a href="https://github.com/Mango-information-systems/mango-is-website/">here</a>.
+     value: myTagOverflow is open source, dual-licensed under MIT and LGPL. You can find the source code of this app <a href="https://github.com/Mango-information-systems/mango-is-website/">here</a>.
+   - type: p
+     value: Suggestions and contributions are welcome, please have a look at the <a href="https://github.com/Mango-information-systems/mango-is-website/labels/myTagOverflow">current issues</a> on github.
 ---
