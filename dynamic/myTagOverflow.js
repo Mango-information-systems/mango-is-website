@@ -205,7 +205,7 @@ function showChart(tagsGraph) {
 	if (tagsGraph.isIncomplete) {
 		
 		app.view.warningMessage.render({
-			target: appContainer
+			target: appContainer.append('div').attr('class', 'twelve columns')
 			, append: true
 			, title: 'Incomplete data retrieved'
 			, message: '<p>The whole tags graph could not be retrieved, most probably due to your ad blocker.</p> \
