@@ -14,8 +14,14 @@ function ForceChart() {
 		, nodeMargin = 45
 	
 	var textScale = d3.scaleLinear()
-		  .range([1, 3])
+			.range([1, 3])
 		, color = d3.scaleOrdinal(d3.schemeCategory10)
+		, linkDistanceScale = d3.scaleLinear()
+			.domain([100, 1000])
+			.range([50, 120])
+		, xForceScale = d3.scaleLinear()
+			.domain([100, 1000])
+			.range([-.01, -.7])
 
 	/****************************************
 	 *
@@ -287,19 +293,15 @@ function ForceChart() {
 
 		textScale.domain([data.nodes[data.nodes.length-1].count, data.nodes[0].count])
 
-		var linkDistance = d3.scaleLinear()
-			.domain([data.maxWeight, data.minWeight])
-			.range([50, 200])
-			
 		self.weightScale = d3.scaleLog()
 			.domain(d3.extent(data.links, function (d) { return d.weight }))
 			.range([.1, 1])
 			
 		self.simulation = d3.forceSimulation(data.nodes)
-			.force('link', d3.forceLink(data.links).distance(75).strength(function(d) {return self.weightScale(d.weight)}))
+			.force('link', d3.forceLink(data.links).distance(linkDistanceScale(data.links.length)).strength(function(d) {return self.weightScale(d.weight)}))
 			.force('charge', d3.forceManyBody().strength(-200))
 			.force('center', d3.forceCenter(self.width / 2, self.height / 2))
-			.force('x', d3.forceX().strength(-.25))
+			.force('x', d3.forceX().strength(xForceScale(data.links.length)))
 			.on('tick', ticked)
 			.on('end', ended)
 
