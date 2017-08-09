@@ -347,9 +347,8 @@ function ForceChart() {
 					, padding: '.2rem .4rem'
 				}
 				, onsuccess: function(value) {
-					console.log(ix + ' div changed to: ' + value)
+					// persist new value
 					self.updateLegend(ix, value)
-					
 				}
 			})
 		})
