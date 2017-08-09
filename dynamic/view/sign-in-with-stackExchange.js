@@ -12,6 +12,8 @@ function render(opts) {
 	
 	d3.select('#login').on('click', function() {
 		
+		d3.select(this).attr('disabled', true)
+		
 		d3.event.preventDefault()
 		d3.event.stopPropagation()
 		
