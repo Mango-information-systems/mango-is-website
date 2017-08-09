@@ -37,6 +37,14 @@ sections:
    - type: post
      content:
       class: index
+      path: /tools/myTagOverflow/
+      thumbnail: /img/thumbnails/myTagOverflow.png
+      title: "myTagOverflow: showcase your top tags from stackOverflow"
+      subtitle: Need to demonstrate your technical abilities? myTagOverflow shows the tags on which you have been active in a cool graph visualization.
+      footer: false
+   - type: post
+     content:
+      class: index
       path: /tools/csv-to-json/
       thumbnail: /img/thumbnails/2015-01-08-csv-to-json.png
       title: CSV to JSON converter
