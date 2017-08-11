@@ -22,7 +22,7 @@ sections:
    - type: p
      value: One of the biggest challenges in any organization is to <strong>get accurate information to take good business decisions</strong>.
    - type: p
-     value: We provide factual data to our clients, this helps them <strong>be more efficient, decrease their costs and grow their market share</strong>.
+     value: We provide factual data to our clients, helping them <strong>be more efficient, decrease their costs and grow their market share</strong>.
    - type: ul
      class: list-inline row u-text-center
      value: "<li class='four columns' itemscope itemtype='http://schema.org/Product'><i class='fa fa-pie-chart text-primary' aria-hidden='true'></i> <span  itemprop='name'>Data-driven web applications</span></li>
@@ -49,11 +49,11 @@ sections:
    - type: reference
      content:
       project: "ED: collaborative platform"
-      description: Development of a platform allowing users to collaborate in realtime based on shared content. Analytics is performed live and presented in dashboards and reports.
+      description: Development of a platform that lets users collaborate on shared content in realtime. Analytics is performed live and presented in dashboards and reports.
       domains: [business analysis, realtime analytics, software architecture]
       tech: [node.js, d3.js, websockets]
       quotes:
-        - text: Mehdi is responsible for the development of a data-intensive web application.<br>He demonstrates his commitment to the success of this enterprise through flexibility and short response time. He is <strong>totally focused on delivering results</strong>.
+        - text: Mehdi is responsible for the development of a data-intensive web application.<br>He demonstrates his commitment to the success of this enterprise through flexibility and short response times. He is <strong>totally focused on delivering results</strong>.
           author: Jean-Christophe Blondiau
           authorTitle: Director at co-emergence
           image:
@@ -64,7 +64,7 @@ sections:
    - type: reference
      content:
       project: Tribalytics
-      description: "<p>Tribalytics is a social media audience analytics tool <strong>helping marketers find and reach their target audience</strong> on twitter. Communities of people sharing interest over a topic are identified by analysing the social graphs on twitter (how people are connected between each other), the content shared by these people. Identifying the influencers in each community helps the marketers achieve actual virality in their campaigns.</p> <p><small>Read also: <a href='/blog/business/getting-started-with-twitter/'>Getting started with Twitter - Using social media for sales conversions</a> in our blog.</small></p>"
+      description: "<p>Tribalytics is a social media audience analytics tool <strong>that helps marketers find and reach their target audience</strong> on twitter. Communities of people sharing interest over a topic are identified by analysing social graphs on twitter (how people are connected between each other), and the content shared by these people. Identifying influencers in each community helps marketers achieve actual virality in their campaigns.</p> <p><small>Read also: <a href='/blog/business/getting-started-with-twitter/'>Getting started with Twitter - Using social media for sales conversions</a> in our blog.</small></p>"
       domains: [saas, sales, project management, entrepreneurship, graph analysis, natural language processing]
       tech: [node.js, gephi, d3.js, php Laravel]
       dataTech: [redis, mysql, mariadb, twitter API, nominatim API, json]
@@ -78,7 +78,7 @@ sections:
            alt: Gianluca Fiorelli
            width: 140px
            height: 140px
-        - text: "The most important people to follow are not always the ones you would think at first. Tribalytics help you to identify and connect with the true opinion leaders in your market."
+        - text: "The most important people to follow are not always the ones you would think at first. Tribalytics helps you identify and connect with the true opinion leaders in your market."
           author: David Hachez
           authorTitle: CEO & Co-founder at  <a href="https://www.emolytics.com/">Emolytics</a>
           image:
@@ -89,7 +89,7 @@ sections:
    - type: reference
      content:
       project: Twitto.be
-      description: <p><a href="https://twitto.be/">Twitto</a> is a showcase of our know-how in realtime analytics web applications. It is a dashboard extracting the trends from all the tweets geolocated in Belgium.</p><p>Fully open source, you may adapt it to monitor another part of the world you want, or to follow a specific topic.</p><p><small><i class="fa fa-info-circle" aria-hidden="true"></i> Have a look at more creations in our <a href="/tools/">open source tools</a> page.</small></p>
+      description: <p><a href="https://twitto.be/">Twitto</a> is a showcase of our know-how in realtime analytics web applications. It is a dashboard extracting the trends from all geolocated tweets in Belgium.</p><p>Fully open source, you may adapt it to monitor any other part of the world you're interested in, or to follow a specific topic.</p><p><small><i class="fa fa-info-circle" aria-hidden="true"></i> Have a look at more creations in our <a href="/tools/">open source tools</a> page.</small></p>
       domains: [business analysis, application design, software architecture, web]
       tech: [node.js, d3.js, websockets, html5, css3, javascript]
       dataTech: [twitter realtime API]
@@ -97,7 +97,7 @@ sections:
    - type: reference
      content:
       project: Conversion Rate Optimization (CRO)
-      description: "<p>We combine our sales techniques and web design skills to help businesses convert website visitors into paying customers.</p><p>Smoall hired us to enhance their website. Once the redesign done, the <strong>signup rate to their application increased by 328%</strong>.</p>
+      description: "<p>We combine our sales techniques and web design skills to help businesses convert website visitors into paying customers.</p><p>Smoall hired us to enhance their website. Once the redesign done, <strong>signup rates for their application increased by 328%</strong>.</p>
       <p><small><i class='fa fa-info-circle' aria-hidden='true'></i> Read also: <a href='/blog/convert/a-sublime-landing-page/'>A sublime landing page - How to convince visitors to buy on the web</a> in our blog.</small></p>"
       domains: [web analytics, copywriting, consultative selling, design]
       tech: [google analytics, javascript, wordpress]
@@ -115,7 +115,7 @@ sections:
    - type: reference
      content:
       project: Data-warehousing
-      description: "<p>We have been involved in nearly all roles of Corporate Data-Warehousing projects: business analysis, architecture, data modeling, technical analysis, data integration (ETL), conception and development of reports and dashboards...</p><p>These projects tend to often hit roadblocks: technical complexity, politics, lack of vision alignments between the stakeholders... This is why we focus on client-orientation with a rich communication with the clients, and advocate for good knowledge management inside the BI teams. As a result, not only do we <strong>improve the quality of the reporting systems</strong> created, but we also <strong>reduce the costs of our clients' projects</strong>.</p>"
+      description: "<p>We have been involved in nearly all roles of Corporate Data-Warehousing projects: business analysis, architecture, data modeling, technical analysis, data integration (ETL), conception and development of reports and dashboards...</p><p>These projects tend to often hit roadblocks: technical complexity, politics, lack of alignment of vision between the stakeholders... This is why we focus on client-orientation with rich communication with the clients, and advocate for good knowledge management inside the BI teams. As a result, not only do we <strong>improve the quality of the reporting systems</strong> created, but we also <strong>reduce the costs of your projects</strong>.</p>"
       domains: [Corporate Business Intelligence]
       tech: [SAP BusinessObjects, SAP BusinessObjects Data Services, powerDesigner, Toad, PL/SQL, Confluence, Jira]
       dataTech: [Oracle database, SQL Server, Eurostat, ABAC DWU, Sysper2, SAP BPC, Sybase]
