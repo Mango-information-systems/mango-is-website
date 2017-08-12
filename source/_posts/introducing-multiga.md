@@ -25,7 +25,7 @@ One evening, I had some spare time - and wanted to check out the capabilities of
 
 The concept is pretty simple:
 
-1. The dashvoard user clicks a "Login with Google" button to give access to their Google Analytics account.
+1. The dashboard user clicks a "Login with Google" button to give access to their Google Analytics account.
 2. Data is retrieved, and the dashboard shows the realtime visits of each property and views of one account.
 3. You can switch between accounts, if needed using a dropdown menu.
 
