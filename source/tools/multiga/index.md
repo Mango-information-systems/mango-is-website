@@ -13,10 +13,10 @@ sections:
   content:
    - type: h1
      class: small
-     value: "multiGa: realtime multi-website traffic dashboard"
+     value: "multiGa: realtime traffic dashboard for your websites"
    - type: h2
      class: small
-     value: A free dashboard to visualize Google Analytics live metrics of multiple sites.
+     value: A free dashboard to visualize Google Analytics live metrics for multiple sites.
  -
   # app
   content:
@@ -38,13 +38,13 @@ sections:
    - type: h3
      value: About
    - type: p
-     value: This tool lets you visualize the number of visitors you have on several of your websites, from a single screen.
+     value: This tool lets you visualize the number of visitors you have on across all of your websites, from a single screen.
    - type: p
-     value: It is useful when you need to perform some operations on your server, and would like to check whether some people are connected at the moment.
+     value: It is useful when you need to perform operations on your server, and would like to check whether people are connected at the moment.
    - type: h4
-     value: Privacy friendly
+     value: Privacy friendly [Your privacy respected]
    - type: p
-     value: The websites traffic data coming from Google Analytics transits directly from Google Analytics to your browser screen, without ever passing through our servers.
+     value: Data from Google Analytics never passes through our servers. It goes directly from Google Analytics to your browser.
    - type: h4
      value: Open source
    - type: p
