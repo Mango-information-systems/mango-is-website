@@ -38,11 +38,11 @@ sections:
    - type: h3
      value: About
    - type: p
-     value: This tool lets you visualize the number of visitors you have on across all of your websites, from a single screen.
+     value: This tool lets you visualize the number of visitors you have across all of your websites, from a single screen.
    - type: p
      value: It is useful when you need to perform operations on your server, and would like to check whether people are connected at the moment.
    - type: h4
-     value: Privacy friendly [Your privacy respected]
+     value: Your privacy respected
    - type: p
      value: Data from Google Analytics never passes through our servers. It goes directly from Google Analytics to your browser.
    - type: h4

@@ -47,7 +47,7 @@ sections:
    - type: p
      value: If you like it, you may be interested by <a href="http://p.migdal.pl/tagoverflow/?site=stackoverflow&size=16">tagOverflow</a>, a similar project (independent from myTagOverflow) generating a similar visualization for the whole stackExchange sites (not per user).
    - type: h4
-     value: Privacy friendly
+     value: Your privacy respected
    - type: p
      value: The websites traffic data coming from stackExchange transits directly from stackExchange to your browser screen, without ever passing through our servers.
    - type: h4
