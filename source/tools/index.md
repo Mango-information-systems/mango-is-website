@@ -31,8 +31,8 @@ sections:
       class: index
       path: /tools/multiga/
       thumbnail: /img/thumbnails/multiGa.png
-      title: "multiGa: realtime multi-website traffic dashboard"
-      subtitle: Free dashboard showing Google Analytics live traffic data on multiple websites. Ideal to find out if it's the right moment to upgrade your server ;)
+      title: "multiGa: realtime traffic dashboard for your websites"
+      subtitle: Free dashboard showing Google Analytics live traffic data for multiple websites. Ideal to find out if it's the right moment to upgrade your server ;)
       footer: false
    - type: post
      content:
