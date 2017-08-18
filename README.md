@@ -28,9 +28,13 @@ Run `npm start`. This script serves a development version, while watching change
 * **dynamic parts** can be found inside directory [dynamic](dynamic).
 
 
+### myTagOverflow dev setup
+
 In order to run myTagOverflow in dev environment, the site must be served from port 80 (otherwise stackExchange API auth fails). The following command forwards port 80 traffic to port 4000:
 
     sudo iptables -t nat -I OUTPUT -p tcp -d 127.0.0.1 --dport 80 -j REDIRECT --to-ports 4000
+    
+Then myTagOverflow can be reached at the following URL: http://localhost/tools/myTagOverflow/
 
 
 ## Build and deployment 
