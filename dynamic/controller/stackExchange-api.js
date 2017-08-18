@@ -221,7 +221,7 @@ function SEApi(accessToken) {
 	* 
 	* @param {function} callback function
 	* 
-	*/		
+	*/
 	this.getStats = function(callback) {
 
 		debug('getStats')

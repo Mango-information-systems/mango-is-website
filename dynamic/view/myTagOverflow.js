@@ -14,6 +14,9 @@ function render(target) {
 					<div class="row"> \
 					</div> \
 				</div> \
+				<div class="xs-six lg-twelve columns"> \
+					<small><a id="exportLink" class="u-pull-right" target="_blank" style="display:none;">Export</a></small> \
+				</div> \
 			</div> \
 		</div> \
 		<div id="chart" class="xs-twelve lg-nine columns"> \

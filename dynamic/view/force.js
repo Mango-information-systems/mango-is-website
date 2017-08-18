@@ -80,6 +80,8 @@ function ForceChart() {
 	 }
 
 	function dragstarted(d) {
+		// hide export button when layout is being computed
+		d3.select('#exportLink').style('display', 'none')
 		
 		if (!d3.event.active) {
 			
@@ -166,6 +168,10 @@ function ForceChart() {
 		// so that they follow the labels. 
 		if(again) {
 			setTimeout(function() {relax(textLabels)}, 10)
+		}
+		else {
+			// both force layout and overlap prevention are finished, display export button
+			d3.select('#exportLink').style('display', 'block')
 		}
 	}
 
@@ -268,6 +274,7 @@ function ForceChart() {
 		
 		self.svg = d3.select('#chart').html('')
 			.append('svg')
+			  .attr('id', 'chartSVG')
 			  .attr('width', '100%')
 			  .attr('height', '80%')
 			  .attr('preserveAspectRatio', 'xMinYMin')
@@ -294,6 +301,9 @@ function ForceChart() {
 	this.update = function (data) {
 		
 		//~ console.log('graph data', data)
+		
+		// hide export button when layout is being computed
+		d3.select('#exportLink').style('display', 'none')
 
 		textScale.domain([data.nodes[data.nodes.length-1].count, data.nodes[0].count])
 

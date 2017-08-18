@@ -4,9 +4,12 @@ var d3 = require('d3')
 	, debug = window.appDebug('myTagOverflow')
 	, storage = require('localforage')
 	, StackExchangeApi = require('./controller/stackExchange-api')
+	, SVGExport = require('./controller/SVGExport')
 	, Force = require('./view/force')
 	, app = {
-		controller: {}
+		controller: {
+			SVGExport: new SVGExport()
+		}
 		, view: {
 			myTagOverflow: require('./view/myTagOverflow')
 			, chart: new Force()
@@ -252,6 +255,13 @@ function showChart(tagsGraph) {
 			<p>Up to you ;)</p>'
 		})
 	}
+	
+	
+	
+	d3.select('#exportLink').on('click', function() {
+		app.controller.SVGExport.export(document.getElementById('chartSVG'), document.getElementById('exportLink'))
+	})
+
 	
 }
 
