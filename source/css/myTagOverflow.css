@@ -1,5 +1,6 @@
 /* user panel */
-#user, #legend {
+
+#user, #legend, #exportLink {
 	font-size: .7rem;
 	line-height: 1.1rem;
 }
@@ -32,6 +33,7 @@
 }
 
 /* Editable legend */
+
 input[type=text] {
 	display: inline-block;
 	height: 1.5rem;
@@ -41,9 +43,11 @@ input[type=text] {
 }
 
 /* SVG */
+
 text {
 	font-size: .44rem;
 	text-anchor: middle;
+	cursor: pointer;
 }
 
 path {
