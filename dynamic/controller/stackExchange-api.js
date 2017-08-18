@@ -70,10 +70,14 @@ function SEApi(accessToken) {
 			, function(err, res, body) {
 				if (err || res.statusCode !== 200) {
 
-					if (res.statusCode === 0 &&err.message === '[object ProgressEvent]') {
+					if (res.statusCode === 0 && err.message === '[object ProgressEvent]') {
 						// requesting this tag's graph failed because of adblocking addon, skip it
 						self.incompleteData = true
 						getTagGraph(tagIndex+1, 1, tags, relations, callback)
+					}
+					else if (body.error_id === 403) {
+						debug('access token expired, user needs to initiate sign in again...')
+						callback('access-token-expired')
 					}
 					else {
 						console.log('error retrieving tags graph', res.statusCode)
@@ -200,7 +204,7 @@ function SEApi(accessToken) {
 		//~ console.log(linksObj)
 		//~ console.log(res)
 		
-		callback(res)
+		callback(null, res)
 
 
 	}
@@ -237,27 +241,30 @@ function SEApi(accessToken) {
 				, gzip: true
 			}
 		, function(err, res, body) {
+			
 			if (err || res.statusCode !== 200) {
 				if (body.error_id === 403) {
 					debug('access token expired, user needs to initiate sign in again...')
-					// TODO
-					console.log('access token expired, user needs to initiate sign in again...')
+					
+					callback('access-token-expired')
 				}
 				else {
 					console.log('error retrieving tags stats', res.statusCode, body)
 					throw err
 				}
 			}
+			else {
 				
-			//~ console.log('getStats result', err, res.statusCode)
-			//~ console.log('tagStats', body)
+				//~ console.log('getStats result', err, res.statusCode)
+				//~ console.log('tagStats', body)
 
-			// temporary
-			// work around a bug in jLouvain.js, crashing whenever a name is 'constructor' (overrides object's native property)
-			// todo report / fix the bug
-			var tags = body.items.filter(function(tag) {return tag.name !== 'constructor'})
-			
-			getTagGraph(0, 1, tags, [], callback)
+				// temporary
+				// work around a bug in jLouvain.js, crashing whenever a name is 'constructor' (overrides object's native property)
+				// todo report / fix the bug
+				var tags = body.items.filter(function(tag) {return tag.name !== 'constructor'})
+				
+				getTagGraph(0, 1, tags, [], callback)
+			}
 				
 		})
 
@@ -287,10 +294,22 @@ function SEApi(accessToken) {
 				, gzip: true
 			}
 		, function(err, res, body) {
-			if (err || res.statusCode !== 200) 
-				throw err
-
-			callback(body.items[0])
+			
+			if (err || res.statusCode !== 200) {
+				if (body.error_id === 403) {
+					debug('access token expired, user needs to initiate sign in again...')
+					
+					callback('access-token-expired')
+				}
+				else {
+					console.log('error retrieving user information', res.statusCode, body)
+					throw err
+				}
+			}
+			else {
+				
+				callback(null, body.items[0])
+			}
 		})
 	}
 
@@ -315,12 +334,12 @@ function SEApi(accessToken) {
 				self.accessToken = data.accessToken
 				
 				callback(null, data.accessToken)
-			},
-			error: function(data) { 
+			}
+			, error: function(data) { 
 				console.log('An error occurred:\n' + data.errorName + '\n' + data.errorMessage) 
 				throw new Error(data.errorName, data.errorMessage)
-			},
-			networkUsers: true
+			}
+			, networkUsers: true
 		})
 
 		

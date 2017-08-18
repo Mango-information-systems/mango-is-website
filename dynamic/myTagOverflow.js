@@ -149,11 +149,31 @@ function extractUser() {
 	
 	debug('extract user information')
 	
-	app.controller.stackExchangeApi.getUser(function(data) {
+	app.controller.stackExchangeApi.getUser(function(err, data) {
 
-		storage.setItem('user', data)
+		if (err !== null) {
+			debug('error extracting user information', err)
+			
+			if (err === 'access-token-expired') {
+				// display login form
+				app.view.signIn.render({
+					target: appContainer
+					, hasError: true
+					, action: function() {
+						
+						app.view.myTagOverflow.render(appContainer)
+						
+						app.controller.stackExchangeApi.signIn(start)
+					}
+				})
+			}
+		}
+		else {
 
-		showUserInfo(data)
+			storage.setItem('user', data)
+
+			showUserInfo(data)
+		}
 		
 	})
 }
@@ -165,22 +185,41 @@ function extractStats() {
 	
 	debug('extract tags graph')
 	
-	app.controller.stackExchangeApi.getStats(function(data) {
+	app.controller.stackExchangeApi.getStats(function(err, data) {
 
-		storage.setItem('tagsGraph', data)
-		
-		// initialize legend items
-		
-		d3.range(data.communitiesCount).forEach(function(ix) {
-			console.log('legend init', ix)
+		if (err !== null) {
+			debug('error extracting stats', err)
 			
-			legendLabels.push('edit me')
+			if (err === 'access-token-expired') {
+				// display login form
+				app.view.signIn.render({
+					target: appContainer
+					, hasError: true
+					, action: function() {
+						
+						app.view.myTagOverflow.render(appContainer)
+						
+						app.controller.stackExchangeApi.signIn(start)
+					}
+				})
+			}
+		}
+		else {
+
+			storage.setItem('tagsGraph', data)
 			
-			storage.setItem('legend', legendLabels)
-		})
+			// initialize legend items
+			
+			d3.range(data.communitiesCount).forEach(function(ix) {
+				console.log('legend init', ix)
+				
+				legendLabels.push('edit me')
+				
+				storage.setItem('legend', legendLabels)
+			})
 
-		showChart(data)
-
+			showChart(data)
+		}
 	})
 }
 
