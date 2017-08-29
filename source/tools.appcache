@@ -2,6 +2,7 @@ CACHE MANIFEST
 #3.18.1
 
 CACHE:
+/css/font-awesome/fonts/fontawesome-webfont.woff
 /css/font-awesome/css/font-awesome.min.css
 /css/normalize.css
 /css/skeleton.min.css
