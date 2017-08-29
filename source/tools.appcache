@@ -1,25 +1,24 @@
 CACHE MANIFEST
-#3.0.0
+#3.18.1
 
 CACHE:
-/css/legacy/bootstrap.min.css
-/css/legacy/bootstrap-responsive.min.css
 /css/font-awesome/css/font-awesome.min.css
 /css/normalize.css
 /css/skeleton.min.css
-/css/landing.css
 /css/legacy/2015-01-08-csv-to-json.css
+/css/landing.css
+/css/blog.css
+/img/thumbnails/2015-01-08-csv-to-json.png
 /img/mango-information-systems-logo.png
 /img/mango-information-systems-logo-dark.png
-/img/legacy/glyphicons-halflings-white.png
-/img/legacy/glyphicons-halflings.png
 /img/bg-pattern-2x.jpg
 /img/bg-pattern-dark-2x.jpg
-/js/legacy/jquery.js
-/js/legacy/bootstrap.min.js
-/js/legacy/underscore-min.js
-/js/legacy/localforage.nopromises.min.js
-/js/legacy/papaparse.min.js
+/img/favicon.png
+/js/site.js	
+/js/legacy/jquery.js						
+/js/legacy/underscore-min.js						
+/js/legacy/localforage.nopromises.min.js						
+/js/legacy/papaparse.min.js						
 /js/legacy/2015-01-08-csv-to-json.js
 
 FALLBACK:

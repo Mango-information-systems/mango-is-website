@@ -1,9 +1,10 @@
 <% if(page.layout !== 'raw') { %>
 
 	<!DOCTYPE html>
-	<html>
+	<html <% if (page.path === 'tools/csv-to-json/index.html')  { %>manifest="/tools.appcache"<% } %>>
 		<%- partial('_partial/head') %>
 		<body>
+			
 			<%- body %>
 				
 			<%  if (page.scripts) {
