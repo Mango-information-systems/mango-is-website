@@ -17,7 +17,7 @@ sections:
      value: Online CSV to JSON converter
    - type: h2
      class: small
-     value: Monitor the traffic across multiple sites in a single screen in realtime.
+     value: Easy, privacy-friendly and offline-first online csv to json converter.
  -
   # app
   content:
