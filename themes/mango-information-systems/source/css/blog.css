@@ -127,31 +127,45 @@ article.post {
 }
 
 
-#header a, #sidebar a{
+
+#header a, #sidebar, #sidebar a{
 	font-family: 'Raleway';
 	font-size: .8rem;
-	text-decoration: none;
+    line-height: 1.2rem;
 	color: #565656;
 }
 
-/* handle items that wrap to two lines */
-
 #sidebar a {
-    line-height: 1.1;
     margin: 0 0 0.5rem 0;
 }
 
-#header a:hover, #sidebar a:hover{
+#sidebar a:hover {
+	color: #e85d00;
+}
+
+.nav-link {
+	text-decoration: none;
+}
+
+.nav-link:hover {
 	text-decoration: underline;
+}
+
+
+#sidebar {
+	border-top: 1px solid #cccccc;
+	margin: 2rem 0;
+	padding-top: 1rem;
 }
 
 @media (min-width: 960px) {
   /* Larger than desktop */
 
 	#sidebar {
-		margin-top: 250px;
-		padding-left: 1.2rem;
+		margin-top: 9rem;
+		padding-left: 1rem;
 		border-left: 1px solid #cccccc;
+		border-top: none;
 
 	}
 }
