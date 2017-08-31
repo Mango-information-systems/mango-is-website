@@ -138,7 +138,6 @@ article.post {
 
 #sidebar a {
     line-height: 1.1;
-    display: block;
     margin: 0 0 0.5rem 0;
 }
 
@@ -146,17 +145,10 @@ article.post {
 	text-decoration: underline;
 }
 
-/* Blog sidebar - larger screens only */
-
-#sidebar {
-	display: none;
-}
-
-/* Larger than desktop */
-@media (min-width: 1000px) {
+@media (min-width: 960px) {
+  /* Larger than desktop */
 
 	#sidebar {
-		display: block;
 		margin-top: 250px;
 		padding-left: 1.2rem;
 		border-left: 1px solid #cccccc;
