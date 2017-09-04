@@ -32,16 +32,16 @@
 <div class="row">
 	<div class="twelve columns">
 		<a class="u-pull-right" title="rss feed" href="<%- url_for(config.feed.path) %>"><i class="fa fa-rss-square" aria-label="RSS feed"></i></a>
+
+	<% if (page.total > 1){ %>
+		<nav id="page-nav">
+			<%- paginator({
+				prev_text: "<i class='fa fa-chevron-left' aria-hidden='true'></i>",
+				next_text: "<i class='fa fa-chevron-right' aria-hidden='true'></i>"
+			}) %>
+		</nav>
+	<% } %>
 	</div>
 </div>
-
-<% if (page.total > 1){ %>
-	<nav id="page-nav">
-		<%- paginator({
-			prev_text: "<i class='fa fa-chevron-left' aria-hidden='true'></i>",
-			next_text: "<i class='fa fa-chevron-right' aria-hidden='true'></i>"
-		}) %>
-	</nav>
-<% } %>
 
 <!-- / archive -->
