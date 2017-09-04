@@ -29,18 +29,18 @@ sections:
    - type: post
      content:
       class: index
-      path: /tools/multiga/
-      thumbnail: /img/thumbnails/multiGa.png
-      title: "multiGa: realtime traffic dashboard for your websites"
-      subtitle: Free dashboard showing Google Analytics live traffic data for multiple websites. Ideal to find out if it's the right moment to upgrade your server ;)
-      footer: false
-   - type: post
-     content:
-      class: index
       path: /tools/myTagOverflow/
       thumbnail: /img/thumbnails/myTagOverflow.png
       title: "myTagOverflow: showcase your top tags from stackOverflow"
       subtitle: Need to demonstrate your technical abilities? myTagOverflow shows the tags on which you have been active in a cool graph visualization.
+      footer: false
+   - type: post
+     content:
+      class: index
+      path: /tools/multiga/
+      thumbnail: /img/thumbnails/multiGa.png
+      title: "multiGa: realtime traffic dashboard for your websites"
+      subtitle: Free dashboard showing Google Analytics live traffic data for multiple websites. Ideal to find out if it's the right moment to upgrade your server ;)
       footer: false
    - type: post
      content:
