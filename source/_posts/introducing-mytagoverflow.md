@@ -28,7 +28,7 @@ Then I had a look at [stackOverflow](http://stackoverflow.com/), the leading for
 
 This is great, because it lets us build a [graph](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)), and use cool graph processing algorithms (#dataScienceRocks 👌 ).
 
-Fast forward a day or hacking and I now have implementation that looks good enough to release.
+Fast forward a few days of hacking and there is now an implementation that looks good enough to release.
 
 ## How to use myTagOverflow
 
