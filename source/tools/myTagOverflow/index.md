@@ -3,10 +3,10 @@ layout: landing
 title: "myTagOverflow: showcase your top tags from stackOverflow"
 author: Mango Information Systems
 date: 2016-10-24 16:29:26
-description: Need to demonstrate your technical abilities? myTagOverflow shows the tags on which you have been active in a cool graph visualization.
+description: Need to demonstrate your technical abilities? myTagOverflow shows the tags you're most active on in a cool graph visualization.
 thumbnail: /img/thumbnails/myTagOverflow.png
 css: [myTagOverflow.css]
-scripts: [https://api.stackexchange.com/js/2.0/all.js, js/myTagOverflow.js]
+scripts: [https://api.stackexchange.com/js/2.0/all.js, js/myTagOverflowChecker.js]
 __index: true
 sections:
  -
@@ -47,9 +47,9 @@ sections:
    - type: p
      value: If you like it, you may be interested by <a href="http://p.migdal.pl/tagoverflow/?site=stackoverflow&size=16">tagOverflow</a>, a similar project (independent from myTagOverflow) generating a similar visualization for the whole stackExchange sites (not per user).
    - type: h4
-     value: Your privacy respected
+     value: Your privacy is paramount
    - type: p
-     value: The websites traffic data coming from stackExchange transits directly from stackExchange to your browser screen, without ever passing through our servers.
+     value: Data from stackExchange never passes through our servers. It goes directly from StackExchange to your browsers.
    - type: h4
      value: Open source
    - type: p

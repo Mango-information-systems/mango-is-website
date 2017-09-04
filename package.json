@@ -1,6 +1,6 @@
 {
   "name": "mango-is-website",
-  "version": "3.18.1",
+  "version": "3.19.0",
   "private": true,
   "scripts": {
     "start": "npm run build:static && cp config/dev.theme._config.yml themes/mango-information-systems/_config.yml && npm run watch & hexo server & npm run watch:socketServer",
@@ -16,7 +16,7 @@
     "start:socketServer": "node ./dynamic/server",
     "test": "node_modules/.bin/mocha",
     "watch": "npm run watch:js & npm run watch:skeleton",
-    "watch:js": "watchify dynamic/client.js -o source/js/site.js -v --poll=2000 & watchify -t brfs dynamic/g-realtime.js -o source/js/g-realtime.js -v --poll=2000 & watchify -t brfs dynamic/myTagOverflow.js -o source/js/myTagOverflow.js -v --poll=2000",
+    "watch:js": "watchify dynamic/client.js -o source/js/site.js -v --poll=2000 & watchify -t brfs dynamic/g-realtime.js -o source/js/g-realtime.js -v --poll=2000 & watchify -t brfs dynamic/myTagOverflowChecker.js -o source/js/myTagOverflowChecker.js -v --poll=2000 & watchify -t brfs dynamic/myTagOverflow.js -o source/js/myTagOverflow.js -v --poll=2000",
     "watch:skeleton": "cd skeleton-framework && npm run watch",
     "watch:socketServer": "nodemon --watch dynamic dynamic/server.js"
   },
@@ -29,7 +29,7 @@
   "dependencies": {
     "brfs": "^1.4.3",
     "browserify": "^13.0.1",
-    "d3": "^4.2.8",
+    "d3": "^4.10.2",
     "d3-scale-chromatic": "^1.1.0",
     "debug": "^2.2.0",
     "easyedit": "git://github.com/Mango-information-systems/easyedit.git#master",
@@ -63,7 +63,7 @@
     "mocha": "^2.5.3",
     "nodemon": "^1.9.2",
     "should": "^9.0.2",
-    "uglify-es": "^3.0.27",
+    "uglify-es": "^3.0.28",
     "uglifyify": "^4.0.3",
     "watchify": "^3.7.0"
   }

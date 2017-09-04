@@ -14,4 +14,5 @@ source/css/normalize.css
 source/js/site.js
 source/js/g-realtime.js
 source/js/myTagOverflow.js
+source/js/myTagOverflowChecker.js
 themes/mango-information-systems/source/js/smoothscroll.min.js
