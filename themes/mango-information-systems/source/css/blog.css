@@ -47,6 +47,10 @@ body {
 
 .archive-post { margin-bottom: 4rem; }
 
+.page-number {
+	margin: 0 .25rem;
+}
+
 #article-end {
 	margin-bottom: 1rem;
 }
