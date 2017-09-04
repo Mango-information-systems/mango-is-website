@@ -29,7 +29,7 @@
   "dependencies": {
     "brfs": "^1.4.3",
     "browserify": "^13.0.1",
-    "d3": "^4.2.8",
+    "d3": "^4.10.2",
     "d3-scale-chromatic": "^1.1.0",
     "debug": "^2.2.0",
     "easyedit": "git://github.com/Mango-information-systems/easyedit.git#master",
@@ -63,7 +63,7 @@
     "mocha": "^2.5.3",
     "nodemon": "^1.9.2",
     "should": "^9.0.2",
-    "uglify-es": "^3.0.27",
+    "uglify-es": "^3.0.28",
     "uglifyify": "^4.0.3",
     "watchify": "^3.7.0"
   }
