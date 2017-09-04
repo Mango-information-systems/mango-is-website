@@ -13,8 +13,12 @@
 
 	if (is_category())
 		title = page.category
+		
+	if (!is_post())
+		title = title + ' | ' + config.title
+		
 	%>
-	<title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+	<title><%= title %></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<%- open_graph({
 		url: url
