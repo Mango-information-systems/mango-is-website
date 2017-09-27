@@ -32,9 +32,11 @@ var tableWidthClass = data.length === 1? 'u-narrow' : 'u-full-width'
 		<thead>
 			<tr>
 			<%
-			rows.titles.forEach(function(title) {
+			rows.titles.forEach(function(title, index) {
+				
+				titleClass = index == rows.primaryIndex? ' primary' : ''
 			%>
-				<th><%- title %></th>
+				<th class="<%- titleClass %>"><%- title %></th>
 			<%
 				})
 			%>
