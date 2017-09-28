@@ -25,7 +25,19 @@ sections:
      class: row
      value: This page is a draft and its content does not constitute an actual offer. Contact us, or wait for its official publication.
  -
+  # Benefits
+  content:
+   - type: h3
+     value: Benefits
+   - type: p
+     value: <i class="fa fa-calendar-o fa-fw fa-2x" aria-hidden="true"></i> Get more time to focus on what matters
+   - type: p
+     value: <i class="fa fa-check-circle fa-fw fa-2x" aria-hidden="true"></i> Reduce the errors caused by manual processing of data
+   - type: p
+     value: <i class="fa fa-bar-chart fa-fw fa-2x" aria-hidden="true"></i> Track your expenses and decrease your costs
+ -
   # How it works
+  # Perhaps to be replaced by the visual section above
   content:
    - type: h3
      value: How it works
