@@ -85,6 +85,9 @@ sections:
        CTA:
         label: Free trial
         trg: /pullReceipt-small
+   - type: p
+     class: u-text-center
+     value: 14 days free trial for all plans
  -
   # About
   content:
