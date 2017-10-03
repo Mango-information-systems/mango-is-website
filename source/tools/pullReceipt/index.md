@@ -5,8 +5,8 @@ author: Mango Information Systems
 date: 2016-10-24 16:29:26
 description: pullReceipt automates the most boring parts of your business administration
 thumbnail: /img/thumbnails/pullReceipt.png
-css: [pullReceipt.css]
-scripts: []
+css: []
+scripts: [js/pullReceipt.js]
 __index: true
 sections:
  -
@@ -93,8 +93,13 @@ sections:
         label: Free trial
         trg: /pullReceipt-small
    - type: p
-     class: u-text-center
+     class: u-text-center small
      value: 14 days free trial for all plans
+   - type: custom
+     value: <br>
+   - type: div
+     class: u-text-center alert
+     value: Custom and enterprise plans - <a href="/contact/">contact us</a>
  -
   # About
   content:
@@ -106,4 +111,5 @@ sections:
      value: The concept is to have a very simple and user-friendly tool doing the job, and have more free time to do value-added work - or simply to relax ;)
    - type: p
      value: Feedback and feature requests are welcome, <a href="/contact/">send us a message</a>.
+
 ---
