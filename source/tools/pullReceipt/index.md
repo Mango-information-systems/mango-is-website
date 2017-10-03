@@ -14,7 +14,7 @@ sections:
   content:
    - type: h1
      class: small
-     value: pullReceipt - simple invoice extractor
+     value: pullReceipt - simple invoice extractor <span class="u-pull-right"><sup style="color:#aaa;">launching soon</sup></span>
    - type: h2
      class: small
      value: save time by automating the processing of your incoming administrative documents	
@@ -31,8 +31,12 @@ sections:
      value: Benefits
    - type: p
      value: <i class="fa fa-calendar-o fa-fw fa-2x" aria-hidden="true"></i> Get more time to focus on what matters
+   - type: custom
+     value: <br>
    - type: p
      value: <i class="fa fa-check-circle fa-fw fa-2x" aria-hidden="true"></i> Reduce the errors caused by manual processing of data
+   - type: custom
+     value: <br>
    - type: p
      value: <i class="fa fa-bar-chart fa-fw fa-2x" aria-hidden="true"></i> Track your expenses and decrease your costs
  -
@@ -56,6 +60,7 @@ sections:
      offers:
       -
        title: Large<br>200<small>€ / Month</small>
+       type: large
        content:
         - Up to 20 email accounts
         - 3000 invoices per quarter
@@ -66,6 +71,7 @@ sections:
         trg: /pullReceipt-large
       -
        title: Medium<br>35<small>€ / Month</small>
+       type: medium
        content:
         - Up to 5 email accounts
         - 1000 invoices per quarter
@@ -76,6 +82,7 @@ sections:
         trg: /pullReceipt-medium
       -
        title: Small<br>10<small>€ / Month</small>
+       type: small
        primary: true
        content:
         - 1 email account
