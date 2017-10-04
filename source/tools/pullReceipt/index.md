@@ -14,7 +14,7 @@ sections:
   content:
    - type: h1
      class: small
-     value: pullReceipt - simple invoice extractor <span class="u-pull-right"><sup style="color:#aaa;">launching soon</sup></span>
+     value: pullReceipt - simple invoice extractor <sup style="color:#aaa;">coming soon</sup>
    - type: h2
      class: small
      value: save time by automating the processing of your incoming administrative documents	
@@ -51,6 +51,8 @@ sections:
      value: "<li>Connect your email account</li>
 		<li>Choose the action to be done for each invoice's sender</li>
 		<li>pullReceipt will automatically process the recognized documents as instructed, and prompt you whenever you have a new provider.</li>"
+   - type: p
+     value: While pullReceipt saves your time, you stay in control.
  -
   # Pricing
   content:
@@ -111,5 +113,4 @@ sections:
      value: The concept is to have a very simple and user-friendly tool doing the job, and have more free time to do value-added work - or simply to relax ;)
    - type: p
      value: Feedback and feature requests are welcome, <a href="/contact/">send us a message</a>.
-
 ---
