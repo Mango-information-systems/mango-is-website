@@ -114,7 +114,7 @@ sections:
    - type: p
      value: Feedback and feature requests are welcome, <a href="/contact/">send us a message</a>.
    - type: custom
-     value: "<button class='js-modal-show'>Show</button>
+     value: "
          <div class='modal'>
 		  <div class='modal__dialog'>
 			<div class='modal-close-icon'>
