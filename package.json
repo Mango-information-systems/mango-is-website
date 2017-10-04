@@ -27,6 +27,7 @@
     "request": "xhr"
   },
   "dependencies": {
+    "@yuanqing/modal": "^0.1.0",
     "brfs": "^1.4.3",
     "browserify": "^13.0.1",
     "d3": "^4.10.2",

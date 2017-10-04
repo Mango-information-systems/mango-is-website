@@ -113,4 +113,22 @@ sections:
      value: The concept is to have a very simple and user-friendly tool doing the job, and have more free time to do value-added work - or simply to relax ;)
    - type: p
      value: Feedback and feature requests are welcome, <a href="/contact/">send us a message</a>.
+   - type: custom
+     value: "<button class='js-modal-show'>Show</button>
+         <div class='modal'>
+		  <div class='modal__dialog'>
+			<div class='modal-close-icon'>
+				<a href='javascript:void(0)' class='js-modal-hide'><i class='fa fa-times' aria-hidden='true'></i></a>
+			</div>
+			<div>
+				<h4>modal title</h4>
+				<p> text</p>
+			</div>
+			<div class='u-pull-right'>
+				<button class='js-modal-hide button-sm'>Cancel</button> 
+				<button class='js-modal-hide button-primary button-sm'>Send</button>
+			  </div>
+		  </div>
+		</div>
+     "
 ---
