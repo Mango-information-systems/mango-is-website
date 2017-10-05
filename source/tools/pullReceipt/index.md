@@ -122,7 +122,7 @@ sections:
 			</div>
 			<div>
 				<h4>modal title</h4>
-				<p>pullReceips is to be launched in Q1 2018.</p>
+				<p>pullReceipt is to be launched in Q1 2018.</p>
 				<p>Subscribe to be notified when it's ready.</p>
 				<p class-'u-pull-right'><small><sup class='asterisk'>*</sup> indicates required</p>
 				<div class='mc-field-group'>
