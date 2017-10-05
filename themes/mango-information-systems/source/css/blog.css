@@ -47,7 +47,11 @@ body {
 
 .archive-post { margin-bottom: 4rem; }
 
-#article-end {
+.page-number {
+	margin: 0 .25rem;
+}
+
+#article-end, #page-nav {
 	margin-bottom: 1rem;
 }
 .postFooter, .postFooter a {
