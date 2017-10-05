@@ -115,44 +115,49 @@ sections:
      value: Feedback and feature requests are welcome, <a href="/contact/">send us a message</a>.
    - type: custom
      value: "
-         <div class='modal'>
-		  <div class='modal__dialog'>
-			<div class='modal-close-icon'>
-				<a href='javascript:void(0)' class='js-modal-hide'><i class='fa fa-times' aria-hidden='true'></i></a>
-			</div>
-			<div>
-				<h4>modal title</h4>
-				<p>pullReceipt is to be launched in Q1 2018.</p>
-				<p>Subscribe to be notified when it's ready.</p>
-				<p class-'u-pull-right'><small><sup class='asterisk'>*</sup> indicates required</p>
-				<div class='mc-field-group'>
+		<div class='modal'>
+		   <div class='modal__dialog'>
+			  <div class='modal-inner container'>
+				  <div class='modal-close-icon'>
+					 <a href='javascript:void(0)' class='js-modal-hide'><i class='fa fa-times' aria-hidden='true'></i></a>
+				  </div>
+				 <h4>Launching in Q1 2018</h4>
+				 <p>Subscribe to be notified when it's ready.</p>
+				 <p class='u-pull-right'><small><sup class='asterisk'>*</sup> indicates required</small></p>
+				 <div class='mc-field-group'>
 					<label for='mce-EMAIL'>Email Address  <span class='asterisk'>*</span>
-				</label>
-					<input type='email' value='' name='EMAIL' class='required email' id='mce-EMAIL'>
-				</div>
-				<div class='mc-field-group'>
-					<label for='mce-FNAME'>First Name </label>
-					<input type='text' value='' name='FNAME' class='' id='mce-FNAME'>
-				</div>
-				<div class='mc-field-group'>
-					<label for='mce-LNAME'>Last Name </label>
-					<input type='text' value='' name='LNAME' class='' id='mce-LNAME'>
-				</div>
-				<div class='mc-field-group'>
+					</label>
+					<input type='email' value='' name='EMAIL' class='required email u-full-width' required id='mce-EMAIL'>
+				 </div>
+				 <div class='row'>
+					 <div class='six columns'>
+						 <div class='mc-field-group'>
+							<label for='mce-FNAME'>First Name </label>
+							<input type='text' value='' name='FNAME' class='u-full-width' id='mce-FNAME'>
+						 </div>
+					 </div>
+					 <div class='six columns'>
+						 <div class='mc-field-group'>
+							<label for='mce-LNAME'>Last Name </label>
+							<input type='text' value='' name='LNAME' class='u-full-width' id='mce-LNAME'>
+						 </div>
+					 </div>
+				 </div>
+				 <div class='mc-field-group'>
 					<label for='mce-COMPANY'>Company </label>
-					<input type='text' value='' name='COMPANY' class='' id='mce-COMPANY'>
-				</div>
-				<div class='mc-field-group'>
+					<input type='text' value='' name='COMPANY' class='u-full-width' id='mce-COMPANY'>
+				 </div>
+				 <div class='mc-field-group'>
 					<label for='mce-MAILER'>Mail provider </label>
-					<input type='text' value='' name='MAILER' class='' id='mce-MAILER'>
-				</div>
-				<p><small>Early adopters will be rewarded with a discount 👌</small></p>
-			</div>
-			<div class='u-pull-right'>
-				<button class='js-modal-hide button-sm'>Cancel</button> 
-				<button class='js-modal-hide button-primary button-sm'>Send</button>
+					<input type='text' value='' name='MAILER' class='u-full-width' id='mce-MAILER'>
+				 </div>
+				 <p><small>Early adopters will be rewarded with a discount 👌</small></p>
+				 <div class='u-pull-right'>
+					<button class='js-modal-hide button-sm'>Cancel</button> 
+					<button class='js-modal-hide button-primary button-sm'>Send</button>
+				 </div>
 			  </div>
-		  </div>
+		   </div>
 		</div>
      "
 ---
