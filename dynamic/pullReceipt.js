@@ -49,3 +49,25 @@ for (let i = 0; i < ctas.length; i++) {
 	})
 	
 }
+
+
+document.getElementById('form-submit').addEventListener('click', function(e){
+		
+	e.preventDefault()
+	e.stopPropagation()
+	
+	if (document.getElementById('mce-EMAIL').value !== '') {
+	
+		document.getElementById('mc-embedded-subscribe-form').submit()
+		
+		m.hide()
+	}
+	else {
+		document.getElementById('mce-EMAIL').classList.add('has-error')
+		document.getElementById('mce-error-response').innerHTML = 'Please enter an email address'
+		
+	}
+	
+	
+	return false
+})

@@ -118,16 +118,20 @@ sections:
 		<div class='modal'>
 		   <div class='modal__dialog'>
 			  <div class='modal-inner container'>
+				  <form action='//mango-is.us16.list-manage.com/subscribe/post?u=a27b17b4350acdfeb2df9c9c6&amp;id=c59f539df6' method='post' id='mc-embedded-subscribe-form' name='mc-embedded-subscribe-form' target='_blank'>
 				  <div class='modal-close-icon'>
 					 <a href='javascript:void(0)' class='js-modal-hide'><i class='fa fa-times' aria-hidden='true'></i></a>
 				  </div>
+				  
 				 <h4>Launching in Q1 2018</h4>
-				 <p>Be notified when it's ready.</p>
-				 <p class='u-pull-right'><small><sup class='asterisk'>*</sup> indicates required</small></p>
+				 <p>Be notified when it's ready.<span class='u-pull-right'><small><sup>*</sup> indicates required</small></span></p>
+				 
+				 
 				 <div class='mc-field-group'>
-					<label for='mce-EMAIL'>Email address  <span class='asterisk'>*</span>
+					<label for='mce-EMAIL'>Email address  <sup>*</sup>
 					</label>
-					<input type='email' value='' name='EMAIL' class='required email u-full-width' required id='mce-EMAIL'>
+					<input type='email' value='' name='EMAIL' class='u-full-width' required id='mce-EMAIL'>
+					<div class='response' id='mce-error-response'></div>
 				 </div>
 				 <div class='row'>
 					 <div class='six columns'>
@@ -177,7 +181,7 @@ sections:
 					 <!-- real people should not fill this in and expect good things - mailChimp HP-->
 					<div style='position: absolute; left: -5000px;' aria-hidden='true'><input type='text' name='b_a27b17b4350acdfeb2df9c9c6_c59f539df6' tabindex='-1' value=''></div>
 					<button class='js-modal-hide button-sm'>Cancel</button> 
-					<button class='js-modal-hide button-primary button-sm'>Subscribe</button>
+					<button id='form-submit' class='button-primary button-sm'>Subscribe</button>
 				 </div>
 			  </div>
 		   </div>
