@@ -29,16 +29,12 @@ sections:
   content:
    - type: h3
      value: Benefits
-   - type: p
-     value: <i class="fa fa-calendar-o fa-fw fa-2x" aria-hidden="true"></i> Get more time to focus on what matters
-   - type: custom
-     value: <br>
-   - type: p
-     value: <i class="fa fa-check-circle fa-fw fa-2x" aria-hidden="true"></i> Reduce the errors caused by manual processing of data
-   - type: custom
-     value: <br>
-   - type: p
-     value: <i class="fa fa-bar-chart fa-fw fa-2x" aria-hidden="true"></i> Track your expenses and decrease your costs
+   - type: h4
+     value: <i class="fa fa-calendar-o fa-fw fa-lg" aria-hidden="true"></i> Get more time to focus on what matters
+   - type: h4
+     value: <i class="fa fa-check-circle fa-fw fa-lg" aria-hidden="true"></i> Reduce the errors caused by manual processing of data
+   - type: h4
+     value: <i class="fa fa-bar-chart fa-fw fa-lg" aria-hidden="true"></i> Track your expenses and decrease your costs
  -
   # How it works
   # Perhaps to be replaced by the visual section above
