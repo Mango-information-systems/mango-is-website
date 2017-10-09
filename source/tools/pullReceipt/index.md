@@ -122,23 +122,23 @@ sections:
 					 <a href='javascript:void(0)' class='js-modal-hide'><i class='fa fa-times' aria-hidden='true'></i></a>
 				  </div>
 				 <h4>Launching in Q1 2018</h4>
-				 <p>Subscribe to be notified when it's ready.</p>
+				 <p>Be notified when it's ready.</p>
 				 <p class='u-pull-right'><small><sup class='asterisk'>*</sup> indicates required</small></p>
 				 <div class='mc-field-group'>
-					<label for='mce-EMAIL'>Email Address  <span class='asterisk'>*</span>
+					<label for='mce-EMAIL'>Email address  <span class='asterisk'>*</span>
 					</label>
 					<input type='email' value='' name='EMAIL' class='required email u-full-width' required id='mce-EMAIL'>
 				 </div>
 				 <div class='row'>
 					 <div class='six columns'>
 						 <div class='mc-field-group'>
-							<label for='mce-FNAME'>First Name </label>
+							<label for='mce-FNAME'>First name </label>
 							<input type='text' value='' name='FNAME' class='u-full-width' id='mce-FNAME'>
 						 </div>
 					 </div>
 					 <div class='six columns'>
 						 <div class='mc-field-group'>
-							<label for='mce-LNAME'>Last Name </label>
+							<label for='mce-LNAME'>Last name </label>
 							<input type='text' value='' name='LNAME' class='u-full-width' id='mce-LNAME'>
 						 </div>
 					 </div>
@@ -148,13 +148,36 @@ sections:
 					<input type='text' value='' name='COMPANY' class='u-full-width' id='mce-COMPANY'>
 				 </div>
 				 <div class='mc-field-group'>
-					<label for='mce-MAILER'>Mail provider </label>
-					<input type='text' value='' name='MAILER' class='u-full-width' id='mce-MAILER'>
+					<label>Mail provider </label>
+					 <div class='row'>
+						 <div class='four columns'>
+							 <div class='mc-field-group'>
+								<label for='mce-MAILER-0'><input type='radio' id='mce-MAILER-0'
+								 name='MAILER' value='Gmail'> <span class='label-body'><i class='fa fa-google fa-fw' aria-hidden='true'></i> Gmail</span></label>
+							 </div>
+						 </div>
+						 <div class='four columns'>
+							 <div class='mc-field-group'>
+								<label for='mce-MAILER-1'><input type='radio' id='mce-MAILER-1'
+								 name='MAILER' value='Outlook'> <span class='label-body'><i class='fa fa-windows fa-fw' aria-hidden='true'></i> Outlook</span></label>
+							 </div>
+						 </div>
+						 <div class='four columns'>
+							 <div class='mc-field-group'>
+								<label for='mce-MAILER-2'><input type='radio' id='mce-MAILER-2'
+								 name='MAILER' value='Other'> <span class='label-body'><i class='fa fa-envelope fa-fw' aria-hidden='true'></i> Other</span></label>
+							 </div>
+						 </div>
+					 </div>
+					
 				 </div>
 				 <p><small>Early adopters will be rewarded with a discount 👌</small></p>
 				 <div class='u-pull-right'>
+					 <input type='hidden' value='' name='PLAN' class='u-full-width' id='mce-PLAN'>
+					 <!-- real people should not fill this in and expect good things - mailChimp HP-->
+					<div style='position: absolute; left: -5000px;' aria-hidden='true'><input type='text' name='b_a27b17b4350acdfeb2df9c9c6_c59f539df6' tabindex='-1' value=''></div>
 					<button class='js-modal-hide button-sm'>Cancel</button> 
-					<button class='js-modal-hide button-primary button-sm'>Send</button>
+					<button class='js-modal-hide button-primary button-sm'>Subscribe</button>
 				 </div>
 			  </div>
 		   </div>

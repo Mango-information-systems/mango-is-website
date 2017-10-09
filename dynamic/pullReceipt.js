@@ -9,14 +9,12 @@
  * 
  * ***************************************/
 
-var modal = require('@yuanqing/modal')
+// following may be moved to a separate module, should it be needed in a separate page
+let modal = require('@yuanqing/modal')
 
-
-var elem = document.querySelector('.modal')
-
-
-var opts = {
-	showSelector: '.dummy'
+// setup modal options
+let opts = {
+	showSelector: '.dummy' // selector to show modal set separately below (in order to process click on 'a' links and have support for fallback in case js is disabled
 	, hideSelector: '.js-modal-hide'
 	, dialogSelector: '.modal__dialog'
 	, fade: {
@@ -25,19 +23,20 @@ var opts = {
 	}
 }
 
+// select moal DOM element
+let elem = document.querySelector('.modal')
 
-var m = modal(elem, opts)
+// initialize modal
+let m = modal(elem, opts)
 
 
 
-
+// bind modal display to CTA clicks
 document.getElementsByClassName('cta')
 
+let ctas = document.getElementsByClassName('cta')
 
-
-var ctas = document.getElementsByClassName('cta')
-
-for (var i = 0; i < ctas.length; i++) {
+for (let i = 0; i < ctas.length; i++) {
 	
 	ctas[i].addEventListener('click', function(e){
 		
