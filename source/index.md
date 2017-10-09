@@ -166,19 +166,31 @@ sections:
     value: About us
     id: about-us
    -
-    type: p
-    value: Mango Information Systems is a consulting company operating since 2010 from Brussels, Belgium.
+    type: custom
+    value: "<div class='row'>
+		<div class='four columns'>
+			<img src='/img/mehdi-el-fadil-1.jpg' class='u-img-responsive'/>
+		</div>
+		<div class='eight columns'>
+			<p>Mango Information Systems is a consulting company operating since 2010 from Brussels, Belgium.</p>
+			
+			<p>It was founded by <a href='https://www.linkedin.com/in/elfadme/' target='_blank'>Mehdi El Fadil</a>, a Business Intelligence and web technologies specialist who helps guide business managers through their data analysis and technology challenges. He focusses on finding new profits and efficiencies for clients.</p>
+			
+			<p>Due to his experience establishing Mango Information System, <strong>Mehdi is comfortable wearing a business and a technical hat</strong>. With sound business experience, he talks your language.</p>
+			
+			<p>We act as a bridge between business and technical teams, and provide the following type of services:</p>
+			
+			<ul><li>Contracting authority support</li> <li>Strategic consulting</li> <li>Business analysis</li> <li>Technical experts in complex data-intensive projects</li></ul>
+		</div>
+	</div>"
    -
-    type: p
-    value: It was founded by <a href="https://www.linkedin.com/in/elfadme/" target="_new">Mehdi El Fadil</a>.
-   -
-    type: p
-    value: "We act as a bridge between business and technical teams, and provide the following type of services:"
-   - type: ul
-     value: "<li>Contracting authority support</li>
-			<li>Strategic consulting</li>
-			<li>Business analysis</li>
-			<li>Technical experts in complex data-intensive projects</li>"
+    type: custom
+    value: "<details>
+	  <summary>Read more: Mehdi's skills in data visalization and web technologies</summary>
+	  <p>Mehdi helps other developers on the forum <a href='https://stackoverflow.com/users/1006854/mehdi-el-fadil' target='_blank'>stackOverflow</a>, the graph below summarizes the technologies on which he is the most active. Data has been extracted using our own tool <a href='/tools/myTagOverflow'> myTagOverflow</a>.</p>
+	  <img src='/img/mehdi-el-fadil-myTagOverflow-graph.jpg' class='u-img-responsive'/>
+	  <small class='u-pull-right'>last update: October 5th, 2017.</small>
+	</details>"
  -
   # section: client logos
   content:
