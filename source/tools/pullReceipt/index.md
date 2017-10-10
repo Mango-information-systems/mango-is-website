@@ -3,7 +3,7 @@ layout: landing
 title: "pullReceipt: simple invoice extractor"
 author: Mango Information Systems
 date: 2016-10-24 16:29:26
-description: pullReceipt automates the most boring parts of your business administration
+description: pullReceipt automates the boring parts of your business administration
 thumbnail: /img/thumbnails/pullReceipt.png
 css: []
 scripts: [js/pullReceipt.js]
@@ -17,7 +17,7 @@ sections:
      value: pullReceipt - simple invoice extractor <sup style="color:#aaa;">coming soon</sup>
    - type: h2
      class: small
-     value: save time by automating the processing of your incoming administrative documents	
+     value: save time by automattically processing your incoming administrative documents	
  -
   # Visual
   content:
@@ -32,9 +32,9 @@ sections:
    - type: h4
      value: <i class="fa fa-calendar-o fa-fw fa-lg" aria-hidden="true"></i> Get more time to focus on what matters
    - type: h4
-     value: <i class="fa fa-check-circle fa-fw fa-lg" aria-hidden="true"></i> Reduce the errors caused by manual processing of data
+     value: <i class="fa fa-check-circle fa-fw fa-lg" aria-hidden="true"></i> Reduce errors caused by manual processing of data
    - type: h4
-     value: <i class="fa fa-bar-chart fa-fw fa-lg" aria-hidden="true"></i> Track your expenses and decrease your costs
+     value: <i class="fa fa-bar-chart fa-fw fa-lg" aria-hidden="true"></i> Track your expenses and reduce your costs
  -
   # How it works
   # Perhaps to be replaced by the visual section above
@@ -42,13 +42,13 @@ sections:
    - type: h3
      value: How it works
    - type: p
-     value: pullReceipt detects all the incoming invoices / receipts in your mailbox, and forwards them to management software or your accountant automatically.
+     value: pullReceipt detects all incoming invoices and receipts in your mailbox and forwards them to management software or your accountant automatically.
    - type: ol
      value: "<li>Connect your email account</li>
-		<li>Choose the action to be done for each invoice's sender</li>
+		<li>Choose what to do for each invoice's sender</li>
 		<li>pullReceipt will automatically process the recognized documents as instructed, and prompt you whenever you have a new provider.</li>"
    - type: p
-     value: While pullReceipt saves your time, you stay in control.
+     value: pullReceipt saves you time while helping you stay in control.
  -
   # Pricing
   content:
@@ -63,7 +63,7 @@ sections:
         - Up to 20 email accounts
         - 3000 invoices per quarter
         - unlimited actions
-        - Expenses analysis
+        - analysis of expenses
        CTA:
         label: Free trial
         trg: /pullReceipt-large
@@ -104,7 +104,7 @@ sections:
    - type: h3
      value: About
    - type: p
-     value: pullReceipt was imagined by Mehdi El Fadil, as he was spending his quarterly 8 hours to retrieve all receipts and send them to his accountant.
+     value: The idea for pullReceipt came to Mehdi El Fadil, as he was spending his quarterly 8 hours to retrieve all receipts and send them to his accountant.
    - type: p
      value: The concept is to have a very simple and user-friendly tool doing the job, and have more free time to do value-added work - or simply to relax ;)
    - type: p
@@ -120,7 +120,7 @@ sections:
 				  </div>
 				  
 				 <h4>Launching in Q1 2018</h4>
-				 <p>Be notified when it's ready.<span class='u-pull-right'><small><sup>*</sup> indicates required</small></span></p>
+				 <p>Get an update when it's ready.<span class='u-pull-right'><small><sup>*</sup> indicates required</small></span></p>
 				 
 				 
 				 <div class='mc-field-group'>
