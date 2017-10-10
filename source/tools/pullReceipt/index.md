@@ -26,25 +26,25 @@ sections:
      value: "
 		 <div class='four columns'>
 			 <br>
-			 <img class='u-img-responsive' src='http://via.placeholder.com/350x250'/>
+			 <img class='u-img-responsive' src='/img/pullReceipt-connect.png' alt='illustration of pullReceipt connections manager' width='350px'/>
 			 <br>
-			 <p>1. Connect your email account</p>
+			 <p>1. Connect your email accounts</p>
 			 <span class='next-right'><i class='fa fa-angle-right fa-lg' aria-hidden='true'></i></span>
 			 <span class='next-bottom'><i class='fa fa-angle-down fa-lg' aria-hidden='true'></i></span>
 		 </div>
 		 <div class='four columns'>
 			 <br>
-			 <img class='u-img-responsive' src='http://via.placeholder.com/350x250'/>
+			 <img class='u-img-responsive' src='/img/pullReceipt-detect.png' alt='illustration of pullReceipt connections manager' width='350px'/>
 			 <br>
-			 <p>2. pullReceipt identifies all of your invoices</p>
+			 <p>2. pullReceipt identifies all the invoices</p>
 			 <span class='next-right'><i class='fa fa-angle-right fa-lg' aria-hidden='true'></i></span>
 			 <span class='next-bottom'><i class='fa fa-angle-down fa-lg' aria-hidden='true'></i></span>
 		 </div>
 		 <div class='four columns'>
 			 <br>
-			 <img class='u-img-responsive' src='http://via.placeholder.com/350x250'/>
+			 <img class='u-img-responsive' src='/img/pullReceipt-process.png' alt='illustration of pullReceipt connections manager' width='350px'/>
 			 <br>
-			 <p>3. Decide how each type of invoice should be processed</p>
+			 <p>3. Decide how to process each document</p>
 		 </div>
 		"
  -
@@ -60,7 +60,6 @@ sections:
      value: <i class="fa fa-bar-chart fa-fw fa-lg" aria-hidden="true"></i> Track your expenses and reduce your costs
  -
   # How it works
-  # Perhaps to be replaced by the visual section above
   content:
    - type: h3
      value: How it works
