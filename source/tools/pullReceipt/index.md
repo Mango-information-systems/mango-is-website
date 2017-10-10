@@ -21,6 +21,8 @@ sections:
  -
   # Visual
   content:
+   - type: h3
+     value: Powerful and easy to use
    - type: div
      class: row sequence-container
      value: "
@@ -58,19 +60,6 @@ sections:
      value: <i class="fa fa-check-circle fa-fw fa-lg" aria-hidden="true"></i> Reduce errors caused by manual processing of data
    - type: h4
      value: <i class="fa fa-bar-chart fa-fw fa-lg" aria-hidden="true"></i> Track your expenses and reduce your costs
- -
-  # How it works
-  content:
-   - type: h3
-     value: How it works
-   - type: p
-     value: pullReceipt detects all incoming invoices and receipts in your mailbox and forwards them to management software or your accountant automatically.
-   - type: ol
-     value: "<li>Connect your email account</li>
-		<li>Choose what to do for each invoice's sender</li>
-		<li>pullReceipt will automatically process the recognized documents as instructed, and prompt you whenever you have a new provider.</li>"
-   - type: p
-     value: pullReceipt saves you time while helping you stay in control.
  -
   # Pricing
   content:
