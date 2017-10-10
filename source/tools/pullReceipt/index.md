@@ -17,7 +17,7 @@ sections:
      value: pullReceipt - simple invoice extractor <sup style="color:#aaa;">coming soon</sup>
    - type: h2
      class: small
-     value: save time by automattically processing your incoming administrative documents	
+     value: save time by automatically processing your incoming administrative documents
  -
   # Visual
   content:
