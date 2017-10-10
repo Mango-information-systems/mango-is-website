@@ -40,15 +40,41 @@ section a.brand img {
 	}
 }
 
+/* sections background images */
 
 section:nth-child(odd) {
 	background-color: #eee;
-    background: url("/img/bg-pattern-2x.jpg") repeat fixed;
+    background-image: url("/img/bg-pattern-2x.jpg");
+    background-repeat: repeat;
+    background-attachment: cover;
     background-size: 75px 62px;
 }
 section:nth-child(even) {
 	background-color: #FCFCFC;
 }
+ 
+
+@media (min-width: 560px) {
+	/* Larger than phablet (also point when grid becomes active) */
+	section:nth-child(odd) {
+		background-attachment: fixed;
+	}
+}
+
+/* fix jumpy background image on IE... :/ */
+
+@media all and (-ms-high-contrast:none)
+{
+	section:nth-child(odd) {
+		background-attachment: scroll;
+	}
+	*::-ms-backdrop, section:nth-child(odd) {
+		background-attachment: scroll;
+	}
+}
+
+
+
 
 /* M letter/logo before h1 bullet-list style */
 
