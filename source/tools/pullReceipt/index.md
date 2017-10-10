@@ -22,8 +22,31 @@ sections:
   # Visual
   content:
    - type: div
-     class: row
-     value: This page is a draft and its content does not constitute an actual offer. Contact us, or wait for its official publication.
+     class: row sequence-container
+     value: "
+		 <div class='four columns'>
+			 <br>
+			 <img class='u-img-responsive' src='http://via.placeholder.com/350x250'/>
+			 <br>
+			 <p>1. Connect your email account</p>
+			 <span class='next-right'><i class='fa fa-angle-right fa-lg' aria-hidden='true'></i></span>
+			 <span class='next-bottom'><i class='fa fa-angle-down fa-lg' aria-hidden='true'></i></span>
+		 </div>
+		 <div class='four columns'>
+			 <br>
+			 <img class='u-img-responsive' src='http://via.placeholder.com/350x250'/>
+			 <br>
+			 <p>2. pullReceipt identifies all of your invoices</p>
+			 <span class='next-right'><i class='fa fa-angle-right fa-lg' aria-hidden='true'></i></span>
+			 <span class='next-bottom'><i class='fa fa-angle-down fa-lg' aria-hidden='true'></i></span>
+		 </div>
+		 <div class='four columns'>
+			 <br>
+			 <img class='u-img-responsive' src='http://via.placeholder.com/350x250'/>
+			 <br>
+			 <p>3. Decide how each type of invoice should be processed</p>
+		 </div>
+		"
  -
   # Benefits
   content:

@@ -89,3 +89,50 @@ div.landing section h1.small:before {
 div.home section h1.small:before {
 	content: none;
 }
+
+.sequence-container {
+	position: relative;
+}
+
+.next-right {
+	display:none;
+}
+
+.sequence-container .columns:first-child .next-bottom {
+	position: absolute;
+	top: 31%;
+	left: 50%;
+	color: #aaa;
+}
+.sequence-container .columns:nth-child(2) > .next-bottom {
+	position: absolute;
+	top: 64%;
+	left: 50%;
+	color: #aaa;
+}
+
+@media (min-width: 560px) {
+  /* Larger than phablet (also point when grid becomes active) */
+  
+	.next-bottom {
+		display: none;
+	}
+  
+	.next-right {
+		display: block;
+	}
+  
+	.sequence-container .columns:first-child .next-right {
+		position: absolute;
+		top: 50%;
+		left: 32%;
+		color: #aaa;
+	}
+
+	.sequence-container .columns:nth-child(2) > .next-right {
+		position: absolute;
+		top: 50%;
+		left: 65%;
+		color: #aaa;
+	}
+}
