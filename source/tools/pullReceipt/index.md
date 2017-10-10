@@ -63,7 +63,7 @@ sections:
         - Up to 20 email accounts
         - 3000 invoices per quarter
         - unlimited actions
-        - analysis of expenses
+        - analysis of expenses
        CTA:
         label: Free trial
         trg: /pullReceipt-large
