@@ -56,7 +56,7 @@ document.getElementById('form-submit').addEventListener('click', function(e){
 	e.preventDefault()
 	e.stopPropagation()
 	
-	if (document.getElementById('mce-EMAIL').value !== '') {
+	if (document.getElementById('mce-EMAIL').validity.valid) {
 	
 		document.getElementById('mc-embedded-subscribe-form').submit()
 		
@@ -64,7 +64,7 @@ document.getElementById('form-submit').addEventListener('click', function(e){
 	}
 	else {
 		document.getElementById('mce-EMAIL').classList.add('has-error')
-		document.getElementById('mce-error-response').innerHTML = 'Please enter an email address'
+		document.getElementById('mce-error-response').innerHTML = 'Please enter a valid email address'
 		
 	}
 	
