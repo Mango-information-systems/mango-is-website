@@ -76,7 +76,7 @@ sections:
         - unlimited actions
         - analysis of expenses
        CTA:
-        label: Free trial
+        label: Sign up
         trg: /pullReceipt-large
       -
        title: Medium<br>35<small>€ / Month</small>
@@ -87,7 +87,7 @@ sections:
         - unlimited actions
         - 
        CTA:
-        label: Free trial
+        label: Sign up
         trg: /pullReceipt-medium
       -
        title: Small<br>10<small>€ / Month</small>
@@ -99,7 +99,7 @@ sections:
         - unlimited actions
         - 
        CTA:
-        label: Free trial
+        label: Sign up
         trg: /pullReceipt-small
    - type: p
      class: u-text-center small
