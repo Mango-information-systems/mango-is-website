@@ -163,7 +163,7 @@ function Contact(app) {
 			
 		})
 		
-		 var trg = self.form.getAttribute('data-trg') || 'not-set'
+		var trg = self.form.getAttribute('data-trg') || 'not-set'
 		
 		app.gaCustom.toGa('pageview', {page: trg})
 	}
