@@ -40,8 +40,10 @@ for (let i = 0; i < ctas.length; i++) {
 
 		 // lookup the selected plan
 		 var trg = e.target.getAttribute('data-trg') || '/pullReceipt-not-set'
-		console.log('cta click target', trg)
+		 
+		//~ console.log('cta click target', trg)
 		
+		// fill up 'plan' field in mailChimp form
 		switch(trg) {
 			case '/pullReceipt-small':
 				document.getElementById('mce-PLAN').value = 'small'

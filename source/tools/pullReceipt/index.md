@@ -138,7 +138,7 @@ sections:
 					<label for='mce-EMAIL'>Email address  <sup>*</sup>
 					</label>
 					<input type='email' value='' name='EMAIL' class='u-full-width' required id='mce-EMAIL'>
-					<div class='response' id='mce-error-response'></div>
+					<div class='response text-danger' id='mce-error-response'></div>
 				 </div>
 				 <div class='row'>
 					 <div class='six columns'>
@@ -182,6 +182,7 @@ sections:
 					 </div>
 					
 				 </div>
+				 <br>
 				 <p><small>Early adopters will be rewarded with a discount 👌</small></p>
 				 <div class='u-pull-right'>
 					 <input type='hidden' value='' name='PLAN' class='u-full-width' id='mce-PLAN'>
