@@ -3,7 +3,7 @@ var smoothscroll = require('smoothscroll')
 	, Contact = require('./controller/contact-client')
 	, GaCustom = require('./controller/ga-custom')
 
-var app = {}
+window.app = {}
 
 app.io = io
 
