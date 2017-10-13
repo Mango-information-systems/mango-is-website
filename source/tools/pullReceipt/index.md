@@ -97,7 +97,7 @@ sections:
        type: large
        content:
         - Up to 20 email accounts
-        - 3000 invoices per quarter
+        - 1500 invoices per quarter
         - unlimited actions
         - analysis of expenses
        CTA:
@@ -108,7 +108,7 @@ sections:
        type: medium
        content:
         - Up to 5 email accounts
-        - 1000 invoices per quarter
+        - 750 invoices per quarter
         - unlimited actions
         - 
        CTA:
@@ -120,7 +120,7 @@ sections:
        primary: true
        content:
         - 1 email account
-        - 200 invoices per quarter
+        - 150 invoices per quarter
         - unlimited actions
         - 
        CTA:
