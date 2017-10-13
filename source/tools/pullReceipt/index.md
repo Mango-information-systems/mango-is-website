@@ -18,6 +18,13 @@ sections:
    - type: h2
      class: small
      value: save time by automatically processing your incoming administrative documents
+   - type: div
+     value: <br><br>
+   - type: cta
+     href: "#pricing"
+     primary: true
+     trg: /pullreceipt-pricing
+     value: View plans
  -
   # Visual
   content:
@@ -64,6 +71,7 @@ sections:
   # Pricing
   content:
    - type: h3
+     id: pricing
      value: Pricing
    - type: pricing
      offers:

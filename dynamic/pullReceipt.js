@@ -28,11 +28,8 @@ let elem = document.querySelector('.modal')
 let m = modal(elem, opts)
 
 
-
 // bind modal display to CTA clicks
-document.getElementsByClassName('cta')
-
-let ctas = document.getElementsByClassName('cta')
+let ctas = document.getElementsByClassName('pricing-cta')
 
 for (let i = 0; i < ctas.length; i++) {
 	
