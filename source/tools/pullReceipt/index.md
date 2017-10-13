@@ -68,6 +68,23 @@ sections:
    - type: h4
      value: <i class="fa fa-bar-chart fa-fw fa-lg" aria-hidden="true"></i> Track your expenses and reduce your costs
  -
+  # How it works
+  content:
+   - type: h3
+     value: How it simplifies your business administration
+   - type: p
+     value: pullReceipt detects all incoming invoices and receipts in your mailbox and forwards them to management software or your accountant automatically.
+   - type: p
+     value: "Flexible: you choose what should be done ith the incoming invoices: forward to your accountant by email, copy them to dropBox or your google drive, etc..."
+   - type: p
+     value: pullReceipt can process the invoices included as attachment, but also those to be downloaded by clicking a link. Whenever connecting to an account is necessary, pullReceipt reminds you that you need to download these documents.
+   - type: p
+     value: pullReceipt recognizes the invoices in foreign languages. <small> English, Spanish, German, French, Italian currently supported</small>.
+   - type: p
+     value: "You stay in control: For each provider, you can choose either to have the documents processed automatically, or after your approval."
+   - type: p
+     value: You work at your own pace. Connect every day, every Month, or only once per quarter, as you prefer. pullReceipt fits in your process.
+ -
   # Pricing
   content:
    - type: h3
