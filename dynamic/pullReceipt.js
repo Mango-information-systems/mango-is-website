@@ -57,9 +57,9 @@ for (let i = 0; i < ctas.length; i++) {
 		}
 		 
 		// record custom pageview
-		app.gaCustom.toGa('pageview', {page: trg})
-		
-		
+		gaCustom.toGa('pageview', {page: trg})
+
+
 		m.show()
 		
 		e.preventDefault()
@@ -75,14 +75,14 @@ document.getElementById('form-submit').addEventListener('click', function(e){
 		
 		 
 	// record custom pageview
-	app.gaCustom.toGa('pageview', {page: '/pullReceipt-subscribe-attempt'})
+	gaCustom.toGa('pageview', {page: '/pullReceipt-subscribe-attempt'})
 	
 	if (document.getElementById('mce-EMAIL').validity.valid) {
 	
 		document.getElementById('mc-embedded-subscribe-form').submit()
 		
 		// record custom pageview
-		app.gaCustom.toGa('pageview', {page: '/pullReceipt-subscribe'})
+		gaCustom.toGa('pageview', {page: '/pullReceipt-subscribe'})
 		
 		m.hide()
 	}
@@ -92,7 +92,7 @@ document.getElementById('form-submit').addEventListener('click', function(e){
 		document.getElementById('mce-error-response').innerHTML = 'Please enter a valid email address'
 		
 		// record error event
-		app.gaCustom.toGa('exception', {description: 'invalid email typed during pullReceipt form submission'})
+		gaCustom.toGa('exception', {description: 'invalid email typed during pullReceipt form submission'})
 		
 	}
 	

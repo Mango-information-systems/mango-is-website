@@ -3,13 +3,15 @@ var smoothscroll = require('smoothscroll')
 	, Contact = require('./controller/contact-client')
 	, GaCustom = require('./controller/ga-custom')
 
-window.app = {}
+let app = {}
 
 app.io = io
 
 app.gaCustom = new GaCustom()
 
 app.gaCustom.init()
+
+window.gaCustom = app.gaCustom
 
 if (window.location.pathname === '/contact/')
 	app.contact = new Contact(app)
