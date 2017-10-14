@@ -1,16 +1,25 @@
 #pullReceipt-logo {
-	width: 200px;
+	width: 120px;
 	margin-top:-3rem;
 }
 
+
+@media (min-width: 560px) {
+  /* Larger than phablet (also point when grid becomes active) */
+  
+	#pullReceipt-logo {
+		width: 200px;
+	}
+
+}
 
 
 @media (min-width: 720px) {
   /* Larger than tablet */
   
-	  #pullReceipt-logo {
+	#pullReceipt-logo {
 		width: 350px;
-	margin-top:-5rem;
+		margin-top:-5rem;
 	}
 
 }
