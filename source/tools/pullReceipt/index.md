@@ -142,7 +142,7 @@ sections:
    - type: h3
      value: About
    - type: p
-     value: The idea for pullReceipt came to Mehdi El Fadil, as he was spending his quarterly 8 hours to retrieve all receipts and send them to his accountant.
+     value: The idea for pullReceipt came to Mehdi El Fadil, as he was spending his quarterly 8 hours to retrieve all incoming invoices in his mailbox and send them to his accountant.
    - type: p
      value: The concept is to have a very simple and user-friendly tool doing the job, and have more free time to do value-added work - or simply to relax ;)
    - type: p
