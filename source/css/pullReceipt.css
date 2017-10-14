@@ -1,0 +1,16 @@
+#pullReceipt-logo {
+	width: 200px;
+	margin-top:-3rem;
+}
+
+
+
+@media (min-width: 720px) {
+  /* Larger than tablet */
+  
+	  #pullReceipt-logo {
+		width: 350px;
+	margin-top:-5rem;
+	}
+
+}

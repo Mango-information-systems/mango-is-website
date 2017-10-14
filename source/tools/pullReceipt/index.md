@@ -5,13 +5,15 @@ author: Mango Information Systems
 date: 2016-10-24 16:29:26
 description: pullReceipt automates the boring parts of your business administration
 thumbnail: /img/thumbnails/pullReceipt.png
-css: []
+css: [pullReceipt.css]
 scripts: [js/pullReceipt.js]
 __index: true
 sections:
  -
   # top section: title
   content:
+   - type: div
+     value: "<img id='pullReceipt-logo' src='/img/pullReceipt-logo.png' alt='pullReceipt logo, a friendly robot' class='u-pull-right'>"
    - type: h1
      class: small
      value: pullReceipt - simple invoice extractor <sup style="color:#aaa;">coming soon</sup>
