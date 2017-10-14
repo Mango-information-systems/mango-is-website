@@ -21,6 +21,14 @@ sections:
    - type: post
      content:
       class: index
+      path: /tools/pullReceipt/
+      thumbnail: /img/thumbnails/pullReceipt.png
+      title: "pullReceipt: simple invoice extractor"
+      subtitle: pullReceipt automates the boring parts of your business administration
+      footer: false
+   - type: post
+     content:
+      class: index
       path: https://twitto.be/
       thumbnail: /img/twitto-be-dashboard-screenshot.png
       title: twitto.be
