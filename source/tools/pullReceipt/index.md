@@ -155,12 +155,19 @@ sections:
   content:
    - type: h3
      value: About
-   - type: p
-     value: The idea for pullReceipt came to Mehdi El Fadil, as he was spending his quarterly 8 hours to retrieve all incoming invoices in his mailbox and send them to his accountant.
-   - type: p
-     value: The concept is to have a very simple and user-friendly tool doing the job, and have more free time to do value-added work - or simply to relax ;)
-   - type: p
-     value: Feedback and feature requests are welcome, <a href="/contact/">send us a message</a>.
+   -
+    type: div
+    class: row
+    value: "<div class='four columns'>
+			<img src='/img/mehdi-el-fadil-1.jpg' class='u-img-responsive'/>
+		</div>
+		<div class='eight columns'>
+			<p>The idea for pullReceipt came to Mehdi El Fadil, as he was spending his quarterly 8 hours to retrieve all incoming invoices in his mailbox and send them to his accountant.</p>
+			
+			<p>The concept is to have a very simple and user-friendly tool doing the job, and have more free time to do value-added work - or simply to relax ;)</p>
+			
+			<p>Feedback and feature requests are welcome, <a href='/contact/'>send us a message</a>.</p>
+		</div>"
    - type: custom
      value: "
 		<div class='modal'>
