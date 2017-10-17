@@ -19,7 +19,7 @@ sections:
      value: pullReceipt - simple invoice extractor <sup style="color:#aaa;">coming soon</sup>
    - type: h2
      class: small
-     value: save time by automatically processing your incoming administrative documents
+     value: Save time. Focus on your business.
    - type: div
      value: <br><br>
    - type: cta
@@ -30,8 +30,10 @@ sections:
  -
   # Visual
   content:
+   - type: p
+     value: Do you feel like you waste too much time working on administrative tasks?
    - type: h3
-     value: Powerful and easy to use
+     value: pullReceipt automates the processing your incoming invoices.
    - type: div
      class: row sequence-container
      value: "
