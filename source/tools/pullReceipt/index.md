@@ -95,7 +95,7 @@ sections:
           value: "<i class='fa fa-flag fa-2x fa-fw u-pull-left' aria-hidden='true'></i> <strong>Multilingual</strong>: pullReceipt recognizes the invoices in foreign languages. English, Spanish, German, French, Italian currently supported."
       - content:
         - type: p
-          value: "<i class='fa fa-key fa-2x fa-fw u-pull-left' aria-hidden='true'></i> <strong>Safe</strong>: You stay in control: For each provider, you can choose either to have the documents processed automatically, or after your approval."
+          value: "<i class='fa fa-key fa-2x fa-fw u-pull-left' aria-hidden='true'></i> <strong>Safe</strong>: You stay in control: for each provider, you can choose either to have the documents processed automatically, or after your approval."
    - type: div
      value: <br>
    - type: p
