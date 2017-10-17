@@ -75,17 +75,31 @@ sections:
    - type: h3
      value: How it simplifies your business administration
    - type: p
-     value: pullReceipt detects all incoming invoices and receipts in your mailbox and forwards them to management software or your accountant automatically.
+     value: pullReceipt detects all incoming invoices and receipts in your mailbox and forwards them to your management software or your accountant automatically.
+   - type: div
+     value: <br>
+   - type: columns
+     columns:
+      - content:
+        - type: p
+          value: "<i class='fa fa-random fa-2x fa-fw u-pull-left' aria-hidden='true'></i> <strong>Flexible</strong>: you choose what should be done with the incoming invoices: forward to your accountant by email, copy them to dropBox or your google drive, etc..."
+      - content:
+        - type: p
+          value: "<i class='fa fa-bolt fa-2x fa-fw u-pull-left' aria-hidden='true'></i> <strong>Powerful</strong>: pullReceipt retrieves attached invoices, as well as those to be downloaded by clicking a link."
+   - type: div
+     value: <br>
+   - type: columns
+     columns:
+      - content:
+        - type: p
+          value: "<i class='fa fa-flag fa-2x fa-fw u-pull-left' aria-hidden='true'></i> <strong>Multilingual</strong>: pullReceipt recognizes the invoices in foreign languages. English, Spanish, German, French, Italian currently supported."
+      - content:
+        - type: p
+          value: "<i class='fa fa-key fa-2x fa-fw u-pull-left' aria-hidden='true'></i> <strong>Safe</strong>: You stay in control: For each provider, you can choose either to have the documents processed automatically, or after your approval."
+   - type: div
+     value: <br>
    - type: p
-     value: "Flexible: you choose what should be done ith the incoming invoices: forward to your accountant by email, copy them to dropBox or your google drive, etc..."
-   - type: p
-     value: pullReceipt can process the invoices included as attachment, but also those to be downloaded by clicking a link. Whenever connecting to an account is necessary, pullReceipt reminds you that you need to download these documents.
-   - type: p
-     value: pullReceipt recognizes the invoices in foreign languages. <small> English, Spanish, German, French, Italian currently supported</small>.
-   - type: p
-     value: "You stay in control: For each provider, you can choose either to have the documents processed automatically, or after your approval."
-   - type: p
-     value: You work at your own pace. Connect every day, every Month, or only once per quarter, as you prefer. pullReceipt fits in your process.
+     value: "<i class='fa fa-calendar-check-o fa-2x fa-fw u-pull-left' aria-hidden='true'></i> <strong>Adaptable</strong>: You work at your own pace. Connect every day, every Month, or only once per quarter, as you prefer. pullReceipt fits in your process."
  -
   # Pricing
   content:
