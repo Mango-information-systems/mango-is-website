@@ -3,7 +3,7 @@ layout: landing
 title: "pullReceipt: simple invoice extractor"
 author: Mango Information Systems
 date: 2016-10-24 16:29:26
-description: pullReceipt automates the boring parts of your business administration
+description: Need help to forward all the incoming invoices to your accountant? pullReceipt automates the boring parts of your business administration.
 thumbnail: /img/thumbnails/pullReceipt.png
 css: [pullReceipt.css]
 scripts: [js/pullReceipt.js]

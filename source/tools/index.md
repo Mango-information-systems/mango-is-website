@@ -24,7 +24,7 @@ sections:
       path: /tools/pullReceipt/
       thumbnail: /img/thumbnails/pullReceipt.png
       title: "pullReceipt: simple invoice extractor"
-      subtitle: pullReceipt automates the boring parts of your business administration
+      subtitle: Need help to forward all the incoming invoices to your accountant? pullReceipt automates the boring parts of your business administration.
       footer: false
    - type: post
      content:
