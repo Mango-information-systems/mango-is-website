@@ -29,7 +29,7 @@ let m = modal(elem, opts)
 
 
 // bind modal display to CTA clicks
-let ctas = document.getElementsByClassName('pricing-cta')
+let ctas = document.getElementsByClassName('pricingCta')
 
 for (let i = 0; i < ctas.length; i++) {
 	
