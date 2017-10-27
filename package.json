@@ -21,7 +21,7 @@
     "watch:socketServer": "nodemon --watch dynamic dynamic/server.js"
   },
   "hexo": {
-    "version": "3.3.9"
+    "version": "3.3.8"
   },
   "browser": {
     "request": "xhr"
