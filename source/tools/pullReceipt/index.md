@@ -16,7 +16,7 @@ sections:
      value: "<img id='pullReceipt-logo' src='/img/pullReceipt-logo.png' alt='pullReceipt logo, a friendly robot' class='u-pull-right'>"
    - type: h1
      class: small
-     value: pullReceipt - simple invoice extractor <sup style="color:#aaa;">coming soon</sup>
+     value: pullReceipt - simple invoice extractor <span class='u-pull-right'><small><sup style="color:#aaa;">coming soon</sup></small></span>
    - type: h2
      class: small
      value: Save time. Focus on your business.
