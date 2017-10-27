@@ -274,7 +274,7 @@ var views = {
 				res = {results: res.data} // result is encapsulated inside a "results" property, in order to have a JSON and not an array.
 				
 				// set file name, replacing extension if applicable
-				var fileName = currentParseOpts.fileName.replace(/(.*)\.csv$/, '$1')
+				var fileName = typeof currentParseOpts.fileName !== 'undefined'? currentParseOpts.fileName.replace(/(.*)\.csv$/, '$1') : 'file'
 				
 				while (files[fileName+'.json']) {
 				// a converted json file already has this name, add a suffix to it.
