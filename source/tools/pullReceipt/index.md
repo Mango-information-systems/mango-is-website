@@ -17,6 +17,9 @@ sections:
    - type: h1
      class: small
      value: pullReceipt - simple invoice extractor <span class='u-pull-right'><small><sup style="color:#aaa;">coming soon</sup></small></span>
+   - type: h2
+     class: small
+     value: Save time, focus on your business.
    - type: cta
      href: "#pricing"
      primary: true
@@ -31,9 +34,7 @@ sections:
      value: "Aren't these administrative tasks just a waste of time? A tool can do them for you."
    - type: h2
      class: small
-     value: pullReceipt identifies all the incoming invoices in your mailbox, and processes them.
-   - type: p
-     value: It saves you time, and lets you focus on your business.
+     value: pullReceipt automates the processing of invoices incoming in your mailbox.
    - type: div
      class: row sequence-container
      value: "
