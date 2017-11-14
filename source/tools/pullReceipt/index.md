@@ -17,11 +17,6 @@ sections:
    - type: h1
      class: small
      value: pullReceipt - simple invoice extractor <span class='u-pull-right'><small><sup style="color:#aaa;">coming soon</sup></small></span>
-   - type: h2
-     class: small
-     value: Save time. Focus on your business.
-   - type: div
-     value: <br><br>
    - type: cta
      href: "#pricing"
      primary: true
@@ -31,9 +26,14 @@ sections:
   # Visual
   content:
    - type: p
-     value: Do you feel like you waste too much time working on administrative tasks?
-   - type: h3
-     value: pullReceipt automates the processing your incoming invoices.
+     value: Every now and then, you have to look for purchase invoices through mailboxes, and send them to your accountant.
+   - type: p
+     value: "Aren't these administrative tasks just a waste of time? A tool can do them for you."
+   - type: h2
+     class: small
+     value: pullReceipt identifies all the incoming invoices in your mailbox, and processes them.
+   - type: p
+     value: It saves you time, and lets you focus on your business.
    - type: div
      class: row sequence-container
      value: "
@@ -49,7 +49,7 @@ sections:
 			 <br>
 			 <img class='u-img-responsive' src='/img/pullReceipt-detect.png' alt='illustration of pullReceipt connections manager' width='350px'/>
 			 <br>
-			 <p>2. pullReceipt identifies all the invoices</p>
+			 <p>2. pullReceipt finds all the invoices</p>
 			 <span class='next-right'><i class='fa fa-angle-right fa-lg' aria-hidden='true'></i></span>
 			 <span class='next-bottom'><i class='fa fa-angle-down fa-lg' aria-hidden='true'></i></span>
 		 </div>
