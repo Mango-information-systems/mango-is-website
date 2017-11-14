@@ -33,7 +33,7 @@ sections:
    - type: p
      value: Do you feel like you waste too much time working on administrative tasks?
    - type: h3
-     value: pullReceipt automates the processing your incoming invoices.
+     value: pullReceipt automates the processing your of incoming invoices.
    - type: div
      class: row sequence-container
      value: "
