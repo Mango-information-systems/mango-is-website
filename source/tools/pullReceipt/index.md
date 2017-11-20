@@ -133,16 +133,16 @@ sections:
    - type: h3
      id: pricing
      value: Pricing
+   - type: p
+     value: All plans include extraction and custom processing of documents from your email accounts, and access to a reporting dashboard.
    - type: pricing
      offers:
       -
        title: Large<br>200<small>€ / Month</small>
        type: large
        content:
-        - Up to 20 email accounts
         - 1500 invoices per quarter
-        - unlimited actions
-        - analysis of expenses
+        - Analysis of expenses
        CTA:
         label: Sign up
         trg: /pullReceipt-large
@@ -150,9 +150,7 @@ sections:
        title: Medium<br>35<small>€ / Month</small>
        type: medium
        content:
-        - Up to 5 email accounts
         - 750 invoices per quarter
-        - unlimited actions
         - 
        CTA:
         label: Sign up
@@ -162,9 +160,7 @@ sections:
        type: small
        primary: true
        content:
-        - 1 email account
         - 150 invoices per quarter
-        - unlimited actions
         - 
        CTA:
         label: Sign up
