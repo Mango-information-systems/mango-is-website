@@ -28,13 +28,48 @@ sections:
  -
   # Visual
   content:
-   - type: p
-     value: Every now and then, you have to look for purchase invoices through mailboxes, and send them to your accountant.
-   - type: p
-     value: "Aren't these administrative tasks just a waste of time? A tool can do them for you."
+   - type: div
+     class: row
+     value: "
+		 <div class='four columns'>
+			 <img class='u-img-responsive' src='/img/paperwork.jpg' alt='Photo of folders, illustrating paperwork'/>
+		 </div>
+		 <div class='eight columns'>
+			 <p>Every now and then, while managing your SME or freelancing activity, you have to go through this process again:</p>
+			 <p>Look for purchase invoices through your mailbox, and send them to your accountant. Exchange emails as some documents are missing.</p>
+			 <p>Aren't these administrative tasks just a waste of time? A tool can do them for you.</p>
+		 </div><br>
+     "
    - type: h2
      class: small
-     value: pullReceipt automates the processing of invoices incoming in your mailbox.
+     value: <i class='fa fa-check' aria-hidden='true'></i> pullReceipt automates the processing of invoices incoming in your mailbox.
+   - type: div
+     class: row
+     value: "
+		 <br><div class='four columns'>
+			 <img class='u-img-responsive' src='/img/robot.jpg' alt='Photo of a robot, illustrating automation'/>
+		 </div>
+		 <div class='eight columns'>
+			 <p>It detects the relevant documents, downloads them, and transmits them to your accountant or management solution.</p>
+			 <p>pullReceipt is the smart assistant relieving you from low added-value tasks.</p>
+		 </div>
+     "
+ -
+  # Benefits
+  content:
+   - type: h3
+     value: Benefits
+   - type: h4
+     value: <i class="fa fa-calendar-o fa-fw fa-lg" aria-hidden="true"></i> Get more time to focus on what matters
+   - type: h4
+     value: <i class="fa fa-check-circle fa-fw fa-lg" aria-hidden="true"></i> Reduce errors caused by manual processing of data
+   - type: h4
+     value: <i class="fa fa-bar-chart fa-fw fa-lg" aria-hidden="true"></i> Track your expenses and reduce your costs
+ -
+  # How it works
+  content:
+   - type: h3
+     value: Super easy to use
    - type: div
      class: row sequence-container
      value: "
@@ -61,17 +96,6 @@ sections:
 			 <p>3. Decide how to process each document</p>
 		 </div>
 		"
- -
-  # Benefits
-  content:
-   - type: h3
-     value: Benefits
-   - type: h4
-     value: <i class="fa fa-calendar-o fa-fw fa-lg" aria-hidden="true"></i> Get more time to focus on what matters
-   - type: h4
-     value: <i class="fa fa-check-circle fa-fw fa-lg" aria-hidden="true"></i> Reduce errors caused by manual processing of data
-   - type: h4
-     value: <i class="fa fa-bar-chart fa-fw fa-lg" aria-hidden="true"></i> Track your expenses and reduce your costs
  -
   # How it works
   content:
