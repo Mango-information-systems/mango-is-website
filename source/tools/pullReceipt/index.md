@@ -36,7 +36,11 @@ sections:
 		 </div>
 		 <div class='eight columns'>
 			 <p>Every quarter, managing your small business, you go through this process:</p>
-			 <p>Look for purchase invoices in your mailbox, send them to your accountant. Exchange emails as some documents are missing.</p>
+			 <ul>
+				 <li>Look for purchase invoices in your mailbox</li>
+				 <li>Send them to your accountant</li>
+				 <li>Exchange emails as some documents are missing</li>
+			  </ul>
 		 </div><br>
      "
    - type: div
