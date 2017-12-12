@@ -35,14 +35,10 @@ sections:
 			 <img class='u-img-responsive' src='/img/paperwork.jpg' alt='Photo of folders, illustrating paperwork'/>
 		 </div>
 		 <div class='eight columns'>
-			 <p>Every now and then, while managing your SME or freelancing activity, you have to go through this process again:</p>
-			 <p>Look for purchase invoices through your mailbox, and send them to your accountant. Exchange emails as some documents are missing.</p>
-			 <p>Aren't these administrative tasks just a waste of time? A tool can do them for you.</p>
+			 <p>Every quarter, managing your small business, you go through this process:</p>
+			 <p>Look for purchase invoices in your mailbox, send them to your accountant. Exchange emails as some documents are missing.</p>
 		 </div><br>
      "
-   - type: h2
-     class: small
-     value: <i class='fa fa-check' aria-hidden='true'></i> pullReceipt automates the processing of invoices incoming in your mailbox.
    - type: div
      class: row
      value: "
@@ -50,8 +46,8 @@ sections:
 			 <img class='u-img-responsive' src='/img/robot.jpg' alt='Photo of a robot, illustrating automation'/>
 		 </div>
 		 <div class='eight columns'>
-			 <p>It detects the relevant documents, downloads them, and transmits them to your accountant or management solution.</p>
-			 <p>pullReceipt is the smart assistant relieving you from low added-value tasks.</p>
+			 <p>Aren't these administrative tasks just a waste of time? A tool can do them for you.</p>
+			 <h2 class='small'><i class='fa fa-check' aria-hidden='true'></i> pullReceipt extracts the incoming invoices from your mailbox for you</h2>
 		 </div>
      "
  -
@@ -70,6 +66,10 @@ sections:
   content:
    - type: h3
      value: Super easy to use
+   - type: p
+     value: pullReceipt is the smart assistant relieving you from low added-value tasks.
+   - type: p
+     value: It detects all incoming invoices and receipts in your mailbox and forwards them to your management software or your accountant automatically.
    - type: div
      class: row sequence-container
      value: "
@@ -101,8 +101,6 @@ sections:
   content:
    - type: h3
      value: How it simplifies your business administration
-   - type: p
-     value: pullReceipt detects all incoming invoices and receipts in your mailbox and forwards them to your management software or your accountant automatically.
    - type: div
      value: <br>
    - type: columns
