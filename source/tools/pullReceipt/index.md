@@ -35,7 +35,7 @@ sections:
 			 <img class='u-img-responsive' src='/img/paperwork.jpg' alt='Photo of folders, illustrating paperwork'/>
 		 </div>
 		 <div class='eight columns'>
-			 <p>Every quarter, managing your small business, you go through this process:</p>
+			 <p>Every quarter, managing your small business, you repeat these steps:</p>
 			 <ul>
 				 <li>Look for purchase invoices in your mailbox</li>
 				 <li>Send them to your accountant</li>
