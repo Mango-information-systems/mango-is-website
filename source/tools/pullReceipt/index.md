@@ -128,7 +128,7 @@ sections:
    - type: div
      value: <br>
    - type: p
-     value: "<i class='fa fa-calendar-check-o fa-2x fa-fw u-pull-left' aria-hidden='true'></i> <strong>Adaptable</strong>: You work at your own pace. Connect every day, every Month, or only once per quarter, as you prefer. pullReceipt fits in your process."
+     value: "<i class='fa fa-calendar-check-o fa-2x fa-fw u-pull-left' aria-hidden='true'></i> <strong>Adaptable</strong>: You work at your own pace. Connect every day, every month, or only once per quarter, as you prefer. pullReceipt fits in your process."
  -
   # Pricing
   content:
@@ -140,7 +140,7 @@ sections:
    - type: pricing
      offers:
       -
-       title: Large<br>200<small>€ / Month</small>
+       title: Large<br>400<small>€ / Month</small>
        type: large
        content:
         - 1500 invoices per quarter
@@ -149,7 +149,7 @@ sections:
         label: Sign up
         trg: /pullReceipt-large
       -
-       title: Medium<br>35<small>€ / Month</small>
+       title: Medium<br>70<small>€ / Month</small>
        type: medium
        content:
         - 750 invoices per quarter
@@ -158,7 +158,7 @@ sections:
         label: Sign up
         trg: /pullReceipt-medium
       -
-       title: Small<br>10<small>€ / Month</small>
+       title: Small<br>20<small>€ / Month</small>
        type: small
        primary: true
        content:
