@@ -140,13 +140,13 @@ sections:
    - type: pricing
      offers:
       -
-       title: Large<br>400<small>€ / Month</small>
+       title: Large<br><small>Tailored offer</small>
        type: large
        content:
-        - 1500 invoices per quarter
+        - 750+ invoices per quarter
         - Analysis of expenses
        CTA:
-        label: Sign up
+        label: Contact us
         trg: /pullReceipt-large
       -
        title: Medium<br>70<small>€ / Month</small>
@@ -158,7 +158,7 @@ sections:
         label: Sign up
         trg: /pullReceipt-medium
       -
-       title: Small<br>20<small>€ / Month</small>
+       title: Small<br><span class='text-large'>20</span><small>€ / Month</small>
        type: small
        primary: true
        content:
@@ -174,7 +174,7 @@ sections:
      value: <br>
    - type: div
      class: u-text-center alert
-     value: Custom and enterprise plans - <a href="/contact/">contact us</a>
+     value: Custom integration - <a href="/contact/">contact us</a>
  -
   # About
   content:

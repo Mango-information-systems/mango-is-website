@@ -34,7 +34,7 @@ var tableWidthClass = data.length === 1? 'u-narrow' : 'u-full-width'
 			<%
 			rows.titles.forEach(function(title, index) {
 			%>
-				<th class="<%- data[index].type %>"><%- title %></th>
+				<th class="<%- index === rows.primaryIndex? ' primary' : '' %>"><%- title %></th>
 			<%
 				})
 			%>
@@ -82,7 +82,7 @@ var tableWidthClass = data.length === 1? 'u-narrow' : 'u-full-width'
 			rows.CTAs.forEach(function(content, index) {
 
 				var trg = content.trg? ' data-trg="' + content.trg + '"' : ''
-					, btnClass = index == rows.primaryIndex? ' button-primary' : ''
+					, btnClass = index === rows.primaryIndex? ' button-primary' : ''
 
 				%>
 				<td><a href="/contact/" class="button cta pricingCta <%- btnClass %> u-full-width" <%- trg %>><%- content.label %></a></td>
