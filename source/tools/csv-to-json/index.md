@@ -46,6 +46,9 @@ sections:
 				<div class='row'>
 					<input type='url' name='csvUrl' id='csvUrl' class='twelve columns' placeholder='Type CSV Url then press Enter'/>
 				</div>
+				<div class='row'>
+					<div class='previewErrorContainer'></div>
+				</div>
 				<div id='dropPlaceHolder'>
 					<br>
 					<p class='text-center muted'>Drop file here</p>

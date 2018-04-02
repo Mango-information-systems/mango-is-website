@@ -245,6 +245,8 @@ var views = {
 	, controller = {
 		showCsvSelectorPane: function() {
 			resetFileOpts()
+			
+			$('.previewErrorContainer').html('')
 
 			$csvSelectorPane.slideDown()
 
@@ -255,10 +257,29 @@ var views = {
 		, previewParse: function(opts) {
 		// parse CSV file, URL or data string
 			
+			resetFileOpts()
+			
 			currentParseOpts = _.extend(currentParseOpts, opts)
 			
 			currentParseOpts.complete = function(res) {
-				controller.showFilePreview(res)
+
+				if(typeof res === 'undefined') {
+					var message
+										
+					if (opts.download)
+						message = 'File could not be parsed. Please make sure that the URL is correct and that the file is hosted in a server allowing cross-origin requests.'
+					else
+						message = 'Error reading CSV data. Please check the entry and try again.'
+						
+					$('.previewErrorContainer').html('<div class="alert alert-danger" role="alert"> \
+						<p>Conversion warning(s):</p> \
+						<p>' + message + '</p> \
+					</div>')
+					
+				}
+				else {
+					controller.showFilePreview(res)
+				}
 			}
 
 			Papa.parse(currentParseOpts.data, currentParseOpts)
