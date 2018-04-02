@@ -272,6 +272,7 @@ var views = {
 				
 				// probably un-necessary, but safe
 				$('.convert').removeAttr('disabled')
+				$('.convert').removeClass('disabled')
 				
 				var errors = res.errors
 				
@@ -531,6 +532,7 @@ $(document).ready(function(){
 			
 			$document.off('keypress')
 			$(e.target).attr('disabled', 'disabled')
+			$(e.target).addClass('disabled')
 			
 			controller.fullParse()
 		}
