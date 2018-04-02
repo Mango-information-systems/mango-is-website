@@ -226,9 +226,10 @@ function SEApi(accessToken) {
 
 		debug('getStats')
 		
-		request.get(apiUrl + 'me/tags?'
+		//~ request.get(apiUrl + 'me/tags?'
 		//~ request.get(apiUrl + 'users/831180/tags?' // test with a different account: toch
-		//~ request.get(apiUrl + 'users/6309/tags?' // test with a different account
+		request.get(apiUrl + 'users/6309/tags?' // test with a different account : VonC
+		//~ request.get(apiUrl + 'users/22656//tags?' // test with a different account: Jon Skeet
 				+ 'key=' + params.stackExchange.key
 				+ '&site=' + 'stackoverflow'
 				+ '&order=' + 'desc'
@@ -280,9 +281,9 @@ function SEApi(accessToken) {
 
 		debug('getUser')
 		
-		request.get(apiUrl + 'me?'
+		//~ request.get(apiUrl + 'me?'
 		//~ request.get(apiUrl + 'users/831180?' // test with a different account: toch
-		//~ request.get(apiUrl + 'users/6309?' // test with a different account
+		request.get(apiUrl + 'users/6309?' // test with a different account
 				+ 'key=' + params.stackExchange.key
 				+ '&site=' + 'stackoverflow'
 				+ '&order=' + 'desc'

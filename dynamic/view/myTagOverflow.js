@@ -7,19 +7,19 @@
 function render(target) {
 
 	target.html(' \
-		<div class="xs-twelve lg-three columns"> \
+		<div class="xs-twelve  columns"> \
 			<div class="row"> \
-				<div id="user" class="xs-six lg-twelve columns"></div> \
-				<div id="legend" class="xs-six lg-twelve columns"> \
+				<div id="user" class="xs-six  columns"></div> \
+				<div id="legend" class="xs-six  columns"> \
 					<div class="row"> \
 					</div> \
 				</div> \
-				<div class="xs-six lg-twelve columns"> \
+				<div class="xs-six  columns"> \
 					<small><a id="exportLink" class="u-pull-right" target="_blank" style="display:none;">Export</a></small> \
 				</div> \
 			</div> \
 		</div> \
-		<div id="chart" class="xs-twelve lg-nine columns"> \
+		<div id="chart" class="xs-twelve columns"> \
 			<svg width="120px" height="120px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-ripple"> \
 				<rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect> \
 				<g> \

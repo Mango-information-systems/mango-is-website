@@ -343,7 +343,7 @@ function ForceChart() {
 		// fill up legend
 		self.legend = self.legend.data(d3.range(data.communitiesCount))
 			.enter().append('div')
-			  .attr('class', 'xs-twelve sm-six lg-twelve columns')
+			  .attr('class', 'xs-twelve sm-six columns')
 			  .html(function(d, i) { 
 				return '<i class="fa fa-circle" aria-hidden="true" style="color:' + color(d) + ';"></i> \
 					<span class="legend">' + self.legendLabels[i] + '</span> \
