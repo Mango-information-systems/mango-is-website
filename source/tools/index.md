@@ -65,5 +65,31 @@ sections:
       title: More on GitHub
       subtitle: Checkout our GitHub organization for more code...
       footer: false
+ -
+  # About us
+  content:
+   - type: h3
+     value: About us
+   - type: p
+     value: Mango Information Systems is a small Belgian company specialized in Data Science / Business Intelligence.
+   - type: p
+     value: We help businesses with their data integration and analytics problems, making sure that both technology and processes are streamlined.
+   - type: div
+     class: row
+     value: "
+		<br>
+		<div class='four offset-by-two columns'>
+			<p>
+				<a class='button u-full-width' href='/'><i class='fa fa-home' aria-hidden='true'></i> Read more</a>
+			</p>
+		</div>
+		<div class='four columns'>
+			<p>
+				<a class='button button-primary u-full-width' href='/contact/'><i class='fa fa-envelope' aria-hidden='true'></i> Contact us</a>
+			</p>
+		</div>
+		
+		<br><br>
+	"
 ---
 
