@@ -215,7 +215,7 @@ var views = {
 		}
 		, conversionsList: function(fileNames) {
 			if (!fileNames.length) {
-				return '<div class="alert alert-info" role="alert">You haven\'t done any conversion yet.<br>Once you convert some CSVs to JSON, the results will show up here.</div>'
+				return '<div class="alert" role="alert">You haven\'t done any conversion yet.<br>Once you convert some CSVs to JSON, the results will show up here.</div>'
 			}
 			else {
 				var tmpl = '<ul> \
