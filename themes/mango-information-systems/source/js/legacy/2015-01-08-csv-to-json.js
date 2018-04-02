@@ -132,7 +132,7 @@ var views = {
 					<div class="twelve columns"> \
 						<h3><%= fileName %></h3> \
 						<% if (json.results.length > 1000) { %> \
-							<div class="alert alert-info" role="alert"> \
+							<div class="alert" role="alert"> \
 								<p>Because the file is large file, it won\'t be saved in the browser\'s memory for later use.</p> \
 								<p><i class="fa fa-arrow-left" aria-hidden="true"></i> Please use the download button.</p> \
 							</div> \
@@ -270,7 +270,11 @@ var views = {
 			
 			currentParseOpts.complete = function(res) {
 				
+				// probably un-necessary, but safe
+				$('.convert').removeAttr('disabled')
+				
 				var errors = res.errors
+				
 				res = {results: res.data} // result is encapsulated inside a "results" property, in order to have a JSON and not an array.
 				
 				// set file name, replacing extension if applicable
@@ -520,9 +524,16 @@ $(document).ready(function(){
 	})
 	
 	// convert button
-	$body.on('click', '.convert', function() {
-		$document.off('keypress')
-		controller.fullParse()
+	$body.on('click', '.convert', function(e) {
+		
+		// avoid triggering conversion multiple times
+		if (typeof $(e.target).attr('disabled') === 'undefined') {
+			
+			$document.off('keypress')
+			$(e.target).attr('disabled', 'disabled')
+			
+			controller.fullParse()
+		}
 	})
 	
 	// view saved JSON file
