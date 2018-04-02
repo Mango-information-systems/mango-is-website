@@ -89,7 +89,9 @@ var views = {
 				<div class="row"> \
 					<div class="five columns"> \
 						<a title="Undo and convert another file" class="back button button-default"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back</a> \
-						<a title="Process the whole file" class="convert button button-primary pull-right">Convert <i class="fa fa-chevron-right" aria-hidden="true"></i></a> \
+						<a title="Process the whole file" class="convert button button-primary pull-right"> \
+						<span class="spin-placeholder"></span> \
+						Convert <i class="fa fa-chevron-right" aria-hidden="true"></i></a> \
 					</div> \
 				</div>'
 			
@@ -273,6 +275,9 @@ var views = {
 				// probably un-necessary, but safe
 				$('.convert').removeAttr('disabled')
 				$('.convert').removeClass('disabled')
+				
+				// remove spinner
+				$('.spin-placeholder').html('')
 				
 				var errors = res.errors
 				
@@ -533,6 +538,9 @@ $(document).ready(function(){
 			$document.off('keypress')
 			$(e.target).attr('disabled', 'disabled')
 			$(e.target).addClass('disabled')
+			
+			// show spinner
+			$('.spin-placeholder').html('<i class="fa fa-cog fa-spin fa-fw"></i><span class="sr-only">Processing...</span> ')
 			
 			controller.fullParse()
 		}
