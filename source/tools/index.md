@@ -21,14 +21,6 @@ sections:
    - type: post
      content:
       class: index
-      path: /tools/pullReceipt/
-      thumbnail: /img/thumbnails/pullReceipt.png
-      title: "pullReceipt: simple invoice extractor"
-      subtitle: Need help to forward all the incoming invoices to your accountant? pullReceipt automates the boring parts of your business administration.
-      footer: false
-   - type: post
-     content:
-      class: index
       path: https://twitto.be/
       thumbnail: /img/twitto-be-dashboard-screenshot.png
       title: twitto.be
@@ -45,18 +37,26 @@ sections:
    - type: post
      content:
       class: index
-      path: /tools/multiga/
-      thumbnail: /img/thumbnails/multiGa.png
-      title: "multiGa: realtime traffic dashboard for your websites"
-      subtitle: Free dashboard showing Google Analytics live traffic data for multiple websites. Ideal to find out if it's the right moment to upgrade your server ;)
-      footer: false
-   - type: post
-     content:
-      class: index
       path: /tools/csv-to-json/
       thumbnail: /img/thumbnails/2015-01-08-csv-to-json.png
       title: CSV to JSON converter
       subtitle: Easy, privacy-friendly and offline-first online csv to json converter
+      footer: false
+   - type: post
+     content:
+      class: index
+      path: /tools/pullReceipt/
+      thumbnail: /img/thumbnails/pullReceipt.png
+      title: "pullReceipt: simple invoice extractor"
+      subtitle: Need help to forward all the incoming invoices to your accountant? pullReceipt automates the boring parts of your business administration.
+      footer: false
+   - type: post
+     content:
+      class: index
+      path: /tools/multiga/
+      thumbnail: /img/thumbnails/multiGa.png
+      title: "multiGa: realtime traffic dashboard for your websites"
+      subtitle: Free dashboard showing Google Analytics live traffic data for multiple websites. Ideal to find out if it's the right moment to upgrade your server ;)
       footer: false
    - type: post
      content:
