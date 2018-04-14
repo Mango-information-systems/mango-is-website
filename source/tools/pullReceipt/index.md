@@ -20,11 +20,34 @@ sections:
    - type: h2
      class: small
      value: Save time, focus on your business.
-   - type: cta
-     href: "#pricing"
-     primary: true
-     trg: /pullreceipt-pricing
-     value: View plans
+   - type: div
+     value: "<br><br><br><br><br>"
+#   - type: cta
+#     href: "#pricing"
+#     primary: true
+#     trg: /pullreceipt-pricing
+#     value: View plans
+ -
+  # Standby project notification
+  content:
+   - type: div
+     class: row
+     value: "
+		<div class='alert alert-danger'>
+			<h2 class='small'>project in standby</h2>
+			<p>Dear visitor,</p>
+			<br>
+			<p>Work on pullReceipt is on hold at the moment, as I am focusing on other projects.</p>
+			<br>
+			<p>If you're a business developer / marketer, and are interested to take care of the business aspects of the project as a co-founder, <a href='/contact/'>get in touch</a>.</p>
+			<br>
+			<p>If you need assistance to <b>automate processing of your paperwork</b>, I'm your guy, <a href='/contact/'>send me a message</a>.</p>
+			<br>
+			<p>Cheers,</p>
+			<p>Mehdi.</p>
+		
+		</div>
+     "
  -
   # Visual
   content:
