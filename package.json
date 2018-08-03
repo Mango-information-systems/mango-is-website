@@ -1,6 +1,6 @@
 {
   "name": "mango-is-website",
-  "version": "3.27.0",
+  "version": "3.28.0",
   "private": true,
   "scripts": {
     "start": "npm run build:static && cp config/dev.theme._config.yml themes/mango-information-systems/_config.yml && npm run watch & hexo server & npm run watch:socketServer",
@@ -21,51 +21,51 @@
     "watch:socketServer": "nodemon --watch dynamic dynamic/server.js"
   },
   "hexo": {
-    "version": "3.4.4"
+    "version": "3.7.1"
   },
   "browser": {
     "request": "xhr"
   },
   "dependencies": {
     "@yuanqing/modal": "^0.1.0",
-    "brfs": "^1.4.3",
+    "brfs": "^2.0.0",
     "browserify": "^13.0.1",
     "d3": "^4.10.2",
     "d3-scale-chromatic": "^1.1.0",
-    "debug": "^2.2.0",
+    "debug": "^2.6.9",
     "easyedit": "git://github.com/Mango-information-systems/easyedit.git#master",
     "ejs": "^2.5.2",
     "font-awesome": "^4.6.1",
     "form-to-obj": "0.0.3",
     "gascrolldepth": "git+https://github.com/leighmcculloch/gascrolldepth.js.git#70834032",
-    "hexo": "^3.4.4",
-    "hexo-browsersync": "^0.2.0",
+    "hexo": "^3.7.1",
+    "hexo-browsersync": "^0.3.0",
     "hexo-generator-archive": "^0.1.4",
     "hexo-generator-category": "^0.1.3",
     "hexo-generator-feed": "^1.2.0",
-    "hexo-generator-seo-friendly-sitemap": "0.0.19",
+    "hexo-generator-seo-friendly-sitemap": "0.0.21",
     "hexo-renderer-ejs": "^0.2.0",
     "hexo-renderer-markdown-it": "^3.4.1",
-    "hexo-server": "^0.2.0",
+    "hexo-server": "^0.3.2",
     "jLouvain": "git://github.com/Mango-information-systems/jLouvain.git#nodejs-compatibility",
     "localforage": "^1.5.0",
-    "mailgun-js": "^0.11.2",
+    "mailgun-js": "^0.20.0",
     "node-persist": "0.0.11",
     "normalize.css": "^7.0.0",
-    "request": "^2.81.0",
+    "request": "^2.87.0",
     "smoothscroll": "^0.2.2",
-    "socket.io": "^1.4.6",
-    "socket.io-client": "^1.4.6",
+    "socket.io": "^2.1.1",
+    "socket.io-client": "^2.1.1",
     "validator": "^5.4.0",
     "xhr": "^2.4.0",
     "xss-filters": "^1.2.6"
   },
   "devDependencies": {
-    "mocha": "^2.5.3",
-    "nodemon": "^1.9.2",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.3",
     "should": "^9.0.2",
     "uglify-es": "^3.0.28",
     "uglifyify": "^4.0.3",
-    "watchify": "^3.7.0"
+    "watchify": "^3.11.0"
   }
 }
