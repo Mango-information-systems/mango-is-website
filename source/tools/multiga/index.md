@@ -7,6 +7,7 @@ description: Free dashboard showing Google Analytics live traffic data on multip
 thumbnail: /img/thumbnails/multiGa.png
 scripts: [js/g-realtime.js, https://apis.google.com/js/api.js?onload=gApiLoaded]
 __index: true
+wide: true
 sections:
  -
   # top section: title
