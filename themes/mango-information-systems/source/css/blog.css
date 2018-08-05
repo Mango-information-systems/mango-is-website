@@ -41,8 +41,8 @@ body {
 }
 
 .index h2 a, .category h2 a { text-decoration: none; }
-.index h2, .category h2  { font-size: 2rem; line-height: 1.05; }
-.index h2 small, .category h2 small  { color: #565656; font-size: 70%; }
+.index h2, .category h2  { font-size: 1.6rem; line-height: 1.2; }
+
 .article-category small, .article-category a  { color: #565656; font-size: 70%; text-decoration: none; }
 
 .archive-post { margin-bottom: 4rem; }
@@ -68,6 +68,13 @@ body {
 
   .index h2, .category h2  { font-size: 1.6rem; line-height: 1.05; }
   .post-thumb { margin-bottom: 2rem; }
+
+}
+/* Larger than phablet */
+
+@media (min-width: 560px) {
+
+  .post-thumb { margin-top: 2rem; }
 
 }
 

@@ -89,7 +89,9 @@ var views = {
 				<div class="row"> \
 					<div class="five columns"> \
 						<a title="Undo and convert another file" class="back button button-default"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back</a> \
-						<a title="Process the whole file" class="convert button button-primary pull-right">Convert <i class="fa fa-chevron-right" aria-hidden="true"></i></a> \
+						<a title="Process the whole file" class="convert button button-primary pull-right"> \
+						<span class="spin-placeholder"></span> \
+						Convert <i class="fa fa-chevron-right" aria-hidden="true"></i></a> \
 					</div> \
 				</div>'
 			
@@ -132,7 +134,7 @@ var views = {
 					<div class="twelve columns"> \
 						<h3><%= fileName %></h3> \
 						<% if (json.results.length > 1000) { %> \
-							<div class="alert alert-info" role="alert"> \
+							<div class="alert" role="alert"> \
 								<p>Because the file is large file, it won\'t be saved in the browser\'s memory for later use.</p> \
 								<p><i class="fa fa-arrow-left" aria-hidden="true"></i> Please use the download button.</p> \
 							</div> \
@@ -215,7 +217,7 @@ var views = {
 		}
 		, conversionsList: function(fileNames) {
 			if (!fileNames.length) {
-				return '<div class="alert alert-info" role="alert">You haven\'t done any conversion yet.<br>Once you convert some CSVs to JSON, the results will show up here.</div>'
+				return '<div class="alert" role="alert">You haven\'t done any conversion yet.<br>Once you convert some CSVs to JSON, the results will show up here.</div>'
 			}
 			else {
 				var tmpl = '<ul> \
@@ -243,6 +245,8 @@ var views = {
 	, controller = {
 		showCsvSelectorPane: function() {
 			resetFileOpts()
+			
+			$('.previewErrorContainer').html('')
 
 			$csvSelectorPane.slideDown()
 
@@ -253,10 +257,29 @@ var views = {
 		, previewParse: function(opts) {
 		// parse CSV file, URL or data string
 			
+			resetFileOpts()
+			
 			currentParseOpts = _.extend(currentParseOpts, opts)
 			
 			currentParseOpts.complete = function(res) {
-				controller.showFilePreview(res)
+
+				if(typeof res === 'undefined') {
+					var message
+										
+					if (opts.download)
+						message = 'File could not be parsed. Please make sure that the URL is correct and that the file is hosted in a server allowing cross-origin requests.'
+					else
+						message = 'Error reading CSV data. Please check the entry and try again.'
+						
+					$('.previewErrorContainer').html('<div class="alert alert-danger" role="alert"> \
+						<p>Conversion warning(s):</p> \
+						<p>' + message + '</p> \
+					</div>')
+					
+				}
+				else {
+					controller.showFilePreview(res)
+				}
 			}
 
 			Papa.parse(currentParseOpts.data, currentParseOpts)
@@ -270,7 +293,15 @@ var views = {
 			
 			currentParseOpts.complete = function(res) {
 				
+				// probably un-necessary, but safe
+				$('.convert').removeAttr('disabled')
+				$('.convert').removeClass('disabled')
+				
+				// remove spinner
+				$('.spin-placeholder').html('')
+				
 				var errors = res.errors
+				
 				res = {results: res.data} // result is encapsulated inside a "results" property, in order to have a JSON and not an array.
 				
 				// set file name, replacing extension if applicable
@@ -520,9 +551,20 @@ $(document).ready(function(){
 	})
 	
 	// convert button
-	$body.on('click', '.convert', function() {
-		$document.off('keypress')
-		controller.fullParse()
+	$body.on('click', '.convert', function(e) {
+		
+		// avoid triggering conversion multiple times
+		if (typeof $(e.target).attr('disabled') === 'undefined') {
+			
+			$document.off('keypress')
+			$(e.target).attr('disabled', 'disabled')
+			$(e.target).addClass('disabled')
+			
+			// show spinner
+			$('.spin-placeholder').html('<i class="fa fa-cog fa-spin fa-fw"></i><span class="sr-only">Processing...</span> ')
+			
+			controller.fullParse()
+		}
 	})
 	
 	// view saved JSON file

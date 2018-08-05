@@ -226,5 +226,5 @@ sections:
      value: Let's talk!
    - type: div
      class: row
-     value: "<div class='eight  offset-by-two columns'><a class='button button-primary u-full-width' href='/contact/'><i class='fa fa-envelope' aria-hidden='true'></i> Contact us</a></div><br><br>"
+     value: "<div class='eight offset-by-two columns'><a class='button button-primary u-full-width' href='/contact/'><i class='fa fa-envelope' aria-hidden='true'></i> Contact us</a></div><br><br>"
 ---

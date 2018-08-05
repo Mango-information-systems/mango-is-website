@@ -8,6 +8,7 @@ thumbnail: /img/thumbnails/myTagOverflow.png
 css: [myTagOverflow.css]
 scripts: [https://api.stackexchange.com/js/2.0/all.js, js/myTagOverflowChecker.js]
 __index: true
+wide: true
 sections:
  -
   # top section: title
@@ -38,10 +39,10 @@ sections:
 		<li>Adjust the graph layout by dragging/dropping tags</li>
 		<li>Use the visualization in your own website, CV or share on social media...</li>"
  -
-  # About
+  # About myTagOverflow
   content:
    - type: h3
-     value: About
+     value: About myTagOverflow
    - type: p
      value: myTagOverflow creates a visualization of the top tags related to your activity on stackOverflow.
    - type: p
@@ -58,4 +59,30 @@ sections:
      value: myTagOverflow is open source, dual-licensed under MIT and LGPL. You can find the source code of this app <a href="https://github.com/Mango-information-systems/mango-is-website/">here</a>.
    - type: p
      value: Suggestions and contributions are welcome, please have a look at the <a href="https://github.com/Mango-information-systems/mango-is-website/labels/myTagOverflow">current issues</a> on github.
+ -
+  # About us
+  content:
+   - type: h3
+     value: About us
+   - type: p
+     value: Mango Information Systems is a small Belgian company specialized in Data Science / Business Intelligence.
+   - type: p
+     value: We help businesses with their data integration and analytics problems, making sure that both technology and processes are streamlined.
+   - type: div
+     class: row
+     value: "
+		<br>
+		<div class='four offset-by-two columns'>
+			<p>
+				<a class='button u-full-width' href='/'><i class='fa fa-home' aria-hidden='true'></i> Read more</a>
+			</p>
+		</div>
+		<div class='four columns'>
+			<p>
+				<a class='button button-primary u-full-width' href='/contact/'><i class='fa fa-envelope' aria-hidden='true'></i> Contact us</a>
+			</p>
+		</div>
+		
+		<br><br>
+	"
 ---

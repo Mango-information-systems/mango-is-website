@@ -7,6 +7,7 @@ description: Free dashboard showing Google Analytics live traffic data on multip
 thumbnail: /img/thumbnails/multiGa.png
 scripts: [js/g-realtime.js, https://apis.google.com/js/api.js?onload=gApiLoaded]
 __index: true
+wide: true
 sections:
  -
   # top section: title
@@ -33,10 +34,10 @@ sections:
 		<li>View the number of visitors in each view of all properties of your Google Anaytics account</li>
 		<li>Use the drop-down menu to view the visits for another account</li>"
  -
-  # About
+  # About multiGa
   content:
    - type: h3
-     value: About
+     value: About multiGa
    - type: p
      value: This tool lets you visualize the number of visitors you have across all of your websites, from a single screen.
    - type: p
@@ -49,4 +50,30 @@ sections:
      value: Open source
    - type: p
      value: This tool is open source, dual-licensed under MIT and LGPL. You can find the source code of this app <a href="https://github.com/Mango-information-systems/mango-is-website/">here</a>.
+ -
+  # About us
+  content:
+   - type: h3
+     value: About us
+   - type: p
+     value: Mango Information Systems is a small Belgian company specialized in Data Science / Business Intelligence.
+   - type: p
+     value: We help businesses with their data integration and analytics problems, making sure that both technology and processes are streamlined.
+   - type: div
+     class: row
+     value: "
+		<br>
+		<div class='four offset-by-two columns'>
+			<p>
+				<a class='button u-full-width' href='/'><i class='fa fa-home' aria-hidden='true'></i> Read more</a>
+			</p>
+		</div>
+		<div class='four columns'>
+			<p>
+				<a class='button button-primary u-full-width' href='/contact/'><i class='fa fa-envelope' aria-hidden='true'></i> Contact us</a>
+			</p>
+		</div>
+		
+		<br><br>
+	"
 ---
