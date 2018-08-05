@@ -7,19 +7,16 @@
 function render(target) {
 
 	target.html(' \
-		<div class="xs-twelve columns"> \
+		<div class="twelve columns"> \
 			<div class="row"> \
-				<div class="user xs-six columns"></div> \
-				<div class="legendWrapper xs-six columns"> \
+				<div class="user six columns"></div> \
+				<div class="legendWrapper six columns"> \
 					<div class="row"> \
 					</div> \
 				</div> \
-				<div class="xs-six columns"> \
-					<small><a id="exportLink" class="u-pull-right" target="_blank" style="display:none;">Export</a></small> \
-				</div> \
 			</div> \
 		</div> \
-		<div id="chart" class="xs-twelve columns"> \
+		<div id="chart" class="twelve columns"> \
 			<svg width="120px" height="120px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-ripple"> \
 				<rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect> \
 				<g> \
@@ -36,6 +33,9 @@ function render(target) {
 				</g> \
 			</svg> \
 			<br><small>Loading...</small> \
+		</div> \
+		<div class="six offset-by-three columns"> \
+			<a id="exportLink" class=" button button-primary button-block" target="_blank" style="display:none;">Save as SVG image</a> \
 		</div> \
 	')
 
