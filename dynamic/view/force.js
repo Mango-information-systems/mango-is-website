@@ -68,7 +68,8 @@ function ForceChart() {
 			return 'M' + d.source.x + ',' + d.source.y + 'A' + dr + ',' + dr + ' 0 0,1 ' + d.target.x + ',' + d.target.y
 		  })
 		  .attr('stroke-opacity', function(d) { return self.weightScale(d.weight)})
-		  .attr('stroke',  function(d) { return d.source.group === d.target.group ? color(d.source.group) : '#777'})
+		  .attr('stroke-width', function(d) { return .5 + 3 * self.weightScale(d.weight)})
+		  .attr('stroke',  function(d) { return color(d.source.group)})
 
 		d3.select('#links')
 		  .transition()
