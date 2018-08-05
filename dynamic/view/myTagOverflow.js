@@ -7,14 +7,14 @@
 function render(target) {
 
 	target.html(' \
-		<div class="xs-twelve  columns"> \
+		<div class="xs-twelve columns"> \
 			<div class="row"> \
-				<div id="user" class="xs-six  columns"></div> \
-				<div id="legend" class="xs-six  columns"> \
+				<div class="user xs-six columns"></div> \
+				<div class="legendWrapper xs-six columns"> \
 					<div class="row"> \
 					</div> \
 				</div> \
-				<div class="xs-six  columns"> \
+				<div class="xs-six columns"> \
 					<small><a id="exportLink" class="u-pull-right" target="_blank" style="display:none;">Export</a></small> \
 				</div> \
 			</div> \
