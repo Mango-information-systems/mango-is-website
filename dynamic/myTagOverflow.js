@@ -39,6 +39,7 @@ app.view.myTagOverflow.render(appContainer)
 
 // temp
 window.storage = storage
+//~ storage.removeItem('user')
 //~ storage.removeItem('tagsGraph')
 
 
@@ -214,7 +215,7 @@ function extractStats() {
 			// initialize legend items
 			
 			d3.range(data.communitiesCount).forEach(function(ix) {
-				console.log('legend init', ix)
+				//~ console.log('legend init', ix)
 				
 				legendLabels.push('edit me')
 				
@@ -273,7 +274,7 @@ function showUserInfo(user) {
 	
 	debug('displaying user information', user)
 	
-	app.view.userInfo.render(appContainer.select('#user'), user)
+	app.view.userInfo.render(appContainer.select('.user'), user)
 	
 }
 

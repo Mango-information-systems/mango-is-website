@@ -1,17 +1,17 @@
 /* user panel */
 
-#user, #legend, #exportLink {
+.user, .legendWrapper, #exportLink {
 	font-size: .7rem;
 	line-height: 1.1rem;
 }
 
-#user h4{
+.user h4{
 	font-size: 1rem;
 	margin-top: 0;
 	margin-bottom: .5rem;
 }
 
-#user img{
+.user img{
 	display: block;
 	max-width: 64px;
 	height: auto;
@@ -19,14 +19,14 @@
 	margin-bottom: .5rem;
 }
 
-#user p {
+.user p {
 	margin-bottom: 0;
 }
-#user .metric {
+.user .metric {
 	font-size: 1.6rem;
 	margin-top: .5rem;
 }
-#user .metric-legend {
+.user .metric-legend {
 	margin-bottom: .5rem;
 	font-size: .6rem;
 	color: #aaa;

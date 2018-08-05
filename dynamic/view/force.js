@@ -268,7 +268,7 @@ function ForceChart() {
 		self.width = 650
 		self.height = 350
 		
-		self.legend = d3.select('#legend').html('')
+		self.legend = d3.select('.legendWrapper').html('')
 			.append('div')
 			.selectAll('.group')
 		
