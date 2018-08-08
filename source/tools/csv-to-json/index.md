@@ -28,36 +28,44 @@ sections:
      id: appWrapper
      value: "<div id='csvSelectorPane'>
 		<div class='row'>
-			<div id='dropZone' class='eight columns'>
-				<h2>New conversion</h2>
-				<p>
-					<span>Drop or <strong>select a file</strong></span><br>
-					<input id='fileSelect' type='file'/>
-				</p>
-				<p>
-					Or <strong>paste CSV</strong> text <small><a id='sampleCSV'>sample</a></small>
-				</p>
-				<div class='row'>
-					<textarea id='csvText' class='twelve columns' placeholder='Paste from spreadsheet' rows='7'></textarea>
-					<div id='progress' style='float:right; min-height: 5px; width: 100%; background-color: #F47216;'></div>
+			<div class='eight columns'>
+				
+				<h3>New conversion</h3>
+				<div id='dropZone' class='card'>
+					<p>
+						<span>Drop or <strong>select a CSV file</strong></span><br>
+						<input id='fileSelect' type='file'/>
+					</p>
+					<div id='dropPlaceHolder'>
+						<br>
+						<p class='text-center muted'>Drop CSV file here</p>
+					</div>
 				</div>
-				<p>
-					Or <strong>enter a URL</strong>
-				</p>
-				<div class='row'>
-					<input type='url' name='csvUrl' id='csvUrl' class='twelve columns' placeholder='Type CSV Url then press Enter'/>
+				<div class='card'>
+					<p>
+						Or <strong>enter a URL</strong>
+					</p>
+					<div class='row'>
+						<input type='url' name='csvUrl' id='csvUrl' class='twelve columns' placeholder='Type CSV Url then press Enter'/>
+					</div>
+				</div>
+				<div class='card'>
+					<p>
+						Or <strong>paste CSV</strong> text <small><a id='sampleCSV'>sample</a></small>
+					</p>
+					<div class='row'>
+						<textarea id='csvText' class='twelve columns' placeholder='Paste from spreadsheet' rows='7'></textarea>
+						<div id='progress' style='float:right; min-height: 5px; width: 100%; background-color: #F47216;'></div>
+					</div>
 				</div>
 				<div class='row'>
 					<div class='previewErrorContainer'></div>
 				</div>
-				<div id='dropPlaceHolder'>
-					<br>
-					<p class='text-center muted'>Drop file here</p>
-				</div>
 			</div>
 			<div class='four columns'>
-				<h2>Your files</h2>
-				<div id='filesList'>
+				
+				<h3>Your files</h3>
+				<div id='filesList' class='card'>
 				</div>
 			</div>
 		</div>
