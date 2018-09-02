@@ -488,19 +488,19 @@ $(document).ready(function(){
 	})
 	
 	// paste into textarea
-	var debounceTextAreaProcessing = _.debounce(processTextArea, 1750)
+	var debounceTextAreaProcessing = _.debounce(processTextArea, 1000)
 	
 	$csvText.on('keyup paste', function(e) {
-		resetAnimation()
+		resetAnimation($("#pasteProgress"))
 		debounceTextAreaProcessing(e)
 	})
 
-	function resetAnimation() {
-		$("#progress").stop(true)
+	function resetAnimation(selector) {
+		selector.stop(true)
 			.width('100%')
 			.animate({
 				width: 0
-			}, 1750)
+			}, 1000)
 	}
 
 	function processTextArea(e) {
@@ -511,18 +511,36 @@ $(document).ready(function(){
 	}
 	
 	// enter url
-	$csvUrl.on('keypress', function(e) {
-	// process url when Enter key is pressed
-		if (e.keyCode == 13 && e.target.value) {
-			$csvUrl.blur()
-		}
-	})
+	var debounceURLProcessing = _.debounce(processURL, 1000)
+	
+	// The below does not work, probably needs an updated version of underscore.js
+	//~$csvUrl.on('keyup', function(e) {
+	//~// Cancel the processing when escape key is pressed
+		//~if (e.keyCode == 27) {
+			//~console.log('cancelling animation')
+			//~debounceURLProcessing.cancel()
+			//~$("#URLProgress").stop(true)
+				//~.width('100%')
+		//~}
+	//~})
+	
 	$csvUrl.on('blur', function(e) {
+		processURL(e)
+	})
+		
+	$csvUrl.on('keyup paste', function(e) {
+		resetAnimation($("#URLProgress"))
+		debounceURLProcessing(e)
+	})
+	
+	function processURL(e) {
 		if (e.target.value) {
 			var fileName = e.target.value.match(/[^/]+$/g)[0] // extract file name out of the url
+			console.log('URL', fileName)
 			controller.previewParse({data: e.target.value, download:true, fileName: fileName})
 		}
-	})
+	}
+	
 	
 	// header checkbox click
 	$body.on('click', '#header', function(e) {
@@ -545,7 +563,7 @@ $(document).ready(function(){
 	$body.on('click', '.back', function() {
 		controller.showCsvSelectorPane()
 		
-			$("#progress").animate({
+			$("#pasteProgress").animate({
 				width: 0
 			}, 300)
 	})

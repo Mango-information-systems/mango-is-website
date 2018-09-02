@@ -47,7 +47,7 @@ sections:
 					</p>
 					<div class='row'>
 						<textarea id='csvText' class='twelve columns' placeholder='Paste from spreadsheet' rows='7'></textarea>
-						<div id='progress' style='float:right; min-height: 5px; width: 100%; background-color: #F47216;'></div>
+						<div id='pasteProgress' style='float:right; min-height: 5px; width: 100%; background-color: #F47216;'></div>
 					</div>
 				</div>
 				<div class='card'>
@@ -55,7 +55,8 @@ sections:
 						Or <strong>enter a URL</strong>
 					</p>
 					<div class='row'>
-						<input type='url' name='csvUrl' id='csvUrl' class='twelve columns' placeholder='Type CSV Url then press Enter'/>
+						<input type='url' name='csvUrl' id='csvUrl' class='twelve columns' placeholder='Enter the URL of a CSV file'/>
+						<div id='URLProgress' style='float:right; min-height: 5px; width: 100%; background-color: #F47216;'></div>
 					</div>
 				</div>
 				<div class='row'>
@@ -64,7 +65,7 @@ sections:
 			</div>
 			<div class='twelve columns'>
 				
-				<h3>Your files</h3>
+				<h3>Your JSON files</h3>
 				<div id='filesList' class='card'>
 				</div>
 			</div>
