@@ -31,41 +31,35 @@ sections:
 			<div class='twelve columns'>
 				
 				<h3>New conversion</h3>
+				<div id='dropZone' class='card'>
+					<p>
+						<span>Drop or <strong>select a CSV file</strong></span><br>
+						<input id='fileSelect' type='file'/>
+					</p>
+					<div id='dropPlaceHolder'>
+						<br>
+						<p class='text-center muted'>Drop CSV file here</p>
+					</div>
+				</div>
+				<div class='card'>
+					<p>
+						Or <strong>paste CSV</strong> text <small><a id='sampleCSV'>sample</a></small>
+					</p>
+					<div class='row'>
+						<textarea id='csvText' class='twelve columns' placeholder='Paste from spreadsheet' rows='7'></textarea>
+						<div id='progress' style='float:right; min-height: 5px; width: 100%; background-color: #F47216;'></div>
+					</div>
+				</div>
+				<div class='card'>
+					<p>
+						Or <strong>enter a URL</strong>
+					</p>
+					<div class='row'>
+						<input type='url' name='csvUrl' id='csvUrl' class='twelve columns' placeholder='Type CSV Url then press Enter'/>
+					</div>
+				</div>
 				<div class='row'>
-					<div class='eight columns'>
-						<div class='card'>
-							<p>
-								<strong>paste CSV</strong> text <small><a id='sampleCSV'>sample</a></small>
-							</p>
-							<div class='row'>
-								<textarea id='csvText' class='twelve columns' placeholder='Paste from spreadsheet' rows='7'></textarea>
-								<div id='progress' style='float:right; min-height: 5px; width: 100%; background-color: #F47216;'></div>
-							</div>
-						</div>
-						<div class='card'>
-							<p>
-								Or <strong>enter a URL</strong>
-							</p>
-							<div class='row'>
-								<input type='url' name='csvUrl' id='csvUrl' class='twelve columns' placeholder='Type CSV Url then press Enter'/>
-							</div>
-						</div>
-						<div class='row'>
-							<div class='previewErrorContainer'></div>
-						</div>
-					</div>
-					<div class='four columns'>
-						<div id='dropZone' class='card'>
-							<p>
-								<span>Or drop or <strong>select a CSV file</strong></span><br>
-								<input id='fileSelect' type='file'/>
-							</p>
-							<div id='dropPlaceHolder'>
-								<br>
-								<p class='text-center muted'>Drop CSV file here</p>
-							</div>
-						</div>
-					</div>
+					<div class='previewErrorContainer'></div>
 				</div>
 			</div>
 			<div class='twelve columns'>
