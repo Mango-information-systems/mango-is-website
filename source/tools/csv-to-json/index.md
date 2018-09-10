@@ -20,7 +20,7 @@ sections:
      class: small
      value: Easy, privacy-friendly and offline-first online csv to json converter.
  -
-  # app
+  # New conversion
   content:
    - type: div
      value: "<noscript><span class='alert alert-error'>Please activate javascript in order to use the application.</span></noscript>"
@@ -63,20 +63,26 @@ sections:
 					<div class='previewErrorContainer'></div>
 				</div>
 			</div>
-			<div class='twelve columns'>
-				
-				<h3>Your JSON files</h3>
-				<div id='filesList' class='card'>
-				</div>
-			</div>
 		</div>
 	</div>
 
 	<div id='previewPane'>
-	</div>
-
-	<div id='resultsPane'>
 	</div>"
+ -
+  # Converted files
+  content:
+   - type: div
+     class: row
+     value: "
+		<div class='twelve columns'>
+			
+			<h3>Your conversions</h3>
+			<div id='filesList' class='row'>
+			</div>
+
+			<div id='resultsPane'>
+			</div>
+		</div>"
  -
   # How it works
   content:
