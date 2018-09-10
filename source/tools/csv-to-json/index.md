@@ -102,13 +102,13 @@ sections:
    - type: p
      value: "Your data never leaves your browser, thanks to the <a href='https://developer.mozilla.org/en-US/docs/Using_files_from_web_applications' target='_blank'>HTML5 File API</a>."
    - type: h4
-     value: Design
-   - type: p
-     value: "We focused on making it easy and efficient. Do not hesitate to <a href='https://github.com/Mango-information-systems/mango-is-website/issues'>contact us</a> to suggest improvements."
-   - type: h4
      value: Powerful
    - type: p
      value: We've made sure that large files also get converted and don't lock your browser.
+   - type: h4
+     value: Feedback
+   - type: p
+     value: "We focused on making it easy and efficient. There is certainly some room for improvement left, do not hesitate to make suggestions. We can be reached on <a href='https://github.com/Mango-information-systems/mango-is-website/issues'>github</a> or <a href='/contact/'>here</a>."
    - type: h4
      value: Open source
    - type: p
