@@ -28,12 +28,13 @@ sections:
      id: appWrapper
      value: "<div id='csvSelectorPane'>
 		<div class='row'>
-			<div class='eight columns'>
+			<div class='twelve columns'>
 				
 				<h3>New conversion</h3>
+				<!--
 				<div id='dropZone' class='card'>
 					<p>
-						<span>Drop or <strong>select a CSV file</strong></span><br>
+						<i class='fa fa-upload' aria-hidden='true'></i><span>Drop or <strong>select a CSV file</strong></span><br>
 						<input id='fileSelect' type='file'/>
 					</p>
 					<div id='dropPlaceHolder'>
@@ -41,17 +42,10 @@ sections:
 						<p class='text-center muted'>Drop CSV file here</p>
 					</div>
 				</div>
+				-->
 				<div class='card'>
 					<p>
-						Or <strong>enter a URL</strong>
-					</p>
-					<div class='row'>
-						<input type='url' name='csvUrl' id='csvUrl' class='twelve columns' placeholder='Type CSV Url then press Enter'/>
-					</div>
-				</div>
-				<div class='card'>
-					<p>
-						Or <strong>paste CSV</strong> text <small><a id='sampleCSV'>sample</a></small>
+						Or <i class='fa fa-clipboard' aria-hidden='true'></i> <strong>paste CSV</strong> text or a URL<small><a id='sampleCSV'>sample</a></small>
 					</p>
 					<div class='row'>
 						<textarea id='csvText' class='twelve columns' placeholder='Paste from spreadsheet' rows='7'></textarea>
