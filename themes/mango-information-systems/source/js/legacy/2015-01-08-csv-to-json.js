@@ -1,7 +1,7 @@
 var $body, $document, $fileSelector, $previewPane, $csvSelectorPane, $resultsPane, $csvText, $csvUrl, $filesList, $dropPlaceHolder, $sampleCSV // cached DOM elements selector
 	, defaultParseOpts = {
 		preview : 5
-		, worker:true
+		, worker: true
 		, dynamicTyping : true
 		, skipEmptyLines : true
 	}
@@ -244,7 +244,7 @@ var views = {
 	}
 	, controller = {
 		showCsvSelectorPane: function() {
-			resetFileOpts()
+			currentParseOpts = resetFileOpts()
 			
 			$('.previewErrorContainer').html('')
 
@@ -257,10 +257,10 @@ var views = {
 		, previewParse: function(opts) {
 		// parse CSV file, URL or data string
 			
-			resetFileOpts()
+			currentParseOpts = resetFileOpts(currentParseOpts.data)
 			
 			currentParseOpts = _.extend(currentParseOpts, opts)
-			
+
 			currentParseOpts.complete = function(res) {
 
 				if(typeof res === 'undefined') {
@@ -336,7 +336,7 @@ var views = {
 				// show results to the user
 				controller.showResult(fileName, res, errors)
 
-				resetFileOpts()
+				currentParseOpts = resetFileOpts()
 			}
 
 			Papa.parse(currentParseOpts.data, currentParseOpts)
@@ -411,10 +411,16 @@ var views = {
 		}
 	}
 	
-function resetFileOpts() {
-	currentParseOpts = _.clone(defaultParseOpts)
+function resetFileOpts(data) {
+	parseOpts = _.clone(defaultParseOpts)
+	
+	if (typeof data !== 'undefined')
+		parseOpts.data = data
+		
+	return parseOpts
 }
-resetFileOpts()
+
+currentParseOpts = resetFileOpts()
 
 $(document).ready(function(){
 
@@ -536,7 +542,7 @@ $(document).ready(function(){
 	function processURL(e) {
 		if (e.target.value) {
 			var fileName = e.target.value.match(/[^/]+$/g)[0] // extract file name out of the url
-			console.log('URL', fileName)
+			//~console.log('URL', fileName)
 			controller.previewParse({data: e.target.value, download:true, fileName: fileName})
 		}
 	}
@@ -544,11 +550,13 @@ $(document).ready(function(){
 	
 	// header checkbox click
 	$body.on('click', '#header', function(e) {
+		
 		controller.previewParse({header: e.target.checked})
 	})
 	
 	// delimiter checkbox click
 	$body.on('click', 'input[name=delimiter]', function(e) {
+		
 		var delim = e.target.value == 'custom'? $('#customdelimiterTxt')[0].value: e.target.value
 
 		controller.previewParse({delimiter: delim})
