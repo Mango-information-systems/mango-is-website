@@ -26,7 +26,7 @@ var views = {
 								</label> \
 							</fieldset> \
 							<fieldset> \
-								<legend>Column delimiter(s)</legend> \
+								<legend>Column delimiter</legend> \
 								<div class="row"> \
 									<div class="six columns"> \
 										<label for="tab"> \
@@ -351,7 +351,11 @@ var views = {
 			// handle Enter press to trigger conversion
 			$document.on('keypress', function(e) {
 				if (e.keyCode == 13) {
-					$('.convert').trigger('click')
+					if (e.target.id === 'customdelimiterTxt')
+						// pressend enter in custom delimiter input, submit custom delimiter for preview
+						$('#customdelimiterTxt').trigger('blur')
+					else
+						$('.convert').trigger('click')
 				}
 			})
 		}
@@ -557,12 +561,18 @@ $(document).ready(function(){
 	// delimiter checkbox click
 	$body.on('click', 'input[name=delimiter]', function(e) {
 		
-		var delim = e.target.value == 'custom'? $('#customdelimiterTxt')[0].value: e.target.value
+		var delim = e.target.value === 'custom' ? $('#customdelimiterTxt')[0].value: e.target.value
 
-		controller.previewParse({delimiter: delim})
+
+		if ( e.target.value === 'custom' && !$('#customdelimiterTxt')[0].value)
+			$('#customdelimiterTxt')[0].focus()
+		else
+			controller.previewParse({delimiter: delim})
+		
 	})
 	// custom delimitor text entry
 	$body.on('blur', '#customdelimiterTxt', function(e) {
+		
 		if (e.target.value)
 			$('#custom').click()
 	})
