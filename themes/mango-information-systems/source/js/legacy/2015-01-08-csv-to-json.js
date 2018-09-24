@@ -371,6 +371,8 @@ var views = {
 			$resultsPane.html(content).slideDown()
 
 			$resultsPane.slideDown()
+			
+			window.location = '#resultsPane'
 		}
 		, showConversionsList: function() {
 			var content = views.conversionsList(Object.keys(files))
