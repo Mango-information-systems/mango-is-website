@@ -1,5 +1,5 @@
 CACHE MANIFEST
-#3.30.0
+#3.31.0
 
 CACHE:
 /css/font-awesome/fonts/fontawesome-webfont.woff
@@ -16,9 +16,9 @@ CACHE:
 /img/bg-pattern-dark-2x.jpg
 /img/favicon.png
 /js/site.js
+/js/localforage.nopromises.min.js
 /js/legacy/jquery.js
 /js/legacy/underscore-min.js
-/js/legacy/localforage.nopromises.min.js
 /js/legacy/papaparse.min.js
 /js/legacy/2015-01-08-csv-to-json.js
 

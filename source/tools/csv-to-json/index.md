@@ -6,7 +6,7 @@ date: 2016-10-24 16:29:26
 description: Easy, privacy-friendly and offline-first online csv to json converter
 thumbnail: /img/thumbnails/2015-01-08-csv-to-json.png
 css: [legacy/2015-01-08-csv-to-json.css]
-scripts: [js/legacy/jquery.js, js/legacy/underscore-min.js, js/legacy/localforage.nopromises.min.js, js/legacy/papaparse.min.js, js/legacy/2015-01-08-csv-to-json.js]
+scripts: [js/legacy/jquery.js, js/legacy/underscore-min.js, js/localforage.nopromises.min.js, js/legacy/papaparse.min.js, js/legacy/2015-01-08-csv-to-json.js]
 __index: true
 wide: true
 sections:
