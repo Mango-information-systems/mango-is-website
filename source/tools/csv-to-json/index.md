@@ -33,9 +33,13 @@ sections:
 				<h3>New conversion</h3>
 				<div id='dropZone' class='card'>
 					<p>
-						<i class='fa fa-upload' aria-hidden='true'></i><span>Drop or <strong>select a CSV file</strong></span><br>
-						<input id='fileSelect' type='file'/>
+						<i class='fa fa-upload fa-lg text-muted' aria-hidden='true'></i> <span>Drop or <strong>select a CSV file</strong></span><br>
 					</p>
+					<div class='row'>
+						<div class='twelve columns'>
+							<input id='fileSelect' type='file'/>
+						</div>
+					</div>
 					<div id='dropPlaceHolder'>
 						<br>
 						<p class='text-center muted'>Drop CSV file here</p>
@@ -43,24 +47,30 @@ sections:
 				</div>
 				<div class='card'>
 					<p>
-						Or <i class='fa fa-clipboard' aria-hidden='true'></i> <strong>paste CSV</strong> text <small><a id='sampleCSV'>sample</a></small>
+						<i class='fa fa-clipboard fa-lg text-muted' aria-hidden='true'></i> Or <strong>paste CSV</strong> text <small><a id='sampleCSV'>sample</a></small>
 					</p>
 					<div class='row'>
-						<textarea id='csvText' class='twelve columns' placeholder='Paste from spreadsheet' rows='7'></textarea>
-						<div id='pasteProgress' style='float:right; min-height: 5px; width: 100%; background-color: #F47216;'></div>
+						<div class='twelve columns'>
+							<textarea id='csvText' class='twelve columns' placeholder='Paste from spreadsheet' rows='7'></textarea>
+							<div id='pasteProgress' style='float:right; min-height: 5px; width: 100%; background-color: #F47216;'></div>
+						</div>
 					</div>
 				</div>
 				<div class='card'>
 					<p>
-						Or <strong>enter a URL</strong>
+						<i class='fa fa-link fa-lg text-muted' aria-hidden='true'></i> Or <strong>enter a URL</strong>
 					</p>
 					<div class='row'>
-						<input type='url' name='csvUrl' id='csvUrl' class='twelve columns' placeholder='Enter the URL of a CSV file'/>
-						<div id='URLProgress' style='float:right; min-height: 5px; width: 100%; background-color: #F47216;'></div>
+						<div class='twelve columns'>
+							<input type='url' name='csvUrl' id='csvUrl' class='twelve columns' placeholder='Enter the URL of a CSV file'/>
+							<div id='URLProgress' style='float:right; min-height: 5px; width: 100%; background-color: #F47216;'></div>
+						</div>
 					</div>
 				</div>
 				<div class='row'>
-					<div class='previewErrorContainer'></div>
+						<div class='twelve columns'>
+						<div class='previewErrorContainer'></div>
+					</div>
 				</div>
 			</div>
 		</div>
