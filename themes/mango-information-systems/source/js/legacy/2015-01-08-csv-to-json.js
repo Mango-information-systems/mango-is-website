@@ -1,7 +1,7 @@
 var $body, $document, $fileSelector, $previewPane, $csvSelectorPane, $resultsPane, $csvText, $csvUrl, $filesList, $dropPlaceHolder, $sampleCSV // cached DOM elements selector
 	, defaultParseOpts = {
 		preview : 5
-		, worker:true
+		, worker: true
 		, dynamicTyping : true
 		, skipEmptyLines : true
 	}
@@ -26,7 +26,7 @@ var views = {
 								</label> \
 							</fieldset> \
 							<fieldset> \
-								<legend>Column delimiter(s)</legend> \
+								<legend>Column delimiter</legend> \
 								<div class="row"> \
 									<div class="six columns"> \
 										<label for="tab"> \
@@ -132,7 +132,7 @@ var views = {
 			var tmpl = ' \
 				<div class="row"> \
 					<div class="twelve columns"> \
-						<h3><%= fileName %></h3> \
+						<h4><%= fileName %></h4> \
 						<% if (json.results.length > 1000) { %> \
 							<div class="alert" role="alert"> \
 								<p>Because the file is large file, it won\'t be saved in the browser\'s memory for later use.</p> \
@@ -149,11 +149,9 @@ var views = {
 				</div> \
 				<div class="row"> \
 					<div class="twelve columns"> \
-						<a title="convert another file" class="back button button-default"><i class="fa fa-chevron-left" aria-hidden="true"></i> Convert another file</a> \
 						<% if (json.results.length < 1000) { %> \
 							<span class="pull-right" data-filename="<%= fileName %>"> \
-								<span class="muted"><em>Saved</em></span> \
-								<a title="delete file" class="button button-default delete"><i class="fa fa-times" aria-hidden="true"></i> Delete</a> \
+								<a title="delete file" class="button button-default button-sm delete"><i class="fa fa-times" aria-hidden="true"></i> Delete</a> \
 								<%= button %> \
 							</span> \
 						<% } %> \
@@ -162,10 +160,10 @@ var views = {
 				'
 
 			if (data.results.length < 1000) {
-				var button = views.fileDownloadButton(data, fileName, '<i class="fa fa-download" aria-hidden="true"></i> Download', '', 'button-primary')
+				var button = views.fileDownloadButton(data, fileName, '<i class="fa fa-download" aria-hidden="true"></i> Download', '', 'button-primary button-sm')
 			}
 			else {
-				var button = views.fileDownloadButton(data, fileName, 'Download results file', 'button-block', 'button-primary')
+				var button = views.fileDownloadButton(data, fileName, 'Download results file', 'button-block', 'button-primary button-sm')
 				
 			}
 			
@@ -216,35 +214,33 @@ var views = {
 			
 		}
 		, conversionsList: function(fileNames) {
-			if (!fileNames.length) {
-				return '<div class="alert" role="alert">You haven\'t done any conversion yet.<br>Once you convert some CSVs to JSON, the results will show up here.</div>'
-			}
-			else {
-				var tmpl = '<ul> \
-					<%= listItems %>\
-					</ul>'
-					, listItems = _.map(fileNames, function(fileName) {
+			//~if (!fileNames.length) {
+				//~return '<div class="alert" role="alert">You haven\'t done any conversion yet.<br>Once you convert some CSVs to JSON, the results will show up here.</div>'
+			//~}
+			//~else {
+			if (fileNames.length) {
+				var listItems = _.map(fileNames, function(fileName) {
 						return views.convertedFile(fileName)
 					}).join('')
 					
-				return _.template(tmpl, {listItems: listItems})
+				return listItems
 			}
 			
 		}
 		, convertedFile: function(fileName) {
-			var tmpl = '<li><a class="savedFile" href="" data-filename="<%= fileName %>"><%= fileName %></a></li>'
+			var tmpl = '<div class="three columns"><a class="savedFile button u-full-width button-sm" href="" data-filename="<%= fileName %>"><%= fileName %></a></div>'
 			
 			return _.template(tmpl, {fileName: fileName})
 		}
 		, deletedConversion: function(fileName) {
-			var tmpl = '<span class="deletedFile"><%= fileName %> <small>has been deleted</small>. <a data-filename="<%= fileName %>" class="muted undo" href="">undo</a></span>'
+			var tmpl = '<span class="deletedFile">Deleted <%= fileName %>. <small><a data-filename="<%= fileName %>" class="text-muted undo" href="">undo</a></small></span>'
 			
 			return _.template(tmpl, {fileName: fileName})
 		}
 	}
 	, controller = {
 		showCsvSelectorPane: function() {
-			resetFileOpts()
+			currentParseOpts = resetFileOpts()
 			
 			$('.previewErrorContainer').html('')
 
@@ -257,10 +253,10 @@ var views = {
 		, previewParse: function(opts) {
 		// parse CSV file, URL or data string
 			
-			resetFileOpts()
+			currentParseOpts = resetFileOpts(currentParseOpts.data)
 			
 			currentParseOpts = _.extend(currentParseOpts, opts)
-			
+
 			currentParseOpts.complete = function(res) {
 
 				if(typeof res === 'undefined') {
@@ -336,7 +332,7 @@ var views = {
 				// show results to the user
 				controller.showResult(fileName, res, errors)
 
-				resetFileOpts()
+				currentParseOpts = resetFileOpts()
 			}
 
 			Papa.parse(currentParseOpts.data, currentParseOpts)
@@ -351,7 +347,11 @@ var views = {
 			// handle Enter press to trigger conversion
 			$document.on('keypress', function(e) {
 				if (e.keyCode == 13) {
-					$('.convert').trigger('click')
+					if (e.target.id === 'customdelimiterTxt')
+						// pressend enter in custom delimiter input, submit custom delimiter for preview
+						$('#customdelimiterTxt').trigger('blur')
+					else
+						$('.convert').trigger('click')
 				}
 			})
 		}
@@ -361,14 +361,18 @@ var views = {
 			var data = data || files[fileName].data
 			var content = views.fullFile(data, fileName, errors)
 
+			//~if ($csvSelectorPane.is(":visible"))
+				//~$csvSelectorPane.slideUp()
+			//~else
+				$previewPane.hide()
+				$csvSelectorPane.show()
+				$previewPane.empty()
+			
 			$resultsPane.html(content).slideDown()
 
 			$resultsPane.slideDown()
-			if ($csvSelectorPane.is(":visible")) {
-				$csvSelectorPane.slideUp()
-			}
-			else
-				$previewPane.slideUp().empty()
+			
+			window.location = '#resultsPane'
 		}
 		, showConversionsList: function() {
 			var content = views.conversionsList(Object.keys(files))
@@ -378,14 +382,8 @@ var views = {
 		, addToConversionsList: function(fileName) {
 			var content = views.convertedFile(fileName)
 			
-			var $trg = $filesList.find('ul')
 			
-			if (!$trg[0]) {
-			// first time a file is saved, create and show the list container
-				$filesList.html('<ul></ul>')
-			}
-			
-			$filesList.find('ul').append(content)
+			$filesList.append(content)
 		}
 		, deleteFile: function(fileName) {
 			undos[fileName] = files[fileName]
@@ -393,7 +391,8 @@ var views = {
 			localforage.setItem('files', files, function(err, res) { if (err) console.log(err)})
 			var content = views.deletedConversion(fileName)
 			$filesList.find('[data-filename="' + fileName + '"]').replaceWith(content)
-			controller.showCsvSelectorPane()
+			//~controller.showCsvSelectorPane()
+			$resultsPane.slideUp().empty()
 		}
 		, undoDeleteFile: function(fileName) {
 			
@@ -407,14 +406,20 @@ var views = {
 			})
 			
 			var content = views.convertedFile(fileName)
-			$filesList.find('[data-filename="' + fileName + '"]').closest('li').replaceWith(content)
+			$filesList.find('[data-filename="' + fileName + '"]').closest('.columns').replaceWith(content)
 		}
 	}
 	
-function resetFileOpts() {
-	currentParseOpts = _.clone(defaultParseOpts)
+function resetFileOpts(data) {
+	parseOpts = _.clone(defaultParseOpts)
+	
+	if (typeof data !== 'undefined')
+		parseOpts.data = data
+		
+	return parseOpts
 }
-resetFileOpts()
+
+currentParseOpts = resetFileOpts()
 
 $(document).ready(function(){
 
@@ -536,7 +541,7 @@ $(document).ready(function(){
 	function processURL(e) {
 		if (e.target.value) {
 			var fileName = e.target.value.match(/[^/]+$/g)[0] // extract file name out of the url
-			console.log('URL', fileName)
+			//~console.log('URL', fileName)
 			controller.previewParse({data: e.target.value, download:true, fileName: fileName})
 		}
 	}
@@ -544,17 +549,25 @@ $(document).ready(function(){
 	
 	// header checkbox click
 	$body.on('click', '#header', function(e) {
+		
 		controller.previewParse({header: e.target.checked})
 	})
 	
 	// delimiter checkbox click
 	$body.on('click', 'input[name=delimiter]', function(e) {
-		var delim = e.target.value == 'custom'? $('#customdelimiterTxt')[0].value: e.target.value
+		
+		var delim = e.target.value === 'custom' ? $('#customdelimiterTxt')[0].value: e.target.value
 
-		controller.previewParse({delimiter: delim})
+
+		if ( e.target.value === 'custom' && !$('#customdelimiterTxt')[0].value)
+			$('#customdelimiterTxt')[0].focus()
+		else
+			controller.previewParse({delimiter: delim})
+		
 	})
 	// custom delimitor text entry
 	$body.on('blur', '#customdelimiterTxt', function(e) {
+		
 		if (e.target.value)
 			$('#custom').click()
 	})

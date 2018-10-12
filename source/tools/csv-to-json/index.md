@@ -6,7 +6,7 @@ date: 2016-10-24 16:29:26
 description: Easy, privacy-friendly and offline-first online csv to json converter
 thumbnail: /img/thumbnails/2015-01-08-csv-to-json.png
 css: [legacy/2015-01-08-csv-to-json.css]
-scripts: [js/legacy/jquery.js, js/legacy/underscore-min.js, js/legacy/localforage.nopromises.min.js, js/legacy/papaparse.min.js, js/legacy/2015-01-08-csv-to-json.js]
+scripts: [js/legacy/jquery.js, js/legacy/underscore-min.js, js/localforage.nopromises.min.js, js/legacy/papaparse.min.js, js/legacy/2015-01-08-csv-to-json.js]
 __index: true
 wide: true
 sections:
@@ -20,7 +20,7 @@ sections:
      class: small
      value: Easy, privacy-friendly and offline-first online csv to json converter.
  -
-  # app
+  # New conversion
   content:
    - type: div
      value: "<noscript><span class='alert alert-error'>Please activate javascript in order to use the application.</span></noscript>"
@@ -63,20 +63,26 @@ sections:
 					<div class='previewErrorContainer'></div>
 				</div>
 			</div>
-			<div class='twelve columns'>
-				
-				<h3>Your JSON files</h3>
-				<div id='filesList' class='card'>
-				</div>
-			</div>
 		</div>
 	</div>
 
 	<div id='previewPane'>
-	</div>
-
-	<div id='resultsPane'>
 	</div>"
+ -
+  # Converted files
+  content:
+   - type: div
+     class: row
+     value: "
+		<div class='twelve columns'>
+			
+			<h3>Your conversions</h3>
+			<div id='filesList' class='row'>
+			</div>
+
+			<div id='resultsPane'>
+			</div>
+		</div>"
  -
   # How it works
   content:
@@ -102,13 +108,13 @@ sections:
    - type: p
      value: "Your data never leaves your browser, thanks to the <a href='https://developer.mozilla.org/en-US/docs/Using_files_from_web_applications' target='_blank'>HTML5 File API</a>."
    - type: h4
-     value: Design
-   - type: p
-     value: "We focused on making it easy and efficient. Do not hesitate to <a href='https://github.com/Mango-information-systems/mango-is-website/issues'>contact us</a> to suggest improvements."
-   - type: h4
      value: Powerful
    - type: p
      value: We've made sure that large files also get converted and don't lock your browser.
+   - type: h4
+     value: Feedback
+   - type: p
+     value: "We focused on making it easy and efficient. There is certainly some room for improvement left, do not hesitate to make suggestions. We can be reached on <a href='https://github.com/Mango-information-systems/mango-is-website/issues'>github</a> or <a href='/contact/'>here</a>."
    - type: h4
      value: Open source
    - type: p
