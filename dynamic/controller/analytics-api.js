@@ -157,8 +157,19 @@ function AnalyticsApi(gapi, callback, updateFunction) {
 		
 		debug('signing user in')
 		
+		gaCustom.toGa('event', {
+			category: 'multiga'
+			, action: 'sign in attempt'
+		})
+		
 		gapi.auth2.getAuthInstance().signIn().then( function(res) {
 			// TODO handle errors at sign-in
+			
+			gaCustom.toGa('event', {
+				category: 'multiga'
+				, action: 'user signed in'
+			})
+			
 			callback()
 		})
 		
@@ -174,6 +185,12 @@ function AnalyticsApi(gapi, callback, updateFunction) {
 
 		gapi.auth2.getAuthInstance().signOut().then( function(res) {
 			// TODO handle errors at sign-out
+			
+			gaCustom.toGa('event', {
+				category: 'multiga'
+				, action: 'user signed out'
+			})
+			
 			callback()
 		})
 		
