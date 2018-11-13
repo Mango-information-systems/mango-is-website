@@ -204,6 +204,12 @@ function extractStats() {
 						app.view.myTagOverflow.render(appContainer)
 						
 						app.controller.stackExchangeApi.signIn(start)
+						
+						gaCustom.toGa('event', {
+							category: 'mytagoverflow'
+							, action: 'sign-in attempt'
+						})
+						
 					}
 				})
 			}
@@ -257,10 +263,19 @@ function showChart(tagsGraph) {
 		})
 	}
 	
+	gaCustom.toGa('event', {
+		category: 'mytagoverflow'
+		, action: 'visualize graph'
+	})
 	
 	
 	d3.select('#exportLink').on('click', function() {
 		app.controller.SVGExport.export(document.getElementById('chartSVG'), document.getElementById('exportLink'))
+		
+		gaCustom.toGa('event', {
+			category: 'mytagoverflow'
+			, action: 'graph SVG export'
+		})
 	})
 
 	
