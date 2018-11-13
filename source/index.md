@@ -21,10 +21,10 @@ sections:
   content:
    - type: h5
      class: u-text-center
-     value: Organizations struggle to <br><strong>get accurate information to take good business decisions</strong>.
+     value: Organizations struggle to <br>get accurate information to take good business decisions.
    - type: h5
      class: u-text-center
-     value: We provide and analyze factual data, helping them <br><strong>be more efficient</strong>.<br>
+     value: We provide and analyze factual data, helping them <br>be more efficient.<br>
    - type: ul
      class: list-inline row u-text-center
      value: "<li class='four columns' itemscope itemtype='http://schema.org/Product'><h5><i class='fa fa-bar-chart fa-lg text-primary' aria-hidden='true'></i> <span  itemprop='name'>Business Intelligence</span></h5></li>
@@ -33,10 +33,10 @@ sections:
 			 <br><br><br>"
    - type: h5
      class: u-text-center
-     value: Should we be working together? Let's talk!
+     value: Should we be working together?
    - type: div
      class: row
-     value: "<div class='eight  offset-by-two columns'><a class='button button-primary u-full-width' href='/contact/'><i class='fa fa-envelope' aria-hidden='true'></i> Contact us</a><p></p></div>"
+     value: "<div class='eight  offset-by-two columns'><a class='button button-primary u-full-width' href='/contact/'><i class='fa fa-envelope' aria-hidden='true'></i> Let's talk!</a><p></p></div>"
    - type: h5
      class: u-text-center
      value: <p>Or read what our clients say below</p><p><i class='fa fa-angle-down' aria-hidden='true'></i></p>
