@@ -8,6 +8,7 @@ else
 	sudo chown -R www-data:www-data /var/www/$1.mango-is.com
 	sudo cp -rp dynamic/* /home/srv-node-mango/app
 	sudo chown -R srv-node-mango:srv-node-mango /home/srv-node-mango/app
+	sudo touch /var/ngx_pagespeed_cache/cache.flush
 	sudo systemctl restart node-mango-is
 fi
 
