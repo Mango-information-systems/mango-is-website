@@ -107,14 +107,16 @@ function setContent(content) {
 	<%
 		if (isFirst) {
 	%>
-		<a class="brand" rel="home" href="/">
-			<%- image_tag('/img/mango-information-systems-logo.png', {
-				class: 'u-img-responsive'
-				, alt: 'Mango Information Systems'
-				, width: '400px'
-				, height: '74px'
-			}) %>
-		</a>
+		<div class="row">
+			<div class="lg-five column">
+				<a class="brand" rel="home" href="/">
+					<%- image_tag('/img/mango-information-systems-logo.png', {
+						class: 'u-img-responsive'
+						, alt: 'Mango Information Systems'
+					}) %>
+				</a>
+			</div>
+		</div>
 	<%
 	}
 	%>
