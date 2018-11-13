@@ -47,5 +47,15 @@ sections:
    - type: p
      value: Mango Information Systems SPRL might collect personal data from your voluntary submission, or by accessing publicly available content from third-party websites, in accordance with their terms of use.
    - type: p
+     value: Mango Information Systems SPRL keeps track of certain information about you when you visit and interact with our Product and Services. This information includes the features you use and how you interact with our Product and Services. This information is collected solely for the purpose of enhancing and improving your experience.
+   - type: h3
+     value: Access to Your Data 
+   - type: p
      value: "You have the right to access your personal data and to have the same rectified or deleted. In this respect send us either a registered letter by mail (see our postal address at the bottom of the page), or a message using the <a href='https://mango-is.com/contact' class='contact'>contact form</a> in this website."
+   - type: h3
+     value: Supervising Authority
+   - type: p
+     value: "The Belgiuan Commission for the Protection of Privacy is Mango Information Systems' lead supervisory authority. You have the right to lodge a complaint about Mango Information Systems' management of data:"
+   - type: p
+     value: "Commission for the Protection of Privacy<br>Rue de la Presse 35,<br>Brussels 1000<br>Email: <a href='mailto:commission@privacycommission.be'>commission@privacycommission.be</a>"
 ---
