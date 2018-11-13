@@ -223,9 +223,11 @@ sections:
         alt: EEIP logo
       - href: /img/clients/smoall.png
         alt: smoall logo
+      - href: /img/clients/deloitte.png
+        alt: Deloitte logo
 # disabled to avoid display of odd number of logos
-#      - href: /img/clients/deloitte.png
-#        alt: Deloitte logo
+#      - href: /img/clients/international-post-corporation.png
+#        alt: International Post Corporation logo
  -
   # section: CTA repeat
   content:
