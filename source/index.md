@@ -19,25 +19,25 @@ sections:
  -
   # second section: problem / solution
   content:
-   - type: p
+   - type: h5
      class: u-text-center
-     value: One of the biggest challenges in any organization is to <br><strong>get accurate information to take good business decisions</strong>.
-   - type: p
+     value: Organizations struggle to <br><strong>get accurate information to take good business decisions</strong>.
+   - type: h5
      class: u-text-center
-     value: We provide factual data to our clients, helping them <br><strong>be more efficient, decrease their costs and grow their market share</strong><br><br>.
+     value: We provide and analyze factual data, helping them <br><strong>be more efficient</strong>.<br>
    - type: ul
      class: list-inline row u-text-center
-     value: "<li class='four columns' itemscope itemtype='http://schema.org/Product'><i class='fa fa-pie-chart text-primary' aria-hidden='true'></i> <span  itemprop='name'>Data-driven web applications</span></li>
-			 <li class='four columns' itemscope itemtype='http://schema.org/Product'><i class='fa fa-flask text-primary' aria-hidden='true'></i> <span  itemprop='name'>Data science</span></li>
-			 <li class='four columns' itemscope itemtype='http://schema.org/Product'><i class='fa fa-bar-chart text-primary' aria-hidden='true'></i> <span  itemprop='name'>Corporate Business Intelligence</span></li>
+     value: "<li class='four columns' itemscope itemtype='http://schema.org/Product'><h5><i class='fa fa-bar-chart fa-lg text-primary' aria-hidden='true'></i> <span  itemprop='name'>Business Intelligence</span></h5></li>
+			 <li class='four columns' itemscope itemtype='http://schema.org/Product'><h5><i class='fa fa-flask fa-lg text-primary' aria-hidden='true'></i> <span  itemprop='name'>Data science</span></h5></li>
+			 <li class='four columns' itemscope itemtype='http://schema.org/Product'><h5><i class='fa fa-pie-chart fa-lg text-primary' aria-hidden='true'></i> <span  itemprop='name'>Data-driven applications</span></h5></li>
 			 <br><br><br>"
-   - type: h4
+   - type: h5
      class: u-text-center
      value: Should we be working together? Let's talk!
    - type: div
      class: row
      value: "<div class='eight  offset-by-two columns'><a class='button button-primary u-full-width' href='/contact/'><i class='fa fa-envelope' aria-hidden='true'></i> Contact us</a><p></p></div>"
-   - type: h4
+   - type: h5
      class: u-text-center
      value: <p>Or read what our clients say below</p><p><i class='fa fa-angle-down' aria-hidden='true'></i></p>
  -
