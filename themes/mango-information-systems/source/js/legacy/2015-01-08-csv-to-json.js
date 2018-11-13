@@ -432,6 +432,7 @@ var views = {
 			gaCustom.toGa('event', {
 				category: 'csv-to-json'
 				, action: 'undo delete converted file'
+			})
 		}
 	}
 	
@@ -476,13 +477,16 @@ $(document).ready(function(){
 	
 	// file selection via button
 	$fileSelector.on('change', function(e) {
+		
 		controller.previewParse({data: e.target.files[0], fileName:e.target.files[0].name})
+		
 		gaCustom.toGa('event', {
 			category: 'csv-to-json'
 			, action: 'input CSV'
 			, label: 'file select'
 		})
 	})
+	
 	$fileSelector.on('click', function() {
 		// reset file value to null to allow the selection of the same file
 		// based on http://stackoverflow.com/a/12102992
@@ -511,7 +515,9 @@ $(document).ready(function(){
 		e.stopPropagation()
 		e.preventDefault()
 		$dropPlaceHolder.hide()
+		
 		controller.previewParse({data: e.originalEvent.dataTransfer.files[0], fileName: e.originalEvent.dataTransfer.files[0].name})
+		
 		gaCustom.toGa('event', {
 			category: 'csv-to-json'
 			, action: 'input CSV'
@@ -546,7 +552,13 @@ $(document).ready(function(){
 	function processTextArea(e) {
 		if (e.target.value && e.target.value != oldTextAreaValue) {
 			oldTextAreaValue = e.target.value
+			
 			controller.previewParse({data: e.target.value, fileName: 'pastedText'})
+			
+			gaCustom.toGa('event', {
+				category: 'csv-to-json'
+				, action: 'paste CSV'
+			})
 		}
 	}
 	
@@ -577,7 +589,9 @@ $(document).ready(function(){
 		if (e.target.value) {
 			var fileName = e.target.value.match(/[^/]+$/g)[0] // extract file name out of the url
 			//~console.log('URL', fileName)
+			
 			controller.previewParse({data: e.target.value, download:true, fileName: fileName})
+			
 			gaCustom.toGa('event', {
 				category: 'csv-to-json'
 				, action: 'input CSV'
