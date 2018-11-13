@@ -117,6 +117,11 @@ sections:
      value: Privacy friendly
    - type: p
      value: "Your data never leaves your browser, thanks to the <a href='https://developer.mozilla.org/en-US/docs/Using_files_from_web_applications' target='_blank'>HTML5 File API</a>."
+   - type: p
+     value: "The following data is however recorded in Google analytics, in order to allow us to measure tool usage and improve csv-to-json:"
+   - type: ul
+     value: "<li>Which step user went through: submit a CSV, preview the conversion, perform conversion, delete converted file, undo delete </li>
+			<li>Number of lines in the converted CSVs</li>"
    - type: h4
      value: Powerful
    - type: p
