@@ -22,11 +22,11 @@ sections:
      value: Save time, focus on your business.
    - type: div
      value: "<br><br><br><br><br>"
-#   - type: cta
-#     href: "#pricing"
-#     primary: true
-#     trg: /pullreceipt-pricing
-#     value: View plans
+   - type: cta
+     href: "#pricing"
+     primary: true
+     trg: /pullreceipt-pricing
+     value: View plans
  -
   # Standby project notification
   content:
