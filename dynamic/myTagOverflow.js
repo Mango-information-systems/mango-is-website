@@ -75,6 +75,14 @@ function start(hasError, accessToken) {
 			
 			if (tagsGraph === null || user === null )
 				initiateExtraction(hasError, {accessToken: accessToken, user: user, tagsGraph: tagsGraph})
+			else {
+						
+				gaCustom.toGa('event', {
+					category: 'mytagoverflow'
+					, action: 'user is signed in'
+				})
+				
+			}
 			
 		})
 	})
@@ -138,6 +146,11 @@ function initiateExtraction(hasError, opts) {
 						app.view.myTagOverflow.render(appContainer)
 						
 						app.controller.stackExchangeApi.signIn(start)
+						
+						gaCustom.toGa('event', {
+							category: 'mytagoverflow'
+							, action: 'sign-in attempt'
+						})
 					}
 				})
 			}
@@ -168,6 +181,11 @@ function extractUser() {
 						app.view.myTagOverflow.render(appContainer)
 						
 						app.controller.stackExchangeApi.signIn(start)
+						
+						gaCustom.toGa('event', {
+							category: 'mytagoverflow'
+							, action: 'sign-in attempt'
+						})
 					}
 				})
 			}
