@@ -275,10 +275,21 @@ var views = {
 				}
 				else {
 					controller.showFilePreview(res)
+			
+					gaCustom.toGa('event', {
+						category: 'csv-to-json'
+						, action: 'CSV row count'
+						, value: res.data.length
+					})
 				}
 			}
 
 			Papa.parse(currentParseOpts.data, currentParseOpts)
+			
+			gaCustom.toGa('event', {
+				category: 'csv-to-json'
+				, action: 'preview conversion'
+			})
 		}
 		, fullParse: function() {
 		// parse the full file and display the results
@@ -337,6 +348,11 @@ var views = {
 
 			Papa.parse(currentParseOpts.data, currentParseOpts)
 			
+			gaCustom.toGa('event', {
+				category: 'csv-to-json'
+				, action: 'convert CSV'
+			})
+			
 		}
 		, showFilePreview: function(data) {
 		// initial display of the preview of a parsed file to convert
@@ -393,6 +409,11 @@ var views = {
 			$filesList.find('[data-filename="' + fileName + '"]').replaceWith(content)
 			//~controller.showCsvSelectorPane()
 			$resultsPane.slideUp().empty()
+			
+			gaCustom.toGa('event', {
+				category: 'csv-to-json'
+				, action: 'delete converted file'
+			})
 		}
 		, undoDeleteFile: function(fileName) {
 			
@@ -407,6 +428,10 @@ var views = {
 			
 			var content = views.convertedFile(fileName)
 			$filesList.find('[data-filename="' + fileName + '"]').closest('.columns').replaceWith(content)
+			
+			gaCustom.toGa('event', {
+				category: 'csv-to-json'
+				, action: 'undo delete converted file'
 		}
 	}
 	
@@ -452,6 +477,11 @@ $(document).ready(function(){
 	// file selection via button
 	$fileSelector.on('change', function(e) {
 		controller.previewParse({data: e.target.files[0], fileName:e.target.files[0].name})
+		gaCustom.toGa('event', {
+			category: 'csv-to-json'
+			, action: 'input CSV'
+			, label: 'file select'
+		})
 	})
 	$fileSelector.on('click', function() {
 		// reset file value to null to allow the selection of the same file
@@ -482,6 +512,11 @@ $(document).ready(function(){
 		e.preventDefault()
 		$dropPlaceHolder.hide()
 		controller.previewParse({data: e.originalEvent.dataTransfer.files[0], fileName: e.originalEvent.dataTransfer.files[0].name})
+		gaCustom.toGa('event', {
+			category: 'csv-to-json'
+			, action: 'input CSV'
+			, label: 'file drop'
+		})
 		return false
 	})
 	
@@ -543,6 +578,11 @@ $(document).ready(function(){
 			var fileName = e.target.value.match(/[^/]+$/g)[0] // extract file name out of the url
 			//~console.log('URL', fileName)
 			controller.previewParse({data: e.target.value, download:true, fileName: fileName})
+			gaCustom.toGa('event', {
+				category: 'csv-to-json'
+				, action: 'input CSV'
+				, label: 'URL'
+			})
 		}
 	}
 	
