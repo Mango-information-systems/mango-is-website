@@ -7,6 +7,7 @@ __index: true
 sections:
  -
   # top section
+  background-image: "/img/bg-1.jpg"
   content:
    -
     type: h1
@@ -16,6 +17,15 @@ sections:
     type: h2
     class: small u-text-center
     value: Mango uses data science to help organizations take smarter decisions.
+   -
+    type: custom
+    value: "<br><br>"
+   - type: h5
+     class: u-text-center
+     value: Should we be working together?
+   - type: div
+     class: row
+     value: "<div class='eight  offset-by-two columns'><a class='button button-primary u-full-width' href='/contact/'><i class='fa fa-envelope' aria-hidden='true'></i> Let's talk!</a><p></p></div>"
  -
   # second section: problem / solution
   content:
@@ -33,13 +43,7 @@ sections:
 			 <br><br><br>"
    - type: h5
      class: u-text-center
-     value: Should we be working together?
-   - type: div
-     class: row
-     value: "<div class='eight  offset-by-two columns'><a class='button button-primary u-full-width' href='/contact/'><i class='fa fa-envelope' aria-hidden='true'></i> Let's talk!</a><p></p></div>"
-   - type: h5
-     class: u-text-center
-     value: <p>Or read what our clients say below</p><p><i class='fa fa-angle-down' aria-hidden='true'></i></p>
+     value: <p>Read what our clients say below</p><p><i class='fa fa-angle-down' aria-hidden='true'></i></p>
  -
   # third section: references
   content:

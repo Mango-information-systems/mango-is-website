@@ -2,6 +2,10 @@
 <%
 var sectionStyle = isFirst ? 'min-height:80%;' : ''
 
+if (isFirst && !data['background-image'])
+	sectionStyle += 'background: url(/img/bg-1.jpg) no-repeat center center fixed; background-size: cover;'
+
+
 sectionStyle += data['background-image'] ? 'background: url(' + data['background-image'] + ') no-repeat center center fixed; background-size: cover;' : ''
 
 function setContent(content) {

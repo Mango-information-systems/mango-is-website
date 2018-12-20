@@ -8,6 +8,7 @@ __index: true
 sections:
  -
   # top section: title
+  background-image: "/img/bg-2.jpg"
   content:
    - type: h1
      class: small
