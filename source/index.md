@@ -54,24 +54,10 @@ sections:
      value: ""
    - type: reference
      content:
-      project: "ED: collaborative platform"
-      description: Development of a platform that lets users collaborate on shared content in realtime. Analytics is performed live and presented in dashboards and reports.
-      domains: [business analysis, realtime analytics, software architecture]
-      tech: [node.js, d3.js, websockets]
-      quotes:
-        - text: Mehdi is responsible for the development of a data-intensive web application.<br>He demonstrates his commitment to the success of this enterprise through flexibility and short response times. He is <strong>totally focused on delivering results</strong>.
-          author: Jean-Christophe Blondiau
-          authorTitle: Director at co-emergence
-          image:
-           href: /img/clients/jean-christophe-blondiau.jpg
-           alt: Jean-Christophe Blondiau
-           width: 140px
-           height: 140px
-   - type: reference
-     content:
       project: Tribalytics
-      description: "<p>Tribalytics is a social media audience analytics tool <strong>that helps marketers find and reach their target audience</strong> on twitter. Communities of people sharing interest over a topic are identified by analysing social graphs on twitter (how people are connected between each other), and the content shared by these people. Identifying influencers in each community helps marketers achieve actual virality in their campaigns.</p> <p><small>Read also: <a href='/blog/business/getting-started-with-twitter/'>Getting started with Twitter - Using social media for sales conversions</a> in our blog.</small></p>"
-      domains: [saas, sales, project management, entrepreneurship, graph analysis, natural language processing]
+      description: "<p>Mango Information Systems is the creator of <a href='https://tribalytics.com/'>Tribalytics</a>, a service <strong>helping marketers find and reach their target on social media</strong>. Tribalytics uses data science to perform social media audience analytics and market research.</p>
+      <p><i class='fa fa-arrow-right' aria-hidden='true'></i> You can read more about our approach on <a href='https://tribalytics.com/'>tribalytics.com</a>.</small></p>"
+      domains: [data science, entrepreneurship, graph analysis, segmentation, natural language processing, sales, influencer marketing, marketing strategy, project management, startup]
       tech: [node.js, gephi, d3.js, php Laravel]
       dataTech: [redis, mysql, mariadb, twitter API, nominatim API, json]
       quotes:
@@ -89,31 +75,6 @@ sections:
           image:
            href: /img/clients/david-hachez.jpg
            alt: David Hachez
-           width: 140px
-           height: 140px
-   - type: reference
-     content:
-      project: Twitto.be
-      description: <p><a href="https://twitto.be/">Twitto</a> is a showcase of our know-how in realtime analytics web applications. It is a dashboard extracting the trends from all geolocated tweets in Belgium.</p><p>Fully open source, you may adapt it to monitor any other part of the world you're interested in, or to follow a specific topic.</p><p><small><i class="fa fa-info-circle" aria-hidden="true"></i> Have a look at more creations in our <a href="/tools/">open source tools</a> page.</small></p>
-      domains: [business analysis, application design, software architecture, web]
-      tech: [node.js, d3.js, websockets, html5, css3, javascript]
-      dataTech: [twitter realtime API]
-   - type: reference
-     content:
-      project: Conversion Rate Optimization (CRO)
-      description: "<p>We combine our sales techniques and web design skills to help businesses convert website visitors into paying customers.</p><p>Smoall hired us to enhance their website. Once the redesign done, <strong>signup rates for their application increased by 328%</strong>.</p>
-      <p><small><i class='fa fa-info-circle' aria-hidden='true'></i> Read also: <a href='/blog/convert/a-sublime-landing-page/'>A sublime landing page - How to convince visitors to buy on the web</a> in our blog.</small></p>"
-      domains: [web analytics, copywriting, consultative selling, design]
-      tech: [google analytics, javascript, wordpress]
-      quotes:
-        - text: "As we were looking at optimizing the conversion rate of our startup smoall.com, Mehdi helped us by setting up a reporting system, measuring the performance of each step of the funnel.<br>
-		Mehdi has a strong analytical mind, but also understands business, and dedicates all his efforts to his clients' goals."
-          author: Bastien Wauters
-          authorTitle: Managing Director & Co-founder at <a href="https://www.smoall.com/">Smoall</a>
-          client: smoall
-          image:
-           href: /img/clients/bastien-wauters.jpg
-           alt: Bastien Wauters
            width: 140px
            height: 140px
    - type: reference
@@ -140,6 +101,46 @@ sections:
            alt: Merih Koyuncu
            width: 140px
            height: 140px
+   - type: reference
+     content:
+      project: Conversion Rate Optimization (CRO)
+      description: "<p>We combine our sales techniques and web design skills to help businesses convert website visitors into paying customers.</p><p>Smoall hired us to enhance their website. Once the redesign done, <strong>signup rates for their application increased by 328%</strong>.</p>
+      <p><small><i class='fa fa-info-circle' aria-hidden='true'></i> Read also: <a href='/blog/convert/a-sublime-landing-page/'>A sublime landing page - How to convince visitors to buy on the web</a> in our blog.</small></p>"
+      domains: [web analytics, copywriting, consultative selling, design]
+      tech: [google analytics, javascript, wordpress]
+      quotes:
+        - text: "As we were looking at optimizing the conversion rate of our startup smoall.com, Mehdi helped us by setting up a reporting system, measuring the performance of each step of the funnel.<br>
+		Mehdi has a strong analytical mind, but also understands business, and dedicates all his efforts to his clients' goals."
+          author: Bastien Wauters
+          authorTitle: Managing Director & Co-founder at <a href="https://www.smoall.com/">Smoall</a>
+          client: smoall
+          image:
+           href: /img/clients/bastien-wauters.jpg
+           alt: Bastien Wauters
+           width: 140px
+           height: 140px
+   - type: reference
+     content:
+      project: "ED: collaborative platform"
+      description: Development of a platform that lets users collaborate on shared content in realtime. Analytics is performed live and presented in dashboards and reports.
+      domains: [business analysis, realtime analytics, software architecture]
+      tech: [node.js, d3.js, websockets]
+      quotes:
+        - text: Mehdi is responsible for the development of a data-intensive web application.<br>He demonstrates his commitment to the success of this enterprise through flexibility and short response times. He is <strong>totally focused on delivering results</strong>.
+          author: Jean-Christophe Blondiau
+          authorTitle: Director at co-emergence
+          image:
+           href: /img/clients/jean-christophe-blondiau.jpg
+           alt: Jean-Christophe Blondiau
+           width: 140px
+           height: 140px
+   - type: reference
+     content:
+      project: Twitto.be
+      description: <p><a href="https://twitto.be/">Twitto</a> is a showcase of our know-how in realtime analytics web applications. It is a dashboard extracting the trends from all geolocated tweets in Belgium.</p><p>Fully open source, you may adapt it to monitor any other part of the world you're interested in, or to follow a specific topic.</p><p><small><i class="fa fa-info-circle" aria-hidden="true"></i> Have a look at more creations in our <a href="/tools/">open source tools</a> page.</small></p>
+      domains: [business analysis, application design, software architecture, web]
+      tech: [node.js, d3.js, websockets, html5, css3, javascript]
+      dataTech: [twitter realtime API]
    - type: reference
      content:
       project: Data Integration
