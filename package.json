@@ -1,6 +1,6 @@
 {
   "name": "mango-is-website",
-  "version": "3.33.0",
+  "version": "3.34.0",
   "private": true,
   "scripts": {
     "start": "npm run build:static && cp config/dev.theme._config.yml themes/mango-information-systems/_config.yml && npm run watch & hexo server & npm run watch:socketServer",
@@ -66,6 +66,6 @@
     "should": "^9.0.2",
     "uglify-es": "^3.3.9",
     "uglifyify": "^4.0.5",
-    "watchify": "^3.11.0"
+    "watchify": "^3.11.1"
   }
 }
