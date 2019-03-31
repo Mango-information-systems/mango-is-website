@@ -2,6 +2,10 @@
 	height: 100%;
 }
 
+section:first-child {
+	min-height: 40vh;
+}
+
 section {
 	min-height: 60%;
 	padding-top: 2.5em;

@@ -12,36 +12,31 @@ sections:
    -
     type: h1
     class: small u-text-center
-    value: You need the right knowledge to succeed
-   -
-    type: h2
-    class: small u-text-center
-    value: Mango uses data science to help organizations take smarter decisions.
-   -
-    type: custom
-    value: "<br><br>"
-   - type: h5
-     class: u-text-center
-     value: Should we be working together?
-   - type: div
-     class: row
-     value: "<div class='eight  offset-by-two columns'><a class='button button-primary u-full-width' href='/contact/'><i class='fa fa-envelope' aria-hidden='true'></i> Let's talk!</a><p></p></div>"
+    value: Producing actionable knowledge
  -
   # second section: problem / solution
   content:
    - type: h5
      class: u-text-center
-     value: Organizations struggle to <br>get accurate information to take good business decisions.
+     value: Organizations struggle to take decisions based on facts.
    - type: h5
      class: u-text-center
-     value: We provide and analyze factual data, helping them <br>be more efficient.<br>
+     value: "We help them with:"
    - type: ul
      class: list-inline row u-text-center
      value: "<li class='four columns' itemscope itemtype='http://schema.org/Product'><h5><i class='fa fa-bar-chart fa-lg text-primary' aria-hidden='true'></i> <span  itemprop='name'>Business Intelligence</span></h5></li>
 			 <li class='four columns' itemscope itemtype='http://schema.org/Product'><h5><i class='fa fa-flask fa-lg text-primary' aria-hidden='true'></i> <span  itemprop='name'>Data science</span></h5></li>
-			 <li class='four columns' itemscope itemtype='http://schema.org/Product'><h5><i class='fa fa-pie-chart fa-lg text-primary' aria-hidden='true'></i> <span  itemprop='name'>Data-driven applications</span></h5></li>
-			 <br><br><br>"
-   - type: h5
+			 <li class='four columns' itemscope itemtype='http://schema.org/Product'><h5><i class='fa fa-rocket fa-lg text-primary' aria-hidden='true'></i> <span  itemprop='name'>Data-driven applications</span></h5></li>"
+   -
+    type: custom
+    value: "<br><br>"
+   - type: div
+     class: row
+     value: "<div class='eight  offset-by-two columns'><a class='button button-primary u-full-width' href='/contact/'><i class='fa fa-envelope' aria-hidden='true'></i> Let's talk</a><p></p></div>"
+   -
+    type: custom
+    value: "<br><br>"
+   - type: div
      class: u-text-center
      value: <p>Read what our clients say below</p><p><i class='fa fa-angle-down' aria-hidden='true'></i></p>
  -
