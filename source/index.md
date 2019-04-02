@@ -12,7 +12,7 @@ sections:
    -
     type: h1
     class: small u-text-center
-    value: Producing actionable knowledge
+    value: Empowering organizations with actionable knowledge
  -
   # second section: problem / solution
   content:
@@ -32,7 +32,7 @@ sections:
     value: "<br><br>"
    - type: div
      class: row
-     value: "<div class='eight  offset-by-two columns'><a class='button button-primary u-full-width' href='/contact/'><i class='fa fa-envelope' aria-hidden='true'></i> Let's talk</a><p></p></div>"
+     value: "<div class='six  offset-by-three columns'><a class='button button-primary u-full-width' href='/contact/'><i class='fa fa-envelope' aria-hidden='true'></i> Let's talk</a><p></p></div>"
    -
     type: custom
     value: "<br><br>"
