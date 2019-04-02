@@ -18,10 +18,10 @@ sections:
   content:
    - type: h5
      class: u-text-center
-     value: Organizations struggle to take decisions based on facts.
+     value: Do you struggle to take decisions based on facts?
    - type: h5
      class: u-text-center
-     value: "We help them with:"
+     value: "We can help you with:"
    - type: ul
      class: list-inline row u-text-center
      value: "<li class='four columns' itemscope itemtype='http://schema.org/Product'><h5><i class='fa fa-bar-chart fa-lg text-primary' aria-hidden='true'></i> <span  itemprop='name'>Business Intelligence</span></h5></li>
