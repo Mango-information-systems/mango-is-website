@@ -16,9 +16,7 @@
 			<%- post.content %>
 		<% } %>
 	</div>
-	<div id="article-end">
-		<%- partial('post/postFooter', {date_format: 'MMMM Do YYYY', isIndex: false}) %>
-	</div>
+	<%- partial('post/postFooter', {date_format: 'MMMM Do YYYY', isIndex: false}) %>
 </article>
 
 <% if (!index && post.comments && config.disqus_shortname){ %>

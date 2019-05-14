@@ -50,9 +50,14 @@ body {
 	margin: 0 .25rem;
 }
 
-#article-end, #page-nav {
+#article-end {
+	margin-bottom: 1.5rem;
+	margin-top: 1.5rem;
+}
+#page-nav {
 	margin-bottom: 1rem;
 }
+
 .postFooter, .postFooter a {
 	color: #565656;
 	text-decoration: none;
@@ -84,7 +89,7 @@ article.post {
 }
 
 .post h1 {
-	font-size: 1.8rem;
+	font-size: 1.6rem;
 	letter-spacing: 0.008rem;
 }
 
@@ -95,15 +100,15 @@ article.post {
 }
 
 .post h2 {
-	font-size: 1.6rem;
+	font-size: 1.4rem;
 	line-height: 1.5rem;
 	color: #000;
 	margin-top: 1.8rem;
 }
 
 .post h3 {
-	font-size: 1.4rem;
-	line-height: 1.05;
+	font-size: 1.2rem;
+	line-height: 1.3;
 	color: #000;
 	margin-top: 1.4rem;
 	margin-bottom: 1.2rem;
@@ -114,7 +119,7 @@ article.post {
   /* Larger than tablet */
 
 	.post h1 {
-		font-size: 2.4rem;
+		font-size: 2.2rem;
 		line-height: 2.8rem;
 		letter-spacing: 0.008rem;
 	}
@@ -128,7 +133,7 @@ article.post {
 
 	.post h3 {
 		font-size: 1.6rem;
-		line-height: 1.05;
+		line-height: 1.3;
 		color: #000;
 		margin-top: 2rem;
 		margin-bottom: 1.6rem;
