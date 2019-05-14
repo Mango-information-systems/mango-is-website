@@ -26,7 +26,6 @@ body {
 
 /* blog archive */
 .divider-year {
-  font: Raleway;
   font-size: 1.5rem;
   border-bottom: 1px solid #222;
   width: 100%;
@@ -140,8 +139,7 @@ article.post {
 
 
 #header a, #sidebar, #sidebar a{
-	font-family: 'Raleway';
-	font-size: .8rem;
+	font-size: .9rem;
 	line-height: 1.2rem;
 	color: #565656;
 }
