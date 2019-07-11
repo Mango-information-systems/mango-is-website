@@ -29,12 +29,12 @@
   "dependencies": {
     "@yuanqing/modal": "^0.1.0",
     "brfs": "^2.0.2",
-    "browserify": "^16.2.3",
+    "browserify": "^16.3.0",
     "d3": "^4.13.0",
     "d3-scale-chromatic": "^1.3.3",
     "debug": "^2.6.9",
     "easyedit": "git://github.com/Mango-information-systems/easyedit.git#master",
-    "ejs": "^2.6.1",
+    "ejs": "^2.6.2",
     "font-awesome": "^4.6.1",
     "form-to-obj": "0.0.3",
     "gascrolldepth": "git+https://github.com/leighmcculloch/gascrolldepth.js.git#70834032",
@@ -62,7 +62,7 @@
   },
   "devDependencies": {
     "mocha": "^5.2.0",
-    "nodemon": "^1.18.11",
+    "nodemon": "^1.19.1",
     "should": "^9.0.2",
     "uglify-es": "^3.3.9",
     "uglifyify": "^4.0.5",
