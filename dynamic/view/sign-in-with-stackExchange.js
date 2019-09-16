@@ -10,9 +10,9 @@ function render(opts) {
 		hasError: opts.hasError || false
 	}))
 	
-	d3.select('#login').on('click', function() {
+	d3.select('.login').on('click', function() {
 		
-		d3.select(this).attr('disabled', true)
+		d3.select('.login').attr('disabled', true)
 		
 		d3.event.preventDefault()
 		d3.event.stopPropagation()
