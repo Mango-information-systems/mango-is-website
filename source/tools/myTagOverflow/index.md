@@ -25,10 +25,7 @@ sections:
    - type: div
      id: app
      class: row
-     value: "
-     <p>myTagOverflow creates a graph of the top tags you are active on in stackOverflow.</p>
-     
-	 <h4>Try it with your profile, it's free</h4>
+     value: "<h4>Get a free graph of your top stackOverflow tags</h4>
 	 
 	 <p><a href='#' class='login button cta button-primary'><i class='fa fa-stack-exchange' aria-hidden='true'></i> Connect with stackExchange</a></p>
 	 <br><br>
