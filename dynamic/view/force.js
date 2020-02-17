@@ -82,7 +82,7 @@ function ForceChart() {
 
 	function dragstarted(d) {
 		// hide export button when layout is being computed
-		d3.select('#exportLink').style('display', 'none')
+		d3.select('#actionLinks').style('display', 'none')
 		
 		if (!d3.event.active) {
 			
@@ -172,7 +172,7 @@ function ForceChart() {
 		}
 		else {
 			// both force layout and overlap prevention are finished, display export button
-			d3.select('#exportLink').style('display', 'block')
+			d3.select('#actionLinks').style('display', 'block')
 		}
 	}
 
@@ -304,7 +304,7 @@ function ForceChart() {
 		//~ console.log('graph data', data)
 		
 		// hide export button when layout is being computed
-		d3.select('#exportLink').style('display', 'none')
+		d3.select('#actionLinks').style('display', 'none')
 
 		textScale.domain([data.nodes[data.nodes.length-1].count, data.nodes[0].count])
 

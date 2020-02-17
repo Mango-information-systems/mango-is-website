@@ -275,7 +275,7 @@ function showChart(tagsGraph) {
 			target: appContainer.append('div').attr('class', 'twelve columns')
 			, append: true
 			, title: 'Incomplete data retrieved'
-			, message: '<p>The whole tags graph could not be retrieved, most probably due to your ad blocker.</p> \
+			, message: '<p>Data for some tags like \'analytics\' could not be retrieved, most probably because of an ad blocker.</p> \
 			<p>For more accurate results, you may disable your ad blocker. There is no ad on this site, anyway.</p> \
 			<p>Up to you ;)</p>'
 		})
@@ -294,6 +294,12 @@ function showChart(tagsGraph) {
 			category: 'mytagoverflow'
 			, action: 'graph SVG export'
 		})
+	})
+
+	d3.select('#clearDataLink').on('click', function() {
+		// clear storage
+		storage.clear()
+		location.reload()
 	})
 
 	

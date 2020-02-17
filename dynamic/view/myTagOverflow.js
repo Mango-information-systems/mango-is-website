@@ -34,8 +34,9 @@ function render(target) {
 			</svg> \
 			<br><small>Loading...</small> \
 		</div> \
-		<div class="six offset-by-three columns"> \
-			<a id="exportLink" class=" button button-primary button-block" target="_blank" style="display:none;">Save as SVG image</a> \
+		<div class="six offset-by-three columns" id="actionLinks" style="display:none;"> \
+			<a id="clearDataLink" class=" button button-block">Delete data and disconnect</a> \
+			<a id="exportLink" class=" button button-primary button-block" target="_blank">Save as SVG image</a> \
 		</div> \
 	')
 
