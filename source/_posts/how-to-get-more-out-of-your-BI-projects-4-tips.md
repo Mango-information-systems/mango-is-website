@@ -6,11 +6,19 @@ category: business
 date: 2019-05-14
 language: en
 author: mehdi
+thumbnail: /img/blog/thumbnails/get-more-out-of-BI-projects.jpg
 ---
 
 ### Tips from first-hand experience on better business specs (BRS); the importance of teamwork; quality in development and how testing is no luxury
 
+
 We hear about the game-changing promise of data science nearly every minute. As a Business Intelligence (BI) specialist, I’m fully on board. But having BI and analytics work well for you is harder than it looks. [As per Gartner](https://www.gartner.com/en/newsroom/press-releases/2018-12-06-gartner-data-shows-87-percent-of-organizations-have-low-bi-and-analytics-maturity), many companies have a long way to go before being really mature in their BI projects. Now, I’ve been working in some pretty interesting analytics projects over the last years, so I wanted to share some insider tips. Some tips that can help anyone involved in BI – managers and their teams – save precious time and money. When followed, I’m hoping the promise of big data can be better fulfilled, elevate companies to new heights – and make my data scientist heart sing ;)
+
+<br>
+<p>
+<img class="u-img-responsive" src="/img/blog/thumbnails/get-more-out-of-BI-projects.jpg" alt="">
+</p>
+<br>
 
 ### Some premises – strategy is set and processes are clear
 
