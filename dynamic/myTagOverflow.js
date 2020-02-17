@@ -70,7 +70,7 @@ function start(hasError, accessToken) {
 				
 			else if (tagsGraph !== null) {
 				
-				showChart(tagsGraph)
+				showChart(tagsGraph, true)
 			}
 			
 			if (tagsGraph === null || user === null )
@@ -120,7 +120,7 @@ function initiateExtraction(hasError, opts) {
 				debug('user is connected')
 				
 				// initialize stackExchange API controller
-				app.controller.stackExchangeApi = new StackExchangeApi(accessToken)
+				app.controller.stackExchangeApi = new StackExchangeApi(accessToken, showChart)
 				
 				// retrieve data from SE API
 				if (!opts.user)
@@ -135,7 +135,7 @@ function initiateExtraction(hasError, opts) {
 				debug('user is not connected')
 				
 				// initialize stackExchange API controller
-				app.controller.stackExchangeApi = new StackExchangeApi()
+				app.controller.stackExchangeApi = new StackExchangeApi(null, showChart)
 				
 				// display login form
 				app.view.signIn.render({
@@ -246,7 +246,7 @@ function extractStats() {
 				storage.setItem('legend', legendLabels)
 			})
 
-			showChart(data)
+			showChart(data, true)
 		}
 	})
 }
@@ -255,11 +255,12 @@ function extractStats() {
 * Display the tags chart
 * 
 */
-function showChart(tagsGraph) {
+function showChart(tagsGraph, complete=false) {
 	
 	debug('displaying tag graph', tagsGraph)
 	
 	if (!chartInitialized) {
+		
 		app.view.chart.init({
 			legendLabels: legendLabels
 			, updateLegend: updateLegend
@@ -267,7 +268,7 @@ function showChart(tagsGraph) {
 		chartInitialized = true
 	}
 
-	app.view.chart.update(tagsGraph)
+	app.view.chart.update(tagsGraph, complete)
 
 	if (tagsGraph.isIncomplete) {
 		

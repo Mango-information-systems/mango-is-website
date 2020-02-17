@@ -23,6 +23,7 @@ function ForceChart() {
 		, xForceScale = d3.scaleLinear()
 			.domain([100, 1000])
 			.range([-.01, -.7])
+		, nodeSelection
 
 	/****************************************
 	 *
@@ -38,7 +39,7 @@ function ForceChart() {
 	 */
 	 function ticked() {
 		 
-		self.node.attr('transform', function(d) {
+		self.node.selectAll('.node').attr('transform', function(d) {
 			
 			d.x = Math.max(nodeMargin, Math.min(self.width - nodeMargin, d.x))
 				d.y = Math.max(nodeMargin, Math.min(self.height - nodeMargin, d.y))
@@ -58,25 +59,10 @@ function ForceChart() {
 		
 		//~ debug('force simulation ended')
 		
-		// curved links lines
-		// as seen in https://stackoverflow.com/a/13456081
-		self.link.attr('d', function(d) {
-
-			var dx = d.target.x - d.source.x
-				, dy = d.target.y - d.source.y
-				, dr = Math.sqrt(dx * dx + dy * dy)
-			return 'M' + d.source.x + ',' + d.source.y + 'A' + dr + ',' + dr + ' 0 0,1 ' + d.target.x + ',' + d.target.y
-		  })
-		  .attr('stroke-opacity', function(d) { return self.weightScale(d.weight)})
-		  .attr('stroke-width', function(d) { return .5 + 3 * self.weightScale(d.weight)})
-		  .attr('stroke',  function(d) { return color(d.source.group)})
-
-		d3.select('#links')
-		  .transition()
-		    .style('opacity', .3)
+		 self.node.selectAll('.node').select('text').attr('fill', function(d) { return color(d.group) })
 		    
 		// avoid overlapping labels
-		relax(self.node)
+		relax(self.node.selectAll('.node'))
 		
 	 }
 
@@ -128,11 +114,12 @@ function ForceChart() {
 		textLabels.each(function (d, i) {
 			a = this
 			da = d3.select(a)
-			//~ y1 = da.attr('y')
 			
 			var daTransform = getTransformation(da.attr('transform'))
 			
 			y1 = daTransform.translateY
+			x1 = daTransform.translateX
+			
 			textLabels.each(function (d, j) {
 				b = this
 				// a & b are the same element and don't collide.
@@ -143,7 +130,9 @@ function ForceChart() {
 				// these elements. 
 				//~ y2 = db.attr('y')
 				var dbTransform = getTransformation(db.attr('transform'))
+				
 				y2 = dbTransform.translateY
+				x2 = dbTransform.translateX
 				
 				deltaY = y1 - y2
 				
@@ -152,17 +141,23 @@ function ForceChart() {
 					// so they don't collide.
 					return
 
-				if (!overlap ( a, b)) return
+				if (!overlap ( a, b))
+					return
 				
 				// If the labels collide, we'll push each 
 				// of the two labels up and down a little bit.
 				again = true
-				sign = deltaY > 0 ? 1 : -1
-				adjust = sign * alpha
 				
-				da.attr('transform', 'translate(' + daTransform.translateX + ',' + (y1 + adjust) + ')')
+				signY = deltaY > 0 ? 1 : -1
+				adjustY = signY * alpha
+				
+				deltaX = x1 - x2
+				signX = deltaX > 0 ? 1 : -1
+				adjustX = signX * alpha / 3
+				
+				da.attr('transform', 'translate(' + (x1 + adjustX) + ',' + (y1 + adjustY) + ')')
 
-				db.attr('transform', 'translate(' + dbTransform.translateX + ',' + (y2 - adjust) + ')')
+				db.attr('transform', 'translate(' + (x2 - adjustX) + ',' + (y2 - adjustY) + ')')
 			})
 		})
 		// Adjust our line leaders here
@@ -171,7 +166,26 @@ function ForceChart() {
 			setTimeout(function() {relax(textLabels)}, 10)
 		}
 		else {
-			// both force layout and overlap prevention are finished, display export button
+			// both force layout and overlap prevention are finished
+
+			// curved links lines
+			// as seen in https://stackoverflow.com/a/13456081
+			self.link.attr('d', function(d) {
+
+				var dx = d.target.x - d.source.x
+					, dy = d.target.y - d.source.y
+					, dr = Math.sqrt(dx * dx + dy * dy)
+				return 'M' + d.source.x + ',' + d.source.y + 'A' + dr + ',' + dr + ' 0 0,1 ' + d.target.x + ',' + d.target.y
+			  })
+			  .attr('stroke-opacity', function(d) { return self.weightScale(d.weight)})
+			  .attr('stroke-width', function(d) { return .5 + 3 * self.weightScale(d.weight)})
+			  .attr('stroke',  function(d) { return color(d.source.group)})
+
+			d3.select('#links')
+			  .transition()
+				.style('opacity', .3)
+			
+			// display export button
 			d3.select('#actionLinks').style('display', 'block')
 		}
 	}
@@ -269,8 +283,7 @@ function ForceChart() {
 		self.width = 650
 		self.height = 350
 		
-		self.legend = d3.select('.legendWrapper').html('')
-			.append('div')
+		self.legend = d3.select('#legendWrapper').html('')
 			.selectAll('.group')
 		
 		self.svg = d3.select('#chart').html('')
@@ -290,16 +303,24 @@ function ForceChart() {
 			.selectAll('.link')
 		
 		self.node = self.svg.append('g')
-			.selectAll('.node')
+			.attr('id', 'nodes')
+			
+		
+		self.simulation = d3.forceSimulation([])
+			.force('charge', d3.forceManyBody().strength(-200))
+			.force('center', d3.forceCenter(self.width / 2, self.height / 2))
+			.on('tick', ticked)
+			
 	}
 
 	/**
 	 * Update chart
 	 *
 	 * @param {object} data updated graph
+	 * @param {boolean} incomplete progress rendering indicator
 	 * 
 	 */
-	this.update = function (data) {
+	this.update = function (data, complete) {
 		
 		//~ console.log('graph data', data)
 		
@@ -311,25 +332,20 @@ function ForceChart() {
 		self.weightScale = d3.scaleLog()
 			.domain(d3.extent(data.links, function (d) { return d.weight }))
 			.range([.1, 1])
-			
-		self.simulation = d3.forceSimulation(data.nodes)
-			.force('link', d3.forceLink(data.links).distance(linkDistanceScale(data.links.length)).strength(function(d) {return self.weightScale(d.weight)}))
-			.force('charge', d3.forceManyBody().strength(-200))
-			.force('center', d3.forceCenter(self.width / 2, self.height / 2))
-			.force('x', d3.forceX().strength(xForceScale(data.links.length)))
-			.on('tick', ticked)
-			.on('end', ended)
-
+		
 		// Apply the general update pattern to the nodes.
-		self.node = self.node.data(data.nodes, function(d) { return d.name}).enter().append('g')
+		let g = self.node.selectAll('.node').data(data.nodes, function(d) { return d.name})
+		
+		nodeSelection = g.enter().append('g')
+			  .attr('class', 'node')
 			  .call(d3.drag()
 				  .on('start', dragstarted)
 				  .on('drag', dragged)
 				  .on('end', dragended))
 
-		self.node.append('text')
+		nodeSelection.append('text')
 		  .text(function(d) { return d.name})
-		  .attr('fill', function(d) { return color(d.group) })
+		  .attr('fill', d => complete? color(d.group) : color(0))
 		  .attr('dy', '2.5')
 		  .attr('transform', function(d) { return 'scale(' + textScale(d.count) + ')'})
 		
@@ -338,37 +354,48 @@ function ForceChart() {
 			return d.source.name + '-' + d.target.name
 		})
 
-		self.link = self.link.enter().append('path')
+		if (complete) {
 		
+			d3.select('#progressBadge').remove()
+			
+			self.simulation.on('end', ended)
 		
-		// fill up legend
-		self.legend = self.legend.data(d3.range(data.communitiesCount))
-			.enter().append('div')
-			  .attr('class', 'xs-twelve sm-six columns')
-			  .html(function(d, i) { 
-				return '<i class="fa fa-circle" aria-hidden="true" style="color:' + color(d) + ';"></i> \
-					<span class="legend">' + self.legendLabels[i] + '</span> \
-				'
-			  })
-	
-		d3.selectAll('.legend').each(function(data, ix) {
-			new easyedit(this, {
-				styles: {
-					height: 'auto'
-					, padding: '.2rem .4rem'
-				}
-				, onsuccess: function(value) {
-					// persist new value
-					self.updateLegend(ix, value)
-				}
+			self.link = self.link.enter().append('path')
+		
+			// fill up legend
+			self.legend = self.legend.data(d3.range(data.communitiesCount))
+				.enter().append('div')
+				  .attr('class', 'xs-twelve sm-six columns')
+				  .html(function(d, i) { 
+					return '<i class="fa fa-circle" aria-hidden="true" style="color:' + color(d) + ';"></i> \
+						<span class="legend">' + self.legendLabels[i] + '</span> \
+					'
+				  })
+		
+			d3.selectAll('.legend').each(function(data, ix) {
+				new easyedit(this, {
+					styles: {
+						height: 'auto'
+						, padding: '.2rem .4rem'
+					}
+					, onsuccess: function(value) {
+						// persist new value
+						self.updateLegend(ix, value)
+					}
+				})
 			})
-		})
+		}
+		else {
+			
+		}
 		
 
 		// Update and restart the simulation.
 		self.simulation.nodes(data.nodes)
-		self.simulation.force('link').links(data.links)
-		self.simulation.alpha(1).restart()
+			self.simulation.force('link', d3.forceLink([]).distance(linkDistanceScale(data.links.length)).strength(function(d) {return self.weightScale(d.weight)}))
+			self.simulation.force('link').links(data.links)
+			self.simulation.force('x', d3.forceX().strength(xForceScale(data.links.length)))
+			self.simulation.alpha(1).restart()
 
 	}
 
