@@ -24,8 +24,8 @@ sections:
       class: index
       path: https://twitto.be/
       thumbnail: /img/twitto-be-dashboard-screenshot.png
-      title: twitto.be
-      subtitle: A live dashboard of tweets geolocated in Belgium
+      title: Twitto.be - realtime hashtags network graph analytics
+      subtitle: Twitto is a live analytics dashboard of the tweets related to entrepreneurship in Belgium.
       footer: false
    - type: post
      content:
