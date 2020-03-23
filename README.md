@@ -1,11 +1,27 @@
 mango-is-website
 =============
 
-Website of Mango Information Systems SPRL, powered by [hexo](https://hexo.io/).
+Website of Mango Information Systems SPRL.
 
 Blog: unless specified otherwise, blog content is published under a Creative Commons Attribution license.
 
 Branding: All rights reserved to the copyright holder: Mango Information Systems SPRL
+
+## Contents
+
+This repository hosts the code of all the contents in mango-is.com:
+
+* static website
+* blog
+* web applications (`/tools` pages)
+
+## Technologies
+
+* [node.js](https://nodejs.org/en/)
+* [d3.js](https://d3js.org/)
+* [hexo](https://hexo.io/)
+
+c.f. [package.json](package.json) and submodule for a more complete list.
 
 ## Installation
 
@@ -27,6 +43,9 @@ Run `npm start`. This script serves a development version, while watching change
 * **content** can be found inside directory [source](source).
 * **dynamic parts** can be found inside directory [dynamic](dynamic).
 
+### Tools
+
+If you are interested in one of the [tools](https://mango-is.com/tools/) and do not want to carry the website, blog and other tools, ask us in an issue, we will try to help isolating the corresponding code.
 
 ### myTagOverflow dev setup
 
