@@ -11,11 +11,11 @@ thumbnail: /img/blog/thumbnails/save-time-and-money-in-BI-test.png
 
 ### How to make a potential 60% saving by integrating automated testing into Business Intelligence Projects
 
+If you read my last post with [Business Intelligence (BI) projects tips](https://mango-is.com/blog/business/how-to-get-more-out-of-your-BI-projects-4-tips) you’ll know I think testing is not a luxury and now I want to illustrate this.
 
+Going by experience, I estimate from original plan to realization most projects run 75-80% over budget. I think automated testing can save 60% of this budget-overrun. Here’s why.
 
-If you read my last post with [Business Intelligence (BI) projects tips](https://mango-is.com/blog/business/how-to-get-more-out-of-your-BI-projects-4-tips) you’ll know I think testing is not a luxury and now I want to illustrate this. Going by experience, I estimate from original plan to realization most projects run 75-80% over budget. I think automated testing can save 60% of this budget-overrun. Here’s why.
-
-Let’s say the original plan looks something like this with an overall estimated budget of 31 man-days.
+Let’s say the original plan looks something like this with an overall estimated budget of 31 man-days to implement a feature.
 
 <img class="u-img-responsive" src="/img/blog/flow-chart-1-original-plan.png" alt="Original project plan diagram, four project phases have an estimated cost of 31 man-days">
 <br>
@@ -48,6 +48,9 @@ In both cases, running the tests should be automated, thanks to testing framewor
 
 So in conclusion, I think testing has to be an indispensable part of the BI project life cycle, in order to deliver quality work on time. And when I say quality I also mean quality in the data – it’s so embarrassing when end users come complaining of mistakes they made in their business because of your system’s incorrect data! We really have to avoid this along with wasting time and money, and that’s why testing is an essential mitigation step.
 
-Are you interested to know more about the specific approaches? I’d love to discuss them with you. Please [contact me](/contact/) for a chat about testing – it’s one of my favorite subjects. And now for a little Dilbert to help us keep perspective:
+Are you interested to know more about the specific approaches? I’d love to discuss them with you. Please [contact me](/contact/) for a chat about testing – it’s one of my favorite subjects.
 
-<img class="u-img-responsive" src="/img/blog/" alt="Dilbert comic illustration">
+And now for a little Dilbert to help us keep perspective:
+
+<img class="u-img-responsive" src="/img/blog/dilbert-on-testing.gif" alt="Dilbert comic strip: Dilbert says, 'I spent the week writing a test script for our product.' Wally says, 'And I wrote a test script to test Dilbert's test script.' Wally says, 'Your script was almost perfect. Keep up the good work, buddy.'">
+<small>DILBERT © Scott Adams. Used By permission of ANDREWS MCMEEL SYNDICATION. All rights reserved.</small>
