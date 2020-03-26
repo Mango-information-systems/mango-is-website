@@ -9,9 +9,10 @@
 <div <%- articleEndMarker %>class="postFooter">
 	<small>
 	  
-	  <% if (post.categories && post.categories.length && !is_category()){ %>
-		  Category: 
-			<a href="<%- url_for(post.categories.data[0].path) %>"><%- post.categories.data[0].name %></a> -
+	<% if (post.categories && post.categories.length && !is_category()){ %>
+		<span class="badge" title="Display all articles in category <%- post.categories.data[0].name %>">
+			<a href="<%- url_for(post.categories.data[0].path) %>"><%- post.categories.data[0].name %></a>
+		</span> 
 	  <% } %>
 	  Published by  <%- titlecase(post.author) %>
 	  

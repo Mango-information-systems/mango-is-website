@@ -3,10 +3,12 @@ title: "Save Time and Money in Business Intelligence: Test!"
 subtitle: ""
 description: How to make a potential 60% saving by integrating automated testing into Business Intelligence Projects
 category: business
-date: 2020-03-09
+tags: Business Intelligence
+date: 2020-03-23
 language: en
 author: mehdi
 thumbnail: /img/blog/thumbnails/save-time-and-money-in-BI-test.png
+prevArticle: /blog/business/how-to-get-more-out-of-your-BI-projects-4-tips/
 ---
 
 ### How to make a potential 60% saving by integrating automated testing into Business Intelligence Projects

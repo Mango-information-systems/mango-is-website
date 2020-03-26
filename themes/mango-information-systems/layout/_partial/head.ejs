@@ -61,11 +61,9 @@
 
 	if (is_post() || is_archive() || is_category()) { %>
 		<%- feed_tag('/blog/atom.xml', {title: 'Mango Information Systems blog'}) %>
-	<% }
-		else { %>
-		<%- css('css/landing') %>
 	<% } %>
 
+	<%- css('css/landing') %>
 	<%- css('css/blog') %>
 	<%- partial('google-analytics') %>
 	

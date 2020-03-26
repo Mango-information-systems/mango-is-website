@@ -24,15 +24,6 @@ body {
   margin-bottom: 1rem;
  }
 
-/* blog archive */
-.divider-year {
-  font-size: 1.5rem;
-  border-bottom: 1px solid #222;
-  width: 100%;
-  padding-bottom:0.5rem;
-  margin-bottom:2rem;
-}
-
 .index h1, .category h1  {
   font-size: 2.2rem;
   line-height: 1.1;
@@ -56,6 +47,10 @@ body {
 }
 #page-nav {
 	margin-bottom: 1rem;
+}
+
+.postFooter {
+	margin-top: 1rem;
 }
 
 .postFooter, .postFooter a {
