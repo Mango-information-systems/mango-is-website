@@ -11,17 +11,23 @@ sections:
   content:
    -
     type: h1
-    class: small u-text-center
-    value: Empowering organizations with actionable knowledge
+    class: u-text-center
+    value: Fact-based knowledge<br> <span class="small">for smart organizations</span>
  -
   # second section: problem / solution
   content:
-   - type: h5
-     class: u-text-center
-     value: Do you struggle to take decisions based on facts?
-   - type: h5
-     class: u-text-center
-     value: "We can help you with:"
+   - type: p
+     class: u-text-center text-large
+     value: Having the big picture is key to taking good decisions.
+   - type: p
+     class: u-text-center text-large
+     value: Data is often here, but getting a clear view is often difficult.
+   - type: p
+     class: u-text-center text-large
+     value: "We provide actionable insights."
+   -
+    type: custom
+    value: "<br><br>"
    - type: ul
      class: list-inline row u-text-center
      value: "<li class='four columns' itemscope itemtype='http://schema.org/Product'><h5><i class='fa fa-bar-chart fa-lg text-primary' aria-hidden='true'></i> <span  itemprop='name'>Business Intelligence</span></h5></li>
@@ -32,7 +38,7 @@ sections:
     value: "<br><br>"
    - type: div
      class: row
-     value: "<div class='six  offset-by-three columns'><a class='button button-primary u-full-width' href='/contact/'><i class='fa fa-envelope' aria-hidden='true'></i> Let's talk</a><p></p></div>"
+     value: "<div class='six offset-by-three columns'><a class='button button-primary u-full-width' href='/contact/'>Get your strategy on track. Let's talk</a><p></p></div>"
    -
     type: custom
     value: "<br><br>"
