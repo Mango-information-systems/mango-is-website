@@ -13,7 +13,9 @@
       <a class="<%= class_name %>" href="<%- url_for(post.path) %>"><%= post.title %>
       </a>
     </h3>
-	<p><%= post.subtitle %></p>
+    <% if (post.subtitle) { %>
+		<p><%= post.subtitle %></p>
+	<% } %>
   <% } else { %>
     <h1 class="<%= class_name %>" itemprop="name">
       <%= post.title %>
@@ -23,4 +25,4 @@
     </h1>
   <% } %>
 <% } %>
-<!-- begin post.title -->
+<!-- end post.title -->

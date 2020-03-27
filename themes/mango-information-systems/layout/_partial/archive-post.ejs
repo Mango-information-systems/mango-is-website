@@ -19,7 +19,7 @@
 
 		<%- partial('post/title', {class_name: 'archive-article-title'}) %>
 		
-		<%- post.description %>
+		<p><%- post.description %></p>
 
 		<% if (typeof post.footer === 'undefined' || post.footer !== false ) { %>
 	
