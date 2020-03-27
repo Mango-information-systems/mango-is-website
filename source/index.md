@@ -18,21 +18,24 @@ sections:
   content:
    - type: p
      class: u-text-center text-large
-     value: Having the big picture is key to taking good decisions.
+     value: Data is often here,
    - type: p
      class: u-text-center text-large
-     value: Data is often here, but getting a clear view is often difficult.
+     value: But getting the big picture is not easy.<br><br>
    - type: p
      class: u-text-center text-large
-     value: "We provide actionable insights."
+     value: "We provide actionable insights,"
+   - type: p
+     class: u-text-center text-large
+     value: So that you can take the good decisions.
    -
     type: custom
     value: "<br><br>"
    - type: ul
      class: list-inline row u-text-center
-     value: "<li class='four columns' itemscope itemtype='http://schema.org/Product'><h5><i class='fa fa-bar-chart fa-lg text-primary' aria-hidden='true'></i> <span  itemprop='name'>Business Intelligence</span></h5></li>
-			 <li class='four columns' itemscope itemtype='http://schema.org/Product'><h5><i class='fa fa-flask fa-lg text-primary' aria-hidden='true'></i> <span  itemprop='name'>Data science</span></h5></li>
-			 <li class='four columns' itemscope itemtype='http://schema.org/Product'><h5><i class='fa fa-rocket fa-lg text-primary' aria-hidden='true'></i> <span  itemprop='name'>Data-driven applications</span></h5></li>"
+     value: "<li class='four columns' itemscope itemtype='http://schema.org/Product'><h4><i class='fa fa-bar-chart fa-lg text-primary' aria-hidden='true'></i> <span  itemprop='name'>Business Intelligence</span></h4></li>
+			 <li class='four columns' itemscope itemtype='http://schema.org/Product'><h4><i class='fa fa-flask fa-lg text-primary' aria-hidden='true'></i> <span  itemprop='name'>Data science</span></h4></li>
+			 <li class='four columns' itemscope itemtype='http://schema.org/Product'><h4><i class='fa fa-rocket fa-lg text-primary' aria-hidden='true'></i> <span  itemprop='name'>Data-driven applications</span></h4></li>"
    -
     type: custom
     value: "<br><br>"
@@ -44,7 +47,10 @@ sections:
     value: "<br><br>"
    - type: div
      class: u-text-center
-     value: <p>Read what our clients say below</p><p><i class='fa fa-angle-down' aria-hidden='true'></i></p>
+     value: "<p>Read what our clients say below</p>
+		<p>
+			<a href='#references'><i class='fa fa-angle-down' aria-hidden='true'></i></a>
+		</p>"
  -
   # third section: references
   content:
@@ -58,7 +64,7 @@ sections:
       project: Tribalytics
       description: "<p>Mango Information Systems is the creator of <a href='https://tribalytics.com/'>Tribalytics</a>, a service <strong>helping marketers find and reach their target on social media</strong>. Tribalytics uses data science to perform social media audience analytics and market research.</p>
       <p><i class='fa fa-arrow-right' aria-hidden='true'></i> You can read more about our approach on <a href='https://tribalytics.com/'>tribalytics.com</a>.</small></p>"
-      domains: [data science, entrepreneurship, graph analysis, segmentation, natural language processing, sales, influencer marketing, marketing strategy, project management, startup]
+      domains: [data science, graph analysis, entrepreneurship, segmentation, natural language processing, sales, influencer marketing, marketing strategy, project management, startup]
       tech: [node.js, gephi, d3.js, php Laravel]
       dataTech: [redis, mysql, mariadb, twitter API, nominatim API, json]
       quotes:
