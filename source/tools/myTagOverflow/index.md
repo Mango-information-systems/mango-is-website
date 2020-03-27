@@ -13,10 +13,8 @@ sections:
   # top section: title
   content:
    - type: h1
-     class: small
      value: myTagOverflow - StackOverflow top tags data visualization<sup style="color:#aaa;">beta</sup>
    - type: h2
-     class: small
      value: Showcase your stackExchange tags stats in a neat data visualization.
  -
   # app

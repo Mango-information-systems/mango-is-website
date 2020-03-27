@@ -11,10 +11,8 @@ sections:
   background-image: "/img/bg-2.jpg"
   content:
    - type: h1
-     class: small
      value: Tools
    - type: h2
-     class: small
      value: We love open source :)
  -
   # List of tools

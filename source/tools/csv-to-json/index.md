@@ -13,10 +13,8 @@ sections:
   # top section: title
   content:
    - type: h1
-     class: small
      value: Online CSV to JSON converter
    - type: h2
-     class: small
      value: Easy, privacy-friendly and offline-first online csv to json converter.
  -
   # New conversion

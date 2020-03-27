@@ -10,7 +10,6 @@ sections:
  -
   content:
    - type: h1
-     class: small
      value: Copyright and terms of service
  -
   content:

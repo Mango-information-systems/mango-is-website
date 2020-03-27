@@ -12,10 +12,8 @@ sections:
   # top section: title
   content:
    - type: h1
-     class: small
      value: "multiGa: realtime traffic dashboard for your websites"
    - type: h2
-     class: small
      value: A free dashboard to visualize Google Analytics live metrics for multiple sites.
  -
   # app
