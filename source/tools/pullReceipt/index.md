@@ -31,7 +31,7 @@ sections:
      class: row
      value: "
 		<div class='alert alert-danger'>
-			<h2 class='small'>project in standby</h2>
+			<h2>Project in standby</h2>
 			<p>Dear visitor,</p>
 			<br>
 			<p>Work on pullReceipt is on hold at the moment, as I am focusing on other projects.</p>
@@ -71,13 +71,13 @@ sections:
 		 </div>
 		 <div class='eight columns'>
 			 <p>Aren't these administrative tasks just a waste of time? A tool can do them for you.</p>
-			 <h2 class='small'><i class='fa fa-check' aria-hidden='true'></i> pullReceipt extracts the incoming invoices from your mailbox for you</h2>
+			 <h3><i class='fa fa-check' aria-hidden='true'></i> pullReceipt extracts the incoming invoices from your mailbox for you</h3>
 		 </div>
      "
  -
   # Benefits
   content:
-   - type: h3
+   - type: h2
      value: Benefits
    - type: h4
      value: <i class="fa fa-calendar-o fa-fw fa-lg" aria-hidden="true"></i> Get more time to focus on what matters
@@ -88,7 +88,7 @@ sections:
  -
   # How it works
   content:
-   - type: h3
+   - type: h2
      value: Super easy to use
    - type: p
      value: pullReceipt is the smart assistant relieving you from low added-value tasks.
@@ -148,7 +148,7 @@ sections:
  -
   # Pricing
   content:
-   - type: h3
+   - type: h2
      id: pricing
      value: Pricing
    - type: p
@@ -194,7 +194,7 @@ sections:
  -
   # About
   content:
-   - type: h3
+   - type: h2
      value: About
    -
     type: div
