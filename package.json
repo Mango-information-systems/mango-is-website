@@ -21,7 +21,7 @@
     "watch:socketServer": "nodemon --watch dynamic dynamic/server.js"
   },
   "hexo": {
-    "version": "3.9.0"
+    "version": "4.2.0"
   },
   "browser": {
     "request": "xhr"
@@ -38,7 +38,7 @@
     "font-awesome": "^4.6.1",
     "form-to-obj": "0.0.3",
     "gascrolldepth": "git+https://github.com/leighmcculloch/gascrolldepth.js.git#70834032",
-    "hexo": "^3.9.0",
+    "hexo": "^4.2.0",
     "hexo-browsersync": "^0.3.0",
     "hexo-generator-archive": "^0.1.5",
     "hexo-generator-category": "^0.1.3",
