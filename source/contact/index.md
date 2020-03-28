@@ -12,15 +12,10 @@ sections:
   content:
    - type: h1
      value: Let's talk!
+   - type: h2
+     value: Send us a message, we'll follow-up shortly
  -
-  # second section: message
+  # second section: contact form
   content:
-   - type: p
-     class: text-large
-     value: "Send us a message, we'll follow-up shortly"
- -
-  # third section: contact form
-  content:
-   -
-    type: contact
+   - type: contact
 ---
