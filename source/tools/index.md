@@ -4,7 +4,6 @@ title: Tools directory
 author: Mango Information Systems
 description: List of open source software created by us, with public access
 date: 2016-06-03 16:21:12
-__index: true
 sections:
  -
   # top section: title

@@ -1,24 +1,14 @@
 <!-- begin header -->
-<header id="header">
-
-		<div class="row">
-			<div class="sm-offset-by-three sm-six md-offset-by-zero md-four lg-five columns">
-				<a class="brand nav-link" rel="home" href="<%- url_for() %>">
-					<%- image_tag('/img/mango-information-systems-logo.png', {
-						alt: config.title
-						, class: "u-img-responsive"
-					}) %>
-				</a>
-			</div>
-			<div class="sm-four md-two columns u-text-center">
-				<a class="nav-link" href="<%- url_for('/') %>">Home</a>
-			</div>
-			<div class="sm-four md-two columns u-text-center">
-				<a class="nav-link" href="<%- url_for('/blog') %>">Blog</a>
-			</div>
-			<div class="sm-four md-two columns u-text-center">
-				<a class="nav-link" href="<%- url_for('/tools') %>">Tools</a>
-			</div>
+<header>
+	<div class="row">
+		<div class="lg-five column">
+			<a class="brand nav-link" rel="home" href="/">
+				<%- image_tag('/img/mango-information-systems-logo.png', {
+					class: 'u-img-responsive'
+					, alt: 'Mango Information Systems'
+				}) %>
+			</a>
 		</div>
+	</div>
 </header>
 <!-- / header -->

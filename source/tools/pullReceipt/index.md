@@ -7,7 +7,6 @@ description: Need help to forward all the incoming invoices to your accountant? 
 thumbnail: /img/thumbnails/pullReceipt.png
 css: [pullReceipt.css]
 scripts: [js/pullReceipt.js]
-__index: true
 sections:
  -
   # top section: title
@@ -96,23 +95,19 @@ sections:
    - type: p
      value: It detects all incoming invoices and receipts in your mailbox and forwards them to your management software or your accountant automatically.
    - type: div
-     class: row sequence-container
+     class: row
      value: "
 		 <div class='four columns'>
 			 <br>
 			 <img class='u-img-responsive' src='/img/pullReceipt-connect.png' alt='illustration of pullReceipt connections manager' width='350px'/>
 			 <br>
 			 <p>1. Connect your email accounts</p>
-			 <span class='next-right'><i class='fa fa-angle-right fa-lg' aria-hidden='true'></i></span>
-			 <span class='next-bottom'><i class='fa fa-angle-down fa-lg' aria-hidden='true'></i></span>
 		 </div>
 		 <div class='four columns'>
 			 <br>
 			 <img class='u-img-responsive' src='/img/pullReceipt-detect.png' alt='illustration of pullReceipt connections manager' width='350px'/>
 			 <br>
 			 <p>2. pullReceipt finds all the invoices</p>
-			 <span class='next-right'><i class='fa fa-angle-right fa-lg' aria-hidden='true'></i></span>
-			 <span class='next-bottom'><i class='fa fa-angle-down fa-lg' aria-hidden='true'></i></span>
 		 </div>
 		 <div class='four columns'>
 			 <br>

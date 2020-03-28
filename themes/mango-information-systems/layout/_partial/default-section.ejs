@@ -1,6 +1,7 @@
 <!-- begin default-section -->
 <%
-var sectionStyle = isFirst ? 'min-height:80%;' : ''
+//~ var sectionStyle = isFirst ? 'min-height:40vh;' : ''
+var sectionStyle = ''
 
 if (isFirst && !data['background-image'])
 	sectionStyle += 'background: url(/img/bg-1.jpg) no-repeat center center fixed; background-size: cover;'
@@ -19,6 +20,11 @@ function setContent(content) {
 			case 'card':%>
 				<%-
 					partial('_partial/card', {data: content.content})
+				%><%
+			break
+			case 'contact':%>
+				<%-
+					partial('_partial/contactForm')
 				%><%
 			break
 			case 'pricing':%>
@@ -111,16 +117,8 @@ function setContent(content) {
 	<%
 		if (isFirst) {
 	%>
-		<div class="row">
-			<div class="lg-five column">
-				<a class="brand" rel="home" href="/">
-					<%- image_tag('/img/mango-information-systems-logo.png', {
-						class: 'u-img-responsive'
-						, alt: 'Mango Information Systems'
-					}) %>
-				</a>
-			</div>
-		</div>
+		<%- partial('_partial/header') %>
+
 	<%
 	}
 	%>

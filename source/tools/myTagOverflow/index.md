@@ -7,7 +7,6 @@ description: Need to demonstrate your technical abilities? myTagOverflow shows t
 thumbnail: /img/thumbnails/myTagOverflow.png
 css: [myTagOverflow.css]
 scripts: [https://api.stackexchange.com/js/2.0/all.js, js/myTagOverflowChecker.js]
-__index: true
 sections:
  -
   # top section: title

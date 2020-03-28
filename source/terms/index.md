@@ -4,7 +4,6 @@ title: terms
 author: Mango Information Systems
 date: 2016-07-25 20:08:48
 description: Copyright, licensing, terms of use.
-__index: true
 sitemap: false
 sections:
  -
