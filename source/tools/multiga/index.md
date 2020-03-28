@@ -1,5 +1,5 @@
 ---
-layout: landing
+layout: index
 title: "multiGa: realtime multi-website traffic dashboard"
 author: Mango Information Systems
 date: 2016-10-24 16:29:26

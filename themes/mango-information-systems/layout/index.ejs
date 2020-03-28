@@ -2,22 +2,49 @@
 <div class="page-wrapper">
 			
 	<div class="container">
-		<section style="min-height:40vh;background: url(/img/bg-2.jpg) no-repeat center center fixed; background-size: cover;" class="">
-			
-			<%- partial('_partial/header') %>
-
-			<% if (is_category()){ %>
-				<h1>Blog articles in category <%- page.category %></h1>
-			<% } else { %>
-				<h1>Our blog articles</h1>
-			<% } %>
-		</section>
 		
-		<section>
-			<%- partial('_partial/archive', {index: true}) %>
-		</section>
+
+
+
+
+
+
+<!-- TODO generate same header for regular pages, index pages and posts -->
+
+
+
+
+		<% if ( is_archive() || is_category() ) { %>
+
+			<section style="min-height:40vh;background: url(/img/bg-2.jpg) no-repeat center center fixed; background-size: cover;" class="">
+				
+				<%- partial('_partial/header') %>
+
+				<% if ( is_category() ) { %>
+					<h1>Blog articles in category <%- page.category %></h1>
+				<% } else { %>
+					<h1>Our blog articles</h1>
+				<% } %>
+			</section>
+			
+			<section>
+				<%- partial('_partial/archive', {index: true}) %>
+			</section>
+			
+		<% } else { 
+			
+				page.sections.forEach(function(section, index) {
+				%>
+					<%-
+						partial('_partial/default-section', {data: section, isFirst: index == 0})
+					%>
+					<%
+				 })
+
+		} %>
 
 		<%- partial('_partial/footer') %>
+		
 	</div>
 </div>
 

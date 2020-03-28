@@ -1,5 +1,5 @@
 ---
-layout: landing
+layout: index
 title: Tools directory
 author: Mango Information Systems
 description: List of open source software created by us, with public access

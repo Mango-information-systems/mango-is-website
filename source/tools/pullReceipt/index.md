@@ -1,5 +1,5 @@
 ---
-layout: landing
+layout: index
 title: "pullReceipt: simple invoice extractor"
 author: Mango Information Systems
 date: 2016-10-24 16:29:26

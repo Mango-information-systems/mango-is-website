@@ -1,7 +1,7 @@
 ---
 title: Business Intelligence for smarter decisions
 description: Organizations hire us to optimize any aspect of their management, using our expertise in Business Intelligence and Data Science.
-layout: landing
+layout: index
 date: 2016-04-01 14:36:46
 sections:
  -

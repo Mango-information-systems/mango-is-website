@@ -1,5 +1,5 @@
 ---
-layout: landing
+layout: index
 title: terms
 author: Mango Information Systems
 date: 2016-07-25 20:08:48

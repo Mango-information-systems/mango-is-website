@@ -1,5 +1,5 @@
 ---
-layout: landing
+layout: index
 title: Contact us
 author: Mango Information Systems
 description: We love to talk, get in touch :) - Contact Mango Information Systems.
