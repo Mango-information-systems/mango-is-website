@@ -49,7 +49,7 @@ sections:
    - type: h3
      value: Access to Your Data 
    - type: p
-     value: "You have the right to access your personal data and to have the same rectified or deleted. In this respect send us either a registered letter by mail (see our postal address at the bottom of the page), or a message using the <a href='https://mango-is.com/contact' class='contact'>contact form</a> in this website."
+     value: "You have the right to access your personal data and to have the same rectified or deleted. In this respect send us either a registered letter by mail (see our postal address at the bottom of the page), or a message using the <a href='https://mango-is.com/contact/' class='contact'>contact form</a> in this website."
    - type: h3
      value: Supervising Authority
    - type: p
