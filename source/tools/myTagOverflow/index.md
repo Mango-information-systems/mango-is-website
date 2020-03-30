@@ -1,8 +1,8 @@
 ---
 layout: index
 metaTitle: "myTagOverflow: showcase your top tags from stackOverflow"
-title: "myTagOverflow - StackOverflow top tags data visualization<sup style='color:#aaa;'>beta</sup>"
-subtitle: Showcase your stackExchange tags stats in a neat data visualization.
+title: "myTagOverflow <sup style='color:#aaa;'>beta</sup>"
+subtitle: StackOverflow top tags data visualization
 topBackgroundImage: 
 author: Mango Information Systems
 date: 2016-10-24 16:29:26
@@ -17,7 +17,7 @@ sections:
    - type: div
      id: app
      class: row
-     value: "<h4>Get a free graph of your top stackOverflow tags</h4>
+     value: "<h3>Showcase your stackExchange tags stats in a neat data visualization.</h3>
 	 
 	<p class='u-text-center'><img src='/img/cta-emphasis-top-to-right.svg' style='vertical-align: middle; margin-right: 1rem; width: 40px;'> <a href='#' class='login button cta button-primary'><i class='fa fa-stack-exchange' aria-hidden='true'></i>  Connect with stackExchange</a></p>
 	 <br><br>
