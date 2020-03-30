@@ -1,6 +1,9 @@
 ---
 layout: index
-title: "myTagOverflow: showcase your top tags from stackOverflow"
+metaTitle: "myTagOverflow: showcase your top tags from stackOverflow"
+title: "myTagOverflow - StackOverflow top tags data visualization<sup style='color:#aaa;'>beta</sup>"
+subtitle: Showcase your stackExchange tags stats in a neat data visualization.
+topBackgroundImage: 
 author: Mango Information Systems
 date: 2016-10-24 16:29:26
 description: Need to demonstrate your technical abilities? myTagOverflow shows the tags you're most active on in a cool graph visualization.
@@ -8,13 +11,6 @@ thumbnail: /img/thumbnails/myTagOverflow.png
 css: [myTagOverflow.css]
 scripts: [https://api.stackexchange.com/js/2.0/all.js, js/myTagOverflowChecker.js]
 sections:
- -
-  # top section: title
-  content:
-   - type: h1
-     value: myTagOverflow - StackOverflow top tags data visualization<sup style="color:#aaa;">beta</sup>
-   - type: h2
-     value: Showcase your stackExchange tags stats in a neat data visualization.
  -
   # app
   content:

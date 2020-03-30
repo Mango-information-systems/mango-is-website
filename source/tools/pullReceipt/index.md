@@ -1,6 +1,9 @@
 ---
 layout: index
-title: "pullReceipt: simple invoice extractor"
+metaTitle: "pullReceipt: simple invoice extractor"
+title: "pullReceipt - simple invoice extractor <span class='u-pull-right'><small><sup style='color:#aaa;'>coming soon</sup></small></span>"
+subtitle:  Save time, focus on your business.
+topBackgroundImage: 
 author: Mango Information Systems
 date: 2016-10-24 16:29:26
 description: Need help to forward all the incoming invoices to your accountant? pullReceipt automates the boring parts of your business administration.
@@ -9,29 +12,13 @@ css: [pullReceipt.css]
 scripts: [js/pullReceipt.js]
 sections:
  -
-  # top section: title
-  content:
-   - type: div
-     value: "<img id='pullReceipt-logo' src='/img/pullReceipt-logo.png' alt='pullReceipt logo, a friendly robot' class='u-pull-right'>"
-   - type: h1
-     value: pullReceipt - simple invoice extractor <span class='u-pull-right'><small><sup style="color:#aaa;">coming soon</sup></small></span>
-   - type: h2
-     value: Save time, focus on your business.
-   - type: div
-     value: "<br><br><br><br><br>"
-   - type: cta
-     href: "#pricing"
-     primary: true
-     trg: /pullreceipt-pricing
-     value: View plans
- -
   # Standby project notification
   content:
    - type: div
      class: row
      value: "
 		<div class='alert alert-danger'>
-			<h2>Project in standby</h2>
+			<h3>Project in standby</h3>
 			<p>Dear visitor,</p>
 			<br>
 			<p>Work on pullReceipt is on hold at the moment, as I am focusing on other projects.</p>
@@ -74,6 +61,13 @@ sections:
 			 <h3><i class='fa fa-check' aria-hidden='true'></i> pullReceipt extracts the incoming invoices from your mailbox for you</h3>
 		 </div>
      "
+   - type: div
+     value: "<br><br><br>"
+   - type: cta
+     href: "#pricing"
+     primary: true
+     trg: /pullreceipt-pricing
+     value: View plans
  -
   # Benefits
   content:

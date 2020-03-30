@@ -1,18 +1,13 @@
 ---
 layout: index
-title: Tools directory
+metaTitle: Tools directory
+title: Tools
+subtitle: We love open source :)
+topBackgroundImage: "/img/bg-2.jpg"
 author: Mango Information Systems
 description: List of open source software created by us, with public access
 date: 2016-06-03 16:21:12
 sections:
- -
-  # top section: title
-  background-image: "/img/bg-2.jpg"
-  content:
-   - type: h1
-     value: Tools
-   - type: h2
-     value: We love open source :)
  -
   # List of tools
   content:

@@ -1,15 +1,12 @@
 ---
 layout: index
-title: terms
+metaTitle: terms
+title: Copyright and terms of service
 author: Mango Information Systems
 date: 2016-07-25 20:08:48
 description: Copyright, licensing, terms of use.
 sitemap: false
 sections:
- -
-  content:
-   - type: h1
-     value: Copyright and terms of service
  -
   content:
    - type: h2

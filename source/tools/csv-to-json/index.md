@@ -1,6 +1,9 @@
 ---
 layout: index
+metaTitle: Online CSV to JSON converter
 title: Online CSV to JSON converter
+subtitle: Easy, privacy-friendly and offline-first online csv to json converter.
+topBackgroundImage: 
 author: Mango Information Systems
 date: 2016-10-24 16:29:26
 description: Easy, privacy-friendly and offline-first online csv to json converter
@@ -8,13 +11,6 @@ thumbnail: /img/thumbnails/2015-01-08-csv-to-json.png
 css: [legacy/2015-01-08-csv-to-json.css]
 scripts: [js/legacy/jquery.js, js/legacy/underscore-min.js, js/localforage.nopromises.min.js, js/legacy/papaparse.min.js, js/legacy/2015-01-08-csv-to-json.js]
 sections:
- -
-  # top section: title
-  content:
-   - type: h1
-     value: Online CSV to JSON converter
-   - type: h2
-     value: Easy, privacy-friendly and offline-first online csv to json converter.
  -
   # New conversion
   content:

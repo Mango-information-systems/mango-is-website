@@ -4,18 +4,21 @@
 			
 		<%- partial('_partial/header') %>
 		
-		<div class="row">
-			<div class="xs-eleven lg-nine columns">
+		<section>
+			<div class="row">
+				<div class="xs-eleven lg-nine columns">
+					
+					<%- partial('_partial/article', {post: page, index: false}) %>
+					
+				</div>
+				<div class="xs-twelve lg-three columns">
 				
-				<%- partial('_partial/article', {post: page, index: false}) %>
-				
-			</div>
-			<div class="xs-twelve lg-three columns">
-			
-				<%- partial('_partial/sidebar') %>
+					<%- partial('_partial/sidebar') %>
 
+				</div>
 			</div>
-		</div>
+		</section>
+		
 		<%- partial('_partial/footer') %>
 
 	</div>

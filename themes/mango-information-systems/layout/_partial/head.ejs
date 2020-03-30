@@ -2,17 +2,22 @@
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta charset="utf-8">
 	<%
-	var title = page.title
-		, url =  config.url + url_for(page.path).replace( /(\/index\.html?$)|(\/?$)/, '/')
-	
-	if (typeof page.subtitle !== 'undefined')
-		title = title + ' - ' + page.subtitle
+	let url =  config.url + url_for(page.path).replace( /(\/index\.html?$)|(\/?$)/, '/')
+		, title
 
 	if (is_archive())
-		title = 'blog'
-
-	if (is_category())
+		title = 'Blog'
+	else if (is_category())
 		title = page.category
+	else if (page.metaTitle)
+		title = page.metaTitle
+	else {
+		title = page.title		
+		
+		if (typeof page.subtitle !== 'undefined')
+			title = title + ' - ' + page.subtitle
+			
+	}
 		
 	if (!is_post())
 		title = title + ' | ' + config.title
@@ -40,7 +45,12 @@
 
 	<%- css('css/font-awesome/css/font-awesome.min') %>
 	<%- css('css/normalize') %>
-	<%- css('css/skeleton.min') %>
+	
+	<%  if (page.layout !== 'slide') { %>
+		<%- css('css/skeleton.min') %>
+	<% 
+	}
+	%>
 
 	<%  if (page.css) {
 			page.css.forEach(function(cssFile) {%>

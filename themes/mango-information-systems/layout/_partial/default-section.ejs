@@ -1,11 +1,6 @@
 <!-- begin default-section -->
 <%
-//~ var sectionStyle = isFirst ? 'min-height:40vh;' : ''
 var sectionStyle = ''
-
-if (isFirst && !data['background-image'])
-	sectionStyle += 'background: url(/img/bg-1.jpg) no-repeat center center fixed; background-size: cover;'
-
 
 sectionStyle += data['background-image'] ? 'background: url(' + data['background-image'] + ') no-repeat center center fixed; background-size: cover;' : ''
 
@@ -114,14 +109,7 @@ function setContent(content) {
 %>
 
 <section style="<%- sectionStyle %>" class="<%- data.class %>">
-	<%
-		if (isFirst) {
-	%>
-		<%- partial('_partial/header') %>
 
-	<%
-	}
-	%>
 
 
 	<%- data.content.forEach(setContent) %>

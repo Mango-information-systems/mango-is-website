@@ -1,19 +1,15 @@
 ---
 layout: index
-title: "multiGa: realtime multi-website traffic dashboard"
+metaTitle: "multiGa: realtime multi-website traffic dashboard"
+title: "multiGa: realtime traffic dashboard for your websites"
+subtitle: A free dashboard to visualize Google Analytics live metrics for multiple sites.
+topBackgroundImage: 
 author: Mango Information Systems
 date: 2016-10-24 16:29:26
 description: Free dashboard showing Google Analytics live traffic data on multiple websites. Ideal to find out if it's the right moment to upgrade your server ;)
 thumbnail: /img/thumbnails/multiGa.png
 scripts: [js/g-realtime.js, https://apis.google.com/js/api.js?onload=gApiLoaded]
 sections:
- -
-  # top section: title
-  content:
-   - type: h1
-     value: "multiGa: realtime traffic dashboard for your websites"
-   - type: h2
-     value: A free dashboard to visualize Google Analytics live metrics for multiple sites.
  -
   # app
   content:

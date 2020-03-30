@@ -1,17 +1,13 @@
 ---
-title: Business Intelligence for smarter decisions
+metaTitle: Business Intelligence for smarter decisions
+title: Fact-based knowledge
+subtitle: for smart organizations
+topBackgroundImage: "/img/bg-1.jpg"
+topCentered: true
 description: Organizations hire us to optimize any aspect of their management, using our expertise in Business Intelligence and Data Science.
 layout: index
 date: 2016-04-01 14:36:46
 sections:
- -
-  # top section
-  background-image: "/img/bg-1.jpg"
-  content:
-   -
-    type: h1
-    class: u-text-center
-    value: Fact-based knowledge<br> <span class="small">for smart organizations</span>
  -
   # second section: problem / solution
   content:
