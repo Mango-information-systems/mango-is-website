@@ -28,9 +28,9 @@ sections:
     value: "<br><br>"
    - type: ul
      class: list-inline row u-text-center
-     value: "<li class='four columns' itemscope itemtype='http://schema.org/Product'><h4><i class='fa fa-bar-chart fa-lg text-primary' aria-hidden='true'></i> <span  itemprop='name'>Business Intelligence</span></h4></li>
-			 <li class='four columns' itemscope itemtype='http://schema.org/Product'><h4><i class='fa fa-flask fa-lg text-primary' aria-hidden='true'></i> <span  itemprop='name'>Data science</span></h4></li>
-			 <li class='four columns' itemscope itemtype='http://schema.org/Product'><h4><i class='fa fa-rocket fa-lg text-primary' aria-hidden='true'></i> <span  itemprop='name'>Data-driven applications</span></h4></li>"
+     value: "<li class='four columns' itemscope itemtype='https://schema.org/Product'><h4><i class='fa fa-bar-chart fa-lg text-primary' aria-hidden='true'></i> <span  itemprop='name'>Business Intelligence</span></h4></li>
+			 <li class='four columns' itemscope itemtype='https://schema.org/Product'><h4><i class='fa fa-flask fa-lg text-primary' aria-hidden='true'></i> <span  itemprop='name'>Data science</span></h4></li>
+			 <li class='four columns' itemscope itemtype='https://schema.org/Product'><h4><i class='fa fa-rocket fa-lg text-primary' aria-hidden='true'></i> <span  itemprop='name'>Data-driven applications</span></h4></li>"
    -
     type: custom
     value: "<br><br>"
