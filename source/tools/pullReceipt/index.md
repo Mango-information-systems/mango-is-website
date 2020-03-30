@@ -12,27 +12,6 @@ css: [pullReceipt.css]
 scripts: [js/pullReceipt.js]
 sections:
  -
-  # Standby project notification
-  content:
-   - type: div
-     class: row
-     value: "
-		<div class='alert alert-danger'>
-			<h3>Project in standby</h3>
-			<p>Dear visitor,</p>
-			<br>
-			<p>Work on pullReceipt is on hold at the moment, as I am focusing on other projects.</p>
-			<br>
-			<p>If you're a business developer / marketer, and are interested to take care of the business aspects of the project as a co-founder, <a href='/contact/'>get in touch</a>.</p>
-			<br>
-			<p>If you need assistance to <b>automate processing of your paperwork</b>, I'm your guy, <a href='/contact/'>send me a message</a>.</p>
-			<br>
-			<p>Cheers,</p>
-			<p>Mehdi.</p>
-		
-		</div>
-     "
- -
   # Visual
   content:
    - type: div
