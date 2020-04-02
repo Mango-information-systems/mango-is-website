@@ -1,6 +1,6 @@
 var fs = require('fs')
 	, ejs = require('ejs')
-	, d3 = require('d3')
+	, d3 = require('d3-format')
 	
 /**
 * Display basic StackExchange user info

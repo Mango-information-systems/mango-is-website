@@ -1,4 +1,5 @@
-var d3 = require('d3')
+var d3 = Object.assign( {}, require('d3-array'), require('d3-force'), require('d3-drag'), require('d3-scale'), require('d3-selection'), require('d3-transition'))
+	, d3Selection = require('d3-selection')
 	, easyedit = require('easyedit')
 
 /**
@@ -70,7 +71,7 @@ function ForceChart() {
 		// hide export button when layout is being computed
 		d3.select('#actionLinks').style('display', 'none')
 		
-		if (!d3.event.active) {
+		if (!d3Selection.event.active) {
 			
 			self.simulation.alphaTarget(0.3).restart()
 		
@@ -83,12 +84,12 @@ function ForceChart() {
 	}
 
 	function dragged(d) {
-		d.fx = d3.event.x
-		d.fy = d3.event.y
+		d.fx = d3Selection.event.x
+		d.fy = d3Selection.event.y
 	}
 
 	function dragended(d) {
-		if (!d3.event.active)
+		if (!d3Selection.event.active)
 			self.simulation.alphaTarget(0)
 		d.fx = null
 		d.fy = null

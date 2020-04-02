@@ -1,6 +1,6 @@
-var d3 = Object.assign({}, require('d3'), require('d3-scale-chromatic'))
+var d3 = Object.assign({}, require('d3-ease'), require('d3-interpolate'), require('d3-scale'), require('d3-scale-chromatic'), require('d3-selection'), require('d3-shape'), require('d3-transition'))
 
-window.d3 = d3
+//~window.d3 = d3
 
 /**
 * donut chart view

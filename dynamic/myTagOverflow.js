@@ -1,6 +1,6 @@
 window.appDebug = require('debug')
 
-var d3 = require('d3')
+var d3 = Object.assign( {}, require('d3-selection'), require('d3-array'))
 	, debug = window.appDebug('myTagOverflow')
 	, storage = require('localforage')
 	, StackExchangeApi = require('./controller/stackExchange-api')

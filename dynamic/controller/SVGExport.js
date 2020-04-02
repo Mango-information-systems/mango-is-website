@@ -1,8 +1,3 @@
-window.appDebug = require('debug')
-
-var debug = window.appDebug('SVGExport')
-	
-
 /**
 * SVG export function
 * 
