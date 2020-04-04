@@ -36,8 +36,15 @@ function render(target) {
 			<br><small>Loading...</small> \
 		</div> \
 		<div class="six offset-by-three columns" id="actionLinks" style="display:none;"> \
-			<a id="clearDataLink" class=" button button-block">Delete data and disconnect</a> \
-			<a id="exportLink" class=" button button-primary button-block" target="_blank">Save as SVG image</a> \
+			<p> \
+				<a id="clearDataLink" class=" button button-block">Delete data and disconnect</a> \
+				<a id="exportLink" class=" button button-primary button-block" target="_blank">Save as SVG image</a> \
+			</p> \
+			<br> \
+		</div> \
+		<div class="row"> \
+			<div class="twelve columns" id="notifications"> \
+			</div> \
 		</div> \
 	')
 

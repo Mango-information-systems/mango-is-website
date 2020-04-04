@@ -275,10 +275,10 @@ function showChart(tagsGraph, complete=false) {
 	if (tagsGraph.isIncomplete) {
 		
 		app.view.warningMessage.render({
-			target: appContainer.append('div').attr('class', 'twelve columns')
-			, append: true
+			target: d3.select('#notifications')
+			, append: false
 			, title: 'Incomplete data retrieved'
-			, message: '<p>Data for some tags like \'analytics\' could not be retrieved, most probably because of an ad blocker.</p> \
+			, message: '<p>The statistics for some tags like \'analytics\' could not be retrieved, most probably because of an ad blocker.</p> \
 			<p>For more accurate results, you may disable your ad blocker. There is no ad on this site, anyway.</p> \
 			<p>Up to you ;)</p>'
 		})
