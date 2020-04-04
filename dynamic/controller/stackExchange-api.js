@@ -82,7 +82,7 @@ function SEApi(accessToken, showChart) {
 						callback('access-token-expired')
 					}
 					else {
-						console.log('error retrieving tags graph', res.statusCode)
+						console.log('error retrieving tags graph', res.statusCode, res)
 						throw err
 					}
 				}

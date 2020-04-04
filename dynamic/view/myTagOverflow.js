@@ -11,7 +11,7 @@ function render(target) {
 			<div class="row"> \
 				<div class="user six columns"></div> \
 				<div class="six columns"> \
-					<span id="progressBadge" class="badge">Extraction in progress...</span> \
+					<span id="progressBadge" class="badge">Connecting user...</span> \
 					<div id="legendWrapper" class="row"> \
 					</div> \
 				</div> \

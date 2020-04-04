@@ -207,6 +207,8 @@ function extractStats() {
 	
 	debug('extract tags graph')
 	
+	d3.select('#progressBadge').html('Extraction in progress..')
+	
 	app.controller.stackExchangeApi.getStats(function(err, data) {
 
 		if (err !== null) {
