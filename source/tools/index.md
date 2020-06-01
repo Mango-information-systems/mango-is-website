@@ -14,6 +14,15 @@ sections:
    - type: post
      content:
       class: index
+      path: /tools/tagPlan/
+      thumbnail: /img/tagPlan-instagram-hashtag-research.png
+      title: Tagplan - Relevant hashtags for Instagram
+      subtitle: Identify the niche keywords of your target for successful campaigns, thanks to this instant research tool.
+      isNew: true
+      footer: false
+   - type: post
+     content:
+      class: index
       path: https://twitto.be/
       thumbnail: /img/twitto-be-dashboard-screenshot.png
       title: Twitto.be - realtime hashtags network graph analytics
