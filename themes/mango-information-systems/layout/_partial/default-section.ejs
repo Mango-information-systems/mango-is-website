@@ -1,64 +1,21 @@
 <!-- begin default-section -->
 <%
-var sectionStyle = isFirst ? 'min-height:80%;' : ''
-
-if (isFirst && !data['background-image'])
-	sectionStyle += 'background: url(/img/bg-1.jpg) no-repeat center center fixed; background-size: cover;'
-
+var sectionStyle = ''
 
 sectionStyle += data['background-image'] ? 'background: url(' + data['background-image'] + ') no-repeat center center fixed; background-size: cover;' : ''
 
 function setContent(content) {
 
 		switch(content.type) {
-			case 'person':%>
-				<%-
-					partial('_partial/person', {data: content.content})
-				%><%
-			break
 			case 'card':%>
 				<%-
 					partial('_partial/card', {data: content.content})
-				%><%
-			break
-			case 'pricing':%>
-				<%-
-					partial('_partial/pricing', {data: content.offers})
-				%><%
-			break
-			case 'reference':%>
-				<%-
-					partial('_partial/reference', {data: content.content})
-				%><%
-			break
-			case 'post':%>
-				<%-
-					partial('_partial/archive-post', {post: content.content, index: true})
 				%><%
 			break
 			case 'client-logos':%>
 				<%-
 					partial('_partial/client-logos', {data: content.logos})
 				%><%
-			break
-			case 'cta':
-
-				var to= content.href? ' href="' + content.href + '"' : ''
-				, trg = content.trg? ' data-trg="' + content.trg + '"' : ''
-				, btnClass = content.primary? ' button-primary' : ''
-
-				%>
-				<a <%- to %> class="button cta <%- btnClass %>" <%- trg %>><%- content.value %></a>
-				<%
-			break
-			case 'image':%>
-				<%- image_tag(content.href, {
-					class: content.class
-					, alt: content.alt
-					, width: content.width || ''
-					, height: content.height || ''
-				}) %>
-			<%
 			break
 			case 'columns':
 				// two columns layout
@@ -86,6 +43,55 @@ function setContent(content) {
 				})
 
 			break
+			case 'contact':%>
+				<%-
+					partial('_partial/contactForm')
+				%><%
+			break
+			case 'cta':
+
+				var to= content.href? ' href="' + content.href + '"' : ''
+				, trg = content.trg? ' data-trg="' + content.trg + '"' : ''
+				, btnClass = content.primary? ' button-primary' : ''
+
+				%>
+				<a <%- to %> class="button cta <%- btnClass %>" <%- trg %>><%- content.value %></a>
+				<%
+			break
+			case 'image':%>
+				<%- image_tag(content.href, {
+					class: content.class
+					, alt: content.alt
+					, width: content.width || ''
+					, height: content.height || ''
+				}) %>
+			<%
+			break
+			case 'person':%>
+				<%-
+					partial('_partial/person', {data: content.content})
+				%><%
+			break
+			case 'post':%>
+				<%-
+					partial('_partial/archive-post', {post: content.content, index: true})
+				%><%
+			break
+			case 'pricing':%>
+				<%-
+					partial('_partial/pricing', {data: content.offers})
+				%><%
+			break
+			case 'seLogin':%>
+				<%-
+					partial('_partial/sign-in-with-stackExchange', {hasError: false})
+				%><%
+			break
+			case 'reference':%>
+				<%-
+					partial('_partial/reference', {data: content.content})
+				%><%
+			break
 			default:
 				var id = content.id? ' id="' + content.id + '"' : ''
 					, tag = 'p'
@@ -108,22 +114,7 @@ function setContent(content) {
 %>
 
 <section style="<%- sectionStyle %>" class="<%- data.class %>">
-	<%
-		if (isFirst) {
-	%>
-		<div class="row">
-			<div class="lg-five column">
-				<a class="brand" rel="home" href="/">
-					<%- image_tag('/img/mango-information-systems-logo.png', {
-						class: 'u-img-responsive'
-						, alt: 'Mango Information Systems'
-					}) %>
-				</a>
-			</div>
-		</div>
-	<%
-	}
-	%>
+
 
 
 	<%- data.content.forEach(setContent) %>

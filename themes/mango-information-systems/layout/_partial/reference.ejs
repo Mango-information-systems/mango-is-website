@@ -1,5 +1,5 @@
 <!-- begin reference -->
-<div itemscope itemtype="http://schema.org/Product" class="row">
+<div itemscope itemtype="https://schema.org/Product" class="row">
 	<div class="card twelve columns">
 	
 		<div class="row">
@@ -26,21 +26,21 @@
 					<ul class="list-inline">
 						<% _.each(data.domains, function(domain) {
 						%>
-							<li><span class="tag tag-domain"><%- domain %></span></li>
+							<li><span class="badge badge-domain"><%- domain %></span></li>
 						<% }) %>
 					</ul>
 					<div class="u-cf"></div>
 					<ul class="list-inline">
 						<% _.each(data.tech, function(tech) {
 						%>
-							<li itemscope itemtype="http://schema.org/ComputerLanguage"><span class="tag tag-tech" itemprop="name"><%- tech %></span></li>
+							<li itemscope itemtype="https://schema.org/ComputerLanguage"><span class="badge badge-tech" itemprop="name"><%- tech %></span></li>
 						<% }) %>
 					</ul>
 					<div class="u-cf"></div>
 					<ul class="list-inline">
 						<% _.each(data.dataTech, function(dataTech) {
 						%>
-							<li><span class="tag"><%- dataTech %></span></li>
+							<li><span class="badge"><%- dataTech %></span></li>
 						<% }) %>
 					</ul>
 				</div>
@@ -58,19 +58,19 @@
 					<ul class="list-inline">
 						<% _.each(data.domains, function(domain) {
 						%>
-							<li><span class="tag tag-domain"><%- domain %></span></li>
+							<li><span class="badge badge-domain"><%- domain %></span></li>
 						<% }) %>
 					</ul>
 					<ul class="list-inline">
 						<% _.each(data.tech, function(tech) {
 						%>
-							<li itemscope itemtype="http://schema.org/ComputerLanguage"><span class="tag tag-tech" itemprop="name"><%- tech %></span></li>
+							<li itemscope itemtype="https://schema.org/ComputerLanguage"><span class="badge badge-tech" itemprop="name"><%- tech %></span></li>
 						<% }) %>
 					</ul>
 					<ul class="list-inline">
 						<% _.each(data.dataTech, function(dataTech) {
 						%>
-							<li><span class="tag"><%- dataTech %></span></li>
+							<li><span class="badge"><%- dataTech %></span></li>
 						<% }) %>
 					</ul>
 				</div>
@@ -92,7 +92,7 @@
 		
 		_.each(data.quotes, function(quote) {
 		%>
-			<div class="row reference" itemprop="review" itemscope itemtype="http://schema.org/Review">
+			<div class="row reference" itemprop="review" itemscope itemtype="https://schema.org/Review">
 				<div class="columns md-two
 									sm-four
 									xs-two">

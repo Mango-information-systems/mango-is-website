@@ -1,34 +1,28 @@
 <!-- begin archive -->
-<% if (pagination == 2){ %>
-	<% page.posts.each(function(post){ %>
-		<%- partial('article', {post: post, index: true}) %>
-	<% }) %>
-<% } else { %>
-	<% if (is_category()){ %>
-		<h1>Articles in category <%- page.category %></h1>
-	<% } else { %>
-		<h1>Our blog articles</h1>
-	<% } %>
-	<% var last; %>
-	<% page.posts.each(function(post, i){ %>
-		<% var year = post.date.year(); %>
-		<% if (last != year){ %>
-			<% if (last != null){ %>
-				</div>
-			<% } %>
-			<% last = year; %>
-				<div class="divider-year"> <!-- articles year wrap -->
-					<%- year %>
-				</div>
-				<div>
-		<% } %>
-		<%- partial('archive-post', {post: post, even: i % 2 == 0}) %>
-	<% }) %>
-	<% if (page.posts.length){ %>
-		</div>
-	<% } %>
-<% } %>
-
+	<% 
+	
+	let articlesByTopic = {}
+	
+	page.posts.each (post => {
+		post.tags.each(tag => {
+			if (!articlesByTopic[tag.name])
+				articlesByTopic[tag.name] = []
+				
+			articlesByTopic[tag.name].push(post)
+		})
+		
+	})
+	
+	Object.keys(articlesByTopic).sort().forEach(topic => { %>
+		
+		<h2><%- topic %></h2>
+		
+	 <% 
+		
+		articlesByTopic[topic].sort((a, b) => b.date - a.date).forEach((post, i) => { %>
+			<%- partial('archive-post', {post: post, even: i % 2 == 0}) %> <%
+		})
+	}) %>
 <div class="row">
 	<div class="twelve columns">
 		<a class="u-pull-right" title="rss feed" href="<%- url_for(config.feed.path) %>"><i class="fa fa-rss-square" aria-label="RSS feed"></i></a>
@@ -36,8 +30,9 @@
 	<% if (page.total > 1){ %>
 		<nav id="page-nav">
 			<%- paginator({
-				prev_text: "<i class='fa fa-chevron-left' aria-hidden='true'></i>",
-				next_text: "<i class='fa fa-chevron-right' aria-hidden='true'></i>"
+				prev_text: "<small><i class='fa fa-chevron-left' aria-hidden='true' style='margin-right:.5rem;'></i></small>",
+				next_text: "<small><i class='fa fa-chevron-right' aria-hidden='true' style='margin-left:.5rem;'></i></small>",
+				escape: false
 			}) %>
 		</nav>
 	<% } %>

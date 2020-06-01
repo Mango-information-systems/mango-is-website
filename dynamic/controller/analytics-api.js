@@ -1,6 +1,7 @@
 window.appDebug = require('debug')
 
 var debug = window.appDebug('analyticsApi')
+	, d3 = require('d3-array')
 
 /**
 * wrapper around google Analytics API This controller handles the following logic:

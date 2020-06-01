@@ -1,4 +1,4 @@
-var d3 = require('d3')
+var d3 = require('d3-selection')
 	, ejs = require('ejs')
 	, fs = require('fs')
 

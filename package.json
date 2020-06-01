@@ -1,6 +1,6 @@
 {
   "name": "mango-is-website",
-  "version": "3.37.2",
+  "version": "3.41.0",
   "private": true,
   "scripts": {
     "start": "npm run build:static && cp config/dev.theme._config.yml themes/mango-information-systems/_config.yml && npm run watch & hexo server & npm run watch:socketServer",
@@ -21,15 +21,13 @@
     "watch:socketServer": "nodemon --watch dynamic dynamic/server.js"
   },
   "hexo": {
-    "version": "3.9.0"
+    "version": "4.2.0"
   },
   "browser": {
     "request": "xhr"
   },
   "dependencies": {
     "@yuanqing/modal": "^0.1.0",
-    "brfs": "^2.0.2",
-    "browserify": "^16.5.0",
     "d3": "^4.13.0",
     "d3-scale-chromatic": "^1.5.0",
     "debug": "^2.6.9",
@@ -38,22 +36,19 @@
     "font-awesome": "^4.6.1",
     "form-to-obj": "0.0.3",
     "gascrolldepth": "git+https://github.com/leighmcculloch/gascrolldepth.js.git#70834032",
-    "hexo": "^3.9.0",
-    "hexo-browsersync": "^0.3.0",
-    "hexo-generator-archive": "^0.1.5",
-    "hexo-generator-category": "^0.1.3",
-    "hexo-generator-feed": "^1.2.2",
+    "hexo": "^4.2.0",
+    "hexo-generator-archive": "^1.0.0",
+    "hexo-generator-category": "^1.0.0",
+    "hexo-generator-feed": "^2.2.0",
     "hexo-generator-seo-friendly-sitemap": "0.0.25",
-    "hexo-renderer-ejs": "^0.2.0",
-    "hexo-renderer-markdown-it": "^3.4.1",
-    "hexo-server": "^0.3.3",
+    "hexo-renderer-ejs": "^1.0.0",
+    "hexo-renderer-markdown-it": "^4.1.0",
     "jLouvain": "git://github.com/Mango-information-systems/jLouvain.git#nodejs-compatibility",
     "localforage": "^1.7.3",
     "mailgun-js": "^0.20.0",
     "node-persist": "0.0.11",
     "normalize.css": "^7.0.0",
     "request": "^2.88.0",
-    "smoothscroll": "^0.2.2",
     "socket.io": "^2.3.0",
     "socket.io-client": "^2.3.0",
     "validator": "^5.4.0",
@@ -61,8 +56,12 @@
     "xss-filters": "^1.2.6"
   },
   "devDependencies": {
+    "brfs": "^2.0.2",
+    "browserify": "^16.5.0",
+    "hexo-browsersync": "^0.3.0",
+    "hexo-server": "^1.0.0",
     "mocha": "^5.2.0",
-    "nodemon": "^1.19.4",
+    "nodemon": "^2.0.2",
     "should": "^9.0.2",
     "uglify-es": "^3.3.9",
     "uglifyify": "^5.0.2",

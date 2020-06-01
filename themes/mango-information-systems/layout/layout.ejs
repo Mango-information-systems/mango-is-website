@@ -6,22 +6,22 @@
 		
 		case page.layout === 'blog':
 			// blog article
-			pageType = 'http://schema.org/BlogPosting'
+			pageType = 'https://schema.org/BlogPosting'
 		
 			break
 		
 		case page.path.substr(0, 4) === 'blog':
 			// blog index page
-			pageType = 'http://schema.org/Blog'
+			pageType = 'https://schema.org/Blog'
 		
 			break
 		case page.path.substr(0, 5) === 'tools' && page.path !== 'tools/index.html':
 			// online
-			pageType = 'http://schema.org/WebApplication'
+			pageType = 'https://schema.org/WebApplication'
 		
 			break
 		default:
-			pageType = 'http://schema.org/WebPage'
+			pageType = 'https://schema.org/WebPage'
 			break
 	}
 %>

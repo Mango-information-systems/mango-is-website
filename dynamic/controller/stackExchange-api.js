@@ -19,11 +19,11 @@ var debug = window.appDebug('SE-api')
 * @constructor
 * 
 */
-function SEApi(accessToken) {
+function SEApi(accessToken, showChart) {
 
 	var self = this
 		, apiUrl = 'https://api.stackexchange.com/2.2/'
-		if (typeof accessToken !== 'undefined')
+		if (accessToken)
 			this.accessToken = accessToken
 
 	SE.init({ 
@@ -51,8 +51,10 @@ function SEApi(accessToken) {
 	*/	
 	function getTagGraph(tagIndex, pageIndex, tags, relations, callback) {
 
-		if (tagIndex >= tags.length)
-			formatGraph(tags, relations, callback)
+		if (tagIndex >= tags.length) {
+			let graph = formatGraph(tags, relations)
+			callback(null, graph)
+		}
 		else {
 //~ console.log('retrieving related tags for', tags[tagIndex].name)
 
@@ -80,7 +82,7 @@ function SEApi(accessToken) {
 						callback('access-token-expired')
 					}
 					else {
-						console.log('error retrieving tags graph', res.statusCode)
+						console.log('error retrieving tags graph', res.statusCode, res)
 						throw err
 					}
 				}
@@ -90,6 +92,20 @@ function SEApi(accessToken) {
 					//~ console.log(body)
 
 					relations.push({tag: tags[tagIndex].name, relations: body.items})
+					
+					if (tagIndex %10 === 0) {
+					// update graph rendering as extraction progresses
+						
+						// only the nodes for which links have currently been retrieved are sent to the view
+						let linkedTags = []
+						
+						relations.forEach(relation => {linkedTags = linkedTags.concat(relation.relations.map(d => d.name))})
+						
+						let currentTags = tags.filter(t => linkedTags.includes(t.name))
+						//~console.log('currentTags', currentTags)
+						
+						showChart(formatGraph(currentTags, relations))
+					}
 					
 					//~ console.log('relations', relations)
 					if (body.has_more)
@@ -111,7 +127,7 @@ function SEApi(accessToken) {
 	* 
 	* @private
 	*/	
-	function formatGraph(tags, relations, callback) {
+	function formatGraph(tags, relations) {
 		//~ console.log('relations', relations)
 
 		var res = {
@@ -204,7 +220,7 @@ function SEApi(accessToken) {
 		//~ console.log(linksObj)
 		//~ console.log(res)
 		
-		callback(null, res)
+		return res
 
 
 	}
@@ -327,7 +343,7 @@ function SEApi(accessToken) {
 		
 		SE.authenticate({
 			success: function(data) { 
-				console.log('auth response', data)
+				//~console.log('auth response', data)
 				
 				//~ console.log(
 					//~ 'User Authorized with account id = ' + 

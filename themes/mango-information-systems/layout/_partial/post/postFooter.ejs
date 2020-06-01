@@ -1,17 +1,14 @@
 <!-- begin post.postFooter -->
 <%
 	isIndex = isIndex || false
-	
-	var articleEndMarker = isIndex? '' : 'id="article-end" '
-
 %>
 
-<div <%- articleEndMarker %>class="postFooter">
+<div class="postFooter">
 	<small>
 	  
-	  <% if (post.categories && post.categories.length && !is_category()){ %>
-		  Category: 
-			<a href="<%- url_for(post.categories.data[0].path) %>"><%- post.categories.data[0].name %></a> -
+	<% if (post.categories && post.categories.length && !is_category()){ %>
+		Category: 
+		<a href="<%- url_for(post.categories.data[0].path) %>"><%- post.categories.data[0].name %></a>. 
 	  <% } %>
 	  Published by  <%- titlecase(post.author) %>
 	  
@@ -22,7 +19,7 @@
 		  , last modified:
 		<time datetime="<%= date_xml(post['last-update']) %>"
 		  itemprop="dateModified"><%= date(post['last-update'], date_format) %>
-		</time>
+		</time>.
 	  <% } %>
 	
 	</small>

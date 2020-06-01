@@ -1,21 +1,13 @@
 ---
-layout: landing
-title: Tools directory
+layout: index
+metaTitle: Tools directory
+title: Tools
+subtitle: We love open source :)
+topBackgroundImage: "/img/bg-2.jpg"
 author: Mango Information Systems
 description: List of open source software created by us, with public access
 date: 2016-06-03 16:21:12
-__index: true
 sections:
- -
-  # top section: title
-  background-image: "/img/bg-2.jpg"
-  content:
-   - type: h1
-     class: small
-     value: Tools
-   - type: h2
-     class: small
-     value: We love open source :)
  -
   # List of tools
   content:
@@ -24,8 +16,8 @@ sections:
       class: index
       path: https://twitto.be/
       thumbnail: /img/twitto-be-dashboard-screenshot.png
-      title: twitto.be
-      subtitle: A live dashboard of tweets geolocated in Belgium
+      title: Twitto.be - realtime hashtags network graph analytics
+      subtitle: Twitto is a live analytics dashboard of the tweets related to entrepreneurship in Belgium.
       footer: false
    - type: post
      content:

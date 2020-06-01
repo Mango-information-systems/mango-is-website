@@ -1,24 +1,35 @@
 <!-- begin header -->
-<header id="header">
+<%
+let bgImage = page.topBackgroundImage || '/img/bg-2.jpg'
+	, headingClass = page.topCentered? 'u-text-center' : ''
+%>
 
+<section style="background: url(<%- bgImage %>) no-repeat center center fixed; background-size: cover;" class="">
+	<header>
 		<div class="row">
-			<div class="sm-offset-by-three sm-six md-offset-by-zero md-four lg-three columns">
-				<a class="nav-link" rel="home" href="<%- url_for() %>">
+			<div class="lg-five column">
+				<a class="brand nav-link" rel="home" href="/">
 					<%- image_tag('/img/mango-information-systems-logo.png', {
-						alt: config.title
-						, class: "u-img-responsive"
+						class: 'u-img-responsive'
+						, alt: 'Mango Information Systems'
 					}) %>
 				</a>
 			</div>
-			<div class="sm-four md-two columns u-text-center">
-				<a class="nav-link" href="<%- url_for('/') %>">Home</a>
-			</div>
-			<div class="sm-four md-two columns u-text-center">
-				<a class="nav-link" href="<%- url_for('/blog') %>">Blog</a>
-			</div>
-			<div class="sm-four md-two columns u-text-center">
-				<a class="nav-link" href="<%- url_for('/tools') %>">Tools</a>
-			</div>
 		</div>
-</header>
+		<% switch(true) {
+			case is_category(): %>
+				<h1>Blog articles in category <%- page.category %></h1>
+				<% break
+			case is_archive(): %>
+				<h1>Our blog articles</h1>
+				<% break
+			default: %>
+				<h1 class ="<%- headingClass %>"><%- page.title %></h1>
+				<% if(page.subtitle) {%>
+					<h2 class ="<%- headingClass %>"><%- page.subtitle %></h2>
+				<% } %>
+				<% break
+		} %>
+	</header>
+</section>
 <!-- / header -->

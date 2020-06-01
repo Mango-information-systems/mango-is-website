@@ -1,6 +1,7 @@
 ---
 layout: post
 category: business
+tags: Web and social media
 language: en
 title: Twitter influencers about sports business in BE/NL
 subtitle: Making-of a ranking

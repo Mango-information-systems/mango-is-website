@@ -1,6 +1,6 @@
 window.appDebug = require('debug')
 
-var d3 = require('d3')
+var d3 = Object.assign( {}, require('d3-selection'), require('d3-array'))
 	, debug = window.appDebug('myTagOverflow')
 	, storage = require('localforage')
 	, StackExchangeApi = require('./controller/stackExchange-api')
@@ -70,7 +70,7 @@ function start(hasError, accessToken) {
 				
 			else if (tagsGraph !== null) {
 				
-				showChart(tagsGraph)
+				showChart(tagsGraph, true)
 			}
 			
 			if (tagsGraph === null || user === null )
@@ -120,7 +120,7 @@ function initiateExtraction(hasError, opts) {
 				debug('user is connected')
 				
 				// initialize stackExchange API controller
-				app.controller.stackExchangeApi = new StackExchangeApi(accessToken)
+				app.controller.stackExchangeApi = new StackExchangeApi(accessToken, showChart)
 				
 				// retrieve data from SE API
 				if (!opts.user)
@@ -135,7 +135,7 @@ function initiateExtraction(hasError, opts) {
 				debug('user is not connected')
 				
 				// initialize stackExchange API controller
-				app.controller.stackExchangeApi = new StackExchangeApi()
+				app.controller.stackExchangeApi = new StackExchangeApi(null, showChart)
 				
 				// display login form
 				app.view.signIn.render({
@@ -207,6 +207,8 @@ function extractStats() {
 	
 	debug('extract tags graph')
 	
+	d3.select('#progressBadge').html('Extraction in progress..')
+	
 	app.controller.stackExchangeApi.getStats(function(err, data) {
 
 		if (err !== null) {
@@ -246,7 +248,7 @@ function extractStats() {
 				storage.setItem('legend', legendLabels)
 			})
 
-			showChart(data)
+			showChart(data, true)
 		}
 	})
 }
@@ -255,11 +257,12 @@ function extractStats() {
 * Display the tags chart
 * 
 */
-function showChart(tagsGraph) {
+function showChart(tagsGraph, complete=false) {
 	
 	debug('displaying tag graph', tagsGraph)
 	
 	if (!chartInitialized) {
+		
 		app.view.chart.init({
 			legendLabels: legendLabels
 			, updateLegend: updateLegend
@@ -267,15 +270,15 @@ function showChart(tagsGraph) {
 		chartInitialized = true
 	}
 
-	app.view.chart.update(tagsGraph)
+	app.view.chart.update(tagsGraph, complete)
 
 	if (tagsGraph.isIncomplete) {
 		
 		app.view.warningMessage.render({
-			target: appContainer.append('div').attr('class', 'twelve columns')
-			, append: true
+			target: d3.select('#notifications')
+			, append: false
 			, title: 'Incomplete data retrieved'
-			, message: '<p>The whole tags graph could not be retrieved, most probably due to your ad blocker.</p> \
+			, message: '<p>The statistics for some tags like \'analytics\' could not be retrieved, most probably because of an ad blocker.</p> \
 			<p>For more accurate results, you may disable your ad blocker. There is no ad on this site, anyway.</p> \
 			<p>Up to you ;)</p>'
 		})
@@ -294,6 +297,12 @@ function showChart(tagsGraph) {
 			category: 'mytagoverflow'
 			, action: 'graph SVG export'
 		})
+	})
+
+	d3.select('#clearDataLink').on('click', function() {
+		// clear storage
+		storage.clear()
+		location.reload()
 	})
 
 	

@@ -1,6 +1,7 @@
 ---
 layout: post
 category: business
+topci: Web and social media
 language: en
 author: mehdi
 title: Finding twitter influencers

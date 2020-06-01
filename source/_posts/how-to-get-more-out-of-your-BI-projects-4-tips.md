@@ -3,10 +3,12 @@ title: How to Get More Out of Your Business Intelligence Projects - 4 Insider Ti
 subtitle: Pointers for great BI project delivery
 description: Tips from first-hand experience on better business specs (BRS); the importance of teamwork; quality in development and how testing is no luxury.
 category: business
+tags: Business Intelligence
 date: 2019-05-14
 language: en
 author: mehdi
 thumbnail: /img/blog/thumbnails/get-more-out-of-BI-projects.jpg
+nextArticle: /blog/business/save-time-and-money-in-BI-test/
 ---
 
 ### Tips from first-hand experience on better business specs (BRS); the importance of teamwork; quality in development and how testing is no luxury

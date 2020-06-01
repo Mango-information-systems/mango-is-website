@@ -1,53 +1,16 @@
 ---
-layout: landing
-title: "pullReceipt: simple invoice extractor"
+layout: index
+metaTitle: "pullReceipt: simple invoice extractor"
+title: "pullReceipt - simple invoice extractor <span class='u-pull-right'><small><sup style='color:#aaa;'>coming soon</sup></small></span>"
+subtitle:  Save time, focus on your business.
+topBackgroundImage: 
 author: Mango Information Systems
 date: 2016-10-24 16:29:26
 description: Need help to forward all the incoming invoices to your accountant? pullReceipt automates the boring parts of your business administration.
 thumbnail: /img/thumbnails/pullReceipt.png
 css: [pullReceipt.css]
 scripts: [js/pullReceipt.js]
-__index: true
 sections:
- -
-  # top section: title
-  content:
-   - type: div
-     value: "<img id='pullReceipt-logo' src='/img/pullReceipt-logo.png' alt='pullReceipt logo, a friendly robot' class='u-pull-right'>"
-   - type: h1
-     class: small
-     value: pullReceipt - simple invoice extractor <span class='u-pull-right'><small><sup style="color:#aaa;">coming soon</sup></small></span>
-   - type: h2
-     class: small
-     value: Save time, focus on your business.
-   - type: div
-     value: "<br><br><br><br><br>"
-   - type: cta
-     href: "#pricing"
-     primary: true
-     trg: /pullreceipt-pricing
-     value: View plans
- -
-  # Standby project notification
-  content:
-   - type: div
-     class: row
-     value: "
-		<div class='alert alert-danger'>
-			<h2 class='small'>project in standby</h2>
-			<p>Dear visitor,</p>
-			<br>
-			<p>Work on pullReceipt is on hold at the moment, as I am focusing on other projects.</p>
-			<br>
-			<p>If you're a business developer / marketer, and are interested to take care of the business aspects of the project as a co-founder, <a href='/contact/'>get in touch</a>.</p>
-			<br>
-			<p>If you need assistance to <b>automate processing of your paperwork</b>, I'm your guy, <a href='/contact/'>send me a message</a>.</p>
-			<br>
-			<p>Cheers,</p>
-			<p>Mehdi.</p>
-		
-		</div>
-     "
  -
   # Visual
   content:
@@ -74,13 +37,20 @@ sections:
 		 </div>
 		 <div class='eight columns'>
 			 <p>Aren't these administrative tasks just a waste of time? A tool can do them for you.</p>
-			 <h2 class='small'><i class='fa fa-check' aria-hidden='true'></i> pullReceipt extracts the incoming invoices from your mailbox for you</h2>
+			 <h3><i class='fa fa-check' aria-hidden='true'></i> pullReceipt extracts the incoming invoices from your mailbox for you</h3>
 		 </div>
      "
+   - type: div
+     value: "<br><br><br>"
+   - type: cta
+     href: "#pricing"
+     primary: true
+     trg: /pullreceipt-pricing
+     value: View plans
  -
   # Benefits
   content:
-   - type: h3
+   - type: h2
      value: Benefits
    - type: h4
      value: <i class="fa fa-calendar-o fa-fw fa-lg" aria-hidden="true"></i> Get more time to focus on what matters
@@ -91,30 +61,26 @@ sections:
  -
   # How it works
   content:
-   - type: h3
+   - type: h2
      value: Super easy to use
    - type: p
      value: pullReceipt is the smart assistant relieving you from low added-value tasks.
    - type: p
      value: It detects all incoming invoices and receipts in your mailbox and forwards them to your management software or your accountant automatically.
    - type: div
-     class: row sequence-container
+     class: row
      value: "
 		 <div class='four columns'>
 			 <br>
 			 <img class='u-img-responsive' src='/img/pullReceipt-connect.png' alt='illustration of pullReceipt connections manager' width='350px'/>
 			 <br>
 			 <p>1. Connect your email accounts</p>
-			 <span class='next-right'><i class='fa fa-angle-right fa-lg' aria-hidden='true'></i></span>
-			 <span class='next-bottom'><i class='fa fa-angle-down fa-lg' aria-hidden='true'></i></span>
 		 </div>
 		 <div class='four columns'>
 			 <br>
 			 <img class='u-img-responsive' src='/img/pullReceipt-detect.png' alt='illustration of pullReceipt connections manager' width='350px'/>
 			 <br>
 			 <p>2. pullReceipt finds all the invoices</p>
-			 <span class='next-right'><i class='fa fa-angle-right fa-lg' aria-hidden='true'></i></span>
-			 <span class='next-bottom'><i class='fa fa-angle-down fa-lg' aria-hidden='true'></i></span>
 		 </div>
 		 <div class='four columns'>
 			 <br>
@@ -155,7 +121,7 @@ sections:
  -
   # Pricing
   content:
-   - type: h3
+   - type: h2
      id: pricing
      value: Pricing
    - type: p
@@ -201,7 +167,7 @@ sections:
  -
   # About
   content:
-   - type: h3
+   - type: h2
      value: About
    -
     type: div

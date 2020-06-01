@@ -1,6 +1,6 @@
 window.appDebug = require('debug')
 
-var d3 = require('d3')
+var d3 = require('d3-selection')
 	, debug = window.appDebug('multiga')
 	, AnalyticsApi = require('./controller/analytics-api')
 	, app = {

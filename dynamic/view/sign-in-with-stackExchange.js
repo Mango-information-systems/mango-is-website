@@ -1,5 +1,5 @@
 var fs = require('fs')
-	, d3 = require('d3')
+	, d3 = require('d3-selection')
 	, ejs = require('ejs')
 
 function render(opts) {

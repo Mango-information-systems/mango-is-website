@@ -133,13 +133,13 @@ var views = {
 				<div class="row"> \
 					<div class="twelve columns"> \
 						<h4><%= fileName %></h4> \
+						<%= errors %> \
 						<% if (json.results.length > 1000) { %> \
 							<div class="alert" role="alert"> \
-								<p>Because the file is large file, it won\'t be saved in the browser\'s memory for later use.</p> \
-								<p><i class="fa fa-arrow-left" aria-hidden="true"></i> Please use the download button.</p> \
+								<p>Because the file is large, it will not be saved in the browser\'s memory for later use.</p> \
+								<p><i class="fa fa-arrow-down" aria-hidden="true"></i> Please use the download button.</p> \
 							</div> \
 						<% } %> \
-						<%= errors %> \
 						<% if (json.results.length < 1000) { %> \
 							<textarea class="results twelve columns" rows="11"><%- JSON.stringify(json, null, "\t") %></textarea> \
 						<% } else { %> \
@@ -151,7 +151,7 @@ var views = {
 					<div class="twelve columns"> \
 						<% if (json.results.length < 1000) { %> \
 							<span class="pull-right" data-filename="<%= fileName %>"> \
-								<a title="delete file" class="button button-default button-sm delete"><i class="fa fa-times" aria-hidden="true"></i> Delete</a> \
+								<a title="delete file" class="button button-default delete"><i class="fa fa-times" aria-hidden="true"></i> Delete</a> \
 								<%= button %> \
 							</span> \
 						<% } %> \
@@ -160,10 +160,10 @@ var views = {
 				'
 
 			if (data.results.length < 1000) {
-				var button = views.fileDownloadButton(data, fileName, '<i class="fa fa-download" aria-hidden="true"></i> Download', '', 'button-primary button-sm')
+				var button = views.fileDownloadButton(data, fileName, '<i class="fa fa-download" aria-hidden="true"></i> Download', '', 'button-primary')
 			}
 			else {
-				var button = views.fileDownloadButton(data, fileName, 'Download results file', 'button-block', 'button-primary button-sm')
+				var button = views.fileDownloadButton(data, fileName, 'Download results file', 'button-block', 'button-primary')
 				
 			}
 			
@@ -175,7 +175,7 @@ var views = {
 		}
 		, parseErrors: function(errors, fallback) {
 			var tmpl = ' \
-				<div class="alert alert-warning" role="alert"> \
+				<div class="alert alert-danger" role="alert"> \
 					<p>Conversion warning(s):</p> \
 					<ul> \
 						<% _.each(errors, function(err) { %> \
@@ -228,7 +228,7 @@ var views = {
 			
 		}
 		, convertedFile: function(fileName) {
-			var tmpl = '<div class="three columns"><a class="savedFile button u-full-width button-sm" href="" data-filename="<%= fileName %>"><%= fileName %></a></div>'
+			var tmpl = '<div class="three columns"><a class="savedFile button button-block" href="" data-filename="<%= fileName %>"><%= fileName %></a></div>'
 			
 			return _.template(tmpl, {fileName: fileName})
 		}
@@ -381,7 +381,9 @@ var views = {
 				//~$csvSelectorPane.slideUp()
 			//~else
 				$previewPane.hide()
+				
 				$csvSelectorPane.show()
+				
 				$previewPane.empty()
 			
 			$resultsPane.html(content).slideDown()

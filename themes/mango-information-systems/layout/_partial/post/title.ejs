@@ -9,18 +9,13 @@
   </h1>
 <% } else if (post.title){ %>
   <% if (index){ %>
-    <h2 itemprop="name">
+    <h3 itemprop="name">
       <a class="<%= class_name %>" href="<%- url_for(post.path) %>"><%= post.title %>
       </a>
-    </h2>
-	<p><%= post.subtitle %></p>
-  <% } else { %>
-    <h1 class="<%= class_name %>" itemprop="name">
-      <%= post.title %>
-      <% if (post.subtitle) { %>
-	    <br><small><%= post.subtitle %></small>
-      <% } %>
-    </h1>
-  <% } %>
-<% } %>
-<!-- begin post.title -->
+    </h3>
+    <% if (post.subtitle) { %>
+		<p><%= post.subtitle %></p>
+	<% } %>
+  <% }
+} %>
+<!-- end post.title -->

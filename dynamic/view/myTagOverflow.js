@@ -10,8 +10,9 @@ function render(target) {
 		<div class="twelve columns"> \
 			<div class="row"> \
 				<div class="user six columns"></div> \
-				<div class="legendWrapper six columns"> \
-					<div class="row"> \
+				<div class="six columns"> \
+					<span id="progressBadge" class="badge">Connecting user...</span> \
+					<div id="legendWrapper" class="row"> \
 					</div> \
 				</div> \
 			</div> \
@@ -34,8 +35,16 @@ function render(target) {
 			</svg> \
 			<br><small>Loading...</small> \
 		</div> \
-		<div class="six offset-by-three columns"> \
-			<a id="exportLink" class=" button button-primary button-block" target="_blank" style="display:none;">Save as SVG image</a> \
+		<div class="six offset-by-three columns" id="actionLinks" style="display:none;"> \
+			<p> \
+				<a id="clearDataLink" class=" button button-block">Delete data and disconnect</a> \
+				<a id="exportLink" class=" button button-primary button-block" target="_blank">Save as SVG image</a> \
+			</p> \
+			<br> \
+		</div> \
+		<div class="row"> \
+			<div class="twelve columns" id="notifications"> \
+			</div> \
 		</div> \
 	')
 

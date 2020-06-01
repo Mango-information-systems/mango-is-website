@@ -1,11 +1,33 @@
 <!-- begin layout.index -->
 <div class="page-wrapper">
-	<div class="container index">
+			
+	<div class="container">
+		
 		<%- partial('_partial/header') %>
+		
+<!-- TODO generate same header for regular pages, index pages and posts -->
 
-		<%- partial('_partial/archive', {pagination: config.category, index: true}) %>
+
+		<% if ( is_archive() || is_category() ) { %>
+			
+			<section>
+				<%- partial('_partial/archive', {index: true}) %>
+			</section>
+			
+		<% } else { 
+			
+				page.sections.forEach(function(section, index) {
+				%>
+					<%-
+						partial('_partial/default-section', {data: section})
+					%>
+					<%
+				 })
+
+		} %>
 
 		<%- partial('_partial/footer') %>
+		
 	</div>
 </div>
 
