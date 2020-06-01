@@ -4,7 +4,7 @@
 	<%	if (post.thumbnail) { %>
 
 		<div class="three columns post-thumb">
-			<img class="u-max-full-width" src="<%- url_for(post.thumbnail) %>" itemprop="image">
+			<img class="u-max-full-width u-center-block" src="<%- url_for(post.thumbnail) %>" itemprop="image">
 		</div>
 
 		<!-- open an 9 col for the title -->
@@ -17,7 +17,7 @@
 
 	<% } %>
 
-		<%- partial('post/title', {class_name: 'archive-article-title'}) %>
+		<%- partial('post/title', {class_name: 'archive-article-title', new: post.new}) %>
 		
 		<p><%- post.description %></p>
 
