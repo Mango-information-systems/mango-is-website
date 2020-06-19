@@ -52,6 +52,9 @@ sections:
    - type: h2
      value: They trust us
      id: clients
+   -
+    type: custom
+    value: "<br><br>"
    - type: client-logos
      logos:
       - href: /img/clients/unicef.png
