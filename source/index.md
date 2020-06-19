@@ -72,9 +72,12 @@ sections:
         alt: smoall logo
       - href: /img/clients/deloitte.png
         alt: Deloitte logo
-# disabled to avoid display of odd number of logos
-#      - href: /img/clients/international-post-corporation.png
-#        alt: International Post Corporation logo
+      - href: /img/clients/international-post-corporation.png
+        alt: International Post Corporation logo
+      - href: /img/clients/EY.png
+        alt: EY logo
+      - href: /img/clients/BNPPF.png
+        alt: BNP Paribs Fortis logo
  -
   # third section: references
   content:
