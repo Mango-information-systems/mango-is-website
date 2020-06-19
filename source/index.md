@@ -42,10 +42,39 @@ sections:
     value: "<br><br>"
    - type: div
      class: u-text-center
-     value: "<p>Read what our clients say below</p>
+     value: "<p>Delivering quality since 2010.</p>
 		<p>
-			<a href='#references'><i class='fa fa-angle-down' aria-hidden='true'></i></a>
+			<a href='#clients'><i class='fa fa-angle-down' aria-hidden='true'></i></a>
 		</p>"
+ -
+  # section: client logos
+  content:
+   - type: h2
+     value: They trust us
+     id: clients
+   - type: client-logos
+     logos:
+      - href: /img/clients/unicef.png
+        alt: Unicef logo
+      - href: /img/clients/universal-music-group.png
+        alt: Universal Music Group
+      - href: /img/clients/bpost.png
+        alt: bpost logo
+      - href: /img/clients/vrt.png
+        alt: VRT logo
+      - href: /img/clients/european-commission-logo.png
+        alt: European Commission logo
+      - href: /img/clients/emolytics.png
+        alt: Emolytics logo
+      - href: /img/clients/eeip.png
+        alt: EEIP logo
+      - href: /img/clients/smoall.png
+        alt: smoall logo
+      - href: /img/clients/deloitte.png
+        alt: Deloitte logo
+# disabled to avoid display of odd number of logos
+#      - href: /img/clients/international-post-corporation.png
+#        alt: International Post Corporation logo
  -
   # third section: references
   content:
@@ -206,35 +235,6 @@ sections:
 			<div class='xs-twelve sm-six columns'><i class='fa fa-circle' aria-hidden='true' style='color:#2ca02c;'></i> <span class='legend'>web analytics</span></div>
 			<small class='u-pull-right'>last update: August 5th, 2018.</small>
 		</div>"
- -
-  # section: client logos
-  content:
-   - type: h2
-     value: They trust us
-     id: clients
-   - type: client-logos
-     logos:
-      - href: /img/clients/unicef.png
-        alt: Unicef logo
-      - href: /img/clients/universal-music-group.png
-        alt: Universal Music Group
-      - href: /img/clients/bpost.png
-        alt: bpost logo
-      - href: /img/clients/vrt.png
-        alt: VRT logo
-      - href: /img/clients/european-commission-logo.png
-        alt: European Commission logo
-      - href: /img/clients/emolytics.png
-        alt: Emolytics logo
-      - href: /img/clients/eeip.png
-        alt: EEIP logo
-      - href: /img/clients/smoall.png
-        alt: smoall logo
-      - href: /img/clients/deloitte.png
-        alt: Deloitte logo
-# disabled to avoid display of odd number of logos
-#      - href: /img/clients/international-post-corporation.png
-#        alt: International Post Corporation logo
  -
   # section: CTA repeat
   content:
