@@ -27,6 +27,7 @@ sections:
       thumbnail: /img/twitto-be-dashboard-screenshot.png
       title: Twitto.be - realtime hashtags network graph analytics
       subtitle: Twitto is a live analytics dashboard of the tweets related to entrepreneurship in Belgium.
+      isOpenSource: true
       footer: false
    - type: post
      content:
@@ -35,6 +36,7 @@ sections:
       thumbnail: /img/thumbnails/myTagOverflow.png
       title: "myTagOverflow: showcase your top tags from stackOverflow"
       subtitle: Need to demonstrate your technical abilities? myTagOverflow shows the tags on which you have been active in a cool graph visualization.
+      isOpenSource: true
       footer: false
    - type: post
      content:
@@ -43,6 +45,7 @@ sections:
       thumbnail: /img/thumbnails/2015-01-08-csv-to-json.png
       title: CSV to JSON converter
       subtitle: Easy, privacy-friendly and offline-first online csv to json converter
+      isOpenSource: true
       footer: false
    - type: post
      content:
@@ -59,6 +62,7 @@ sections:
       thumbnail: /img/thumbnails/multiGa.png
       title: "multiGa: realtime traffic dashboard for your websites"
       subtitle: Free dashboard showing Google Analytics live traffic data for multiple websites. Ideal to find out if it's the right moment to upgrade your server ;)
+      isOpenSource: true
       footer: false
    - type: post
      content:

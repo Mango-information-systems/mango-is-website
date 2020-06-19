@@ -20,7 +20,7 @@
 	 <% 
 		
 		articlesByTopic[topic].sort((a, b) => b.date - a.date).forEach((post, i) => { %>
-			<%- partial('archive-post', {post: post, even: i % 2 == 0}) %> <%
+			<%- partial('archive-post', {post: post}) %> <%
 		})
 	}) %>
 <div class="row">
