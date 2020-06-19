@@ -14,10 +14,10 @@ sections:
    - type: post
      content:
       class: index
-      path: /tools/tagPlan/
+      path: https://tagplan.mango-is.com/
       thumbnail: /img/tagPlan-instagram-hashtag-research.png
-      title: Tagplan - Relevant hashtags for Instagram
-      subtitle: Identify the niche keywords of your target for successful campaigns, thanks to this instant research tool.
+      title: Tagplan - Create powerful Instagram campaigns
+      subtitle: Find the hashtags which will get you seen by the right people.
       isNew: true
       footer: false
    - type: post
