@@ -32,11 +32,7 @@ The main output of the work is a visualization of the top accounts related to th
 * green: professionals and influencers in the Dutch sports industry.
 
 
-<!-- work around non-https proxy
-<script src="http://zoom.it/2Ogk.js?width=auto&height=400px"></script>
-
--->
-<script src="/zoomItProxy"></script> 
+<script src="https://zoom.it/2Ogk.js?width=auto&height=650px"></script>
 
 ## Approach
 
