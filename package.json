@@ -1,6 +1,6 @@
 {
   "name": "mango-is-website",
-  "version": "3.42.1",
+  "version": "3.43.0",
   "private": true,
   "scripts": {
     "start": "npm run build:static && cp config/dev.theme._config.yml themes/mango-information-systems/_config.yml && npm run watch & hexo server & npm run watch:socketServer",
@@ -21,7 +21,7 @@
     "watch:socketServer": "nodemon --watch dynamic dynamic/server.js"
   },
   "hexo": {
-    "version": "4.2.0"
+    "version": "4.2.1"
   },
   "browser": {
     "request": "xhr"
@@ -36,7 +36,7 @@
     "font-awesome": "^4.6.1",
     "form-to-obj": "0.0.3",
     "gascrolldepth": "git+https://github.com/leighmcculloch/gascrolldepth.js.git#70834032",
-    "hexo": "^4.2.0",
+    "hexo": "^4.2.1",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-category": "^1.0.0",
     "hexo-generator-feed": "^2.2.0",
@@ -44,24 +44,24 @@
     "hexo-renderer-ejs": "^1.0.0",
     "hexo-renderer-markdown-it": "^4.1.0",
     "jLouvain": "git://github.com/Mango-information-systems/jLouvain.git#nodejs-compatibility",
-    "localforage": "^1.7.3",
+    "localforage": "^1.9.0",
     "mailgun-js": "^0.20.0",
     "node-persist": "0.0.11",
     "normalize.css": "^7.0.0",
     "request": "^2.88.0",
     "socket.io": "^2.4.0",
-    "socket.io-client": "^2.3.0",
+    "socket.io-client": "^2.4.0",
     "validator": "^5.4.0",
-    "xhr": "^2.5.0",
+    "xhr": "^2.6.0",
     "xss-filters": "^1.2.6"
   },
   "devDependencies": {
     "brfs": "^2.0.2",
-    "browserify": "^16.5.0",
+    "browserify": "^16.5.2",
     "hexo-browsersync": "^0.3.0",
     "hexo-server": "^1.0.0",
     "mocha": "^5.2.0",
-    "nodemon": "^2.0.2",
+    "nodemon": "^2.0.7",
     "should": "^9.0.2",
     "uglify-es": "^3.3.9",
     "uglifyify": "^5.0.2",
