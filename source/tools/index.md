@@ -18,7 +18,7 @@ sections:
       thumbnail: /img/tagPlan-instagram-hashtag-research.png
       title: Tagplan - Create powerful Instagram campaigns
       subtitle: Find the hashtags which will get you seen by the right people.
-      isNew: true
+      status: new
       footer: false
    - type: post
      content:
@@ -61,7 +61,9 @@ sections:
       path: /tools/multiga/
       thumbnail: /img/thumbnails/multiGa.png
       title: "multiGa: realtime traffic dashboard for your websites"
-      subtitle: Free dashboard showing Google Analytics live traffic data for multiple websites. Ideal to find out if it's the right moment to upgrade your server ;)
+      subtitle: "<p>Free dashboard showing Google Analytics live traffic data for multiple websites. Ideal to find out if it's the right moment to upgrade your server ;)</p> \
+      <p>February 2021 update: the tool is not relevant anymore (Google Data Studio is here), and would require important updates to be compatible with newer versions of Google APIs, so it is now archived.</p>"
+      status: archived
       isOpenSource: true
       footer: false
    - type: post
