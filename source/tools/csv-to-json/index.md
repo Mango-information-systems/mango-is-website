@@ -86,6 +86,14 @@ sections:
 			</div>
 		</div>"
  -
+  # Feedback
+  content:
+   - type: h3
+     value: Feedback
+   - type: p
+     value: Thanks for your interest in csv-to-json. Would you like to suggest any enhancement?<br/><br/>
+   - type: contact
+ -
   # How it works
   content:
    - type: h3

@@ -12,5 +12,5 @@ app.gaCustom.init()
 
 window.gaCustom = app.gaCustom
 
-if (window.location.pathname === '/contact/')
+if (['/contact/', '/tools/csv-to-json/'].includes(window.location.pathname))
 	app.contact = new Contact(app)
