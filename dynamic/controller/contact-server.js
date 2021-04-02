@@ -1,10 +1,11 @@
-var debug = require('debug')('contact')
+const debug = require('debug')('contact')
+	, formData = require('form-data')
+	, Mailgun = require('mailgun.js')
 	, params = require('../params.json')
 	, path = require('path')
 	, storage = require('node-persist')
-	, xssFilters = require('xss-filters')
 	, validator = require('validator')
-	, mailgun = require('mailgun-js')({apiKey: params.mail.key, domain: params.mail.domain})
+	, xssFilters = require('xss-filters')
 
 
 /********************************************************
@@ -15,11 +16,18 @@ var debug = require('debug')('contact')
 *********************************************************/
 function Contact() {
 	
-	var self = this
+	let self = this
+	
+	const mailgun = new Mailgun(formData)
+	
+	const mg = mailgun.client({username: 'api', key: params.mail.key})
 	
 	storage.init({
 		dir: path.resolve(__dirname + '/../persist')
 	})
+	
+	
+	
 	
 	/****************************************************
 	* 
@@ -83,11 +91,13 @@ function Contact() {
 		
 		
 
-		mailgun.messages().send(mailContent, function (error, body) {
-			
-			if(error){
+		mg.messages.create(params.mail.domain, mailContent)		
+			.then(msg => {
+				debug('email sent,' + msg.id + ' - ' + msg.message)
+			})
+			.catch(err => {
 				console.error('error sending email')
-				console.error(error)
+				console.error(err)
 				
 				if (errCount < 5) {
 					
@@ -107,11 +117,7 @@ function Contact() {
 					}, 60000 * 60 * 12)
 					
 				}
-			}
-			else {
-				debug('email sent,' + body.message)
-			}
-		})
+			})
 		
 	}
 	/**
