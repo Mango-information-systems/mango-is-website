@@ -14,7 +14,7 @@
     "deploy:prod": "./bin/deploy.sh prod",
     "postinstall": "git submodule update --init --recursive; cd skeleton-framework; npm install",
     "start:socketServer": "node ./dynamic/server",
-    "test": "node_modules/.bin/mocha",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "npm run watch:js & npm run watch:skeleton",
     "watch:js": "watchify dynamic/client.js -o source/js/site.js -v --poll=2000 & watchify -t brfs dynamic/pullReceipt.js -o source/js/pullReceipt.js -v --poll=2000 & watchify -t brfs dynamic/myTagOverflowChecker.js -o source/js/myTagOverflowChecker.js -v --poll=2000 & watchify -t brfs dynamic/myTagOverflow.js -o source/js/myTagOverflow.js -v --poll=2000 & cp node_modules/localforage/dist/localforage.nopromises.min.js source/js/localforage.nopromises.min.js",
     "watch:skeleton": "cd skeleton-framework && npm run watch",
@@ -60,9 +60,7 @@
     "browserify": "^16.5.2",
     "hexo-browsersync": "^0.3.0",
     "hexo-server": "^1.0.0",
-    "mocha": "^5.2.0",
     "nodemon": "^2.0.7",
-    "should": "^9.0.2",
     "uglify-es": "^3.3.9",
     "uglifyify": "^5.0.2",
     "watchify": "^3.11.1"
