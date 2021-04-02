@@ -24,21 +24,21 @@
 					<h4>Toolbox</h4>
 					<div class="u-cf"></div>
 					<ul class="list-inline">
-						<% _.each(data.domains, function(domain) {
+						<% data.domains.forEach(function(domain) {
 						%>
 							<li><span class="badge badge-domain"><%- domain %></span></li>
 						<% }) %>
 					</ul>
 					<div class="u-cf"></div>
 					<ul class="list-inline">
-						<% _.each(data.tech, function(tech) {
+						<% data.tech.forEach(function(tech) {
 						%>
 							<li itemscope itemtype="https://schema.org/ComputerLanguage"><span class="badge badge-tech" itemprop="name"><%- tech %></span></li>
 						<% }) %>
 					</ul>
 					<div class="u-cf"></div>
 					<ul class="list-inline">
-						<% _.each(data.dataTech, function(dataTech) {
+						<% data.dataTech.forEach(function(dataTech) {
 						%>
 							<li><span class="badge"><%- dataTech %></span></li>
 						<% }) %>
@@ -56,19 +56,19 @@
 				<div class="twelve columns">
 					<h4>Toolbox</h4>
 					<ul class="list-inline">
-						<% _.each(data.domains, function(domain) {
+						<% data.domains.forEach(function(domain) {
 						%>
 							<li><span class="badge badge-domain"><%- domain %></span></li>
 						<% }) %>
 					</ul>
 					<ul class="list-inline">
-						<% _.each(data.tech, function(tech) {
+						<% data.tech.forEach(function(tech) {
 						%>
 							<li itemscope itemtype="https://schema.org/ComputerLanguage"><span class="badge badge-tech" itemprop="name"><%- tech %></span></li>
 						<% }) %>
 					</ul>
 					<ul class="list-inline">
-						<% _.each(data.dataTech, function(dataTech) {
+						<% data.dataTech.forEach(function(dataTech) {
 						%>
 							<li><span class="badge"><%- dataTech %></span></li>
 						<% }) %>
@@ -90,34 +90,37 @@
 		<% 
 		}
 		
-		_.each(data.quotes, function(quote) {
-		%>
-			<div class="row reference" itemprop="review" itemscope itemtype="https://schema.org/Review">
-				<div class="columns md-two
-									sm-four
-									xs-two">
-					<%- image_tag(quote.image.href, {
-					class: 'u-img-responsive u-pull-left profile-photo'
-					, alt: quote.image.alt
-					}) %>
-				</div>
+		if(typeof data.quotes !== 'undefined') {
+			
+			data.quotes.forEach(function(quote) {
+			%>
+				<div class="row reference" itemprop="review" itemscope itemtype="https://schema.org/Review">
+					<div class="columns md-two
+										sm-four
+										xs-two">
+						<%- image_tag(quote.image.href, {
+						class: 'u-img-responsive u-pull-left profile-photo'
+						, alt: quote.image.alt
+						}) %>
+					</div>
 
-				<div class="columns md-ten
-									sm-eight
-									xs-ten">
-					<blockquote itemprop="reviewBody">
-						<i aria-hidden="true" class="fa fa-quote-left fa-2x fa-pull-left text-muted"></i>
-						<%- quote.text %>
-						<p>
-							<cite>
-								<span itemprop="author"><%- quote.author %></span>, <%- quote.authorTitle %>
-							</cite>
-						</p>
-					</blockquote>
+					<div class="columns md-ten
+										sm-eight
+										xs-ten">
+						<blockquote itemprop="reviewBody">
+							<i aria-hidden="true" class="fa fa-quote-left fa-2x fa-pull-left text-muted"></i>
+							<%- quote.text %>
+							<p>
+								<cite>
+									<span itemprop="author"><%- quote.author %></span>, <%- quote.authorTitle %>
+								</cite>
+							</p>
+						</blockquote>
+					</div>
+					
 				</div>
-				
-			</div>
-		<% }) %>
+			<% })
+		} %>
 	
 	</div>
 

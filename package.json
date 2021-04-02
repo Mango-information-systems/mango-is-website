@@ -21,7 +21,7 @@
     "watch:socketServer": "nodemon --watch dynamic dynamic/server.js"
   },
   "hexo": {
-    "version": "4.2.1"
+    "version": "5.4.0"
   },
   "browser": {
     "request": "xhr"
@@ -37,11 +37,11 @@
     "form-data": "^2.3.2",
     "form-to-obj": "0.0.3",
     "gascrolldepth": "git+https://github.com/leighmcculloch/gascrolldepth.js.git#70834032",
-    "hexo": "^4.2.1",
+    "hexo": "^5.4.0",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-category": "^1.0.0",
-    "hexo-generator-feed": "^2.2.0",
-    "hexo-generator-seo-friendly-sitemap": "0.0.25",
+    "hexo-generator-feed": "^3.0.0",
+    "hexo-generator-sitemap": "^2.1.0",
     "hexo-renderer-ejs": "^1.0.0",
     "hexo-renderer-markdown-it": "^4.1.0",
     "jLouvain": "git://github.com/Mango-information-systems/jLouvain.git#nodejs-compatibility",

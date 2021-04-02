@@ -145,6 +145,7 @@ sections:
       <p><small><i class='fa fa-info-circle' aria-hidden='true'></i> Read also: <a href='/blog/convert/a-sublime-landing-page/'>A sublime landing page - How to convince visitors to buy on the web</a> in our blog.</small></p>"
       domains: [web analytics, copywriting, consultative selling, design]
       tech: [google analytics, javascript, wordpress]
+      dataTech: []
       quotes:
         - text: "As we were looking at optimizing the conversion rate of our startup smoall.com, Mehdi helped us by setting up a reporting system, measuring the performance of each step of the funnel.<br>
 		Mehdi has a strong analytical mind, but also understands business, and dedicates all his efforts to his clients' goals."
@@ -162,6 +163,7 @@ sections:
       description: Development of a platform that lets users collaborate on shared content in realtime. Analytics is performed live and presented in dashboards and reports.
       domains: [business analysis, realtime analytics, software architecture]
       tech: [node.js, d3.js, websockets]
+      dataTech: []
       quotes:
         - text: Mehdi is responsible for the development of a data-intensive web application.<br>He demonstrates his commitment to the success of this enterprise through flexibility and short response times. He is <strong>totally focused on delivering results</strong>.
           author: Jean-Christophe Blondiau
