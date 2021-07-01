@@ -1,6 +1,6 @@
 {
   "name": "mango-is-website",
-  "version": "3.44.2",
+  "version": "3.44.3",
   "private": true,
   "scripts": {
     "start": "npm run build:static && cp config/dev.theme._config.yml themes/mango-information-systems/_config.yml && npm run watch & hexo server & npm run watch:socketServer",
@@ -46,7 +46,7 @@
     "hexo-renderer-markdown-it": "^4.1.0",
     "jLouvain": "git://github.com/Mango-information-systems/jLouvain.git#nodejs-compatibility",
     "localforage": "^1.9.0",
-    "mailgun.js": "^3.4.0",
+    "mailgun.js": "^3.4.1",
     "node-persist": "0.0.11",
     "normalize.css": "^7.0.0",
     "request": "^2.88.0",
@@ -61,7 +61,7 @@
     "browserify": "^16.5.2",
     "hexo-browsersync": "^0.3.0",
     "hexo-server": "^1.0.0",
-    "nodemon": "^2.0.7",
+    "nodemon": "^2.0.9",
     "uglify-es": "^3.3.9",
     "uglifyify": "^5.0.2",
     "watchify": "^3.11.1"
