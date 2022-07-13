@@ -14,15 +14,6 @@ sections:
    - type: post
      content:
       class: index
-      path: https://tagplan.mango-is.com/
-      thumbnail: /img/tagPlan-instagram-hashtag-research.png
-      title: Tagplan - Create powerful Instagram campaigns
-      subtitle: Find the hashtags which will get you seen by the right people.
-      isNew: true
-      footer: false
-   - type: post
-     content:
-      class: index
       path: https://twitto.be/
       thumbnail: /img/twitto-be-dashboard-screenshot.png
       title: Twitto.be - realtime hashtags network graph analytics
