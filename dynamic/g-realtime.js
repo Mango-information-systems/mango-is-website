@@ -68,11 +68,6 @@ app.controller.switchAccount = function(ix) {
 	
 	app.controller.analyticsApi.getStats(app.data.viewsByAccount[ix])
 	
-	gaCustom.toGa('event', {
-		category: 'multiga'
-		, action: 'switch account'
-	})
-	
 }
 
 

@@ -39,9 +39,6 @@
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
 	<![endif]-->
 	
-	<% if (config.url !== 'http://mango-is.com' && config.url !== 'https://mango-is.com'){ %>
-		<meta name="robots" content="noindex, nofollow">
-	<% } %>
 
 	<%- css('css/font-awesome/css/font-awesome.min') %>
 	<%- css('css/normalize') %>
@@ -73,6 +70,5 @@
 		<%- feed_tag('/blog/atom.xml', {title: 'Mango Information Systems blog'}) %>
 	<% } %>
 
-	<%- partial('google-analytics') %>
 	
 </head>

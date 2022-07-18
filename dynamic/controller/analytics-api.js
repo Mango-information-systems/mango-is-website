@@ -26,7 +26,7 @@ function AnalyticsApi(gapi, callback, updateFunction) {
 	gapi.load('client:auth2', function() {
 		
         gapi.auth2.init({
-			client_id: '920031075835-45tvjaphsuuqg4psqfbseuh04md7tes1.apps.googleusercontent.com'
+			client_id: 'your-client-id.apps.googleusercontent.com'
 			, scope: 'https://www.googleapis.com/auth/analytics.readonly'
         }).then(function () {
 
@@ -158,18 +158,8 @@ function AnalyticsApi(gapi, callback, updateFunction) {
 		
 		debug('signing user in')
 		
-		gaCustom.toGa('event', {
-			category: 'multiga'
-			, action: 'sign in attempt'
-		})
-		
 		gapi.auth2.getAuthInstance().signIn().then( function(res) {
 			// TODO handle errors at sign-in
-			
-			gaCustom.toGa('event', {
-				category: 'multiga'
-				, action: 'user signed in'
-			})
 			
 			callback()
 		})
@@ -186,11 +176,6 @@ function AnalyticsApi(gapi, callback, updateFunction) {
 
 		gapi.auth2.getAuthInstance().signOut().then( function(res) {
 			// TODO handle errors at sign-out
-			
-			gaCustom.toGa('event', {
-				category: 'multiga'
-				, action: 'user signed out'
-			})
 			
 			callback()
 		})
