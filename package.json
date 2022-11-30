@@ -28,8 +28,8 @@
   },
   "dependencies": {
     "@yuanqing/modal": "^0.1.0",
-    "d3": "^4.13.0",
-    "d3-scale-chromatic": "^1.5.0",
+    "d3": "^7.6.1",
+    "d3-scale-chromatic": "^3.0.0",
     "debug": "^2.6.9",
     "easyedit": "git://github.com/Mango-information-systems/easyedit.git#master",
     "ejs": "^3.1.7",
