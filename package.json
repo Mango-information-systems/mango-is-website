@@ -64,6 +64,6 @@
     "nodemon": "^2.0.9",
     "uglify-es": "^3.3.9",
     "uglifyify": "^5.0.2",
-    "watchify": "^3.11.1"
+    "watchify": "^4.0.0"
   }
 }
