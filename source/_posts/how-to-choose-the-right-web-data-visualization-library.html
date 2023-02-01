@@ -11,6 +11,15 @@ author: mehdi
 thumbnail: /img/blog/thumbnails/2014-10-01-how-to-choose-the-right-web-data-visualization-library.png
 css: [2014-10-01-how-to-choose-the-right-web-data-visualization-library.css]
 ---
+
+<div class="alert alert-danger">
+	<p>
+		<strong>Out of date</strong> - Hi, this article was written back in 2014 and is partly obsolete. Some of the libraries listed below are not maintained anymore.
+	</p>
+	<p>Now in 2023, I mainly work with d3.js, and I'm a bit outdated on what might be a good choice for high level charting. I think that <a href="https://vega.github.io/" target="_blank" rel="noopener">Vega and vega-lite</a> might be good options.</p>
+	<p>For advanced use cases <a href="https://d3js.org/" target="_blank" rel="noopener">d3.js</a> is still amazing and has been split in modules, so that you can only use the parts relevant for your projects - and combine with other libraries if needed.</p>
+</div>
+
 <p>Web developers often ask me which charting or data visualization library they should choose for their projects. There are plenty of solutions available, several approaches and various levels of maturity. Based on what you are trying to achieve, different tools may be relevant.</p>
 
 <p>I’ve narrowed down the use-cases in three categories, and recommended a personal selection of <strong>mature and stable solutions</strong> only.</p>
@@ -74,8 +83,8 @@ css: [2014-10-01-how-to-choose-the-right-web-data-visualization-library.css]
 <p>My recommendations are:</p>
 
 <ul>
-<li><strong><a href="http://www.highcharts.com/" target="_blank">Highcharts</a></strong></li>
-<li><strong><a href="http://www.FusionCharts.com/" target="_blank">Fusion Charts</a></strong></li>
+<li><strong><a href="http://www.highcharts.com/" target="_blank" rel="noopener">Highcharts</a></strong></li>
+<li><strong><a href="http://www.FusionCharts.com/" target="_blank" rel="noopener">Fusion Charts</a></strong></li>
 </ul>
 
 <p>Both Highcharts and Fusion charts are commercial open source tools, with reasonable pricing. They are stable and mature, and work well on older browsers (IE6+). Hicharts is free for non-commercial projects.</p>
@@ -88,7 +97,7 @@ css: [2014-10-01-how-to-choose-the-right-web-data-visualization-library.css]
 
 </p>
 
-<p>An alternative solution is <a href="https://developers.google.com/chart/" target="_blank">Google charts</a>, which is free. The charts are hosted by Google, and you have a far lower flexibility regarding the customizations you may put in place. If you opt for this one, have a contingency plan for the situation when Google stops providing the service.</p>
+<p>An alternative solution is <a href="https://developers.google.com/chart/" target="_blank" rel="noopener">Google charts</a>, which is free. The charts are hosted by Google, and you have a far lower flexibility regarding the customizations you may put in place. If you opt for this one, have a contingency plan for the situation when Google stops providing the service.</p>
 
 <h2 id="advanced-visualizations">Advanced visualizations</h2>
 
@@ -100,7 +109,7 @@ css: [2014-10-01-how-to-choose-the-right-web-data-visualization-library.css]
 <li>extra <strong>flexibility</strong></li>
 </ul>
 
-<p>Then there’s one solution for you: <strong><a href="http://d3js.org/" target="_blank">d3.js</a></strong>. It’s not a charting library, but data-driven visualization framework. You put data in, and have all you need to manipulate to generate the output you want. It contains so many essential primitives that make the work so easy. <strong>Developers fall in love with d3</strong> because it makes it more convenient to manage the data binding to the DOM. It’s <strong>the rolls-royce of web-based dataviz tools</strong>. Strong, powerful, it is also free, open source, and there’s a vibrant community around it.</p>
+<p>Then there’s one solution for you: <strong><a href="http://d3js.org/" target="_blank" rel="noopener">d3.js</a></strong>. It’s not a charting library, but data-driven visualization framework. You put data in, and have all you need to manipulate to generate the output you want. It contains so many essential primitives that make the work so easy. <strong>Developers fall in love with d3</strong> because it makes it more convenient to manage the data binding to the DOM. It’s <strong>the rolls-royce of web-based dataviz tools</strong>. Strong, powerful, it is also free, open source, and there’s a vibrant community around it.</p>
 
 <p class="text-center">
 
@@ -110,7 +119,7 @@ css: [2014-10-01-how-to-choose-the-right-web-data-visualization-library.css]
 
 </p>
 
-<p>You may have stumbled upon the awesomeness of some visualizations created by Mike Bostock (the creator of d3.js) in the New York times, e.g. <a href="http://www.nytimes.com/interactive/2012/10/15/us/politics/swing-history.html?_r=0" target="_blank">Over the Decades, How States Have Shifted</a> or <a href="http://www.nytimes.com/interactive/2014/02/11/sports/sochi-2014-interactive-stories.html" target="_blank">Sochi 2014 Interactive Stories</a>.</p>
+<p>You may have stumbled upon the awesomeness of some visualizations created by Mike Bostock (the creator of d3.js) in the New York times, e.g. <a href="http://www.nytimes.com/interactive/2012/10/15/us/politics/swing-history.html?_r=0" target="_blank" rel="noopener">Over the Decades, How States Have Shifted</a> or <a href="http://www.nytimes.com/interactive/2014/02/11/sports/sochi-2014-interactive-stories.html" target="_blank" rel="noopener">Sochi 2014 Interactive Stories</a>.</p>
 
 <p>So, as d3.js is so awesome, why should anyone ever use the libraries from the previous categories? Few things to have in mind:</p>
 
@@ -122,7 +131,7 @@ css: [2014-10-01-how-to-choose-the-right-web-data-visualization-library.css]
 
 <p>So, if you need charts for a business project and not just for the fun, don’t have too much time, and are not familiar with d3.js, better stick to the plug-and-play tools, you’ll get the work done quicker and more easily. If you really have problem with them, then be welcome in d3.</p>
 
-<p>In the same category, it’s also worth mentioning <strong><a href="http://raphaeljs.com/" target="_blank">Raphaël</a></strong>, a “small JavaScript library that should simplify your work with vector graphics on the web”. Raphaël makes it easy do draw things in SVG, and renders properly across all browsers (IE6+). Raphaël is less suitable for charting, but it might be a <strong>good choice to design infographics</strong>.</p>
+<p>In the same category, it’s also worth mentioning <strong><a href="http://raphaeljs.com/" target="_blank" rel="noopener">Raphaël</a></strong>, a “small JavaScript library that should simplify your work with vector graphics on the web”. Raphaël makes it easy do draw things in SVG, and renders properly across all browsers (IE6+). Raphaël is less suitable for charting, but it might be a <strong>good choice to design infographics</strong>.</p>
 
 <h2 id="specialized-libraries">Specialized libraries</h2>
 
@@ -130,7 +139,7 @@ css: [2014-10-01-how-to-choose-the-right-web-data-visualization-library.css]
 
 <h3 id="maps">maps</h3>
 
-<p>To draw maps, specific products do the job very well.	Have a look at <strong><a href="http://openlayers.org/" target="_blank">Openlayers</a></strong> and <strong><a href="http://leafletjs.com/" target="_blank">leaflet</a></strong>.</p>
+<p>To draw maps, specific products do the job very well.	Have a look at <strong><a href="http://openlayers.org/" target="_blank" rel="noopener">Openlayers</a></strong> and <strong><a href="http://leafletjs.com/" target="_blank" rel="noopener">leaflet</a></strong>.</p>
 
 <p class="text-center">
 
@@ -140,7 +149,7 @@ css: [2014-10-01-how-to-choose-the-right-web-data-visualization-library.css]
 
 </p>
 
-<p>d3.js can also help you do very advanced things, like using <a href="https://github.com/mbostock/d3/wiki/Geo-Projections" target="_blank">less common projections</a> or <a href="http://roadtolarissa.com/twisters/" target="_blank">combining interactive map with other charts</a>. See <a href="http://christopheviau.com/d3list/gallery.html#visualizationType=map" target="_blank">more than 200 examples</a>, and a <a href="http://bost.ocks.org/mike/map/" target="_blank">tutorial to get started</a>.</p>
+<p>d3.js can also help you do very advanced things, like using <a href="https://github.com/mbostock/d3/wiki/Geo-Projections" target="_blank" rel="noopener">less common projections</a> or <a href="http://roadtolarissa.com/twisters/" target="_blank" rel="noopener">combining interactive map with other charts</a>. See <a href="http://christopheviau.com/d3list/gallery.html#visualizationType=map" target="_blank" rel="noopener">more than 200 examples</a>, and a <a href="http://bost.ocks.org/mike/map/" target="_blank" rel="noopener">tutorial to get started</a>.</p>
 
 <h3 id="graphs">Graphs</h3>
 
@@ -152,7 +161,7 @@ css: [2014-10-01-how-to-choose-the-right-web-data-visualization-library.css]
 
 </p>
 
-<p>While d3.js deals well with graphs, you might prefer to use <strong><a href="http://sigmajs.org/" target="_blank">sigma.js</a></strong> in case you’re only dealing with graph visualizations. It’s more <strong>plug-and-play</strong>, you can create <strong>very smooth interactive graphs</strong> very easily. Early 2014, version 1.0 was released, providing a more consistent API, making it easier to hack the default settings and extend sigma.</p>
+<p>While d3.js deals well with graphs, you might prefer to use <strong><a href="http://sigmajs.org/" target="_blank" rel="noopener">sigma.js</a></strong> in case you’re only dealing with graph visualizations. It’s more <strong>plug-and-play</strong>, you can create <strong>very smooth interactive graphs</strong> very easily. Early 2014, version 1.0 was released, providing a more consistent API, making it easier to hack the default settings and extend sigma.</p>
 
 <p>It is free and open source.</p>
 
@@ -162,49 +171,48 @@ css: [2014-10-01-how-to-choose-the-right-web-data-visualization-library.css]
 
 <h2 id="more">More</h2>
 
-<p>While this article focuses on tools, it’s also important to know <strong>how to create good visualizations</strong>. <a href="http://www.edwardtufte.com/tufte/books_vdqi" target="_blank">The Visual Display of Quantitative Information</a> by Edward Tufte is a reference writing. There’s also this ebook available for free online: <a href="http://jsdatav.is/intro.html" target="_blank">Data Visualization with JavaScript</a> which may be of some help.</p>
+<p>While this article focuses on tools, it’s also important to know <strong>how to create good visualizations</strong>. <a href="http://www.edwardtufte.com/tufte/books_vdqi" target="_blank" rel="noopener">The Visual Display of Quantitative Information</a> by Edward Tufte is a reference writing. There’s also this ebook available for free online: <a href="http://jsdatav.is/intro.html" target="_blank" rel="noopener">Data Visualization with JavaScript</a> which may be of some help.</p>
 
 <p>The personal selection of libraries presented above is far from exhaustive, my criteria to include tools was the maturity of the products. There are <strong>many other libraries</strong> that are <strong>worth having a look at</strong>. Here are some links from my personal bookmarks that I have tagged with “chart”, in no particular order. Let me know in case some of them are broken.</p>
 
 <ul>
-	<li><a href="https://www.mindmup.com/" target="_blank">mindmup.com</a></li>
-	<li><a href="https://github.com/andreaferretti/paths-js" target="_blank">github.com/andreaferretti/paths-js</a></li>
-	<li><a href="http://www.lovelycharts.com/" target="_blank">www.lovelycharts.com/</a></li>
-	<li><a href="http://chartio.com/" target="_blank">chartio.com/</a></li>
-	<li><a href="http://processing.org/" target="_blank">processing.org/</a></li>
-	<li><a href="https://github.com/RandomEtc/mind-gapper-js" target="_blank">github.com/RandomEtc/mind-gapper-js</a></li>
-	<li><a href="http://www.jstat.org/" target="_blank">www.jstat.org/</a></li>
-	<li><a href="http://smoothiecharts.org/" target="_blank">smoothiecharts.org/</a></li>
-	<li><a href="http://nickqizhu.github.io/dc.js/" target="_blank">nickqizhu.github.io/dc.js/</a></li>
-	<li><a href="http://www.drasticdata.nl/DDHome.php?m=0" target="_blank">www.drasticdata.nl/DDHome.php?m=0</a></li>
-	<li><a href="http://flowingdata.com/" target="_blank">flowingdata.com/</a></li>
-	<li><a href="http://www.aquire.com/" target="_blank">www.aquire.com/</a></li>
-	<li><a href="http://g.raphaeljs.com/" target="_blank">g.raphaeljs.com/</a></li>
-	<li><a href="http://code.google.com/p/flot/" target="_blank">code.google.com/p/flot/</a></li>
-	<li><a href="http://bonsaijs.org/" target="_blank">bonsaijs.org/</a></li>
-	<li><a href="http://tenxer.github.io/xcharts/" target="_blank">tenxer.github.io/xcharts/</a></li>
-	<li><a href="http://jsplumb.org/jquery/demo.html" target="_blank">jsplumb.org/jquery/demo.html</a></li>
-	<li><a href="http://www.diagram.ly/" target="_blank">www.diagram.ly/</a></li>
-	<li><a href="http://selection.datavisualization.ch/" target="_blank">selection.datavisualization.ch/</a></li>
-	<li><a href="http://www.graphviz.org/" target="_blank">www.graphviz.org/</a></li>
-	<li><a href="http://vschart.com/" target="_blank">vschart.com/</a></li>
-	<li><a href="https://github.com/novus/nvd3" target="_blank">github.com/novus/nvd3</a></li>
-	<li><a href="https://jolicharts.com/" target="_blank">jolicharts.com/</a></li>
-	<li><a href="http://polychart.com/" target="_blank">polychart.com/</a></li>
-	<li><a href="http://nvd3.org/" target="_blank">nvd3.org/</a></li>
-	<li><a href="http://trifacta.github.io/vega/" target="_blank">trifacta.github.io/vega/</a></li>
-	<li><a href="http://humblesoftware.com/flotr2/documentation" target="_blank">humblesoftware.com/flotr2/documentation</a></li>
-	<li><a href="http://www.polychartjs.com/" target="_blank">www.polychartjs.com/</a></li>
-	<li><a href="http://www.chartjs.org/" target="_blank">www.chartjs.org/</a></li>
-	<li><a href="http://trifacta.github.io/vega/" target="_blank">trifacta.github.io/vega/</a></li>
-	<li><a href="http://misoproject.com/d3-chart/" target="_blank">misoproject.com/d3-chart/</a></li>
-	<li><a href="http://dimplejs.org/" target="_blank">dimplejs.org/</a></li>
-	<li><a href="https://github.com/Quartz/Chartbuilder/" target="_blank">github.com/Quartz/Chartbuilder/</a></li>
-	<li><a href="https://datawrapper.de/" target="_blank">datawrapper.de/</a></li>
-	<li><a href="http://timeline.verite.co/" target="_blank">timeline.verite.co/</a></li>
-	<li><a href="https://www.draw.io/" target="_blank">www.draw.io/</a></li>
-	<li><a href="https://github.com/benfred/venn.js" target="_blank">github.com/benfred/venn.js</a></li>
-	<li><a href="https://plotly.com/" target="_blank">plot.ly/</a></li>
+	<li><a href="https://www.mindmup.com/" target="_blank" rel="noopener">mindmup.com</a></li>
+	<li><a href="https://github.com/andreaferretti/paths-js" target="_blank" rel="noopener">github.com/andreaferretti/paths-js</a></li>
+	<li><a href="http://www.lovelycharts.com/" target="_blank" rel="noopener">www.lovelycharts.com/</a></li>
+	<li><a href="http://chartio.com/" target="_blank" rel="noopener">chartio.com/</a></li>
+	<li><a href="http://processing.org/" target="_blank" rel="noopener">processing.org/</a></li>
+	<li><a href="https://github.com/RandomEtc/mind-gapper-js" target="_blank" rel="noopener">github.com/RandomEtc/mind-gapper-js</a></li>
+	<li><a href="http://www.jstat.org/" target="_blank" rel="noopener">www.jstat.org/</a></li>
+	<li><a href="http://smoothiecharts.org/" target="_blank" rel="noopener">smoothiecharts.org/</a></li>
+	<li><a href="http://nickqizhu.github.io/dc.js/" target="_blank" rel="noopener">nickqizhu.github.io/dc.js/</a></li>
+	<li><a href="http://www.drasticdata.nl/DDHome.php?m=0" target="_blank" rel="noopener">www.drasticdata.nl/DDHome.php?m=0</a></li>
+	<li><a href="http://flowingdata.com/" target="_blank" rel="noopener">flowingdata.com/</a></li>
+	<li><a href="http://www.aquire.com/" target="_blank" rel="noopener">www.aquire.com/</a></li>
+	<li><a href="http://g.raphaeljs.com/" target="_blank" rel="noopener">g.raphaeljs.com/</a></li>
+	<li><a href="http://code.google.com/p/flot/" target="_blank" rel="noopener">code.google.com/p/flot/</a></li>
+	<li><a href="http://bonsaijs.org/" target="_blank" rel="noopener">bonsaijs.org/</a></li>
+	<li><a href="http://tenxer.github.io/xcharts/" target="_blank" rel="noopener">tenxer.github.io/xcharts/</a></li>
+	<li><a href="http://jsplumb.org/jquery/demo.html" target="_blank" rel="noopener">jsplumb.org/jquery/demo.html</a></li>
+	<li><a href="http://www.diagram.ly/" target="_blank" rel="noopener">www.diagram.ly/</a></li>
+	<li><a href="http://selection.datavisualization.ch/" target="_blank" rel="noopener">selection.datavisualization.ch/</a></li>
+	<li><a href="http://www.graphviz.org/" target="_blank" rel="noopener">www.graphviz.org/</a></li>
+	<li><a href="http://vschart.com/" target="_blank" rel="noopener">vschart.com/</a></li>
+	<li><a href="https://github.com/novus/nvd3" target="_blank" rel="noopener">github.com/novus/nvd3</a></li>
+	<li><a href="https://jolicharts.com/" target="_blank" rel="noopener">jolicharts.com/</a></li>
+	<li><a href="http://polychart.com/" target="_blank" rel="noopener">polychart.com/</a></li>
+	<li><a href="http://nvd3.org/" target="_blank" rel="noopener">nvd3.org/</a></li>
+	<li><a href="http://humblesoftware.com/flotr2/documentation" target="_blank" rel="noopener">humblesoftware.com/flotr2/documentation</a></li>
+	<li><a href="http://www.polychartjs.com/" target="_blank" rel="noopener">www.polychartjs.com/</a></li>
+	<li><a href="http://www.chartjs.org/" target="_blank" rel="noopener">www.chartjs.org/</a></li>
+	<li><a href="http://trifacta.github.io/vega/" target="_blank" rel="noopener">trifacta.github.io/vega/</a></li>
+	<li><a href="http://misoproject.com/d3-chart/" target="_blank" rel="noopener">misoproject.com/d3-chart/</a></li>
+	<li><a href="http://dimplejs.org/" target="_blank" rel="noopener">dimplejs.org/</a></li>
+	<li><a href="https://github.com/Quartz/Chartbuilder/" target="_blank" rel="noopener">github.com/Quartz/Chartbuilder/</a></li>
+	<li><a href="https://datawrapper.de/" target="_blank" rel="noopener">datawrapper.de/</a></li>
+	<li><a href="http://timeline.verite.co/" target="_blank" rel="noopener">timeline.verite.co/</a></li>
+	<li><a href="https://www.draw.io/" target="_blank" rel="noopener">www.draw.io/</a></li>
+	<li><a href="https://github.com/benfred/venn.js" target="_blank" rel="noopener">github.com/benfred/venn.js</a></li>
+	<li><a href="https://plotly.com/" target="_blank" rel="noopener">plot.ly/</a></li>
 </ul>
 
 <p><strong>Full disclosure</strong>: While I have contributed in some of the open source tools recommended in this post, I am not affiliated with any of them.</p>
