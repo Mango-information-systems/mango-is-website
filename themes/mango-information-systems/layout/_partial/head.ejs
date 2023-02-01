@@ -4,6 +4,13 @@
 	<%
 	let url =  config.url + url_for(page.path).replace( /(\/index\.html?$)|(\/?$)/, '/')
 		, title
+		, canonicalURL
+
+	if( page.path.startsWith('blog/') )
+		canonicalURL = 'https://alef.website' + url_for(page.path).replace('blog/', 'blog/archive/').replace( /(\/index\.html?$)|(\/?$)/, '/')
+	else
+		canonicalURL =config.url + url_for(page.path).replace( /(\/index\.html?$)|(\/?$)/, '/')
+
 
 	if (is_archive())
 		title = 'Blog'
@@ -59,7 +66,7 @@
 		}
 	%>
 
-	<link rel="canonical" href="<%- url%>"/>
+	<link rel="canonical" href="<%- canonicalURL %>"/>
 	
 	<% if (page.prevArticle) { %>
 		<link rel="prev" href="<%- url_for(page.prevArticle) %>" />
