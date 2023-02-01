@@ -16,14 +16,14 @@ meta_generator: false
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://localhost:4000
 root: /
-permalink: blog/:category/:title/
+permalink: blog/archive/:category/:title/
 permalink_defaults:
 
 # Directory
 source_dir: source
 public_dir: public
-archive_dir: blog
-category_dir: blog
+archive_dir: blog/archive
+category_dir: blog/archive
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render: '*/*.js'
