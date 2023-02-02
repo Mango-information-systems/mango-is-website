@@ -5,31 +5,17 @@
     <div class="columns twelve">
 
 		<p>
-			<a rel="home" href="<%- url_for() %>"><%- image_tag('/img/mango-information-systems-logo-dark.png', {
-				alt: config.title
+			<a rel="home" href="/"><%- image_tag('/img/mango-information-systems-logo-dark.png', {
+				alt: "Mango Information Systems logo (now Alef)"
 				, class: "u-img-responsive"
 			}) %>
 			</a>
 		</p><br>
 
     </div>
-    <div class="columns six">
-        <%- partial('company-microdata') %>
-    </div>
-    <div class="columns six">
-        <ul class="footer-navigation">
-
-          <% for (var link in site.data.menu){
-
-			  var linkClass = is_current(site.data.menu[link].substring(1) + 'index.html') ? ' class="active"' : ''
-			  
-			  %>
-              <li>
-                <a <%- linkClass %> href="<%- url_for(site.data.menu[link]) %>"><%- link %></a>
-              </li>
-          <% } %>
-
-        </ul>
+    <div class="columns twelve">
+        <p><i class="fa fa-info-circle" aria-hidden="true"></i> We have moved! Mango Information Systems (Belgium) is now Alef (Spain).</p>
+        <p>This page is an archive of our older blog (2020-2021).</p>
     </div>
   </div>
 </div>
