@@ -39,7 +39,7 @@
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
 	<![endif]-->
 	
-	<% if (config.url !== 'http://mango-is.com' && config.url !== 'https://mango-is.com'){ %>
+	<% if (config.url !== 'http://alef.website' && config.url !== 'https://alef.website'){ %>
 		<meta name="robots" content="noindex, nofollow">
 	<% } %>
 
@@ -73,6 +73,7 @@
 		<%- feed_tag('/blog/atom.xml', {title: 'Mango Information Systems blog'}) %>
 	<% } %>
 
-	<%- partial('google-analytics') %>
+	<script defer data-domain="alef.website" src="https://pl.alef.website/js/pl.js"></script>
+	<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
 	
 </head>
