@@ -3,7 +3,7 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 	var link = document.createElement( 'link' );
 	link.rel = 'stylesheet';
 	link.type = 'text/css';
-	link.href = 'css/legacy/print/reveal.pdf.css';
+	link.href = '/legacy/css/legacy/print/reveal.pdf.css';
 	document.getElementsByTagName( 'head' )[0].appendChild( link );
 }
 
@@ -23,7 +23,7 @@ Reveal.initialize({
 
 	// Optional libraries used to extend on reveal.js
 	dependencies: [
-		{ src: '/js/legacy/utils/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-		{ src: '/js/legacy/utils/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+		{ src: '/legacy/js/legacy/utils/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+		{ src: '/legacy/js/legacy/utils/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 	]
 })

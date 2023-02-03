@@ -7,7 +7,7 @@ tags: Business Intelligence
 date: 2019-05-14
 language: en
 author: mehdi
-thumbnail: /img/blog/thumbnails/get-more-out-of-BI-projects.jpg
+thumbnail: /legacy/img/blog/thumbnails/get-more-out-of-BI-projects.jpg
 nextArticle: /blog/archive/business/save-time-and-money-in-BI-test/
 ---
 
@@ -18,7 +18,7 @@ We hear about the game-changing promise of data science nearly every minute. As 
 
 <br>
 <p>
-<img class="u-img-responsive" src="/img/blog/thumbnails/get-more-out-of-BI-projects.jpg" alt="">
+<img class="u-img-responsive" src="/legacy/img/blog/thumbnails/get-more-out-of-BI-projects.jpg" alt="">
 </p>
 <br>
 

@@ -2,7 +2,7 @@
 metaTitle: Business Intelligence for smarter decisions
 title: Fact-based knowledge
 subtitle: for smart organizations
-topBackgroundImage: "/img/bg-1.jpg"
+topBackgroundImage: "/legacy/img/bg-1.jpg"
 topCentered: true
 description: Organizations hire us to optimize any aspect of their management, using our expertise in Business Intelligence and Data Science.
 layout: index
@@ -213,7 +213,7 @@ sections:
     type: custom
     value: "<div class='row'>
 		<div class='four columns'>
-			<img src='/img/mehdi-el-fadil-1.jpg' class='u-img-responsive'/>
+			<img src='/legacy/img/mehdi-el-fadil-1.jpg' class='u-img-responsive'/>
 		</div>
 		<div class='eight columns'>
 			<p>Mango Information Systems is a consulting company operating since 2010 from Brussels, Belgium.</p>

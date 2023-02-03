@@ -9,13 +9,13 @@ date: 2017-08-31 10:58:35
 last-update: 2017-09-04 11:32:00
 language: en
 author: mehdi
-thumbnail: /img/thumbnails/myTagOverflow.png
+thumbnail: /legacy/img/thumbnails/myTagOverflow.png
 ---
 
 myTagOverflow is a free web app that generates a data visualization showing the tags on which you are most active on stackOverflow.
 
 <br/>
-<img src="/img/myTagOverflow-demo.jpg" alt="preview/demo of multiGa" class="u-img-responsive fa-border"/>
+<img src="/legacy/img/myTagOverflow-demo.jpg" alt="preview/demo of multiGa" class="u-img-responsive fa-border"/>
 <br/>
 
 TL;DR: [Try it](https://mango-is.com/tools/myTagOverflow/), you're three clicks away from getting your own graph ;)

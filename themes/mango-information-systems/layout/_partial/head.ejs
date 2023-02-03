@@ -29,7 +29,7 @@
 		url: url
 		, title: title
 		, twitter_id: theme.twitter
-		, image: page.thumbnail || '/img/default-thumbnail.png'
+		, image: page.thumbnail || '/legacy/img/default-thumbnail.png'
 	}) %>
 	<% if (theme.favicon){ %>
 		<%- favicon_tag(theme.favicon) %>
@@ -43,18 +43,18 @@
 		<meta name="robots" content="noindex, nofollow">
 	<% } %>
 
-	<%- css('css/font-awesome/css/font-awesome.min') %>
-	<%- css('css/normalize') %>
+	<%- css('legacy/css/font-awesome/css/font-awesome.min') %>
+	<%- css('legacy/css/normalize') %>
 	
 	<%  if (page.layout !== 'slide') { %>
-		<%- css('css/skeleton.min') %>
+		<%- css('legacy/css/skeleton.min') %>
 	<% 
 	}
 	%>
 
 	<%  if (page.css) {
 			page.css.forEach(function(cssFile) {%>
-			<%- css('css/' + cssFile) %>
+			<%- css('legacy/css/' + cssFile) %>
 		<%  })
 		}
 	%>
@@ -66,11 +66,6 @@
 	<% }
 	if (page.nextArticle) { %>
 		<link rel="next" href="<%- url_for(page.nextArticle) %>" />
-	<% }
-
-
-	if (is_post() || is_archive() || is_category()) { %>
-		<%- feed_tag('/blog/atom.xml', {title: 'Mango Information Systems blog'}) %>
 	<% } %>
 
 	<script defer data-domain="alef.website" src="https://pl.alef.website/js/pl.js"></script>

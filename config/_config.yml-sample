@@ -88,7 +88,3 @@ deploy:
 markdown:
   render:
     html: true
-
-feed:
-  path: /blog/atom.xml
-  limit: 20

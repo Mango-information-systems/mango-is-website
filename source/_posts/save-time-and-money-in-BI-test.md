@@ -7,7 +7,7 @@ tags: Business Intelligence
 date: 2020-03-23
 language: en
 author: mehdi
-thumbnail: /img/blog/thumbnails/save-time-and-money-in-BI-test.png
+thumbnail: /legacy/img/blog/thumbnails/save-time-and-money-in-BI-test.png
 prevArticle: /blog/archive/business/how-to-get-more-out-of-your-BI-projects-4-tips/
 ---
 
@@ -19,19 +19,19 @@ Going by experience, I estimate from original plan to realization most projects 
 
 Let’s say the original plan looks something like this with an overall estimated budget of 31 man-days to implement a feature.
 
-<img class="u-img-responsive" src="/img/blog/flow-chart-1-original-plan.png" alt="Original project plan diagram, four project phases have an estimated cost of 31 man-days">
+<img class="u-img-responsive" src="/legacy/img/blog/flow-chart-1-original-plan.png" alt="Original project plan diagram, four project phases have an estimated cost of 31 man-days">
 <br>
 
 In my experience the reality looks more like my outline below with 55 man days needed. That’s where I get my increase of 75-80%, not to mention the time delay, the dissatisfied clients and hierarchy, and the added stress and tension for the team.
 
 <br>
-<img class="u-img-responsive" src="/img/blog/flow-chart-2-actual-flow.png" alt="Actual project execution, with 24 extra man-days cost caused by overlooked details and various hiccups">
+<img class="u-img-responsive" src="/legacy/img/blog/flow-chart-2-actual-flow.png" alt="Actual project execution, with 24 extra man-days cost caused by overlooked details and various hiccups">
 <br>
 
 To remedy this situation, in my humble opinion, testing is the answer. This is how I’d recommend doing it. It can ensure the overrun is kept to a minimum and that the extra hours can be included in the initial budget. If my estimated overrun is correct, then we could make a 60% saving.
 
 <br>
-<img class="u-img-responsive" src="/img/blog/flow-chart-3-plan-with-test-phase.png" alt="Illustration of the savings introduced by having a testing process">
+<img class="u-img-responsive" src="/legacy/img/blog/flow-chart-3-plan-with-test-phase.png" alt="Illustration of the savings introduced by having a testing process">
 
 ## My preferred types of testing for BI projects
 
@@ -54,5 +54,5 @@ Are you interested to know more about the specific approaches? I’d love to dis
 
 And now for a little Dilbert to help us keep perspective:
 
-<img class="u-img-responsive" src="/img/blog/dilbert-on-testing.gif" alt="Dilbert comic strip: Dilbert says, 'I spent the week writing a test script for our product.' Wally says, 'And I wrote a test script to test Dilbert's test script.' Wally says, 'Your script was almost perfect. Keep up the good work, buddy.'">
+<img class="u-img-responsive" src="/legacy/img/blog/dilbert-on-testing.gif" alt="Dilbert comic strip: Dilbert says, 'I spent the week writing a test script for our product.' Wally says, 'And I wrote a test script to test Dilbert's test script.' Wally says, 'Your script was almost perfect. Keep up the good work, buddy.'">
 <small>DILBERT © Scott Adams. Used By permission of ANDREWS MCMEEL SYNDICATION. All rights reserved.</small>

@@ -7,7 +7,7 @@ tags: Side projects
 date: 2013-09-23
 language: en
 author: mehdi
-thumbnail: /img/blog/thumbnails/2013-09-23-introducing-twitto-be-0-4.png
+thumbnail: /legacy/img/blog/thumbnails/2013-09-23-introducing-twitto-be-0-4.png
 # keywords: 
 ---
 We have just released a major upgrade of [twitto.be](http://twitto.be) which introduces the following improvements:

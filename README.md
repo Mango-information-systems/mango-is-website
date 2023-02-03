@@ -65,6 +65,16 @@ How it works:
 * deploy step copies the server-side dynamic application `/home/srv-node-mango/app`
 * server-side application (`/home/srv-node-mango/app/server.js`) to be launched separately (e.g. as a systemd daemon) - currently common for test and prod if environments are hosted in the same server.
 
+### Deploy archived blog to alef.website
+
+```
+git checkout alef-hosted-version-wip
+npm run build:prod
+cp -r public/blog/archive ../alef.website/src/pages/blog
+cp -r public/legacy ../alef.website/public
+```
+
+
 ### test environment
 
 1. build with `npm run build:test`

@@ -7,9 +7,9 @@ title: Twitter influencers about sports business in BE/NL
 subtitle: Making-of a ranking
 description: What is the methodology to analyze a social media audience? This post dives into the question and shows our approach to find communities and influencers.
 author: mehdi
-thumbnail: /img/blog/thumbnails/2013-11-05-twitter-influencers-about-sports-business-ranking.png
+thumbnail: /legacy/img/blog/thumbnails/2013-11-05-twitter-influencers-about-sports-business-ranking.png
 css: [2013-11-05-twitter-influencers-about-sports-business-ranking.css]
-scripts: [js/legacy/d3.v3.min.js, js/2013-11-05-twitter-influencers-about-sports-business-ranking.js]
+scripts: [legacy/js/legacy/d3.v3.min.js, legacy/js/2013-11-05-twitter-influencers-about-sports-business-ranking.js]
 date: 2013-11-05
 ---
 

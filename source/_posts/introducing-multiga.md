@@ -8,7 +8,7 @@ tags: Side projects
 date: 2017-07-27 16:46:35
 language: en
 author: mehdi
-thumbnail: /img/thumbnails/multiGa.png
+thumbnail: /legacy/img/thumbnails/multiGa.png
 ---
 
 ## Summary
@@ -30,7 +30,7 @@ The concept is pretty simple:
 2. Data is retrieved, and the dashboard shows the realtime visits of each property and views of one account.
 3. You can switch between accounts, if needed using a dropdown menu.
 
-<img src="/img/multiGa.gif" alt="preview/demo of multiGa" class="u-img-responsive fa-border"/>
+<img src="/legacy/img/multiGa.gif" alt="preview/demo of multiGa" class="u-img-responsive fa-border"/>
 
 
 ## Findings

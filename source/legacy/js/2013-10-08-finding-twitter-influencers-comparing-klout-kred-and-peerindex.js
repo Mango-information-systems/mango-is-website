@@ -77,7 +77,7 @@ var svg = d3.select('#chartArea').append('svg')
 		.text('click anywhere on the chart area to see next slide')
 
 	helperElements.append('image')
-		.attr("xlink:href", "/img/blog/mango-is-play-button.png")
+		.attr("xlink:href", "/legacy/img/blog/mango-is-play-button.png")
 		.attr('x', 2000)
 		.attr('y', 500)
 		.attr("width", 70)
@@ -87,7 +87,7 @@ var svg = d3.select('#chartArea').append('svg')
 		.attr("y", 500)
 
 	svg.append('image')
-		.attr("xlink:href", "/img/blog/20130822-finn-ranking-intro-slide.png")
+		.attr("xlink:href", "/legacy/img/blog/20130822-finn-ranking-intro-slide.png")
 		.attr('id', 'coverImage')
 		.attr("x", -1800)
 		.attr("y", -2000)
@@ -201,7 +201,7 @@ d3.json("/blogData/belgian-journalists-twitter-influence.json", function(error, 
 				.style("text-anchor", "end")
 				.text("(0-100)")
 			kloutLogo = kloutChart.append("image")
-				.attr("xlink:href", "/img/blog/klout-logo.png")
+				.attr("xlink:href", "/legacy/img/blog/klout-logo.png")
 				.attr('id', 'kloutLogo')
 				.attr("x", 400)
 				.attr("y", 250)
@@ -242,7 +242,7 @@ d3.json("/blogData/belgian-journalists-twitter-influence.json", function(error, 
 
 	function kloutFunction() {
 		kloutChart.append("image")
-			.attr("xlink:href", "/img/blog/klout-function.png")
+			.attr("xlink:href", "/legacy/img/blog/klout-function.png")
 			.attr('id', 'kloutFunction')
 			.attr("x", 180)
 			.attr("y", 140)
@@ -266,7 +266,7 @@ d3.json("/blogData/belgian-journalists-twitter-influence.json", function(error, 
 		t1.selectAll("#kredChart")
 		.attr('transform', 'translate(340, 0)scale(.45)')
 		kredChart.append("image")
-				.attr("xlink:href", "/img/blog/kred-logo.png")
+				.attr("xlink:href", "/legacy/img/blog/kred-logo.png")
 				.attr('id', 'kredLogo')
 				.attr("x", 180)
 				.attr("y", 565)
@@ -292,7 +292,7 @@ d3.json("/blogData/belgian-journalists-twitter-influence.json", function(error, 
 			.attr('transform', 'translate(150, 220)scale(.45)')
 			
 		peerIndexChart.append("image")
-				.attr("xlink:href", "/img/blog/peerindex-logo.png")
+				.attr("xlink:href", "/legacy/img/blog/peerindex-logo.png")
 				.attr('id', 'kredLogo')
 				.attr("x", 180)
 				.attr("y", 565)
@@ -353,11 +353,11 @@ d3.json("/blogData/belgian-journalists-twitter-influence.json", function(error, 
 				, delay: 0
 				, color: '#E44600'
 				, top: [
-					{id : 14117639, screen_name : "AlainGerlache", profile_image_url : "/img/blog/2e4c2f951ff53ac2b82639e9e7988ecd_normal.jpeg", score : 77},
-					{id : 1026561, screen_name : "davanac", profile_image_url : "/img/blog/37c84a0869345c39c5860721e82ef70e_normal.png", score : 75},
-					{id : 85792506, screen_name : "AnneLowenthal", profile_image_url : "/img/blog/ik_normal.jpg", score : 75},
-					{id : 621713, screen_name : "robinwauters", profile_image_url : "/img/blog/5f3b55299fa3260b7b22e8eadc0cc091_normal.jpeg", score : 72},
-					{id : 369522634, screen_name : "AdrienDevyver", profile_image_url : "/img/blog/a6ec21a107b7179a6e6f511c6c059cc4_normal.jpeg", score : 71}
+					{id : 14117639, screen_name : "AlainGerlache", profile_image_url : "/legacy/img/blog/2e4c2f951ff53ac2b82639e9e7988ecd_normal.jpeg", score : 77},
+					{id : 1026561, screen_name : "davanac", profile_image_url : "/legacy/img/blog/37c84a0869345c39c5860721e82ef70e_normal.png", score : 75},
+					{id : 85792506, screen_name : "AnneLowenthal", profile_image_url : "/legacy/img/blog/ik_normal.jpg", score : 75},
+					{id : 621713, screen_name : "robinwauters", profile_image_url : "/legacy/img/blog/5f3b55299fa3260b7b22e8eadc0cc091_normal.jpeg", score : 72},
+					{id : 369522634, screen_name : "AdrienDevyver", profile_image_url : "/legacy/img/blog/a6ec21a107b7179a6e6f511c6c059cc4_normal.jpeg", score : 71}
 				]
 			},
 			kred : {
@@ -369,11 +369,11 @@ d3.json("/blogData/belgian-journalists-twitter-influence.json", function(error, 
 				, delay: 600
 				, color: '#71be39'
 				, top: [
-					{id: 621713, screen_name : "robinwauters", profile_image_url : "/img/blog/5f3b55299fa3260b7b22e8eadc0cc091_normal.jpeg", score : 958},
-					{id: 44849274, screen_name : "Vannieuwkerke", profile_image_url : "/img/blog/Karl_voor_twitter__close__normal.jpg", score : 900},
-					{id: 210456091, screen_name : "pvdmeersch", profile_image_url : "/img/blog/d44c2362ad144759fdae250d1e23af78_normal.jpeg", score : 852},
-					{id: 14117639, screen_name : "AlainGerlache", profile_image_url : "/img/blog/2e4c2f951ff53ac2b82639e9e7988ecd_normal.jpeg", score : 832},
-					{id: 292945752, screen_name : "jdceulaer", profile_image_url : "/img/blog/nieuwe_foto_normal.JPG", score : 822}
+					{id: 621713, screen_name : "robinwauters", profile_image_url : "/legacy/img/blog/5f3b55299fa3260b7b22e8eadc0cc091_normal.jpeg", score : 958},
+					{id: 44849274, screen_name : "Vannieuwkerke", profile_image_url : "/legacy/img/blog/Karl_voor_twitter__close__normal.jpg", score : 900},
+					{id: 210456091, screen_name : "pvdmeersch", profile_image_url : "/legacy/img/blog/d44c2362ad144759fdae250d1e23af78_normal.jpeg", score : 852},
+					{id: 14117639, screen_name : "AlainGerlache", profile_image_url : "/legacy/img/blog/2e4c2f951ff53ac2b82639e9e7988ecd_normal.jpeg", score : 832},
+					{id: 292945752, screen_name : "jdceulaer", profile_image_url : "/legacy/img/blog/nieuwe_foto_normal.JPG", score : 822}
 				]
 			},
 			pi : {
@@ -385,11 +385,11 @@ d3.json("/blogData/belgian-journalists-twitter-influence.json", function(error, 
 				, color: '#22CAE2'
 				, delay: 1200
 				, top: [
-					{id : 44849274, screen_name : "Vannieuwkerke", profile_image_url : "/img/blog/Karl_voor_twitter__close__normal.jpg", score : 79},
-					{id : 161287978, screen_name : "wielerman", profile_image_url : "/img/blog/Resize_P08-09-10_08-53_normal.jpg", score : 74},
-					{id : 210456091, screen_name : "pvdmeersch", profile_image_url : "/img/blog/d44c2362ad144759fdae250d1e23af78_normal.jpeg", score : 74},
-					{id : 137639769, screen_name : "barteeckhout", profile_image_url : "/img/blog/f89be7af3aa61735e27386a2b0cd0c7a_normal.jpeg", score : 72},
-					{id : 34901183, screen_name : "vadderiVRT", profile_image_url : "/img/blog/757b74b5368d95bdad30171ff987d4db_normal.jpeg", score : 71}
+					{id : 44849274, screen_name : "Vannieuwkerke", profile_image_url : "/legacy/img/blog/Karl_voor_twitter__close__normal.jpg", score : 79},
+					{id : 161287978, screen_name : "wielerman", profile_image_url : "/legacy/img/blog/Resize_P08-09-10_08-53_normal.jpg", score : 74},
+					{id : 210456091, screen_name : "pvdmeersch", profile_image_url : "/legacy/img/blog/d44c2362ad144759fdae250d1e23af78_normal.jpeg", score : 74},
+					{id : 137639769, screen_name : "barteeckhout", profile_image_url : "/legacy/img/blog/f89be7af3aa61735e27386a2b0cd0c7a_normal.jpeg", score : 72},
+					{id : 34901183, screen_name : "vadderiVRT", profile_image_url : "/legacy/img/blog/757b74b5368d95bdad30171ff987d4db_normal.jpeg", score : 71}
 				]
 			}
 		}
