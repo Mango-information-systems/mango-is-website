@@ -13,7 +13,7 @@ date: 2013-10-04
 last-update: 2013-10-07
 ---
 
-This is the first of 2 articles in a series about social media and influence. We review the key concepts and issues in this article, while the second dives into a [comparison of social media influence systems](/blog/business/finding-twitter-influencers-comparing-klout-kred-and-peerindex/).
+This is the first of 2 articles in a series about social media and influence. We review the key concepts and issues in this article, while the second dives into a [comparison of social media influence systems](/blog/archive/business/finding-twitter-influencers-comparing-klout-kred-and-peerindex/).
 
 ## Meet the controversial measure
 
@@ -51,8 +51,8 @@ At Mango Information Systems we think that influence measuring systems are too g
 
 Influence measures only take interactions into account, not connections between people.
 
-A person’s position in the social graph (set of connections between persons) is crucial in the spreading of information, and **there is always a small set of people who are key in the spreading of a message**. Viral marketing is becoming a science, read [US Military Scientists Solve the Fundamental Problem of Viral Marketing](http://www.technologyreview.com/view/519361/us-military-scientists-solve-the-fundamental-problem-of-viral-marketing/).
+A person’s position in the social graph (set of connections between persons) is crucial in the spreading of information, and **there is always a small set of people who are key in the spreading of a message**. Viral marketing is becoming a science, read [US Military Scientists Solve the Fundamental Problem of Viral Marketing]("https://web.archive.org/web/20150218024819/https://www.technologyreview.com/view/519361/us-military-scientists-solve-the-fundamental-problem-of-viral-marketing/).
 
 This type of meaningful, actionable  identification is exactly what we are doing at [Tribalytics](http://tribalytics.com), a tool designed to help marketers strategically plan their campaigns on Twitter.
 
-To see how we solved the problem of different influence rankings for a case we worked on with Finn.be, read [Part 2: Comparing Klout, Kred and peerIndex](/blog/business/finding-twitter-influencers-comparing-klout-kred-and-peerindex/).
+To see how we solved the problem of different influence rankings for a case we worked on with Finn.be, read [Part 2: Comparing Klout, Kred and peerIndex](/blog/archive/business/finding-twitter-influencers-comparing-klout-kred-and-peerindex/).

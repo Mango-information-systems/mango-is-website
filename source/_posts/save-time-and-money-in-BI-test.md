@@ -13,7 +13,7 @@ prevArticle: /blog/archive/business/how-to-get-more-out-of-your-BI-projects-4-ti
 
 ### How to make a potential 60% saving by integrating automated testing into Business Intelligence Projects
 
-If you read my last post with [Business Intelligence (BI) projects tips](https://mango-is.com/blog/business/how-to-get-more-out-of-your-BI-projects-4-tips) you’ll know I think testing is not a luxury and now I want to illustrate this.
+If you read my last post with [Business Intelligence (BI) projects tips](https://alef.website/blog/archive/business/how-to-get-more-out-of-your-BI-projects-4-tips) you’ll know I think testing is not a luxury and now I want to illustrate this.
 
 Going by experience, I estimate from original plan to realization most projects run 75-80% over budget. I think automated testing can save 60% of this budget-overrun. Here’s why.
 
@@ -50,7 +50,7 @@ In both cases, running the tests should be automated, thanks to testing framewor
 
 So in conclusion, I think testing has to be an indispensable part of the BI project life cycle, in order to deliver quality work on time. And when I say quality I also mean quality in the data – it’s so embarrassing when end users come complaining of mistakes they made in their business because of your system’s incorrect data! We really have to avoid this along with wasting time and money, and that’s why testing is an essential mitigation step.
 
-Are you interested to know more about the specific approaches? I’d love to discuss them with you. Please [contact me](/contact/) for a chat about testing – it’s one of my favorite subjects.
+Are you interested to know more about the specific approaches? I’d love to discuss them with you. Please [contact me](/contact) for a chat about testing – it’s one of my favorite subjects.
 
 And now for a little Dilbert to help us keep perspective:
 
