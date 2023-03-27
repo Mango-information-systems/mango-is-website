@@ -8,7 +8,7 @@ date: 2019-05-14
 language: en
 author: mehdi
 thumbnail: /legacy/img/blog/thumbnails/get-more-out-of-BI-projects.jpg
-nextArticle: /blog/archive/business/save-time-and-money-in-BI-test
+nextArticle: /blog/archive/business/save-time-and-money-in-BI-test/
 ---
 
 ### Tips from first-hand experience on better business specs (BRS); the importance of teamwork; quality in development and how testing is no luxury
