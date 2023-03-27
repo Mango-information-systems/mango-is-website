@@ -8,12 +8,12 @@ title: Finding twitter influencers
 subtitle: the recurring problem of defining influence
 description: Review of key concepts and issues in social media influence scores like Klout. Why and how a marketer should use them.
 thumbnail: /legacy/img/blog/thumbnails/2013-10-04-finding-twitter-influencers-the-recurring-problem-of-defining-influence.png
-nextArticle: /blog/archive/business/finding-twitter-influencers-comparing-klout-kred-and-peerindex/
+nextArticle: /blog/archive/business/finding-twitter-influencers-comparing-klout-kred-and-peerindex
 date: 2013-10-04
 last-update: 2013-10-07
 ---
 
-This is the first of 2 articles in a series about social media and influence. We review the key concepts and issues in this article, while the second dives into a [comparison of social media influence systems](/blog/business/finding-twitter-influencers-comparing-klout-kred-and-peerindex/).
+This is the first of 2 articles in a series about social media and influence. We review the key concepts and issues in this article, while the second dives into a [comparison of social media influence systems](/blog/business/finding-twitter-influencers-comparing-klout-kred-and-peerindex).
 
 ## Meet the controversial measure
 
@@ -55,4 +55,4 @@ A person’s position in the social graph (set of connections between persons) i
 
 This type of meaningful, actionable  identification is exactly what we are doing at [Tribalytics](http://tribalytics.com), a tool designed to help marketers strategically plan their campaigns on Twitter.
 
-To see how we solved the problem of different influence rankings for a case we worked on with Finn.be, read [Part 2: Comparing Klout, Kred and peerIndex](/blog/business/finding-twitter-influencers-comparing-klout-kred-and-peerindex/).
+To see how we solved the problem of different influence rankings for a case we worked on with Finn.be, read [Part 2: Comparing Klout, Kred and peerIndex](/blog/business/finding-twitter-influencers-comparing-klout-kred-and-peerindex).

@@ -8,7 +8,7 @@ date: 2020-03-23
 language: en
 author: mehdi
 thumbnail: /legacy/img/blog/thumbnails/save-time-and-money-in-BI-test.png
-prevArticle: /blog/archive/business/how-to-get-more-out-of-your-BI-projects-4-tips/
+prevArticle: /blog/archive/business/how-to-get-more-out-of-your-BI-projects-4-tips
 ---
 
 ### How to make a potential 60% saving by integrating automated testing into Business Intelligence Projects
