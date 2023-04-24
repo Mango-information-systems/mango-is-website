@@ -31,9 +31,9 @@
 		, twitter_id: theme.twitter
 		, image: page.thumbnail || '/legacy/img/default-thumbnail.png'
 	}) %>
-	<% if (theme.favicon){ %>
-		<%- favicon_tag(theme.favicon) %>
-	<% } %>
+	<link rel="icon" type="image/svg+xml" href="/img/logos/favicon.svg" />
+	<link rel="apple-touch-icon" href="/img/logos/apple-touch-icon.png" />
+
 
 	<!--[if lt IE 9]>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
