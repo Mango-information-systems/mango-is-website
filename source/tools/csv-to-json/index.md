@@ -86,14 +86,6 @@ sections:
 			</div>
 		</div>"
  -
-  # Feedback
-  content:
-   - type: h3
-     value: Feedback
-   - type: p
-     value: Thanks for your interest in csv-to-json. Would you like to suggest any enhancement?<br/><br/>
-   - type: contact
- -
   # How it works
   content:
    - type: h3
@@ -110,13 +102,9 @@ sections:
    - type: p
      value: This tools lets you convert CSV data to JSON format in a few clicks.
    - type: h4
-     value: Offline first
-   - type: p
-     value: You can use the converter even when you're not connected to the Internet, it just works.
-   - type: h4
      value: Privacy friendly
    - type: p
-     value: "Your data never leaves your browser, thanks to the <a href='https://developer.mozilla.org/en-US/docs/Web/API/File/Using_files_from_web_applications' target='_blank'>HTML5 File API</a>."
+     value: "Your data never leaves your browser, thanks to the <a href='https://developer.mozilla.org/en-US/docs/Web/API/File/Using_files_from_web_applications' target='_blank' rel='noopener'>HTML5 File API</a>."
    - type: p
      value: "The following anonymous data is however recorded in Google analytics, in order to allow us to measure tool usage and improve csv-to-json:"
    - type: ul
@@ -135,14 +123,14 @@ sections:
    - type: p
      value: "You can find the source code of this app <a href='https://github.com/Mango-information-systems/mango-is-website/tree/master/source/tools/csv-to-json'>on Github</a>."
    - type: p
-     value: "We use the open source library <a href='https://www.papaparse.com/' target='_blank'>papaParse</a> to perform the conversions."
+     value: "We use the open source library <a href='https://www.papaparse.com/' target='_blank' rel='noopener'>papaParse</a> to perform the conversions."
  -
   # About us
   content:
    - type: h3
      value: About us
    - type: p
-     value: Mango Information Systems is a small Belgian company specialized in Data Science / Business Intelligence.
+     value: Alef is a freelance activity specialized in Data Science / Business Intelligence.
    - type: p
      value: We help businesses with their data integration and analytics problems, making sure that both technology and processes are streamlined.
    - type: div
@@ -156,7 +144,7 @@ sections:
 		</div>
 		<div class='four columns'>
 			<p>
-				<a class='button button-primary u-full-width' href='/contact/'><i class='fa fa-envelope' aria-hidden='true'></i> Contact us</a>
+				<a class='button button-primary u-full-width' href='/contact'><i class='fa fa-envelope' aria-hidden='true'></i> Contact us</a>
 			</p>
 		</div>
 		
