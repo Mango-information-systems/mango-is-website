@@ -2,7 +2,7 @@
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta charset="utf-8">
 	<%
-	let url =  config.url + url_for(page.path).replace( /(\/index\.html?$)|(\/?$)/, '/')
+	let url =  config.url + url_for(page.path).replace( /(\/index\.html?$)|(\/?$)/, '')
 		, title
 
 	if (is_archive())
