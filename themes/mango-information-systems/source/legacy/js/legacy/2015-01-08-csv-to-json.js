@@ -290,7 +290,7 @@ var views = {
 			currentParseOpts.complete = function(res) {
 				
 				// probably un-necessary, but safe
-				$('.convert').removeAttr('disabled')
+				$('.convert').prop('disabled', false)
 				$('.convert').removeClass('disabled')
 				
 				// remove spinner
