@@ -69,6 +69,7 @@ How it works:
 
 ```
 git checkout alef-hosted-version-wip
+rm -r public/
 npm run build:prod
 cp -r public/blog/archive ../alef.website/src/pages/blog
 cp -r public/tools/csv-to-json ../alef.website/src/pages/tools
