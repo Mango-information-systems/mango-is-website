@@ -18,3 +18,4 @@ source/js/myTagOverflow.js
 source/js/myTagOverflowChecker.js
 source/js/localforage.nopromises.min.js
 themes/mango-information-systems/source/js/smoothscroll.min.js
+themes/mango-information-systems/source/legacy/js/localforage.nopromises.min.js
