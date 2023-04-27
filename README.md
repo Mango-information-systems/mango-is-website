@@ -71,6 +71,7 @@ How it works:
 git checkout alef-hosted-version-wip
 npm run build:prod
 cp -r public/blog/archive ../alef.website/src/pages/blog
+cp -r public/tools/csv-to-json ../alef.website/src/pages/tools
 cp -r public/legacy ../alef.website/public
 ```
 
