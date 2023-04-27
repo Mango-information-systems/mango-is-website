@@ -117,7 +117,7 @@ sections:
    - type: h4
      value: Feedback
    - type: p
-     value: "We focused on making it easy and efficient. There is certainly some room for improvement left, do not hesitate to make suggestions. We can be reached on <a href='https://github.com/Mango-information-systems/mango-is-website/issues'>github</a> or <a href='/contact/'>here</a>."
+     value: "We focused on making it easy and efficient. There is certainly some room for improvement left, do not hesitate to make suggestions. We can be reached on <a href='https://github.com/Mango-information-systems/mango-is-website/issues'>github</a> or <a href='/contact'>in our contact page</a>."
    - type: h4
      value: Open source
    - type: p
