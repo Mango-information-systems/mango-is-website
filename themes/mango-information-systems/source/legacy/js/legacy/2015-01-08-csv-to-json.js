@@ -275,21 +275,10 @@ var views = {
 				}
 				else {
 					controller.showFilePreview(res)
-			
-					gaCustom.toGa('event', {
-						category: 'csv-to-json'
-						, action: 'CSV row count'
-						, value: res.data.length
-					})
 				}
 			}
 
 			Papa.parse(currentParseOpts.data, currentParseOpts)
-			
-			gaCustom.toGa('event', {
-				category: 'csv-to-json'
-				, action: 'preview conversion'
-			})
 		}
 		, fullParse: function() {
 		// parse the full file and display the results
@@ -347,11 +336,6 @@ var views = {
 			}
 
 			Papa.parse(currentParseOpts.data, currentParseOpts)
-			
-			gaCustom.toGa('event', {
-				category: 'csv-to-json'
-				, action: 'convert CSV'
-			})
 			
 		}
 		, showFilePreview: function(data) {
@@ -411,11 +395,6 @@ var views = {
 			$filesList.find('[data-filename="' + fileName + '"]').replaceWith(content)
 			//~controller.showCsvSelectorPane()
 			$resultsPane.slideUp().empty()
-			
-			gaCustom.toGa('event', {
-				category: 'csv-to-json'
-				, action: 'delete converted file'
-			})
 		}
 		, undoDeleteFile: function(fileName) {
 			
@@ -430,11 +409,6 @@ var views = {
 			
 			var content = views.convertedFile(fileName)
 			$filesList.find('[data-filename="' + fileName + '"]').closest('.columns').replaceWith(content)
-			
-			gaCustom.toGa('event', {
-				category: 'csv-to-json'
-				, action: 'undo delete converted file'
-			})
 		}
 	}
 	
@@ -481,12 +455,6 @@ $(document).ready(function(){
 	$fileSelector.on('change', function(e) {
 		
 		controller.previewParse({data: e.target.files[0], fileName:e.target.files[0].name})
-		
-		gaCustom.toGa('event', {
-			category: 'csv-to-json'
-			, action: 'input CSV'
-			, label: 'file select'
-		})
 	})
 	
 	$fileSelector.on('click', function() {
@@ -519,12 +487,6 @@ $(document).ready(function(){
 		$dropPlaceHolder.hide()
 		
 		controller.previewParse({data: e.originalEvent.dataTransfer.files[0], fileName: e.originalEvent.dataTransfer.files[0].name})
-		
-		gaCustom.toGa('event', {
-			category: 'csv-to-json'
-			, action: 'input CSV'
-			, label: 'file drop'
-		})
 		return false
 	})
 	
@@ -556,11 +518,6 @@ $(document).ready(function(){
 			oldTextAreaValue = e.target.value
 			
 			controller.previewParse({data: e.target.value, fileName: 'pastedText'})
-			
-			gaCustom.toGa('event', {
-				category: 'csv-to-json'
-				, action: 'paste CSV'
-			})
 		}
 	}
 	
@@ -593,12 +550,6 @@ $(document).ready(function(){
 			//~console.log('URL', fileName)
 			
 			controller.previewParse({data: e.target.value, download:true, fileName: fileName})
-			
-			gaCustom.toGa('event', {
-				category: 'csv-to-json'
-				, action: 'input CSV'
-				, label: 'URL'
-			})
 		}
 	}
 	
