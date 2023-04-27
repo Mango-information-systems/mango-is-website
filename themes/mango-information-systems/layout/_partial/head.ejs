@@ -6,11 +6,16 @@
 		, title
 		, canonicalURL
 
+console.log('page path', page.path)
+
 	if( page.path.startsWith('blog/') )
-		canonicalURL = 'https://alef.website' + url_for(page.path).replace('blog/', 'blog/archive/').replace( /(\/index\.html?$)|(\/?$)/, '/')
+		canonicalURL = 'https://alef.website' + url_for(page.path).replace('blog/', 'blog/archive/').replace( /(\/index\.html?$)|(\/?$)/, '')
+	else if( page.path === 'tools/csv-to-json/index.html' )
+		canonicalURL = 'https://alef.website/tools/csv-to-json'
 	else
 		canonicalURL =config.url + url_for(page.path).replace( /(\/index\.html?$)|(\/?$)/, '/')
 
+console.log('canonicalURL', canonicalURL)
 
 	if (is_archive())
 		title = 'Blog'
