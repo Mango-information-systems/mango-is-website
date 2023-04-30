@@ -61,10 +61,10 @@
 	<link rel="canonical" href="<%- url%>"/>
 	
 	<% if (page.prevArticle) { %>
-		<link rel="prev" href="<%- url_for(page.prevArticle) %>" />
+		<link rel="prev" href="<%- url_for(page.prevArticle).replace( /(\/index\.html?$)|(\/?$)/, '') %>" />
 	<% }
 	if (page.nextArticle) { %>
-		<link rel="next" href="<%- url_for(page.nextArticle) %>" />
+		<link rel="next" href="<%- url_for(page.nextArticle).replace( /(\/index\.html?$)|(\/?$)/, '') %>" />
 	<% } %>
 
 	<script defer data-domain="alef.website" src="https://pl.alef.website/js/pl.js"></script>
