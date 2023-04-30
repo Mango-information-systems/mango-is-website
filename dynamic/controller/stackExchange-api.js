@@ -182,16 +182,22 @@ function SEApi(accessToken, showChart) {
 		
 		Object.keys(linksObj).forEach(function(from) {
 			
-			Object.keys(linksObj[from]).forEach(function(to) {
+			if(validTags.indexOf(from) !== -1) {
 
-				edgeData.push({source: from, target: to, weight: linksObj[from][to]})
+				Object.keys(linksObj[from]).forEach(function(to) {
 
-				res.links.push({
-					source: validTags.indexOf(from)
-					, target: validTags.indexOf(to)
-					, weight: linksObj[from][to]
+					if(validTags.indexOf(to) !== -1) {
+
+						edgeData.push({source: from, target: to, weight: linksObj[from][to]})
+
+						res.links.push({
+							source: validTags.indexOf(from)
+							, target: validTags.indexOf(to)
+							, weight: linksObj[from][to]
+						})
+					}
 				})
-			})
+			}
 		})
 
 		var community = jLouvain().nodes(validTags).edges(edgeData)
