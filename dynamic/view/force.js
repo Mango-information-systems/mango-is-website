@@ -178,13 +178,12 @@ function ForceChart() {
 					, dr = Math.sqrt(dx * dx + dy * dy)
 				return 'M' + d.source.x + ',' + d.source.y + 'A' + dr + ',' + dr + ' 0 0,1 ' + d.target.x + ',' + d.target.y
 			  })
-			  .attr('stroke-opacity', function(d) { return self.weightScale(d.weight)})
 			  .attr('stroke-width', function(d) { return .5 + 3 * self.weightScale(d.weight)})
 			  .attr('stroke',  function(d) { return color(d.source.group)})
 
 			d3.select('#links')
 			  .transition()
-				.style('opacity', .3)
+				.style('opacity', .9)
 			
 			// display export button
 			d3.select('#actionLinks').style('display', 'block')
@@ -336,14 +335,14 @@ function ForceChart() {
 		
 		// Apply the general update pattern to the nodes.
 		let g = self.node.selectAll('.node').data(data.nodes, function(d) { return d.name})
-		
+
 		nodeSelection = g.enter().append('g')
 			  .attr('class', 'node')
 			  .call(d3.drag()
 				  .on('start', dragstarted)
 				  .on('drag', dragged)
 				  .on('end', dragended))
-
+				  
 		nodeSelection.append('text')
 		  .text(function(d) { return d.name})
 		  .attr('fill', d => complete? color(d.group) : color(0))
