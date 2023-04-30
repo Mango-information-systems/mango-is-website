@@ -12,9 +12,9 @@ function SVGExport() {
 	
 	var containerElements = ['svg','g']
 		, relevantStyles = {
-			path: ['fill','stroke','stroke-width']
+			path: ['fill','stroke','stroke-width', 'stroke-opacity']
 			//~ , circle: ['fill','stroke','stroke-width']
-			, text:['fill','font-size','font-family','text-anchor', 'cursor']
+			, text:['fill','font-size','font-family','text-anchor', 'cursor','stroke','stroke-width']
 		}
 	
 	/******************************************

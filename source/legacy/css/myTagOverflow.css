@@ -47,11 +47,16 @@ input[type=text] {
 text {
 	font-size: .44rem;
 	text-anchor: middle;
+	stroke: white;
+	stroke-width: .12;
 }
+
 #chartSVG text {
 	cursor: pointer;
 }
 
 path {
 	fill: none;
+	stroke-opacity: .1;
+	mix-blend-mode: overlay;
 }
