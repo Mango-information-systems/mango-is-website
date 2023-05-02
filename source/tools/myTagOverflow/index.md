@@ -1,13 +1,13 @@
 ---
 layout: index
 metaTitle: "myTagOverflow: showcase your top tags from stackOverflow"
-title: "myTagOverflow <sup style='color:#aaa;'>beta</sup>"
+title: "myTagOverflow"
 subtitle: StackOverflow top tags data visualization
 topBackgroundImage: 
 author: Mango Information Systems
 date: 2016-10-24 16:29:26
 description: Need to demonstrate your technical abilities? myTagOverflow shows the tags you're most active on in a cool graph visualization.
-thumbnail: /img/thumbnails/myTagOverflow.png
+thumbnail: /legacy/img/thumbnails/myTagOverflow.png
 css: [myTagOverflow.css]
 scripts: [https://api.stackexchange.com/js/2.0/all.js, legacy/js/myTagOverflowChecker.js]
 sections:
@@ -54,7 +54,7 @@ sections:
    - type: h3
      value: About us
    - type: p
-     value: Mango Information Systems is a small Belgian company specialized in Data Science / Business Intelligence.
+     value: Alef is a freelance activity specialized in Data Science / Business Intelligence.
    - type: p
      value: We help businesses with their data integration and analytics problems, making sure that both technology and processes are streamlined.
    - type: div
@@ -68,7 +68,7 @@ sections:
 		</div>
 		<div class='four columns'>
 			<p>
-				<a class='button button-primary u-full-width' href='/contact/'><i class='fa fa-envelope' aria-hidden='true'></i> Contact us</a>
+				<a class='button button-primary u-full-width' href='/contact'><i class='fa fa-envelope' aria-hidden='true'></i> Contact us</a>
 			</p>
 		</div>
 		
