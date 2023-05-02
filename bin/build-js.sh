@@ -1,4 +1,4 @@
-browserify -t uglifyify dynamic/client.js | uglifyjs -c > source/legacy/js/site.js
+#browserify -t uglifyify dynamic/client.js | uglifyjs -c > source/legacy/js/site.js
 #~browserify -t brfs -t uglifyify dynamic/g-realtime.js | uglifyjs -c > source/js/g-realtime.js
 browserify -t brfs -t uglifyify dynamic/myTagOverflowChecker.js | uglifyjs -c > themes/mango-information-systems/source/legacy/js/myTagOverflowChecker.js
 #~browserify -t brfs -t uglifyify dynamic/pullReceipt.js | uglifyjs -c > source/js/pullReceipt.js
