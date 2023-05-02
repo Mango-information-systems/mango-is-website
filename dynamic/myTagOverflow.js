@@ -75,14 +75,6 @@ function start(hasError, accessToken) {
 			
 			if (tagsGraph === null || user === null )
 				initiateExtraction(hasError, {accessToken: accessToken, user: user, tagsGraph: tagsGraph})
-			else {
-						
-				gaCustom.toGa('event', {
-					category: 'mytagoverflow'
-					, action: 'user is signed in'
-				})
-				
-			}
 			
 		})
 	})
@@ -146,11 +138,6 @@ function initiateExtraction(hasError, opts) {
 						app.view.myTagOverflow.render(appContainer)
 						
 						app.controller.stackExchangeApi.signIn(start)
-						
-						gaCustom.toGa('event', {
-							category: 'mytagoverflow'
-							, action: 'sign-in attempt'
-						})
 					}
 				})
 			}
@@ -181,11 +168,6 @@ function extractUser() {
 						app.view.myTagOverflow.render(appContainer)
 						
 						app.controller.stackExchangeApi.signIn(start)
-						
-						gaCustom.toGa('event', {
-							category: 'mytagoverflow'
-							, action: 'sign-in attempt'
-						})
 					}
 				})
 			}
@@ -224,11 +206,6 @@ function extractStats() {
 						app.view.myTagOverflow.render(appContainer)
 						
 						app.controller.stackExchangeApi.signIn(start)
-						
-						gaCustom.toGa('event', {
-							category: 'mytagoverflow'
-							, action: 'sign-in attempt'
-						})
 						
 					}
 				})
@@ -284,19 +261,9 @@ function showChart(tagsGraph, complete=false) {
 		})
 	}
 	
-	gaCustom.toGa('event', {
-		category: 'mytagoverflow'
-		, action: 'visualize graph'
-	})
-	
 	
 	d3.select('#exportLink').on('click', function() {
 		app.controller.SVGExport.export(document.getElementById('chartSVG'), document.getElementById('exportLink'))
-		
-		gaCustom.toGa('event', {
-			category: 'mytagoverflow'
-			, action: 'graph SVG export'
-		})
 	})
 
 	d3.select('#clearDataLink').on('click', function() {
