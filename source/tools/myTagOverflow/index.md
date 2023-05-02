@@ -7,7 +7,7 @@ topBackgroundImage:
 author: Mango Information Systems
 date: 2016-10-24 16:29:26
 description: Need to demonstrate your technical abilities? myTagOverflow shows the tags you're most active on in a cool graph visualization.
-thumbnail: /legacy/img/thumbnails/myTagOverflow.png
+thumbnail: /img/thumbnail/myTagOverflow.jpg
 css: [myTagOverflow.css]
 scripts: [https://api.stackexchange.com/js/2.0/all.js, legacy/js/myTagOverflowChecker.js]
 sections:

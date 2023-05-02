@@ -7,7 +7,7 @@ topBackgroundImage:
 author: Alef - Mehdi El Fadil
 date: 2016-10-24 16:29:26
 description: Easy, privacy-friendly online csv to json converter
-thumbnail: /img/thumbnail/csv-to-json.png
+thumbnail: /img/thumbnail/csv-to-json.jpg
 css: [legacy/2015-01-08-csv-to-json.css]
 scripts: [legacy/js/legacy/jquery.js, legacy/js/legacy/underscore-min.js, legacy/js/localforage.nopromises.min.js, legacy/js/legacy/papaparse.min.js, legacy/js/legacy/2015-01-08-csv-to-json.js]
 sections:
