@@ -16,7 +16,7 @@ function ForceChart() {
 		, nodeMargin = 45
 	
 	var textScale = d3.scaleLinear()
-			.range([1, 3])
+			.range([1.15, 3.5])
 		, color = d3.scaleOrdinal(d3.schemeCategory10)
 		, linkDistanceScale = d3.scaleLinear()
 			.domain([100, 1000])
@@ -183,7 +183,7 @@ function ForceChart() {
 
 			d3.select('#links')
 			  .transition()
-				.style('opacity', .9)
+				.style('opacity', .5)
 			
 			// display export button
 			d3.select('#actionLinks').style('display', 'block')
