@@ -3,7 +3,7 @@ var Checker = require('./controller/es6Checker')
 
 var checker = new Checker()
 
-checker.loadIfSupportES6('/js/myTagOverflow.js', function() {
+checker.loadIfSupportES6('/legacy/js/myTagOverflow.js', function() {
 	warningMessage.render({
 			target: document.getElementById('app')
 			, title: 'Browser not supported'
