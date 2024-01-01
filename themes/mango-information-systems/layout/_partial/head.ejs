@@ -15,7 +15,7 @@
 	else if( page.path.startsWith('tools/') )
 		canonicalURL = 'https://alef.website/tools'
 	else
-		canonicalURL = 'https://alef.website' + url_for(page.path).replace( /(\/index\.html?$)|(\/?$)/, '/')
+		canonicalURL = 'https://alef.website' + url_for(page.path).replace( /(\/index\.html?$)|(\/?$)/, '')
 
 	if (is_archive())
 		title = 'Blog'
