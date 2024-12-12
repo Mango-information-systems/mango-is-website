@@ -52,7 +52,7 @@
     "request": "^2.88.0",
     "socket.io": "^2.4.0",
     "socket.io-client": "^2.4.0",
-    "validator": "^5.4.0",
+    "validator": "^13.7.0",
     "xhr": "^2.6.0",
     "xss-filters": "^1.2.6"
   },
