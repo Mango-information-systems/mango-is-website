@@ -1,6 +1,10 @@
 mango-is-website
 =============
 
+Archiving the repository: company has been closed for a while now, relevant content has been moved into my new entity [Alef](https://alef.website).
+
+=============
+
 Website of Mango Information Systems SPRL.
 
 Blog: unless specified otherwise, blog content is published under a Creative Commons Attribution license.
